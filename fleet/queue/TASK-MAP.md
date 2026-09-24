@@ -6,3 +6,6 @@ TASK-002 CLAIMED @ worker 760a683
 TASK-003 cut per REDIRECT-002 — M0 supplement (extra-sources census)
 TASK-002 PASS @ worker 2f14b03
 TASK-004 cut cycle 9 — M2 detector family A (language integrity)
+TASK-003 PASS @ worker 863c97d
+M0 CERTIFIED @ 863c97d (TASK-001 + TASK-003 both passed)
+TASK-004 CLAIMED @ 746d120

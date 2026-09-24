@@ -45,3 +45,17 @@ disclosures noted:
 minor notes:
   - Fixture field names use shorthand (quoted, paragraph, char_offset) vs STANDARDS spec (quoted_text, location). Content is semantically equivalent; tests pass. Not a gate failure but noted for taxonomy discipline.
   - M1 delivered as 3 focused commits (loaders+tokenizer, fixtures+clean set, hand-found fixtures) — clean task boundary.
+
+2026-09-24 CYCLE 41 — GATE: TASK-003 (M0 supplement: extra-sources census) — worker sha 863c97d
+verdict: PASS
+suite: 32 tests OK (25 pass, 7 skipped — corpus-dependent in scratch worktree)
+test count: 32 (up from 30 — no tests dropped) ✓
+spot-checks:
+  - extra-sources sha256: Barret (eff8b8b1c99f), discord (0ad660acfbab), phone (655a84b26136) — all match corpus ✓
+  - extra-sources sizes: 159279 + 52450 + 1260717 = 1472446 B — matches table ✓
+  - book store listed separately: 14634979 B, sha256 c0892fcd2050… ✓
+  - scope markers: all 3 files marked UNDECIDED per VISION ✓
+  - scope boundary table: overlays IN SCOPE, book store IN SCOPE, extra-sources UNDECIDED, rest OUT OF SCOPE ✓
+taxonomy: N/A (census task only)
+tool gates: census.py regenerated with extra-sources support. Stdlib-only. ✓
+criterion 3 (REDIRECT-002): NOW MET — extra-sources fully censused with sha256 and VISION scope markers. M0 gate CLOSES.

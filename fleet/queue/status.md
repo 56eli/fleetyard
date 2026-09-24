@@ -9,3 +9,8 @@
 2026-09-24T22:31Z TASK-003 OPEN (M0 supplement: extra-sources census) — cut by orchestrator per REDIRECT-002
 2026-09-24T22:35Z TASK-002 PASS @ 2f14b03 (gated by orchestrator: 30/30 tests, 18 fixtures verified, clean set verified)
 2026-09-24T22:35Z TASK-004 OPEN (M2 detector family A: language integrity) — cut by orchestrator
+2026-09-24T22:40Z TASK-003 CLAIMED @ c5a2e8a (worker heartbeat)
+2026-09-24T22:40Z TASK-003 PASS @ 863c97d (gated by orchestrator: 32/32 tests, extra-sources sha256 verified, criterion 3 MET)
+2026-09-24T22:46Z TASK-004 CLAIMED @ 746d120 (worker heartbeat)
+2026-09-24T22:52Z REDIRECT-003 SERVED (observation loop blind for cycles 10-28, cadence corrected)
+2026-09-24T22:52Z M0 CERTIFIED (worker 863c97d, all criteria met: TASK-001 + TASK-003)

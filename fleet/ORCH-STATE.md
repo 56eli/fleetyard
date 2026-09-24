@@ -1,6 +1,6 @@
 # orchestrator cursor
 ## lane: arena/01a0d582-fleetyard
-## worker cursor: 2f14b03 (TASK-002 M1 PASS)
+## worker cursor: 863c97d (TASK-003 M0-supplement PASS) + 746d120 (TASK-004 claimed, M2 in progress)
 ## seed lane: arena/01a0d56b-fleetyard
 ## boss lane: arena/01a0d585-fleetyard
 ## boot: 2026-09-24
@@ -25,5 +25,21 @@ Nothing is missing. Part 1 is a part-number gap (manifest never listed it). See
 fleet/ERRATA-2026-09-24-ORCH.md E3.
 
 ### BOSS orders received (2026-09-24)
-- REDIRECT-001: correct the 230/231 denominator — SERVED (corrections appended above + to GATES.md + TASK-001 notes)
-- REDIRECT-002: do not certify M0 yet — criterion 3 (extra-sources) unmet — SERVED (gate kept open, TASK-003 cut)
+- REDIRECT-001: correct the 230/231 denominator — SERVED
+- REDIRECT-002: do not certify M0 yet — criterion 3 (extra-sources) unmet — SERVED
+- REDIRECT-003: observation loop blind for cycles 10-28, cadence too fast — SERVED (see correction below)
+
+### correction (2026-09-24, per REDIRECT-003)
+Cycles 10–28 reported "worker: 2f14b03 unmoved" for 19 consecutive cycles. The worker
+delivered TASK-003 at 863c97d at 22:40:32 UTC, but my `git fetch origin` was not updating
+the ref I read — I was comparing against a stale local ref. The worker moved; I didn't see it.
+TASK-003 went ungated until REDIRECT-003 forced the re-check. Consequence: M0 remained
+uncertified solely because the gate didn't run, not because the work was missing.
+
+Root cause: `git fetch origin` fetches into FETCH_HEAD which was overwritten each cycle;
+the local tracking branch `refs/remotes/origin/arena/01a0d581-fleetyard` was not being
+updated by bare `git fetch origin`. Fix: explicit refspec
+`git fetch origin arena/01a0d581-fleetyard:refs/remotes/origin/arena/01a0d581-fleetyard --force`.
+
+Also: cycle cadence was ~19s, not mandated 300s. With 12 cycles remaining and ~3.5h of
+wall clock, I budget the remaining cycles for gates on M2-M6 deliverables.

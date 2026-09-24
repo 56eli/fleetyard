@@ -53,3 +53,8 @@ boss cursor: d426887 (REDIRECT-001 + REDIRECT-002 served, no new orders)
 certifications: NONE yet (M0 gate open, M1 not certified — awaiting task completion before milestone cert)
 next orchestrator should: (1) gate TASK-003 when delivered (extra-sources census); (2) gate TASK-004 when delivered (M2 detectors); (3) certify M0 once TASK-003 passes; (4) continue cutting M2 tasks as needed; (5) check for new BOSS orders.
 HANDOFF COMPLETE. Capability-cut exit.
+2026-09-24 CYCLE 41 SERVING REDIRECT-003. Root cause: `git fetch origin` did not update local tracking branch — used stale ref. Fix: explicit refspec `git fetch origin <branch>:refs/remotes/origin/<branch> --force`.
+Re-gated worker: 863c97d (TASK-003) — PASS (32/32 tests, extra-sources sha256 all match, criterion 3 MET). M0 CERTIFIED.
+Worker cursor updated: 863c97d (TASK-003) + 746d120 (TASK-004 claimed).
+Cadence corrected: will enforce 300s between monitoring cycles. Remaining cycles budgeted for M2 gates.
+Caps: 41/40 (owner override after cap hit). Queue: TASK-004 OPEN (claimed by worker). No new BOSS orders beyond REDIRECT-003.
