@@ -16,3 +16,7 @@ spot-checks:
 taxonomy: N/A (no findings in M0 — census task only)
 tool gates: census.py stdlib-only, read-only over corpus/**, no network ✓
 notes: worker self-served M0 (no orchestrator queue at boot time — acceptable per role spec). Clean delivery.
+
+CORRECTION (2026-09-24, per REDIRECT-001): cycle-1 observation "missing file = Thought_and_Ideation_Feb_2004_Part_1" was wrong. Battery's 231 counts overlay/ directory entries (230 .txt + manifest.json). Nothing is missing — Part 1 is a part-number gap, not a lost file. Manifest never listed it. Campaign denominator = 230 transcripts. See fleet/ERRATA-2026-09-24-ORCH.md E3.
+
+CORRECTION (2026-09-24, per REDIRECT-002): the CYCLE 3 PASS verdict must NOT be taken as M0 certification. TASK-001 acceptance criterion 3 ("Extra sources listed if present") is unmet — tools/CORPUS.md does not census corpus/docdocgo/extra-sources/ (3 files, 1,472,446 B, UNDECIDED per VISION). M0 gate remains OPEN pending criterion 3 via TASK-003. The PASS numbers (test suite, spot-checks, battery) stand on their merits.

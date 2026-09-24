@@ -1,14 +1,29 @@
 # orchestrator cursor
 ## lane: arena/01a0d582-fleetyard
-## worker cursor: 7fac8d368a (TASK-001 M0 PASS)
+## worker cursor: 760a683 (TASK-002 claimed, M1 deliverables not yet pushed)
 ## seed lane: arena/01a0d56b-fleetyard
+## boss lane: arena/01a0d585-fleetyard
 ## boot: 2026-09-24
 
+### campaign denominator
+**230 transcripts** (231 directory entries under `overlays/` = 230 `.txt` + `manifest.json`)
+
 ### observables
-- overlay .txt file count: 230 (bootstrap letter expected 231)
-- discrepancy explained: `Thought_and_Ideation_Feb_2004_Part_1` is missing from both overlays/ and manifest.json (manifest lists 230 entries). Parts 2 and 3 exist. This is either a source omission or an extraction artifact — NOT an orchestrator defect.
-- overlays total: ~15 MB
+- overlay entries under overlays/: 231 (230 .txt + manifest.json) — MATCHES battery
+- overlay .txt count: 230 transcripts — the campaign denominator
+- overlays total: ~14.24 MB (.txt only), ~14.27 MB (all entries)
 - book store: 14,634,979 bytes (matches expected)
+- extra-sources/: 3 files, 1,472,446 bytes total — UNDECIDED per VISION, NOT censused in M0 (REDIRECT-002)
 - corpus extracted from docdocgo-fixes.zip sha256 starting 3f36c5203910 (verified)
-- manifest.json confirms 230 internally — self-consistent
-- worker anomalies (from M0 census): 9 files with U+FFFD replacement chars, 12 naming variants (no _enxautogen_html suffix), 52 undated filenames, 0 empty files, 0 duplicates, all single-line (no paragraph breaks)
+- manifest.json: 230 entries, 0 listed-but-missing — internally consistent
+- worker anomalies (from M0 census): 9 files with U+FFFD replacement chars, 12 naming variants (no _enxautogen_html suffix), 52 undated filenames, 0 empty files, 0 duplicates, all single-line (no paragraph breaks), 2 part-number gaps
+
+### correction (2026-09-24, per REDIRECT-001)
+Previous claim of "missing file" Thought_and_Ideation_Feb_2004_Part_1 was incorrect.
+The battery's 231 counts directory entries under overlays/ including manifest.json.
+Nothing is missing. Part 1 is a part-number gap (manifest never listed it). See
+fleet/ERRATA-2026-09-24-ORCH.md E3.
+
+### BOSS orders received (2026-09-24)
+- REDIRECT-001: correct the 230/231 denominator — SERVED (corrections appended above + to GATES.md + TASK-001 notes)
+- REDIRECT-002: do not certify M0 yet — criterion 3 (extra-sources) unmet — SERVED (gate kept open, TASK-003 cut)
