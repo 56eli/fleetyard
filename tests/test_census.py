@@ -85,6 +85,10 @@ class SyntheticCorpusTest(unittest.TestCase):
                 "words": 2}]
         with open(os.path.join(od, "manifest.json"), "w") as fh:
             json.dump(man, fh)
+        ed = os.path.join(root, "extra-sources")
+        os.makedirs(ed)
+        with open(os.path.join(ed, "Slides_ocr.txt"), "wb") as fh:
+            fh.write(b"abc")
         self.data = census.census(root)
         self.an = census.anomalies(self.data)
 
@@ -110,6 +114,16 @@ class SyntheticCorpusTest(unittest.TestCase):
         self.assertEqual(m["exact"], 1)
         self.assertEqual(len(m["drift"]), 1)
 
+    def test_extra_sources(self):
+        self.assertEqual(self.data["extras"], [{
+            "name": "Slides_ocr.txt", "bytes": 3, "sha256":
+            "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"}])
+        out = census.render(self.data)
+        self.assertIn("| `extra-sources/Slides_ocr.txt` | 3 | `ba7816bf8f01"
+                      "cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad` "
+                      "| UNDECIDED |", out)
+        self.assertIn("### Book store (listed separately)", out)
+
     def test_render_deterministic(self):
         self.assertEqual(census.render(self.data), census.render(self.data))
         self.assertIn("MISMATCH", census.render(self.data))
@@ -130,6 +144,20 @@ class RealCorpusTest(unittest.TestCase):
         total = sum(r["bytes"] for r in self.data["rows"]) + \
             sum(o["bytes"] for o in self.data["others"])
         self.assertEqual(round(total / 1e6, 1), 14.3)
+
+    def test_extra_sources_battery(self):
+        # BOSS evidence quoted in TASK-003 (REDIRECT-002).
+        ex = {e["name"]: e for e in self.data["extras"]}
+        self.assertEqual(sorted(ex), ["Book_of_Slides_Barret_notes.txt",
+                                      "Book_of_Slides_discord_ocr.txt",
+                                      "Book_of_Slides_phone_ocr.txt"])
+        self.assertEqual(sum(e["bytes"] for e in ex.values()), 1472446)
+        self.assertTrue(ex["Book_of_Slides_Barret_notes.txt"]["sha256"]
+                        .startswith("eff8b8b1c99f"))
+        self.assertTrue(ex["Book_of_Slides_discord_ocr.txt"]["sha256"]
+                        .startswith("0ad660acfbab"))
+        self.assertTrue(ex["Book_of_Slides_phone_ocr.txt"]["sha256"]
+                        .startswith("655a84b26136"))
 
     def test_committed_table_is_fresh(self):
         with open(os.path.join(ROOT, "tools", "CORPUS.md"),
