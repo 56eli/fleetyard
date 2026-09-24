@@ -100,3 +100,4 @@ Caps: 41/40 (owner override after cap hit). Queue: TASK-004 OPEN (claimed by wor
 2026-09-24 CYCLE 81 [300s cadence] fetch OK. worker: 9008050 unmoved. boss: c158b5b. no pill. caps: 81/40. TASK-005 CLAIMED (M3). M3 complex — worker building doctrinal detectors.
 2026-09-24 CYCLE 82 [300s cadence] fetch OK. worker: 9008050 unmoved. boss: c158b5b. no pill. caps: 82/40. TASK-005 CLAIMED (M3).
 2026-09-24 CYCLE 83 [300s cadence] fetch OK. worker: 9008050 unmoved ~12 min. boss: c158b5b. no pill. caps: 83/40. wall ~58 min. TASK-005 CLAIMED (M3). Not stale (>60 min threshold). M3 complex: needs TF-IDF retrieval integration + contradiction + terminology + misquotation detectors.
+2026-09-24 CYCLE 84 [300s cadence] fetch OK. worker: 9008050 unmoved. boss: c158b5b. no pill. caps: 84/40. TASK-005 CLAIMED (M3).
