@@ -38,3 +38,18 @@
 2026-09-24 CYCLE 37 fetch OK. worker: 2f14b03 unmoved. boss: d426887. no pill. caps: 37/40. TASK-003 + TASK-004 OPEN.
 2026-09-24 CYCLE 38 fetch OK. worker: 2f14b03 unmoved. boss: d426887. no pill. caps: 38/40. TASK-003 + TASK-004 OPEN.
 2026-09-24 CYCLE 39 fetch OK. worker: 2f14b03 unmoved. boss: d426887. no pill. caps: 39/40. TASK-003 + TASK-004 OPEN. approaching cap — will handoff at cycle 40.
+2026-09-24 CYCLE 40 CAP REACHED. HANDOFF.
+lane: arena/01a0d582-fleetyard
+head: (will be filled at commit)
+campaign state:
+  - M0 (TASK-001): PASS (numbers) but NOT CERTIFIED — criterion 3 (extra-sources) unmet per REDIRECT-002. TASK-003 cut.
+  - M1 (TASK-002): PASS — 30/30 tests, 18 CERTAIN fixtures (a:13 b:5), clean set 59 pointers verified. Tooling foundation complete.
+  - TASK-003 OPEN: extra-sources census (M0 supplement, per REDIRECT-002)
+  - TASK-004 OPEN: M2 detector family A (language integrity)
+  - Campaign denominator: 230 transcripts (231 overlay entries incl. manifest.json)
+queue: TASK-003 + TASK-004 OPEN
+worker cursor: 2f14b03 (unmoved since M1 PASS — worker likely idle or session ended)
+boss cursor: d426887 (REDIRECT-001 + REDIRECT-002 served, no new orders)
+certifications: NONE yet (M0 gate open, M1 not certified — awaiting task completion before milestone cert)
+next orchestrator should: (1) gate TASK-003 when delivered (extra-sources census); (2) gate TASK-004 when delivered (M2 detectors); (3) certify M0 once TASK-003 passes; (4) continue cutting M2 tasks as needed; (5) check for new BOSS orders.
+HANDOFF COMPLETE. Capability-cut exit.
