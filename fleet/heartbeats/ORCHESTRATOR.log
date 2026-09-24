@@ -3,3 +3,4 @@
 2026-09-24 CYCLE 2 fetch OK. worker: 7c4ae48 unmoved (no production commits, no heartbeat). no boss lane. no pill. TASK-001 OPEN — worker has not yet claimed it. queue healthy. caps: 2/40, wall ~10 min.
 2026-09-24 CYCLE 3 fetch OK. worker moved to 7fac8d368a — M0 corpus inventory complete. gated: PASS (suite 12/12 OK, spot-checks 5/5 pass, battery MATCH, anomalies correctly disclosed). cursor updated to 7fac8d368a. TASK-001 PASS. TASK-002 cut (M1 tooling foundation). queue healthy (≥1 OPEN). no boss lane. no pill. caps: 3/40, wall ~15 min.
 2026-09-24 CYCLE 4 fetch OK. worker: 7fac8d3 unmoved since M0 PASS. no boss lane. no pill. TASK-002 OPEN (M1) — unclaimed. queue healthy. caps: 4/40, wall ~20 min.
+2026-09-24 CYCLE 5 fetch OK. worker: 7fac8d3 unmoved 4 min (not stale — M1 is substantial). no boss lane. no pill. TASK-002 OPEN. queue healthy. caps: 5/40, wall ~22 min.
