@@ -1,0 +1,19 @@
+# TASK-008 — M4 fixture expansion for deferred M2 gaps (drop-word + speaker/format)
+
+milestone: M4 self-improvement / deferred M2 fixture expansion (owner ERRATA-2026-09-25 §3)
+status: OPEN — defer until TASK-006 repair and already-claimed TASK-005; use TASK-007's independent clean split for FP gating; do not claim during TASK-006 PAUSE
+cut: 2026-09-24T23:27:14Z by successor orchestrator arena/01a0d5b7-fleetyard
+
+## Why this is dispatched
+AUDIT-PLAN M2 names drop-word and speaker/format anomalies as well as repetition, nonsense and acoustic confusion. TASK-004 shipped A1-repetition, A2-nonsense and A4-confusion, but not drop-word or speaker/format, because the 18 original hand-found fixtures did not provide a defensible catch for those capabilities. BOSS REDIRECT-005 forbids silently claiming M2 completion or dropping TASK-004 criterion 4 (each detector catches >=1 *confirmed* fixture). The owner expressly marks M2 **ACCEPTED INCOMPLETE** and defers these two gaps to M4 fixture expansion. The corpus is 230 frozen transcripts under `corpus/docdocgo/overlays/*.txt`; book doctrine text under `corpus/docdocgo/html/merged-book-texts_json_1.js` is reliable; extra-sources are UNDECIDED, not ground truth. Original Sedona transcripts may contain Korean interpreter speech; do not label legitimate bilingual stretches as format errors.
+
+## Deliverable — one focused deferred-gap expansion
+By hand-reading additional transcript passages independently of detector outputs, find and cite at least one unambiguous example of a drop-word artifact AND one of a speaker/format anomaly, with precise paragraph/char offset, byte-exact quote, suspected intended text, proof leg a/b/c for CERTAIN (or >=2 independent signals for HIGH), and a verbatim book reference if claiming a book contradiction. Record these as new regression fixtures with provenance *hand-read* and stable IDs. Then implement and self-test two separate Python stdlib modules for the gap capabilities, integrate them with `tools/run_detectors.py` without changing STANDARDS confidence rules, and measure independent fixture catches and independently held-out book false positives (once TASK-007 establishes the split). Put new CERTAIN patterns in the M4 ledger with provenance and measured per-detector results. Do not seed the detector with the same fixture and count its hit as independent evidence. If no hard-leg fixture can be substantiated, publish the blocker and DO NOT claim criterion 4, change the taxonomy, or certify M2.
+
+## Acceptance
+1. Each new confirmed fixture has exact frozen transcript paragraph/offset/quote and a defensible class a/b/c with near-form+grammar+doctrinal sense or exact book/lecture contradiction; all book references re-readable and excluded non-Hawkins doctrine respected. Otherwise stop explicitly with gap still open.
+2. Both drop-word and speaker/format modules have standalone self-tests, integrate into the runner with STANDARDS fields and CANDIDATE separate from headline rates, and each independently catches >=1 appropriate new confirmed fixture (not one seeded by the module itself). Cases of normal interpreter switches and legitimate quotation are negative tests.
+3. Report each detector's fixture overlap **as recall**, and its held-out clean-book FP count/rate; precision is NOT measured until human review of flagged spans. No FP regression accepted; if regression or missing independent hits, gate FAIL and gap remains deferred.
+4. `python3 -m unittest discover -s tests` green with no reduction from the previous test count; corpus read-only, stdlib only, no network, writes limited to named fixture/tool/tests/pattern-ledger files.
+
+M2 remains ACCEPTED INCOMPLETE (never silently converted to PASS). M4's separate pattern-ledger/precision work still needs a focused subsequent task; M5 cannot run on unreviewed/uncalibrated detectors.

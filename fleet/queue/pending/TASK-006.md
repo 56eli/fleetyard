@@ -1,0 +1,20 @@
+# TASK-006 — repair confirmed-fixture taxonomy (M1 gate failure)
+
+milestone: M1 tooling foundation (finding-quality repair)
+status: OPEN — **PAUSE-WORKER permits this task only** until successor re-gate PASS
+cut: 2026-09-24T23:27:14Z by successor orchestrator arena/01a0d5b7-fleetyard
+worker lane: arena/01a0d581-fleetyard; resume from its current state afterward; TASK-005 (M3) remains CLAIMED, not cancelled.
+
+## Why this is dispatched
+Successor independently re-read the frozen transcript and found CF-009, Love_Sep_2011_Part_1_enxautogen_html.txt, paragraph 0, char 315, quote `it's some wonderful`, suspected `it's so wonderful`, labeled CERTAIN/class a. Its own evidence calls this a **non-doctrinal announcement**. STANDARDS class a is *ungrammatical/senseless AND a near-form replacement restores both grammar and doctrinal sense*. Grammar-only repair, with no book_ref or lecture-contradiction leg, cannot prove CERTAIN on this record. TASK-002 criterion 4 (every confirmed fixture has an evidence class per STANDARDS) fails. CF-002's proper-name correction (`Jerry Jempolski's book`, paragraph 0, char 15635, book_ref Jerry Jampolsky) is another class-a record that must be examined, not prejudged. Source of truth: the unmodified `corpus/docdocgo/overlays/*.txt` and `corpus/docdocgo/html/merged-book-texts_json_1.js` reconstructed from the SHA-verified zip; never edit them. The owner sets the 230-transcript denominator (231 entries include manifest.json).
+
+## Deliverable — one focused fixture-integrity repair
+Audit *all* 18 records in `fixtures/confirmed/confirmed.json` against their exact cited transcript bytes and book quotations and against STANDARDS classes a/b/c. For each unsupported CERTAIN (at least CF-009 if no new hard leg can be cited), either add a genuine mechanical proof leg with verbatim evidence and offsets, or withdraw/downgrade it from the confirmed fixture denominator; leave an append-only correction record naming id, former/new status, reason and reviewer so the original record remains traceable. Do not change the confidence taxonomy, relabel grammar-only evidence as doctrine, invent audio evidence, or count CANDIDATE in rates. Inspect CF-002 independently and state a reasoned verdict; do not assume it fails merely because it was flagged for review. Retain or replace enough independently hand-read and properly evidenced CERTAIN errors to satisfy the M1 floor of >=15 from 3 different fully read transcripts; new fixtures must be hand-found in the transcript, not seeded from detector output. If that floor cannot be met, say so and leave M1 open rather than fabricate.
+
+## Acceptance — exactly the failed criterion plus regression safety
+1. Every remaining confirmed fixture has transcript path, paragraph + char offset with byte-exact quote, suspected intended text, applicable CERTAIN leg a/b/c with concrete evidence, book passage/offset/quote if invoked, detector id, confidence and status (+ who/why). CF-009 is no longer CERTAIN without an actual doctrinal-sense or book/lecture hard leg; CF-002 is examined and documented.
+2. At least 15 demonstrably CERTAIN hand-found fixtures from 3 fully read transcripts remain, or explicit failure is returned. Withdrawn/downgraded records remain traceable in an append-only correction record; evaluation excludes them from the confirmed denominator and headline rates; no historical log lines are rewritten.
+3. `python3 tools/fixtures.py verify` and `python3 -m unittest discover -s tests` pass with test count >=57, and runner `--eval` uses the *current* confirmed denominator; distinguish seeded A4 matches from independent catches (criterion 4 for TASK-004 is still FAILED until independent evidence exists).
+4. Python stdlib only; no network, corpus read-only, writes only to the named fixture/correction/test outputs. Report actual counts and honest failures; no unsupported precision claims.
+
+The successor independently re-gates and removes `fleet/controls/PAUSE-WORKER` only on actual PASS. Afterward continue TASK-005 from existing worker-lane progress, not from scratch.

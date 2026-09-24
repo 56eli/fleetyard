@@ -1,0 +1,17 @@
+# TASK-007 — A4 clean-set leakage repair / held-out FP measurement
+
+milestone: M4 calibration prerequisite for M5 (REDIRECT-005; owner ERRATA-2026-09-25 §3)
+status: OPEN — queue after TASK-006 repair and already-claimed TASK-005; do not claim while PAUSE-WORKER names TASK-006
+cut: 2026-09-24T23:27:14Z by successor orchestrator arena/01a0d5b7-fleetyard
+
+## Why this is dispatched
+A4-confusion changed its difflib cutoff from 0.80 to 0.82 *after* observing two false positives in the existing 59 book passages (`Lenny`→`Lenin`; `Llamas`→`Lama`). Its `0/59` check on those same passages is therefore NOT an independently measured false-positive rate. The books in `corpus/docdocgo/html/merged-book-texts_json_1.js` are the owner-approved clean text; 4 entries (Be_as_you_are, I_AM_THAT, Lamsa_bible, ACIM_workbook) are not Hawkins doctrine. Existing 59 sha-pointer passages in `fixtures/clean/clean.json` were already seen by the detector and cannot retroactively become held out. A4's 8 confirmed fixture matches were seeded from those fixtures; independent recall remains 0/18 (or the repaired current denominator). Precision is **unmeasured** until a human-reviewed flagged-span sample exists. M5 may not inherit a circular FP estimate.
+
+## Deliverable — one focused independent evaluation
+Design and document a reproducible tune/test split from the frozen book store: legacy 59 passages are tune-only; choose *new*, disjoint book passages (no overlap with the 59 and no near-duplicates) as an unopened held-out test, store hash/offset/length pointers rather than book text, and record selection and freeze the cutoff/lexicon/protocol BEFORE the first evaluation of the held-out passages. Use tune only to fit A4's cutoff. Respect the held-out book exclusion when constructing A4 lexicons (do not let a passage certify itself). Evaluate the frozen A4 once on the genuinely unseen test split; report raw hit counts, denominators and actual FP rate including nonzero cases. Keep the original 0/59 labeled *in-sample*, not a clean FP rate. If the held-out result causes another parameter change, retire it as evaluation and acquire a fresh unseen test set; never re-fit on held-out data and report the same set as independent.
+
+## Acceptance
+1. `fixtures/clean/` separates tune pointers and a new held-out pointer set; reproducible SHA-256 and non-overlap checks against the frozen book store; no corpus files committed or altered; exclude non-Hawkins entries from doctrinal calibration.
+2. The A4 cutoff and evaluation protocol are fixed before held-out evaluation; document reproducible commands, counts and FP examples. Report both numerator and denominator, even if nonzero. No precision claim from fixture overlap; A4 criterion 4's independent recall deficit remains explicitly disclosed and A4 stays uncertified until independently fixed.
+3. Regression tests cover split integrity, threshold-freeze/anti-leakage, and holdout measurement. `python3 -m unittest discover -s tests` green with count >= previous baseline (57 before repair); all Python stdlib, no network, corpus read-only. Write only to named fixture/docs/test outputs.
+4. M5 is BLOCKED from using A4 or quoting an A4 FP rate until this independent check passes; a precision estimate for any detector requires a reviewed sample, not this task.
