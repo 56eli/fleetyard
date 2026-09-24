@@ -38,3 +38,6 @@ Each detector must:
 - STANDARDS finding-record format: transcript path · location (paragraph + char offset) · quoted text · suspected intended · evidence class · detector id · book reference · confidence · status
 - Fixture field names in confirmed.json use shorthand (quoted, paragraph, char_offset) — the runner should output STANDARDS-compliant field names
 Successor addendum 2026-09-24T23:27:14Z — effective status: historical PASS rescaled to partial (A4 criterion 4 FAILED); M2 ACCEPTED INCOMPLETE; no re-claim. Original header is historical; consult append-only fleet/queue/status.md.
+
+## Successor runner addendum — 2026-09-24T23:46Z (append-only)
+Separate from A4 criterion 4 FAILED / owner M2 ACCEPTED INCOMPLETE, successor spot-run at worker f165889 finds an unjustified HIGH in bilingual Sedona Dec 2008 Part 2 @ char 9671: A1 detects a repeated interpreter line, A2 misflags legitimate Korean particles `yes나` / `no를` as script-mix; only A1 is an error candidate, not two independent corroborating signals under STANDARDS. Correct the taxonomy/false positive via TASK-010 before M5, without changing historical owner M2 disposition.

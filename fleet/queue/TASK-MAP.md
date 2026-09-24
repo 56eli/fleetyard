@@ -19,3 +19,6 @@ TASK-002 successor re-gate FAIL @ worker 90080502f9b065be7e70addf121b425690e2135
 TASK-006 OPEN — priority taxonomy fixture repair (PAUSE-WORKER permits only TASK-006).
 TASK-007 OPEN — A4 leakage-free clean holdout/calibration (after TASK-006 and claimed TASK-005; pre-M5).
 TASK-008 OPEN — M4 fixture expansion + drop-word/speaker/format detectors (after TASK-007; no silent waiver).
+TASK-005 worker delivered @ 1e1c57b9b1a61eaf81c1419a6e4755c7e3b76f68; pushed after GitHub reconnect with heartbeat d70d4b9; worker @ f1658891a7e9d222a881c5b5384db0e6100b228f claims TASK-006 during PAUSE.
+TASK-005 successor gate @ f1658891a7e9d222a881c5b5384db0e6100b228f: implementation checks PASS (78 tests; B1 2/18, B2 1/18), criterion 3 clean FP independence FAIL (0/59 in-sample), M3 not certified; repair TASK-009 OPEN/BLOCKED until TASK-007.
+TASK-004 runner taxonomy successor re-gate FAIL @ f1658891a7e9d222a881c5b5384db0e6100b228f: false HIGH on legitimate Korean code-switch @ Sedona Part 2 char 9671; repair TASK-010 OPEN after TASK-006; M2 stays ACCEPTED INCOMPLETE.
