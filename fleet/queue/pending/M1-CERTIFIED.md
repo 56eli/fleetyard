@@ -1,0 +1,19 @@
+# M1 CERTIFICATION — tooling foundation (successor release)
+
+certified: 2026-09-24T23:58:00Z
+certified-by: successor orchestrator arena/01a0d5b7-fleetyard (owner-authorised fresh shift)
+worker-lane sha: 9f56f3e533af49f003f493cb3a6d7c6dd570915d
+milestone: M1 — loaders, tokenizer, evidence-backed confirmed fixtures, book clean pointers
+status: CERTIFIED (M0 remains owner/BOSS-ratified; M2 is owner ACCEPTED INCOMPLETE, not certified)
+
+## Evidence index (independently reproduced; no predecessor post-cap gate used)
+- `fleet/GATES.md` CYCLE 1 and CYCLE 4: re-gates TASK-002 and TASK-006 on SHA-verified, locally reconstructed corpus. Original class-a CF-009 failed; repair TASK-006 passed, with all original records re-audited. Initial M1 PASS on predecessor was not used as certification evidence.
+- `python3 -m unittest discover -s tests -v` on detached worker head with full corpus: `Ran 87 tests in 46.562s` / `OK`, 0 skipped, up from 78 at preceding gate (no tests dropped). `python3 tools/fixtures.py verify`: `fixtures OK (16 confirmed CERTAIN)`.
+- Independently decoded 24 book-store entries from frozen `docdocgo-fixes.zip` SHA-256 `3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db`: verified **16/16** transcript quotes at paragraph 0 + char offsets, **15/15** cited book quotes at book offsets, **59/59** clean-pointer SHA-256 values; 0 citation discrepancies. Book-store SHA-256 `c0892fcd20502d49b99fffe87a4ec4b3b5ecc94a1f98606aab7909127934a4a8`.
+- Current confirmed fixtures: 16 CERTAIN across 3 fully read transcripts (10 Love Sep 2011 P1, 4 Satsang IX P6, 2 Sedona Dec 2008 P2); classes **a:9, b:7**. Review corrected CF-002 a→b on book-attribution leg, removed CF-005/009/013/014/016/018 (six old CERTAIN withdrawn to HIGH or CANDIDATE with original full records preserved in 22-sequence append-only `fixtures/confirmed/corrections.json`), added four hand-read CERTAIN CF-019..022. New CF-019 matches three independent numbers in the same happiness-table row; CF-020 names Truth vs. Falsehood and is contradicted by its book's `Enneagrams 390`; CF-021/022 are distinct misheard `and`→`in` rows of the *same* infatuation slide (not distinct error patterns). The floor remains 16 ≥15; provenance and pattern concentration disclosed.
+- `tools/loaders.py` parses overlays with char/byte offsets; `tools/tokenizer.py` and `tools/fixtures.py` stdlib only; none writes to frozen corpus or calls network. Book clean set excludes 4 non-Hawkins slugs. 59 pointers are VALID book text, but they were later used to tune some detectors and are therefore NOT an independent false-positive evaluation set for A4/B1/B2.
+
+## Limits (not swept under this certification)
+- This certifies M1 *tooling foundation*, not detector precision, transcript coverage, or a full-corpus error rate. Fixture overlap in `--eval` is recall, not precision. CANDIDATE is outside every headline denominator. `CF-020` is a mechanically certain **text vs named-book discrepancy** under STANDARDS leg b; without audio we cannot tell whether ASR misheard the questioner or the questioner misremembered. M6 must not equate every book contradiction with a proven audio transcription error.
+- Four CERTAIN fixtures on the infatuation slide (CF-007/008/021/022) share a single repeated ASR pattern; they count as distinct cited instances for M1's ≥15 floor, NOT independent patterns or detector precision evidence. Any owner change to other-author misquotation scope could affect CF-002; even excluding CF-002 leaves 15 cited CERTAIN under present evidence, but this is a live owner open item.
+- M2 remains ACCEPTED INCOMPLETE (A4 criterion 4 FAILED, A4 clean FP VOID; drop-word/speaker/format deferred). TASK-005 M3 implementation is delivered but its independent FP gate is held; no M3 certification. The worker remains PAUSED on a different, separately paired repair task TASK-010 until that taxonomy failure actually passes.

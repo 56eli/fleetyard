@@ -18,3 +18,6 @@ Audit *all* 18 records in `fixtures/confirmed/confirmed.json` against their exac
 4. Python stdlib only; no network, corpus read-only, writes only to the named fixture/correction/test outputs. Report actual counts and honest failures; no unsupported precision claims.
 
 The successor independently re-gates and removes `fleet/controls/PAUSE-WORKER` only on actual PASS. Afterward continue TASK-005 from existing worker-lane progress, not from scratch.
+
+## Successor gate — 2026-09-24T23:58Z (append-only)
+PASS @ worker 9f56f3e533af49f003f493cb3a6d7c6dd570915d. Independent 87-test suite OK (0 skips); 16/16 current CERTAIN transcript quotes, 15/15 book refs and 59/59 clean pointers independently re-read exact; 22 correction events account for every original fixture, with 6 withdrawn and 4 new hand-read. M1 CERTIFIED on successor. This task is now CLOSED, **not OPEN** notwithstanding the historical header. The former TASK-006 pause reason is resolved. A separate false HIGH remains, so the current control targets TASK-010 only.
