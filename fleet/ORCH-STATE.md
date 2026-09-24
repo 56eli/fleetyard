@@ -1,6 +1,6 @@
 # orchestrator cursor
 ## lane: arena/01a0d582-fleetyard
-## worker cursor: 863c97d (TASK-003 M0-supplement PASS) + 746d120 (TASK-004 claimed, M2 in progress)
+## worker cursor: 74ed664 (TASK-004 M2 PASS)
 ## seed lane: arena/01a0d56b-fleetyard
 ## boss lane: arena/01a0d585-fleetyard
 ## boot: 2026-09-24

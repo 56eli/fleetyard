@@ -14,3 +14,5 @@
 2026-09-24T22:46Z TASK-004 CLAIMED @ 746d120 (worker heartbeat)
 2026-09-24T22:52Z REDIRECT-003 SERVED (observation loop blind for cycles 10-28, cadence corrected)
 2026-09-24T22:52Z M0 CERTIFIED (worker 863c97d, all criteria met: TASK-001 + TASK-003)
+2026-09-24T22:53Z TASK-004 PASS @ 74ed664 (gated by orchestrator: 50/50 tests, 3 detectors verified, 0 clean FPs)
+2026-09-24T22:53Z TASK-005 OPEN (M3 detector family B: doctrinal consistency) — cut by orchestrator

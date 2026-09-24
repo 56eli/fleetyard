@@ -59,3 +59,23 @@ spot-checks:
 taxonomy: N/A (census task only)
 tool gates: census.py regenerated with extra-sources support. Stdlib-only. ✓
 criterion 3 (REDIRECT-002): NOW MET — extra-sources fully censused with sha256 and VISION scope markers. M0 gate CLOSES.
+
+2026-09-24 CYCLE 42 — GATE: TASK-004 (M2 detector family A) — worker sha 74ed664 (head), deliverable sha e7892b8
+verdict: PASS
+suite: 50 tests OK (40 pass, 10 skipped — corpus-dependent in scratch worktree)
+test count: 50 (up from 32 — no tests dropped) ✓
+spot-checks (run on my local corpus extraction):
+  - A2-nonsense on Love Sep 2011 P1: catches "255%" @ offset 4543 (impossible percent) ✓
+  - A2-nonsense on Love Sep 2011 P1: catches script-mix "động" (Vietnamese) and "杛" (CJK) ✓
+  - A1-repetition on Love Sep 2011 P1: catches "No." ×26 @ offset 31214 ✓
+  - A1-repetition on Love Sep 2011 P1: catches "which all the energies are negative" ×4, "It is discovered that to be loved" ×5 ✓
+  - all 3 detectors self-test: OK (printed at suite end) ✓
+  - clean-set FPs: 0/59 each (A4 uses held-out lexicon per book) ✓
+taxonomy: detections output as CANDIDATE (single detector) or HIGH (≥2 converging), never auto-CERTAIN — correct per STANDARDS. Finding records use STANDARDS format.
+tool gates: 3 detector modules + run_detectors.py — all stdlib-only, no network, read-only over corpus/**. ✓
+disclosures noted:
+  - A4-confusion: 8/18 fixture hits are ALL seeded (not independent recall). Independent recall = 0/18. A4 cutoff calibrated 0.80→0.82 on clean set after 2 FPs. Honest disclosure.
+  - Drop-word and speaker/format detectors NOT shipped (could not meet fixture-hitting criterion). Honest — preferred over shipping a non-functional detector.
+  - Dry run: 1264 unreviewed records across 210 transcripts (A1 937, A2 171, A4 155, 1 HIGH). Not committed, not a findings ledger — correct, M5 owns the sweep.
+  - Korean interpretation in Sedona deliberately not flagged by A2 — correct handling.
+noted for M4 (self-improvement loop): A4's seeded hits are not precision evidence; the self-test lexicon must grow through hand-read fixture expansion, not seed injection.

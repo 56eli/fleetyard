@@ -9,3 +9,5 @@ TASK-004 cut cycle 9 — M2 detector family A (language integrity)
 TASK-003 PASS @ worker 863c97d
 M0 CERTIFIED @ 863c97d (TASK-001 + TASK-003 both passed)
 TASK-004 CLAIMED @ 746d120
+TASK-004 PASS @ worker 74ed664 (M2: 3 detectors, 50 tests, 0 clean FPs)
+TASK-005 cut cycle 42 — M3 detector family B (doctrinal consistency)

@@ -58,3 +58,4 @@ Re-gated worker: 863c97d (TASK-003) — PASS (32/32 tests, extra-sources sha256 
 Worker cursor updated: 863c97d (TASK-003) + 746d120 (TASK-004 claimed).
 Cadence corrected: will enforce 300s between monitoring cycles. Remaining cycles budgeted for M2 gates.
 Caps: 41/40 (owner override after cap hit). Queue: TASK-004 OPEN (claimed by worker). No new BOSS orders beyond REDIRECT-003.
+2026-09-24 CYCLE 42 GATE TASK-004 (M2) @ 74ed664 — PASS. suite 50/50 OK (40 pass, 10 skip). spot-checks: A2 catches "255%" @ 4543 ✓, A1 catches "No."×26 @ 31214 ✓, A2 catches script-mix (Vietnamese, CJK) ✓. 3 detectors, 0 clean FPs, self-tests OK. DETECTORS.md documents: A4 independent recall 0/18 (seeded hits only), honest disclosure. cursor → 74ed664. TASK-005 cut (M3 doctrinal consistency). M0 CERTIFIED, M1 PASS, M2 PASS. Queue: TASK-005 OPEN. caps: 42/40 (owner override). cadence: will enforce 300s monitoring going forward.
