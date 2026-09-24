@@ -16,7 +16,7 @@
   },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN"
  },
  {
   "id": "CF-002",
@@ -25,8 +25,8 @@
   "char_offset": 15635,
   "quoted": "Jerry Jempolski's book",
   "suspected": "Jerry Jampolsky's book",
-  "evidence_class": "a",
-  "evidence": "Slide attributes 'Love is letting go of fear' to its author; the book names the same author and title as Jerry Jampolsky. 'Jempolski' is a phonetic near-form misspelling of the proper name.",
+  "evidence_class": "b",
+  "evidence": "The slide reads 'Love is letting go of fear.' and names its author: transcript 'Jerry Jempolski's book'. The book attributes the same title verbatim to 'psychiatrist Jerry Jampolsky (e.g., Love is Letting Go of Fear)'. The transcript text therefore attributes a book Hawkins cites to a name that is not its author (leg b: contradicted verbatim by the book on the same citation); 'Jempolski' is a phonetic near-form of 'Jampolsky' (the audio is not in question, the transcript spelling is). TASK-006 re-audit: originally filed as class a; restated as b because the hard leg is the book's verbatim attribution, not grammar. Verdict: CERTAIN retained.",
   "detector": "hand-read (TASK-002)",
   "book_ref": {
    "slug": "letting_go__the_pathway_of_sur",
@@ -35,7 +35,7 @@
   },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN, leg a->b"
  },
  {
   "id": "CF-003",
@@ -54,7 +54,7 @@
   },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN"
  },
  {
   "id": "CF-004",
@@ -73,26 +73,7 @@
   },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
- },
- {
-  "id": "CF-005",
-  "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
-  "paragraph": 0,
-  "char_offset": 28028,
-  "quoted": "It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved.",
-  "suspected": "It is discovered that to be loving is also to be lovable.",
-  "evidence_class": "b",
-  "evidence": "Truncated sentence repeated five times (ASR repetition loop) immediately before the complete sentence 'It is discovered that to be loving is also to be lovable.', which is verbatim book text.",
-  "detector": "hand-read (TASK-002)",
-  "book_ref": {
-   "slug": "transcending_the_levels_of_con",
-   "char_offset": 323292,
-   "quote": "it is discovered that to be loving is also to be lovable"
-  },
-  "confidence": "CERTAIN",
-  "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN"
  },
  {
   "id": "CF-006",
@@ -111,7 +92,7 @@
   },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN"
  },
  {
   "id": "CF-007",
@@ -121,12 +102,16 @@
   "quoted": "Pathology and infatuation is suicide",
   "suspected": "Pathology in infatuation is suicide",
   "evidence_class": "a",
-  "evidence": "Slide table 'infatuation versus love' uses the frame '<attribute> in infatuation is X, whereas with love ...' ('Stability in infatuation is desperate'); 'and' is the acoustic near-form of 'in' and breaks the grammar.",
+  "evidence": "Slide table 'infatuation versus love' uses the frame '<attribute> in infatuation is X, whereas with love ...' ('Stability in infatuation is desperate'); 'and' is the acoustic near-form of 'in' and breaks the grammar. TASK-006 doctrinal leg: the slide is Hawkins' 'diagnostic differential between infatuation versus love' ('Infatuation, passion and attraction calibrate at 145, whereas love calibrates at 500', transcript @31543), the teaching the book states as 'the difference between infatuation (cal. 145) and Love (cal. 500)'; the restored row is a statement of that teaching, so 'in' restores grammar AND doctrinal sense.",
   "detector": "hand-read (TASK-002)",
-  "book_ref": null,
+  "book_ref": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 365505,
+   "quote": "the difference between infatuation (cal. 145) and Love (cal. 500)"
+  },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN (doctrinal leg added)"
  },
  {
   "id": "CF-008",
@@ -136,27 +121,16 @@
   "quoted": "Judgment and infatuation is impaired",
   "suspected": "Judgment in infatuation is impaired",
   "evidence_class": "a",
-  "evidence": "Same table and frame as the 'Pathology' row: 'Judgment and infatuation is impaired, whereas with love it's improved' is ungrammatical; 'in' restores it.",
+  "evidence": "Same table and frame as the 'Pathology' row: 'Judgment and infatuation is impaired, whereas with love it's improved' is ungrammatical; 'in' restores it. TASK-006 doctrinal leg: the slide is Hawkins' 'diagnostic differential between infatuation versus love' ('Infatuation, passion and attraction calibrate at 145, whereas love calibrates at 500', transcript @31543), the teaching the book states as 'the difference between infatuation (cal. 145) and Love (cal. 500)'; the restored row is a statement of that teaching, so 'in' restores grammar AND doctrinal sense.",
   "detector": "hand-read (TASK-002)",
-  "book_ref": null,
+  "book_ref": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 365505,
+   "quote": "the difference between infatuation (cal. 145) and Love (cal. 500)"
+  },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
- },
- {
-  "id": "CF-009",
-  "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
-  "paragraph": 0,
-  "char_offset": 315,
-  "quoted": "it's some wonderful",
-  "suspected": "it's so wonderful",
-  "evidence_class": "a",
-  "evidence": "'it's some wonderful' is ungrammatical; the near-form 'so' restores grammar (non-doctrinal announcement).",
-  "detector": "hand-read (TASK-002)",
-  "book_ref": null,
-  "confidence": "CERTAIN",
-  "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN (doctrinal leg added)"
  },
  {
   "id": "CF-010",
@@ -175,7 +149,7 @@
   },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN"
  },
  {
   "id": "CF-011",
@@ -190,7 +164,7 @@
   "book_ref": null,
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN"
  },
  {
   "id": "CF-012",
@@ -209,37 +183,7 @@
   },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
- },
- {
-  "id": "CF-013",
-  "transcript": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt",
-  "paragraph": 0,
-  "char_offset": 26352,
-  "quoted": "Custody bills are always too, very nasty.",
-  "suspected": "Custody battles are always, too, very nasty.",
-  "evidence_class": "a",
-  "evidence": "The exchange is about a 'custody battle' (said repeatedly just before, leg c); 'custody bills' is a near-form that is senseless here.",
-  "detector": "hand-read (TASK-002)",
-  "book_ref": null,
-  "confidence": "CERTAIN",
-  "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
- },
- {
-  "id": "CF-014",
-  "transcript": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt",
-  "paragraph": 0,
-  "char_offset": 4906,
-  "quoted": "He has drawn to it in addictive ways.",
-  "suspected": "He is drawn to it in addictive ways.",
-  "evidence_class": "a",
-  "evidence": "'He has drawn to it' is ungrammatical; the questioner immediately restates 'He's drawn? To addictive' (leg c); 'He's'/'He is' is the near-form.",
-  "detector": "hand-read (TASK-002)",
-  "book_ref": null,
-  "confidence": "CERTAIN",
-  "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN"
  },
  {
   "id": "CF-015",
@@ -258,22 +202,7 @@
   },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
- },
- {
-  "id": "CF-016",
-  "transcript": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
-  "paragraph": 0,
-  "char_offset": 20139,
-  "quoted": "the ego, miles away, can spot a mouse",
-  "suspected": "the eagle, miles away, can spot a mouse",
-  "evidence_class": "a",
-  "evidence": "Seconds earlier: 'I thought it would be great to be an eagle. Go up a mile in the sky and ten miles away you can spot a mouse.' (leg c). 'the ego ... can spot a mouse' is senseless; 'eagle' is the near-form.",
-  "detector": "hand-read (TASK-002)",
-  "book_ref": null,
-  "confidence": "CERTAIN",
-  "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN"
  },
  {
   "id": "CF-017",
@@ -292,21 +221,82 @@
   },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN"
  },
  {
-  "id": "CF-018",
-  "transcript": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "id": "CF-019",
+  "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
   "paragraph": 0,
-  "char_offset": 6029,
-  "quoted": "who is now left",
-  "suspected": "who has now left",
-  "evidence_class": "a",
-  "evidence": "'a spiritual teacher who is now left' is ungrammatical; near-form 'has' restores it (the teacher left Sedona; the Korean rendering says the teacher 'no longer exists [there]').",
-  "detector": "hand-read (TASK-002)",
-  "book_ref": null,
+  "char_offset": 4226,
+  "quoted": "40% happiness",
+  "suspected": "60% happiness",
+  "evidence_class": "b",
+  "evidence": "Slide 'as consciousness level ... rises ... rate of unemployment decreases, rate of poverty decreases, happiness increases, rate of criminality decreases'. For level 200 the transcript reads '8% unemployment. 1.5% poverty. 40% happiness. And 9.0% criminality.' The book's 'Correlation of Levels of Consciousness and Societal Problems' table row 200-300 reads '8% 1.5% 60% 9.0%': three of four values match exactly (same slide row), the happiness value is contradicted verbatim (60, not 40). The <50 row (97%, 65%, 0%, 98%) and 500-600 happiness (98%) the transcript reads also match the same table.",
+  "detector": "hand-read (TASK-006)",
+  "book_ref": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 148737,
+   "quote": "200–300 8% 1.5% 60% 9.0%"
+  },
   "confidence": "CERTAIN",
   "status": "confirmed",
-  "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  "status_by": "WORKER hand-read re-reading of the full transcript (TASK-006); not seeded from detector output"
+ },
+ {
+  "id": "CF-020",
+  "transcript": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt",
+  "paragraph": 0,
+  "char_offset": 14681,
+  "quoted": "calibrating at 380",
+  "suspected": "calibrating at 390",
+  "evidence_class": "b",
+  "evidence": "Questioner: 'the Enneagram ... you mentioned it in Truth vs. Falsehood as calibrating at 380'. The named book's list 'Other Teachings, Schools, and Spiritual Traditions' gives 'Enneagrams 390' (the only Enneagram calibration in the book store). The transcript attributes a figure to a named Hawkins book that the book contradicts verbatim (VISION default scope: 'any quote the transcript attributes to a book that the book contradicts'). Source of the error (ASR 'ninety'->'eighty' or the questioner misremembering) cannot be determined from text; the transcript as text is wrong about the book.",
+  "detector": "hand-read (TASK-006)",
+  "book_ref": {
+   "slug": "truth_vs_falsehood",
+   "char_offset": 778891,
+   "quote": "Enneagrams\n\n390"
+  },
+  "confidence": "CERTAIN",
+  "status": "confirmed",
+  "status_by": "WORKER hand-read re-reading of the full transcript (TASK-006); not seeded from detector output"
+ },
+ {
+  "id": "CF-021",
+  "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "paragraph": 0,
+  "char_offset": 32998,
+  "quoted": "Perception and infatuation is exaggerated",
+  "suspected": "Perception in infatuation is exaggerated",
+  "evidence_class": "a",
+  "evidence": "Same 'infatuation versus love' slide table and frame as CF-007/CF-008 ('<attribute> in infatuation is X, whereas with love ...'; cf. 'Stability in infatuation is desperate', 'The self-image in infatuation is inflated' in the same table). '<X> and infatuation is <adj>' breaks subject-verb agreement; the acoustic near-form 'in' restores grammar and the doctrinal statement (infatuation 145 vs love 500, book passage cited). NOTE: same repeated ASR pattern on the same slide as CF-007/CF-008 — a distinct error instance, not a distinct pattern.",
+  "detector": "hand-read (TASK-006)",
+  "book_ref": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 365505,
+   "quote": "the difference between infatuation (cal. 145) and Love (cal. 500)"
+  },
+  "confidence": "CERTAIN",
+  "status": "confirmed",
+  "status_by": "WORKER hand-read re-reading of the full transcript (TASK-006); not seeded from detector output"
+ },
+ {
+  "id": "CF-022",
+  "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "paragraph": 0,
+  "char_offset": 33186,
+  "quoted": "Productivity and infatuation is disrupted",
+  "suspected": "Productivity in infatuation is disrupted",
+  "evidence_class": "a",
+  "evidence": "Same 'infatuation versus love' slide table and frame as CF-007/CF-008 ('<attribute> in infatuation is X, whereas with love ...'; cf. 'Stability in infatuation is desperate', 'The self-image in infatuation is inflated' in the same table). '<X> and infatuation is <adj>' breaks subject-verb agreement; the acoustic near-form 'in' restores grammar and the doctrinal statement (infatuation 145 vs love 500, book passage cited). NOTE: same repeated ASR pattern on the same slide as CF-007/CF-008 — a distinct error instance, not a distinct pattern.",
+  "detector": "hand-read (TASK-006)",
+  "book_ref": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 365505,
+   "quote": "the difference between infatuation (cal. 145) and Love (cal. 500)"
+  },
+  "confidence": "CERTAIN",
+  "status": "confirmed",
+  "status_by": "WORKER hand-read re-reading of the full transcript (TASK-006); not seeded from detector output"
  }
 ]
