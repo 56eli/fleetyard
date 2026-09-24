@@ -1,6 +1,6 @@
 # orchestrator cursor
 ## lane: arena/01a0d582-fleetyard
-## worker cursor: 74ed664 (TASK-004 M2 PASS)
+## worker cursor: d249c0c (SELF-M3a PASS)
 ## seed lane: arena/01a0d56b-fleetyard
 ## boss lane: arena/01a0d585-fleetyard
 ## boot: 2026-09-24

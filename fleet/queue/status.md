@@ -16,3 +16,6 @@
 2026-09-24T22:52Z M0 CERTIFIED (worker 863c97d, all criteria met: TASK-001 + TASK-003)
 2026-09-24T22:53Z TASK-004 PASS @ 74ed664 (gated by orchestrator: 50/50 tests, 3 detectors verified, 0 clean FPs)
 2026-09-24T22:53Z TASK-005 OPEN (M3 detector family B: doctrinal consistency) — cut by orchestrator
+2026-09-24T22:58Z SELF-M3a CLAIMED (worker self-serve, no OPEN task visible at orch handoff)
+2026-09-24T23:00Z SELF-M3a PASS @ d249c0c (gated by orchestrator: 57/57 tests, TF-IDF retrieval, recall@5 6/10)
+2026-09-24T23:01Z TASK-005 partially fulfilled by SELF-M3a (retrieval module). Remaining M3: contradiction, terminology drift, misquotation.

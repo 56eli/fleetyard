@@ -79,3 +79,15 @@ disclosures noted:
   - Dry run: 1264 unreviewed records across 210 transcripts (A1 937, A2 171, A4 155, 1 HIGH). Not committed, not a findings ledger — correct, M5 owns the sweep.
   - Korean interpretation in Sedona deliberately not flagged by A2 — correct handling.
 noted for M4 (self-improvement loop): A4's seeded hits are not precision evidence; the self-test lexicon must grow through hand-read fixture expansion, not seed injection.
+
+2026-09-24 CYCLE 47 — GATE: SELF-M3a (M3 item 1: book-passage retrieval) — worker sha d249c0c
+verdict: PASS
+suite: 57 tests OK (45 pass, 12 skipped — corpus-dependent in scratch worktree)
+test count: 57 (up from 50 — no tests dropped) ✓
+spot-checks:
+  - eval_fixtures recall@5: 6/10 book_ref fixtures hit (CF-002@5, CF-004@5, CF-005@5, CF-010@4, CF-012@3, CF-015@3) — matches worker's report ✓
+  - misses: CF-001 ("Dilgo. Quince." — too short for TF-IDF), CF-003 ("255%" — numeric, not a book quote), CF-006 (repetition loop), CF-017 (list/table text) — all reasonable TF-IDF limitations
+  - non-Hawkins exclusion: Be_as_you_are, I_AM_THAT, Lamsa_bible, ACIM_workbook excluded from index ✓
+  - stdlib-only: uses collections, math, re, sys — no external deps ✓
+tool gates: retrieval.py stdlib-only, no network, read-only over corpus/**. ✓
+notes: self-served by worker (orchestrator at cap, no OPEN task visible). Legitimate per role spec (CANON §7, worker role "No orchestrator lane yet, or no OPEN task → self-serve"). This is M3 item 1 of ~4; remaining M3 items: contradiction detection, terminology drift, misquotation.
