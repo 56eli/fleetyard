@@ -81,3 +81,88 @@ class AgainstCorpusTest(unittest.TestCase):
         self.assertEqual(len(fixtures.materialize_clean(recs, self.books)),
                          len(recs))
         self.assertEqual(fixtures.build_clean(self.books), recs)
+
+
+CORRECTIONS = os.path.join(ROOT, fixtures.CORRECTIONS_PATH)
+ORIGINAL_IDS = ["CF-%03d" % i for i in range(1, 19)]
+WITHDRAWN = {"CF-005": "HIGH CONFIDENCE", "CF-009": "CANDIDATE",
+             "CF-013": "HIGH CONFIDENCE", "CF-014": "HIGH CONFIDENCE",
+             "CF-016": "HIGH CONFIDENCE", "CF-018": "HIGH CONFIDENCE"}
+
+
+class CorrectionLogTest(unittest.TestCase):
+    """TASK-006: taxonomy repair is traceable and excluded from rates."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.conf = fixtures.load_json(CONFIRMED)
+        cls.corr = fixtures.load_json(CORRECTIONS)
+        cls.ids = {r["id"] for r in cls.conf}
+
+    def test_log_consistent_with_confirmed(self):
+        self.assertEqual(fixtures.verify_corrections(self.conf, self.corr), [])
+
+    def test_withdrawn_out_of_denominator_and_traceable(self):
+        for rid, conf in WITHDRAWN.items():
+            self.assertNotIn(rid, self.ids)
+            (c,) = [c for c in self.corr if c["id"] == rid]
+            self.assertEqual(c["former"]["confidence"], "CERTAIN")
+            self.assertEqual(c["new"]["confidence"], conf)
+            self.assertEqual(c["record_before"]["id"], rid)
+
+    def test_cf009_not_certain(self):
+        self.assertNotIn("CF-009", self.ids)
+
+    def test_cf002_examined_with_verdict(self):
+        (c,) = [c for c in self.corr if c["id"] == "CF-002"]
+        self.assertEqual(c["new"]["confidence"], "CERTAIN")
+        self.assertEqual(c["new"]["evidence_class"], "b")
+        self.assertGreater(len(c["reason"]), 100)
+
+    def test_every_original_record_accounted_for(self):
+        logged = {c["id"] for c in self.corr}
+        for rid in ORIGINAL_IDS:
+            self.assertIn(rid, logged)
+
+    def test_m1_floor_still_met(self):
+        # >= 15 CERTAIN from >= 3 fully read transcripts, all hand-read
+        self.assertGreaterEqual(len(self.conf), 15)
+        self.assertGreaterEqual(len({r["transcript"] for r in self.conf}), 3)
+        for r in self.conf:
+            self.assertTrue(r["detector"].startswith("hand-read"), r["id"])
+
+    def test_new_fixtures_are_hand_read_with_hard_leg(self):
+        new = [r for r in self.conf if r["id"] not in ORIGINAL_IDS]
+        self.assertEqual(len(new), 4)
+        for r in new:
+            self.assertEqual(r["detector"], "hand-read (TASK-006)")
+            self.assertIsNotNone(r["book_ref"])
+
+    def test_verify_corrections_catches_defects(self):
+        rec = dict(self.conf[0])
+        bad = [{"seq": 1, "id": rec["id"], "date": "d", "reviewer": "r",
+                "action": "downgrade-withdraw", "reason": "x",
+                "record_before": rec},
+               {"seq": 3, "id": "CF-999", "date": "d", "reviewer": "r",
+                "action": "add", "reason": "x"}]
+        probs = fixtures.verify_corrections([rec], bad)
+        self.assertTrue(any("still confirmed" in p for p in probs))
+        self.assertTrue(any("append-only" in p for p in probs))
+        self.assertTrue(any("CF-999" in p for p in probs))
+        downgraded = dict(rec, confidence="HIGH CONFIDENCE")
+        self.assertTrue(fixtures.verify_corrections([downgraded], []))
+
+
+@unittest.skipUnless(os.path.isdir(CORPUS), "corpus/ not extracted locally")
+class CorrectionCorpusTest(unittest.TestCase):
+    def test_withdrawn_snapshots_still_verify_against_corpus(self):
+        cwd = os.getcwd()
+        os.chdir(ROOT)
+        try:
+            books = loaders.read_book_store()
+            probs = fixtures.verify_corrections(
+                fixtures.load_json(CONFIRMED), fixtures.load_json(CORRECTIONS),
+                books)
+        finally:
+            os.chdir(cwd)
+        self.assertEqual(probs, [])

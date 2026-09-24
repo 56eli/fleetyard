@@ -67,9 +67,16 @@ class FixtureRecallTest(unittest.TestCase):
             os.chdir(cwd)
 
     def test_recall_floor(self):
-        # measured 6/10 at SELF-M3a; a drop is a regression
-        self.assertEqual(len(self.res), 10)
-        self.assertGreaterEqual(sum(1 for r in self.res.values() if r), 6)
+        # measured 6/10 at SELF-M3a. TASK-006 repair: CF-005 (a rank-5 hit)
+        # withdrawn; 5 fixtures with book refs added (CF-007/008 gained a
+        # ref, CF-019..022 new) -> 9/15 measured. Of the 9, four
+        # (CF-007/008/021/022) cite the SAME infatuation passage.
+        with_ref = [r for r in fixtures.load_json(
+            os.path.join(ROOT, fixtures.CONFIRMED_PATH)) if r["book_ref"]]
+        self.assertEqual(len(self.res), len(with_ref))
+        self.assertGreaterEqual(sum(1 for r in self.res.values() if r), 9)
+        pre_repair = ["CF-002", "CF-004", "CF-010", "CF-012", "CF-015"]
+        self.assertTrue(all(self.res[i] for i in pre_repair))
 
     def test_known_hits(self):
         self.assertLessEqual(self.res["CF-015"], 3)

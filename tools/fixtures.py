@@ -3,6 +3,11 @@
 
 fixtures/confirmed/confirmed.json
     Hand-found CERTAIN transcript errors (STANDARDS finding records).
+fixtures/confirmed/corrections.json
+    Append-only correction log (TASK-006): every downgrade / withdrawal /
+    reclassification / addition of a confirmed fixture, with the former
+    record snapshot, reason and reviewer. Withdrawn records are NOT in
+    confirmed.json and therefore not in any evaluation denominator.
 fixtures/clean/clean.json
     Clean-set sample from the book store, stored as POINTERS
     (slug, char_offset, length, sha256) — not as copied text. corpus/ is
@@ -25,6 +30,8 @@ import loaders  # noqa: E402
 
 CONFIRMED_PATH = os.path.join("fixtures", "confirmed", "confirmed.json")
 CLEAN_PATH = os.path.join("fixtures", "clean", "clean.json")
+CORRECTIONS_PATH = os.path.join("fixtures", "confirmed", "corrections.json")
+EVIDENCE_CLASSES = ("a", "b", "c")
 
 REQUIRED_FIELDS = ("id", "transcript", "paragraph", "char_offset", "quoted",
                    "suspected", "evidence_class", "evidence", "detector",
@@ -133,6 +140,41 @@ def verify_confirmed(records, books):
     return problems
 
 
+def verify_corrections(confirmed, corrections, books=None):
+    """Problems in the correction log vs the current confirmed set."""
+    problems = []
+    ids = [r["id"] for r in confirmed]
+    if len(ids) != len(set(ids)):
+        problems.append("duplicate confirmed ids")
+    for r in confirmed:
+        if r["confidence"] != "CERTAIN" or r["status"] != "confirmed":
+            problems.append("%s: confirmed set holds non-CERTAIN" % r["id"])
+        if r["evidence_class"] not in EVIDENCE_CLASSES:
+            problems.append("%s: evidence class %r" % (r["id"],
+                                                       r["evidence_class"]))
+    seqs = [c["seq"] for c in corrections]
+    if seqs != list(range(1, len(seqs) + 1)):
+        problems.append("correction log seq not 1..n (append-only)")
+    for c in corrections:
+        for f in ("id", "date", "reviewer", "action", "reason"):
+            if not c.get(f):
+                problems.append("correction %s: missing %s" % (c.get("seq"), f))
+        withdrawn = c["action"].startswith("downgrade")
+        if withdrawn:
+            if c["id"] in ids:
+                problems.append("%s: withdrawn but still confirmed" % c["id"])
+            if not c.get("record_before"):
+                problems.append("%s: withdrawal without record snapshot"
+                                % c["id"])
+            elif books is not None:
+                problems.extend("withdrawn " + p for p in
+                                verify_confirmed([c["record_before"]], books))
+        elif c["id"] not in ids:
+            problems.append("%s: logged as kept/added but not confirmed"
+                            % c["id"])
+    return problems
+
+
 def main(argv):
     cmd = argv[1] if len(argv) > 1 else "verify"
     books = loaders.read_book_store()
@@ -144,11 +186,15 @@ def main(argv):
             fh.write("\n")
         print("wrote %s (%d passages)" % (CLEAN_PATH, len(recs)))
         return 0
-    probs = verify_confirmed(load_json(CONFIRMED_PATH), books)
+    conf = load_json(CONFIRMED_PATH)
+    probs = verify_confirmed(conf, books)
+    if os.path.exists(CORRECTIONS_PATH):
+        probs += verify_corrections(conf, load_json(CORRECTIONS_PATH), books)
     materialize_clean(load_json(CLEAN_PATH), books)
     for p in probs:
         print(p)
-    print("fixtures %s" % ("OK" if not probs else "FAIL"))
+    print("fixtures %s (%d confirmed CERTAIN)" % (
+        "OK" if not probs else "FAIL", len(conf)))
     return 1 if probs else 0
 
 

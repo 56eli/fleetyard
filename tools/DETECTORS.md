@@ -22,16 +22,18 @@ whole corpus; B2 ~2-4 s per transcript (~10-15 min for `--all`).
 
 ## Fixture + clean-set results (verbatim output of `python3 tools/run_detectors.py --eval`)
 
-| detector | fixture hits (independent) | fixture hits (seeded from that fixture) | clean-set false positives |
+| detector | fixture hits (independent) | fixture hits (seeded from that fixture) | clean-set false positives (in-sample 59; tune set, NOT an independent FP rate) |
 |---|---|---|---|
-| A1-repetition | 2/18 CF-005,CF-006 | 0  | 0/59 passages |
-| A2-nonsense | 1/18 CF-003 | 0  | 0/59 passages |
-| A4-confusion | 0/18  | 8 CF-001,CF-002,CF-004,CF-010,CF-011,CF-012,CF-013,CF-017 | 0/59 passages |
-| B1-contradiction | 2/18 CF-003,CF-006 | 0  | 0/59 passages |
-| B2-misquote | 1/18 CF-015 | 0  | 0/59 passages |
+| A1-repetition | 1/16 CF-006 | 0  | 0/59 passages |
+| A2-nonsense | 1/16 CF-003 | 0  | 0/59 passages |
+| A4-confusion | 0/16  | 7 CF-001,CF-002,CF-004,CF-010,CF-011,CF-012,CF-017 | 0/59 passages |
+| B1-contradiction | 2/16 CF-003,CF-006 | 0  | 0/59 passages |
+| B2-misquote | 1/16 CF-015 | 0  | 0/59 passages |
 
 "Fixture hits" = a signal overlaps the fixture's quoted span (recall on the
-18 CERTAIN fixtures). **Precision is not measured yet**: that needs a finding
+current confirmed denominator — 16 after the TASK-006 re-audit, which
+withdrew CF-005, CF-009, CF-013, CF-014, CF-016, CF-018 and added
+CF-019..CF-022; see fixtures/README.md). **Precision is not measured yet**: that needs a finding
 pass over flagged spans (no reviewed sample exists). Clean-set FPs use a
 held-out lexicon (the passage's own book removed from A4's lexicon); B2's
 clean-set check likewise excludes the passage's own book from retrieval
@@ -41,7 +43,7 @@ as a clean set: 0 signals (test-enforced).
 ## Disclosures
 1. A4's 8 fixture hits all come from list entries SEEDED from those same
    fixtures (provenance `seed:CF-xxx`), so they are not independent recall
-   evidence; A4's independent fixture recall is 0/18. Its generic paths
+   evidence; A4's independent fixture recall is 0/18 (0/16 after TASK-006). Its generic paths
    (`general` list entries, difflib lexicon) are untested against fixtures.
 2. A4's difflib cutoff was raised 0.80 -> 0.82 after the first held-out eval
    gave 2 clean-set FPs (`Lenny`->`Lenin`, `Llamas`->`Lama`, both ratio
@@ -86,7 +88,7 @@ as a clean set: 0 signals (test-enforced).
    phrase; book-side omissions (speaker skipped words) are ignored; numbers
    and contractions ignored. Each filter was added after seeing clean-set or
    fixture-transcript output, so the rules are fitted to what we have.
-9. B2 recall is narrow: 1/18 (CF-015). CF-004 ("unquestionable love") is a
+9. B2 recall is narrow: 1/18 at delivery, 1/16 after TASK-006 (CF-015). CF-004 ("unquestionable love") is a
    near-form substitution B2 is designed for, but the transcript sentence is
    surrounded by a repetition loop and chat, so no window retrieves the book
    passage. Explicit attribution ("as it says in <book>") is not parsed.
@@ -103,3 +105,11 @@ as a clean set: 0 signals (test-enforced).
     unmeasured.
 11. Contradiction/misquote are the only B modules; no numeric-claim or
     date detector shipped.
+12. TASK-006 effect on detector numbers (denominator 18 -> 16): A1 lost
+    its CF-005 hit (CF-005 is now HIGH CONFIDENCE, not in the denominator)
+    -> 1/16; A4's seeded matches drop 8 -> 7 (CF-013 withdrawn; the
+    `seed:CF-013` confusion-list entry stays, with provenance, but its match
+    no longer counts). A4 independent recall stays 0 (TASK-004 criterion 4
+    FAILED, owner ERRATA-2026-09-25 §3). No detector catches the new
+    CF-019..CF-022. All clean-set numbers are IN-SAMPLE (the 59 passages were
+    seen while tuning A4, B1 and B2) and are not independent FP rates.

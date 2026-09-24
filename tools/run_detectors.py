@@ -172,7 +172,8 @@ def evaluate(books, confirmed, clean, detectors=DETECTORS):
 
 def format_eval(res, n_fixtures):
     lines = ["| detector | fixture hits (independent) | fixture hits "
-             "(seeded from that fixture) | clean-set false positives |",
+             "(seeded from that fixture) | clean-set false positives "
+             "(in-sample 59; tune set, NOT an independent FP rate) |",
              "|---|---|---|---|"]
     for det, r in res.items():
         lines.append("| %s | %d/%d %s | %d %s | %d/%d passages |" % (

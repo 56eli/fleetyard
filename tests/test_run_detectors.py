@@ -106,10 +106,13 @@ class EvalTest(unittest.TestCase):
                                     1, det)
 
     def test_measured_hits(self):
+        # TASK-006: CF-005 withdrawn (HIGH CONFIDENCE) -> A1 keeps CF-006
         self.assertEqual(sorted(self.res["A1-repetition"]["hits"]),
-                         ["CF-005", "CF-006"])
+                         ["CF-006"])
         self.assertEqual(self.res["A2-nonsense"]["hits"], ["CF-003"])
-        self.assertEqual(len(self.res["A4-confusion"]["seeded_hits"]), 8)
+        # seeded only (never independent); CF-013 withdrawn by TASK-006
+        self.assertEqual(len(self.res["A4-confusion"]["seeded_hits"]), 7)
+        self.assertEqual(self.res["A4-confusion"]["hits"], [])
         # TASK-005 family B
         self.assertEqual(sorted(self.res["B1-contradiction"]["hits"]),
                          ["CF-003", "CF-006"])
