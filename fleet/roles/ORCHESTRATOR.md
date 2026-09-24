@@ -56,3 +56,4 @@ Your writes (all on YOUR lane): `fleet/GATES.md`, `fleet/queue/pending/*`,
    CONTINUES from the worker lane's state, never restarts).
 6. Certification: a milestone whose every task passed gating is CERTIFIED
    on YOUR lane (milestone, worker-lane sha, date, evidence index) —
+   certifications are the campaign's releases. Heartbeat. Push your lane.

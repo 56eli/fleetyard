@@ -50,3 +50,4 @@ heartbeat "insanity guard: task <id> stopped after 3 strikes: <last error>",
 next task. Reverting your own commit within a task = a strike. Three
 consecutive guard-stopped tasks → write `fleet/alerts/worker-insanity` on
 YOUR lane, heartbeat "insanity full-stop", idle the rest of the shift. The
+guard is a duty; hiding a stuck loop is a disclosure violation.

@@ -54,3 +54,4 @@ review uses to flag drift.
 - Whether "misquotation" includes misattributed quotes of OTHER authors
   inside transcripts, or only Hawkins' own teaching (default: only Hawkins'
   teaching, plus any quote the transcript attributes to a book that the book
+  contradicts).

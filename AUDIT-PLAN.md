@@ -38,3 +38,4 @@ milestones; the Boss may re-order via REDIRECT.
       error rates by confidence class (CERTAIN/HIGH separate, CANDIDATE
       reported separately, never blended), by year, by detector family, by
       transcript (hotspots); the full classified findings list; pattern
+      summary; recommendations (e.g., re-transcription priorities).

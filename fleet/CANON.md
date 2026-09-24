@@ -29,3 +29,4 @@ to every role from the repo itself. Every shift re-reads this file first.
     no-PR/no-merge design keeps the coupling out by construction; any
     future PR-bearing flow uses self-created branches only. In this fleet
     every lane IS an assigned session branch by design; role names are the
+    addresses, branch names are incidental.

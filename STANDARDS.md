@@ -37,3 +37,4 @@ detector id · book reference (if doctrinal) · confidence · status
   the transcript's findings; counts of audited vs pending are always stated.
 - Rates are per class. Blending CANDIDATE into a rate is a defect.
 - Corpus is frozen: a finding can never be "fixed away" — only confirmed or
+  discarded with reasons.
