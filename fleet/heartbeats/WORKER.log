@@ -1,1 +1,4 @@
 # heartbeat log
+2026-09-24T22:23Z boot @ arena/01a0d581-fleetyard 7c4ae48381323b8d6d9d71e4190797c8eb409204 (lane registered: fleet/branches/WORKER.md). zip sha256 3f36c520391049a4 verified; corpus/ extracted locally (318 files), untracked (.git/info/exclude, never committed). DISCLOSURE: boot push 7c4ae48 went out before tests/ existed (suite = ImportError, not green) by owner boot order; registry file only.
+2026-09-24T22:23Z cycle 1: re-read CANON/VISION/STANDARDS on seed lane (= main 4bd116d per owner boot prompt). No orchestrator lane (ls-remote: main, arena/01a0d56b-fleetyard [old seed], mine). No STOP-WORKER, no PAUSE, no insanity alert. No queue -> self-serve AUDIT-PLAN M0.
+2026-09-24T22:23Z claimed M0 (self-serve: corpus inventory, tools/CORPUS.md)
