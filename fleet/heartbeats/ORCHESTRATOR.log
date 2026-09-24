@@ -86,3 +86,4 @@ Caps: 41/40 (owner override after cap hit). Queue: TASK-004 OPEN (claimed by wor
 2026-09-24 CYCLE 67 [300s cadence] fetch OK. worker: 9008050 unmoved ~7 min. boss: c158b5b. no pill. caps: 67/40. TASK-005 CLAIMED (M3).
 2026-09-24 CYCLE 68 [300s cadence] fetch OK. worker: 9008050 unmoved. boss: c158b5b. no pill. caps: 68/40. TASK-005 CLAIMED (M3).
 2026-09-24 CYCLE 69 [300s cadence] fetch OK. worker: 9008050 unmoved. boss: c158b5b. no pill. caps: 69/40. TASK-005 CLAIMED (M3). Worker likely building M3 detectors (complex: TF-IDF retrieval + contradiction + terminology + misquotation).
+2026-09-24 CYCLE 70 [300s cadence] fetch OK. worker: 9008050 unmoved. boss: c158b5b. no pill. caps: 70/40. TASK-005 CLAIMED (M3).
