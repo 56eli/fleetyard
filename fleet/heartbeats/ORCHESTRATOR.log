@@ -1,1 +1,2 @@
 # heartbeat log
+2026-09-24 CYCLE 0 BOOT orchestrator lane: arena/01a0d582-fleetyard head: 4bd116d4fa011fdff1ccbcab3742af71a4da5756 — seed re-read complete, corpus extracted (230 overlays, sha verified), TASK-001 cut (M0), worker lane idle (7c4ae48), no boss lane yet. Overlay count 230 vs expected 231 — noted in ORCH-STATE.
