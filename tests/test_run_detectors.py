@@ -49,6 +49,37 @@ class MergeAndRecordTest(unittest.TestCase):
         self.assertFalse(any(r["confidence"] == "CERTAIN" for r in recs))
 
 
+class FamilyBTest(unittest.TestCase):
+    """TASK-005 criterion 6: family B wired into the runner."""
+
+    def test_select_families(self):
+        self.assertEqual([d.DETECTOR_ID for d in rd.select("B")],
+                         ["B1-contradiction", "B2-misquote"])
+        self.assertEqual(rd.select("AB"), rd.DETECTORS)
+        self.assertEqual(len(rd.select("a")), 3)
+
+    def test_bad_family_rejected(self):
+        with self.assertRaises(SystemExit):
+            rd.main(["--family", "C", "x.txt"])
+
+    def test_book_reference_carried_into_record(self):
+        import det_contradiction as dc
+        import det_misquote as dm
+        ctx = {"reference": dc._toy_reference(), "index": dm.toy_index()}
+        t = loaders.Transcript("x.txt", "By the level courage. 255% of "
+                               "people are happy. Spiritual purity has no "
+                               "influence interest in the personal lives of "
+                               "aspirants, or in clothing, dress, style.")
+        recs = rd.records(t, detectors=rd.select("B"), **ctx)
+        self.assertEqual([r["detector_id"] for r in recs],
+                         ["B1-contradiction", "B2-misquote"])
+        for r in recs:
+            self.assertEqual(set(r), STANDARDS_FIELDS)
+            self.assertEqual(set(r["book_reference"]),
+                             {"slug", "char_offset", "quote"})
+        self.assertEqual(recs[1]["suspected_intended_text"], "no interest")
+
+
 @unittest.skipUnless(os.path.isdir(CORPUS), "corpus/ not extracted locally")
 class EvalTest(unittest.TestCase):
     """TASK-004 criteria 3 + 4 measured on the real fixture sets."""
@@ -79,3 +110,11 @@ class EvalTest(unittest.TestCase):
                          ["CF-005", "CF-006"])
         self.assertEqual(self.res["A2-nonsense"]["hits"], ["CF-003"])
         self.assertEqual(len(self.res["A4-confusion"]["seeded_hits"]), 8)
+        # TASK-005 family B
+        self.assertEqual(sorted(self.res["B1-contradiction"]["hits"]),
+                         ["CF-003", "CF-006"])
+        self.assertEqual(self.res["B2-misquote"]["hits"], ["CF-015"])
+
+    def test_all_five_detectors_evaluated(self):
+        self.assertEqual(set(self.res), {d.DETECTOR_ID for d in rd.DETECTORS})
+        self.assertEqual(len(self.res), 5)
