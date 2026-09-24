@@ -3,3 +3,5 @@
 2026-09-24T22:23Z cycle 1: re-read CANON/VISION/STANDARDS on seed lane (= main 4bd116d per owner boot prompt). No orchestrator lane (ls-remote: main, arena/01a0d56b-fleetyard [old seed], mine). No STOP-WORKER, no PAUSE, no insanity alert. No queue -> self-serve AUDIT-PLAN M0.
 2026-09-24T22:23Z claimed M0 (self-serve: corpus inventory, tools/CORPUS.md)
 2026-09-24T22:23Z task M0 @ arena/01a0d581-fleetyard 52dce651a21a424fad509c5ff999687728d99ba0 (12 tests OK, 0 findings) — 230 transcripts + manifest.json = 231 entries; battery MATCH x3; anomalies: 9 files w/ U+FFFD, 12 no-suffix names, 52 undated, 57 manifest-drift, all transcripts single-line (no paragraph breaks). AUDIT-PLAN M5 says 231 transcripts; measured 230 (disclosed in CORPUS.md).
+2026-09-24T22:27Z cycle 2: fetch OK. seed(main) 4bd116d unchanged. orchestrator lane found: arena/01a0d582-fleetyard (f03cf36; TASK-001 PASS @ 7fac8d3). boss lane: arena/01a0d585-fleetyard. No STOP/PAUSE/insanity. Self-serve M0 == TASK-001 (gated PASS).
+2026-09-24T22:27Z claimed TASK-002 (M1 tooling foundation) @ orchestrator f03cf36
