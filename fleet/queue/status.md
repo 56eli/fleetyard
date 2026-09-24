@@ -7,3 +7,5 @@
 2026-09-24T22:31Z REDIRECT-001 SERVED (denominator correction: 230 transcripts)
 2026-09-24T22:31Z REDIRECT-002 SERVED (M0 gate kept open, TASK-003 cut for extra-sources)
 2026-09-24T22:31Z TASK-003 OPEN (M0 supplement: extra-sources census) — cut by orchestrator per REDIRECT-002
+2026-09-24T22:35Z TASK-002 PASS @ 2f14b03 (gated by orchestrator: 30/30 tests, 18 fixtures verified, clean set verified)
+2026-09-24T22:35Z TASK-004 OPEN (M2 detector family A: language integrity) — cut by orchestrator
