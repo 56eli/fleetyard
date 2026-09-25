@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T21:00Z
+updated: 2026-09-25T21:04Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -20,21 +20,21 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
   [CF-003, CF-006, CF-015] / **0 HIGH** / **1,331 CANDIDATE**; 242/242 book refs byte-exact;
   deterministic; 26 tests green. Scoreboard: **3 / 0 / 1,331**. Milestone **CLEARED**.
 - M4 self-improvement loop — **IN PROGRESS** on worker lane:
-  - q1 catalog + split: GATED INCOMPLETE by ORCH-2 @ `88009d2` (repaired by WORKER-2 at `33b6f36` via item 0b).
-  - q2 C1-drop delivered at `012914d`; leg-(d) individual adjudication DELIVERED at `1fb524e` (TASK-018: 57 CERTAIN-leg-d, 65 CANDIDATE; fixtures D2-001/003 confirmed, D2-002/004 discarded; awaiting ORCH-2 gate).
-  - q3 C2-format delivered at `4425763`; GATED INCOMPLETE by ORCH-2 @ `6495a8b` (reproduction/citations exact; no fixture recall, no clean-set run, detector digest commit mismatch; unpromoted, no pause).
+  - q1 catalog + split: GATED INCOMPLETE by ORCH-2 @ `88009d2` (repaired by WORKER-2 at `33b6f36` via item 0b; consolidated repair TASK-020 items 1-8 cut).
+  - q2 C1-drop: GATED INCOMPLETE by ORCH-2 @ `91cf112` (substance reproduced 93/122 byte-identical; clean-set probe 3/59 cross-book self-parallels; 9/122 shape-defective; unpromoted, no pause; repair in TASK-020). Leg-(d) individual adjudication DELIVERED at `1fb524e` (TASK-018: 57 CERTAIN-leg-d, 65 CANDIDATE; fixtures D2-001/003 confirmed, D2-002/004 discarded).
+  - q3 C2-format: GATED INCOMPLETE by ORCH-2 @ `6495a8b` (reproduction exact; clean set 1/59 misfire "power.When"; unpromoted, no pause; repair in TASK-020).
   - q4-q5 delivered provisional-ungated at `1beadd9`.
   - Toolchain foundation: TASK-017 DELIVERED at `b2e0761` (inherited v1 toolchain byte-exact: 266 files, 154 tests OK / 1 skip, 16 fixtures verified, fresh sweep 10/10 identical).
   - Fresh split v2: TASK-019a DELIVERED at `79eb401` (fresh sealed split v2: 197 tuning / 33 holdout, 43 forced tuning, 0 contamination; suite 164 OK / 1 skip; awaiting ORCH-2 gate).
-  - Actionable queue: ORCH-2 gating of TASK-018, TASK-017, TASK-019a → TASK-019b (one-shot holdout evaluation).
+  - Actionable queue: ORCH-2 gating of TASK-018, TASK-017, TASK-019a → WORKER-2 addresses TASK-020 repair → TASK-019b (one-shot holdout evaluation).
 - M6 final audit report — **BLOCKED on fresh sealed holdout split v2 + M4 completion**
   (holdout evaluated at q4; fresh split with new salt sealed in TASK-019a @ `79eb401`; TASK-017 delivered).
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T20:58Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T21:03Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
-- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `2bbb9f61ad44c36c3348e72f972569d5ea0535b2` (ALIVE; cadence active)
-- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `6495a8bbe0c9500cf608803745afbb7375543a59` (ALIVE; gating q2/TASK-018)
+- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `2bbb9f61ad44c36c3348e72f972569d5ea0535b2` (ALIVE; delivered TASK-018, TASK-017, TASK-019a; cadence active)
+- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `91cf112b0a3fad69c81248ce39b044df5e15c394` (ALIVE; q2 gated INCOMPLETE, TASK-020 cut)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
   - worker v1: `arena/01a0d581-fleetyard` @ `bf97d85` (HALT ack)
@@ -54,8 +54,8 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 
 ## stall watch (re-armed per ERRATA-25f §2: signals only)
 - Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `2bbb9f6`).
-- Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `6495a8b`).
-- Class 3 (starvation): NOT FIRED (actionable queue: ORCH-2 gates of TASK-018, TASK-017, TASK-019a).
+- Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `91cf112`).
+- Class 3 (starvation): NOT FIRED (actionable queue: ORCH-2 gates of TASK-018, TASK-017, TASK-019a; TASK-020 repair).
 - Class 4 (post-handoff): NOT FIRED (all v1 archives verified frozen).
 - Class 5 (LOUD ZOMBIE): ARMED.
 - Class 6 (context-rot support): ARMED.
