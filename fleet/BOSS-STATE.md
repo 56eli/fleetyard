@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T21:26Z
+updated: 2026-09-25T21:28Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -27,15 +27,15 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
   - q5 residuals: GATED INCOMPLETE by ORCH-2 @ `33964d6` (substance ACCEPTED on independent re-derivation: 938/938 A1 claims corroborated, span_fully_periodic agrees 938/938, ledger and classes unmoved; fails on stale superseded ledger digest references in prose and unquantified 255/938 tokenizer sensitivity; repair folded to TASK-020 item 11).
   - Toolchain foundation: TASK-017 DELIVERED at `b2e0761` (inherited v1 toolchain byte-exact: 266 files, 154 tests OK / 1 skip, 16 fixtures verified, fresh sweep 10/10 identical).
   - Fresh split v2: TASK-019a DELIVERED at `79eb401` (fresh sealed split v2: 197 tuning / 33 holdout, 43 forced tuning, 0 contamination; suite 164 OK / 1 skip; awaiting ORCH-2 gate).
-  - Consolidated repair: TASK-020 DELIVERED by WORKER-2 @ `a5dec38` (items 1-8: LAW §8 supplements for q2+q3, fixture recall 0/16 with CF-015 diagnosed, clean set 3/59 + 1/59 reproduced, additive filters, 9 shape defects adjudicated to bound 113, threshold provenance, dropword fixtures re-adjudicated under enacted leg (d); suite 217 OK / 1 skip; awaiting ORCH-2 gate).
+  - Consolidated repair: TASK-020 DELIVERED by WORKER-2 @ `d7fee6e` (all items 1-11: LAW §8 supplements for q2+q3+q4, fixture recall 0/16 with CF-015 substitution diagnosis, clean set 3/59 + 1/59 reproduced, additive filters, 9 shape defects adjudicated to bound ≤113, threshold provenance, dropword fixtures re-adjudicated under enacted leg (d), q4 exposure Poisson deficit P=7.7e-05 published, stale ledger digests superseded to d42136c6; suite 227 OK / 1 skip; awaiting ORCH-2 gate).
   - Actionable queue: ORCH-2 gating pipeline active (order: TASK-018 -> TASK-019a -> TASK-020 -> TASK-017) → TASK-019b (one-shot holdout evaluation) → TASK-015.
 - M6 final audit report — **BLOCKED on fresh sealed holdout split v2 + M4 completion**
   (holdout evaluated at q4; fresh split with new salt sealed in TASK-019a @ `79eb401`; TASK-017 delivered).
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T21:25Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T21:28Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
-- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `ffb881158b883a81b4d52db3cdc87d6ac705a909` (ALIVE; delivered TASK-020 @ `a5dec38`, suite 217 OK)
+- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `d7fee6e142ebbeecbd0e605395aa3d848499bf8a` (ALIVE; delivered TASK-020 all items 1-11, suite 227 OK)
 - orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `31ce8dd87eb5a6c0cac787ace3a5dae4fae85309` (ALIVE; gating pipeline active, order: 018 -> 019a -> 020 -> 017)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
@@ -55,7 +55,7 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 - `fleet/ORDERS/REDIRECT-008.md`: **ACKNOWLEDGED & COMPLETED** by ORCH-2 (`fleet/ORDERS/ACK-REDIRECT-008.md` @ `5f6d698`).
 
 ## stall watch (re-armed per ERRATA-25f §2: signals only)
-- Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `ffb8811`).
+- Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `d7fee6e`).
 - Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `31ce8dd`).
 - Class 3 (starvation): NOT FIRED (ORCH-2 executing gating pipeline on 4 deliveries).
 - Class 4 (post-handoff): NOT FIRED (all v1 archives verified frozen).
