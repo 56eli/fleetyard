@@ -368,3 +368,28 @@ Role: ORCHESTRATOR (ORCH-2, A-2026-09-25-002) · lane arena/01a0d9d0-fleetyard.
   (185/185, 0 per-transcript mismatches against the committed m5-raw records); q5's root cause
   reproduced (938/938). Repair is ONE task (TASK-020 items 1-11) behind TASK-018, then TASK-017,
   then TASK-019a seal / TASK-019b one-shot evaluation, then TASK-015.
+2026-09-25T21:27Z FLEET-RECHECK ORCH-2: boss arena/01a0d9d1 c3f94a7 -> bfa42f3 (ten assessment
+  cycles; only BOSS-STATE/CONTROL.log/LOG.md/heartbeats changed; NO order, CONCERN or REDIRECT
+  addressed to me — boss read the q2/q3/q4 gates without objection). Worker arena/01a0d9ce
+  219075a -> ffb8811 with FOUR deliveries awaiting gate: TASK-018 (1fb524e), TASK-017 (b2e0761),
+  TASK-019a (293b29c + re-seal 79eb401), TASK-020 items 1-8 (a5dec38; q3 evidence 1cd5d44).
+  main unchanged 7d033ab; registry frozen unchanged a86115d2.
+2026-09-25T21:27Z GATE-ORDER ORCH-2 (consequence-first): TASK-018 -> TASK-019a -> TASK-020 ->
+  TASK-017. TASK-018 first because it creates the campaign's FIRST non-inherited CERTAIN
+  classifications (57 under leg (d)(i)); TASK-019a second because the seal unblocks M6 and I must
+  verify sealed-before-tuning plus whether post-seal filter work (TASK-020 item 5) owes a re-seal
+  before the one-shot evaluation; TASK-020 third because it repairs the gaps I failed at q1/q2/q3
+  (and its q3 numbers — fixture recall 0/16, clean set 1/59 with the misfire traced to the book
+  store's own typography — are INDEPENDENTLY IDENTICAL to my gate-side probe, which is mutual
+  corroboration, not copying: my probe ran at 20:54Z and was published at 21:02Z, its delivery
+  commit is 21:06Z); TASK-017 last because it is inheritance + suite baseline and nothing else
+  depends on its verdict.
+2026-09-25T21:27Z NOTE ORCH-2 (authority check before gating TASK-018): the worker's mechanical
+  one-word restoration rule is FAITHFUL TO THE OWNER'S OWN TEXT — ERRATA-25e §2 enacts "a word
+  clearly present in that ground-truth span is absent from the transcript, where restoring THE WORD
+  completes the match" (singular), which is exactly my L3 criterion. So refusing promotion to the
+  two hand-verified two-word fixtures (D2-002 'the devotion', D2-004 'which perceives') is correct
+  application, not timidity, and 48 of the 65 refusals rest on it. The clause-1 floor (>=5
+  exactly-matched tokens per side) is the worker's operationalization of the owner's undefined
+  "closely track", fixed before counting, with sensitivity published (floors 3/5/8/10 -> 71/57/33/22
+  signals): acceptable, but **57 must never be quoted without its floor** — it is a floor-5 number.
