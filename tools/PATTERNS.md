@@ -164,7 +164,7 @@ R4 underscore run, R5 space-before-comma, R6 spaced period, R7 glued comma.
 One-shot runs of the frozen detectors over the 37 holdout transcripts
 (`runs/m4-q4-holdout/`, runner `tools/m4_q4_holdout.py`):
 
-| detector set | holdout raw signals | tuning raw signals (rate/tx) |
+| detector set | holdout raw signals | tuning raw signals (signals/tx — density, not a rate) |
 |---|---|---|
 | v1 A1,A2,B1,B2 | **185** (5.00/tx) | 1,149 over the 193 tuning files (5.95/tx) |
 | C1-drop | **5** (0.14/tx) | 122 (0.63/tx) |
@@ -178,10 +178,40 @@ One-shot runs of the frozen detectors over the 37 holdout transcripts
 - **Holdout status:** `holdout_consumed: true` for these detector versions; nothing
   was tuned against it. Any later tuning informed by these counts invalidates this
   evaluation for that detector and owes a new split (new salt).
-- **Open question (not a conclusion):** C1-drop's holdout rate is ~4.5x lower than
-  its tuning rate (5 vs 122 signals). With 37 holdout transcripts this is dominated
+- **Open question (not a conclusion):** C1-drop's holdout count is ~4.5x lower than
+  its tuning count (5 vs 122 signals). With 37 holdout transcripts this is dominated
   by sampling noise, but it may also indicate parameters fitted to the tuning half —
   flagged for M4 follow-up.
+
+> **CORRECTION (appended 2026-09-25T21:3xZ, TASK-020 item 10 — q4.8; the sentence above
+> is superseded on the statistics, left readable, never rewritten in place).** The claim
+> that the gaps are "dominated by sampling noise" is **wrong for C1-drop**, and the fault
+> was comparing per-file densities without normalizing by exposure. Holdout transcripts are
+> **14.9% shorter** (mean 53,949 vs 63,361 characters; the holdout is 1,996,122 of
+> 14,224,783 corpus characters, 14.03%), so the correct comparison is by **character
+> exposure**, not file count:
+>
+> | detector set | observed holdout | expected at tuning exposure | P(X ≤ observed) |
+> |---|---|---|---|
+> | v1 A1,A2,B1,B2 | 185 | 187.9 (gate: 187.6) | **0.44** (gate: 0.45) — consistent |
+> | C2-format | 12 | 8.0 | **0.94** (gate: 0.94) — consistent |
+> | C1-drop | 5 | 19.9 | **7.7e-05** (gate: 7.7e-05) — a real ~4x deficit |
+>
+> Expectation = tuning-side count × (holdout chars / tuning chars = 0.16323); tail from a
+> Poisson with that mean. WORKER-2 re-derived all three rows independently and they agree
+> with ORCH-2's exposure-normalized arithmetic (q4 gate `ea9be59`); the v1 row's 5.95-vs-5.00
+> density difference is **entirely exposure**.
+>
+> Two candidate causes are recorded, neither established: (a) C1-drop's parameters may be
+> fitted to the tuning half — untestable while q2.1d's provenance is missing (TASK-020
+> item 6 now supplies it); or (b) a **book-exposure difference** between the halves, which is
+> testable **only** on the fresh sealed split v2 (TASK-019b). Standing prohibition: **never
+> re-run the spent holdout to find out** — the v1 holdout is consumed for these detector
+> versions, and a re-run would require split v3.
+>
+> The column header in the table above was renamed from "rate/tx" to
+> "signals/tx — density, not a rate" (same append): a density is not an error rate, and v1's
+> B1 headline hold (TASK-005 FAIL / REDIRECT-005) is untouched by any of this.
 
 ## 5e. M4-q5 — A1 claim-shape reconciliation: the flags were my instrument
 

@@ -149,3 +149,59 @@ excluded or re-labelled, and **122 is never quoted as an omission count** (publi
 4. **Item 8's README fix is uncommitted by design** (`evidence/` is a working input and is
    never committed) — the evidence that the instruction works is the two commands above,
    reproducible at head.
+
+## Addendum — items 9, 10, 11 (q4 + q5 gate extensions), appended after delivery
+
+**Item 9 — q4 holdout §8 supplement (`runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json`,
+sha256 `0a1fd43c9e1fbff4ea530636dbca3edaf6f97e7212da95e8461361c588c38907`; tool
+`tools/m4_q4_supplement.py` + 10 tests).** Written fresh; all three run artefacts and their
+original provenance files are untouched. It carries `corpus_zip_sha256` (`3f36c520…`), the
+**book-store digest** (`c0892fcd…`, with the load-bearing reason stated: the v1 leg's
+B2-misquote produced 8 book-referenced signals and C1-drop is book-anchored), `tool_commit`,
+`main_head`, `policy_sha256` (`0fe20a60…`), a **config digest** per part (v1
+`193532701167…`, drop `409458723e16…`, format `805241dd0930…`), and an **output digest for
+every part file**, including the previously undigested `v1-holdout.json`: **sha256
+`cf8e7a7a4f2c07300832a11a900375a1787acc0a0ed5cd31cce4018649d83536`** (127,733 bytes).
+The v1 toolchain is re-cited as **lane + commit + blob path**
+(`origin/arena/01a0d581-fleetyard:tools/<file>`), replacing the sandbox path
+`/home/user/fleetyard/evidence/tools`, and the supplement records that all **13 pins are
+byte-identical to that lane's blobs — verified independently by WORKER-2 at build time
+(`git show <ref>:tools/<file>` → sha256, 13/13) and by ORCH-2** (q4 gate `ea9be59`).
+`B1-contradiction: 0` is now an **explicit** supplement field with its consequence stated:
+B1 receives **no validation** from this run, so v1's B1 headline hold (TASK-005 FAIL /
+REDIRECT-005) stands. `verify` re-checks every digest, the pins against the archive lane,
+and the B1 zero (tamper-tested). The spent holdout was **not re-run** to produce this file.
+
+**Item 10 — the "sampling noise" correction (`tools/PATTERNS.md` §5d + `runs/m4-q4-holdout/
+README.md`, appended, never rewritten).** WORKER-2 re-derived ORCH-2's exposure arithmetic
+independently and reproduces it: holdout transcripts are **14.9% shorter** (mean 53,949 vs
+63,361 chars; holdout = 1,996,122 of 14,224,783 corpus chars = 14.03%); expectation =
+tuning-side count × 0.16323; Poisson tails — **v1 185 vs 187.9 expected, P(X≤185) = 0.44**
+(gate 187.6 / 0.45), **C2-format 12 vs 8.0, P = 0.94** (gate 0.94), **C1-drop 5 vs 19.9,
+P(X≤5) = 7.7e-05** (gate 7.7e-05) → a real ~4x deficit, **not** noise. Both candidate causes
+are recorded (parameters fitted to the tuning half — now partly testable via item 6's
+provenance; or a book-exposure difference between halves — testable only on split v2), with
+the standing prohibition **never re-run the spent holdout to find out**. The §5d column was
+renamed from "rate/tx" to **"signals/tx — density, not a rate"** as required.
+
+**Item 11 — stale ledger digests and q5's numbers (all append-only; old lines left
+readable).** Supersession notes now sit in `findings/README.md`,
+`fleet/branches/WORKER-2-M5R-DELIVERY.md` and `findings/M4-q5-A1-CLAIM-RECONCILIATION.md`
+naming the current ledger **`d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32`**
+(recomputed at head), the regenerating commit **`a4c6655`**, and the rule that **the binding
+of record is `findings/PROVENANCE.json`**. `fleet/CONTROL.log`'s occurrence was deliberately
+left alone (legitimate append-only history). The reconciliation doc additionally carries the
+corrected numbers: **938 A1 claim_checks, 938 `claim_ok: true`** (WORKER-2's own recount at
+head); ORCH-2's pre-q5 simulation tally **97 = 9 zero-ASCII-token + 61 over-bound + 27
+ASCII-mismatch** (superseding the doc's 98/67, cited as the gate's measurement); claimed unit
+sizes **run to k = 12 with exactly 9 claims at k = 12** (WORKER-2's tally: k=1 248 · k=2 179 ·
+k=3 92 · k=4 124 · k=5 84 · k=6 63 · k=7 57 · k=8 30 · k=9 21 · k=10 20 · k=11 11 · k=12 9),
+so `kmax = 16` is **max-observed-unit + margin with 4 tokens of headroom**, published with
+the tally; and the hyphen labelling nuance is quantified as **255/938 (27%)** (ORCH-2's
+figure, cited with the tokenizer caveat; WORKER-2 separately re-verified the `M5R-0036`
+instance). The rule-quality conclusion — no v1 A1 claim-shape change required — is untouched.
+
+**Suite after this addendum: 227 tests, OK, 1 skipped, WITH corpus** (baseline 115; 10 of the
+new tests cover the q4 supplement). All original files remain byte-identical: only appends and
+new files, `git diff` clean for `tools/det_dropword.py`, `tools/det_format.py` and every
+`runs/m4-q4-holdout/` artefact.

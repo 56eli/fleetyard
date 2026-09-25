@@ -29,11 +29,20 @@ census under a fresh process, fresh index build, and a different code path.
   STANDARDS pass over the holdout signals. No such pass exists; no rate is claimed.
   Raw signal counts can be mostly false alarms or mostly real errors; this run does
   not distinguish.
-- **Rates, for context only:** signals per transcript — v1 tuning 5.95 vs holdout
-  5.00; C1-drop tuning 0.63 vs holdout 0.14; C2-format tuning 0.25 vs holdout 0.32.
-  With 37 holdout transcripts these differences are dominated by sampling noise; the
-  C1-drop gap is flagged as an **open question** (possible parameter fit to the
-  tuning half) for M4 follow-up, not a conclusion.
+- **Densities, for context only (not rates):** signals per transcript — v1 tuning
+  5.95 vs holdout 5.00; C1-drop tuning 0.63 vs holdout 0.14; C2-format tuning 0.25 vs
+  holdout 0.32. The dimension is called *density*, not a rate: a signal count is not an
+  error count.
+- **CORRECTION (appended 2026-09-25T21:3xZ, TASK-020 item 10):** the earlier statement
+  here that these differences are "dominated by sampling noise" is **wrong for C1-drop**.
+  Normalized by character exposure (holdout transcripts are 14.9% shorter; the holdout is
+  1,996,122 of 14,224,783 corpus chars), v1 is 185 observed vs **187.9 expected**
+  (P(X≤185) = 0.44) and C2-format 12 vs **8.0** (P = 0.94) — both consistent — while
+  C1-drop is 5 vs **19.9** (P(X≤5) = **7.7e-05**): a real ~4x deficit, not noise. Causes
+  recorded, neither established: parameters fitted to the tuning half (now partly testable
+  via TASK-020 item 6 provenance) or a book-exposure difference between halves (testable
+  only on split v2, TASK-019b). **Never re-run the spent holdout to find out.** See
+  PATTERNS §5d for the table and the derivation.
 - **The holdout is now spent for these detectors and versions** (one-shot discipline,
   LAW §9 / PATTERNS §5). Any later tuning informed by these counts invalidates this
   evaluation for that detector; a new split (new salt) is then owed.

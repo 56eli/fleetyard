@@ -1,0 +1,121 @@
+{
+ "book_store_sha256": "c0892fcd20502d49b99fffe87a4ec4b3b5ecc94a1f98606aab7909127934a4a8",
+ "book_store_why": "load-bearing: the v1 leg's B2-misquote produced 8 book-referenced signals and C1-drop is book-anchored",
+ "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
+ "holdout_consumed": true,
+ "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
+ "one_shot_discipline": "the spent v1 holdout was NOT re-run to build this supplement; only digests of the committed artefacts were recomputed. Never re-run the spent holdout",
+ "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
+ "run_utc": "2026-09-25T21:22:29Z",
+ "runs": {
+  "drop": {
+   "config": {
+    "max_drop": 2,
+    "min_flank": 3,
+    "min_matched": 10,
+    "min_ratio": 0.85,
+    "min_score": 0.2,
+    "stride": 12,
+    "top_k": 3,
+    "window": 24
+   },
+   "config_sha256": "409458723e165e06264d733cf05f4e72f5e1d818bd1529a81f55eba623c8959a",
+   "per_detector_signal_instances_supplement": {
+    "C1-drop": 5,
+    "note": "5 holdout signals; the TASK-020 item-10 exposure normalization shows this is a real ~4x deficit, not sampling noise (5 vs 19.9 expected, P(X<=5) = 7.7e-05)"
+   },
+   "provenance_file": "part-holdout-drop.PROVENANCE.json",
+   "provenance_sha256": "3d2ec2ce3c21cf3f8400f3c90e20dfc3c3eb72b16daf0e66a47c9b364b29dd06",
+   "signals_bytes": 4611,
+   "signals_file": "part-holdout-drop.json",
+   "signals_sha256": "7ffa7a77ff2ef1fffb14eb43efaad3dcfef8ac79616c037e0698c1773fd7dbf1"
+  },
+  "format": {
+   "config": {
+    "rules": [
+     "R1-glued-period",
+     "R2-repeated-punct",
+     "R3-long-dot-run",
+     "R4-underscore-run",
+     "R5-space-before-comma",
+     "R6-spaced-period",
+     "R7-glued-comma"
+    ]
+   },
+   "config_sha256": "805241dd09306c2eb70082500241cb9c5addc74fd69b8fbc1e6e18acdce2532d",
+   "per_detector_signal_instances_supplement": {
+    "C2-format": 12,
+    "note": "12 holdout signals; consistent with exposure (12 vs 8.0 expected, P(X<=12) = 0.94)",
+    "per_rule": {
+     "R1-glued-period": 8,
+     "R5-space-before-comma": 3,
+     "R6-spaced-period": 1
+    }
+   },
+   "provenance_file": "part-holdout-format.PROVENANCE.json",
+   "provenance_sha256": "5d935515d4827805d3e37bb4682fe42496c29d946f353a8de1575e57729eff55",
+   "signals_bytes": 6630,
+   "signals_file": "part-holdout-format.json",
+   "signals_sha256": "a837ab32e3824dc327876b9dbf231638a09a1e85e2ef22f4e79ea80975a044db"
+  },
+  "v1": {
+   "config": {
+    "detectors": "A1,A2,B1,B2",
+    "set": "holdout"
+   },
+   "config_sha256": "193532701167363bc2e4c87353d4642e34b2692f0375a0bdbcbdbb20b63ecd68",
+   "per_detector_signal_instances_supplement": {
+    "B1-contradiction": 0,
+    "leg_detectors": [
+     "A1-repetition",
+     "A2-nonsense",
+     "B1-contradiction",
+     "B2-misquote"
+    ],
+    "note": "the original provenance omits B1 because a Counter drops zero counts; the zero is explicit here. Consequence: B1-contradiction receives NO validation from this run, so v1's B1 headline hold (TASK-005 FAIL / REDIRECT-005) stands — this run neither confirms nor weakens it.",
+    "original_values": {
+     "A1-repetition": 162,
+     "A2-nonsense": 15,
+     "B2-misquote": 8
+    }
+   },
+   "provenance_file": "v1-holdout.PROVENANCE.json",
+   "provenance_sha256": "1aa37a608b492bb4cb6959370abba55258e4e33ceafc243dc07c0917e36ab09d",
+   "signals_bytes": 127733,
+   "signals_file": "v1-holdout.json",
+   "signals_sha256": "cf8e7a7a4f2c07300832a11a900375a1787acc0a0ed5cd31cce4018649d83536",
+   "toolchain": {
+    "cited_as": "origin/arena/01a0d581-fleetyard:tools/<file>",
+    "pins": {
+     "census.py": "74afce41c1068e3629c8b1bc0bfe7627670d67b7f8c79aaf7d38d62dc0e0f566",
+     "det_confusion.py": "8fec0338ac8da99cbb276c9a64e010943b84cf6ca48a2c24bf3194783563088f",
+     "det_contradiction.py": "641c8719006fcac9ee0eb2f26bbd363dde8f7a08ea4671e2328461b191c86be7",
+     "det_misquote.py": "3b8d1cd494c3699d5907a5a4927e67454b7ab43e1e9a7dac65dcab2b62ce9dd9",
+     "det_nonsense.py": "63028d77a13e6e922f9cc61b60921790888c5dacc54e22667f4db8eefeea8a2f",
+     "det_repetition.py": "f1af20a9866355f2ce70fabe677e5698169562794c7c8869d1833a66849d1f04",
+     "fixtures.py": "efaf85f618a7b02cdd98445b924028c41011b456855530ff43d357395e71316b",
+     "loaders.py": "3452c95d93a5785d44594fcb8dedc1b6a243974f455f4a061b5975f7c63051e0",
+     "report_m6.py": "c7c4288cf40a2bddee46d368bb019bc15384328abaa93a6a71d3e15413026e0d",
+     "retrieval.py": "f36f3a6b1bd851945ff388f384b14a5b2d881f8af493da267f88e547e627554d",
+     "run_detectors.py": "d7d109c5b00d7793e7fbe063656bf8a84522e0f6425b0cfc2bea975822d2db18",
+     "sweep_m5.py": "9df1816ef2e72f42816816ff54c4eb06c9482986e4074466e300f73dbf2b9004",
+     "tokenizer.py": "3f9ce9f7a94c863d87d927e2333f16d0c8ad0d196cb330eb71db2dfe325f1c96"
+    },
+    "replaces": "the absolute sandbox path '/home/user/fleetyard/evidence/tools' in the original provenance — a path is not a citable artefact",
+    "verification": {
+     "by_worker2_utc": "2026-09-25T21:22:29Z",
+     "orchestrator": "ORCH-2 independently verified all 13 pinned shas byte-identical to that archive lane (q4 gate ea9be59)",
+     "result": "13/13 pins byte-identical to the archive lane's blobs"
+    }
+   }
+  }
+ },
+ "split_corpus_files_sha256": "9ae90185ac0f4030eff135d28f7185b2c2f2c1a59269d150816a447293bd998f",
+ "split_file": "tools/HELD-OUT-SPLIT.json",
+ "split_salt": "fleetyard-m4-holdout-2026-09-25",
+ "status": "raw signal counts (counts only — NOT precision); PROVISIONAL-UNGATED; no rate may be quoted from this run",
+ "task": "TASK-020 item 9 (q4.6) — LAW §8 supplement for runs/m4-q4-holdout",
+ "tool_commit": "ffb881158b883a81b4d52db3cdc87d6ac705a909",
+ "why_this_file_exists": "ORCH-2's q4 gate (ea9be59) failed the §8 criterion: no book-store digest, no tool_commit/main_head/policy_sha256, no config digest, no output digest for v1-holdout.json, and the v1 toolchain cited by sandbox path instead of lane+commit+blob",
+ "worker": "WORKER-2 (A-2026-09-25-001), lane arena/01a0d9ce-fleetyard"
+}

@@ -78,3 +78,36 @@ the v1 claim reads "1-token unit repeated 8 times" — **claim and re-derivation
 exactly; there is no nuance and no residual ambiguity.** The 98→0 correction itself
 stands (the two reducer defects were real); only this row's explanation was wrong.
 Verified by ORCH-2's independent tokenisation (`['mm-hmm'] * 8`) and re-verified here.
+
+> **SUPERSESSION + CORRECTED NUMBERS (appended 2026-09-25T21:4xZ, TASK-020 item 11 —
+> q5.7/q5.8; nothing above is rewritten).**
+>
+> 1. **Ledger digest.** The "New ledger sha256 `64977c2f…`" line above is superseded:
+>    TASK-016's regeneration (`a4c6655`) rewrote the record shape after that run, and the
+>    ledger at head is now
+>    **`d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32`** (1,334 findings).
+>    **The binding of record is `findings/PROVENANCE.json`** — a prose digest is history,
+>    the manifest is the binding.
+> 2. **Corroboration re-derived (WORKER-2, independently at head):** of the 1,334 ledger
+>    records, the A1 `claim_checks` number **938, and 938 of them carry `claim_ok: true`** —
+>    the headline A1 938/938 holds.
+> 3. **This document's own simulation tally does not reproduce.** The row above reports a
+>    pre-q5 simulation flagging 98 (67 over-bound); ORCH-2's independent pre-q5 simulation
+>    gives **97 = 9 zero-ASCII-token + 61 over-bound + 27 ASCII-mismatch** (gate `33964d6`
+>    / q5.8). The 98→0 correction the row argues for **stands** — the reducer defects were
+>    real and are repaired — but the published decomposition is superseded by the 97/9+61+27
+>    split, which the gate derived with its own code.
+> 4. **Unit-size bound, published with its tally.** Claimed unit sizes in the ledger run to
+>    **k = 12 tokens, with exactly 9 claims at k = 12** (WORKER-2's tally over the 938 A1
+>    `claim_checks`: k=1 248 · k=2 179 · k=3 92 · k=4 124 · k=5 84 · k=6 63 · k=7 57 ·
+>    k=8 30 · k=9 21 · k=10 20 · k=11 11 · **k=12 9**). So `kmax = 16` is not "≈11 + margin"
+>    — it is **max-observed-unit + margin, with exactly 4 tokens of headroom** over the
+>    largest claimed unit. The bound is stated with the tally so a reader can recompute it.
+> 5. **Hyphen labelling nuance, quantified (ORCH-2's measurement, cited as such):**
+>    **255 of 938 A1 claims (27%)** change verdict depending on whether the tokenizer joins
+>    or splits hyphens. WORKER-2 re-verified the *shape* of this on the one record that
+>    mattered for TASK-018 (`M5R-0036`: `['mm-hmm'] * 8` is one token, so the claim and the
+>    derivation agree) but the 255/938 sensitivity is the gate's figure and is recorded with
+>    the tokenizer caveat, not absorbed into a conclusion.
+> 6. **Unchanged:** the rule-quality conclusion — no v1 A1 claim-shape change is required —
+>    is accepted and untouched by the four corrections above.

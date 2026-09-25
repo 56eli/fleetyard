@@ -103,3 +103,11 @@ that for M5-R and later work).
 - **Gating:** this is a DELIVERY, not a certification (LAW §2.1); ORCH-2 gates it
   per LAW §9 when that activation exists. Nothing here is a rate, a pass, or a
   completion.
+
+> **SUPERSESSION (appended 2026-09-25T21:4xZ, TASK-020 item 11 — q5.7):** the ledger digest
+> quoted above (`64977c2f…`) is **no longer current**. TASK-016's regeneration (`a4c6655`)
+> rewrote the record shape two minutes after the q5 run, and the ledger at head is
+> **`d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32`** (1,334 findings).
+> The old line is left readable, not rewritten — it was true when written. **The binding of
+> record is `findings/PROVENANCE.json`** (its `outputs.ledger.jsonl` field), not any digest
+> quoted inside prose: any figure on this page is void unless that manifest agrees.

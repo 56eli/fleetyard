@@ -150,3 +150,11 @@ failures 0; book refs 242/242.
 replay against committed `findings/` also byte-identical); `python3 -m unittest
 discover -s tests` → **26 tests, OK, 0 skipped, 0 errors** (7 at M5-R delivery → 15 at
 M4-q2 → 26 now; never dropped).
+
+> **SUPERSESSION (appended 2026-09-25T21:4xZ, TASK-020 item 11 — q5.7):** the ledger digest
+> quoted above (`64977c2f…`) is **no longer current**. TASK-016's regeneration (`a4c6655`)
+> rewrote the record shape two minutes after the q5 run, and the ledger at head is
+> **`d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32`** (1,334 findings).
+> The old line is left readable, not rewritten — it was true when written. **The binding of
+> record is `findings/PROVENANCE.json`** (its `outputs.ledger.jsonl` field), not any digest
+> quoted inside prose: any figure on this page is void unless that manifest agrees.
