@@ -46,3 +46,4 @@
 2026-09-25T23:34Z|7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a|A-2026-09-25-003|a86115d2667e7d54|46|OK|cycle 43: ORCH-2 gate instrument v2 @ 0ae2e9a (172 rows); WORKER-2 @ 4fc40c8; zero controls; cadence active
 2026-09-25T23:39Z|7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a|A-2026-09-25-003|a86115d2667e7d54|47|OK|cycle 44: cadence check; ORCH-2 @ 0ae2e9a (instrument v2 ready); WORKER-2 @ 4fc40c8; zero controls; cadence active
 2026-09-25T23:44Z|7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a|A-2026-09-25-003|a86115d2667e7d54|48|OK|cycle 45: ORCH-2 post-recreation recovery @ af1718e (174 rows, self-item O-1); WORKER-2 @ 4fc40c8; zero controls; cadence active
+2026-09-25T23:49Z|7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a|A-2026-09-25-003|a86115d2667e7d54|49|OK|cycle 46: ORCH-2 instrument v3 @ 0ded97c (206 rows, split v2 & inherited toolchain mechanized); WORKER-2 @ 4fc40c8; zero controls; cadence active
