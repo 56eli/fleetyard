@@ -42,3 +42,7 @@ main 77f1d6d -> fleet/ERRATA-2026-09-25f.md (owner: liveness doctrine, queue dis
 boss 8ab0705 -> fleet/ORDERS/REDIRECT-008.md (Class-2 orchestrator silent; acked 19:57:21Z @ 5f6d698)
 main 7d033ab -> fleet/ERRATA-2026-09-25g.md (owner: 24-hour shift, turn discipline, split v2 AUTHORIZED)
 2026-09-25T20:35:12Z ORCH-2 -> TASK-019 cut (fresh sealed split v2 + one-shot evaluation)
+2026-09-25T21:02:05Z 012914d -> M4-q2 (C1-drop; 122 signals; 4 provisional fixtures) — GATED by ORCH-2: FAIL / INCOMPLETE (q2.1b fixtures, q2.1c clean set, q2.1d threshold provenance, q2.4 §8 manifests incl. an unresolvable detector_sha256, q2.5 test count 26 < 115); substance reproduced byte-identically (93/122 signals), 122/122 + 122/122 citations byte-exact, isolation clean, 113/122 drops consistent and 9 shape-defective; C1-drop NOT PROMOTABLE
+2026-09-25T21:02:05Z 4425763 -> M4-q3 (C2-format; 49 signals) — GATED by ORCH-2 20:44Z: FAIL / INCOMPLETE (q3.2/q3.3/q3.5); ADDENDUM 20:58Z gate-side clean-set probe: 1 misfire / 59 known-good book passages, 0/49 signals source-inherited; C2-format NOT PROMOTABLE
+2026-09-25T21:02:05Z ORCH-2 -> TASK-020 cut (ONE repair task for the q1+q2+q3 shipping gaps; items 1-8; criteria 20.1-20.9; queued after TASK-018)
+2026-09-25T21:02:05Z ORCH-2 -> gate-side clean-set probe (59 hashed known-good passages as pseudo-transcripts, store symlinked): C1-drop 3/59 cross-book self-parallels, C2-format 1/59 book-store typography; transfer 1/122 and 0/49

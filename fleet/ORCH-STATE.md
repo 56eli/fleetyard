@@ -183,3 +183,47 @@ owner ruling 25d re-grounded, resuming
 - Next in this turn: M4 **q3** gate (independent of leg (d)), then **q2** (determinable
   criteria; leg-(d) classification items PENDING TASK-018), then q4 execution discipline and
   q5 residuals; TASK-018/019/017 gates as they land.
+
+## Cycle C (2026-09-25T21:02:05Z) — M4-q2 gate FAIL/INCOMPLETE + gate-side clean-set probe + TASK-020 cut
+- **q2 (C1-drop, 012914d) GATE = FAIL / INCOMPLETE** on five criteria (q2.1b fixture results,
+  q2.1c clean-set results, q2.1d threshold provenance, q2.4 §8 manifests, q2.5 test count vs
+  the v1 baseline 115). PASS on q2.1a self-test, q2.3 isolation, q2.6 reproduction+citations
+  (with a 9/122 shape caveat), q2.7 classification discipline (with two coherence defects);
+  q2.2 precision correctly PENDING split v2. Full table: fleet/GATES.md 20:58Z.
+- **Worst provenance item:** all six part manifests pin detector_sha256 84e5407f, which matches
+  **no committed version** of tools/det_dropword.py (012914d = 588e1f22, head = a0236325) — the
+  run predates its own delivery commit by ~10 minutes. I closed the attribution gap by
+  reproduction instead: shards 1/6 and 3/6 re-run at head are **byte-identical** (64a97be5,
+  092d6341) = 66/193 transcripts, 93/122 signals, and 4e114f1's change to the file is
+  runner-only. This is the second gate in a row where a §8 digest did not resolve (q3: c322e053
+  bound 4425763) → TASK-020 item 1 makes committed-blob re-pins explicit.
+- **I ran the clean set the worker did not** (gate-side, labelled as mine): 59 hashed known-good
+  Hawkins passages, integrity verified 59/59 against store c0892fcd, materialised as
+  pseudo-transcripts with the store symlinked → **C1-drop 3 misfires, C2-format 1 misfire**. All
+  three drop misfires are cross-book self-parallels; the format misfire is book-store typography
+  ("power.When" in power_vs_force @236391). Transfer test (validated on the 3 known misfires):
+  1/122 drop signals and 0/49 format signals carry that shape → the tuning runs are not
+  materially contaminated, but both detectors owe an additive source-inheritance filter, and the
+  worker's disclosed FP list omits both shapes. Numbers are written into TASK-020 as
+  reproduction targets so the repair is checkable, not descriptive.
+- **Fixture file coherence:** all 4 provisional dropword fixtures re-verified byte-exact by me
+  (spans, book quotes, dropped-token claims) and none is a cross-book artifact, so TASK-018 can
+  adjudicate on bytes. But the file's proposed leg-(d) wording is **not** the enacted text
+  (ERRATA-25e §2 is narrower), per-fixture proposed_leg says a/a/b/b, and generated_utc is fuzzy
+  → TASK-018 item 0c (shared with TASK-020 item 7, single edit, cross-referenced).
+- **Sequencing disclosed:** I gated q3 then q2 ahead of TASK-018, superseding my own 20:02Z
+  "gates run after TASK-018" line, because no criterion I decided depends on leg-(d)
+  adjudication; classification items are recorded PENDING and the fixtures stay provisional.
+- No pause issued (proportionality test recorded in GATES.md, reversible on request); artefact
+  restrictions applied instead. Queue held at three actionable tasks (018, 020, 017) per
+  ERRATA-25f §4. Next in this turn: q4 execution-discipline gate (holdout SPENT — receipt only,
+  never re-run) and q5 residuals, then TASK-018/019/020 gates as they land.
+- **Disclosure (my scripting error, same cycle, repaired):** the first write of CONTROL seq 14
+  left the registry field EMPTY (I hashed a non-existent `fleet/REGISTRY.md`), and my first
+  repair hashed the wrong path (`REGISTRY.md` instead of `fleet2/activations/REGISTRY.md`),
+  which produced the empty-input digest `e3b0c442…`. Both were corrected in-cycle: seq 14 now
+  carries `a86115d2…435c14`, re-derived from `origin/main:fleet2/activations/REGISTRY.md` and
+  equal to the FROZEN registry digest (ERRATA-25d §6). No verdict or note text was rewritten;
+  the field fill is disclosed here and in CONTROL seq 15. Standing fix: the pre-push check now
+  asserts the registry field of the newest CONTROL line is 64 hex chars and equals the frozen
+  digest.

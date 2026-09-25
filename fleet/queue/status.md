@@ -178,3 +178,83 @@ Role: ORCHESTRATOR (ORCH-2, A-2026-09-25-002) · lane arena/01a0d9d0-fleetyard.
   recorded, reversible); restriction: q3 not citable as passed, C2-format not promotable, its
   49 signals may not feed any rate or M6 figure. Repair to be cut as ONE task for q2+q3
   shipping gaps after the q2 gate this shift. Detail: fleet/GATES.md 20:44Z.
+2026-09-25T21:02:05Z GATE TASK-014 q2 (C1-drop drop-word detector) = FAIL / INCOMPLETE (ORCH-2, worker head
+  219075a, main 7d033ab). FAILED: q2.1b fixture results (evidence/fixtures/confirmed/
+  confirmed.json holds all 16 CF fixtures incl. CF-015/P5 and was never run; PATTERNS.md §3
+  line 44 still reads "drop-word — not built", contradicting §5b), q2.1c clean-set results
+  (evidence/fixtures/clean/clean.json = 59 hashed known-good book passages, integrity verified
+  by me 59/59 against store c0892fcd, never run), q2.1d threshold provenance (all 8 params
+  published per part — window 24 / stride 12 / min_score 0.20 / top_k 3 / min_matched 10 /
+  min_ratio 0.85 / max_drop 2 / min_flank 3 — but nothing states what they were fitted or
+  measured on), q2.4 LAW §8 manifests (no book-store digest though the detector is
+  book-anchored and reads the store via m5r_reduce.parse_book_store; no tool_commit, main_head,
+  policy_sha256, config digest or per-part output digest; MERGE-PROVENANCE has no inputs block;
+  and detector_sha256 84e5407f resolves to NO committed version of tools/det_dropword.py —
+  012914d = 588e1f22, head = a0236325 — because the six parts ran 18:57:11Z-19:05:21Z, before
+  the delivery commit at 19:06:53Z), q2.5 test count vs baseline (suite green WITH corpus, Ran
+  26 tests OK 0 skipped, 8 of them det_dropword — but 26 < v1's 115: TASK-017 has not landed
+  and tools/loaders.py + tools/fixtures.py are absent at head, so evidence/fixtures/README.md's
+  "python3 tools/fixtures.py verify" instruction dangles). PASSED: q2.1a self-test (rc=0,
+  "detects a drop, ignores the faithful quote" — carries a negative control), q2.3 isolation
+  (keys == tuning 193 exactly, ∩holdout 0, all six parts' transcripts_read ⊆ tuning and their
+  union == tuning so 193/193 processed, holdout_reads [] everywhere, run_tuning raises
+  SystemExit on overlap, seal 481d8513 byte-identical since 593cad3), q2.6 reproduction +
+  citations WITH A QUANTIFIED CAVEAT (my re-run of shards 1/6 and 3/6 at head is byte-identical:
+  part-1 64a97be5 / 26 signals, part-3 092d6341 / 67 signals = 66/193 transcripts and 93/122
+  signals; that also proves 4e114f1's 27-line change was runner-only; merge arithmetic
+  26+14+67+0+11+4 = 122 = manifest = file; 122/122 transcript spans and 122/122 book citations
+  byte-exact with my own store parse; 113/122 drops fully consistent — token absent from the
+  span, present in the book quote, restoration arithmetic closes — and 9/122 shape-defective:
+  3 where the dropped token already occurs in the cited span (book-side repetition:
+  Causality…Part_1 @2574 'evidence of'/['evidence'], @54983 'staggering, staggering. This',
+  Causality…Part_2 @55220 'be sovereign, sovereign') + 6 partial-overlap/arithmetic cases of
+  which 2 are my own hyphen tokenization ('one-third','nitty-gritty')), q2.7 classification
+  discipline WITH TWO COHERENCE DEFECTS (4 fixtures labelled DROP-CANDIDATE / CLASS BLOCKED and
+  never CERTAIN, in_sample_caveat present, proposed_leg_d marked "NOT in force", 5 discarded
+  candidates recorded with per-item reasons; I re-verified all four bindings byte-exact 4/4 and
+  confirmed none is a cross-book artifact — but the file's proposed leg-(d) wording is NOT the
+  enacted text of ERRATA-25e §2, per-fixture proposed_leg says a/a/b/b while evidence_class
+  points at (d), and generated_utc is fuzzy "2026-09-25T19:1xZ"). q2.2 precision correctly
+  PENDING on split v2 (TASK-019) since v1's one-shot holdout is SPENT; the worker claims no
+  precision and labels everything CANDIDATE/"not a rate", which is the right discipline. No
+  pause (proportionality recorded, reversible). Restriction: q2 not citable as passed, C1-drop
+  NOT PROMOTABLE, its 122 signals stay CANDIDATE and unreviewed, the 9 shape-defective signals
+  excluded from any count, 122 never quoted as an omission count (upper bound 113, in-sample),
+  no rate or M6 figure may rest on q2, the 4 fixtures stay provisional pending TASK-018.
+  Detail: fleet/GATES.md 2026-09-25T21:02:05Z-ish (section stamped 20:58Z).
+2026-09-25T21:02:05Z GATE-PROBE ORCH-2 (gate-side evidence, NOT a worker delivery; does not satisfy q2.1c/q3.3):
+  I materialised the 59 hashed clean passages as pseudo-transcripts in a scratch corpus with the
+  book store symlinked (retrieval unchanged) and ran both detectors at head. C1-drop = 3 signals
+  / 59 passages, all CROSS-BOOK SELF-PARALLELS (CL-034 the_ego_is_not_the_real_you__w @43642 ->
+  daily_reflections_from_dr_dav @80391 dropped 'remains'; CL-035 @124511 ->
+  discovery_of_the_presence_of_g @295761 dropped 'by ownership' at a 16/16 match; CL-055
+  transcending_the_levels_of_con @274472 -> the_map_of_consciousness_expla @134304 dropped
+  'so-called' at 24/24). C2-format = 1 signal / 59: R1-glued-period on power_vs_force__the_hidden_de
+  @236391 ("power.When") — typography inherited from the BOOK STORE itself, so a transcript
+  faithfully quoting it would be flagged for a source artifact. Transfer check (validated: it
+  flags all 3 known clean misfires): does the signal's own transcript wording (span ±30 chars)
+  occur verbatim in the store? 1/122 C1-drop tuning signals (Most_Valuable_Qualities… @457) and
+  0/49 C2-format signals -> cross-book parallels are not a material contaminant of the tuning
+  runs and no shipped format signal is source-inherited. (Weaker variant — the 3-char quoted
+  string alone — "hits" for 28/49 format signals; that is coincidence across 14,515,277 chars,
+  so I publish both and rely on the context test.) Two additive filters are owed and cheap
+  (both detectors already retrieve book passages): drop-word must not fire when the transcript's
+  own wording is verbatim book text; format must not fire when the artifact bytes come from the
+  matched book span. Written into TASK-020 item 5 with these numbers as reproduction targets.
+2026-09-25T21:02:05Z TASK-CUT ORCH-2: TASK-020 — M4 shipping-gap repair for q1+q2+q3 as ONE task (the three gates
+  failed on the same four shapes: no fixture-recall run, no clean-set run, no threshold
+  provenance, incomplete §8 manifests). Items: 1 §8 supplement manifests + committed detector
+  re-pin; 2 fixture-recall over all 16 CF fixtures for both detectors, labelled in-sample/seeded;
+  3 PATTERNS.md §3 rows 44-45 + the q1.4d ledger binding; 4 clean-set runs (targets 3/59 and
+  1/59); 5 the two owed filters + adjudication of the 9 shape-defective signals, raw AND
+  filtered counts; 6 threshold provenance + both rejected C2-format rules verbatim; 7
+  fixtures/v2/dropword.json enacted-leg note (shared with TASK-018 item 0c, no duplicate edit);
+  8 test-count baseline reconciliation, BLOCKED on TASK-017. Criteria 20.1-20.9. Boundaries:
+  append-only, NO threshold may change (that would contaminate split v2), no precision/rate/M6
+  figure, every output stays CANDIDATE, §8 manifest per new run, suite green WITH corpus, split
+  v1 seal 481d8513 never reused for a precision claim. File: fleet/queue/pending/TASK-020.md.
+2026-09-25T21:02:05Z QUEUE-ORDER ORCH-2: TASK-018 (owner-ordered, in force) -> TASK-020 items 1-7 -> TASK-017 (v1
+  toolchain) -> TASK-019a (SEAL split v2) -> re-gates of q1/q2/q3 + TASK-020 item 8 -> TASK-019b
+  (one-shot evaluation) -> TASK-015 (M6 FINAL, still BLOCKED on split v2). q4 and q5 stay
+  ungated: q4 cannot yield a rate without split v2 and its holdout is spent; q5 stays parked as
+  an M4 quantum. Queue depth held at 3 actionable (018, 020, 017) per ERRATA-25f §4.

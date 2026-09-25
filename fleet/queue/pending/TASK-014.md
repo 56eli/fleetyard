@@ -9,6 +9,51 @@
   pause issued** — artefact-scoped restriction instead, reasons in fleet/GATES.md 20:08Z:
   q1 may not be cited as passed, no M4 promotion or q2-q5 gate credit, no M6 figure may
   rest on PATTERNS.md until the binding lands.
+- q3 GATE (ORCH-2 2026-09-25T20:44Z): **FAIL / INCOMPLETE** on q3.2 (no fixture-recall result;
+  PATTERNS.md §3 line 45 still says "speaker/format — not built"), q3.3 (no clean-set run) and
+  q3.5 (§8 manifest missing tool_commit/policy_sha256/main_head/output digest; detector_sha256
+  c322e053 binds 4425763 while head is ef9ff4f2 — q4 changed only the runner, proved by diff +
+  my byte-identical reproduction). **PASS** q3.1/q3.4 (gap: camel-glue 35/18 not reproducible;
+  double-word 3436/228 exact)/q3.6/q3.7 (reproduction byte-identical 86c8f57d; 49/49 citations
+  byte-exact)/q3.8/q3.9 (census corroborated by my own probes over all 230). No pause;
+  restriction: C2-format not promotable, its 49 signals stay CANDIDATE, no rate/M6 figure.
+  Repair = **TASK-020** items 1–6. Addendum 20:58Z: my gate-side clean-set probe measures the
+  missing q3.3 number — **1 misfire / 59 known-good book passages** (R1-glued-period on
+  power_vs_force @236391 "power.When", book-store typography) and **0/49** shipped signals are
+  source-inherited, so q3.7/q3.9 stand.
+- q2 GATE (ORCH-2 2026-09-25T20:58Z): **FAIL / INCOMPLETE** on q2.1b (fixture results — the 16
+  CF fixtures exist at evidence/fixtures/confirmed/confirmed.json and were never run; PATTERNS.md
+  §3 line 44 still says "drop-word — not built"), q2.1c (clean-set results — the 59 hashed
+  known-good passages exist and were never run), q2.1d (threshold provenance: all 8 params
+  published, none attributed to what it was fitted/measured on), q2.4 (§8 manifests: no
+  book-store digest though the detector is book-anchored, no tool_commit/main_head/policy sha,
+  no config or per-part output digest, merge manifest has no inputs block, and
+  **detector_sha256 84e5407f resolves to NO committed version** — 012914d = 588e1f22, head =
+  a0236325; the parts ran 18:57–19:05Z, before the delivery commit) and q2.5 (suite green WITH
+  corpus, 26 tests OK 0 skipped, but 26 < the v1 baseline 115 — TASK-017 has not landed and
+  tools/{loaders,fixtures}.py are absent at head). **PASS** q2.1a (self-test rc=0 with a
+  negative control, 8 tests), q2.3 (keys == tuning 193, ∩holdout 0, all 6 parts' reads ⊆ tuning
+  and their union == tuning, seal 481d8513 unmoved), q2.6 with a quantified caveat (my re-run of
+  shards 1 and 3 at head is **byte-identical** — 64a97be5 / 092d6341, 66/193 transcripts and
+  93/122 signals; 122/122 transcript spans and 122/122 book citations byte-exact; **113/122**
+  fully consistent drops, **9/122 shape-defective** — 3 repetition artifacts, 6 partial-overlap
+  of which 2 are my own hyphen tokenization), q2.7 with two coherence defects (fixtures labelled
+  DROP-CANDIDATE / CLASS BLOCKED, never CERTAIN; in-sample caveat present; but the file's
+  proposed leg-(d) wording ≠ the enacted text, per-fixture proposed_leg a/a/b/b, generated_utc
+  fuzzy "19:1xZ"). q2.2 (precision) correctly **PENDING** split v2 = TASK-019. **Gate-side probe
+  (mine, not the delivery):** C1-drop misfires **3/59** on known-good book passages — all
+  cross-book self-parallels — and that mechanism accounts for only **1/122** tuning signals.
+  No pause; restriction: C1-drop not promotable, 122 signals stay CANDIDATE, the 9 shape-defective
+  signals excluded from any count, **122 never quoted as an omission count** (≤113, in-sample),
+  no rate/M6 figure. Repair = **TASK-020** items 1–7 (+ TASK-018 item 0c for the fixture file,
+  TASK-017 for the test baseline).
+- sequencing note (ORCH-2 2026-09-25T20:58Z, supersedes part of the 20:02:49Z line and the
+  "gates run AFTER TASK-018 lands" line below): I gated **q3 then q2** ahead of TASK-018 because
+  every criterion I decided is independent of leg-(d) adjudication; the classification-dependent
+  items are recorded **PENDING TASK-018** and the 4 fixtures stay provisional until it lands.
+  ERRATA-25g (24-hour shift; work as many cycles per turn as the platform allows) is why the gate
+  queue was not idled behind a worker task. **q4 and q5 remain ungated**: q4 cannot yield a rate
+  without split v2 (TASK-019) and its one-shot holdout is spent; q5 stays parked as an M4 quantum.
 - status (ORCH-2 2026-09-25T20:02:49Z): q1 gate **OPEN** (mine, in progress); q2 **PARKED** by owner
   ERRATA-25e §1 (DELIVERED-PROVISIONAL-UNGATED @ `012914d`, not gated, not certified);
   q3 `4425763`, q4 `4e114f1`, q5 `2f55b0c` delivered 19:08-19:16Z, **UNGATED**, parked

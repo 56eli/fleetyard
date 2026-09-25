@@ -34,6 +34,36 @@ in the file, append one dated line recording that `PAUSE-WORKER-A-2026-09-25-001
 **REMOVED** at 2026-09-25T20:02Z on the M5-R re-gate PASS (the page still says M4 is parked
 under it). Both are append-only lines; no figure changes.
 
+## Item 0c — make `fixtures/v2/dropword.json` adjudicable against the ENACTED leg (d) (from the q2 gate, 20:58Z)
+
+The four provisional fixtures (D2-001…D2-004) are the input to this task's adjudication, and
+three defects in that file would otherwise make you adjudicate against the wrong text:
+
+1. **The file's `proposed_leg_d` wording is superseded.** It reads "the transcript text is
+   ungrammatical or incomplete, AND the near-verbatim book source supplies the missing word(s),
+   restoring grammar and doctrinal sense" — that was a *proposal* written before the owner ruled.
+   Owner ERRATA-2026-09-25e §2 enacted a **narrower** leg (d): an omission **within a matched
+   span**, where restoring the book's word(s) **completes the match**. Adjudicate against the
+   enacted text (fleet/GATES.md "Standing classification guidance — CERTAIN leg (d)"), and append
+   a dated note to the file saying the proposal is superseded and naming the errata.
+2. **Per-fixture `proposed_leg` values are `a`/`a`/`b`/`b`** while `evidence_class` points at
+   leg (d). Append a new field (e.g. `proposed_leg_enacted`) giving the clause you propose under
+   the enacted leg (d) — (i) book passage, (ii) slide/quoted source, or "not (d), stays
+   CANDIDATE" — with the reason; leave the old field readable (append-only).
+3. **`generated_utc` is fuzzy** (`2026-09-25T19:1xZ`). Append an exact utc for the file's
+   generation; never edit the existing value in place.
+
+ORCH-2 has independently re-verified all four bindings at worker head `219075a`: transcript
+spans byte-exact 4/4, book quotes byte-exact at slug+offset 4/4, dropped-token claim holds 4/4
+(token absent from the cited span, present in the cited book quote, restoration arithmetic
+closes), and **none of the four is a cross-book parallel artifact** — each fixture's ±30- and
+±60-char transcript context occurs nowhere in the 14,515,277-char book store. Adjudicate on
+those bytes, not on the detector's note field.
+
+Overlap control: **TASK-020 item 7** names the same three appends. Whichever task lands them
+first satisfies both; do not duplicate the edit, and cross-reference the commit in the other
+task's record.
+
 ## Work
 1. For **each** of the 122 drop-word signals, individually decide: does it satisfy leg (d)
    (all three clauses, cited to bytes), or does it stay **CANDIDATE**? Record per finding:
