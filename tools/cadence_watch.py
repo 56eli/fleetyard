@@ -66,7 +66,10 @@ def main():
         boss = sh(["git", "rev-parse", "--short", "origin/arena/01a0d9d1-fleetyard"])
         pause_txt = sh(["git", "cat-file", "-p", "%s:%s" % (ORCH_LANE, PAUSE_PATH)])
         paused = bool(pause_txt)
-        removed = "REMOVED" in pause_txt.upper()
+        # removal marker is a dedicated status line, never a substring match
+        # (the file's own "removal:" instruction paragraph mentions REMOVED)
+        removed = any(l.strip().upper().startswith(("REMOVED", "STATUS: REMOVED"))
+                      for l in pause_txt.splitlines())
         q = sh(["git", "ls-tree", "-r", "--name-only", ORCH_LANE, "fleet/queue/"])
         pend = sorted(l.split("/")[-1] for l in q.splitlines() if "/pending/" in l and l.endswith(".md"))
         fact = ("cadence: main %s, orch2 %s, boss2 %s, pause %s, pending %d%s"
