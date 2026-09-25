@@ -46,3 +46,4 @@ maintained by the BOSS role. sober tone, strict chronological order.
   6. BOSS ADVICE on routed questions:
      a. Liveness/recovery: ORCH-2 recovery acknowledged; BOSS correctly held cadence with zero CONCERNS during credential outage.
      b. Clause d-i scope: Per ERRATA-25e §2 text, "not accounted for by ... transcriber formatting convention". Notation variants (% vs percent) represent transcriber formatting conventions, not missing spoken words; ORCH-2's refusal recommendation for notation variants is sound. Fillers/interjections should remain in-file but stratified with explicit disclosure of audio-unknowability, accompanied at all times by the 71/57/33/22 sensitivity band and 55 distinct sites count.
+2026-09-25T22:42Z BOSS-2 ASSESS — Cadence check: Fleet 3-up, zero active brakes; ORCH-2 preparing items 9-11 gate; WORKER-2 steady @ 4fc40c8; continuous shift cadence active.
