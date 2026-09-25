@@ -269,7 +269,52 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   runs/m4-q3-format/README.md: threshold provenance section names every parameter [n=2]
          for C2-format the correct provenance answer is that the seven rules are shape predicates with NO numeric thresholds; the rule names are catalogued in the same README and in the supplement's `rules` list, so they are not required inside the provenance section itself
 
-== summary: 174 rows · FAIL 14 · INFO 12 · PASS 146 · PROXY 2
+== 10. split v2 (TASK-019a) ==
+  PASS   corpus file count [n=230]
+  PASS   corpus_files_sha256 (list digest, stated derivation) [n=230]
+  PASS   corpus_files_sha256 == the value the q4 supplement binds [n=1]
+  PASS   forced-to-tuning set (fixtures ∪ spent v1 holdout) [n=43]
+         fixture transcripts 6 ∪ v1 holdout 37; v1_holdout_forced_tuning declares 37
+  PASS   independent re-draw, int(full hexdigest) % mod: holdout set-equal [n=230]
+  INFO   independent re-draw, int(first 8 hex) % mod: holdout set-equal [n=230]
+         expected 33/33 | observed 2/33 (draw 28)
+  PASS   MY DRAW REPRODUCES THE SEAL (33 holdout / 197 tuning, set-equal both buckets) [n=230]
+         if none reproduces, the seal's method statement is not executable as written - the same defect class as item 13
+  PASS   bucket counts [n=230]
+  PASS   holdout ∩ tuning == 0 [n=230]
+  PASS   ZERO fixture contamination in the v2 holdout [n=6]
+  PASS   ZERO spent-v1-holdout transcripts in the v2 holdout [n=37]
+  PASS   every forced transcript is in v2 TUNING [n=43]
+  PASS   forced_not_by_fixture (every forcing has a stated reason) [n=43]
+  PASS   every forced transcript carries a reason [n=43]
+  PASS   criterion v2.5 — seal binds the ACTUAL fixtures/confirmed/confirmed.json [n=1]
+  FAIL   criterion v2.5 — seal binds the ACTUAL fixtures/v2/dropword.json [n=1]  <<< FAIL
+         expected c40d272f30d0bbd5… | observed c8e963199a1ec5ee…
+         ITEM v2.a: the seal binds a stale digest; append a dated seal note binding the actual digest and disclosing the taint, leaving this line readable
+  PASS   seal manifest tool_sha256 == the actual generator
+  PASS   seal manifest tool_commit f4ab7bb6b121 contains tools/m4_split_v2.py [n=1]
+         same attributability class as criterion 20.10 / item 8a
+  PASS   seal manifest run_utc exact to the second [n=1]
+  PASS   re-seal rule present (new fixture voids the seal) [n=1]
+  PASS   contamination disclosure present [n=1]
+  PASS   guard is code: tools/m4_split_v2.py present [n=1]
+  PASS   guard is code: tests/test_m4_split_v2.py present [n=10]
+  INFO   criterion v2.b — the 7 deferred v2-holdout signals documented in a committed artefact [n=3]
+         expected a manifest enumerating them (item v2.b) | observed 3 files mention deferral: ['runs/m4-q2-dropword/EVAL.json', 'runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json', 'runs/m4-q2-dropword/README.md']
+         the q2 supplement records deferred_holdout: 7 and the filter arithmetic closes, but item v2.b owes an enumeration (which 4 transcripts, which 3 were promoted to D-092/093/094)
+
+== 11. inherited v1 manifest (TASK-017) ==
+  PASS   file_count (tools/tests/fixtures) [n=33]
+  PASS   file_count (census+runs) [n=233]
+  PASS   file_count_total [n=266]
+  PASS   archive blob == manifest in_archive_sha256 [n=266]
+  PASS   file at head == manifest sha256 [n=266]
+  PASS   manifest's two claims agree per file (unmodified) [n=266]
+         three-way equality across all inherited files
+  PASS   unmodified declared [n=1]
+  PASS   archive lane cited read-only, never re-stamped [n=1]
+
+== summary: 206 rows · FAIL 15 · INFO 14 · PASS 175 · PROXY 2
 
 rows not passing (each is an owed item or a known restriction, not necessarily a defect):
   FAIL   criterion 20.10: tool_commit contains the generator: expected present | observed ABSENT at ffb881158b88
@@ -299,3 +344,5 @@ rows not passing (each is an owed item or a known restriction, not necessarily a
          the q2 supplement states it; the others must adopt it (item 14)
   FAIL   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: tool_commit ffb881158b88 contains its generator tools/m4_q4_supplement.py: expected present | observed ABSENT
          item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256
+  FAIL   criterion v2.5 — seal binds the ACTUAL fixtures/v2/dropword.json: expected c40d272f30d0bbd5… | observed c8e963199a1ec5ee…
+         ITEM v2.a: the seal binds a stale digest; append a dated seal note binding the actual digest and disclosing the taint, leaving this line readable

@@ -312,3 +312,37 @@ say why.
 
 **Effect on the q2 re-gate: none on the verdict** (q2 stays FAIL/INCOMPLETE pending item 8a and TASK-018 items 0d–0g),
 but the q2.6 caveat is now precise, mechanised and reproducible instead of a hand count that could not be re-derived.
+
+---
+
+## 11. INSTRUMENT v3 — split v2 and the inherited toolchain mechanized (CONTROL seq 34)
+
+Sections added so that the two remaining re-gates are a single run rather than ad-hoc reasoning. Row count
+**174 → 206 · PASS 175 · FAIL 15 · INFO 14 · PROXY 2**. Fresh output at
+`fleet/gate-tools/orch2_verify_output_4fc40c8.txt`.
+
+**§10 — TASK-019a split v2 (criteria v2.1–v2.6, items v2.a/v2.b).**
+
+| check | result |
+|---|---|
+| `corpus_files_sha256` recomputed from the stated derivation | **PASS** — it is a LIST digest (`sha256_text("\n".join(sorted basenames) + "\n")`), not a content digest; my earlier gate note now carries the derivation |
+| independent re-draw under `int(full hexdigest) % 5 == 0` | **PASS** — 33 holdout / 197 tuning, SET-EQUAL in both buckets; the alternative reading (`int(first 8 hex)`) gives 28/2 and does not reproduce, so the method statement is executable only under the full-digest reading |
+| bucket counts, holdout ∩ tuning | 33/197/230 · intersection 0 |
+| zero fixture contamination in the v2 holdout | **PASS** (0 of 6 fixture transcripts) |
+| zero spent-v1-holdout transcripts in the v2 holdout | **PASS** (0 of 37) |
+| every forced transcript in v2 tuning, each with a stated reason | **PASS** (43/43; `forced_not_by_fixture` empty) |
+| criterion v2.5 — seal binds the ACTUAL fixtures | confirmed.json **PASS** (`f2c15869…`); `fixtures/v2/dropword.json` **FAIL** (seal `c8e96319…`, actual `c40d272f…`) → **ITEM v2.a** |
+| seal manifest: `tool_sha256` == actual generator, `tool_commit f4ab7bb6b121` contains `tools/m4_split_v2.py`, `run_utc` exact | all **PASS** (attributability here is sound, unlike criterion 20.10) |
+| re-seal rule + contamination disclosure present | **PASS** |
+| guard is code | `tools/m4_split_v2.py` present; `tests/test_m4_split_v2.py` present with **10 test functions** |
+| criterion v2.b | **INFO** — three committed files mention deferral (`EVAL.json`, `PROVENANCE-SUPPLEMENT.json`, `README.md`) and the supplement records `deferred_holdout: 7`, but none enumerates the four transcripts or which three were promoted to D-092/093/094 → **ITEM v2.b stands** |
+
+**§11 — TASK-017 inherited v1 toolchain.** All three legs of the three-way now run over the full manifest, not a
+sample: `archive blob == in_archive_sha256` **266/266**, `file at head == sha256` **266/266**, and the manifest's
+two per-file claims agree (unmodified) **266/266**; `file_count` 33 + 233 = `file_count_total` 266; `unmodified:
+true`; archive lane cited read-only and never re-stamped. **TASK-017 remains PASS all six, item 17.a
+(`materialised_utc` own-time) unchanged.**
+
+**Standing caveat carried into v3.** The re-draw reads the *seal's own* method statement; because only one of two
+plausible readings reproduces it, a repair that changes the wording must re-run §10 rather than assume the draw
+still holds. The contamination and forcing checks are independent of the hash reading.

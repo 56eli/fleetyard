@@ -937,6 +937,179 @@ def section_manifest_completeness(wt, rep):
 
 
 
+
+
+def section_split_v2(wt, rep, sup):
+    """§10 — TASK-019a split v2: independent re-draw, contamination, forcing rule,
+    seal bindings and the guard-is-code requirement (criteria v2.1-v2.6, v2.a/v2.b)."""
+    print("\n== 10. split v2 (TASK-019a) ==")
+    p = os.path.join(wt, "tools/HELD-OUT-SPLIT-V2.json")
+    if not os.path.exists(p):
+        rep.add("10", "HELD-OUT-SPLIT-V2.json", "present", "ABSENT", FAIL)
+        return
+    j = json.load(open(p, encoding="utf-8"))
+    salt, mod, bucket = j["salt"], j["mod"], j["holdout_bucket"]
+    ovdir = os.path.join(wt, "corpus/docdocgo/overlays")
+    allb = sorted(b for b in os.listdir(ovdir) if b.endswith(".txt"))
+    rep.check("10", "corpus file count", j["corpus_files"], len(allb), n=len(allb))
+    # corpus_files_sha256 is a LIST digest per the stated derivation
+    listd = sha_bytes(("\n".join(sorted(allb)) + "\n").encode("utf-8"))
+    rep.check("10", "corpus_files_sha256 (list digest, stated derivation)", j["corpus_files_sha256"][:16] + "…",
+              listd[:16] + "…", n=len(allb))
+    rep.check("10", "corpus_files_sha256 == the value the q4 supplement binds",
+              sup["split_corpus_files_sha256"], j["corpus_files_sha256"], n=1)
+
+    # independent re-draw under two candidate readings of "sha256(SALT+basename) mod 5"
+    forced_fx = set()
+    for src in ("fixtures/confirmed/confirmed.json", "fixtures/v2/dropword.json"):
+        sp = os.path.join(wt, src)
+        if not os.path.exists(sp):
+            continue
+        d = json.load(open(sp, encoding="utf-8"))
+        items = d.get("fixtures", d) if isinstance(d, dict) else d
+        for f in items:
+            t = f.get("transcript") if isinstance(f, dict) else None
+            if t:
+                forced_fx.add(os.path.basename(t))
+    v1 = json.load(open(os.path.join(wt, "tools/HELD-OUT-SPLIT.json"), encoding="utf-8"))
+    v1hol = {os.path.basename(x) for x in v1["holdout"]}
+    forced = forced_fx | v1hol
+    rep.check("10", "forced-to-tuning set (fixtures ∪ spent v1 holdout)", len(j["fixture_transcripts_forced_tuning"]),
+              len(forced), n=len(forced),
+              note=f"fixture transcripts {len(forced_fx)} ∪ v1 holdout {len(v1hol)}; "
+                   f"v1_holdout_forced_tuning declares {len(j['v1_holdout_forced_tuning'])}")
+    draws = {}
+    for label, fn in (("int(full hexdigest) % mod", lambda b: int(sha_bytes((salt + b).encode()), 16) % mod),
+                      ("int(first 8 hex) % mod", lambda b: int(sha_bytes((salt + b).encode())[:8], 16) % mod)):
+        raw = {b for b in allb if fn(b) == bucket}
+        draws[label] = (raw - forced, (set(allb) - raw) | forced)
+    seal_h = {os.path.basename(x) for x in j["holdout"]}
+    seal_t = {os.path.basename(x) for x in j["tuning"]}
+    matched = None
+    for label, (h, t) in draws.items():
+        rep.add("10", f"independent re-draw, {label}: holdout set-equal", f"{len(seal_h)}/{len(seal_h)}",
+                f"{len(h & seal_h)}/{len(seal_h)} (draw {len(h)})",
+                PASS if h == seal_h else INFO, n=len(allb))
+        if h == seal_h and t == seal_t:
+            matched = label
+    rep.add("10", "MY DRAW REPRODUCES THE SEAL (33 holdout / 197 tuning, set-equal both buckets)",
+            "one stated reading reproduces it exactly",
+            f"reproduced by: {matched}" if matched else f"none of {list(draws)}",
+            PASS if matched else FAIL, n=len(allb),
+            note="if none reproduces, the seal's method statement is not executable as written - the same defect "
+                 "class as item 13")
+    rep.check("10", "bucket counts", {"holdout": 33, "tuning": 197, "total": 230}, j["counts"], n=230)
+    rep.check("10", "holdout ∩ tuning == 0", 0, len(seal_h & seal_t), n=len(seal_h) + len(seal_t))
+
+    # contamination: no v2-holdout transcript carries any fixture
+    cont = sorted(seal_h & forced_fx)
+    rep.add("10", "ZERO fixture contamination in the v2 holdout", "0", f"{len(cont)} {cont[:5]}",
+            PASS if not cont else FAIL, n=len(forced_fx))
+    spent = sorted(seal_h & v1hol)
+    rep.add("10", "ZERO spent-v1-holdout transcripts in the v2 holdout", "0", f"{len(spent)} {spent[:5]}",
+            PASS if not spent else FAIL, n=len(v1hol))
+    miss = sorted(forced - seal_t)
+    rep.add("10", "every forced transcript is in v2 TUNING", f"{len(forced)}/{len(forced)}",
+            f"{len(forced) - len(miss)}/{len(forced)} (missing {miss[:4]})", PASS if not miss else FAIL,
+            n=len(forced))
+    rep.check("10", "forced_not_by_fixture (every forcing has a stated reason)", [], j["forced_not_by_fixture"],
+              n=len(j["forced_with_reasons"]))
+    rep.check("10", "every forced transcript carries a reason", len(forced), len(j["forced_with_reasons"]),
+              n=len(forced))
+
+    # seal bindings
+    for src, dg in j["fixture_sources"].items():
+        fp = os.path.join(wt, src)
+        act = sha_file(fp) if os.path.exists(fp) else "ABSENT"
+        rep.add("10", f"criterion v2.5 — seal binds the ACTUAL {src}", act[:16] + "…", dg[:16] + "…",
+                PASS if act == dg else FAIL, n=1,
+                note="" if act == dg else "ITEM v2.a: the seal binds a stale digest; append a dated seal note "
+                                          "binding the actual digest and disclosing the taint, leaving this line "
+                                          "readable")
+    man = j["manifest"]
+    tool = man.get("tool")
+    if tool:
+        tp = os.path.join(wt, tool)
+        rep.check("10", "seal manifest tool_sha256 == the actual generator", man.get("tool_sha256", "")[:16] + "…",
+                  (sha_file(tp)[:16] + "…") if os.path.exists(tp) else "ABSENT")
+        tc = str(man.get("tool_commit") or "")
+        rc, _ = git(wt, "cat-file", "-e", f"{tc[:12]}:{tool}")
+        rep.add("10", f"seal manifest tool_commit {tc[:12]} contains {tool}", "present",
+                "present" if rc == 0 else "ABSENT", PASS if rc == 0 else FAIL, n=1,
+                note="same attributability class as criterion 20.10 / item 8a")
+    rep.add("10", "seal manifest run_utc exact to the second", "YYYY-MM-DDThh:mm:ssZ", str(man.get("run_utc")),
+            PASS if TS_EXACT.fullmatch(str(man.get("run_utc") or "")) else FAIL, n=1)
+    rep.add("10", "re-seal rule present (new fixture voids the seal)", "stated", str(j.get("re_seal_rule"))[:120],
+            PASS if j.get("re_seal_rule") else FAIL, n=1)
+    rep.add("10", "contamination disclosure present", "stated", str(j.get("disclosure"))[:120],
+            PASS if j.get("disclosure") else FAIL, n=1)
+
+    # guard is code
+    for f, label in (("tools/m4_split_v2.py", "generator"), ("tests/test_m4_split_v2.py", "tests")):
+        fp = os.path.join(wt, f)
+        if os.path.exists(fp):
+            nt = len(re.findall(r"def test_", open(fp, encoding="utf-8").read())) if label == "tests" else None
+            rep.add("10", f"guard is code: {f} present", "present", f"present" + (f", {nt} test functions" if nt is not None else ""),
+                    PASS, n=nt or 1)
+        else:
+            rep.add("10", f"guard is code: {f} present", "present", "ABSENT", FAIL)
+    # criterion v2.b: the deferred v2-holdout signals must be documented
+    hits = []
+    for root, dirs, files in os.walk(os.path.join(wt, "runs")):
+        for fn in files:
+            if fn.endswith((".json", ".md")):
+                t = open(os.path.join(root, fn), encoding="utf-8", errors="replace").read()
+                if "deferred_holdout" in t or "deferred" in t.lower() and "v2" in t:
+                    hits.append(os.path.relpath(os.path.join(root, fn), wt))
+    rep.add("10", "criterion v2.b — the 7 deferred v2-holdout signals documented in a committed artefact",
+            "a manifest enumerating them (item v2.b)", f"{len(hits)} files mention deferral: {sorted(hits)[:6]}",
+            INFO, n=len(hits),
+            note="the q2 supplement records deferred_holdout: 7 and the filter arithmetic closes, but item v2.b "
+                 "owes an enumeration (which 4 transcripts, which 3 were promoted to D-092/093/094)")
+
+
+def section_inherited(wt, rep):
+    """§11 — TASK-017: the inherited v1 toolchain, 266 files, three-way."""
+    print("\n== 11. inherited v1 manifest (TASK-017) ==")
+    p = os.path.join(wt, "tools/INHERITED-V1-MANIFEST.json")
+    if not os.path.exists(p):
+        rep.add("11", "INHERITED-V1-MANIFEST.json", "present", "ABSENT", FAIL)
+        return
+    m = json.load(open(p, encoding="utf-8"))
+    arch = str(m["archive_commit"])
+    groups = [("tools/tests/fixtures", m["files"]), ("census+runs", m["inherited_census_and_runs"]["files"])]
+    rep.check("11", "file_count (tools/tests/fixtures)", m["file_count"], len(m["files"]), n=len(m["files"]))
+    rep.check("11", "file_count (census+runs)", m["inherited_census_and_runs"]["file_count"],
+              len(m["inherited_census_and_runs"]["files"]), n=len(m["inherited_census_and_runs"]["files"]))
+    total = len(m["files"]) + len(m["inherited_census_and_runs"]["files"])
+    rep.check("11", "file_count_total", m["file_count_total"], total, n=total)
+    ok_arch = ok_head = ok_claim = n = 0
+    bad = []
+    for label, files in groups:
+        for path, meta in sorted(files.items()):
+            n += 1
+            rc, blob = git(wt, "show", f"{arch[:12]}:{path}")
+            a = sha_bytes(blob) if rc == 0 else "ABSENT-IN-ARCHIVE"
+            hp = os.path.join(wt, path)
+            h = sha_file(hp) if os.path.exists(hp) else "ABSENT-AT-HEAD"
+            ok_arch += a == meta.get("in_archive_sha256")
+            ok_head += h == meta.get("sha256")
+            ok_claim += meta.get("sha256") == meta.get("in_archive_sha256")
+            if not (a == h == meta.get("sha256") == meta.get("in_archive_sha256")):
+                bad.append((path, a[:8], h[:8], str(meta.get("sha256"))[:8]))
+    rep.add("11", "archive blob == manifest in_archive_sha256", f"{n}/{n}", f"{ok_arch}/{n}",
+            PASS if ok_arch == n else FAIL, n=n)
+    rep.add("11", "file at head == manifest sha256", f"{n}/{n}", f"{ok_head}/{n}",
+            PASS if ok_head == n else FAIL, n=n)
+    rep.add("11", "manifest's two claims agree per file (unmodified)", f"{n}/{n}", f"{ok_claim}/{n}",
+            PASS if ok_claim == n else FAIL, n=n,
+            note=f"mismatches: {bad[:4]}" if bad else "three-way equality across all inherited files")
+    rep.add("11", "unmodified declared", True, m.get("unmodified"), PASS if m.get("unmodified") else FAIL, n=1)
+    rep.add("11", "archive lane cited read-only, never re-stamped", "stated", str(m.get("archive_commit_note"))[:110],
+            PASS if m.get("archive_commit_note") else FAIL, n=1)
+
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("worktree")
@@ -959,6 +1132,8 @@ def main() -> int:
     section_read_scope(wt, rep, sup)
     section_signal_evidence(wt, rep)
     section_manifest_completeness(wt, rep)
+    section_split_v2(wt, rep, sup)
+    section_inherited(wt, rep)
     tally = collections.Counter(r["verdict"] for r in rep.rows)
     print(f"\n== summary: {len(rep.rows)} rows · " +
           " · ".join(f"{k} {v}" for k, v in sorted(tally.items())))
