@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T20:48Z
+updated: 2026-09-25T20:55Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -25,15 +25,16 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
   - q3 C2-format delivered at `4425763`; GATED INCOMPLETE by ORCH-2 @ `6495a8b` (reproduction/citations exact; no fixture recall, no clean-set run, detector digest commit mismatch; unpromoted, no pause).
   - q4-q5 delivered provisional-ungated at `1beadd9`.
   - Toolchain foundation: TASK-017 DELIVERED at `b2e0761` (inherited v1 toolchain byte-exact: 266 files, 154 tests OK / 1 skip, 16 fixtures verified, fresh sweep 10/10 identical).
-  - Actionable queue: WORKER-2 assigned TASK-019a (seal split v2) → ORCH-2 gates of TASK-018 and TASK-017 → TASK-019b (one-shot holdout evaluation).
+  - Fresh split v2: TASK-019a DELIVERED at `79eb401` (fresh sealed split v2: 197 tuning / 33 holdout, 43 forced tuning, 0 contamination; suite 164 OK / 1 skip; awaiting ORCH-2 gate).
+  - Actionable queue: ORCH-2 gating of TASK-018, TASK-017, TASK-019a → TASK-019b (one-shot holdout evaluation).
 - M6 final audit report — **BLOCKED on fresh sealed holdout split v2 + M4 completion**
-  (holdout evaluated at q4; fresh split with new salt authorized per ERRATA-25g §5 / TASK-019; TASK-017 delivered).
+  (holdout evaluated at q4; fresh split with new salt sealed in TASK-019a @ `79eb401`; TASK-017 delivered).
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T20:48Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T20:53Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
-- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `b2e076124f9b1d5452cc739a7065773674d7bcd5` (ALIVE; delivered TASK-017, suite 154 OK/1 skip)
-- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `6495a8bbe0c9500cf608803745afbb7375543a59` (ALIVE; q3 gated INCOMPLETE, cut TASK-019)
+- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `79eb401b4328d254a5cee9be0a07f17a5a5e610b` (ALIVE; delivered TASK-019a split v2, suite 164 OK)
+- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `6495a8bbe0c9500cf608803745afbb7375543a59` (ALIVE; gating queue)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
   - worker v1: `arena/01a0d581-fleetyard` @ `bf97d85` (HALT ack)
@@ -52,9 +53,9 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 - `fleet/ORDERS/REDIRECT-008.md`: **ACKNOWLEDGED & COMPLETED** by ORCH-2 (`fleet/ORDERS/ACK-REDIRECT-008.md` @ `5f6d698`).
 
 ## stall watch (re-armed per ERRATA-25f §2: signals only)
-- Class 1 (worker stalled): NOT FIRED (WORKER-2 delivered TASK-017 @ `b2e0761`).
+- Class 1 (worker stalled): NOT FIRED (WORKER-2 delivered TASK-019a @ `79eb401`).
 - Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `6495a8b`).
-- Class 3 (starvation): NOT FIRED (actionable queue: TASK-019, TASK-018/017 gating).
+- Class 3 (starvation): NOT FIRED (actionable queue: ORCH-2 gates of TASK-018, TASK-017, TASK-019a).
 - Class 4 (post-handoff): NOT FIRED (all v1 archives verified frozen).
 - Class 5 (LOUD ZOMBIE): ARMED.
 - Class 6 (context-rot support): ARMED.
