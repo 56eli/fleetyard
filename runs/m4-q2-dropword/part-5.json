@@ -1,0 +1,224 @@
+{
+ "Spiritual_Community_Jun_2003_Part_2_enxautogen_html.txt": [],
+ "Spiritual_Community_Jun_2003_Part_3_enxautogen_html.txt": [],
+ "Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.txt": [],
+ "Spiritual_Life_In_Today_s_World_Oct_2010_Part_2_enxautogen_html.txt": [],
+ "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt": [],
+ "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_2_enxautogen_html.txt": [],
+ "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_1_enxautogen_html.txt": [],
+ "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.txt": [],
+ "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_3_enxautogen_html.txt": [],
+ "Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt": [],
+ "Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 388544,
+    "quote": "impose on society. The",
+    "slug": "the_map_of_consciousness_expla"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "on",
+    "society"
+   ],
+   "end": 49802,
+   "note": "transcript is missing 'on society' inside a 23/24-word near-verbatim book match (tf-idf 0.54)",
+   "quoted": "impose. The",
+   "start": 49791,
+   "suspected": "impose on society. The"
+  }
+ ],
+ "Spiritual_Traps_Oct_2005_Part_3_enxautogen_html.txt": [],
+ "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.txt": [],
+ "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_2_enxautogen_html.txt": [],
+ "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_3.txt": [],
+ "Spirituality_Reason_and_Faith_Jan_2008_Part_2_enxautogen_html.txt": [],
+ "Spirituality_Reason_and_Faith_Jan_2008_Part_3_enxautogen_html.txt": [],
+ "Spirituality_and_the_World_Apr_2003_Part_1_enxautogen_html.txt": [],
+ "Spirituality_and_the_World_Apr_2003_Part_2_enxautogen_html.txt": [],
+ "Spirituality_and_the_World_Apr_2003_Part_3_enxautogen_html.txt": [],
+ "Success_Oct_2009_Part_1_enxautogen_html.txt": [],
+ "Success_Oct_2009_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 461616,
+    "quote": "the advanced, realized teacher",
+    "slug": "the_map_of_consciousness_expla"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "advanced",
+    "realized"
+   ],
+   "end": 24570,
+   "note": "transcript is missing 'advanced realized' inside a 21/24-word near-verbatim book match (tf-idf 0.42)",
+   "quoted": "the teacher",
+   "start": 24559,
+   "suspected": "the advanced, realized teacher"
+  }
+ ],
+ "Success_Oct_2009_Part_3_enxautogen_html.txt": [],
+ "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_1_enxautogen_html.txt": [],
+ "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_2_enxautogen_html.txt": [],
+ "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_3_enxautogen_html.txt": [],
+ "The_Ego_and_The_Self_Dec_2004_Part_1_enxautogen_html.txt": [],
+ "The_Ego_and_The_Self_Dec_2004_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 747750,
+    "quote": "and merely avoids",
+    "slug": "truth_vs_falsehood"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "merely"
+   ],
+   "end": 16844,
+   "note": "transcript is missing 'merely' inside a 20/23-word near-verbatim book match (tf-idf 0.46)",
+   "quoted": "and avoids",
+   "start": 16834,
+   "suspected": "and merely avoids"
+  }
+ ],
+ "The_Human_Dilemma_Aug_2007_Part_1_enxautogen_html.txt": [],
+ "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 88591,
+    "quote": "personal value. Why",
+    "slug": "in_the_world_but_not_of_it__t"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "value"
+   ],
+   "end": 49309,
+   "note": "transcript is missing 'value' inside a 22/24-word near-verbatim book match (tf-idf 0.44)",
+   "quoted": "personal. Why",
+   "start": 49296,
+   "suspected": "personal value. Why"
+  },
+  {
+   "book_ref": {
+    "char_offset": 82280,
+    "quote": "parents we need to",
+    "slug": "in_the_world_but_not_of_it__t"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "we",
+    "need"
+   ],
+   "end": 76558,
+   "note": "transcript is missing 'we need' inside a 24/24-word near-verbatim book match (tf-idf 0.33)",
+   "quoted": "parents, to",
+   "start": 76547,
+   "suspected": "parents we need to"
+  }
+ ],
+ "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt": [],
+ "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 26528,
+    "quote": "212 degrees Fahrenheit, it",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "degrees",
+    "fahrenheit"
+   ],
+   "end": 23433,
+   "note": "transcript is missing 'degrees fahrenheit' inside a 21/22-word near-verbatim book match (tf-idf 0.61)",
+   "quoted": "212 it",
+   "start": 23427,
+   "suspected": "212 degrees Fahrenheit, it"
+  },
+  {
+   "book_ref": {
+    "char_offset": 54231,
+    "quote": "the forebrain. The capacity",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "forebrain",
+    "the"
+   ],
+   "end": 53036,
+   "note": "transcript is missing 'forebrain the' inside a 23/24-word near-verbatim book match (tf-idf 0.50)",
+   "quoted": "The capacity",
+   "start": 53024,
+   "suspected": "the forebrain. The capacity"
+  },
+  {
+   "book_ref": {
+    "char_offset": 65105,
+    "quote": "Is Osama bin",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "osama"
+   ],
+   "end": 67517,
+   "note": "transcript is missing 'osama' inside a 23/23-word near-verbatim book match (tf-idf 0.54)",
+   "quoted": "Is Bin",
+   "start": 67511,
+   "suspected": "Is Osama bin"
+  }
+ ],
+ "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 121248,
+    "quote": "time I tried walking",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "i",
+    "tried"
+   ],
+   "end": 47116,
+   "note": "transcript is missing 'i tried' inside a 23/23-word near-verbatim book match (tf-idf 0.47)",
+   "quoted": "time, walking",
+   "start": 47103,
+   "suspected": "time I tried walking"
+  },
+  {
+   "book_ref": {
+    "char_offset": 132399,
+    "quote": "make sudden jumps, sudden",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "sudden",
+    "jumps"
+   ],
+   "end": 60854,
+   "note": "transcript is missing 'sudden jumps' inside a 22/23-word near-verbatim book match (tf-idf 0.33)",
+   "quoted": "make sudden",
+   "start": 60843,
+   "suspected": "make sudden jumps, sudden"
+  },
+  {
+   "book_ref": {
+    "char_offset": 154594,
+    "quote": "what? Huh? No",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "huh"
+   ],
+   "end": 86679,
+   "note": "transcript is missing 'huh' inside a 24/24-word near-verbatim book match (tf-idf 0.42)",
+   "quoted": "what? No",
+   "start": 86671,
+   "suspected": "what? Huh? No"
+  }
+ ]
+}

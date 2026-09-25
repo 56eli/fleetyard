@@ -1,0 +1,97 @@
+{
+ "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 192970,
+    "quote": "decision. The reason I",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "the",
+    "reason"
+   ],
+   "end": 48932,
+   "note": "transcript is missing 'the reason' inside a 22/24-word near-verbatim book match (tf-idf 0.40)",
+   "quoted": "decision. I",
+   "start": 48921,
+   "suspected": "decision. The reason I"
+  },
+  {
+   "book_ref": {
+    "char_offset": 201550,
+    "quote": "cauliflower, see. So",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "see"
+   ],
+   "end": 60521,
+   "note": "transcript is missing 'see' inside a 15/15-word near-verbatim book match (tf-idf 0.53)",
+   "quoted": "cauliflower. So",
+   "start": 60506,
+   "suspected": "cauliflower, see. So"
+  },
+  {
+   "book_ref": {
+    "char_offset": 202063,
+    "quote": "it, see. So",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "see"
+   ],
+   "end": 61020,
+   "note": "transcript is missing 'see' inside a 22/23-word near-verbatim book match (tf-idf 0.29)",
+   "quoted": "it. So",
+   "start": 61014,
+   "suspected": "it, see. So"
+  }
+ ],
+ "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_2.txt": [],
+ "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_3_enxautogen_html.txt": [],
+ "The_Presence_of_Spiritual_Awareness_Part_1_enxautogen_html.txt": [],
+ "The_Presence_of_Spiritual_Awareness_Part_2_enxautogen_html.txt": [],
+ "The_Presence_of_Spiritual_Awareness_Part_3_enxautogen_html.txt": [],
+ "Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.txt": [],
+ "Thought_and_Ideation_Feb_2004_Part_3_enxautogen_html.txt": [],
+ "Transcending_Barriers_Jun_2005_Part_1_enxautogen_html.txt": [],
+ "Transcending_Barriers_Jun_2005_Part_2.txt": [],
+ "Transcending_Barriers_Jun_2005_Part_3_enxautogen_html.txt": [],
+ "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt": [],
+ "Transcending_Obstacles_Sep_2005_Part_2_enxautogen_html.txt": [],
+ "Transcending_Obstacles_Sep_2005_Part_3.txt": [],
+ "Vision_Feb_2005_Part_1_enxautogen_html.txt": [],
+ "Vision_Feb_2005_Part_2_enxautogen_html.txt": [],
+ "Vision_Feb_2005_Part_3_enxautogen_html.txt": [],
+ "What_is_Real_Jun_2007_Part_1.txt": [],
+ "What_is_Real_Jun_2007_Part_2_enxautogen_html.txt": [],
+ "What_is_Real_Jun_2007_Part_3_enxautogen_html.txt": [],
+ "What_is_Truth_The_Absolute_Jul_2007_Part_1.txt": [],
+ "What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html.txt": [],
+ "What_is_Truth_The_Absolute_Jul_2007_Part_3_enxautogen_html.txt": [],
+ "What_is_the_World_Feb_2009_Part_1_enxautogen_html.txt": [],
+ "What_is_the_World_Feb_2009_Part_2_enxautogen_html.txt": [],
+ "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 204772,
+    "quote": "own accord, with",
+    "slug": "the_map_of_consciousness_expla"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "accord"
+   ],
+   "end": 14731,
+   "note": "transcript is missing 'accord' inside a 17/20-word near-verbatim book match (tf-idf 0.35)",
+   "quoted": "own, with",
+   "start": 14722,
+   "suspected": "own accord, with"
+  }
+ ],
+ "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt": [],
+ "Witnessing_and_Observing_Oct_2004_Part_3.txt": []
+}

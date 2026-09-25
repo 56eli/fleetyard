@@ -1,0 +1,114 @@
+{
+ "fixture_set": "v2-dropword (M4-q2, provisional)",
+ "generated_utc": "2026-09-25T19:1xZ",
+ "generated_by": "WORKER-2 A-2026-09-25-001, lane arena/01a0d9ce-fleetyard",
+ "source_run": {
+  "signals": "runs/m4-q2-dropword/signals.json",
+  "signals_sha256": "8d71f57bcb80313fcf8a635587525e65ff7e4603fd431494c1c45c6d1eea83b4",
+  "merge_provenance": "runs/m4-q2-dropword/MERGE-PROVENANCE.json",
+  "split": "tools/HELD-OUT-SPLIT.json (TUNING only; holdout never opened)"
+ },
+ "in_sample_caveat": "Candidates were produced by the C1-drop detector itself on the tuning set, then hand-verified and (for 4) kept. Recall figures computed against these fixtures are therefore IN-SAMPLE and are not admissible as detector precision/recall evidence (LAW §9).",
+ "proposed_leg_d": "STANDARDS leg (d) proposal (NOT in force; needs errata + BOSS CONCERN): 'the transcript text is ungrammatical or incomplete, AND the near-verbatim book source supplies the missing word(s), restoring grammar and doctrinal sense.'",
+ "count": 4,
+ "fixtures": [
+  {
+   "id": "D2-001",
+   "transcript": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 9156,
+   "span_end": 9167,
+   "quoted": "fancy, they",
+   "suspected": "fancy things they",
+   "dropped_words": [
+    "things"
+   ],
+   "evidence_class": "drop / omission (proposed STANDARDS leg d; see proposed_leg_d)",
+   "proposed_leg": "a",
+   "evidence": "Transcript reads 'People have all kinds of fancy, they want to do psychological testing' — a dangling appositive; the book supplies 'things' ('They'll have all kinds of fancy things they want to do—psychological testing'). Grammar is restored only by the book's word. Book quote re-verified byte-exact at the cited slug+offset (tools/det_dropword.py run + this file's test).",
+   "detector": "C1-drop (M4-q2)",
+   "book_ref": {
+    "char_offset": 154765,
+    "quote": "fancy things they",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "confidence": "DROP-CANDIDATE (hand-verified omission) — CLASS BLOCKED: STANDARDS defines no drop leg; proposed leg d needs a recorded errata + BOSS CONCERN (STANDARDS preamble). NOT counted as CERTAIN.",
+   "status": "confirmed as a real transcript-vs-book omission by WORKER-2 hand-read (M4-q2, tuning set); classification pending taxonomy errata",
+   "status_by": "WORKER-2 A-2026-09-25-001 (M4-q2)"
+  },
+  {
+   "id": "D2-002",
+   "transcript": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 58955,
+   "span_end": 58963,
+   "quoted": "of which",
+   "suspected": "of the devotion, which",
+   "dropped_words": [
+    "the",
+    "devotion"
+   ],
+   "evidence_class": "drop / omission (proposed STANDARDS leg d; see proposed_leg_d)",
+   "proposed_leg": "a",
+   "evidence": "Transcript reads 'Just the enormity of which is the second way to God' — ungrammatical (dangling 'of which'); the book reads 'just the enormity of the devotion, which is the second way to God'. The omission removes the subject of the clause. Book quote re-verified byte-exact at the cited slug+offset (tools/det_dropword.py run + this file's test).",
+   "detector": "C1-drop (M4-q2)",
+   "book_ref": {
+    "char_offset": 62578,
+    "quote": "of the devotion, which",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "confidence": "DROP-CANDIDATE (hand-verified omission) — CLASS BLOCKED: STANDARDS defines no drop leg; proposed leg d needs a recorded errata + BOSS CONCERN (STANDARDS preamble). NOT counted as CERTAIN.",
+   "status": "confirmed as a real transcript-vs-book omission by WORKER-2 hand-read (M4-q2, tuning set); classification pending taxonomy errata",
+   "status_by": "WORKER-2 A-2026-09-25-001 (M4-q2)"
+  },
+  {
+   "id": "D2-003",
+   "transcript": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 48635,
+   "span_end": 48643,
+   "quoted": "the 500s",
+   "suspected": "the high 500s",
+   "dropped_words": [
+    "high"
+   ],
+   "evidence_class": "drop / omission (proposed STANDARDS leg d; see proposed_leg_d)",
+   "proposed_leg": "b",
+   "evidence": "Transcript: 'a mantra that's in the 500s'; book: 'a mantra that's in the high 500s'. The omitted qualifier changes the calibration claim (the high 500s is Hawkins' band); the transcript's own adjacent sentence ('They're in the 500s') matches the book's earlier sentence, so the drop is local to the quoted line. Book quote re-verified byte-exact at the cited slug+offset (tools/det_dropword.py run + this file's test).",
+   "detector": "C1-drop (M4-q2)",
+   "book_ref": {
+    "char_offset": 190271,
+    "quote": "the high 500s",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "confidence": "DROP-CANDIDATE (hand-verified omission) — CLASS BLOCKED: STANDARDS defines no drop leg; proposed leg d needs a recorded errata + BOSS CONCERN (STANDARDS preamble). NOT counted as CERTAIN.",
+   "status": "confirmed as a real transcript-vs-book omission by WORKER-2 hand-read (M4-q2, tuning set); classification pending taxonomy errata",
+   "status_by": "WORKER-2 A-2026-09-25-001 (M4-q2)"
+  },
+  {
+   "id": "D2-004",
+   "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_2_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 2218,
+   "span_end": 2233,
+   "quoted": "perception, the",
+   "suspected": "perception, which perceives, the",
+   "dropped_words": [
+    "which",
+    "perceives"
+   ],
+   "evidence_class": "drop / omission (proposed STANDARDS leg d; see proposed_leg_d)",
+   "proposed_leg": "b",
+   "evidence": "Transcript: 'Instead of perception, the heart knows'; book: 'Instead of perception, which perceives, the heart knows'. The omitted relative clause is the definition of perception in the passage. Book quote re-verified byte-exact at the cited slug+offset (tools/det_dropword.py run + this file's test).",
+   "detector": "C1-drop (M4-q2)",
+   "book_ref": {
+    "char_offset": 318708,
+    "quote": "perception, which perceives, the",
+    "slug": "letting_go__the_pathway_of_sur"
+   },
+   "confidence": "DROP-CANDIDATE (hand-verified omission) — CLASS BLOCKED: STANDARDS defines no drop leg; proposed leg d needs a recorded errata + BOSS CONCERN (STANDARDS preamble). NOT counted as CERTAIN.",
+   "status": "confirmed as a real transcript-vs-book omission by WORKER-2 hand-read (M4-q2, tuning set); classification pending taxonomy errata",
+   "status_by": "WORKER-2 A-2026-09-25-001 (M4-q2)"
+  }
+ ]
+}

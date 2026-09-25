@@ -1,0 +1,463 @@
+{
+ "A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt": [],
+ "A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt": [],
+ "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt": [],
+ "A_Unique_Sedona_Seminar_Dec_2008_Part_1_enxautogen_html.txt": [],
+ "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt": [],
+ "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt": [],
+ "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_1_enxautogen_html.txt": [],
+ "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html.txt": [],
+ "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_3_enxautogen_html.txt": [],
+ "Alignment_Apr_2005_Part_1_enxautogen_html.txt": [],
+ "Alignment_Apr_2005_Part_2_enxautogen_html.txt": [],
+ "Alignment_Apr_2005_Part_3_enxautogen_html.txt": [],
+ "Belief,_Trust_and_Credibility_Jun_2008_Part_2_enxautogen_html.txt": [],
+ "Belief,_Trust_and_Credibility_Jun_2008_Part_3_enxautogen_html.txt": [],
+ "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 8036,
+    "quote": "imaginary realms. So",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "realms"
+   ],
+   "end": 1812,
+   "note": "transcript is missing 'realms' inside a 23/24-word near-verbatim book match (tf-idf 0.46)",
+   "quoted": "imaginary. So",
+   "start": 1799,
+   "suspected": "imaginary realms. So"
+  },
+  {
+   "book_ref": {
+    "char_offset": 8805,
+    "quote": "evidence; evidence of",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "evidence"
+   ],
+   "end": 2585,
+   "note": "transcript is missing 'evidence' inside a 21/22-word near-verbatim book match (tf-idf 0.49)",
+   "quoted": "evidence of",
+   "start": 2574,
+   "suspected": "evidence; evidence of"
+  },
+  {
+   "book_ref": {
+    "char_offset": 28482,
+    "quote": "something that’s very",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "that's"
+   ],
+   "end": 18219,
+   "note": "transcript is missing \"that's\" inside a 10/10-word near-verbatim book match (tf-idf 0.40)",
+   "quoted": "something very",
+   "start": 18205,
+   "suspected": "something that’s very"
+  },
+  {
+   "book_ref": {
+    "char_offset": 37686,
+    "quote": "of really highly",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "really"
+   ],
+   "end": 29823,
+   "note": "transcript is missing 'really' inside a 22/23-word near-verbatim book match (tf-idf 0.41)",
+   "quoted": "of highly",
+   "start": 29814,
+   "suspected": "of really highly"
+  },
+  {
+   "book_ref": {
+    "char_offset": 56733,
+    "quote": "bed; I mean, he",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "i",
+    "mean"
+   ],
+   "end": 53184,
+   "note": "transcript is missing 'i mean' inside a 21/23-word near-verbatim book match (tf-idf 0.54)",
+   "quoted": "bed. He",
+   "start": 53177,
+   "suspected": "bed; I mean, he"
+  },
+  {
+   "book_ref": {
+    "char_offset": 58610,
+    "quote": "staggering, staggering. This",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "staggering"
+   ],
+   "end": 54999,
+   "note": "transcript is missing 'staggering' inside a 23/24-word near-verbatim book match (tf-idf 0.55)",
+   "quoted": "Staggering. This",
+   "start": 54983,
+   "suspected": "staggering, staggering. This"
+  },
+  {
+   "book_ref": {
+    "char_offset": 59144,
+    "quote": "itself, see. People",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "see"
+   ],
+   "end": 55480,
+   "note": "transcript is missing 'see' inside a 23/24-word near-verbatim book match (tf-idf 0.40)",
+   "quoted": "itself. People",
+   "start": 55466,
+   "suspected": "itself, see. People"
+  },
+  {
+   "book_ref": {
+    "char_offset": 59433,
+    "quote": "there. However, it",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "however"
+   ],
+   "end": 55752,
+   "note": "transcript is missing 'however' inside a 23/24-word near-verbatim book match (tf-idf 0.40)",
+   "quoted": "there. It",
+   "start": 55743,
+   "suspected": "there. However, it"
+  },
+  {
+   "book_ref": {
+    "char_offset": 61983,
+    "quote": "are. So, even before",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "so",
+    "even"
+   ],
+   "end": 58380,
+   "note": "transcript is missing 'so even' inside a 21/23-word near-verbatim book match (tf-idf 0.41)",
+   "quoted": "are. Before",
+   "start": 58369,
+   "suspected": "are. So, even before"
+  },
+  {
+   "book_ref": {
+    "char_offset": 62545,
+    "quote": "pulpit—I mean, just",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "i",
+    "mean"
+   ],
+   "end": 58941,
+   "note": "transcript is missing 'i mean' inside a 24/24-word near-verbatim book match (tf-idf 0.59)",
+   "quoted": "pulpit. Just",
+   "start": 58929,
+   "suspected": "pulpit—I mean, just"
+  },
+  {
+   "book_ref": {
+    "char_offset": 62578,
+    "quote": "of the devotion, which",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "the",
+    "devotion"
+   ],
+   "end": 58963,
+   "note": "transcript is missing 'the devotion' inside a 24/24-word near-verbatim book match (tf-idf 0.59)",
+   "quoted": "of which",
+   "start": 58955,
+   "suspected": "of the devotion, which"
+  }
+ ],
+ "Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 138941,
+    "quote": "be sovereign, sovereign",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "sovereign"
+   ],
+   "end": 55232,
+   "note": "transcript is missing 'sovereign' inside a 24/24-word near-verbatim book match (tf-idf 0.64)",
+   "quoted": "be sovereign",
+   "start": 55220,
+   "suspected": "be sovereign, sovereign"
+  },
+  {
+   "book_ref": {
+    "char_offset": 145886,
+    "quote": "God, you know, like",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 65790,
+   "note": "transcript is missing 'you know' inside a 23/24-word near-verbatim book match (tf-idf 0.55)",
+   "quoted": "God, like",
+   "start": 65781,
+   "suspected": "God, you know, like"
+  }
+ ],
+ "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 154765,
+    "quote": "fancy things they",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "things"
+   ],
+   "end": 9167,
+   "note": "transcript is missing 'things' inside a 22/23-word near-verbatim book match (tf-idf 0.32)",
+   "quoted": "fancy, they",
+   "start": 9156,
+   "suspected": "fancy things they"
+  },
+  {
+   "book_ref": {
+    "char_offset": 185403,
+    "quote": "state, see. So",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "see"
+   ],
+   "end": 43140,
+   "note": "transcript is missing 'see' inside a 23/24-word near-verbatim book match (tf-idf 0.49)",
+   "quoted": "state. So",
+   "start": 43131,
+   "suspected": "state, see. So"
+  },
+  {
+   "book_ref": {
+    "char_offset": 190271,
+    "quote": "the high 500s",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "high"
+   ],
+   "end": 48643,
+   "note": "transcript is missing 'high' inside a 21/24-word near-verbatim book match (tf-idf 0.34)",
+   "quoted": "the 500s",
+   "start": 48635,
+   "suspected": "the high 500s"
+  },
+  {
+   "book_ref": {
+    "char_offset": 190631,
+    "quote": "around probably has",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "probably"
+   ],
+   "end": 49001,
+   "note": "transcript is missing 'probably' inside a 22/24-word near-verbatim book match (tf-idf 0.27)",
+   "quoted": "around, has",
+   "start": 48990,
+   "suspected": "around probably has"
+  },
+  {
+   "book_ref": {
+    "char_offset": 191539,
+    "quote": "salvation, huh. Mankind",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "huh"
+   ],
+   "end": 49883,
+   "note": "transcript is missing 'huh' inside a 24/24-word near-verbatim book match (tf-idf 0.84)",
+   "quoted": "salvation. Mankind",
+   "start": 49865,
+   "suspected": "salvation, huh. Mankind"
+  },
+  {
+   "book_ref": {
+    "char_offset": 192625,
+    "quote": "they’re very strong, very",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "very",
+    "strong"
+   ],
+   "end": 50906,
+   "note": "transcript is missing 'very strong' inside a 20/21-word near-verbatim book match (tf-idf 0.35)",
+   "quoted": "they're very",
+   "start": 50894,
+   "suspected": "they’re very strong, very"
+  },
+  {
+   "book_ref": {
+    "char_offset": 197801,
+    "quote": "12. I mean, how",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "i",
+    "mean"
+   ],
+   "end": 55914,
+   "note": "transcript is missing 'i mean' inside a 20/23-word near-verbatim book match (tf-idf 0.37)",
+   "quoted": "12. How",
+   "start": 55907,
+   "suspected": "12. I mean, how"
+  },
+  {
+   "book_ref": {
+    "char_offset": 203194,
+    "quote": "again—it’s like you’re",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "it's",
+    "like"
+   ],
+   "end": 60965,
+   "note": "transcript is missing \"it's like\" inside a 20/20-word near-verbatim book match (tf-idf 0.45)",
+   "quoted": "again you're",
+   "start": 60953,
+   "suspected": "again—it’s like you’re"
+  },
+  {
+   "book_ref": {
+    "char_offset": 208720,
+    "quote": "goal, see. But",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "see"
+   ],
+   "end": 66311,
+   "note": "transcript is missing 'see' inside a 24/24-word near-verbatim book match (tf-idf 0.47)",
+   "quoted": "goal but",
+   "start": 66303,
+   "suspected": "goal, see. But"
+  },
+  {
+   "book_ref": {
+    "char_offset": 209472,
+    "quote": "place. He’d say",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "he'd"
+   ],
+   "end": 67053,
+   "note": "transcript is missing \"he'd\" inside a 24/24-word near-verbatim book match (tf-idf 0.46)",
+   "quoted": "place say",
+   "start": 67044,
+   "suspected": "place. He’d say"
+  },
+  {
+   "book_ref": {
+    "char_offset": 211300,
+    "quote": "them, see. So",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "see"
+   ],
+   "end": 68693,
+   "note": "transcript is missing 'see' inside a 23/23-word near-verbatim book match (tf-idf 0.51)",
+   "quoted": "them so",
+   "start": 68686,
+   "suspected": "them, see. So"
+  },
+  {
+   "book_ref": {
+    "char_offset": 212291,
+    "quote": "So, there’s something",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "there's"
+   ],
+   "end": 69682,
+   "note": "transcript is missing \"there's\" inside a 20/23-word near-verbatim book match (tf-idf 0.39)",
+   "quoted": "so something",
+   "start": 69670,
+   "suspected": "So, there’s something"
+  }
+ ],
+ "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 750621,
+    "quote": "Earth\n\nInfinity\n\n\n\nRuler",
+    "slug": "truth_vs_falsehood"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "infinity"
+   ],
+   "end": 21159,
+   "note": "transcript is missing 'infinity' inside a 10/10-word near-verbatim book match (tf-idf 0.36)",
+   "quoted": "earth, ruler",
+   "start": 21147,
+   "suspected": "Earth\n\nInfinity\n\n\n\nRuler"
+  }
+ ],
+ "Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt": [],
+ "Creation_vs_Evolution_Oct_2007_Part_3_enxautogen_html.txt": [],
+ "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_1.txt": [],
+ "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_2_enxautogen_html.txt": [],
+ "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_3_enxautogen_html.txt": [],
+ "Dialogue,_Questions,_and_Answers_Dec_2003_Part_1_enxautogen_html.txt": [],
+ "Dialogue,_Questions,_and_Answers_Dec_2003_Part_2_enxautogen_html.txt": [],
+ "Dialogue_Questions_and_Answers_Dec_2003_Part_3.txt": [],
+ "Emotions_and_Sensations_Apr_2004_Part_1_enxautogen_html.txt": [],
+ "Emotions_and_Sensations_Apr_2004_Part_2_enxautogen_html.txt": [],
+ "Emotions_and_Sensations_Apr_2004_Part_3_enxautogen_html.txt": [],
+ "Enlightenment_Aug_2003_Part_1_enxautogen_html.txt": [],
+ "Enlightenment_Aug_2003_Part_2_enxautogen_html.txt": [],
+ "Enlightenment_Aug_2003_Part_3_enxautogen_html.txt": [],
+ "Experiential_Reality_Feb_2006_Part_1_enxautogen_html.txt": []
+}

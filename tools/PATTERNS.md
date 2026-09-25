@@ -79,12 +79,38 @@ passages — invalid as an independent false-positive estimate.
 6. Only ORCH-2 (or the owner) gates a promotion (LAW §2.2/§9). Until then every
    detector output stays CANDIDATE-class raw signal.
 
+## 5b. M4-q2 — dropped words: narrowed, not closed (C1-drop, 2026-09-25)
+
+`tools/det_dropword.py` implements the class M2 deferred and v1's B2 explicitly
+skipped ("speaker skipped book words: paraphrase"). Rule: inside an aligned
+near-verbatim book passage, report the **book words the transcript is missing**,
+with the book citation that supplies them (inverse of B2's replace/insert cases).
+
+- First run (tuning split only, holdout never opened — provenance enforced):
+  **193 transcripts → 122 raw signals** (`runs/m4-q2-dropword/`, 6 bounded shards,
+  `signals.json` sha256 `8d71f57b…`). CANDIDATE-class, unreviewed, precision
+  **unmeasured** (holdout run = q4).
+- Hand-read of sampled candidates: **4 confirmed omissions** kept as provisional
+  fixtures `fixtures/v2/dropword.json` (D2-001 `things`; D2-002 `the devotion`;
+  D2-003 `high`; D2-004 `which perceives`), each bound byte-exact to transcript and
+  book bytes by `tests/test_det_dropword.py`; 5 sampled candidates parked/discarded
+  (see `runs/m4-q2-dropword/README.md`).
+- Known false-positive shapes: speaker improvisation/fillers around read-aloud text
+  (`I mean`, `you know`, `see`), abbreviation vs expansion, book heading/table text.
+- **Classification blocked by design:** STANDARDS has no drop leg. A **proposed leg
+  (d)** ("transcript ungrammatical or incomplete AND the near-verbatim book source
+  supplies the missing word(s), restoring grammar and doctrinal sense") is recorded
+  in `fixtures/v2/dropword.json`; enacting it requires an errata + a BOSS CONCERN
+  (STANDARDS preamble). Until then: DROP-CANDIDATE, never CERTAIN.
+- Coverage honesty: only book-anchored drops are detectable here; conversational
+  drops stay unmeasured. The class is narrowed, not closed.
+
 ## 6. Next quanta (M4 work queue, in order)
 
-1. **M4-q2 — drop-word detector** (largest unmeasured class): rule = word-level
-   alignment of transcript spans against book/slide sources, flagging missing
-   function/content words that restore grammar **and** doctrine; fixtures: CF-015
-   (in-sample) + new hand-reads from the *tuning* set; holdout untouched.
+1. ~~**M4-q2 — drop-word detector**~~ **done (tuning): 122 raw signals; 4
+   hand-verified provisional fixtures; classification blocked on proposed leg (d)
+   (errata + BOSS CONCERN required).** Residual: broaden beyond book-anchored
+   spans; resolve the parked candidates.
 2. **M4-q3 — speaker/format detector**: structural anomalies (missing speaker
    tags / merged turns / format drift), fixtures from M1 notes + tuning set.
 3. **M4-q4 — per-detector precision runs** on the holdout split with frozen

@@ -1,0 +1,271 @@
+{
+ "Experiential_Reality_Feb_2006_Part_2_enxautogen_html.txt": [],
+ "Experiential_Reality_Feb_2006_Part_3_enxautogen_html.txt": [],
+ "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 402335,
+    "quote": "mystic state, the",
+    "slug": "the_map_of_consciousness_expla"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "state"
+   ],
+   "end": 11667,
+   "note": "transcript is missing 'state' inside a 20/23-word near-verbatim book match (tf-idf 0.43)",
+   "quoted": "mystic the",
+   "start": 11657,
+   "suspected": "mystic state, the"
+  },
+  {
+   "book_ref": {
+    "char_offset": 405461,
+    "quote": "You may find",
+    "slug": "the_map_of_consciousness_expla"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "may"
+   ],
+   "end": 17892,
+   "note": "transcript is missing 'may' inside a 24/24-word near-verbatim book match (tf-idf 0.61)",
+   "quoted": "you find",
+   "start": 17884,
+   "suspected": "You may find"
+  },
+  {
+   "book_ref": {
+    "char_offset": 409147,
+    "quote": "that study will",
+    "slug": "the_map_of_consciousness_expla"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "study"
+   ],
+   "end": 40801,
+   "note": "transcript is missing 'study' inside a 20/21-word near-verbatim book match (tf-idf 0.42)",
+   "quoted": "that will",
+   "start": 40792,
+   "suspected": "that study will"
+  }
+ ],
+ "Experiential_Reality_The_Mystic_Dec_2007_Part_2_enxautogen_html.txt": [],
+ "Freedom_Morality_and_Ethics_Nov_2008_Part_2_enxautogen_html.txt": [],
+ "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt": [],
+ "God_Transcendent_and_Immanent_Nov_2002_Part_1_enxautogen_html.txt": [],
+ "God_Transcendent_and_Immanent_Nov_2002_Part_3_enxautogen_html.txt": [],
+ "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt": [],
+ "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_3_enxautogen_html.txt": [],
+ "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.txt": [],
+ "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt": [],
+ "Handling_Spiritual_Challenges_Apr_2010_Part_3_enxautogen_html.txt": [],
+ "Happiness_Apr_2009_Part_1_enxautogen_html.txt": [],
+ "Happiness_Apr_2009_Part_2_enxautogen_html.txt": [],
+ "Happiness_Apr_2009_Part_3_enxautogen_html.txt": [],
+ "Identification_and_Illusion_Aug_2004_Part_2_enxautogen_html.txt": [],
+ "Illness_and_SelfHealing_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 54713,
+    "quote": "refractory, or resistant, to",
+    "slug": "healing_and_recovery"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "or",
+    "resistant"
+   ],
+   "end": 5026,
+   "note": "transcript is missing 'or resistant' inside a 11/12-word near-verbatim book match (tf-idf 0.43)",
+   "quoted": "refractory to",
+   "start": 5013,
+   "suspected": "refractory, or resistant, to"
+  },
+  {
+   "book_ref": {
+    "char_offset": 59807,
+    "quote": "illness, including pride",
+    "slug": "healing_and_recovery"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "including"
+   ],
+   "end": 11454,
+   "note": "transcript is missing 'including' inside a 19/22-word near-verbatim book match (tf-idf 0.41)",
+   "quoted": "illness. Pride",
+   "start": 11440,
+   "suspected": "illness, including pride"
+  },
+  {
+   "book_ref": {
+    "char_offset": 73866,
+    "quote": "cane and medication in",
+    "slug": "healing_and_recovery"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "and",
+    "medication"
+   ],
+   "end": 27041,
+   "note": "transcript is missing 'and medication' inside a 23/24-word near-verbatim book match (tf-idf 0.55)",
+   "quoted": "cane in",
+   "start": 27034,
+   "suspected": "cane and medication in"
+  },
+  {
+   "book_ref": {
+    "char_offset": 80193,
+    "quote": "the inherent nature",
+    "slug": "healing_and_recovery"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "inherent"
+   ],
+   "end": 32460,
+   "note": "transcript is missing 'inherent' inside a 20/23-word near-verbatim book match (tf-idf 0.44)",
+   "quoted": "the nature",
+   "start": 32450,
+   "suspected": "the inherent nature"
+  },
+  {
+   "book_ref": {
+    "char_offset": 93931,
+    "quote": "cholesterol level, hypoglycemia",
+    "slug": "healing_and_recovery"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "level"
+   ],
+   "end": 49928,
+   "note": "transcript is missing 'level' inside a 14/16-word near-verbatim book match (tf-idf 0.47)",
+   "quoted": "cholesterol, hypoglycemia",
+   "start": 49903,
+   "suspected": "cholesterol level, hypoglycemia"
+  }
+ ],
+ "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_2_enxautogen_html.txt": [],
+ "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_3_enxautogen_html.txt": [],
+ "Intention_May_2005_Part_1_enxautogen_html.txt": [],
+ "Intention_May_2005_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 350324,
+    "quote": "not; in fact, they",
+    "slug": "the_map_of_consciousness_expla"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "in",
+    "fact"
+   ],
+   "end": 23659,
+   "note": "transcript is missing 'in fact' inside a 20/20-word near-verbatim book match (tf-idf 0.22)",
+   "quoted": "not. They",
+   "start": 23650,
+   "suspected": "not; in fact, they"
+  }
+ ],
+ "Intention_May_2005_Part_3_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 306248,
+    "quote": "to identify the",
+    "slug": "the_wisdom_of_dr_david_r_haw"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "identify"
+   ],
+   "end": 9694,
+   "note": "transcript is missing 'identify' inside a 15/17-word near-verbatim book match (tf-idf 0.48)",
+   "quoted": "to the",
+   "start": 9688,
+   "suspected": "to identify the"
+  }
+ ],
+ "Karma_and_the_Afterlife_Oct_2002_Part_1_enxautogen_html.txt": [],
+ "Karma_and_the_Afterlife_Oct_2002_Part_2_enxautogen_html.txt": [],
+ "Karma_and_the_Afterlife_Oct_2002_Part_3_enxautogen_html.txt": [],
+ "Love_Sep_2011_Part_1_enxautogen_html.txt": [],
+ "Love_Sep_2011_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 318708,
+    "quote": "perception, which perceives, the",
+    "slug": "letting_go__the_pathway_of_sur"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "which",
+    "perceives"
+   ],
+   "end": 2233,
+   "note": "transcript is missing 'which perceives' inside a 20/23-word near-verbatim book match (tf-idf 0.44)",
+   "quoted": "perception, the",
+   "start": 2218,
+   "suspected": "perception, which perceives, the"
+  },
+  {
+   "book_ref": {
+    "char_offset": 135185,
+    "quote": "it is seen to",
+    "slug": "power_vs_force__the_hidden_de"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "is",
+    "seen"
+   ],
+   "end": 6625,
+   "note": "transcript is missing 'is seen' inside a 19/21-word near-verbatim book match (tf-idf 0.39)",
+   "quoted": "it to",
+   "start": 6620,
+   "suspected": "it is seen to"
+  }
+ ],
+ "Love_is_a_Way_of_Being_Part_2_enxautogen_html.txt": [],
+ "Love_is_a_Way_of_Being_Part_3_enxautogen_html.txt": [],
+ "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt": [],
+ "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 447435,
+    "quote": "be quite formidable",
+    "slug": "the_map_of_consciousness_expla"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "quite"
+   ],
+   "end": 470,
+   "note": "transcript is missing 'quite' inside a 21/23-word near-verbatim book match (tf-idf 0.27)",
+   "quoted": "be formidable",
+   "start": 457,
+   "suspected": "be quite formidable"
+  },
+  {
+   "book_ref": {
+    "char_offset": 447619,
+    "quote": "teacher or avatar who",
+    "slug": "the_map_of_consciousness_expla"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "or",
+    "avatar"
+   ],
+   "end": 1855,
+   "note": "transcript is missing 'or avatar' inside a 21/24-word near-verbatim book match (tf-idf 0.36)",
+   "quoted": "teacher who",
+   "start": 1844,
+   "suspected": "teacher or avatar who"
+  }
+ ],
+ "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_3_enxautogen_html.txt": []
+}

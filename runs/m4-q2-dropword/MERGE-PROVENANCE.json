@@ -1,0 +1,45 @@
+{
+ "merge_utc": "2026-09-25T19:05:22Z",
+ "parts": [
+  {
+   "part": "part-1.json",
+   "sha256": "64a97be574e2412b925bfcd84f1eae7d191af4054506ec4d9a0232eaa27dcacb",
+   "signals": 26,
+   "transcripts": 33
+  },
+  {
+   "part": "part-2.json",
+   "sha256": "aa84a90fdfbefc76f092105c4c90766408bf90e000562846aeaf930564dd4279",
+   "signals": 14,
+   "transcripts": 33
+  },
+  {
+   "part": "part-3.json",
+   "sha256": "092d63417bb95592b1f0fce3cccdd6fe8182c46d99ee2c96efb9a8d12ebe9d30",
+   "signals": 67,
+   "transcripts": 33
+  },
+  {
+   "part": "part-4.json",
+   "sha256": "00769efc07ff9494adbf918bed13b22e14831f138ab174fd18b79477920773fc",
+   "signals": 0,
+   "transcripts": 33
+  },
+  {
+   "part": "part-5.json",
+   "sha256": "d81406aa716195e120e9f02e95171c9e620e44aebaa5fa4d2db75749b3f42287",
+   "signals": 11,
+   "transcripts": 33
+  },
+  {
+   "part": "part-6.json",
+   "sha256": "ef6c7910be1527e91fcd7b387851bdaf4c827d84a50a1904221f8a498a2b614b",
+   "signals": 4,
+   "transcripts": 28
+  }
+ ],
+ "signals_json_sha256": "8d71f57bcb80313fcf8a635587525e65ff7e4603fd431494c1c45c6d1eea83b4",
+ "signals_total": 122,
+ "status": "CANDIDATE-class raw signals, unreviewed; PROVISIONAL-UNGATED",
+ "transcripts": 193
+}

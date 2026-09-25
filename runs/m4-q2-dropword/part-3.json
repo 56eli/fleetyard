@@ -1,0 +1,1141 @@
+{
+ "Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_1_enxautogen_html.txt": [],
+ "Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_2_enxautogen_html.txt": [],
+ "Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt": [],
+ "Peace_Aug_2009_Part_1_enxautogen_html.txt": [],
+ "Peace_Aug_2009_Part_2_enxautogen_html.txt": [],
+ "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_3_enxautogen_html.txt": [],
+ "Perception_and_Positionality_Jun_2004_Part_1_enxautogen_html.txt": [],
+ "Perception_and_Positionality_Jun_2004_Part_3_enxautogen_html.txt": [],
+ "Perception_vs_Essence_Apr_2006_Part_1.txt": [],
+ "Perception_vs_Essence_Apr_2006_Part_2_enxautogen_html.txt": [],
+ "Perception_vs_Essence_Apr_2006_Part_3_enxautogen_html.txt": [],
+ "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 216103,
+    "quote": "9 percent of",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "percent"
+   ],
+   "end": 9895,
+   "note": "transcript is missing 'percent' inside a 21/24-word near-verbatim book match (tf-idf 0.36)",
+   "quoted": "9% of",
+   "start": 9890,
+   "suspected": "9 percent of"
+  },
+  {
+   "book_ref": {
+    "char_offset": 220436,
+    "quote": "85 percent, calibrated",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "percent"
+   ],
+   "end": 14928,
+   "note": "transcript is missing 'percent' inside a 24/24-word near-verbatim book match (tf-idf 0.38)",
+   "quoted": "85%, calibrated",
+   "start": 14913,
+   "suspected": "85 percent, calibrated"
+  },
+  {
+   "book_ref": {
+    "char_offset": 238710,
+    "quote": "deadly. Yeah. Every",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "yeah"
+   ],
+   "end": 39140,
+   "note": "transcript is missing 'yeah' inside a 21/24-word near-verbatim book match (tf-idf 0.45)",
+   "quoted": "deadly. Every",
+   "start": 39127,
+   "suspected": "deadly. Yeah. Every"
+  },
+  {
+   "book_ref": {
+    "char_offset": 239196,
+    "quote": "existence, huh? The capacity",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "huh",
+    "the"
+   ],
+   "end": 39568,
+   "note": "transcript is missing 'huh the' inside a 19/19-word near-verbatim book match (tf-idf 0.34)",
+   "quoted": "existence. Capacity",
+   "start": 39549,
+   "suspected": "existence, huh? The capacity"
+  },
+  {
+   "book_ref": {
+    "char_offset": 241024,
+    "quote": "profound, yeah . . . I",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "yeah"
+   ],
+   "end": 42308,
+   "note": "transcript is missing 'yeah' inside a 20/20-word near-verbatim book match (tf-idf 0.52)",
+   "quoted": "profound. I",
+   "start": 42297,
+   "suspected": "profound, yeah . . . I"
+  },
+  {
+   "book_ref": {
+    "char_offset": 252076,
+    "quote": "30, or whatever.\n\nSo",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "or",
+    "whatever"
+   ],
+   "end": 56859,
+   "note": "transcript is missing 'or whatever' inside a 22/23-word near-verbatim book match (tf-idf 0.52)",
+   "quoted": "30. So",
+   "start": 56853,
+   "suspected": "30, or whatever.\n\nSo"
+  },
+  {
+   "book_ref": {
+    "char_offset": 254773,
+    "quote": "that, you know. Because",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 59976,
+   "note": "transcript is missing 'you know' inside a 23/24-word near-verbatim book match (tf-idf 0.41)",
+   "quoted": "that because",
+   "start": 59964,
+   "suspected": "that, you know. Because"
+  }
+ ],
+ "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 278169,
+    "quote": "purgatorial, it’s certainly",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "it's"
+   ],
+   "end": 9047,
+   "note": "transcript is missing \"it's\" inside a 24/24-word near-verbatim book match (tf-idf 0.41)",
+   "quoted": "purgatorial, certainly",
+   "start": 9025,
+   "suspected": "purgatorial, it’s certainly"
+  },
+  {
+   "book_ref": {
+    "char_offset": 278621,
+    "quote": "megalomania, huh?\n\nConsequently",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "huh"
+   ],
+   "end": 9481,
+   "note": "transcript is missing 'huh' inside a 24/24-word near-verbatim book match (tf-idf 0.46)",
+   "quoted": "megalomania. Consequently",
+   "start": 9456,
+   "suspected": "megalomania, huh?\n\nConsequently"
+  },
+  {
+   "book_ref": {
+    "char_offset": 280863,
+    "quote": "worth, man. All",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "man"
+   ],
+   "end": 11998,
+   "note": "transcript is missing 'man' inside a 24/24-word near-verbatim book match (tf-idf 0.49)",
+   "quoted": "worth. All",
+   "start": 11988,
+   "suspected": "worth, man. All"
+  },
+  {
+   "book_ref": {
+    "char_offset": 284023,
+    "quote": "deal, you know, who’s",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 15527,
+   "note": "transcript is missing 'you know' inside a 23/24-word near-verbatim book match (tf-idf 0.39)",
+   "quoted": "deal. Who's",
+   "start": 15516,
+   "suspected": "deal, you know, who’s"
+  },
+  {
+   "book_ref": {
+    "char_offset": 284256,
+    "quote": "but you know, I",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 15745,
+   "note": "transcript is missing 'you know' inside a 23/24-word near-verbatim book match (tf-idf 0.40)",
+   "quoted": "but I",
+   "start": 15740,
+   "suspected": "but you know, I"
+  },
+  {
+   "book_ref": {
+    "char_offset": 284762,
+    "quote": "life, you know, such",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 16244,
+   "note": "transcript is missing 'you know' inside a 15/15-word near-verbatim book match (tf-idf 0.29)",
+   "quoted": "life such",
+   "start": 16235,
+   "suspected": "life, you know, such"
+  },
+  {
+   "book_ref": {
+    "char_offset": 291269,
+    "quote": "have; otherwise it",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "otherwise"
+   ],
+   "end": 24293,
+   "note": "transcript is missing 'otherwise' inside a 22/22-word near-verbatim book match (tf-idf 0.57)",
+   "quoted": "have it",
+   "start": 24286,
+   "suspected": "have; otherwise it"
+  },
+  {
+   "book_ref": {
+    "char_offset": 302408,
+    "quote": "events, huh. The",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "huh"
+   ],
+   "end": 35815,
+   "note": "transcript is missing 'huh' inside a 24/24-word near-verbatim book match (tf-idf 0.47)",
+   "quoted": "events the",
+   "start": 35805,
+   "suspected": "events, huh. The"
+  },
+  {
+   "book_ref": {
+    "char_offset": 303800,
+    "quote": "Revelations. You know, when",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 37187,
+   "note": "transcript is missing 'you know' inside a 24/24-word near-verbatim book match (tf-idf 0.77)",
+   "quoted": "revelations when",
+   "start": 37171,
+   "suspected": "Revelations. You know, when"
+  },
+  {
+   "book_ref": {
+    "char_offset": 306629,
+    "quote": "universe!\n\nOkay. It",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "okay"
+   ],
+   "end": 39907,
+   "note": "transcript is missing 'okay' inside a 21/24-word near-verbatim book match (tf-idf 0.42)",
+   "quoted": "universe it",
+   "start": 39896,
+   "suspected": "universe!\n\nOkay. It"
+  },
+  {
+   "book_ref": {
+    "char_offset": 307559,
+    "quote": "States. One-third of the",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "one-third",
+    "of"
+   ],
+   "end": 40841,
+   "note": "transcript is missing 'one-third of' inside a 24/24-word near-verbatim book match (tf-idf 0.36)",
+   "quoted": "states the",
+   "start": 40831,
+   "suspected": "States. One-third of the"
+  },
+  {
+   "book_ref": {
+    "char_offset": 308821,
+    "quote": "up. Yeah. When",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "yeah"
+   ],
+   "end": 42075,
+   "note": "transcript is missing 'yeah' inside a 22/24-word near-verbatim book match (tf-idf 0.27)",
+   "quoted": "up when",
+   "start": 42068,
+   "suspected": "up. Yeah. When"
+  },
+  {
+   "book_ref": {
+    "char_offset": 309215,
+    "quote": "for earphones, so",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "earphones"
+   ],
+   "end": 42451,
+   "note": "transcript is missing 'earphones' inside a 23/23-word near-verbatim book match (tf-idf 0.43)",
+   "quoted": "for so",
+   "start": 42445,
+   "suspected": "for earphones, so"
+  },
+  {
+   "book_ref": {
+    "char_offset": 310544,
+    "quote": "hell, right? So",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "right"
+   ],
+   "end": 43714,
+   "note": "transcript is missing 'right' inside a 24/24-word near-verbatim book match (tf-idf 0.54)",
+   "quoted": "hell so",
+   "start": 43707,
+   "suspected": "hell, right? So"
+  },
+  {
+   "book_ref": {
+    "char_offset": 311427,
+    "quote": "recall, you know, what",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 44527,
+   "note": "transcript is missing 'you know' inside a 24/24-word near-verbatim book match (tf-idf 0.54)",
+   "quoted": "recall what",
+   "start": 44516,
+   "suspected": "recall, you know, what"
+  },
+  {
+   "book_ref": {
+    "char_offset": 313788,
+    "quote": "up, you know. It",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 46706,
+   "note": "transcript is missing 'you know' inside a 18/18-word near-verbatim book match (tf-idf 0.36)",
+   "quoted": "up it",
+   "start": 46701,
+   "suspected": "up, you know. It"
+  },
+  {
+   "book_ref": {
+    "char_offset": 313985,
+    "quote": "go the payoffs of",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "the",
+    "payoffs"
+   ],
+   "end": 46879,
+   "note": "transcript is missing 'the payoffs' inside a 22/24-word near-verbatim book match (tf-idf 0.45)",
+   "quoted": "go of",
+   "start": 46874,
+   "suspected": "go the payoffs of"
+  },
+  {
+   "book_ref": {
+    "char_offset": 315566,
+    "quote": "it, you know, in",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 48359,
+   "note": "transcript is missing 'you know' inside a 23/24-word near-verbatim book match (tf-idf 0.36)",
+   "quoted": "it in",
+   "start": 48354,
+   "suspected": "it, you know, in"
+  },
+  {
+   "book_ref": {
+    "char_offset": 315780,
+    "quote": "cabbage, right. Somebody",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "right"
+   ],
+   "end": 48563,
+   "note": "transcript is missing 'right' inside a 24/24-word near-verbatim book match (tf-idf 0.48)",
+   "quoted": "cabbage somebody",
+   "start": 48547,
+   "suspected": "cabbage, right. Somebody"
+  },
+  {
+   "book_ref": {
+    "char_offset": 317233,
+    "quote": "There’s, heh, one",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "heh"
+   ],
+   "end": 49860,
+   "note": "transcript is missing 'heh' inside a 23/23-word near-verbatim book match (tf-idf 0.46)",
+   "quoted": "there's one",
+   "start": 49849,
+   "suspected": "There’s, heh, one"
+  },
+  {
+   "book_ref": {
+    "char_offset": 318840,
+    "quote": "78\n\npercent. It",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "percent"
+   ],
+   "end": 51764,
+   "note": "transcript is missing 'percent' inside a 23/23-word near-verbatim book match (tf-idf 0.49)",
+   "quoted": "78% it",
+   "start": 51758,
+   "suspected": "78\n\npercent. It"
+  },
+  {
+   "book_ref": {
+    "char_offset": 326176,
+    "quote": "evolve go through",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "go"
+   ],
+   "end": 60979,
+   "note": "transcript is missing 'go' inside a 13/13-word near-verbatim book match (tf-idf 0.35)",
+   "quoted": "evolve through",
+   "start": 60965,
+   "suspected": "evolve go through"
+  },
+  {
+   "book_ref": {
+    "char_offset": 328421,
+    "quote": "level. You know you",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 63172,
+   "note": "transcript is missing 'you know' inside a 23/23-word near-verbatim book match (tf-idf 0.34)",
+   "quoted": "level you",
+   "start": 63163,
+   "suspected": "level. You know you"
+  },
+  {
+   "book_ref": {
+    "char_offset": 332353,
+    "quote": "reality, yeah. Just",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "yeah"
+   ],
+   "end": 67156,
+   "note": "transcript is missing 'yeah' inside a 23/24-word near-verbatim book match (tf-idf 0.53)",
+   "quoted": "reality just",
+   "start": 67144,
+   "suspected": "reality, yeah. Just"
+  },
+  {
+   "book_ref": {
+    "char_offset": 332807,
+    "quote": "pounds, or something. He",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "or",
+    "something"
+   ],
+   "end": 67597,
+   "note": "transcript is missing 'or something' inside a 19/20-word near-verbatim book match (tf-idf 0.49)",
+   "quoted": "pounds he",
+   "start": 67588,
+   "suspected": "pounds, or something. He"
+  },
+  {
+   "book_ref": {
+    "char_offset": 333794,
+    "quote": "potentiality. Wait until the",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "wait",
+    "until"
+   ],
+   "end": 68474,
+   "note": "transcript is missing 'wait until' inside a 23/24-word near-verbatim book match (tf-idf 0.57)",
+   "quoted": "potentiality the",
+   "start": 68458,
+   "suspected": "potentiality. Wait until the"
+  },
+  {
+   "book_ref": {
+    "char_offset": 341720,
+    "quote": "because it’s an",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "it's"
+   ],
+   "end": 76819,
+   "note": "transcript is missing \"it's\" inside a 22/24-word near-verbatim book match (tf-idf 0.56)",
+   "quoted": "because an",
+   "start": 76809,
+   "suspected": "because it’s an"
+  }
+ ],
+ "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 351970,
+    "quote": "what?\n\nHuh? Did",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "huh"
+   ],
+   "end": 4168,
+   "note": "transcript is missing 'huh' inside a 21/21-word near-verbatim book match (tf-idf 0.42)",
+   "quoted": "what did",
+   "start": 4160,
+   "suspected": "what?\n\nHuh? Did"
+  },
+  {
+   "book_ref": {
+    "char_offset": 353465,
+    "quote": "nature, huh? Like",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "huh"
+   ],
+   "end": 5664,
+   "note": "transcript is missing 'huh' inside a 24/24-word near-verbatim book match (tf-idf 0.30)",
+   "quoted": "nature like",
+   "start": 5653,
+   "suspected": "nature, huh? Like"
+  },
+  {
+   "book_ref": {
+    "char_offset": 361353,
+    "quote": "home. Right?\n\nA funny",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "right",
+    "a"
+   ],
+   "end": 13412,
+   "note": "transcript is missing 'right a' inside a 24/24-word near-verbatim book match (tf-idf 0.34)",
+   "quoted": "home funny",
+   "start": 13402,
+   "suspected": "home. Right?\n\nA funny"
+  },
+  {
+   "book_ref": {
+    "char_offset": 361748,
+    "quote": "which, you know, is",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 13765,
+   "note": "transcript is missing 'you know' inside a 21/23-word near-verbatim book match (tf-idf 0.35)",
+   "quoted": "which is",
+   "start": 13757,
+   "suspected": "which, you know, is"
+  },
+  {
+   "book_ref": {
+    "char_offset": 364856,
+    "quote": "46 Lincoln. I’ve",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "lincoln"
+   ],
+   "end": 16796,
+   "note": "transcript is missing 'lincoln' inside a 24/24-word near-verbatim book match (tf-idf 0.34)",
+   "quoted": "46 I've",
+   "start": 16789,
+   "suspected": "46 Lincoln. I’ve"
+  },
+  {
+   "book_ref": {
+    "char_offset": 365891,
+    "quote": "it already changes",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "already"
+   ],
+   "end": 17816,
+   "note": "transcript is missing 'already' inside a 21/24-word near-verbatim book match (tf-idf 0.32)",
+   "quoted": "it changes",
+   "start": 17806,
+   "suspected": "it already changes"
+  },
+  {
+   "book_ref": {
+    "char_offset": 368382,
+    "quote": "Napoleon Bonaparte, for",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "bonaparte"
+   ],
+   "end": 20592,
+   "note": "transcript is missing 'bonaparte' inside a 21/22-word near-verbatim book match (tf-idf 0.35)",
+   "quoted": "Napoleon, for",
+   "start": 20579,
+   "suspected": "Napoleon Bonaparte, for"
+  },
+  {
+   "book_ref": {
+    "char_offset": 372733,
+    "quote": "cases. You know, the",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 25448,
+   "note": "transcript is missing 'you know' inside a 24/24-word near-verbatim book match (tf-idf 0.41)",
+   "quoted": "cases. The",
+   "start": 25438,
+   "suspected": "cases. You know, the"
+  },
+  {
+   "book_ref": {
+    "char_offset": 381216,
+    "quote": "karmic, um, whatever",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "um"
+   ],
+   "end": 34871,
+   "note": "transcript is missing 'um' inside a 24/24-word near-verbatim book match (tf-idf 0.51)",
+   "quoted": "karmic... whatever",
+   "start": 34853,
+   "suspected": "karmic, um, whatever"
+  },
+  {
+   "book_ref": {
+    "char_offset": 382004,
+    "quote": "happens, you know. It’s",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 35655,
+   "note": "transcript is missing 'you know' inside a 16/17-word near-verbatim book match (tf-idf 0.26)",
+   "quoted": "happens. It's",
+   "start": 35642,
+   "suspected": "happens, you know. It’s"
+  },
+  {
+   "book_ref": {
+    "char_offset": 389505,
+    "quote": "hungry, since you",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "since"
+   ],
+   "end": 43081,
+   "note": "transcript is missing 'since' inside a 22/24-word near-verbatim book match (tf-idf 0.70)",
+   "quoted": "hungry. You",
+   "start": 43070,
+   "suspected": "hungry, since you"
+  },
+  {
+   "book_ref": {
+    "char_offset": 395599,
+    "quote": "persist, yeah? So",
+    "slug": "the_evolution_of_consciousness"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "yeah"
+   ],
+   "end": 49834,
+   "note": "transcript is missing 'yeah' inside a 24/24-word near-verbatim book match (tf-idf 0.37)",
+   "quoted": "persist. So",
+   "start": 49823,
+   "suspected": "persist, yeah? So"
+  }
+ ],
+ "Practical_Spirituality_Oct_2008_Part_1_enxautogen_html.txt": [],
+ "Practical_Spirituality_Oct_2008_Part_2_enxautogen_html.txt": [],
+ "Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt": [],
+ "Question_Answer_Session_Mar_2011_enxautogen_html.txt": [],
+ "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 218067,
+    "quote": "4 percent of",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "percent"
+   ],
+   "end": 6529,
+   "note": "transcript is missing 'percent' inside a 24/24-word near-verbatim book match (tf-idf 0.33)",
+   "quoted": "4% of",
+   "start": 6524,
+   "suspected": "4 percent of"
+  },
+  {
+   "book_ref": {
+    "char_offset": 291491,
+    "quote": "death, you know. If",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 15395,
+   "note": "transcript is missing 'you know' inside a 24/24-word near-verbatim book match (tf-idf 0.46)",
+   "quoted": "death. If",
+   "start": 15386,
+   "suspected": "death, you know. If"
+  },
+  {
+   "book_ref": {
+    "char_offset": 295840,
+    "quote": "face the nitty-gritty, the",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "the",
+    "nitty-gritty"
+   ],
+   "end": 20466,
+   "note": "transcript is missing 'the nitty-gritty' inside a 23/24-word near-verbatim book match (tf-idf 0.63)",
+   "quoted": "face the",
+   "start": 20458,
+   "suspected": "face the nitty-gritty, the"
+  },
+  {
+   "book_ref": {
+    "char_offset": 314506,
+    "quote": "God. Yeah? Is",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "yeah"
+   ],
+   "end": 42091,
+   "note": "transcript is missing 'yeah' inside a 24/24-word near-verbatim book match (tf-idf 0.48)",
+   "quoted": "God. Is",
+   "start": 42084,
+   "suspected": "God. Yeah? Is"
+  },
+  {
+   "book_ref": {
+    "char_offset": 321728,
+    "quote": "killed, haha, and",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "haha"
+   ],
+   "end": 49608,
+   "note": "transcript is missing 'haha' inside a 23/24-word near-verbatim book match (tf-idf 0.31)",
+   "quoted": "killed. And",
+   "start": 49597,
+   "suspected": "killed, haha, and"
+  }
+ ],
+ "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 331794,
+    "quote": "78 percent of",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "percent"
+   ],
+   "end": 3831,
+   "note": "transcript is missing 'percent' inside a 23/23-word near-verbatim book match (tf-idf 0.42)",
+   "quoted": "78% of",
+   "start": 3825,
+   "suspected": "78 percent of"
+  },
+  {
+   "book_ref": {
+    "char_offset": 337723,
+    "quote": "So it’s just",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "it's"
+   ],
+   "end": 10280,
+   "note": "transcript is missing \"it's\" inside a 23/24-word near-verbatim book match (tf-idf 0.46)",
+   "quoted": "So just",
+   "start": 10273,
+   "suspected": "So it’s just"
+  },
+  {
+   "book_ref": {
+    "char_offset": 355901,
+    "quote": "up, huh.\n\nIf",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "huh"
+   ],
+   "end": 29401,
+   "note": "transcript is missing 'huh' inside a 24/24-word near-verbatim book match (tf-idf 0.47)",
+   "quoted": "up. If",
+   "start": 29395,
+   "suspected": "up, huh.\n\nIf"
+  },
+  {
+   "book_ref": {
+    "char_offset": 361684,
+    "quote": "the pea . . . you can",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "pea",
+    "you"
+   ],
+   "end": 35359,
+   "note": "transcript is missing 'pea you' inside a 23/24-word near-verbatim book match (tf-idf 0.42)",
+   "quoted": "the, can",
+   "start": 35351,
+   "suspected": "the pea . . . you can"
+  }
+ ],
+ "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 376592,
+    "quote": "conditions. You understand? Is",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "understand"
+   ],
+   "end": 626,
+   "note": "transcript is missing 'you understand' inside a 21/21-word near-verbatim book match (tf-idf 0.53)",
+   "quoted": "conditions. Is",
+   "start": 612,
+   "suspected": "conditions. You understand? Is"
+  },
+  {
+   "book_ref": {
+    "char_offset": 376828,
+    "quote": "101 percent radiating",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "percent"
+   ],
+   "end": 852,
+   "note": "transcript is missing 'percent' inside a 23/24-word near-verbatim book match (tf-idf 0.57)",
+   "quoted": "101% radiating",
+   "start": 838,
+   "suspected": "101 percent radiating"
+  },
+  {
+   "book_ref": {
+    "char_offset": 377137,
+    "quote": "100 percent the",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "percent"
+   ],
+   "end": 1141,
+   "note": "transcript is missing 'percent' inside a 24/24-word near-verbatim book match (tf-idf 0.55)",
+   "quoted": "100%, the",
+   "start": 1132,
+   "suspected": "100 percent the"
+  },
+  {
+   "book_ref": {
+    "char_offset": 377197,
+    "quote": "moment, right? It’s",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "right"
+   ],
+   "end": 1198,
+   "note": "transcript is missing 'right' inside a 24/24-word near-verbatim book match (tf-idf 0.55)",
+   "quoted": "moment. It's",
+   "start": 1186,
+   "suspected": "moment, right? It’s"
+  },
+  {
+   "book_ref": {
+    "char_offset": 409325,
+    "quote": "Muhammad I’ve repeatedly",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "i've"
+   ],
+   "end": 38361,
+   "note": "transcript is missing \"i've\" inside a 24/24-word near-verbatim book match (tf-idf 0.38)",
+   "quoted": "Muhammad repeatedly",
+   "start": 38342,
+   "suspected": "Muhammad I’ve repeatedly"
+  },
+  {
+   "book_ref": {
+    "char_offset": 410335,
+    "quote": "the actions, collective",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "actions"
+   ],
+   "end": 39345,
+   "note": "transcript is missing 'actions' inside a 21/22-word near-verbatim book match (tf-idf 0.44)",
+   "quoted": "the collective",
+   "start": 39331,
+   "suspected": "the actions, collective"
+  },
+  {
+   "book_ref": {
+    "char_offset": 411971,
+    "quote": "again. Well anyway",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "well"
+   ],
+   "end": 40893,
+   "note": "transcript is missing 'well' inside a 22/22-word near-verbatim book match (tf-idf 0.47)",
+   "quoted": "again. Anyway",
+   "start": 40880,
+   "suspected": "again. Well anyway"
+  },
+  {
+   "book_ref": {
+    "char_offset": 420049,
+    "quote": "is undoubtedly probably",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "undoubtedly"
+   ],
+   "end": 49117,
+   "note": "transcript is missing 'undoubtedly' inside a 23/24-word near-verbatim book match (tf-idf 0.24)",
+   "quoted": "is probably",
+   "start": 49106,
+   "suspected": "is undoubtedly probably"
+  },
+  {
+   "book_ref": {
+    "char_offset": 420394,
+    "quote": "this particular consciousness here",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "particular",
+    "consciousness"
+   ],
+   "end": 49424,
+   "note": "transcript is missing 'particular consciousness' inside a 24/24-word near-verbatim book match (tf-idf 0.40)",
+   "quoted": "this here",
+   "start": 49415,
+   "suspected": "this particular consciousness here"
+  },
+  {
+   "book_ref": {
+    "char_offset": 423800,
+    "quote": "shovel, you know. With",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "you",
+    "know"
+   ],
+   "end": 52659,
+   "note": "transcript is missing 'you know' inside a 24/24-word near-verbatim book match (tf-idf 0.50)",
+   "quoted": "shovel. With",
+   "start": 52647,
+   "suspected": "shovel, you know. With"
+  },
+  {
+   "book_ref": {
+    "char_offset": 424578,
+    "quote": "greedy, and many people",
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "and",
+    "many"
+   ],
+   "end": 53332,
+   "note": "transcript is missing 'and many' inside a 24/24-word near-verbatim book match (tf-idf 0.37)",
+   "quoted": "greedy. People",
+   "start": 53318,
+   "suspected": "greedy, and many people"
+  }
+ ],
+ "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_1_enxautogen_html.txt": [],
+ "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_3_enxautogen_html.txt": [],
+ "Realization_of_the_Self_as_the_I_Nov_2003_Part_1_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 32219,
+    "quote": "consciousness of people on",
+    "slug": "reality_spirituality_and_mode"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "of",
+    "people"
+   ],
+   "end": 51176,
+   "note": "transcript is missing 'of people' inside a 11/11-word near-verbatim book match (tf-idf 0.21)",
+   "quoted": "consciousness on",
+   "start": 51160,
+   "suspected": "consciousness of people on"
+  }
+ ],
+ "Realization_of_the_Self_as_the_I_Nov_2003_Part_2_enxautogen_html.txt": [],
+ "Realization_of_the_Self_as_the_I_Nov_2003_Part_3_enxautogen_html.txt": [],
+ "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_1_enxautogen_html.txt": [],
+ "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_2_enxautogen_html.txt": [],
+ "Relativism_vs_Reality_Apr_2007_Part_1_enxautogen_html.txt": [],
+ "Relativism_vs_Reality_Apr_2007_Part_2_enxautogen_html.txt": [],
+ "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_III_Part_1_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_III_Part_2_enxautogen_html.txt": []
+}

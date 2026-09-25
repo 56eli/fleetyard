@@ -31,3 +31,9 @@ Retired from attention; not quoted further.
 SOURCE file; deployed fleet/ERRATA-2026-09-25c.md (sha256 7384a608…) is the instrument
 OF RECORD and the authoritative hash. Manifest reconciliation deferred to 2.0.1; no file
 edits (freeze extends to the manifest; changes ride errata).
+2026-09-25T19:1xZ WORKER-2: M4-q2 — C1-drop detector built (tools/det_dropword.py,
+self-test + 8 tests green; holdout-refusal enforced). Tuning run: 193 transcripts in
+6 bounded shards (LAW §4A) -> 122 CANDIDATE-class raw signals; merge provenance
+recorded. Hand-read sample: 4 confirmed omissions kept as provisional fixtures
+fixtures/v2/dropword.json (D2-001..004, byte-bound), 5 parked/discarded. Classification
+BLOCKED on proposed STANDARDS leg (d) (needs errata + BOSS CONCERN). No rates.
