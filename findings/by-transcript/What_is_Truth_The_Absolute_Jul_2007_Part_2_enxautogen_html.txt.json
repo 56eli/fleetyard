@@ -74,7 +74,7 @@
   },
   "span_text": "neutrality at 200",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Neutrality 250",
   "suspected_intended_status": "from runner signal (B1-contradiction); not gate-verified — human read required",
   "transcript": "What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html.txt"
@@ -156,7 +156,7 @@
   },
   "span_text": "know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "know. I don't",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html.txt"
@@ -230,7 +230,7 @@
   },
   "span_text": "certainlyципl",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": null,
   "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html.txt"
@@ -310,7 +310,7 @@
   },
   "span_text": "I saw the end of that. I saw the end of that. I saw the end of that",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "I saw the end of that.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html.txt"
@@ -392,7 +392,7 @@
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Yeah.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html.txt"
@@ -474,7 +474,7 @@
   },
   "span_text": "Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God. Oh, my God.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Oh, my God.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html.txt"
@@ -554,7 +554,7 @@
   },
   "span_text": "thank you so much. Thank you so much. Thank you so much,",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "thank you so much.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html.txt"

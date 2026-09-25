@@ -79,3 +79,29 @@ B1 12/12 · B2 228/228 — 0 flagged.** Everything else unchanged (1,334 finding
 CERTAIN-inherited 3 / HIGH 0 / CANDIDATE 1,331; seeded 3/1,331; 242/242 book quotes
 byte-exact; 0 citation failures). New ledger sha256 `64977c2f…` in
 `findings/PROVENANCE.json`.
+
+## Errata #3 (append-only) — 2026-09-25T19:2xZ · TASK-016 repair (ORCH-2 gate FAIL→repair)
+
+ORCH-2 gated TASK-013 at head `aed9df6` and returned **FAIL / INCOMPLETE** on three
+criteria (C6 finding-record shape, C7 coverage truth, C8 LAW §8 manifest); the other
+ten PASSed on independent reproduction. Repair delivered under the scoped PAUSE
+control (`fleet/controls/PAUSE-WORKER-A-2026-09-25-001`), per TASK-016:
+
+- **R1 record shape:** every finding now carries `suspected_intended` +
+  `suspected_intended_status` (present-and-explicit `null` for the 157 A2-nonsense
+  spans: "not proposable mechanically; human read required") and STANDARDS
+  `status: open` + `status_by` ("machine-adjudicated by tools/m5r_reduce.py@<commit>;
+  human confirmation required"). No class changed: CERTAIN 3 / HIGH 0 / CANDIDATE
+  1,331; seeded 3.
+- **R2 coverage truth:** explicit row in `findings/SUMMARY.md` §0 and
+  `findings/README.md`: `transcripts 230 | detector-run 230 | machine-adjudicated 230 |
+  human finding-pass audited 0 | pending human review 230 | zero-finding transcripts
+  24 (not shown clean)`; titles qualified ("reviewed" = machine-adjudicated).
+- **R3 manifest:** `findings/PROVENANCE.json` binds `tool_commit` (reachable lane
+  commit carrying this exact tool file: `dada3e60…`, this repair commit), `policy_sha256`,
+  `main_head`, `book_store.sha256` (`c0892fcd…`), the inherited census's
+  `detector_tool_commit` (`7b8863d`) + detector set, and a written derivation for every
+  digest — including the `overlays_digest` wording trap (sorting the resulting lines
+  gives `58274f46…`; the implemented sort-by-basename gives `027f82a0…`, which is the
+  correct, reproducible value).
+- No detector logic changed in this repair; **three tests added (23 → 26, all green)**.

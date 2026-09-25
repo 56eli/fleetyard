@@ -76,7 +76,7 @@
   },
   "span_text": "Ha, ha, ha, ha, ha, ha. Ha, ha, ha.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Ha,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Peace_Aug_2009_Part_2_enxautogen_html.txt"
@@ -156,7 +156,7 @@
   },
   "span_text": "We try our best to be perfect. We try our best to be perfect. We try our best to be perfect. We try our best to be perfect.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "We try our best to be perfect.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Peace_Aug_2009_Part_2_enxautogen_html.txt"

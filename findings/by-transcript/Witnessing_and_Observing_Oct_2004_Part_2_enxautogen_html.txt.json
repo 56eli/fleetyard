@@ -74,7 +74,7 @@
   },
   "span_text": "and they, when I was a kid, and they, when I was a kid, and they, when I was a kid,",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "and they, when I was a kid,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt"
@@ -160,7 +160,7 @@
   },
   "span_text": "999%",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": null,
   "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt"
@@ -249,7 +249,7 @@
   },
   "span_text": "98%",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "89%",
   "suspected_intended_status": "from runner signal (B1-contradiction); not gate-verified — human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt"
@@ -335,7 +335,7 @@
   },
   "span_text": "200%",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": null,
   "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt"
@@ -424,7 +424,7 @@
   },
   "span_text": "50%",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "4%",
   "suspected_intended_status": "from runner signal (B1-contradiction); not gate-verified — human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt"

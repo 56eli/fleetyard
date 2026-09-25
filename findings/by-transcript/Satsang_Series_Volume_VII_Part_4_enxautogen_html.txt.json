@@ -76,7 +76,7 @@
   },
   "span_text": "Hey, hey, hey. Hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Hey,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
@@ -158,7 +158,7 @@
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Yeah.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
@@ -240,7 +240,7 @@
   },
   "span_text": "Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Krishna",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
@@ -322,7 +322,7 @@
   },
   "span_text": "over and over and over and over and over and over and over and over and",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "over and",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
@@ -396,7 +396,7 @@
   },
   "span_text": "Fallenירs",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": null,
   "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
@@ -478,7 +478,7 @@
   },
   "span_text": "oh Lord. Thank you, oh Lord. Thank you, oh Lord. Thank you, oh Lord. Thank you, oh Lord. Thank you",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "oh Lord. Thank you,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
@@ -558,7 +558,7 @@
   },
   "span_text": "Hooray for us. We're one to us. Hooray for us. We're one to us. Hooray for us. We're one to us.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Hooray for us. We're one to us.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"

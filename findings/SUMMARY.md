@@ -1,6 +1,6 @@
 # M5-R — reviewed findings ledger (SUMMARY)
 
-> **Titles qualified (TASK-016 R2):** "reviewed" here means **machine-adjudicated against cited bytes** — this is a machine reduction of the raw census, not a human finding pass. Read every count below with the coverage row immediately following.
+> **Titles qualified (TASK-016 R2):** "reviewed" here means **machine-adjudicated against cited bytes** — this is a machine-adjudicated reduction of the raw census, not a human finding pass. Read every count below with the coverage row immediately following.
 
 **Reduction of the inherited M5 raw census (TASK-011, lane `arena/01a0d581-fleetyard` @ `bf97d85`) into findings with evidence.**
 
@@ -106,7 +106,7 @@ Seeded / independent split (LAW §9): **seeded (fixture-overlap, in-sample) = 3*
 
 ## 10. Mechanical corroboration of the runner's own claims
 
-Each raw signal's evidence string was re-derived from the bytes where a mechanical check exists (LAW §7: identical output alone is not suspicion — missing fresh evidence is; this is that fresh evidence). 'not corroborated' means this tool's re-derivation did not reproduce the runner's claim string: it is a **review flag**, not a verdict — it can reflect the claim's shape or this tool's simpler tokenizer/percent handling. Those findings score +1 in the review queue.
+Each raw signal's evidence string was re-derived from the bytes where a mechanical check exists (LAW §7: identical output alone is not suspicion — missing fresh evidence is; this is that fresh evidence). After errata #2 (M4-q5: Unicode tokenizer + unit bound 16) every checkable claim corroborates; a 'not corroborated' row would be a **review flag**, not a verdict.
 
 | detector | signals | corroborated | failed | not machine-checkable |
 |---|---|---|---|---|
@@ -123,4 +123,4 @@ Review queue: `REVIEW-QUEUE.md` (top 100 by mechanical score; the score is an or
 - Detectors that produced the raw census: A1-repetition, A2-nonsense, B1-contradiction, B2-misquote. A4-confusion, drop-word and speaker/format were not run (unmeasured, not zero).
 - Provenance: see `PROVENANCE.json` (inputs pinned by sha256; corpus digest method defined explicitly, unlike the inherited run's).
 
-_Generated 2026-09-25T19:16:57Z by `tools/m5r_reduce.py` (2f59fbeb1c936745)._
+_Generated 2026-09-25T19:17:57Z by `tools/m5r_reduce.py` (6d4bb9ce78f2964e)._

@@ -76,7 +76,7 @@
   },
   "span_text": "from here, from here, from here, from here, from here.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "from here,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_2_enxautogen_html.txt"
@@ -156,7 +156,7 @@
   },
   "span_text": "was the temple of Jesus and Jesus was the temple of Jesus and Jesus was the temple of Jesus and Jesus was the temple of Jesus and Jesus",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "was the temple of Jesus and Jesus",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_2_enxautogen_html.txt"
@@ -236,7 +236,7 @@
   },
   "span_text": "and all energy being in the self... and all energy being in the self... And all energy being in the self,",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "and all energy being in the self...",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_2_enxautogen_html.txt"
@@ -316,7 +316,7 @@
   },
   "span_text": "and all energy being in the self, and all energy being in the self, and all energy being in the self,",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "and all energy being in the self,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_2_enxautogen_html.txt"
@@ -398,7 +398,7 @@
   },
   "span_text": "Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Amen.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_2_enxautogen_html.txt"

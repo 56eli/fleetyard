@@ -76,7 +76,7 @@
   },
   "span_text": "Do not intubate. Do not intubate. Do not intubate. Do not intubate. Do not intubate.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Do not intubate.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt"
@@ -156,7 +156,7 @@
   },
   "span_text": "I need your arm. I need your arm. I need your arm.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "I need your arm.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt"
@@ -236,7 +236,7 @@
   },
   "span_text": "It's not the millions. It's not the millions. It's not the millions,",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "It's not the millions.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt"
@@ -318,7 +318,7 @@
   },
   "span_text": "She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "She's over 300.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt"
@@ -400,7 +400,7 @@
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Thank you.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt"
@@ -482,7 +482,7 @@
   },
   "span_text": "Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Amadeva.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt"
@@ -556,7 +556,7 @@
   },
   "span_text": "Amadeva祂",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": null,
   "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt"
@@ -638,7 +638,7 @@
   },
   "span_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "I don't know.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt"
@@ -720,7 +720,7 @@
   },
   "span_text": "Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Hi.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt"
@@ -802,7 +802,7 @@
   },
   "span_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Yes.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt"

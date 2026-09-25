@@ -40,13 +40,13 @@
  },
  "main_head": "25bdab98200074ea89c22944188e948d8b748be2",
  "outputs": {
-  "by_transcript_digest": "a5eed6155a2d0552e4eaa102136d5eb31a78ebb405881ef8e1de8ef6944d28ac",
+  "by_transcript_digest": "c1ec4da86a6ce4f43bb9f5a4da8677e28c2f9e3d781e6409c4a0d84ab06174af",
   "by_transcript_files": 230,
   "findings": 1334,
-  "ledger.jsonl": "10f5a99867a3d2763fd9a9fe8baf250b52e2786d6624a318da7a49933f49ffd0"
+  "ledger.jsonl": "d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32"
  },
  "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
- "run_utc": "2026-09-25T19:16:57Z",
+ "run_utc": "2026-09-25T19:17:57Z",
  "stats": {
   "book_refs": 242,
   "book_refs_bad": 0,
@@ -80,11 +80,12 @@
    }
   },
   "coverage": {
-   "detector_run": 206,
+   "detector_run": 230,
    "human_finding_pass_audited": 0,
    "machine_adjudicated": 230,
    "pending_human_review": 230,
    "transcripts": 230,
+   "with_findings": 206,
    "zero_finding_transcripts": 24
   },
   "duplicates_removed": 0,
@@ -102,6 +103,6 @@
   "transcripts_with_findings": 206
  },
  "tool": "tools/m5r_reduce.py",
- "tool_commit": "2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1",
- "tool_sha256": "2f59fbeb1c93674596b44223f740c945c05302c7dba16185f73669ec85991961"
+ "tool_commit": "dada3e602689cb900971fda0dccce8267f31a2b2",
+ "tool_sha256": "6d4bb9ce78f2964efeb74cae0855ab63234f3c34966e57d0cdcae726a749574d"
 }

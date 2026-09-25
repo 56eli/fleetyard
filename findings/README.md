@@ -17,6 +17,16 @@ over 230 transcripts — into findings with their evidence attached.
 | `REVIEW-QUEUE.md` | top 100 by a **mechanical** review score (ordering aid only — never a class) |
 | `PROVENANCE.json` | LAW §8 run manifest: every input pinned by sha256, tool sha, output digests, stats |
 
+## Coverage truth (STANDARDS honesty rule; the campaign row since v1)
+
+`transcripts 230 | detector-run 230 | machine-adjudicated 230 | human finding-pass
+audited 0 | pending human review 230 | zero-finding transcripts 24 (not shown clean)`
+
+“Reviewed” in this ledger means **machine-adjudicated against cited bytes** — a
+machine-adjudicated reduction of the raw census, not a human finding pass. No human
+has yet read all 1,334 findings, and the 24 zero-finding transcripts are not “clean”,
+they are unmeasured by several detectors.
+
 ## What “reviewed” means here — and what it does not
 
 Every finding is **machine-adjudicated against cited bytes**:

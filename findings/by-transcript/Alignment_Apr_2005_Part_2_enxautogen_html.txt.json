@@ -76,7 +76,7 @@
   },
   "span_text": "It's like, it's like, it's like, it's like, it's like, it's like, it's like, it's like,",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "It's like,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
@@ -156,7 +156,7 @@
   },
   "span_text": "the emotional part of it is, you know, the emotional part of it is, you know, the emotional part of it is, you know,",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "the emotional part of it is, you know,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
@@ -236,7 +236,7 @@
   },
   "span_text": "This is causing this, this is causing this, this is causing this.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "This is causing this,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
@@ -318,7 +318,7 @@
   },
   "span_text": "all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "all desire and want",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
@@ -400,7 +400,7 @@
   },
   "span_text": "All right. All right. All right. All right. All right. All right. All right.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "All right.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
@@ -482,7 +482,7 @@
   },
   "span_text": "It would be like picking yourself up in the desert. It would be like picking yourself up in the desert. It would be like picking yourself up in the desert. It would be like picking yourself up in the desert. It would be like picking yourself up in the desert.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "It would be like picking yourself up in the desert.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
@@ -564,7 +564,7 @@
   },
   "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "Okay.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"

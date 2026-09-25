@@ -76,7 +76,7 @@
   },
   "span_text": "it's not the truth. It's not the truth. It's not the truth. It's not the truth. It's not the truth. It's not the truth. It's not the truth. It's not the truth. It's not the truth.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "it's not the truth.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.txt"
@@ -156,7 +156,7 @@
   },
   "span_text": "The style of the language. The style of the language. The style of the language. The style of the language.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "The style of the language.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.txt"
@@ -236,7 +236,7 @@
   },
   "span_text": "inside",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "innate",
   "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.txt"
@@ -321,7 +321,7 @@
   },
   "span_text": "it really",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "merely",
   "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.txt"

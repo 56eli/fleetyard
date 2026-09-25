@@ -74,7 +74,7 @@
   },
   "span_text": "for instance let's say for instance let's say for instance let's say",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "for instance let's say",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html.txt"
@@ -156,7 +156,7 @@
   },
   "span_text": "and the hypotheticals and the hypotheticals and the hypotheticals and the hypotheticals and the hypotheticals",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "and the hypotheticals",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html.txt"
@@ -230,7 +230,7 @@
   },
   "span_text": "a같y",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": null,
   "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html.txt"
@@ -312,7 +312,7 @@
   },
   "span_text": "That's very good. That's very good. That's very good. That's very good. That's very good. That's very good. That's very good. That's very good.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "That's very good.",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html.txt"

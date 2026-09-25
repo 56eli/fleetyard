@@ -80,7 +80,7 @@
   },
   "span_text": "6,000%",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": null,
   "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_1_enxautogen_html.txt"
@@ -160,7 +160,7 @@
   },
   "span_text": "lovingness then becomes the new context in which... That lovingness then becomes the new context in which... That lovingness then becomes the new context in which... That",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "lovingness then becomes the new context in which... That",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_1_enxautogen_html.txt"

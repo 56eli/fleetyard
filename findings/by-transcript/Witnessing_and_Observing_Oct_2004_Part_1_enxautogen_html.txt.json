@@ -84,7 +84,7 @@
   },
   "span_text": "it really extinguishes",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "it extinguishes",
   "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt"
@@ -164,7 +164,7 @@
   },
   "span_text": "this fish comes up here, this fish comes up here, this fish comes up here,",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "this fish comes up here,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt"
@@ -244,7 +244,7 @@
   },
   "span_text": "died he fell himself down and then he died he fell himself down and then he died he fell himself down and then he died he fell himself down and then he",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "died he fell himself down and then he",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt"
@@ -318,7 +318,7 @@
   },
   "span_text": "か",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": null,
   "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt"
@@ -398,7 +398,7 @@
   },
   "span_text": "unmanifest becomes manifest so the universe evolved unmanifest becomes manifest so the universe evolved unmanifest becomes manifest so the universe evolved",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "unmanifest becomes manifest so the universe evolved",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt"
@@ -478,7 +478,7 @@
   },
   "span_text": "we were in Toronto, we were in Toronto. We were in Toronto.",
   "status": "open",
-  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@dada3e602689cb900971fda0dccce8267f31a2b2; human confirmation required",
   "suspected_intended": "we were in Toronto,",
   "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt"
