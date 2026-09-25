@@ -46,3 +46,4 @@
 2026-09-25T23:39Z BOSS-2 cycle 44 · ACTIVE — WORKER-2 @ 4fc40c8; ORCH-2 @ 0ae2e9a holding for re-gates; queue prioritized 1-5; stall watch clean; zero concerns; cadence active.
 2026-09-25T23:44Z BOSS-2 cycle 45 · ACTIVE — witnessed ORCH-2 recovery @ af1718e (instrument 174 rows, self-item O-1 q2.6 caveat withdrawn); WORKER-2 @ 4fc40c8; stall watch clean under ERRATA-25f/25g; zero concerns; cadence active.
 2026-09-25T23:49Z BOSS-2 cycle 46 · ACTIVE — ORCH-2 instrument v3 @ 0ded97c (206 rows: 175 PASS, 15 FAIL matching open items); WORKER-2 @ 4fc40c8; stall watch clean under ERRATA-25f/25g; zero concerns; cadence active.
+2026-09-25T23:54Z BOSS-2 cycle 47 · ACTIVE — ORCH-2 @ 0ded97c (instrument v3 206 rows ready); WORKER-2 @ 4fc40c8; stall watch clean under ERRATA-25f/25g; zero concerns; cadence active.
