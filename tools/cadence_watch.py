@@ -52,8 +52,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--interval", type=int, default=300)
     ap.add_argument("--cycles", type=int, default=0)
+    ap.add_argument("--commit", action="store_true",
+                    help="commit+push the two log files each cycle (durable steps)")
     a = ap.parse_args()
     n = 0
+    last = None
     while True:
         n += 1
         subprocess.run(["git", "fetch", "-q", "origin",
@@ -72,6 +75,10 @@ def main():
                       for l in pause_txt.splitlines())
         q = sh(["git", "ls-tree", "-r", "--name-only", ORCH_LANE, "fleet/queue/"])
         pend = sorted(l.split("/")[-1] for l in q.splitlines() if "/pending/" in l and l.endswith(".md"))
+        gates_tail = sh(["git", "show", "%s:fleet/GATES.md" % ORCH_LANE]).splitlines()
+        gates_sig = sum(1 for l in gates_tail if l.startswith("## 2026-"))
+        status_tail = sh(["git", "show", "%s:fleet/queue/status.md" % ORCH_LANE])
+        status_sig = len(status_tail)
         fact = ("cadence: main %s, orch2 %s, boss2 %s, pause %s, pending %d%s"
                 % (main, orch, boss, "REMOVED" if removed else ("present" if paused else "absent"),
                    len(pend), (" [" + ",".join(pend[:4]) + "]") if pend else ""))
@@ -81,9 +88,41 @@ def main():
         with open(CONTROL, "a", encoding="utf-8") as fh:
             fh.write("%s|%s|A-2026-09-25-001|%s|%d|OK|%s\n"
                      % (utc(), main, REGISTRY_SHA, next_seq(), fact))
+        signals = []
+        pause_state = "REMOVED" if removed else ("present" if paused else "absent")
+        now = (orch, tuple(pend), gates_sig, status_sig, main, boss, pause_state)
+        if last is not None and now != last:
+            if now[0] != last[0]:
+                signals.append("ORCH-2 lane head moved %s -> %s (read the new GATES/queue)"
+                               % (last[0], now[0]))
+            if now[1] != last[1]:
+                signals.append("queue changed: %s" % (sorted(set(now[1]) ^ set(last[1])),))
+            if now[2] != last[2]:
+                signals.append("GATES.md gained entries (%d -> %d)" % (last[2], now[2]))
+            if now[3] != last[3]:
+                signals.append("queue/status.md grew (%d -> %d bytes)" % (last[3], now[3]))
+            if now[4] != last[4]:
+                signals.append("main moved %s -> %s" % (last[4], now[4]))
+            if now[5] != last[5]:
+                signals.append("BOSS-2 lane moved %s -> %s" % (last[5], now[5]))
+            if now[6] != last[6]:
+                signals.append("PAUSE control state changed %s -> %s" % (last[6], now[6]))
+        last = now
         print("[%s] %s" % (utc(), fact), flush=True)
-        if (not paused) or removed:
-            print("WORK ORDER SIGNAL: pause absent/removed on the ORCH-2 lane", flush=True)
+        for sig in signals:
+            print("WORK ORDER SIGNAL: %s" % sig, flush=True)
+        if a.commit:
+            subprocess.run(["git", "add", "fleet/CONTROL.log", "fleet/heartbeats/WORKER.log"],
+                           cwd=ROOT, capture_output=True, text=True)
+            r = subprocess.run(["git", "commit", "-q", "-m",
+                                "cadence check %d (auto): %s" % (n, fact)],
+                               cwd=ROOT, capture_output=True, text=True)
+            if r.returncode == 0:
+                subprocess.run(["git", "push", "-q", "origin",
+                                "arena/01a0d9ce-fleetyard"], cwd=ROOT, capture_output=True)
+        if signals:
+            print("STOPPING WATCH: work-order signal(s) present", flush=True)
+            return 0
         if a.cycles and n >= a.cycles:
             return 0
         time.sleep(a.interval)
