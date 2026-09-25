@@ -2,7 +2,7 @@
 
 updated: 2026-09-25T10:24:11Z
 boss lane: arena/01a0d585-fleetyard
-STATUS: **RESUMED at cycle 8/16** — the capability cut is over. GitHub auth restored
+STATUS: **ENDED BY OWNER ORDER at cycle 10/16** — `fleet/HALT-2026-09-25.md` on main @ `c29d8a9`, effective 2026-09-25T13:22:49Z. All v1 authority expires; this lane is frozen at `4ed8df6`+ack and becomes a read-only archive. Cycles 10-16 not used: an owner halt outranks a cycle budget. GitHub auth restored
 (`git ls-remote origin HEAD` -> 3900071; `gh auth status` -> logged in as
 arena-ai-coding-agent[bot]). Fetch re-established with explicit refspecs per CANON 11 BEFORE
 any sha below was quoted, The lane table below is freshly verified at 2026-09-25T10:21:18Z.
@@ -14,8 +14,8 @@ ALERT TRANSPORT (owner ruling 2026-09-25): repo-level GitHub->Discord webhook; t
 HEADLINE is the alarm (JJJ voice), the commit body and fleet/alerts/ALERTS.md carry the sober
 payload, LOG.md stays sober, work commits stay dry. Direct-webhook channel retired (0/4 ever
 delivered, discord.com TLS-blocked).
-cycles used: 9/16 · pill fleet/controls/STOP-BOSS: ABSENT all 9 cycles
-STATUS NOW: **THE FLEET IS ALIVE AGAIN** and BOSS's cycle-8 "fleet is cold, handoff" verdict was WRONG — overtaken within roughly an hour. Both production lanes are pushing. M5 has been delivered, independently gated and independently verified by BOSS with ZERO discrepancies. This is the third BOSS verdict corrected by events (see LOG).
+cycles used: 10/16 (halt) · pill fleet/controls/STOP-BOSS: ABSENT all 10 cycles — the exit is the HALT, not the pill
+STATUS AT FREEZE: **the fleet was alive again** and BOSS's cycle-8 "fleet is cold, handoff" verdict was WRONG — overtaken within roughly an hour. Both production lanes are pushing. M5 has been delivered, independently gated and independently verified by BOSS with ZERO discrepancies. This is the third BOSS verdict corrected by events (see LOG).
 owner ruling in force: Discord alert voice = JJJ persona, payload inside the voice, git records sober/verbatim, one alert per class per 20 min.
 DISCORD: 0 of 4 composed alerts ever delivered — egress TLS-blocked (HTTP 000 / SSL_ERROR_SYSCALL to discord.com:443). Texts preserved in fleet/LOG.md.
 
@@ -34,7 +34,7 @@ Re-verified by explicit-refspec fetch at 2026-09-25T10:24:11Z (CANON 11 — no s
 - M3 detector family B — B1/B2 delivered, NOT certified; terminology drift + book-attribution unimplemented
 - M4 self-improvement — NOT STARTED
 - M5 full-corpus sweep — **DELIVERED @ 0923265, gated PASS @ 5bad887, BOSS-VERIFIED with ZERO discrepancies.** 230/230 transcripts detector-run, 1334 raw records, all tallies reproduce exactly, 25/25 sampled citations byte-exact, overlays_sha256 reproduced, 0 of 1334 records cite a NON_HAWKINS slug. **NOT CERTIFIED** — 0/230 finding-pass audited, no precision figure exists, and that is stated honestly in the INDEX. Coverage truth: 230 detector-run / 0 audited / 230 pending review.
-- M6 the report — TASK-012 **CLAIMED @ 663d05a (10:17:25Z), in flight**; still no reports/ on any lane. Interim answer published @ 577c9c5 at explicitly zero reviewed coverage.
+- M6 the report — **DELIVERED @ 90077b4** (`reports/CORPUS-AUDIT.md`, 187 lines, renderer `tools/report_m6.py` @ 5bf8e42), **BOSS-VERIFIED with ZERO discrepancies**: 2,607,819 corpus words exact, 17,928 hand-read words exact, 0.69% exact, 8.9/11.7 per 10k exact, 206/230 signal-bearing transcripts exact, 3/16 detector overlap exact (CF-003/CF-006/CF-015), 5/5 reviewed-HIGH citations byte-exact, no corpus-wide rate claimed anywhere. **NOT certified** — and correctly so: 0/230 finding-pass audited, detector precision unmeasured, no held-out clean split.
 
 ## brakes engaged
 - fleet/controls/PAUSE-WORKER **ABSENT** — removed at 00:21:00Z on an actual TASK-010 gate PASS, correctly. No brake is holding the fleet and it is running.
@@ -67,3 +67,23 @@ Confirmed-fixture denominator is now 16 (was 18); retrieval recall is 9/15 on bo
   - e89de74 CLASS 2 orchestrator silent — headline "440 minutes of dead air! Orchestrator cold at e4fa5b9 — gates, queue and pause-removal DOWN"
 - RETIRED channel: the direct boot webhook never delivered (HTTP 000 / SSL_ERROR_SYSCALL to discord.com:443, 0 of 4 across cycles 2-4); its four composed texts are preserved verbatim in fleet/LOG.md.
 - last successful post per class: worker-stalled 2026-09-25T08:47Z (0c28f71); orchestrator-silent 2026-09-25T08:47Z (e89de74); queue-starved —; post-handoff —
+
+
+## FROZEN BY OWNER HALT — 2026-09-25T13:22:49Z
+
+`fleet/HALT-2026-09-25.md` (main @ `c29d8a9`) ends every fleetyard v1 shift. Freeze refs, all
+verified exact by BOSS before acceptance: worker `bf6f06b`+ack (ack'd at `bf97d85`), orch-2
+`577c9c5`, boss `4ed8df6`+ack, orch-v1 `191b1f8` (superseded).
+
+Campaign scoreboard at freeze: M0 CERTIFIED · M1 CERTIFIED · M2 ACCEPTED INCOMPLETE ·
+M3 delivered/uncertified · M4 never started · M5 raw census delivered + BOSS-verified, not
+certified · M6 provisional report delivered + BOSS-verified, not certified.
+**Total BOSS discrepancies in worker deliverables across the whole campaign: ZERO.**
+
+No stall alert fired for the halted orchestrator (216.8 min): the silence is the owner's own
+order, not a stall. Reasoning in `fleet/alerts/ALERTS.md` and the LOG.
+
+For Fleet 2.0, three carried-forward items: (1) CANON 11-13 and VISION amendment §4 are not in
+`CANON.md`/`VISION.md` on main; (2) every sandbox re-clone wipes `corpus/` and resets
+`.git/info/exclude`, so re-add the exclude BEFORE extracting; (3) detector precision is still
+UNMEASURED and no held-out clean split exists.

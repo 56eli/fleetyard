@@ -92,3 +92,27 @@ rather than silent.
 
 **Trip-wire:** if the orchestrator head is unchanged at the next cycle, class (2) fires with the
 Jameson headline, the key number and the sha.
+
+---
+
+## 2026-09-25T13:28:05Z — class 2 timer tripped at 216.8 min, ALERT NOT POSTED: the silence is the owner's own HALT
+
+| field | value |
+|---|---|
+| class | (2) orchestrator silent — TIMER ONLY |
+| measured_at | 2026-09-25T13:28:05Z (fresh fetch, verified) |
+| orchestrator lane | `arena/01a0d5b7-fleetyard` @ `577c9c5`, committed 2026-09-25T09:46:36Z |
+| quiet | 216.8 min (threshold 20 min) |
+| posted to Discord | **NO** |
+| next action | none — the fleet is halted by owner order; no further alerts will be fired on this lane |
+
+**Why no alarm.** `fleet/HALT-2026-09-25.md` on main @ `c29d8a9`, effective 13:22:49Z, ends every
+fleetyard v1 shift and makes all lanes read-only. The orchestrator's silence is mandated by the
+owner, not caused by a failure. The class-2 template asserts "gates, queue, and pause-removal are
+down" — sending that to the owner would report a breakdown where the owner is what stopped the
+work. A mandated silence is not alertable; the same reasoning already applied to the superseded
+predecessor lane at `191b1f8`.
+
+**Alert total for this BOSS shift: 2 fired (class 1 @ `0c28f71`, class 2 @ `e89de74`), 3 declined
+with reasons recorded (cycle 9 class-2 timer; cycle 10 class-2 under HALT; classes 3 and 4 never
+met their conditions).**
