@@ -36,6 +36,28 @@ import sys
 
 PASS, FAIL, VACUOUS, INFO, PROXY = "PASS", "FAIL", "VACUOUS", "INFO", "PROXY"
 
+CITATION_CTX = re.compile(r"fuzzy|imprecise|supersed|was |quoted|offender|defect", re.I)
+
+
+def classify_fuzzy(text: str, m) -> str:
+    """A fuzzy timestamp QUOTED in order to report the defect is not an instance of it.
+    Classify by immediate wrapping (backticks/quotes) and by the 60 preceding characters.
+    Without this, an audit of a gate record that documents fuzzy timestamps reports the
+    gate as the worst offender in the lane - which is what this instrument did to ORCH-2's
+    own tree on its first self-audit."""
+    a, b = m.start(), m.end()
+    wrapped = (a > 0 and b < len(text) and text[a - 1] in "`'\"" and text[b] in "`'\"")
+    ctx = CITATION_CTX.search(text[max(0, a - 60):a])
+    return "citation" if (wrapped or ctx) else "instance"
+
+
+# timestamp-discipline patterns (criterion 20.14), module-level so the self-audit and the
+# worktree census use the SAME regexes - two copies of a pattern is how defect #8 happened
+FUZZY_TS = re.compile(r"\d{1,2}:\d[xX]Z|\d[xX]:\d{2}Z|[xX]Z\b")
+TS_ANY = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?Z")
+TS_EXACT = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
+OWN_TIME_FIELD = re.compile(r'"(run_utc|generated_utc|materialised_utc|created_utc|appended_utc)"\s*:\s*"([^"]+)"')
+
 
 # ---------------------------------------------------------------- helpers
 def sha_bytes(b: bytes) -> str:
@@ -86,8 +108,12 @@ def tokens(s: str) -> list[str]:
     """Token rule stated explicitly (a documented gate-instrument defect class in
     this campaign): alphanumerics plus apostrophe and hyphen INSIDE tokens; every
     other character, including em/en dashes, is a SEPARATOR."""
+    s = (s or "").replace("\u2019", "'").replace("\u02bc", "'")   # NORMALIZE, don't just include
     out, cur = [], ""
-    for ch in s or "":
+    for ch in s:
+        # APOSTROPHES: straight ' AND curly ’ AND ʼ are IN-TOKEN. Splitting on the curly
+        # form turns "that's" into ['that','s'] and silently fails every contraction check
+        # — this instrument did exactly that on its second run (8 of 122 rows).
         if ch.isalnum() or ch in "'-":
             cur += ch
         else:
@@ -579,11 +605,304 @@ def section_stale_digests(wt, rep):
             note="0 of 122 rows carry seeded: true; the four seeded rows live in fixtures-adjudication.json")
 
 
+
+
+def section_read_scope(wt, rep, sup):
+    """§6 — read-scope and one-shot discipline, re-derived from committed artefacts.
+    This is the section that protects the holdout: a tuning-side run must declare zero
+    holdout reads, and the spent-holdout run must declare exactly the 37 and be marked
+    consumed."""
+    print("\n== 6. read-scope and one-shot discipline ==")
+    sp1 = json.load(open(os.path.join(wt, "tools/HELD-OUT-SPLIT.json"), encoding="utf-8"))
+    tun1 = {norm(x) for x in sp1["tuning"]}
+    hol1 = {norm(x) for x in sp1["holdout"]}
+    sp2p = os.path.join(wt, "tools/HELD-OUT-SPLIT-V2.json")
+    sp2 = json.load(open(sp2p, encoding="utf-8")) if os.path.exists(sp2p) else {"tuning": [], "holdout": []}
+    tun2 = {norm(x) for x in sp2["tuning"]}
+    hol2 = {norm(x) for x in sp2["holdout"]}
+
+    q2p = os.path.join(wt, "runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json")
+    q2 = json.load(open(q2p, encoding="utf-8"))
+    rep.check("6", "q2 supplement: holdout_reads empty", [], q2.get("holdout_reads"), n=1)
+    rep.check("6", "q2 supplement: holdout_enforced", True, q2.get("holdout_enforced"), n=1)
+    rep.check("6", "q2 supplement: split_counts vs split v2", {"tuning": len(tun2), "holdout": len(hol2),
+                                                              "total": len(tun2) + len(hol2)},
+              q2.get("split_counts"), n=len(tun2) + len(hol2))
+    sig = json.load(open(os.path.join(wt, "runs/m4-q2-dropword/signals.json"), encoding="utf-8"))
+    keys = {norm(k) for k in sig}
+    rep.check("6", "q2 signals.json keys == v1 TUNING set", sorted(tun1), sorted(keys), n=len(keys))
+    rep.check("6", "q2 signals.json keys ∩ v1 HOLDOUT == 0", 0, len(keys & hol1), n=len(keys))
+    nsig = sum(len(v) for v in sig.values())
+    rep.check("6", "q2 merge.signals_total", q2["merge"]["signals_total"], nsig, n=nsig)
+    rep.check("6", "q2 merge.signals_sha256", q2["merge"]["signals_sha256"][:16] + "…",
+              sha_file(os.path.join(wt, "runs/m4-q2-dropword/signals.json"))[:16] + "…")
+    f = q2["source_inheritance_filter"]
+    rep.check("6", "q2 filter arithmetic: raw - source_inherited", f["filtered_if_deferred_were_kept"],
+              f["raw"] - f["source_inherited"], n=4)
+    rep.check("6", "q2 filter arithmetic: - deferred_holdout", f["filtered"],
+              f["filtered_if_deferred_were_kept"] - f["deferred_holdout"], n=4,
+              note=f"raw {f['raw']}, source_inherited {f['source_inherited']}, deferred_holdout "
+                   f"{f['deferred_holdout']}, filtered {f['filtered']} — the 7 deferred are the v2-holdout "
+                   f"signals of TASK-019 item v2.b")
+    parts = q2.get("parts") or {}
+    okp = 0
+    for name, dg in sorted(parts.items()):
+        fp = os.path.join(wt, "runs/m4-q2-dropword", name)
+        if os.path.exists(fp):
+            okp += sha_file(fp) == dg
+        pp = fp.replace(".json", ".PROVENANCE.json")
+        if os.path.exists(pp):
+            pm = json.load(open(pp, encoding="utf-8"))
+            hr = pm.get("holdout_reads", [])
+            rep.check("6", f"q2 {name}: part manifest holdout_reads empty", [], hr, n=len(hr) + 1)
+    rep.add("6", "q2 part digests present and matching", f"{len(parts)}/{len(parts)}", f"{okp}/{len(parts)}",
+            PASS if okp == len(parts) else FAIL, n=len(parts))
+
+    q3p = os.path.join(wt, "runs/m4-q3-format/PROVENANCE-V2.json")
+    if os.path.exists(q3p):
+        q3v = json.load(open(q3p, encoding="utf-8"))
+        rep.check("6", "q3 v2 run: transcripts_read_count == split v2 tuning", len(tun2),
+                  q3v.get("transcripts_read_count"), n=len(tun2))
+        rep.check("6", "q3 v2 run: holdout_reads empty", [], q3v.get("holdout_reads"), n=1)
+        rep.check("6", "q3 v2 run: holdout_enforced", True, q3v.get("holdout_enforced"), n=1)
+        for k, dg in (q3v.get("outputs") or {}).items():
+            if not k.endswith(".json"):
+                continue
+            fp = os.path.join(wt, "runs/m4-q3-format", k)
+            rep.add("6", f"q3 output {k}", dg[:16] + "…",
+                    (sha_file(fp)[:16] + "…") if os.path.exists(fp) else "not committed (cited by digest only)",
+                    PASS if os.path.exists(fp) and sha_file(fp) == dg else INFO, n=1)
+
+    q4dir = os.path.join(wt, "runs/m4-q4-holdout")
+    for name in ("v1-holdout.PROVENANCE.json", "part-holdout-drop.PROVENANCE.json",
+                 "part-holdout-format.PROVENANCE.json"):
+        fp = os.path.join(q4dir, name)
+        if not os.path.exists(fp):
+            rep.add("6", f"q4 {name}", "present", "ABSENT", FAIL)
+            continue
+        pm = json.load(open(fp, encoding="utf-8"))
+        ins = pm.get("inputs") or {}
+        raw_reads = (pm.get("transcripts_read") or pm.get("transcripts") or
+                     ins.get("transcripts_read") or ins.get("transcripts") or
+                     ins.get("holdout") or ins.get("files") or [])
+        if isinstance(raw_reads, dict):
+            raw_reads = list(raw_reads)
+        reads = {norm(x) for x in raw_reads if isinstance(x, str)}
+        hr = pm.get("holdout_reads", ins.get("holdout_reads"))
+        if "holdout_consumed" in pm:
+            rep.check("6", f"q4 {name}: holdout_consumed", True, pm.get("holdout_consumed"), n=1)
+        else:
+            rep.add("6", f"q4 {name}: holdout_consumed", "run-level field", 
+                    f"absent here; declared at run level ({sup.get('holdout_consumed')})", INFO, n=1,
+                    note="holdout_consumed is a property of the RUN, not of each part manifest; requiring it "
+                         "per part was over-strict (this instrument's third-run defect)")
+        if reads:
+            rep.check("6", f"q4 {name}: transcripts_read == v1 holdout (37)", sorted(hol1), sorted(reads),
+                      n=len(reads))
+            rep.check("6", f"q4 {name}: reads ∩ v1 tuning == 0", 0, len(reads & tun1), n=len(reads))
+        if isinstance(hr, list):
+            rep.add("6", f"q4 {name}: holdout_reads declared", "the 37 spent transcripts (or empty with the "
+                    "read set declared elsewhere)", f"{len(hr)} entries", INFO, n=len(hr))
+
+    # fuzzy timestamps anywhere in the run manifests (criterion 20.14 / item 12)
+    # ---- timestamp discipline (criterion 20.14) over the whole committed tree ----
+    # DEFECT #8 of this instrument: the first version of the minute-precision regex
+    # ("[^\"]*\\d{2}:\\d{2}Z(?!:)") matched the SUFFIX of a correct seconds-precise value
+    # (in "...T20:38:04Z" it matches "38:04Z"), reporting 19 false offenders. Classify by
+    # fullmatch on the value instead of by searching inside it.
+    fuzzy_re, ts_re, own_field = FUZZY_TS, TS_ANY, OWN_TIME_FIELD
+    fuzzy, minute_plain, exact, own_superseded = [], [], 0, []
+    own_bad = []
+    nfiles = 0
+    for root, dirs, files in os.walk(wt):
+        dirs[:] = [d for d in dirs if d not in (".git", "corpus", "evidence", "__pycache__")]
+        for fn in files:
+            if not fn.endswith((".json", ".md")):
+                continue
+            nfiles += 1
+            fp = os.path.join(root, fn)
+            rp = os.path.relpath(fp, wt)
+            t = open(fp, encoding="utf-8", errors="replace").read()
+            for m in fuzzy_re.finditer(t):
+                fuzzy.append((rp, m.group(0), classify_fuzzy(t, m)))
+            for m in ts_re.finditer(t):
+                if m.group(1):
+                    exact += 1
+                else:
+                    minute_plain.append((rp, m.group(0)))
+            for m in own_field.finditer(t):
+                v = m.group(2)
+                if not TS_EXACT.fullmatch(v):
+                    # the lane's own repair pattern: a fuzzy value left readable beside an
+                    # exact sibling field (fixtures/v2/dropword.json's generated_utc_exact).
+                    # That is COMPLIANT, and flagging it would punish the correct fix.
+                    superseded = f'"{m.group(1)}_exact"' in t
+                    (own_superseded if superseded else own_bad).append((rp, m.group(1), v))
+    inst = sorted({(rp, v) for rp, v, k in fuzzy if k == "instance"})
+    cites = sorted({(rp, v) for rp, v, k in fuzzy if k == "citation"})
+    rep.add("6", "criterion 20.14a: FUZZY timestamps ASSERTED in committed docs (item 12)", "0 instances",
+            f"{len(inst)} instances: {inst}", PASS if not inst else FAIL, n=nfiles,
+            note=f"plus {len(cites)} sites that QUOTE a fuzzy value in order to report or supersede it "
+                 f"(not instances): {cites[:6]}")
+    rep.add("6", "criterion 20.14b: an artefact's OWN time field exact to the second", "0 offenders",
+            f"{len(own_bad)} offenders: {sorted(set(own_bad))}", PASS if not own_bad else FAIL, n=nfiles,
+            note="minute precision cannot order an artefact against a commit - the q2 parts ran 18:57:11Z-19:05:21Z "
+                 "before their delivery commit at 19:06:53Z, a sequencing question only seconds can settle")
+    rep.add("6", "criterion 20.14b-compliant: fuzzy own-time field superseded in-file by an exact sibling",
+            "reported", f"{len(own_superseded)} sites: {sorted(set(own_superseded))}", INFO, n=nfiles,
+            note="this is the repair pattern the lane already owns - fuzzy left readable, exact sibling added; "
+                 "flagging it would punish the correct fix")
+    rep.add("6", "criterion 20.14c: exact-to-the-second timestamps found", "reported", f"{exact} sites", INFO,
+            n=nfiles)
+    rep.add("6", "criterion 20.14d: minute-precision timestamps anywhere else (citations, prose, headers)",
+            "allowed when the source is named; ORCH-2 audits its own headers here",
+            f"{len(minute_plain)} sites, first 8: {sorted(set(minute_plain))[:8]}", INFO, n=nfiles,
+            note="ORCH-2's own GATES.md headers are minute-precise, so ORCH-2 is an instance of this defect and "
+                 "adopts exact-second headers from this cycle; two worker EVAL.json files cite those headers "
+                 "verbatim and are faithful to their source")
+
+
+def section_signal_evidence(wt, rep):
+    """§7 — the 122 drop-word signals: transcript spans, book citations and drop
+    consistency, all re-read byte-exactly (the q2.6 caveat derived mechanically)."""
+    print("\n== 7. drop-word signal evidence (q2.6) ==")
+    sig = json.load(open(os.path.join(wt, "runs/m4-q2-dropword/signals.json"), encoding="utf-8"))
+    ovdir = os.path.join(wt, "corpus/docdocgo/overlays")
+    book = open(os.path.join(wt, "corpus/docdocgo/html/merged-book-texts_json_1.js"),
+                encoding="utf-8", errors="replace").read()
+    flat = [(k, s) for k, v in sig.items() for s in v]
+    span_ok = cite_sub = cite_off = consist = dw_ok = 0
+    bad_span, bad_cite, shape = [], [], []
+    for k, s in flat:
+        p = os.path.join(ovdir, k if k.endswith(".txt") else k + ".txt")
+        t = open(p, encoding="utf-8", errors="replace").read()
+        if t[s["start"]:s["end"]] == s["quoted"]:
+            span_ok += 1
+        else:
+            bad_span.append((k[:24], s["start"], s["end"]))
+        br = s.get("book_ref") or {}
+        q, co, slug = br.get("quote"), br.get("char_offset"), br.get("slug")
+        if q and q in book:
+            cite_sub += 1
+            i = book.find(slug) if slug else -1
+            if i >= 0 and co is not None and book[i + co:i + co + len(q)] == q:
+                cite_off += 1
+        else:
+            bad_cite.append((k[:24], slug, co))
+        dw = s.get("dropped_words") or []
+        st = tokens(s.get("suspected"))
+        if dw and all(w.lower() in st for w in dw):
+            dw_ok += 1
+        qt = tokens(s.get("quoted"))
+        reduced = [w for w in st if w not in {x.lower() for x in dw}]
+        if reduced == qt:
+            consist += 1
+        else:
+            shape.append((k[:20], s.get("suspected"), s.get("quoted"), dw))
+    n = len(flat)
+    rep.add("7", "transcript spans re-read byte-exactly", f"{n}/{n}", f"{span_ok}/{n}",
+            PASS if span_ok == n else FAIL, n=n, note=f"failures {bad_span[:4]}")
+    rep.add("7", "book citations found in the book store (substring)", f"{n}/{n}", f"{cite_sub}/{n}",
+            PASS if cite_sub == n else FAIL, n=n, note=f"failures {bad_cite[:4]}")
+    rep.add("7", "book citations offset-exact within the slug region", "reported, not required",
+            f"{cite_off}/{n}", INFO, n=n,
+            note="offset semantics are the store's own; the substring test above is the binding one")
+    rep.add("7", "dropped_words present and contained in the suspected span", f"{n}/{n}", f"{dw_ok}/{n}",
+            PASS if dw_ok == n else FAIL, n=n)
+    rep.add("7", "drop consistency: tokens(suspected) minus dropped == tokens(quoted)",
+            "the q2.6 gate figure was 113 consistent / 9 shape-defective",
+            f"{consist} consistent / {n - consist} shape-defective",
+            PASS if (consist, n - consist) == (113, 9) else PROXY, n=n,
+            note=("matches the q2.6 gate figure (9 shape-defective = 3 repetition artifacts + 6 partial-overlap, "
+                  "2 of which were ORCH-2's own hyphen tokenization)"
+                  if (consist, n - consist) == (113, 9) else
+                  "PROXY, not FAIL: this mechanical rule (remove every occurrence of each dropped word from the "
+                  "token list, then compare) is NOT the procedure the q2.6 gate used. Until that procedure is "
+                  "encoded here this row may not be used as a criterion; the binding rows are the byte-exact span "
+                  "and citation checks above. Examples: " +
+                  str([(a, c) for a, _b, c, _d in shape[:3]])[:200]))
+
+
+def section_manifest_completeness(wt, rep):
+    """§8 — LAW §8 completeness of every run manifest, plus tool-pin attributability."""
+    print("\n== 8. LAW §8 manifest completeness ==")
+    req = ["tool_commit", "main_head", "policy_sha256", "corpus_zip_sha256", "run_utc", "status"]
+    docs = ["runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json",
+            "runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json",
+            "runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json"]
+    exact_utc = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
+    for rel in docs:
+        p = os.path.join(wt, rel)
+        if not os.path.exists(p):
+            rep.add("8", f"{rel}", "present", "ABSENT", FAIL)
+            continue
+        d = json.load(open(p, encoding="utf-8"))
+        missing = [k for k in req if k not in d]
+        rep.add("8", f"{rel}: required keys", "none missing", f"missing {missing}" if missing else "all present",
+                PASS if not missing else FAIL, n=len(req))
+        rep.add("8", f"{rel}: run_utc exact to the second", "YYYY-MM-DDThh:mm:ssZ", str(d.get("run_utc")),
+                PASS if exact_utc.match(str(d.get("run_utc") or "")) else FAIL, n=1)
+        rep.add("8", f"{rel}: book store bound or N/A stated", "book_store_sha256 or an explicit N/A",
+                "book_store_sha256" if "book_store_sha256" in d else
+                f"book_store_digest_status: {str(d.get('book_store_digest_status'))[:60]}",
+                PASS if ("book_store_sha256" in d or "book_store_digest_status" in d) else FAIL, n=1)
+        rep.add("8", f"{rel}: config canonicalization stated (criterion 20.16)",
+                "config_digest_note present", "present" if "config_digest_note" in d else "ABSENT",
+                PASS if "config_digest_note" in d else FAIL, n=1,
+                note="the q2 supplement states it; the others must adopt it (item 14)")
+        st = str(d.get("status", ""))
+        rep.add("8", f"{rel}: status forbids promotion/rate", "'not promotable' and no-rate language",
+                st[:90], PASS if ("not promotable" in st.lower() or "provisional" in st.lower()) else FAIL, n=1)
+        dpd = d.get("detector_pin_defect")
+        if dpd:
+            need = ["original_pin", "defect", "attribution_bridge"]
+            miss = [k for k in need if k not in dpd]
+            rep.add("8", f"{rel}: original pin defect disclosed", f"{need}", f"missing {miss}" if miss else "complete",
+                    PASS if not miss else FAIL, n=len(need))
+        dsh = d.get("detector_sha256_at_head")
+        if dsh:
+            tool = "tools/det_dropword.py" if "dropword" in rel else "tools/det_format.py"
+            rep.check("8", f"{rel}: detector_sha256_at_head == {tool}", dsh[:16] + "…",
+                      sha_file(os.path.join(wt, tool))[:16] + "…")
+        tc = str(d.get("tool_commit") or "")
+        # pair each supplement with ITS OWN generator; checking every generator against every
+        # manifest produces meaningless rows (this instrument's third-run defect)
+        gen = "m4_q4_supplement.py" if "q4" in rel else "m4_t20_supplement.py"
+        if os.path.exists(os.path.join(wt, "tools", gen)):
+            rc, _ = git(wt, "cat-file", "-e", f"{tc[:12]}:tools/{gen}")
+            rep.add("8", f"{rel}: tool_commit {tc[:12]} contains its generator tools/{gen}", "present",
+                    "present" if rc == 0 else "ABSENT", PASS if rc == 0 else FAIL, n=1,
+                    note="item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256")
+        else:
+            rep.add("8", f"{rel}: generator tools/{gen}", "present at head", "ABSENT at head", FAIL, n=1)
+    # threshold provenance sections
+    for rel, needles in (("runs/m4-q2-dropword/README.md",
+                          ["Threshold provenance", "min_score", "min_ratio", "stride", "window", "top_k",
+                           "min_flank", "min_matched", "max_drop"]),
+                         ("runs/m4-q3-format/README.md",
+                          ["Threshold provenance", "no numeric decision thresholds"])):
+        p = os.path.join(wt, rel)
+        if not os.path.exists(p):
+            rep.add("8", f"{rel}: threshold provenance section", "present", "ABSENT", FAIL)
+            continue
+        t = open(p, encoding="utf-8").read()
+        miss = [nd for nd in needles if nd not in t]
+        rep.add("8", f"{rel}: threshold provenance section names every parameter",
+                "none missing", f"missing {miss}" if miss else f"all {len(needles)} present",
+                PASS if not miss else FAIL, n=len(needles),
+                note="for C2-format the correct provenance answer is that the seven rules are shape predicates "
+                     "with NO numeric thresholds; the rule names are catalogued in the same README and in the "
+                     "supplement's `rules` list, so they are not required inside the provenance section itself")
+
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("worktree")
     ap.add_argument("--head", default="HEAD")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--self-audit", default=None,
+                    help="run the same timestamp census over another tree (ORCH-2 audits its own lane)")
     a = ap.parse_args()
     wt = os.path.abspath(a.worktree)
     rc, out = git(wt, "rev-parse", a.head)
@@ -596,6 +915,9 @@ def main() -> int:
     section_census_exposure(wt, rep, sup)
     section_adjudication(wt, rep)
     section_stale_digests(wt, rep)
+    section_read_scope(wt, rep, sup)
+    section_signal_evidence(wt, rep)
+    section_manifest_completeness(wt, rep)
     tally = collections.Counter(r["verdict"] for r in rep.rows)
     print(f"\n== summary: {len(rep.rows)} rows · " +
           " · ".join(f"{k} {v}" for k, v in sorted(tally.items())))
@@ -606,6 +928,40 @@ def main() -> int:
             print(f"  {r['verdict']:6s} {r['name']}: expected {r['expected'][:60]} | observed {r['observed'][:60]}")
             if r["note"]:
                 print(f"         {r['note'][:200]}")
+    if a.self_audit:
+        print(f"\n== 9. SELF-AUDIT of {a.self_audit} (same criteria applied to ORCH-2's own tree) ==")
+        fz, mb, ex, mp = [], [], 0, []
+        nf = 0
+        for root, dirs, files in os.walk(a.self_audit):
+            dirs[:] = [d for d in dirs if d not in (".git", "corpus", "evidence", "__pycache__", "gate-scratch")]
+            for fn in files:
+                if not fn.endswith((".json", ".md", ".log")):
+                    continue
+                nf += 1
+                fp = os.path.join(root, fn)
+                rp = os.path.relpath(fp, a.self_audit)
+                t = open(fp, encoding="utf-8", errors="replace").read()
+                fz += [(rp, m.group(0), classify_fuzzy(t, m)) for m in FUZZY_TS.finditer(t)]
+                for m in TS_ANY.finditer(t):
+                    if m.group(1):
+                        ex += 1
+                    else:
+                        mp.append((rp, m.group(0)))
+                for m in OWN_TIME_FIELD.finditer(t):
+                    if not TS_EXACT.fullmatch(m.group(2)) and f'"{m.group(1)}_exact"' not in t:
+                        mb.append((rp, m.group(1), m.group(2)))
+        fzi = sorted({(rp, v) for rp, v, k in fz if k == "instance"})
+        fzc = sorted({(rp, v) for rp, v, k in fz if k == "citation"})
+        print(f"  files scanned {nf} | FUZZY asserted {len(fzi)} | FUZZY quoted {len(fzc)} | "
+              f"own-time not exact {len(mb)} | exact-to-second {ex} | minute-precision {len(mp)}")
+        if fzi:
+            print(f"  fuzzy INSTANCES: {fzi[:12]}")
+        if fzc:
+            print(f"  fuzzy CITATIONS (reporting the defect, not committing it): {fzc[:6]}")
+        if mb:
+            print(f"  own-time offenders: {sorted(set(mb))[:12]}")
+        byfile = collections.Counter(rp for rp, _v in mp)
+        print(f"  minute-precision by file (top 8): {byfile.most_common(8)}")
     if a.json:
         print(json.dumps(rep.rows, indent=1))
     return 0

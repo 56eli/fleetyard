@@ -186,3 +186,90 @@ Two of the four produced **false PASSes** — the dangerous direction, and the r
 **Standing rule adopted from this:** a gate instrument is run against a head whose answer ORCH-2 already knows before
 its output is trusted. This one was — every row reproduced the figures in §1–§5, and the four defects above surfaced as
 disagreements with results ORCH-2 had already derived by hand.
+
+---
+
+## 8. Instrument v2 — read-scope, signal evidence and LAW §8 completeness (2026-09-25T23:27:53Z)
+
+Three sections were added so that the **q2 and q3 re-gates are also a single run**: §6 read-scope and one-shot
+discipline, §7 drop-word signal evidence, §8 LAW §8 manifest completeness. At `4fc40c8`:
+
+```
+== summary: 172 rows · FAIL 14 · INFO 11 · PASS 145 · PROXY 2
+```
+
+**§6 — the holdout was never read by a tuning-side run, and the spent-holdout run read exactly the 37.**
+- q2 supplement: `holdout_reads == []`, `holdout_enforced == true`, `split_counts` == split v2 (197/33/230);
+  `signals.json` keys **set-equal to the v1 TUNING 193** (n=193) with **∩ v1 holdout == 0**; `merge.signals_total`
+  122 == actual; `merge.signals_sha256` == actual; all **6** part digests match and every part manifest declares
+  `holdout_reads == []`.
+- q2 filter arithmetic closes exactly: raw **122** − source_inherited **1** = **121**; 121 − deferred_holdout **7** =
+  **114**. The 7 deferred are the v2-holdout signals of TASK-019 item v2.b.
+- q3 v2 run: `transcripts_read_count` **197** == split v2 tuning; `holdout_reads == []`; `holdout_enforced` true.
+- q4: all three provenance files declare `transcripts_read` **set-equal to the 37 spent-holdout transcripts**
+  (n=37 each) with **∩ v1 tuning == 0**, and `v1-holdout.PROVENANCE.json` carries `holdout_consumed: true` plus
+  `thresholds_frozen_before_run` and the `v1_tool_shas` block.
+
+**§7 — the 122 drop-word signals are byte-verifiable evidence.** Transcript spans re-read byte-exactly **122/122**;
+book citations found in the book store **122/122**; `dropped_words` present and contained in the suspected span
+**122/122** (after defect #5 below was fixed — it was 114/122 before). The drop-consistency row is reported as
+**PROXY, not FAIL**: the mechanical rule encoded here (remove every occurrence of each dropped word, compare token
+lists) is *not* the procedure the q2.6 gate used to separate 3 repetition artifacts from 6 partial overlaps, and until
+that procedure is encoded this row may not serve as a criterion.
+
+**§8 — LAW §8 completeness.** All three supplements carry the six required keys, an exact-to-the-second `run_utc`, a
+book-store binding **or an explicit stated N/A** (the q3 supplement does the latter correctly: *"N/A for this detector
+— C2-format never reads the book store (stated, not omitted)"*), status language forbidding promotion and rate, a
+**complete `detector_pin_defect` disclosure** (`original_pin` + `defect` + `attribution_bridge`, the bridge naming my
+own byte-identical reproductions), and `detector_sha256_at_head` equal to the actual tool digest at head. The q2
+README's threshold-provenance section names all eight C1-drop parameters; the q3 README's states the correct answer for
+C2-format — **no numeric thresholds, seven shape predicates**.
+
+**FAIL set (14 rows) still maps exactly onto open items:** 20.10 generator pin + three per-manifest generator rows →
+**item 8a**; published v1 row → **item 11a**; format config subset + two missing `config_digest_note` rows → **item 14**;
+PATTERNS §5e ×2 → **item 11b**; §5b-bis false seeded sentence → **TASK-018 item 0d**; and the two timestamp rows →
+**item 12**, now quantified below.
+
+### 8.1 The timestamp census (criterion 20.14), mechanically enumerated
+
+| Row | Result |
+|---|---|
+| **20.14a** fuzzy timestamps **asserted** in the worker tree | **26 instances** across 10 files — `fleet/LOG.md` (11), `tools/PATTERNS.md` (4: 20:1xZ, 21:2xZ, 21:3xZ, 21:5xZ), `fleet/branches/WORKER-2-M5R-DELIVERY.md` (4), `findings/M4-q5-A1-CLAIM-RECONCILIATION.md` (2), `findings/README.md`, `fleet/branches/WORKER-2-TASK-019a-DELIVERY.md`, `fleet/branches/WORKER-2-TASK-020-DELIVERY.md`, `runs/m4-q4-holdout/README.md`, `tools/INHERITED-V1-MANIFEST.json`, `fixtures/v2/dropword.json` |
+| fuzzy values **quoted in order to report or supersede** them | 4 sites — **not instances** |
+| **20.14b** an artefact's **own** time field not exact to the second | **1 offender**: `tools/INHERITED-V1-MANIFEST.json` → `materialised_utc` (**TASK-017 item 17.a**) |
+| own time field fuzzy but **superseded in-file by an exact sibling** | 1 site: `fixtures/v2/dropword.json` `generated_utc` beside `generated_utc_exact` — **the compliant repair pattern**, reported as INFO, never flagged |
+| **20.14c** exact-to-the-second timestamps present | 38 sites |
+| **20.14d** minute-precision elsewhere (citations, prose, headers) | 43 sites |
+| **§9 SELF-AUDIT of ORCH-2's own lane** | 52 files: **11 fuzzy instances asserted** (`fleet/CONTROL.log` ×3, `fleet/GATES.md` ×6, `fleet/queue/pending/TASK-020.md`, `fleet/queue/status.md`), 19 fuzzy values quoted as citations, **0** own-time offenders, 171 exact-to-second, 66 minute-precision |
+
+**Ruling recorded for item 12.** Exactness is required where a timestamp is **evidence** — a run, generation,
+materialisation or appended correction that must be ordered against a commit (minute precision cannot settle whether
+the q2 parts ran before their delivery commit at 19:06:53Z; only seconds can). Where a timestamp is **narrative**, a
+date plus minute is acceptable **if the commit sha is cited beside it**. **ORCH-2 is an instance of its own criterion**
+(11 asserted fuzzy values in this lane's records); they are historical and will not be rewritten, and from this cycle
+ORCH-2 (i) stamps its own headers exact to the second and (ii) **backticks every fuzzy value it quotes**, so that an
+audit distinguishes asserting a fuzzy timestamp from reporting one.
+
+### 8.2 Five more defects this instrument found in itself (defects #5–#9; #1–#4 are in §7.1)
+
+5. **Curly apostrophes — include is not enough, normalise.** Adding `’` (U+2019) to the in-token character class still
+   failed 8 of 122 rows, because the *data* uses `’` while `dropped_words` uses `'`: `tokens("that’s")` → `["that’s"]`
+   never equals `"that's"`. Fixed by **normalising** `’`/`ʼ` → `'` before tokenising; the row went 114/122 → **122/122**.
+   This is the known "curly-vs-straight apostrophe" gate-instrument defect class, reproduced in my own tool.
+6. **Run-level field demanded at part level.** `holdout_consumed` is a property of the **run**; requiring it in each
+   `part-holdout-*.PROVENANCE.json` produced two false FAILs. Fixed by reading it where it is declared and reporting
+   the part level as INFO — and, in the same pass, by digging into the parts' nested `inputs` block, which turned two
+   *unverified* read sets into two **verified** ones (37/37, ∩ tuning 0).
+7. **Every generator checked against every manifest.** Looping all `*supplement*.py` tools over all three supplements
+   produced meaningless rows (q2's `tool_commit` "lacking" `m4_q4_supplement.py`). Fixed by pairing each manifest with
+   its own generator: q2/q3 → `m4_t20_supplement.py`, q4 → `m4_q4_supplement.py`.
+8. **A regex that matched the suffix of a correct value.** `"...\d2:\d2Z(?!:)"` matches `38:04Z` inside
+   `2026-09-25T20:38:04Z`, reporting **19 false offenders** for own-time fields that are all exact to the second.
+   Fixed by `fullmatch` on the value. Rule: *a pattern that classifies a whole value must match the whole value.*
+9. **An audit that could not tell asserting from quoting.** The first self-audit reported ORCH-2's own lane as the
+   worst offender in the fleet, because gate records **quote** fuzzy timestamps in order to report them. Fixed by
+   classifying each hit as `instance` or `citation` from its immediate wrapping and the preceding 60 characters, and
+   reporting both. Rule: *a defect census must exclude citations of the defect, and say how it decided.*
+
+Also recorded: the instrument crashed once on a duplicated `note=` keyword argument while these rows were being added —
+a reminder that the instrument is code and is subject to the same review as any delivery.

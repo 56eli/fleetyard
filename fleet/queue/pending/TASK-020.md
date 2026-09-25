@@ -303,3 +303,30 @@ literally executable.
   published, the subset relation and the location of the remainder (file + pinned sha) are stated in the same object.*
 
 **Priority unchanged:** these are hygiene items — queue position **4**, after 8a, TASK-018 0d–0g and TASK-019 v2.a/v2.b.
+
+
+---
+
+## Item 12 EXTENDED — the timestamp census is now mechanical and complete (2026-09-25T23:27:53Z)
+
+`fleet/gate-tools/orch2_verify.py` §6 enumerates every timestamp site under criterion 20.14 (details and the full site
+list in `fleet/ORCH-2-VERIFICATION-LEDGER.md` §8.1). The scope of item 12 is therefore **larger than first cut**:
+
+- **26 fuzzy timestamps asserted** across 10 files of the worker tree — `fleet/LOG.md` (11), `tools/PATTERNS.md` (4),
+  `fleet/branches/WORKER-2-M5R-DELIVERY.md` (4), `findings/M4-q5-A1-CLAIM-RECONCILIATION.md` (2), `findings/README.md`,
+  `fleet/branches/WORKER-2-TASK-019a-DELIVERY.md`, `fleet/branches/WORKER-2-TASK-020-DELIVERY.md`,
+  `runs/m4-q4-holdout/README.md` (`21:3xZ`, a site not previously catalogued), `tools/INHERITED-V1-MANIFEST.json`,
+  `fixtures/v2/dropword.json`. Plus **4 sites that quote a fuzzy value in order to supersede it — not instances**.
+- **1 own-time-field offender**: `tools/INHERITED-V1-MANIFEST.json` → `materialised_utc` (**TASK-017 item 17.a**).
+  `fixtures/v2/dropword.json`'s fuzzy `generated_utc` is **compliant**, because the same object carries
+  `generated_utc_exact` + `generated_utc_exact_source` — that is the repair pattern, and the instrument reports it as
+  INFO rather than flagging it.
+
+**Proportionate repair, in this order.** (1) **Load-bearing** timestamps — anything that identifies a run, a
+generation, a materialisation or an appended correction, and so must be orderable against a commit — become exact to
+the second with their source: the three SUPERSESSION blocks, PATTERNS §5b-bis and §5d/§5e correction notes,
+`runs/m4-q4-holdout/README.md`'s item-10 correction, and `tools/INHERITED-V1-MANIFEST.json`. Committer timestamps of
+`d7fee6e` / `4fc40c8` / `b2e0761` recover them. (2) **Narrative** timestamps (`fleet/LOG.md`, delivery-note prose) may
+stay date-plus-minute **provided the commit sha is cited beside them**. (3) Everywhere a fuzzy value is *quoted*, put
+it in backticks so an audit can tell citation from assertion — ORCH-2 has adopted the same rule for its own records,
+which the self-audit shows carry **11 asserted fuzzy values** of their own.

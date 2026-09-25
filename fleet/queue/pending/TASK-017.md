@@ -55,3 +55,16 @@ readable, never edited) — the committer timestamp of `b2e0761` recovers it. Ad
 
 **This PASS promotes nothing.** No detector promoted, no rate, no M6 figure; q1–q5 stay FAIL/INCOMPLETE, and
 TASK-018 / TASK-019a / TASK-020 items 1–8 stay FAIL/INCOMPLETE as gated this cycle.
+
+
+---
+
+## Item 17.a confirmed as the sole own-time-field offender (2026-09-25T23:27:53Z)
+
+`fleet/gate-tools/orch2_verify.py` criterion 20.14b scans every `run_utc` / `generated_utc` / `materialised_utc` /
+`created_utc` / `appended_utc` field in the tree and requires `fullmatch` on `YYYY-MM-DDThh:mm:ssZ`. At `4fc40c8`
+exactly **one** field fails: `tools/INHERITED-V1-MANIFEST.json` → `materialised_utc` (fuzzy `20:5xZ`) — item 17.a.
+`fixtures/v2/dropword.json`'s fuzzy `generated_utc` **passes**, because the same object carries `generated_utc_exact`
+plus `generated_utc_exact_source`: that is the compliant repair pattern, and 17.a should use it (exact value + source =
+the committer timestamp of `b2e0761`, fuzzy left readable). Everything else about TASK-017 remains **PASS on all six
+criteria**.

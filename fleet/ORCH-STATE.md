@@ -390,3 +390,14 @@ the reconnect runbook is at the end of that summary.
   Rules R1/R2 encoded. **§7.1 publishes four defects the instrument found in itself on its first run, two of them
   false PASSes.** Standing rule: an instrument is validated against a head whose answer ORCH-2 already knows before
   its output is trusted. Re-gates are now one run plus an invariance check.
+
+- **2026-09-25T23:29:14Z: instrument v2** — §6 read-scope/one-shot, §7 signal evidence, §8 LAW §8 completeness, §9 self-audit.
+  **172 rows: PASS 145 · FAIL 14 · INFO 11 · PROXY 2**; FAIL set still == open-item set. The holdout is provably
+  untouched by every tuning-side run (q2 keys set-equal to the v1 tuning 193, ∩ holdout 0, six part manifests zero
+  holdout reads; q3 read 197 == v2 tuning; q4 read exactly the 37, ∩ tuning 0, `holdout_consumed: true`). 122/122
+  spans, 122/122 citations, 122/122 dropped-word containment. **Timestamp census: 26 asserted fuzzy sites (item 12
+  extended), 1 own-time offender (TASK-017 17.a), `fixtures/v2/dropword.json` compliant by exact sibling. Self-audit:
+  ORCH-2's own lane asserts 11 fuzzy values → ORCH-2 is an instance of criterion 20.14 and adopts exact-second headers
+  plus backticked quotations of fuzzy values.** Defects #5–#9 published (§8.2): apostrophe **normalisation** (not
+  inclusion), a regex that matched the suffix of a correct value (19 false offenders → `fullmatch`), run-level vs
+  part-level fields, generator mispairing, and citation-vs-instance classification.
