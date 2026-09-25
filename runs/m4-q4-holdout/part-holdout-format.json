@@ -1,0 +1,165 @@
+{
+ "A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt": [],
+ "Belief,_Trust_and_Credibility_Jun_2008_Part_1_enxautogen_html.txt": [],
+ "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt": [],
+ "Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.txt": [],
+ "God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt": [],
+ "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt": [],
+ "Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt": [],
+ "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt": [],
+ "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_1_enxautogen_html.txt": [],
+ "Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt": [],
+ "Peace_Aug_2009_Part_3_enxautogen_html.txt": [],
+ "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt": [],
+ "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt": [],
+ "Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt": [
+  {
+   "detector": "C2-format",
+   "end": 18984,
+   "excerpt": "st went crazy. He would fit in today's world very well. Laugh . bacteria all right so the core the essence of life the sourc",
+   "note": "space around a sentence period",
+   "quoted": "h . ",
+   "rule": "R6-spaced-period",
+   "start": 18980,
+   "suggested": null
+  }
+ ],
+ "Question_Answer_Session_Jan_2011_enxautogen_html.txt": [
+  {
+   "detector": "C2-format",
+   "end": 12869,
+   "excerpt": "oing to explode and kill you any second so i said so so so so , so if we go we go and the other guy said yeah you're right ",
+   "note": "space before a comma",
+   "quoted": "o ,",
+   "rule": "R5-space-before-comma",
+   "start": 12866,
+   "suggested": "o,"
+  },
+  {
+   "detector": "C2-format",
+   "end": 14005,
+   "excerpt": "lness sure you want you to comment on dementia dementia right , how would you how is it treat how would you look at it and ",
+   "note": "space before a comma",
+   "quoted": "t ,",
+   "rule": "R5-space-before-comma",
+   "start": 14002,
+   "suggested": "t,"
+  }
+ ],
+ "Question_Answer_Session_Jul_2011_enxautogen_html.txt": [],
+ "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_2_enxautogen_html.txt": [],
+ "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_3_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_II_Part_2_enxautogen_html.txt": [
+  {
+   "detector": "C2-format",
+   "end": 40067,
+   "excerpt": "purchase additional materials please visit our website at www.veritaspub.com or call 928 282 8722. Thank you for joining us",
+   "note": "missing space after a sentence period: 'w.v'",
+   "quoted": "w.v",
+   "rule": "R1-glued-period",
+   "start": 40064,
+   "suggested": "w. v"
+  },
+  {
+   "detector": "C2-format",
+   "end": 40078,
+   "excerpt": "ditional materials please visit our website at www.veritaspub.com or call 928 282 8722. Thank you for joining us.\n",
+   "note": "missing space after a sentence period: 'b.c'",
+   "quoted": "b.c",
+   "rule": "R1-glued-period",
+   "start": 40075,
+   "suggested": "b. c"
+  }
+ ],
+ "Satsang_Series_Volume_IV_Part_2_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt": [
+  {
+   "detector": "C2-format",
+   "end": 33730,
+   "excerpt": "purchase additional materials please visit our website at www.veritaspub.com at www.veritaspub.com or call 928-282-8722 928",
+   "note": "missing space after a sentence period: 'w.v'",
+   "quoted": "w.v",
+   "rule": "R1-glued-period",
+   "start": 33727,
+   "suggested": "w. v"
+  },
+  {
+   "detector": "C2-format",
+   "end": 33741,
+   "excerpt": "ditional materials please visit our website at www.veritaspub.com at www.veritaspub.com or call 928-282-8722 928-282-8722 9",
+   "note": "missing space after a sentence period: 'b.c'",
+   "quoted": "b.c",
+   "rule": "R1-glued-period",
+   "start": 33738,
+   "suggested": "b. c"
+  },
+  {
+   "detector": "C2-format",
+   "end": 33752,
+   "excerpt": "terials please visit our website at www.veritaspub.com at www.veritaspub.com or call 928-282-8722 928-282-8722 928-282-8722",
+   "note": "missing space after a sentence period: 'w.v'",
+   "quoted": "w.v",
+   "rule": "R1-glued-period",
+   "start": 33749,
+   "suggested": "w. v"
+  },
+  {
+   "detector": "C2-format",
+   "end": 33763,
+   "excerpt": "ase visit our website at www.veritaspub.com at www.veritaspub.com or call 928-282-8722 928-282-8722 928-282-8722 Thank you ",
+   "note": "missing space after a sentence period: 'b.c'",
+   "quoted": "b.c",
+   "rule": "R1-glued-period",
+   "start": 33760,
+   "suggested": "b. c"
+  }
+ ],
+ "Satsang_Series_Volume_VIII_Part_1_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_V_Part_1_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_V_Part_2_enxautogen_html.txt": [
+  {
+   "detector": "C2-format",
+   "end": 11906,
+   "excerpt": " the day after that will be different. Subtitles by the Amara.org community It's because it's constantly scintillating and ",
+   "note": "missing space after a sentence period: 'a.o'",
+   "quoted": "a.o",
+   "rule": "R1-glued-period",
+   "start": 11903,
+   "suggested": "a. o"
+  },
+  {
+   "detector": "C2-format",
+   "end": 30995,
+   "excerpt": "us orange hats like this and people would run to get the hats , you know, like a great baseball player. People would run to",
+   "note": "space before a comma",
+   "quoted": "s ,",
+   "rule": "R5-space-before-comma",
+   "start": 30992,
+   "suggested": "s,"
+  }
+ ],
+ "Satsang_Series_Volume_V_Part_4_enxautogen_html.txt": [],
+ "Serenity_Aug_2005_Part_2.txt": [],
+ "Spiritual_First_Aid_enxautogen_html.txt": [],
+ "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.txt": [],
+ "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt": [],
+ "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt": [],
+ "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt": [],
+ "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt": [
+  {
+   "detector": "C2-format",
+   "end": 22313,
+   "excerpt": "uestion is submitted by Rob Kaur from theconsciousnessproject.org. When we go through the process of enlightenment, for exa",
+   "note": "missing space after a sentence period: 't.o'",
+   "quoted": "t.o",
+   "rule": "R1-glued-period",
+   "start": 22310,
+   "suggested": "t. o"
+  }
+ ]
+}

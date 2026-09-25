@@ -124,6 +124,30 @@ R4 underscore run, R5 space-before-comma, R6 spaced period, R7 glued comma.
   encoded), so it stays unmeasured and is recorded as an explicit M6 limitation —
   an instrument finding, not a silent gap.
 
+## 5d. M4-q4 — holdout runs: counts reported, holdout spent, precision still absent
+
+One-shot runs of the frozen detectors over the 37 holdout transcripts
+(`runs/m4-q4-holdout/`, runner `tools/m4_q4_holdout.py`):
+
+| detector set | holdout raw signals | tuning raw signals (rate/tx) |
+|---|---|---|
+| v1 A1,A2,B1,B2 | **185** (5.00/tx) | 1,149 over the 193 tuning files (5.95/tx) |
+| C1-drop | **5** (0.14/tx) | 122 (0.63/tx) |
+| C2-format | **12** (0.32/tx) | 49 (0.25/tx) |
+
+- **Reproduction receipt:** the v1 re-run reproduces the inherited M5 census
+  per-transcript exactly (185/185, 0 mismatches) — fresh process, fresh index,
+  different code path.
+- **No precision claim:** precision/recall require *reviewed* holdout labels; none
+  exist. Counts are **not** errors, and this is stated in every provenance file.
+- **Holdout status:** `holdout_consumed: true` for these detector versions; nothing
+  was tuned against it. Any later tuning informed by these counts invalidates this
+  evaluation for that detector and owes a new split (new salt).
+- **Open question (not a conclusion):** C1-drop's holdout rate is ~4.5x lower than
+  its tuning rate (5 vs 122 signals). With 37 holdout transcripts this is dominated
+  by sampling noise, but it may also indicate parameters fitted to the tuning half —
+  flagged for M4 follow-up.
+
 ## 6. Next quanta (M4 work queue, in order)
 
 1. ~~**M4-q2 — drop-word detector**~~ **done (tuning): 122 raw signals; 4
@@ -134,8 +158,8 @@ R4 underscore run, R5 space-before-comma, R6 spaced period, R7 glued comma.
    measured (49 raw signals); speaker attribution documented as out of mechanical
    scope (corpus census).** Residual: none mechanical; a human attribution pass
    would need a different corpus format.
-3. **M4-q4 — per-detector precision runs** on the holdout split with frozen
-   thresholds; publish provenance manifests; feed M6.
+3. ~~**M4-q4 — held-out runs**~~ **done: raw counts with provenance; precision
+   still absent (needs review); holdout spent for these detector versions.**
 4. **M4-q5 — A1 claim-shape reconciliation**: resolve the 98 "not re-derived" A1
    claims (over-wide spans vs tokenizer shape) and record the outcome in
    `corrections.json`-style append-only notes for the detector rules.

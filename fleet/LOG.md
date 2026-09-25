@@ -44,3 +44,10 @@ all 230 transcripts: 0 speaker labels / 0 stage directions / 0 parser residue, s
 speaker attribution is NOT mechanically detectable here — recorded as an M6 limitation
 (instrument finding). Two candidate rules measured and rejected as noise (camel-glue,
 double-word). Next: q4 holdout runs (rates only; precision needs review), q5 A1 claims.
+2026-09-25T19:3xZ WORKER-2: M4-q4 — one-shot holdout runs (thresholds frozen before
+the run; holdout_consumed stamped): v1 A1,A2,B1,B2 185 raw signals (5.00/tx) and an
+exact per-transcript reproduction of the inherited census (0 mismatches of 37 files);
+C1-drop 5 signals (0.14/tx vs 0.63 tuning — flagged open question, sampling noise);
+C2-format 12 (0.32 vs 0.25 tuning). Counts only: precision/recall still require human
+review of holdout labels; no rate claimed anywhere. Holdout now spent for these
+detector versions (new salt owed before any further tuning-informed evaluation).

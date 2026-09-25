@@ -281,8 +281,12 @@ def load_split(path):
 
 
 def run_tuning(corpus_dir, split_path, out_dir, limit=None, quiet=False,
-               offset=0, shard=None, shards=None, part_tag=None):
-    """Run the detector over the TUNING set only (holdout is never opened).
+               offset=0, shard=None, shards=None, part_tag=None, which="tuning"):
+    """Run the detector over the split's TUNING set (default) or its HOLDOUT set.
+
+    `which="holdout"` is the one-shot evaluation mode (LAW §9 / PATTERNS §5):
+    thresholds must already be frozen, the result is reported once, and any
+    later tuning informed by it spends the holdout (a new split is then owed).
 
     Sharding exists because LAW §4A bounds a work quantum to <=240 s wall:
     `--shards N --shard i` runs one bounded part; parts merge at the end.
@@ -293,7 +297,10 @@ def run_tuning(corpus_dir, split_path, out_dir, limit=None, quiet=False,
     if overlap:
         raise SystemExit("C1-drop: split integrity violation — transcripts in both "
                          "tuning and holdout: %r" % overlap[:3])
-    tuning = [n for n in split["tuning"] if n not in holdout]
+    if which == "holdout":
+        tuning = sorted(holdout)
+    else:
+        tuning = [n for n in split["tuning"] if n not in holdout]
     if shards:
         if not (1 <= shard <= shards):
             raise SystemExit("C1-drop: --shard must be within 1..--shards")
@@ -303,7 +310,8 @@ def run_tuning(corpus_dir, split_path, out_dir, limit=None, quiet=False,
         tuning = tuning[offset:]
     if limit:
         tuning = tuning[:limit]
-    assert not (set(tuning) & holdout), "holdout transcript in the tuning run"
+    if which != "holdout":
+        assert not (set(tuning) & holdout), "holdout transcript in the tuning run"
     transcripts = m5r.load_transcripts(corpus_dir)
     missing = [n for n in tuning if n not in transcripts]
     if missing:
@@ -338,8 +346,10 @@ def run_tuning(corpus_dir, split_path, out_dir, limit=None, quiet=False,
                 "split_corpus_files_sha256": split["corpus_files_sha256"],
                 "split_salt": split["salt"],
                 "transcripts_read": tuning,
-                "holdout_reads": [],
-                "holdout_enforced": True,
+                "set": which,
+                "holdout_reads": tuning if which == "holdout" else [],
+                "holdout_enforced": which != "holdout",
+                "holdout_consumed": which == "holdout",
                 "shard": ({"shard": shard, "shards": shards} if shards else None),
             },
             "outputs": {"signals_per_transcript": {n: len(v) for n, v in sorted(per_file.items())},
@@ -400,6 +410,7 @@ def main(argv=None):
     ap.add_argument("--shard", type=int)
     ap.add_argument("--shards", type=int)
     ap.add_argument("--part-tag")
+    ap.add_argument("--set", choices=("tuning", "holdout"), default="tuning")
     ap.add_argument("--merge", action="store_true")
     ap.add_argument("--self-test", action="store_true")
     ap.add_argument("--transcript")
@@ -421,8 +432,8 @@ def main(argv=None):
     if a.tuning:
         per_file, total = run_tuning(a.corpus, a.split, a.out, limit=a.limit,
                                      offset=a.offset, shard=a.shard, shards=a.shards,
-                                     part_tag=a.part_tag)
-        print("C1-drop tuning run: %d transcripts, %d signals" % (len(per_file), total))
+                                     part_tag=a.part_tag, which=a.set)
+        print("C1-drop %s run: %d transcripts, %d signals" % (a.set, len(per_file), total))
         return 0
     ap.print_help()
     return 2

@@ -173,12 +173,16 @@ def self_test():
 
 # -------------------------------------------------------------------- runner
 
-def run_tuning(corpus_dir, split_path, out_dir, part_tag=None):
+def run_tuning(corpus_dir, split_path, out_dir, part_tag=None, which="tuning"):
+    """Run over the split's tuning set (default) or its holdout set (one-shot)."""
     split = json.load(open(split_path, encoding="utf-8"))
     overlap = sorted(set(split["tuning"]) & set(split["holdout"]))
     if overlap:
         raise SystemExit("C2-format: split integrity violation: %r" % overlap[:3])
-    tuning = [n for n in split["tuning"] if n not in set(split["holdout"])]
+    if which == "holdout":
+        tuning = sorted(set(split["holdout"]))
+    else:
+        tuning = [n for n in split["tuning"] if n not in set(split["holdout"])]
     transcripts = m5r.load_transcripts(corpus_dir)
     missing = [n for n in tuning if n not in transcripts]
     if missing:
@@ -204,8 +208,10 @@ def run_tuning(corpus_dir, split_path, out_dir, part_tag=None):
                        "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
                        "split_file": split_path,
                        "split_corpus_files_sha256": split["corpus_files_sha256"],
-                       "transcripts_read": tuning, "holdout_reads": [],
-                       "holdout_enforced": True},
+                       "transcripts_read": tuning, "set": which,
+                       "holdout_reads": tuning if which == "holdout" else [],
+                       "holdout_enforced": which != "holdout",
+                       "holdout_consumed": which == "holdout"},
             "outputs": {"signals_file": target, "signals_total": total,
                         "per_rule": _per_rule(per_file),
                         "transcripts": len(tuning)},
@@ -240,6 +246,7 @@ def main(argv=None):
     ap.add_argument("--corpus", default="corpus")
     ap.add_argument("--out")
     ap.add_argument("--part-tag")
+    ap.add_argument("--set", choices=("tuning", "holdout"), default="tuning")
     ap.add_argument("--transcript")
     ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args(argv)
@@ -251,9 +258,10 @@ def main(argv=None):
             print(json.dumps(s, ensure_ascii=False))
         return 0
     if a.tuning:
-        per_file, total = run_tuning(a.corpus, a.split, a.out, part_tag=a.part_tag)
-        print("C2-format tuning run: %d transcripts, %d signals %s"
-              % (len(per_file), total, _per_rule(per_file)))
+        per_file, total = run_tuning(a.corpus, a.split, a.out, part_tag=a.part_tag,
+                                     which=a.set)
+        print("C2-format %s run: %d transcripts, %d signals %s"
+              % (a.set, len(per_file), total, _per_rule(per_file)))
         return 0
     ap.print_help()
     return 2

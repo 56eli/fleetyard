@@ -1,0 +1,2888 @@
+{
+ "detector_set": "A1,A2,B1,B2",
+ "per_detector_signal_instances": {
+  "A1-repetition": 162,
+  "A2-nonsense": 15,
+  "B2-misquote": 8
+ },
+ "per_transcript": {
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 4068,
+     "paragraph": 0
+    },
+    "quoted_text": "The suffering gets worse and worse. The suffering gets worse and worse. The suffering gets worse and worse.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "The suffering gets worse and worse.",
+    "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (10-token unit repeated 18 times back-to-back)",
+    "location": {
+     "char_offset": 8233,
+     "paragraph": 0
+    },
+    "quoted_text": "he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "he tries to surround the child with high spiritual energy",
+    "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 11631,
+     "paragraph": 0
+    },
+    "quoted_text": "you love everyone as though they're your family. You love everyone as though they're your family. You love everyone as though they're your family.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "you love everyone as though they're your family.",
+    "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "location": {
+     "char_offset": 13324,
+     "paragraph": 0
+    },
+    "quoted_text": "cuộc",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 34 times back-to-back)",
+    "location": {
+     "char_offset": 15292,
+     "paragraph": 0
+    },
+    "quoted_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yes.",
+    "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 22584,
+     "paragraph": 0
+    },
+    "quoted_text": "and then to the eye and then to the eye and then to the eye",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "and then to the eye",
+    "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 32069,
+     "paragraph": 0
+    },
+    "quoted_text": "You also see the acupuncturist You also see the acupuncturist You also see the acupuncturist You also see the acupuncturist",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "You also see the acupuncturist",
+    "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt"
+   }
+  ],
+  "Belief,_Trust_and_Credibility_Jun_2008_Part_1_enxautogen_html.txt": [],
+  "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 10 times back-to-back)",
+    "location": {
+     "char_offset": 20095,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 6 times back-to-back)",
+    "location": {
+     "char_offset": 30114,
+     "paragraph": 0
+    },
+    "quoted_text": "How do you perceive it? How do you perceive it? How do you perceive it? How do you perceive it? How do you perceive it? How do you perceive it?",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "How do you perceive it?",
+    "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 9 times back-to-back)",
+    "location": {
+     "char_offset": 39483,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 14 times back-to-back)",
+    "location": {
+     "char_offset": 49413,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 61099,
+     "paragraph": 0
+    },
+    "quoted_text": "I'm trying to figure. I'm trying to figure. I'm trying to figure.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I'm trying to figure.",
+    "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 10 times back-to-back)",
+    "location": {
+     "char_offset": 64024,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 71745,
+     "paragraph": 0
+    },
+    "quoted_text": "they're all a great joy to us. They're all a great joy to us. They're all a great joy to us,",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "they're all a great joy to us.",
+    "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "location": {
+     "char_offset": 73146,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+   }
+  ],
+  "Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 18 times back-to-back)",
+    "location": {
+     "char_offset": 3289,
+     "paragraph": 0
+    },
+    "quoted_text": "No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "No.",
+    "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 12209,
+     "paragraph": 0
+    },
+    "quoted_text": "I'm going to do that. I'm going to do that. I'm going to do that.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I'm going to do that.",
+    "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 22221,
+     "paragraph": 0
+    },
+    "quoted_text": "the rate of happiness is the rate of happiness is the rate of happiness is",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "the rate of happiness is",
+    "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 23043,
+     "paragraph": 0
+    },
+    "quoted_text": "you're not run by it and you're not run by it and you're not run by it and",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "you're not run by it and",
+    "transcript_path": "corpus/docdocgo/overlays/God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+    "location": {
+     "char_offset": 24510,
+     "paragraph": 0
+    },
+    "quoted_text": "Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why?",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Why?",
+    "transcript_path": "corpus/docdocgo/overlays/God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt"
+   }
+  ],
+  "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (8-token unit repeated 5 times back-to-back)",
+    "location": {
+     "char_offset": 49834,
+     "paragraph": 0
+    },
+    "quoted_text": "what I'm doing. I'm answerable to God for what I'm doing. I'm answerable to God for what I'm doing. I'm answerable to God for what I'm doing. I'm answerable to God for what I'm doing. I'm answerable to God for",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "what I'm doing. I'm answerable to God for",
+    "transcript_path": "corpus/docdocgo/overlays/God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 14 times back-to-back)",
+    "location": {
+     "char_offset": 57854,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 63082,
+     "paragraph": 0
+    },
+    "quoted_text": "you see it here, then you see it here, then you see it here. Then",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "you see it here, then",
+    "transcript_path": "corpus/docdocgo/overlays/God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt"
+   }
+  ],
+  "Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 11,
+     "paragraph": 0
+    },
+    "quoted_text": "two at a time, two at a time, two at a time,",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "two at a time,",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (10-token unit repeated 7 times back-to-back)",
+    "location": {
+     "char_offset": 6484,
+     "paragraph": 0
+    },
+    "quoted_text": "had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "had the opportunity to leave it wasn't just because he",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (impossible-percent: 650 > 100)",
+    "location": {
+     "char_offset": 34232,
+     "paragraph": 0
+    },
+    "quoted_text": "650%",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 38857,
+     "paragraph": 0
+    },
+    "quoted_text": "were just being who they were. Just being who they were. Just being who they",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "were just being who they",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (6-token unit repeated 5 times back-to-back)",
+    "location": {
+     "char_offset": 45195,
+     "paragraph": 0
+    },
+    "quoted_text": "it's pretty evolved it comes in it's pretty evolved it comes in it's pretty evolved it comes in it's pretty evolved it comes in it's pretty evolved it comes in",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "it's pretty evolved it comes in",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 45485,
+     "paragraph": 0
+    },
+    "quoted_text": "Wow so she came in at 250 when Wow so she came in at 250 when Wow so she came in at 250 when",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Wow so she came in at 250 when",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 45578,
+     "paragraph": 0
+    },
+    "quoted_text": "we got her she was what did I say she we got her she was what did I say she we got her she was what did I say she",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "we got her she was what did I say she",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 45692,
+     "paragraph": 0
+    },
+    "quoted_text": "was at 350 sound like that all right so was at 350 sound like that all right so was at 350 sound like that all right so",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "was at 350 sound like that all right so",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 45812,
+     "paragraph": 0
+    },
+    "quoted_text": "here you see that these animals are more here you see that these animals are more here you see that these animals are more",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "here you see that these animals are more",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 45935,
+     "paragraph": 0
+    },
+    "quoted_text": "evolved you see the the effect of human evolved you see the the effect of human evolved you see the the effect of human",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "evolved you see the the effect of human",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (3-token unit repeated 20 times back-to-back)",
+    "location": {
+     "char_offset": 56626,
+     "paragraph": 0
+    },
+    "quoted_text": "Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Aristotle at 490.",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 44 times back-to-back)",
+    "location": {
+     "char_offset": 65885,
+     "paragraph": 0
+    },
+    "quoted_text": "Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Ha",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 16 times back-to-back)",
+    "location": {
+     "char_offset": 9466,
+     "paragraph": 0
+    },
+    "quoted_text": "Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Fancy Feast.",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+    "location": {
+     "char_offset": 37053,
+     "paragraph": 0
+    },
+    "quoted_text": "ha, ha, ha, ha, ha, ha, ha, ha, ha.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "ha,",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (3-token unit repeated 10 times back-to-back)",
+    "location": {
+     "char_offset": 40186,
+     "paragraph": 0
+    },
+    "quoted_text": "I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I'm a Christian.",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 12 times back-to-back)",
+    "location": {
+     "char_offset": 49580,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "location": {
+     "char_offset": 50033,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 23 times back-to-back)",
+    "location": {
+     "char_offset": 54300,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 62206,
+     "paragraph": 0
+    },
+    "quoted_text": "He's got to like that. He's got to like that. He's got to like that.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "He's got to like that.",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 66092,
+     "paragraph": 0
+    },
+    "quoted_text": "for the blessing of our existence. For the blessing of our existence. For the blessing of our existence.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "for the blessing of our existence.",
+    "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
+   }
+  ],
+  "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_1_enxautogen_html.txt": [],
+  "Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (3-token unit repeated 35 times back-to-back)",
+    "location": {
+     "char_offset": 35052,
+     "paragraph": 0
+    },
+    "quoted_text": "quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "quantum mechanics and",
+    "transcript_path": "corpus/docdocgo/overlays/Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 7 times back-to-back)",
+    "location": {
+     "char_offset": 43493,
+     "paragraph": 0
+    },
+    "quoted_text": "please don't. Please don't. Please don't. Please don't. Please don't. Please don't. Please don't.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "please don't.",
+    "transcript_path": "corpus/docdocgo/overlays/Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 45095,
+     "paragraph": 0
+    },
+    "quoted_text": "the moment of birth. The moment of birth. The moment of birth. The moment of birth.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "the moment of birth.",
+    "transcript_path": "corpus/docdocgo/overlays/Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "Peace_Aug_2009_Part_3_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (3-token unit repeated 18 times back-to-back)",
+    "location": {
+     "char_offset": 9802,
+     "paragraph": 0
+    },
+    "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I don't know.",
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 11 times back-to-back)",
+    "location": {
+     "char_offset": 18958,
+     "paragraph": 0
+    },
+    "quoted_text": "Go see Doc Hawkins. Go see Doc Hawkins. Go see Doc Hawkins. Go see Doc Hawkins. Go see Doc Hawkins. Go see Doc Hawkins. Go see Doc Hawkins. Go see Doc Hawkins. Go see Doc Hawkins. Go see Doc Hawkins. Go see Doc Hawkins.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Go see Doc Hawkins.",
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 9 times back-to-back)",
+    "location": {
+     "char_offset": 28734,
+     "paragraph": 0
+    },
+    "quoted_text": "funny. It's funny. It's funny. It's funny. It's funny. It's funny. It's funny. It's funny. It's funny. It's",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "funny. It's",
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 12 times back-to-back)",
+    "location": {
+     "char_offset": 30426,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 9 times back-to-back)",
+    "location": {
+     "char_offset": 30924,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you,",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 32967,
+     "paragraph": 0
+    },
+    "quoted_text": "into Korean, and I'm translating A Curse in Miracles into Korean, and I'm translating A Curse in Miracles into Korean, and I'm translating A Curse in Miracles",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "into Korean, and I'm translating A Curse in Miracles",
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 43 times back-to-back)",
+    "location": {
+     "char_offset": 43595,
+     "paragraph": 0
+    },
+    "quoted_text": "Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe. Maybe.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Maybe.",
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (11-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 46058,
+     "paragraph": 0
+    },
+    "quoted_text": "when the buddha taught the mystic law of the lotus sutra when the buddha taught the mystic law of the lotus sutra when the buddha taught the mystic law of the lotus sutra",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "when the buddha taught the mystic law of the lotus sutra",
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 12 times back-to-back)",
+    "location": {
+     "char_offset": 52266,
+     "paragraph": 0
+    },
+    "quoted_text": "Boop, boop, boop, boop. Boop, boop, boop, boop, boop, boop, boop, boop.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Boop,",
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 15 times back-to-back)",
+    "location": {
+     "char_offset": 52413,
+     "paragraph": 0
+    },
+    "quoted_text": "Ho, ho, ho. Ho, ho, ho. Ho, ho, ho. Ho, ho, ho. Ho, ho, ho.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Ho,",
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "location": {
+     "char_offset": 54917,
+     "paragraph": 0
+    },
+    "quoted_text": "村",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_3_enxautogen_html.txt"
+   }
+  ],
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 17515,
+     "paragraph": 0
+    },
+    "quoted_text": "to mean the opposite. To mean the opposite. To mean the opposite.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "to mean the opposite.",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 52400,
+     "paragraph": 0
+    },
+    "quoted_text": "it's a great thing. It's a great thing. It's a great thing.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "it's a great thing.",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (7-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 54843,
+     "paragraph": 0
+    },
+    "quoted_text": "That which is of God brings peace. That which is of God brings peace. That which is of God brings peace. That which is of God brings peace",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "That which is of God brings peace.",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 63869,
+     "paragraph": 0
+    },
+    "quoted_text": "was then. That's where the learning curve was then. That's where the learning curve was then. That's where the learning curve",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "was then. That's where the learning curve",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 25 times back-to-back)",
+    "location": {
+     "char_offset": 8259,
+     "paragraph": 0
+    },
+    "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Okay.",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (12-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 37566,
+     "paragraph": 0
+    },
+    "quoted_text": "I'll just answer one more question, and then we'll get to it. I'll just answer one more question, and then we'll get to it. I'll just answer one more question, and then we'll get to it.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I'll just answer one more question, and then we'll get to it.",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 40954,
+     "paragraph": 0
+    },
+    "quoted_text": "It's the same thing. It's the same thing. It's the same thing. It's the same thing.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "It's the same thing.",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "location": {
+     "char_offset": 56130,
+     "paragraph": 0
+    },
+    "quoted_text": "better and better and better and better and better and",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "better and",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt"
+   }
+  ],
+  "Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (12-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 12630,
+     "paragraph": 0
+    },
+    "quoted_text": "the U.S. military is the most important force in the world. The U.S. military is the most important force in the world. The U.S. military is the most important force in the world.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "the U.S. military is the most important force in the world.",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (12-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 12814,
+     "paragraph": 0
+    },
+    "quoted_text": "the U.S. military is the most important force in the world. The U.S. military is the most important force in the world. The U.S. military is the most important force in the world.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "the U.S. military is the most important force in the world.",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 6 times back-to-back)",
+    "location": {
+     "char_offset": 25374,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 13 times back-to-back)",
+    "location": {
+     "char_offset": 27743,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 70721,
+     "paragraph": 0
+    },
+    "quoted_text": "out of here. Does it come out of here? Does it come out of here? Does it come",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "out of here. Does it come",
+    "transcript_path": "corpus/docdocgo/overlays/Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt"
+   }
+  ],
+  "Question_Answer_Session_Jan_2011_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 12 times back-to-back)",
+    "location": {
+     "char_offset": 9118,
+     "paragraph": 0
+    },
+    "quoted_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yes.",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jan_2011_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 15 times back-to-back)",
+    "location": {
+     "char_offset": 22298,
+     "paragraph": 0
+    },
+    "quoted_text": "thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "thank you",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jan_2011_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "location": {
+     "char_offset": 24321,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jan_2011_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 18 times back-to-back)",
+    "location": {
+     "char_offset": 27890,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jan_2011_enxautogen_html.txt"
+   }
+  ],
+  "Question_Answer_Session_Jul_2011_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+    "location": {
+     "char_offset": 25690,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 14 times back-to-back)",
+    "location": {
+     "char_offset": 28171,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 29525,
+     "paragraph": 0
+    },
+    "quoted_text": "i've been in the midst of a final run and i've been in the midst of a final run and i've been in the midst of a final run and",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "i've been in the midst of a final run and",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (8-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 30569,
+     "paragraph": 0
+    },
+    "quoted_text": "we had a meeting with a pastor and we had a meeting with a pastor and we had a meeting with a pastor and we had a meeting with a pastor and",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "we had a meeting with a pastor and",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 9 times back-to-back)",
+    "location": {
+     "char_offset": 35786,
+     "paragraph": 0
+    },
+    "quoted_text": "God's problem. God's problem. God's problem. God's problem. God's problem. God's problem. God's problem. God's problem. God's problem.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "God's problem.",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 63 times back-to-back)",
+    "location": {
+     "char_offset": 40593,
+     "paragraph": 0
+    },
+    "quoted_text": "Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Amen.",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 11 times back-to-back)",
+    "location": {
+     "char_offset": 42948,
+     "paragraph": 0
+    },
+    "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Okay.",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+    "location": {
+     "char_offset": 48737,
+     "paragraph": 0
+    },
+    "quoted_text": "um um um um um um um um",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "um",
+    "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt"
+   }
+  ],
+  "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_2_enxautogen_html.txt": [],
+  "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_3_enxautogen_html.txt": [],
+  "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 44 times back-to-back)",
+    "location": {
+     "char_offset": 544,
+     "paragraph": 0
+    },
+    "quoted_text": "Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Sweetheart.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_III_Part_5_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 27 times back-to-back)",
+    "location": {
+     "char_offset": 19093,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_III_Part_5_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+    "location": {
+     "char_offset": 30571,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_III_Part_5_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "location": {
+     "char_offset": 30640,
+     "paragraph": 0
+    },
+    "quoted_text": "greatкрiterian",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_III_Part_5_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_II_Part_2_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "location": {
+     "char_offset": 3444,
+     "paragraph": 0
+    },
+    "quoted_text": "to네요",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 5072,
+     "paragraph": 0
+    },
+    "quoted_text": "To be kind means to be kind means to be kind means",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "To be kind means",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 17 times back-to-back)",
+    "location": {
+     "char_offset": 18245,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (11-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 23250,
+     "paragraph": 0
+    },
+    "quoted_text": "some of the things that I've been doing. I've been doing some of the things that I've been doing. I've been doing some of the things that I've been doing. I've been doing",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "some of the things that I've been doing. I've been doing",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+    "location": {
+     "char_offset": 30983,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 15 times back-to-back)",
+    "location": {
+     "char_offset": 35236,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_2_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_IV_Part_2_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 1698,
+     "paragraph": 0
+    },
+    "quoted_text": "you can apply it to anything. You can apply it to anything. You can apply it to anything.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "you can apply it to anything.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IV_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 21 times back-to-back)",
+    "location": {
+     "char_offset": 4426,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IV_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 28 times back-to-back)",
+    "location": {
+     "char_offset": 6635,
+     "paragraph": 0
+    },
+    "quoted_text": "Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Mm-hmm.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IV_Part_2_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "location": {
+     "char_offset": 13311,
+     "paragraph": 0
+    },
+    "quoted_text": "輝",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 12 times back-to-back)",
+    "location": {
+     "char_offset": 24512,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 8 times back-to-back)",
+    "location": {
+     "char_offset": 25843,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+    "location": {
+     "char_offset": 32748,
+     "paragraph": 0
+    },
+    "quoted_text": "whir, whir, whir, whir, whir, whir, whir, whir.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "whir,",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 6 times back-to-back)",
+    "location": {
+     "char_offset": 10762,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+    "location": {
+     "char_offset": 19579,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+    "location": {
+     "char_offset": 26006,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "location": {
+     "char_offset": 33052,
+     "paragraph": 0
+    },
+    "quoted_text": "なんか",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+    "location": {
+     "char_offset": 33149,
+     "paragraph": 0
+    },
+    "quoted_text": "God bless you. God bless you. God bless you. God bless you. God bless you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "God bless you.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 10 times back-to-back)",
+    "location": {
+     "char_offset": 1046,
+     "paragraph": 0
+    },
+    "quoted_text": "That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "That's a good thing.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (10-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 3269,
+     "paragraph": 0
+    },
+    "quoted_text": "transferable from books and tapes and or is it only transferable from books and tapes and or is it only transferable from books and tapes and or is it only transferable from books and tapes and or is it only",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "transferable from books and tapes and or is it only",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 3477,
+     "paragraph": 0
+    },
+    "quoted_text": "through the presence of the through the presence of the through the presence of the",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "through the presence of the",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 3561,
+     "paragraph": 0
+    },
+    "quoted_text": "teacher it comes about in several ways teacher it comes about in several ways teacher it comes about in several ways",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "teacher it comes about in several ways",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 3678,
+     "paragraph": 0
+    },
+    "quoted_text": "conceptually and the writings visually conceptually and the writings visually conceptually and the writings visually",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "conceptually and the writings visually",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 3795,
+     "paragraph": 0
+    },
+    "quoted_text": "holding the image of the teacher the holding the image of the teacher the holding the image of the teacher the",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "holding the image of the teacher the",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 3906,
+     "paragraph": 0
+    },
+    "quoted_text": "sound of the voice and the the presence sound of the voice and the the presence sound of the voice and the the presence",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "sound of the voice and the the presence",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 4026,
+     "paragraph": 0
+    },
+    "quoted_text": "of the presence yes and then we found of the presence yes and then we found of the presence yes and then we found",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "of the presence yes and then we found",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 4140,
+     "paragraph": 0
+    },
+    "quoted_text": "that it's even more of touching which that it's even more of touching which that it's even more of touching which",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "that it's even more of touching which",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 15013,
+     "paragraph": 0
+    },
+    "quoted_text": "You're a very handsome man. You're a very handsome man. You're a very handsome man.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "You're a very handsome man.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_VIII_Part_1_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 16 times back-to-back)",
+    "location": {
+     "char_offset": 3148,
+     "paragraph": 0
+    },
+    "quoted_text": "I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I'm sorry.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VIII_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+    "location": {
+     "char_offset": 5702,
+     "paragraph": 0
+    },
+    "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Okay.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 14 times back-to-back)",
+    "location": {
+     "char_offset": 23807,
+     "paragraph": 0
+    },
+    "quoted_text": "1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000,",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "1,000,",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (7-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 29735,
+     "paragraph": 0
+    },
+    "quoted_text": "you don't want to sweep the place. You don't want to sweep the place. You don't want to sweep the place. You don't want to sweep the place.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "you don't want to sweep the place.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 44 times back-to-back)",
+    "location": {
+     "char_offset": 41125,
+     "paragraph": 0
+    },
+    "quoted_text": "Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Cultural mercs.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (3-token unit repeated 14 times back-to-back)",
+    "location": {
+     "char_offset": 8157,
+     "paragraph": 0
+    },
+    "quoted_text": "What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on?",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "What's going on?",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 14122,
+     "paragraph": 0
+    },
+    "quoted_text": "you're in a good space you're in a good space you're in a good space you're in a good space",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "you're in a good space",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 23 times back-to-back)",
+    "location": {
+     "char_offset": 31342,
+     "paragraph": 0
+    },
+    "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Okay.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 51 times back-to-back)",
+    "location": {
+     "char_offset": 33357,
+     "paragraph": 0
+    },
+    "quoted_text": "Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Bye.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_V_Part_1_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 46 times back-to-back)",
+    "location": {
+     "char_offset": 2393,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (3-token unit repeated 19 times back-to-back)",
+    "location": {
+     "char_offset": 14040,
+     "paragraph": 0
+    },
+    "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I don't know.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 72 times back-to-back)",
+    "location": {
+     "char_offset": 25483,
+     "paragraph": 0
+    },
+    "quoted_text": "Okay? Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Okay?",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 27343,
+     "paragraph": 0
+    },
+    "quoted_text": "How does one hold... How does one hold... How does one hold... How does one hold",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "How does one hold...",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 8 times back-to-back)",
+    "location": {
+     "char_offset": 27808,
+     "paragraph": 0
+    },
+    "quoted_text": "It's a beautiful day. It's a beautiful day. It's a beautiful day. It's a beautiful day. It's a beautiful day. It's a beautiful day. It's a beautiful day. It's a beautiful day.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "It's a beautiful day.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (3-token unit repeated 17 times back-to-back)",
+    "location": {
+     "char_offset": 30949,
+     "paragraph": 0
+    },
+    "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I don't know.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 43496,
+     "paragraph": 0
+    },
+    "quoted_text": "Everybody needs someone to mentor them. Everybody needs someone to mentor them. Everybody needs someone to mentor them.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Everybody needs someone to mentor them.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_V_Part_2_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 5 times back-to-back)",
+    "location": {
+     "char_offset": 5478,
+     "paragraph": 0
+    },
+    "quoted_text": "I'm going to do this. I'm going to do this. I'm going to do this. I'm going to do this. I'm going to do this.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I'm going to do this.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 9558,
+     "paragraph": 0
+    },
+    "quoted_text": "perfect. Everything is just perfect. Everything is just perfect. Everything is just",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "perfect. Everything is just",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 22 times back-to-back)",
+    "location": {
+     "char_offset": 15631,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 16646,
+     "paragraph": 0
+    },
+    "quoted_text": "field within a higher field within a higher field within a higher",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "field within a higher",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 13 times back-to-back)",
+    "location": {
+     "char_offset": 23055,
+     "paragraph": 0
+    },
+    "quoted_text": "All right. All right. All right. All right. All right. All right. All right. All right. All right. All right. All right. All right. All right.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "All right.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "location": {
+     "char_offset": 23221,
+     "paragraph": 0
+    },
+    "quoted_text": "ила",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_2_enxautogen_html.txt"
+   }
+  ],
+  "Satsang_Series_Volume_V_Part_4_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 7 times back-to-back)",
+    "location": {
+     "char_offset": 2932,
+     "paragraph": 0
+    },
+    "quoted_text": "That's right. That's right. That's right. That's right. That's right. That's right. That's right.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "That's right.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_4_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 5256,
+     "paragraph": 0
+    },
+    "quoted_text": "why do you die? Why do you die? Why do you die?",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "why do you die?",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_4_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 21 times back-to-back)",
+    "location": {
+     "char_offset": 8945,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_V_Part_4_enxautogen_html.txt"
+   }
+  ],
+  "Serenity_Aug_2005_Part_2.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 6 times back-to-back)",
+    "location": {
+     "char_offset": 11306,
+     "paragraph": 0
+    },
+    "quoted_text": "That guy should do it. That guy should do it. That guy should do it. That guy should do it. That guy should do it. That guy should do it.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "That guy should do it.",
+    "transcript_path": "corpus/docdocgo/overlays/Serenity_Aug_2005_Part_2.txt"
+   }
+  ],
+  "Spiritual_First_Aid_enxautogen_html.txt": [
+   {
+    "book_reference": {
+     "char_offset": 221995,
+     "quote": "appears friendly, and the future looks hopeful and promising. The view of the God of this kind of world is promising, hopeful, and",
+     "slug": "healing_and_recovery"
+    },
+    "confidence": "CANDIDATE",
+    "detector_id": "B2-misquote",
+    "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'god' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.65))",
+    "location": {
+     "char_offset": 17166,
+     "paragraph": 0
+    },
+    "quoted_text": "of god, the",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "of the",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt"
+   },
+   {
+    "book_reference": {
+     "char_offset": 225552,
+     "quote": "we have an orientation to the field.\n\nThat which is truthful carries greater power and calibrates at a higher number. It is a",
+     "slug": "healing_and_recovery"
+    },
+    "confidence": "CANDIDATE",
+    "detector_id": "B2-misquote",
+    "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'dan' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.33))",
+    "location": {
+     "char_offset": 21205,
+     "paragraph": 0
+    },
+    "quoted_text": "truthful, Dan, carries",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "truthful carries",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt"
+   },
+   {
+    "book_reference": {
+     "char_offset": 226523,
+     "quote": "way to avoid spiritual crises and the need for spiritual first aid in the future is to back up a bit and do some individual",
+     "slug": "healing_and_recovery"
+    },
+    "confidence": "CANDIDATE",
+    "detector_id": "B2-misquote",
+    "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'perhaps' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.43))",
+    "location": {
+     "char_offset": 22271,
+     "paragraph": 0
+    },
+    "quoted_text": "up perhaps a",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "up a",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt"
+   },
+   {
+    "book_reference": {
+     "char_offset": 226725,
+     "quote": "of the teaching?” This is helpful because the child within continues to be naïve and innocent. The innocence, on the other hand, is what",
+     "slug": "healing_and_recovery"
+    },
+    "confidence": "CANDIDATE",
+    "detector_id": "B2-misquote",
+    "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'us' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.41))",
+    "location": {
+     "char_offset": 22479,
+     "paragraph": 0
+    },
+    "quoted_text": "within us continues",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "within continues",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt"
+   },
+   {
+    "book_reference": {
+     "char_offset": 234421,
+     "quote": "one can experience the truth of oneself through one’s inner spiritual work. The creation of a safe space then requires teachers who have no desire to exploit or invalidate anyone and are therefore examples of their own principles. They are devoid of exploitation of followers for ‘the sake of the movement’ or ‘the cause’. There is",
+     "slug": "healing_and_recovery"
+    },
+    "confidence": "CANDIDATE",
+    "detector_id": "B2-misquote",
+    "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'within' vs book '' inside a 20/22-word near-verbatim match (tf-idf 0.32))",
+    "location": {
+     "char_offset": 31979,
+     "paragraph": 0
+    },
+    "quoted_text": "of within oneself",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "of oneself",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt"
+   },
+   {
+    "book_reference": {
+     "char_offset": 240104,
+     "quote": "as negative and associated with sin and suffering for which the God of that level is the great destroyer, with the process being one of destruction, self-hatred, self-pity, and",
+     "slug": "healing_and_recovery"
+    },
+    "confidence": "CANDIDATE",
+    "detector_id": "B2-misquote",
+    "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'god' vs book '' inside a 18/19-word near-verbatim match (tf-idf 0.37))",
+    "location": {
+     "char_offset": 38370,
+     "paragraph": 0
+    },
+    "quoted_text": "which God the",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "which the",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt"
+   },
+   {
+    "book_reference": {
+     "char_offset": 250202,
+     "quote": "is not devious. It hasn’t learned to lie; it hasn’t learned the values of judgment and criticism. The child is openly trusting",
+     "slug": "healing_and_recovery"
+    },
+    "confidence": "CANDIDATE",
+    "detector_id": "B2-misquote",
+    "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'spurious' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.49))",
+    "location": {
+     "char_offset": 50649,
+     "paragraph": 0
+    },
+    "quoted_text": "the spurious values",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "the values",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt"
+   },
+   {
+    "book_reference": {
+     "char_offset": 258765,
+     "quote": "but from the ultimate compassion, the owning of ourself from this level, the joy of the spiritual work, and the saying “thank you” to all the",
+     "slug": "healing_and_recovery"
+    },
+    "confidence": "CANDIDATE",
+    "detector_id": "B2-misquote",
+    "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'oneself' vs book 'ourself' inside a 23/24-word near-verbatim match (tf-idf 0.36))",
+    "location": {
+     "char_offset": 61525,
+     "paragraph": 0
+    },
+    "quoted_text": "oneself",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "ourself",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt"
+   }
+  ],
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 15718,
+     "paragraph": 0
+    },
+    "quoted_text": "ACCORDING TO OUR UNDERSTANDING, ACCORDING TO OUR UNDERSTANDING, ACCORDING TO OUR UNDERSTANDING,",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "ACCORDING TO OUR UNDERSTANDING,",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 26008,
+     "paragraph": 0
+    },
+    "quoted_text": "You're not going to the doctor just like that. You're not going to the doctor just like that. You're not going to the doctor just like that.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "You're not going to the doctor just like that.",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 32657,
+     "paragraph": 0
+    },
+    "quoted_text": "too close to the edge. Too close to the edge. Too close to the edge.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "too close to the edge.",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 21 times back-to-back)",
+    "location": {
+     "char_offset": 5009,
+     "paragraph": 0
+    },
+    "quoted_text": "oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "oh no",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 18 times back-to-back)",
+    "location": {
+     "char_offset": 27802,
+     "paragraph": 0
+    },
+    "quoted_text": "alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "alas, and",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 17 times back-to-back)",
+    "location": {
+     "char_offset": 46451,
+     "paragraph": 0
+    },
+    "quoted_text": "No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "No.",
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "location": {
+     "char_offset": 46821,
+     "paragraph": 0
+    },
+    "quoted_text": "throughrareчеaseṇ",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt"
+   }
+  ],
+  "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (10-token unit repeated 6 times back-to-back)",
+    "location": {
+     "char_offset": 7502,
+     "paragraph": 0
+    },
+    "quoted_text": "If you want to know the answer to a question, if you want to know the answer to a question, If you want to know the answer to a question, If you want to know the answer to a question, If you want to know the answer to a question, If you want to know the answer to a question,",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "If you want to know the answer to a question,",
+    "transcript_path": "corpus/docdocgo/overlays/Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "location": {
+     "char_offset": 11716,
+     "paragraph": 0
+    },
+    "quoted_text": "ofGA到",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (3-token unit repeated 10 times back-to-back)",
+    "location": {
+     "char_offset": 22952,
+     "paragraph": 0
+    },
+    "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I don't know.",
+    "transcript_path": "corpus/docdocgo/overlays/Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 35393,
+     "paragraph": 0
+    },
+    "quoted_text": "it's a good thing. It's a good thing. It's a good thing.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "it's a good thing.",
+    "transcript_path": "corpus/docdocgo/overlays/Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "location": {
+     "char_offset": 41811,
+     "paragraph": 0
+    },
+    "quoted_text": "aлись",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "location": {
+     "char_offset": 41855,
+     "paragraph": 0
+    },
+    "quoted_text": "רה",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "location": {
+     "char_offset": 41940,
+     "paragraph": 0
+    },
+    "quoted_text": "def逝게",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 25 times back-to-back)",
+    "location": {
+     "char_offset": 53219,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 18 times back-to-back)",
+    "location": {
+     "char_offset": 25426,
+     "paragraph": 0
+    },
+    "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Okay.",
+    "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 14 times back-to-back)",
+    "location": {
+     "char_offset": 26802,
+     "paragraph": 0
+    },
+    "quoted_text": "ha, ha, ha, ha, ha, ha, ha, ha, ha, ha, ha, ha, ha, ha.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "ha,",
+    "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+    "location": {
+     "char_offset": 27296,
+     "paragraph": 0
+    },
+    "quoted_text": "ha, ha, ha, ha, ha, ha, ha, ha, ha.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "ha,",
+    "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 33534,
+     "paragraph": 0
+    },
+    "quoted_text": "you have to have internal consistency. You have to have internal consistency. You have to have internal consistency.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "you have to have internal consistency.",
+    "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 12 times back-to-back)",
+    "location": {
+     "char_offset": 58715,
+     "paragraph": 0
+    },
+    "quoted_text": "It's good. It's good. It's good. It's good. It's good. It's good. It's good. It's good. It's good. It's good. It's good. It's good.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "It's good.",
+    "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 14 times back-to-back)",
+    "location": {
+     "char_offset": 61317,
+     "paragraph": 0
+    },
+    "quoted_text": "om. Om. Om. Om. Om. Om. Om. Om. Om. Om. Om. Om. Om. Om.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "om.",
+    "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "location": {
+     "char_offset": 61884,
+     "paragraph": 0
+    },
+    "quoted_text": "ہے",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 63955,
+     "paragraph": 0
+    },
+    "quoted_text": "And it's just incredibly beautiful. And it's just incredibly beautiful. And it's just incredibly beautiful. And it's just incredibly beautiful.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "And it's just incredibly beautiful.",
+    "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt": [
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 18 times back-to-back)",
+    "location": {
+     "char_offset": 6665,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (12-token unit repeated 3 times back-to-back)",
+    "location": {
+     "char_offset": 12898,
+     "paragraph": 0
+    },
+    "quoted_text": "They weren't so crazy they wouldn't be doing yoga around the clock. They weren't so crazy they wouldn't be doing yoga around the clock. They weren't so crazy they wouldn't be doing yoga around the clock.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "They weren't so crazy they wouldn't be doing yoga around the clock.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 26 times back-to-back)",
+    "location": {
+     "char_offset": 19096,
+     "paragraph": 0
+    },
+    "quoted_text": "Perfection? Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Perfection?",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (5-token unit repeated 6 times back-to-back)",
+    "location": {
+     "char_offset": 24228,
+     "paragraph": 0
+    },
+    "quoted_text": "the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth,",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "the moment of her birth,",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+    "location": {
+     "char_offset": 31441,
+     "paragraph": 0
+    },
+    "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Okay.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A2-nonsense",
+    "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "location": {
+     "char_offset": 31927,
+     "paragraph": 0
+    },
+    "quoted_text": "yourذ",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": null,
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+    "location": {
+     "char_offset": 33410,
+     "paragraph": 0
+    },
+    "quoted_text": "love goes to love. Love goes to love. Love goes to love. Love goes to love.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "love goes to love.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (3-token unit repeated 14 times back-to-back)",
+    "location": {
+     "char_offset": 34959,
+     "paragraph": 0
+    },
+    "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "I don't know.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 11 times back-to-back)",
+    "location": {
+     "char_offset": 35411,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 17 times back-to-back)",
+    "location": {
+     "char_offset": 40644,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (2-token unit repeated 15 times back-to-back)",
+    "location": {
+     "char_offset": 58062,
+     "paragraph": 0
+    },
+    "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Thank you.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 20 times back-to-back)",
+    "location": {
+     "char_offset": 65533,
+     "paragraph": 0
+    },
+    "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yeah.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 33 times back-to-back)",
+    "location": {
+     "char_offset": 70846,
+     "paragraph": 0
+    },
+    "quoted_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Yes.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_reference": null,
+    "confidence": "CANDIDATE",
+    "detector_id": "A1-repetition",
+    "evidence_class": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+    "location": {
+     "char_offset": 78891,
+     "paragraph": 0
+    },
+    "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "status": "open",
+    "status_by": "run_detectors (automatic, unreviewed)",
+    "suspected_intended_text": "Okay.",
+    "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+   }
+  ]
+ },
+ "signals_total": 185
+}

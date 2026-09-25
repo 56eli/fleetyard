@@ -1,0 +1,123 @@
+{
+ "A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt": [],
+ "Belief,_Trust_and_Credibility_Jun_2008_Part_1_enxautogen_html.txt": [],
+ "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt": [],
+ "Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.txt": [],
+ "God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt": [],
+ "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt": [],
+ "Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt": [],
+ "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt": [],
+ "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_1_enxautogen_html.txt": [],
+ "Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt": [],
+ "Peace_Aug_2009_Part_3_enxautogen_html.txt": [],
+ "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt": [],
+ "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt": [],
+ "Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt": [],
+ "Question_Answer_Session_Jan_2011_enxautogen_html.txt": [],
+ "Question_Answer_Session_Jul_2011_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 402508,
+    "quote": "influences, there’s a",
+    "slug": "power_vs_force__the_hidden_de"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "there's"
+   ],
+   "end": 20109,
+   "note": "transcript is missing \"there's\" inside a 18/20-word near-verbatim book match (tf-idf 0.35)",
+   "quoted": "influences a",
+   "start": 20097,
+   "suspected": "influences, there’s a"
+  }
+ ],
+ "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_2_enxautogen_html.txt": [],
+ "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_3_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_II_Part_2_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_IV_Part_2_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_VIII_Part_1_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_V_Part_1_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_V_Part_2_enxautogen_html.txt": [],
+ "Satsang_Series_Volume_V_Part_4_enxautogen_html.txt": [],
+ "Serenity_Aug_2005_Part_2.txt": [],
+ "Spiritual_First_Aid_enxautogen_html.txt": [
+  {
+   "book_ref": {
+    "char_offset": 214978,
+    "quote": "through, along with practical",
+    "slug": "healing_and_recovery"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "along",
+    "with"
+   ],
+   "end": 8775,
+   "note": "transcript is missing 'along with' inside a 19/22-word near-verbatim book match (tf-idf 0.32)",
+   "quoted": "through, practical",
+   "start": 8757,
+   "suspected": "through, along with practical"
+  },
+  {
+   "book_ref": {
+    "char_offset": 218365,
+    "quote": "This level is",
+    "slug": "healing_and_recovery"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "level"
+   ],
+   "end": 12950,
+   "note": "transcript is missing 'level' inside a 17/20-word near-verbatim book match (tf-idf 0.41)",
+   "quoted": "This is",
+   "start": 12943,
+   "suspected": "This level is"
+  },
+  {
+   "book_ref": {
+    "char_offset": 244807,
+    "quote": "is merely what",
+    "slug": "healing_and_recovery"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "merely"
+   ],
+   "end": 43886,
+   "note": "transcript is missing 'merely' inside a 21/23-word near-verbatim book match (tf-idf 0.35)",
+   "quoted": "is what",
+   "start": 43879,
+   "suspected": "is merely what"
+  },
+  {
+   "book_ref": {
+    "char_offset": 253968,
+    "quote": "speaking. We need to",
+    "slug": "healing_and_recovery"
+   },
+   "detector": "C1-drop",
+   "dropped_words": [
+    "we",
+    "need"
+   ],
+   "end": 54852,
+   "note": "transcript is missing 'we need' inside a 21/24-word near-verbatim book match (tf-idf 0.53)",
+   "quoted": "speaking to",
+   "start": 54841,
+   "suspected": "speaking. We need to"
+  }
+ ],
+ "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.txt": [],
+ "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt": [],
+ "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt": [],
+ "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt": [],
+ "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt": []
+}
