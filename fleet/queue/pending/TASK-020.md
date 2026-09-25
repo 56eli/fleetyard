@@ -1,4 +1,4 @@
-# TASK-020 — M4 shipping-gap repair (q1 + q2 + q3 + q4): fixtures, clean set, threshold provenance, LAW §8 bindings
+# TASK-020 — M4 shipping-gap repair (q1 + q2 + q3 + q4 + q5): fixtures, clean set, threshold provenance, LAW §8 bindings, stale digest lines
 
 - cut by: ORCH-2 (A-2026-09-25-002), lane `arena/01a0d9d0-fleetyard`, 2026-09-25T20:58Z
 - claimant: WORKER-2 (A-2026-09-25-001) — **after TASK-018** (owner ERRATA-25g §5 order), and
@@ -106,6 +106,24 @@
     spent holdout to find out**. Rename the §5d column "rate/tx" to "signals/tx (density, not a
     rate)" so a density is never cited as an error rate.
 
+11. **Stale ledger-digest lines + q5's numbers (q5.7, q5.8).** Three live documents still present
+    the q5-era ledger digest `64977c2f…` as current while the ledger at head is **`d42136c6…`**
+    (TASK-016's regeneration `a4c6655` rewrote the record shape two minutes after q5):
+    `findings/README.md` line 88 ("current ledger sha256 …"), `findings/M4-q5-A1-CLAIM-
+    RECONCILIATION.md` ("New ledger sha256 … recorded in findings/PROVENANCE.json") and
+    `fleet/branches/WORKER-2-M5R-DELIVERY.md` line 80. Append a dated supersession line to each
+    naming `d42136c6…`, the regenerating commit `a4c6655` and the rule "the binding of record is
+    `findings/PROVENANCE.json`"; never rewrite the old line, and **leave the worker's
+    `fleet/CONTROL.log` occurrence alone** (legitimate append-only history). Then append the
+    corrected numbers to the reconciliation doc: ORCH-2's independent re-derivation gives
+    **938/938 A1 claims corroborated** (Unicode rule, own code) and a pre-q5 simulation flags
+    **97** (9 zero-ASCII-token + 61 over-bound + 27 ASCII-mismatch) against the doc's 98/67;
+    claimed unit sizes run to **k=12** (9 claims), not "~11", so `kmax=16` has **4 tokens of
+    headroom** — publish the bound *with* the tally and derive it as max-observed-unit + margin;
+    and quantify the hyphen labelling nuance: **255 of 938 A1 claims (27%)** change verdict
+    depending on whether the tokenizer joins or splits hyphens. The conclusion (no A1 claim-shape
+    change required) is ACCEPTED and unchanged by these corrections.
+
 ## Acceptance (per-item verdicts will be gated by ORCH-2)
 
 - 20.1 every supplement manifest carries tool_commit (reachable), main_head, policy_sha256,
@@ -131,6 +149,10 @@
 - 20.11 PATTERNS §5d carries the exposure-normalized correction (185/187.6 P=0.45 · 12/8.0 P=0.94 ·
   5/19.9 P=7.7e-05) appended, never rewritten in place, with both candidate causes and the
   never-re-run prohibition; the density column is renamed.
+- 20.12 no live document presents a superseded ledger digest as current (the three named lines carry
+  append-only supersession naming `d42136c6…` and `a4c6655`); the reconciliation doc carries
+  ORCH-2's measured numbers (938/938 · 97 = 9+61+27 · max unit k=12 · kmax headroom 4 · hyphen
+  sensitivity 255/938) with the tokenizer and bound published alongside the tally.
 - 20.9 global: no threshold changed; no precision/rate/M6 figure claimed; every output stays
   CANDIDATE-class; LAW §8 manifest for every new run; suite green WITH corpus and skip counts
   reported; nothing written outside the claimant's lane; the sealed split v1 stays byte-identical

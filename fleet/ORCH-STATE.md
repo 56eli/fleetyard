@@ -264,3 +264,36 @@ owner ruling 25d re-grounded, resuming
 - Repair folded into **TASK-020** (now items 1-10, criteria 20.1-20.11) rather than a fourth task;
   queue still three actionable items (018, 020, 017). Next in this turn: **q5** (2f55b0c — A1 claim
   reconciliation, reducer Unicode tokenizer + kmax 16, errata #2) as the last ungated M4 quantum.
+
+## Cycle E (2026-09-25T21:17Z) — M4-q5 gate FAIL/INCOMPLETE on 2 criteria, substance ACCEPTED on my own re-derivation; **M4 gate sweep complete (q1–q5)**
+- **q5 GATE = FAIL / INCOMPLETE** on q5.7 (three live documents present the superseded ledger digest
+  `64977c2f…` as *current*; the ledger at head is `d42136c6…` because TASK-016's regeneration
+  `a4c6655` rewrote the record shape two minutes after q5) and q5.8 (its numbers do not reproduce
+  exactly: claimed units run to **k=12**, not "~11", leaving `kmax=16` four tokens of headroom; my
+  pre-q5 simulation flags **97** = 9 zero-ASCII-token + 61 over-bound + 27 ASCII-mismatch vs the
+  doc's 98/67; and the hyphen nuance is unquantified — **255/938 A1 claims, 27%, are
+  tokenizer-sensitive**). PASS on q5.1–q5.6. Table: fleet/GATES.md 21:17Z.
+- **What I could carry forward (the useful part):** with my own direct periodicity test over
+  casefolded Unicode tokens — an independent implementation, not their longest-run search — **938/938
+  A1 claims corroborate, 0 failures**, and my recomputation of the ledger's `span_fully_periodic`
+  agrees on **938/938**. So the corroboration column PATTERNS §3 quotes (938/938 · 158/158 · 12/12 ·
+  228/228 = 1,336/1,336) is now **ORCH-2-VERIFIED**: that is exactly the receipt TASK-018 item 0b and
+  TASK-020 item 3 need when they bind those figures to the ledger digest, and it closes the q1.4d
+  story from the evidence side.
+- **Nothing protected moved:** ledger `d42136c6…` (= my M5-R PASS binding), 1,334 findings,
+  CANDIDATE 1,331 + CERTAIN-inherited 3, instances 938/158/12/228 = 1,336 reconciling with 1,334 via
+  two dual-detector findings, `REVIEW-QUEUE.md` 100 entries at `4e114f1`, `2f55b0c` and head (the
+  194-line churn dropped nothing), both q5 regression tests present, suite 26 OK 0 skipped WITH
+  corpus. The M5-R PASS is unaffected — q5 is an ancestor of `1beadd9` where I issued it.
+- **M4 gate sweep complete:** q1 FAIL(1) · q2 FAIL(5) · q3 FAIL(3) · q4 FAIL(2 + precision NOT
+  GATEABLE → TASK-019b) · q5 FAIL(2). Standing consequences: no M4 quantum citable as passed, no
+  detector promotable, no rate exists, TASK-015 (M6 FINAL) stays BLOCKED on split v2. The five gates
+  share ONE shape — §8 bindings that do not resolve plus shipping evidence that existed and was never
+  run — which is why the repair is a single task (TASK-020, items 1–11, criteria 20.1–20.12) rather
+  than five, and why every substance test I could run (byte-identical reproductions, 100% citation
+  exactness both directions, isolation both directions, one-shot discipline, the 185/185 receipt, the
+  938/938 re-derivation) came back clean. That contrast is the honest headline for the owner: the
+  work is sound and the paperwork is not, and the paperwork is what makes sound work unverifiable.
+- Next in this turn: fleet re-check cycle (boss lane for orders/CONCERNs, worker lane for a TASK-018
+  claim, main for new errata), then idle-with-cadence — heartbeat + CONTROL.log at ≤300 s — while the
+  worker's owner-ordered tasks run. Turn does not end for status or idleness (ERRATA-25g).

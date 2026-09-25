@@ -304,3 +304,67 @@ Role: ORCHESTRATOR (ORCH-2, A-2026-09-25-002) · lane arena/01a0d9d0-fleetyard.
   (one-shot evaluation) -> TASK-015 (M6 FINAL, BLOCKED). M4 gate state: q1 FAIL(1) · q2 FAIL(5) ·
   q3 FAIL(3) · q4 FAIL(2) · q5 ungated (next) — four quanta, one recurring shape (§8 bindings +
   unrun fixture/clean evidence), which is why the repair is ONE task and not four.
+2026-09-25T21:17Z GATE TASK-014 q5 (A1 claim-shape reconciliation, 2f55b0c) = FAIL / INCOMPLETE
+  (ORCH-2, worker head 219075a, main 7d033ab) on q5.7 and q5.8; the SUBSTANTIVE CONCLUSION IS
+  ACCEPTED on my own independent re-derivation. FAILED: q5.7 three live documents present the
+  q5-era ledger digest 64977c2f as CURRENT while the ledger at head is d42136c6 (findings/README.md
+  line 88; findings/M4-q5-A1-CLAIM-RECONCILIATION.md; fleet/branches/WORKER-2-M5R-DELIVERY.md
+  line 80) — cause visible in the timeline: TASK-016's repair dada3e6 (19:17:57Z) and regeneration
+  a4c6655 (19:18:25Z) rewrote the ledger's record shape two minutes after q5 (19:16:05Z) and the
+  prose was never re-bound; under the fail-closed digest rule a reader following those lines
+  computes a mismatch and rejects valid findings. The fourth occurrence (worker fleet/CONTROL.log)
+  is legitimate append-only history and must stay. q5.8 published numbers do not reproduce exactly:
+  my census of all 938 claimed unit sizes is k=1 x248, 2 x179, 3 x92, 4 x124, 5 x84, 6 x63, 7 x57,
+  8 x30, 9 x21, 10 x20, 11 x11, **12 x9** — the maximum is 12, not "~11", so kmax=16 has only 4
+  tokens of headroom and the bound must be published with the tally; my simulation of the pre-q5
+  regime (ASCII tokenizer + kmax=8) flags **97** (9 zero-ASCII-token + 61 over-bound + 27
+  ASCII-mismatch) against the doc's 98 flags / 67 attributed; and the hyphen labelling nuance is
+  described but not quantified — I measured **255 of 938 A1 claims (27%)** as tokenizer-sensitive
+  (joining vs splitting hyphens changes the verdict). PASSED: q5.1 root cause reproduced
+  independently (my own direct periodicity test over casefolded Unicode tokens: **938/938 A1 claims
+  corroborate, 0 failures** — the instrument was wrong, the v1 detector's claims were right), q5.2
+  the three worked examples (M5R-0031 9x7 at A_Review_of_the_Work_Sep_2007_Part_3 @7822; M5R-0069
+  Hangul 4x6 at @57904 where the ASCII tokenizer yields 0 tokens and Unicode yields 24; M5R-0036
+  Mm-hmm 1x8 under the joining rule, matching the ledger's recorded 1x8) plus my recomputation of
+  the ledger's span_fully_periodic field agreeing **938/938 with 0 mismatches**, q5.3 nothing
+  protected moved (ledger sha d42136c6 = my M5-R PASS binding; 1,334 findings; CANDIDATE 1,331 +
+  CERTAIN-inherited 3, HIGH 0; seeded 3 / independent 1,331; detector instances A1 938 (937 solo +
+  1 with B1) / A2 158 (157+1) / B1 12 (10+2) / B2 228 = 1,336, reconciling with 1,334 findings via
+  the two dual-detector findings; findings/PROVENANCE.json a complete §8 manifest — ledger d42136c6,
+  by_transcript c1ec4da8, tool_commit dada3e60, tool_sha256 6d4bb9ce, policy 0fe20a60, book store
+  c0892fcd, corpus zip 3f36c520, overlays 027f82a0, records d8c93536, fixtures c5d8f6f3;
+  REVIEW-QUEUE.md holds 100 entries at 4e114f1, 2f55b0c and head so the 194-line churn dropped
+  nothing and its header still says priority is mechanical and changes no class), q5.4 both
+  regression tests present at head (test_repetition_rederive_handles_non_latin_and_long_units,
+  test_tokenizer_is_unicode_aware) and the suite re-run by me WITH corpus: Ran 26 tests, OK,
+  0 skipped; source confirms TOKEN_RE Unicode rule and repetition_rederive(kmax=16), q5.5 errata
+  form (errata #2 referenced in findings/README.md line 65 and findings/SUMMARY.md line 109; it
+  supersedes errata #1's corroboration table without deleting it; CANON 15 trust-ledger note states
+  both errata corrected their own instrument and "recovery credit does not erase the breaches"),
+  q5.6 claim discipline (rule-quality conclusion only — "no A1 claim-shape change is required";
+  SUMMARY keeps machine-adjudicated honesty scope, the coverage row 230/230/230/0/230/24 and "no
+  corpus-wide error rate in this document"; no class upgraded). ACCEPTED AND CARRIED: the
+  corroboration column PATTERNS §3 quotes (A1 938/938 · A2 158/158 · B1 12/12 · B2 228/228 =
+  1,336/1,336) is now ORCH-2-VERIFIED — the receipt TASK-018 item 0b and TASK-020 item 3 need when
+  they bind those figures to the ledger digest. The M5-R PASS is unaffected: q5 is an ancestor of
+  1beadd9 where I issued it at 19:58Z. No pause (proportionality recorded, reversible).
+  Restriction: q5 not citable as passed; the three stale digest lines are NOT bindings (use
+  findings/PROVENANCE.json -> d42136c6); the doc's 98/67/~11 figures must not be quoted without my
+  97/70/12 and 255/938. Repair = TASK-020 item 11 (task now items 1-11, criteria 20.1-20.12).
+  Detail: fleet/GATES.md 21:17Z.
+2026-09-25T21:17Z M4-GATE-SWEEP ORCH-2 COMPLETE: q1 FAIL(1 criterion) · q2 FAIL(5) · q3 FAIL(3) ·
+  q4 FAIL(2, precision NOT GATEABLE -> TASK-019b) · q5 FAIL(2). Consequences standing: **no M4
+  quantum is citable as passed, no detector is promotable, no rate exists, M6 FINAL (TASK-015)
+  stays BLOCKED** on split v2. One recurring shape across all five quanta — LAW §8 bindings that do
+  not resolve (q2's detector digest matches no committed blob, q3's binds an older commit, q4's v1
+  leg has no corpus/store/output digest, q5's prose cites a superseded ledger digest) plus shipping
+  evidence that existed and was not run (16 CF fixtures at evidence/fixtures/confirmed, 59 hashed
+  clean passages at evidence/fixtures/clean). Substance, wherever I could test it, held: q3 whole-run
+  reproduction byte-identical (86c8f57d) and 49/49 citations byte-exact; q2 shards 1+3 byte-identical
+  (64a97be5/092d6341 = 93/122 signals) with 122/122 transcript spans and 122/122 book citations
+  byte-exact and 113/122 drops fully consistent; isolation airtight in both directions (tuning runs
+  never read the holdout; holdout runs never read tuning); q4's one-shot discipline provable from
+  params equality and the absence of any post-run threshold commit; q4's reproduction receipt true
+  (185/185, 0 per-transcript mismatches against the committed m5-raw records); q5's root cause
+  reproduced (938/938). Repair is ONE task (TASK-020 items 1-11) behind TASK-018, then TASK-017,
+  then TASK-019a seal / TASK-019b one-shot evaluation, then TASK-015.

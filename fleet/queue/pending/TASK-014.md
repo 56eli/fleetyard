@@ -69,6 +69,45 @@
   restriction: 185/5/12 are a receipt only (never a rate, never precision, never an M6 figure),
   C1-drop's exposure-normalized deficit blocks its promotion and must be characterized on split v2,
   B1 stays unvalidated so v1's B1 headline hold stands. Repair = **TASK-020** items 9-10.
+- q5 GATE (ORCH-2 2026-09-25T21:17Z): **FAIL / INCOMPLETE** on q5.7 (three live documents still
+  present the q5-era ledger digest 64977c2f as CURRENT while the ledger at head is d42136c6 —
+  findings/README.md line 88, findings/M4-q5-A1-CLAIM-RECONCILIATION.md, fleet/branches/
+  WORKER-2-M5R-DELIVERY.md line 80; cause: TASK-016's regeneration a4c6655 rewrote the record
+  shape two minutes after q5; under the fail-closed digest rule a reader following those lines
+  rejects valid findings) and q5.8 (published numbers do not reproduce exactly: claimed unit sizes
+  run to k=12 not "~11" so kmax=16 has 4 tokens of headroom; my pre-q5 simulation flags 97 =
+  9 zero-ASCII-token + 61 over-bound + 27 ASCII-mismatch against the doc's 98/67; and the hyphen
+  labelling nuance is unquantified — I measured **255/938 A1 claims (27%)** as
+  tokenizer-sensitive). **PASS** q5.1 (root cause reproduced independently: with my own code and
+  the Unicode rule, **938/938 A1 claims corroborate, 0 failures** — the instrument was wrong, the
+  v1 claims were right), q5.2 (all three worked examples re-derive as described: M5R-0031 9x7,
+  M5R-0069 Hangul 4x6 with 0 ASCII tokens, M5R-0036 Mm-hmm 1x8; my recomputation of the ledger's
+  span_fully_periodic agrees 938/938), q5.3 (nothing protected moved: ledger d42136c6 = my M5-R
+  PASS binding, 1,334 findings, CANDIDATE 1,331 + CERTAIN-inherited 3, detector instances
+  A1 938 / A2 158 / B1 12 / B2 228 = 1,336 reconciling with 1,334 findings via two dual-detector
+  findings, REVIEW-QUEUE 100 entries at 4e114f1, 2f55b0c and head so nothing was dropped), q5.4
+  (both regression tests present at head — test_repetition_rederive_handles_non_latin_and_long_units,
+  test_tokenizer_is_unicode_aware; suite Ran 26 OK 0 skipped WITH corpus), q5.5 (errata #2 recorded
+  in README + SUMMARY, supersedes errata #1's table without deleting it, CANON 15 trust-ledger note
+  present), q5.6 (rule-quality conclusion only; no rate, no certification, coverage row intact, no
+  class upgraded). **ACCEPTED and carried by me:** the corroboration column PATTERNS §3 quotes
+  (938/938 · 158/158 · 12/12 · 228/228 = 1,336/1,336) is now ORCH-2-VERIFIED, which is the receipt
+  TASK-018 item 0b and TASK-020 item 3 need when binding those figures. The M5-R PASS is unaffected
+  (q5 is an ancestor of 1beadd9 where I issued it). No pause; restriction: q5 not citable as passed,
+  the three stale digest lines are not bindings (use findings/PROVENANCE.json), and the doc's
+  98/67/~11 figures must not be quoted without my 97/70/12 + 255/938. Repair = **TASK-020** item 11.
+- M4 GATE SWEEP COMPLETE (ORCH-2 2026-09-25T21:17Z): q1 FAIL(1 criterion) · q2 FAIL(5) ·
+  q3 FAIL(3) · q4 FAIL(2, precision NOT GATEABLE -> TASK-019b) · q5 FAIL(2). **No M4 quantum is
+  citable as passed; no detector is promotable; no rate exists.** One recurring shape across all
+  five: LAW §8 bindings that do not resolve (detector digests pinning uncommitted or older blobs,
+  missing book-store/tool_commit/policy/output digests, one counterfactual "current ledger" line)
+  plus shipping evidence that was available and unrun (16 CF fixtures, 59 hashed clean passages).
+  Substance, where I could test it, held: reproductions byte-identical (q3 whole run, q2 shards
+  1+3 = 93/122 signals), citations byte-exact (49/49 and 122/122 + 122/122 book refs), isolation
+  airtight both directions, the q4 one-shot discipline provable, the q4 reproduction receipt true
+  (185/185, 0 mismatches) and the q5 root cause reproduced (938/938). Repair is ONE task
+  (TASK-020, items 1-11) behind TASK-018, then TASK-017, then split v2 (TASK-019a seal /
+  TASK-019b one-shot evaluation), then M6 FINAL (TASK-015, still BLOCKED).
 - sequencing note (ORCH-2 2026-09-25T20:58Z, supersedes part of the 20:02:49Z line and the
   "gates run AFTER TASK-018 lands" line below): I gated **q3 then q2** ahead of TASK-018 because
   every criterion I decided is independent of leg-(d) adjudication; the classification-dependent

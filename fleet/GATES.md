@@ -585,3 +585,58 @@ independently; nothing false was shipped and the holdout was not abused. Repair 
 **TASK-020** (items 9–10) rather than a fourth task, keeping the queue at three actionable items
 (ERRATA-25f §4). If BOSS-2 or the owner reads ORCHESTRATOR.md step 3 as requiring a pause on any
 FAIL, I will issue one in the same cycle on request.
+
+## 2026-09-25T21:17Z — GATE: TASK-014 q5 (M4 A1 claim-shape reconciliation, `2f55b0c`) — VERDICT: **FAIL / INCOMPLETE** (two criteria) · the substantive conclusion is **ACCEPTED on my own re-derivation**
+
+- gated at WORKER-2 head `219075a` (main `7d033ab`); artefacts
+  `findings/M4-q5-A1-CLAIM-RECONCILIATION.md`, `findings/{README.md,SUMMARY.md,REVIEW-QUEUE.md,
+  PROVENANCE.json,ledger.jsonl}`, `tools/m5r_reduce.py` (TOKEN_RE, `repetition_rederive(kmax=16)`),
+  `tests/test_m5r.py`, `tools/PATTERNS.md` §3/§5e, `fleet/branches/WORKER-2-M5R-DELIVERY.md`.
+- q5 was self-served by the worker as an M4 queue item (not a criterion block I cut), so I gate it
+  against the campaign defaults plus the claim it makes: **is the root cause what it says it is,
+  did anything protected move, and do the published numbers reproduce?** Its reducer fix already
+  sits inside the M5-R PASS (q5 `19:16:05Z` is an ancestor of `1beadd9`, where I PASSed M5-R at
+  19:58Z and re-affirmed at 20:12Z), so this gate does not re-open M5-R.
+
+| # | criterion | verdict | independent evidence (my own runs) |
+|---|---|---|---|
+| q5.1 | the root-cause claim: 98 "claim not re-derived" A1 flags were **reducer** defects (ASCII-only tokenizer; `kmax=8` search bound), not v1 detector defects | **PASS — reproduced independently, to within one flag** | I re-derived every A1 claim **with my own code** (direct periodicity test over casefolded tokens, not their longest-run search). Under the **new** regime (Unicode rule `[^\W_]+(?:['’\-][^\W_]+)*`, bound 16): **938/938 A1 claims corroborate, 0 failures**. Under a **simulation of the pre-q5 regime** (ASCII `[A-Za-z']+` + bound 8): **97 of 938 would flag**, decomposed as **9** spans with zero ASCII tokens (Hangul/Kanji — e.g. M5R-0069 `이것은 아드레날린을 분비하는 것입니다.` ×6, M5R-0082, M5R-0087, M5R-0088, M5R-0101), **61** claims whose unit length exceeds the bound, and **27** ASCII-token mismatches. The doc reports 98 flags and attributes 67 to "this or the next cause"; my decomposition gives 97 and 70. The one-flag and three-attribution differences are simulation boundaries, not substance: **the root cause is confirmed — the instrument was wrong, the v1 A1 claims were right** |
+| q5.2 | the three named worked examples re-derive as described | **PASS** | M5R-0031 (`A_Review_of_the_Work_Sep_2007_Part_3` @7822, "I knew Bill Wilson and he wasn't a Pope." ×7): my test = period 9 × 7, ledger records 9 × 7 ✓. M5R-0069 (@57904, Hangul ×6): ASCII tokenizer yields **0 tokens**, Unicode yields 24, my test = period 4 × 6 ✓ (exactly the defect described). M5R-0036 (@35535, `Mm-hmm.` ×8): joining tokenizer = 8 tokens → period 1 × 8, matching the ledger's recorded 1 × 8 ✓ (the doc's "period 2" describes the hyphen-splitting variant — both describe the same bytes, as the doc says). My recomputation of the ledger's `span_fully_periodic` field agrees on **938/938, 0 mismatches** |
+| q5.3 | nothing protected moved: ledger findings, classes, counts, digests | **PASS** | Ledger at head = **1,334 findings**, sha256 `d42136c6…` — **identical to the binding in my M5-R PASS**; classes **CANDIDATE 1,331 + CERTAIN (inherited fixture) 3**, HIGH 0, seeded 3 / independent 1,331; detector instances **A1 938** (937 solo + 1 with B1) · **A2 158** (157 + 1) · **B1 12** (10 + 2) · **B2 228** = **1,336**, which reconciles exactly with 1,334 findings (two findings carry two detectors). `findings/PROVENANCE.json` at head binds `ledger.jsonl d42136c6…`, `by_transcript_digest c1ec4da8…`, `tool_commit dada3e60…`, `tool_sha256 6d4bb9ce…`, `policy_sha256 0fe20a60…`, book store `c0892fcd…`, corpus zip `3f36c520…`, overlays `027f82a0…`, records `d8c93536…`, fixtures `c5d8f6f3…` — a complete §8 manifest (the one I PASSed). `REVIEW-QUEUE.md` holds **100 entries at `4e114f1`, at `2f55b0c` and at head** → the 194-line churn was re-scoring/re-ordering, **no finding dropped**; its header still states priority is mechanical and changes no class |
+| q5.4 | the fix ships with regression tests and the suite stays green | **PASS** | `tests/test_m5r.py` carries both new tests at head: `test_repetition_rederive_handles_non_latin_and_long_units` and `test_tokenizer_is_unicode_aware`. Suite at head WITH corpus: **Ran 26 tests, OK, 0 skipped** (re-run by me this cycle). Source confirms the fix: `TOKEN_RE = re.compile(r"[^\W_]+(?:['’\-][^\W_]+)*", re.UNICODE)` and `def repetition_rederive(span_text, kmax=16)` with the rationale in a comment |
+| q5.5 | errata form: recorded, append-only, both errata readable, no silent rewrite | **PASS** | Errata #2 is referenced in `findings/README.md` ("Claim corroboration (after M4-q5 errata #2): A1 938/938 · A2 158/158 · B1 12/12 · B2 228/228, 0 flagged") and in `findings/SUMMARY.md` ("After errata #2 … every checkable claim corroborates; a 'not corroborated' row would be a **review flag**, not a verdict"); the reconciliation doc states it **supersedes errata #1's corroboration table** rather than deleting it, and errata #1 (fixture-overlap span-vs-span) is still readable. The doc also carries the CANON 15 trust-ledger note: both errata corrected *their own* instrument, each with a regression test and an append-only record, and "recovery credit does not erase the breaches" — the right posture |
+| q5.6 | claim discipline: no rate, no certification, CANDIDATE never blended | **PASS** | The reconciliation doc and PATTERNS §5e state a **rule-quality** conclusion only ("no A1 claim-shape change is required"); SUMMARY keeps the honesty scope (machine-adjudicated, no audio, no human pass, "no corpus-wide error rate in this document"), the coverage row `transcripts 230 | detector-run 230 | machine-adjudicated 230 | human finding-pass audited 0 | pending human review 230 | zero-finding transcripts 24 (not shown clean)` is intact, and no class was upgraded by the fix |
+| q5.7 | digest bindings in the documents q5 touched must be true **at head** | **FAIL** | Three live documents still present the q5-era ledger digest as current, and it is **not**: `findings/README.md` line 88 — "current ledger sha256 `64977c2fed5be3f5…`"; `findings/M4-q5-A1-CLAIM-RECONCILIATION.md` — "New ledger sha256 `64977c2f…` recorded in `findings/PROVENANCE.json`"; `fleet/branches/WORKER-2-M5R-DELIVERY.md` line 80 — same. The actual ledger at head is **`d42136c6…`** (recomputed by me; PROVENANCE.json agrees). Cause is visible in the timeline: q5 committed 19:16:05Z, then TASK-016's repair (`dada3e6` 19:17:57Z) and regeneration (`a4c6655` 19:18:25Z) rewrote the ledger's record shape two minutes later, changing its bytes — and the three prose documents were never re-bound. Under this campaign's fail-closed digest rule a reader who follows README line 88 computes a mismatch and **rejects valid findings**; that is a live hazard, not cosmetics. (The fourth occurrence, in the worker's `fleet/CONTROL.log`, is legitimate append-only history and must stay.) Repair: append-only supersession lines naming `d42136c6…` and the regenerating commit → TASK-020 item 11 |
+| q5.8 | the published numbers reproduce | **FAIL (three imprecisions; the conclusion stands)** | (a) The doc says A1 claims reference units "of 9, 10 and 11" / "up to ~11"; my census of all 938 claimed unit sizes is `k=1 ×248, 2 ×179, 3 ×92, 4 ×124, 5 ×84, 6 ×63, 7 ×57, 8 ×30, 9 ×21, 10 ×20, 11 ×11, **12 ×9**` → the maximum is **12**, so `kmax=16` has only **4 tokens of headroom**; the bound should be published *with* the tally and derived from the data (max observed unit + margin), or the same false-flag class returns on a longer unit. (b) The flag count and its decomposition do not reproduce exactly: doc 98 flags / 67 attributed to the two named causes; my simulation 97 / 70 (9 zero-token + 61 over-bound + 27 ASCII-mismatch). (c) The hyphen labelling nuance is described but **not quantified**: I measured it — **255 of 938 A1 claims (27%)** change their (period, repeats) verdict depending on whether the tokenizer joins or splits hyphens (`Mm-hmm` = 1 token vs 2). That is material for any future re-derivation and for the M6 report, and it is exactly what the doc's own instrument lesson ("a re-derivation must declare its tokenizer and bounds") requires be published with a number |
+
+### Verdict
+
+**TASK-014 q5 = FAIL / INCOMPLETE** on q5.7 (counterfactual "current ledger sha256" bindings in
+three live documents) and q5.8 (published numbers that do not reproduce exactly: max unit 12 not
+~11, 98/67 vs my 97/70, and an unquantified 255/938 tokenizer sensitivity). **PASS** on q5.1
+(root cause independently reproduced), q5.2 (all three worked examples, plus 938/938 agreement on
+`span_fully_periodic`), q5.3 (nothing protected moved — ledger `d42136c6…`, 1,334 findings,
+1,331/3 classes, 1,336 instances, review queue 100 entries at all three commits), q5.4 (both
+regression tests present, suite 26 OK 0 skipped WITH corpus), q5.5 (errata form), q5.6 (claim
+discipline).
+
+**The substantive conclusion is ACCEPTED and I can carry it:** the 98 A1 flags were an instrument
+defect, not a detector defect; **A1 corroboration is 938/938 under my own independent
+re-derivation**, and the corroboration column PATTERNS §3 quotes (A1 938/938 · A2 158/158 ·
+B1 12/12 · B2 228/228 = 1,336/1,336) is now **verified by the orchestrator** — which is the
+evidence TASK-018 item 0b and TASK-020 item 3 need when they bind those figures to the ledger
+digest. No A1 claim-shape change is required.
+
+**Restriction (artefact-scoped, fail-safe):** q5 may not be cited as passed; the three stale
+digest lines must not be used as bindings (use `findings/PROVENANCE.json` → `d42136c6…`); the
+doc's 98/67/~11 figures must not be quoted without my measured 97/70/12 and the 255/938
+tokenizer-sensitivity count; `kmax=16`'s 4-token headroom must be stated wherever the tally is
+published. The M5-R PASS is unaffected (it was issued on a tree that already contained q5).
+
+### Brake decision (same proportionality test as q1–q4 — recorded and reversible)
+
+No activation-scoped PAUSE: the failed criteria are stale cross-references and number precision in
+a document whose central claim I verified myself and whose protected artefacts did not move.
+Repair folds into **TASK-020 item 11** (append-only supersession lines + corrected numbers +
+published tokenizer/bound with the tally). Queue stays at three actionable tasks (TASK-018,
+TASK-020, TASK-017) per ERRATA-25f §4.
