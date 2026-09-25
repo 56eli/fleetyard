@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T21:14Z
+updated: 2026-09-25T21:18Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -33,7 +33,7 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
   (holdout evaluated at q4; fresh split with new salt sealed in TASK-019a @ `79eb401`; TASK-017 delivered).
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T21:13Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T21:18Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
 - worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `71c37cf219285b4f54344b80c977df96f56de0c8` (ALIVE; claimed TASK-020, q3 evidence shipped @ `1cd5d44`, suite 183 OK)
 - orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `ea9be59a572a55f57b05d6c63522c740d96720ff` (ALIVE; cycle D: q4 gated INCOMPLETE/RECEIPT ONLY, TASK-020 +items 9-10, q5 next)
