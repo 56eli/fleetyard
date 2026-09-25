@@ -7,7 +7,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "for days you spend all day lying on a mattress learning how to take off in various altered states i remember one time",
+      "book": "for 10 days you spend all day lying on a mattress learning how to take off in various altered states i remember one time",
       "op": "replace",
       "transcript": "older"
      }
@@ -83,12 +83,12 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "you were born and they re going to be that way after you re dead so there s no point in taking it personally they re not doing it for your entertainment they re doing it",
+      "book": "you were born and they’re going to be that way after you’re dead so there’s no point in taking it personally they’re not doing it for your entertainment they’re doing it",
       "op": "insert",
       "transcript": null
      },
      {
-      "book": "that s the way they are they re mean and gruff and nasty or self centered or whatever you wanna think they are but they re not doing that cause of you they re just doing that because that s the way they are",
+      "book": "that’s the way they are they’re mean and gruff and nasty or self-centered or whatever you wanna think they are but they’re not doing that cause of you they’re just doing that because that’s the way they are",
       "op": "insert",
       "transcript": null
      }
@@ -162,12 +162,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 10-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 10-token x3 vs re-derived 10 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -180,17 +180,19 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "rederived_repetition": {
-   "longest_run": null,
-   "span_fully_periodic": false,
-   "span_period_tokens": null,
-   "span_repeats": null,
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 10
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 10,
+   "span_repeats": 3,
    "tokens": 30
   },
   "review_score": [
-   1,
-   [
-    "runner claim not re-derived"
-   ]
+   0,
+   []
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
   "seeded": false,
@@ -203,10 +205,14 @@
     "quote_len": 149,
     "quote_verified": true,
     "rederived": {
-     "longest_run": null,
-     "span_fully_periodic": false,
-     "span_period_tokens": null,
-     "span_repeats": null,
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 10
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 10,
+     "span_repeats": 3,
      "tokens": 30
     },
     "runner_evidence": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
@@ -234,7 +240,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "any spiritual teacher or teaching that you read you are picking up a frequency and a vibration and if you like nisargadatta maharaj then you re probably going",
+      "book": "any spiritual teacher or teaching that you read you are picking up a frequency and a vibration and if you like nisargadatta maharaj then you’re probably going",
       "op": "replace",
       "transcript": "mr gadatta"
      }
@@ -310,7 +316,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "to merely observe it to merely think it already has changed the probability you haven t caused it but you ve increased the probability what",
+      "book": "to merely observe it to merely think it already has changed the probability you haven’t caused it but you’ve increased the probability what",
       "op": "replace",
       "transcript": "instilled"
      }
@@ -386,7 +392,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "probability you haven t caused it but you ve increased the probability",
+      "book": "probability you haven’t caused it but you’ve increased the probability",
       "op": "insert",
       "transcript": null
      },
@@ -550,7 +556,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "who don t want to take medication i d say why don t you try you know whatever was ostensibly helping depression at",
+      "book": "who don’t want to take medication i’d say why don’t you try you know whatever was ostensibly helping depression at",
       "op": "insert",
       "transcript": null
      },
@@ -629,12 +635,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 11-token x4 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 11-token x4 vs re-derived 11 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -647,17 +653,19 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "rederived_repetition": {
-   "longest_run": null,
-   "span_fully_periodic": false,
-   "span_period_tokens": null,
-   "span_repeats": null,
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 11
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 11,
+   "span_repeats": 4,
    "tokens": 44
   },
   "review_score": [
-   1,
-   [
-    "runner claim not re-derived"
-   ]
+   0,
+   []
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
   "seeded": false,
@@ -670,10 +678,14 @@
     "quote_len": 227,
     "quote_verified": true,
     "rederived": {
-     "longest_run": null,
-     "span_fully_periodic": false,
-     "span_period_tokens": null,
-     "span_repeats": null,
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 11
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 11,
+     "span_repeats": 4,
      "tokens": 44
     },
     "runner_evidence": "signals: A1-repetition (11-token unit repeated 4 times back-to-back)",
@@ -699,12 +711,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 10-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 10-token x3 vs re-derived 10 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -717,17 +729,19 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "rederived_repetition": {
-   "longest_run": null,
-   "span_fully_periodic": false,
-   "span_period_tokens": null,
-   "span_repeats": null,
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 10
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 10,
+   "span_repeats": 3,
    "tokens": 30
   },
   "review_score": [
-   1,
-   [
-    "runner claim not re-derived"
-   ]
+   0,
+   []
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
   "seeded": false,
@@ -740,10 +754,14 @@
     "quote_len": 128,
     "quote_verified": true,
     "rederived": {
-     "longest_run": null,
-     "span_fully_periodic": false,
-     "span_period_tokens": null,
-     "span_repeats": null,
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 10
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 10,
+     "span_repeats": 3,
      "tokens": 30
     },
     "runner_evidence": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
@@ -1009,7 +1027,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "i mean there was no identification with the body so the bodyness does not hold you back it s only your identification with the",
+      "book": "i mean there was no identification with the body so the bodyness does not hold you back it’s only your identification with the",
       "op": "replace",
       "transcript": "bodiness"
      }
@@ -1083,12 +1101,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 1-token x15 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 1-token x15 vs re-derived 1 x15 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -1101,16 +1119,20 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "rederived_repetition": {
-   "longest_run": null,
-   "span_fully_periodic": false,
-   "span_period_tokens": null,
-   "span_repeats": null,
-   "tokens": 0
+   "longest_run": {
+    "repeats": 15,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 15,
+   "tokens": 15
   },
   "review_score": [
    1,
    [
-    "runner claim not re-derived"
+    "periodic run x15"
    ]
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
@@ -1124,11 +1146,15 @@
     "quote_len": 73,
     "quote_verified": true,
     "rederived": {
-     "longest_run": null,
-     "span_fully_periodic": false,
-     "span_period_tokens": null,
-     "span_repeats": null,
-     "tokens": 0
+     "longest_run": {
+      "repeats": 15,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 15,
+     "tokens": 15
     },
     "runner_evidence": "signals: A1-repetition (1-token unit repeated 15 times back-to-back)",
     "runner_subtypes": [

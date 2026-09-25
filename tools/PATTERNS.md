@@ -36,7 +36,7 @@ words, numbers, citations. That gap is the honest headline of this page.
 
 | detector | raw signals | claim corroboration (M5-R) | fixture recall | precision | promotable? |
 |---|---|---|---|---|---|
-| A1-repetition | 938 | 840/938 re-derived; 98 flagged (claim or tokenizer shape) | 1/16 (CF-006) | **unmeasured** | no |
+| A1-repetition | 938 | **938/938 re-derived** (M4-q5: the 98 flags were reducer defects) | 1/16 (CF-006) | **unmeasured** | no |
 | A2-nonsense | 158 | 158/158 | 1/16 (CF-003) | **unmeasured** | no |
 | B1-contradiction | 12 | 12/12 (book quotes byte-exact) | 2/16 (CF-003, CF-006) | **unmeasured** | no |
 | B2-misquote | 228 | 228/228 (book quotes byte-exact) | 1/16 (CF-015) | **unmeasured** | no |
@@ -148,6 +148,18 @@ One-shot runs of the frozen detectors over the 37 holdout transcripts
   by sampling noise, but it may also indicate parameters fitted to the tuning half —
   flagged for M4 follow-up.
 
+## 5e. M4-q5 — A1 claim-shape reconciliation: the flags were my instrument
+
+All 98 "claim not re-derived" A1 flags in M5-R traced to **two defects in the M5-R
+reducer** — ASCII-only tokenizer (non-Latin spans → zero tokens) and an 8-token
+search bound while A1 claims units up to 11 — not to the v1 detector. Fixed
+(Unicode token rule; `kmax=16`); corroboration is now **A1 938/938 · A2 158/158 ·
+B1 12/12 · B2 228/228, 0 flagged** (findings/M4-q5-A1-CLAIM-RECONCILIATION.md).
+
+Rule-quality conclusion: **no A1 claim-shape change is required**; the lesson is an
+instrument one (a re-derivation must declare its tokenizer and bounds). Hyphenated
+units ("Mm-hmm") remain a labelling nuance — documented, not hidden.
+
 ## 6. Next quanta (M4 work queue, in order)
 
 1. ~~**M4-q2 — drop-word detector**~~ **done (tuning): 122 raw signals; 4
@@ -160,9 +172,9 @@ One-shot runs of the frozen detectors over the 37 holdout transcripts
    would need a different corpus format.
 3. ~~**M4-q4 — held-out runs**~~ **done: raw counts with provenance; precision
    still absent (needs review); holdout spent for these detector versions.**
-4. **M4-q5 — A1 claim-shape reconciliation**: resolve the 98 "not re-derived" A1
-   claims (over-wide spans vs tokenizer shape) and record the outcome in
-   `corrections.json`-style append-only notes for the detector rules.
+4. ~~**M4-q5 — A1 claim-shape reconciliation**~~ **done: all flags were M5-R
+   reducer defects (tokenizer + search bound), fixed with tests and errata #2;
+   corroboration now 1,336/1,336. No detector change required.**
 
 Every step: suite green before push, control line per quantum, commit + push,
 heartbeat with task id + sha.

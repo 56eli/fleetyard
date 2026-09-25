@@ -39,7 +39,7 @@ DETECTORS = ("A1-repetition", "A2-nonsense", "B1-contradiction", "B2-misquote")
 FAMILY = {"A1-repetition": "surface-form", "A2-nonsense": "surface-form",
           "B1-contradiction": "content/doctrine", "B2-misquote": "content/doctrine"}
 NON_HAWKINS = frozenset(["Be_as_you_are", "I_AM_THAT", "Lamsa_bible", "ACIM_workbook"])
-TOKEN_RE = re.compile(r"[A-Za-z']+")
+TOKEN_RE = re.compile(r"[^\W_]+(?:['\u2019\-][^\W_]+)*", re.UNICODE)
 NUMPCT = re.compile(r"(\d[\d,]*)(?:\s*%\s*|\s*percent\b)", re.IGNORECASE)
 NUMRE = NUMPCT
 REVIEW_STATUS = "machine-adjudicated (mechanical bytes only); human confirmation required"
@@ -251,8 +251,12 @@ def merge_signals(signals):
 
 # ------------------------------------------------------------- adjudication
 
-def repetition_rederive(span_text, kmax=8):
-    """Independently re-derive the repetition structure from the span bytes."""
+def repetition_rederive(span_text, kmax=16):
+    """Independently re-derive the repetition structure from the span bytes.
+
+    kmax=16: the v1 A1 claims reference units up to ~11 tokens; a smaller bound
+    produced false "not re-derived" flags (M4-q5 reconciliation).
+    """
     tokens = TOKEN_RE.findall(span_text.lower())
     n = len(tokens)
     span_periodic, period, repeats = False, None, None

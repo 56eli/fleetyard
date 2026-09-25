@@ -83,7 +83,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "none of those illnesses whatsoever that personality says i don t believe in any of those things i am not subject to them",
+      "book": "none of those illnesses whatsoever that personality says i don’t believe in any of those things i am not subject to them",
       "op": "replace",
       "transcript": "may say"
      }
@@ -245,7 +245,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "are going on in the cells resulting in pathological changes within the anatomy and dysfunction that results in a coronary attack heart disease or heart failure the heart failure comes about partly as a result of years of negative mental attitudes the mind would like to blame it on cholesterol stress one s lifestyle genetics what goes on in the family and so on these are all merely explanations excuses and rationalizations to try to make intelligible that which is not clearly defined",
+      "book": "are going on in the cells resulting in pathological changes within the anatomy and dysfunction that results in a coronary attack heart disease or heart failure the heart failure comes about partly as a result of years of negative mental attitudes the mind would like to blame it on cholesterol stress one’s lifestyle genetics what goes on in the family and so on these are all merely explanations excuses and rationalizations to try to make intelligible that which is not clearly defined",
       "op": "replace",
       "transcript": "trying"
      }

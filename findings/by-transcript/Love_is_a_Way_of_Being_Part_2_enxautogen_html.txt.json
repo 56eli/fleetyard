@@ -7,7 +7,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "i had the longest paper route in the state of wisconsin miles out in the country this one time it was below zero blizzard conditions and",
+      "book": "i had the longest paper route in the state of wisconsin 18 miles out in the country this one time it was 10-below zero blizzard conditions and",
       "op": "replace",
       "transcript": "biggest"
      }

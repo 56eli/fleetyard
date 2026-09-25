@@ -85,7 +85,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "that was like right so that was the animal just couldn t stop sniffing poking its nose in the downside of the animal then",
+      "book": "that was like right so that was the animal just couldn’t stop sniffing poking its nose in the downside of the animal then",
       "op": "replace",
       "transcript": "other side"
      }
@@ -541,7 +541,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "yourself and others is benign and it s sort of a falling in love it happens",
+      "book": "yourself and others is benign and it’s sort of a falling in love it happens",
       "op": "insert",
       "transcript": null
      },
@@ -551,7 +551,7 @@
       "transcript": "everyone"
      },
      {
-      "book": "everybody spontaneously you ll be walking along",
+      "book": "everybody spontaneously you’ll be walking along",
       "op": "insert",
       "transcript": null
      }
@@ -789,7 +789,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "the purusha the presence of god within as self which is manifesting through the human physicality as let s say this speakingness this speakingness there s no choice involved",
+      "book": "the purusha the presence of god within as self which is manifesting through the human physicality as let’s say this speakingness this speakingness there’s no choice involved",
       "op": "replace",
       "transcript": "itself"
      }
@@ -1028,7 +1028,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "first hits you this is how it hits you so you re not going",
+      "book": "first hits you this is how it hits you so you’re not going",
       "op": "insert",
       "transcript": null
      },
@@ -1112,12 +1112,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 9-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 9-token x3 vs re-derived 9 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -1130,17 +1130,19 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "rederived_repetition": {
-   "longest_run": null,
-   "span_fully_periodic": false,
-   "span_period_tokens": null,
-   "span_repeats": null,
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 9
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 9,
+   "span_repeats": 3,
    "tokens": 27
   },
   "review_score": [
-   1,
-   [
-    "runner claim not re-derived"
-   ]
+   0,
+   []
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
   "seeded": false,
@@ -1153,10 +1155,14 @@
     "quote_len": 140,
     "quote_verified": true,
     "rederived": {
-     "longest_run": null,
-     "span_fully_periodic": false,
-     "span_period_tokens": null,
-     "span_repeats": null,
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 9
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 9,
+     "span_repeats": 3,
      "tokens": 27
     },
     "runner_evidence": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
@@ -1184,7 +1190,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "and the meaningfulness of it comes to you from a different domain so there s a translation of form into non form so that one is aware of what favorite fish you are talking about anyway fish and i understand each other the nonverbal communication becomes progressively important that s why the communication with animals becomes very easy you and the animal know exactly where you re at with each other and nothing need be said your intention is read in an instant by that animal and you can read its intention and come back to it with what it needs to calm it and the snake will lay there the snake will coil up and start to strike and then this profound stillness and peace prevails it dominates the snake the snake cannot strike out of that field because it s a perfect field of peace and safety and it s more powerful than the snake the snake is just entranced with you and it sits there and looks at you for minutes it s never seen a human being before and he s just walked away from it",
+      "book": "and the meaningfulness of it comes to you from a different domain so there’s a translation of form into non-form so that one is aware of what favorite fish you are talking about anyway fish and i understand each other the nonverbal communication becomes progressively important that’s why the communication with animals becomes very easy you and the animal know exactly where you’re at with each other and nothing need be said your intention is read in an instant by that animal and you can read its intention and come back to it with what it needs to calm it and the snake will lay there the snake will coil up and start to strike and then this profound stillness and peace prevails it dominates the snake the snake cannot strike out of that field because it’s a perfect field of peace and safety and it’s more powerful than the snake the snake is just entranced with you and it sits there and looks at you for minutes it’s never seen a human being before and he’s just walked away from it",
       "op": "replace",
       "transcript": "wailed"
      }
@@ -1260,12 +1266,12 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "it s not possible to function and those of you that are into serious",
+      "book": "it’s not possible to function and those of you that are into serious",
       "op": "insert",
       "transcript": null
      },
      {
-      "book": "work it s probably advisable to have somebody that knows you",
+      "book": "work it’s probably advisable to have somebody that knows you",
       "op": "insert",
       "transcript": null
      }
@@ -1798,7 +1804,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "that is the truth of the enlightened sage who says that god is not only transcendent but immanent he doesn t say that the sage",
+      "book": "that is the truth of the enlightened sage who says that god is not only transcendent but immanent he doesn’t say that the sage",
       "op": "replace",
       "transcript": "imminent"
      }
@@ -1874,7 +1880,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "opposites they re only two different ways of looking at it that which is transcendent obviously would have to be immanent and that which",
+      "book": "opposites they’re only two different ways of looking at it that which is transcendent obviously would have to be immanent and that which",
       "op": "replace",
       "transcript": "imminent"
      }

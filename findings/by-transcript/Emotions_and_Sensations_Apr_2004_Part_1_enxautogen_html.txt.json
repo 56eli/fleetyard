@@ -5,12 +5,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 12-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 12-token x3 vs re-derived 12 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -23,17 +23,19 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "rederived_repetition": {
-   "longest_run": null,
-   "span_fully_periodic": false,
-   "span_period_tokens": null,
-   "span_repeats": null,
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 12
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 12,
+   "span_repeats": 3,
    "tokens": 36
   },
   "review_score": [
-   1,
-   [
-    "runner claim not re-derived"
-   ]
+   0,
+   []
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
   "seeded": false,
@@ -46,10 +48,14 @@
     "quote_len": 134,
     "quote_verified": true,
     "rederived": {
-     "longest_run": null,
-     "span_fully_periodic": false,
-     "span_period_tokens": null,
-     "span_repeats": null,
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 12
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 12,
+     "span_repeats": 3,
      "tokens": 36
     },
     "runner_evidence": "signals: A1-repetition (12-token unit repeated 3 times back-to-back)",
@@ -447,7 +453,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "for the first time in human history it gives us a means of differentiating truth from falsehood the discovery that you can differentiate truth from falsehood anywhere in time about anything is so mind boggling that i don t think anybody on the planet has grasped the significance of it including myself it sort of blew me away for some years and a number of people when they first read the manuscript for power vs force went to europe for a couple of weeks to just recover from the shock of discovery that for the first time in human history mankind has some means of",
+      "book": "for the first time in human history it gives us a means of differentiating truth from falsehood the discovery that you can differentiate truth from falsehood anywhere in time about anything is so mind-boggling that i don’t think anybody on the planet has grasped the significance of it including myself it sort of blew me away for some years and a number of people when they first read the manuscript for power vs force went to europe for a couple of weeks to just recover from the shock of discovery that for the first time in human history mankind has some means of",
       "op": "replace",
       "transcript": "discerning"
      }

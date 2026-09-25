@@ -335,7 +335,7 @@
       "transcript": null
      },
      {
-      "book": "god doesn t exist",
+      "book": "god doesn’t exist",
       "op": "replace",
       "transcript": "then"
      }
@@ -411,7 +411,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "the way to salvation let s see if that s correct that",
+      "book": "the way to salvation let’s see if that’s correct that",
       "op": "insert",
       "transcript": null
      },
@@ -720,12 +720,12 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "isn t sufficient meat to the",
+      "book": "isn’t sufficient meat to the",
       "op": "replace",
       "transcript": "much"
      },
      {
-      "book": "so some teachings to me are just too bare bones so anyway you want to calibrate the level",
+      "book": "so some teachings to me are just too bare-bones so anyway you want to calibrate the level",
       "op": "insert",
       "transcript": null
      }
@@ -801,7 +801,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "known all your perceptions all your belief systems comparing it with past calculating and it s an extremely complex and",
+      "book": "known all your perceptions all your belief systems comparing it with past calculating and it’s an extremely complex and",
       "op": "insert",
       "transcript": null
      },
@@ -887,7 +887,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "the thought there s no speaker behind the thought the thoughts are thinking themselves the thinking is",
+      "book": "the thought there’s no speaker behind the thought the thoughts are thinking themselves the thinking is",
       "op": "insert",
       "transcript": null
      },
@@ -1122,7 +1122,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "the common view is to return to its source i want to clarify the explanation we had before about co creator co creator indicates two there s",
+      "book": "the common view is to return to its source i want to clarify the explanation we had before about co-creator co-creator indicates two there’s",
       "op": "replace",
       "transcript": "question"
      }

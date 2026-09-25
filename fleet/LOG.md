@@ -51,3 +51,11 @@ C1-drop 5 signals (0.14/tx vs 0.63 tuning — flagged open question, sampling no
 C2-format 12 (0.32 vs 0.25 tuning). Counts only: precision/recall still require human
 review of holdout labels; no rate claimed anywhere. Holdout now spent for these
 detector versions (new salt owed before any further tuning-informed evaluation).
+2026-09-25T19:4xZ WORKER-2: M4-q5 — A1 claim-shape reconciliation CLOSED: all 98
+"not re-derived" flags were defects in MY reducer (ASCII-only tokenizer; 8-token
+search bound vs units up to 11), not in the v1 detector. Fixed with Unicode token
+rule + kmax=16 and 2 regression tests; ledger regenerated: corroboration now
+A1 938/938, A2 158/158, B1 12/12, B2 228/228, 0 flagged (1,336/1,336 signal claims);
+classes unchanged (CERTAIN-inherited 3 / HIGH 0 / CANDIDATE 1331; seeded 3). Errata #2
+appended to the M5-R delivery record; analysis in
+findings/M4-q5-A1-CLAIM-RECONCILIATION.md. No detector change required.

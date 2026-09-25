@@ -94,7 +94,7 @@
       "transcript": null
      },
      {
-      "book": "has different poisonous enzymes any one of them",
+      "book": "has 14 different poisonous enzymes any one of them",
       "op": "replace",
       "transcript": "black"
      }
@@ -170,7 +170,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "interesting book called red world green world by a lady named margaret chaney and she said that there s red people and green people and there s red foods",
+      "book": "interesting book called red world green world by a lady named margaret chaney and she said that there’s red people and green people and there’s red foods",
       "op": "replace",
       "transcript": "cheney"
      }
@@ -246,12 +246,12 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "interesting book called red world green world by a lady named margaret chaney and she said that there s red",
+      "book": "interesting book called red world green world by a lady named margaret chaney and she said that there’s red",
       "op": "replace",
       "transcript": "there's"
      },
      {
-      "book": "and green people and there s",
+      "book": "and green people and there’s",
       "op": "insert",
       "transcript": null
      },
@@ -488,7 +488,7 @@
       "transcript": "whole"
      },
      {
-      "book": "of the holographic universe and also the nonlinear dimensions of reality it isn t that this",
+      "book": "of the holographic universe and also the nonlinear dimensions of reality it isn’t that this",
       "op": "insert",
       "transcript": null
      }
@@ -727,7 +727,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "energy and vibration and there were always friendly dogs running around so again it isn t that this caused that but a higher level of",
+      "book": "energy and vibration and there were always friendly dogs running around so again it isn’t that this caused that but a higher level of",
       "op": "replace",
       "transcript": "going"
      }

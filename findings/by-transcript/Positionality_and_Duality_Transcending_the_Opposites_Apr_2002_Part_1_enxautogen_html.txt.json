@@ -7,7 +7,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "when electricity is there it s on when the electricity is off it s not on but there is no independent existing thing such as offness that s an important point",
+      "book": "when electricity is there it’s on when the electricity is off it’s not on but there is no independent existing thing such as offness that’s an important point",
       "op": "replace",
       "transcript": "existent"
      }
@@ -161,7 +161,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "is intention not results let s see if that s true or not we re responsible for intention resist true it s the spiritual intention the spiritual will",
+      "book": "is intention not results let’s see if that’s true or not we’re responsible for intention resist true it’s the spiritual intention the spiritual will",
       "op": "replace",
       "transcript": "attention"
      }
@@ -247,7 +247,7 @@
       "transcript": null
      },
      {
-      "book": "calibrates over true true true not true elephants are about very interesting",
+      "book": "calibrates over 180 true 185 true 190 true 192 not true elephants are about 192 very interesting",
       "op": "insert",
       "transcript": null
      }
@@ -328,14 +328,14 @@
       "transcript": null
      },
      {
-      "book": "apparently",
-      "op": "insert",
-      "transcript": null
+      "book": null,
+      "op": "delete",
+      "transcript": "self"
      },
      {
-      "book": "destructive expressions moving beyond positionality now we wanna get beyond positionality this is",
-      "op": "replace",
-      "transcript": "apparently"
+      "book": "self-destructive expressions moving beyond positionality now we wanna get beyond positionality this is",
+      "op": "insert",
+      "transcript": null
      }
     ],
     "hawkins_own": true,
@@ -487,12 +487,12 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "can t",
+      "book": "can’t",
       "op": "replace",
       "transcript": "can't present"
      },
      {
-      "book": "h o at minus degrees is the same as h o at degrees and you can t pretend it s the same at",
+      "book": "h2o at minus 30 degrees is the same as h2o at 32 degrees and you can’t pretend it’s the same at",
       "op": "insert",
       "transcript": null
      }
@@ -887,7 +887,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "the entire world so or is a lot different than enron to be helpful to be integrous to give you a good",
+      "book": "the entire world so 350 or 360 is a lot different than enron to be helpful to be integrous to give you a good",
       "op": "replace",
       "transcript": "integrative"
      }
@@ -963,7 +963,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "can t hear any sound for the same reason that without the emptiness of space you could not discern an object",
+      "book": "can’t hear any sound for the same reason that without the emptiness of space you could not discern an object",
       "op": "replace",
       "transcript": "cannot"
      }
@@ -1039,7 +1039,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "and wrong and judgmentalism is you see that it s just a so what i mean so what you know what i mean the guy was wrong when he did so and so well so what so he was wrong so so big deal in other words one gives up the trying to juice it",
+      "book": "and wrong and judgmentalism is you see that it’s just a so what i mean so what you know what i mean the guy was wrong when he did so-and-so well so what so he was wrong so so big deal in other words one gives up the trying to juice it",
       "op": "replace",
       "transcript": "train"
      }

@@ -83,7 +83,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "auras briefly in my lifetime and it was with a lady who knew how to see auras i said i can t see auras she said oh anybody can see auras here sit down she told me how you see auras she said look right over the head there and",
+      "book": "auras briefly in my lifetime and it was with a lady who knew how to see auras i said i can’t see auras she said oh anybody can see auras here sit down she told me how you see auras she said look right over the head there and",
       "op": "replace",
       "transcript": "says"
      }
@@ -246,7 +246,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "that s an impossible koan you cannot get past that one until what did we say at you pass the doorway hmm the purpose of all that",
+      "book": "that’s an impossible koan you cannot get past that one until what did we say 850 at 850 you pass the doorway hmm the purpose of all that",
       "op": "replace",
       "transcript": "coin"
      }
@@ -479,7 +479,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "you find is source so the fallacy of the argument is if you think in an infinite sequence that you re also going to find another one",
+      "book": "you find is source so the fallacy of the argument is if you think in an infinite sequence that you’re also going to find another one",
       "op": "replace",
       "transcript": "always"
      }
@@ -560,7 +560,7 @@
       "transcript": "john"
      },
      {
-      "book": "at the source of the book",
+      "book": "at 70 the source of the book",
       "op": "insert",
       "transcript": null
      }

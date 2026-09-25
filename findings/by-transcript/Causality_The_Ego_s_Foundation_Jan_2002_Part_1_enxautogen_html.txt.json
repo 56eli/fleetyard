@@ -161,7 +161,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "its own volition you might say it s like the spiritual",
+      "book": "its own volition you might say it’s like the spiritual",
       "op": "insert",
       "transcript": null
      },
@@ -247,7 +247,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "reason to continue however there s probably a karmic propensity a momentum that carries one along in each instant that that happened it was love that",
+      "book": "reason to continue however there’s probably a karmic propensity a momentum that carries one along in each instant that that happened it was love that",
       "op": "replace",
       "transcript": "long"
      }
@@ -397,12 +397,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 12-token x4 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 12-token x4 vs re-derived 12 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -415,17 +415,19 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "rederived_repetition": {
-   "longest_run": null,
-   "span_fully_periodic": false,
-   "span_period_tokens": null,
-   "span_repeats": null,
-   "tokens": 40
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 12
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 12,
+   "span_repeats": 4,
+   "tokens": 48
   },
   "review_score": [
-   1,
-   [
-    "runner claim not re-derived"
-   ]
+   0,
+   []
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
   "seeded": false,
@@ -438,11 +440,15 @@
     "quote_len": 223,
     "quote_verified": true,
     "rederived": {
-     "longest_run": null,
-     "span_fully_periodic": false,
-     "span_period_tokens": null,
-     "span_repeats": null,
-     "tokens": 40
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 12
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 12,
+     "span_repeats": 4,
+     "tokens": 48
     },
     "runner_evidence": "signals: A1-repetition (12-token unit repeated 4 times back-to-back)",
     "runner_subtypes": [
@@ -469,7 +475,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "it s still just water it is not a duality of water versus non water okay that will",
+      "book": "it’s still just water it is not a duality of water versus non-water okay that will",
       "op": "insert",
       "transcript": null
      },
@@ -724,7 +730,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "also has all these neurotoxins however i find that the ultimate culprit is a little mollusk that lives at the bottom",
+      "book": "35 also has all these neurotoxins however i find that the ultimate culprit is a little mollusk that lives at the bottom",
       "op": "replace",
       "transcript": "found"
      }
@@ -798,12 +804,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 7-token x6 vs re-derived 8 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 7-token x6 vs re-derived 7 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -819,18 +825,17 @@
    "longest_run": {
     "repeats": 6,
     "start_token": 0,
-    "unit_tokens": 8
+    "unit_tokens": 7
    },
    "span_fully_periodic": true,
-   "span_period_tokens": 8,
+   "span_period_tokens": 7,
    "span_repeats": 6,
-   "tokens": 48
+   "tokens": 42
   },
   "review_score": [
-   2,
+   1,
    [
-    "periodic run x6",
-    "runner claim not re-derived"
+    "periodic run x6"
    ]
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
@@ -847,12 +852,12 @@
      "longest_run": {
       "repeats": 6,
       "start_token": 0,
-      "unit_tokens": 8
+      "unit_tokens": 7
      },
      "span_fully_periodic": true,
-     "span_period_tokens": 8,
+     "span_period_tokens": 7,
      "span_repeats": 6,
-     "tokens": 48
+     "tokens": 42
     },
     "runner_evidence": "signals: A1-repetition (7-token unit repeated 6 times back-to-back)",
     "runner_subtypes": [
@@ -879,7 +884,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "a spiritual teacher is whether they are over that s all i care about if they re over they re integrous if they re under",
+      "book": "a spiritual teacher is whether they are over 200 that’s all i care about if they’re over 200 they’re integrous if they’re under 200",
       "op": "replace",
       "transcript": "in tigris"
      }
@@ -1187,7 +1192,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "total weight of the entire universe that s even within advanced theoretical physics in the nonlinear domain even that is miniscule there is no limit",
+      "book": "total weight of the entire universe that’s even within advanced theoretical physics in the nonlinear domain even that is miniscule there is no limit",
       "op": "replace",
       "transcript": "minuscule"
      }
@@ -1261,12 +1266,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 7-token x5 vs re-derived 8 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 7-token x5 vs re-derived 7 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -1282,18 +1287,17 @@
    "longest_run": {
     "repeats": 5,
     "start_token": 0,
-    "unit_tokens": 8
+    "unit_tokens": 7
    },
    "span_fully_periodic": true,
-   "span_period_tokens": 8,
+   "span_period_tokens": 7,
    "span_repeats": 5,
-   "tokens": 40
+   "tokens": 35
   },
   "review_score": [
-   2,
+   1,
    [
-    "periodic run x5",
-    "runner claim not re-derived"
+    "periodic run x5"
    ]
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
@@ -1310,12 +1314,12 @@
      "longest_run": {
       "repeats": 5,
       "start_token": 0,
-      "unit_tokens": 8
+      "unit_tokens": 7
      },
      "span_fully_periodic": true,
-     "span_period_tokens": 8,
+     "span_period_tokens": 7,
      "span_repeats": 5,
-     "tokens": 40
+     "tokens": 35
     },
     "runner_evidence": "signals: A1-repetition (7-token unit repeated 5 times back-to-back)",
     "runner_subtypes": [

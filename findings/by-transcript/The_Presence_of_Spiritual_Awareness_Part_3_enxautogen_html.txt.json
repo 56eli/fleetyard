@@ -5,7 +5,13 @@
     "book_chars": 417315,
     "book_quote": "Love 500",
     "detector": "B1-contradiction",
-    "divergence": [],
+    "divergence": [
+     {
+      "book": "500",
+      "op": "replace",
+      "transcript": "540"
+     }
+    ],
     "hawkins_own": true,
     "known_book": true,
     "offset": 363355,
@@ -37,9 +43,9 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "review_score": [
-   1,
+   2,
    [
-    "book quote verified"
+    "book quote diverges word-level"
    ]
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
@@ -385,12 +391,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 1-token x45 vs re-derived 2 x45 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 1-token x45 vs re-derived 1 x45 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -406,18 +412,17 @@
    "longest_run": {
     "repeats": 45,
     "start_token": 0,
-    "unit_tokens": 2
+    "unit_tokens": 1
    },
    "span_fully_periodic": true,
-   "span_period_tokens": 2,
+   "span_period_tokens": 1,
    "span_repeats": 45,
-   "tokens": 90
+   "tokens": 45
   },
   "review_score": [
-   2,
+   1,
    [
-    "periodic run x45",
-    "runner claim not re-derived"
+    "periodic run x45"
    ]
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
@@ -434,12 +439,12 @@
      "longest_run": {
       "repeats": 45,
       "start_token": 0,
-      "unit_tokens": 2
+      "unit_tokens": 1
      },
      "span_fully_periodic": true,
-     "span_period_tokens": 2,
+     "span_period_tokens": 1,
      "span_repeats": 45,
-     "tokens": 90
+     "tokens": 45
     },
     "runner_evidence": "signals: A1-repetition (1-token unit repeated 45 times back-to-back)",
     "runner_subtypes": [

@@ -295,9 +295,9 @@
     "detector": "B1-contradiction",
     "divergence": [
      {
-      "book": null,
-      "op": "delete",
-      "transcript": "at"
+      "book": "500",
+      "op": "replace",
+      "transcript": "at 540"
      }
     ],
     "hawkins_own": true,

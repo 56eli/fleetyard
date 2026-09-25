@@ -52,9 +52,10 @@ never run (unmeasured ≠ zero).
 - 1,334 findings from 1,334 records; 0 citation failures; 0 exact duplicates.
 - Classes: **CERTAIN (inherited fixture) 2** (CF-003, CF-006) · **HIGH 0** ·
   **CANDIDATE 1,332**. Seeded 2 / independent 1,332.
-- Claim corroboration: A1 840/938, A2 158/158, B1 12/12, B2 228/228. The 98 A1
-  “not re-derived” cases score +1 in the queue and are **review flags**, not
-  verdicts (claim shape or this tool's simpler tokenizer).
+- Claim corroboration (after M4-q5 errata #2): **A1 938/938 · A2 158/158 · B1 12/12
+  · B2 228/228 — 0 flagged.** The earlier 98 A1 "not re-derived" flags were defects
+  in this tool (ASCII-only tokenizer; 8-token search bound), fixed and documented in
+  `findings/M4-q5-A1-CLAIM-RECONCILIATION.md`.
 - Book-byte adjudication: 242 cited book references, **242 verified byte-exact at
   the cited slug + offset**, 0 failures, 0 non-Hawkins citations.
 - `HIGH 0` is a real result, not a gap: the only two cross-family convergences in
@@ -74,7 +75,7 @@ python3 -m unittest tests.test_m5r        # 6 tests; determinism asserted
 
 Determinism: two runs with the same `--utc` produce byte-identical
 `ledger.jsonl`, `by-transcript/*`, `SUMMARY.md`, `REVIEW-QUEUE.md` (verified on the
-real inputs: ledger sha256 `c05429f941ed2444…`, queue sha256 `3ef031a9e35502a6…`).
+real inputs; current ledger sha256 `64977c2fed5be3f5814cf0bf6099d5565d51497572ed6cd559d0554fb72e5e04`).
 
 Corpus identity: `docdocgo-fixes.zip` sha256 `3f36c5203910…`; overlays digest
 `027f82a0d2522f3e0f9403c7d0f787a67e30560e941b29fa4ee813f6dbb5dd6e` computed by a

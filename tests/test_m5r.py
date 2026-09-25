@@ -175,6 +175,22 @@ class M5RCase(unittest.TestCase):
         self.assertTrue(f["seeded"])
         self.assertTrue(f["class"].startswith("CERTAIN"))
 
+    def test_repetition_rederive_handles_non_latin_and_long_units(self):
+        """M4-q5 regression: Unicode tokens and units longer than 8 tokens."""
+        hangul = "\uac00\ub098\ub2e4 \ub77c\ub9c8\ubc14 \uc0ac\uc544\uc790 " * 3
+        r = m5r.repetition_rederive(hangul)
+        self.assertTrue(r["span_fully_periodic"], r)
+        self.assertEqual(r["span_period_tokens"], 3)
+        self.assertEqual(r["span_repeats"], 3)
+        unit = ("I knew Bill Wilson and he wasn't a Pope " * 3)
+        r2 = m5r.repetition_rederive(unit)
+        self.assertTrue(r2["span_fully_periodic"], r2)
+        self.assertEqual(r2["span_period_tokens"], 9)   # > the old kmax=8 bound
+
+    def test_tokenizer_is_unicode_aware(self):
+        toks = m5r.TOKEN_RE.findall("\uac00\ub098\ub2e4 hello")
+        self.assertEqual(len(toks), 2, toks)
+
     def test_never_assigns_certain_without_inherited_fixture(self):
         out = os.path.join(self.root, "out2")
         _, findings = self.run_reducer(out)

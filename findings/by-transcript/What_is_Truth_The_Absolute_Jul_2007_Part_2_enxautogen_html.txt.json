@@ -7,9 +7,9 @@
     "detector": "B1-contradiction",
     "divergence": [
      {
-      "book": null,
-      "op": "delete",
-      "transcript": "at"
+      "book": "250",
+      "op": "replace",
+      "transcript": "at 200"
      }
     ],
     "hawkins_own": true,

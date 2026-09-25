@@ -7,7 +7,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "in the experiences i ve described to you today there was never any other entity there on the way to hell i passed no devils dante was correct dante s description of hell is literally correct exactly the way it is the upper levels are torture and torment and agony and suffering and dismemberment et cetera but those are just jacks for openers then you get to the real hell all that stops and a nameless dread which goes on for",
+      "book": "in the experiences i’ve described to you today there was never any other entity there on the way to hell i passed no devils dante was correct dante’s description of hell is literally correct exactly the way it is the upper levels are torture and torment and agony and suffering and dismemberment et cetera but those are just jacks for openers then you get to the real hell all that stops and a nameless dread which goes on for",
       "op": "insert",
       "transcript": null
      },
@@ -88,7 +88,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "because it s god as present both transcendent and immanent in other words the divinity of all living things the native american sees",
+      "book": "because it’s god as present both transcendent and immanent in other words the divinity of all living things the native american sees",
       "op": "replace",
       "transcript": "imminent"
      }
@@ -164,7 +164,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "that s about but that s not the reality of the reader we say what about the starving children what about the cat that just",
+      "book": "that’s about 740 but that’s not the reality of the reader we say what about the starving children what about the cat that just",
       "op": "replace",
       "transcript": "who says"
      }
@@ -240,7 +240,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "life and not at other times the transmission of mind even the title people say huh huang po the transmission of mind that s about what huang po transmission of no mind",
+      "book": "life and not at other times the transmission of mind even the title people say huh huang po the transmission of mind that’s about what 740 huang po transmission of no mind",
       "op": "replace",
       "transcript": "wang"
      }
@@ -316,7 +316,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "that s about what huang po transmission of no mind is over true true true true true not true about",
+      "book": "that’s about what 740 huang po transmission of no mind is over 700 true 720 true 730 true 740 true 750 true 760 not true about 750",
       "op": "replace",
       "transcript": "wang"
      }
@@ -470,7 +470,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "cia and the alcohol tobacco and firearms atf at the time the atf cia and fbi all made you go weak and i think it s",
+      "book": "cia and the alcohol tobacco and firearms atf at the time the atf cia and fbi all made you go weak and i think it’s",
       "op": "replace",
       "transcript": "farms"
      }
@@ -710,7 +710,7 @@
       "transcript": null
      },
      {
-      "book": "bureaucracy at what does it",
+      "book": "bureaucracy at 200 what does it",
       "op": "replace",
       "transcript": "formal"
      }
@@ -867,7 +867,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "the small i is to become the egomaniac so when milosevic feels not the slightest contrition feels it s his perfect right to destroy millions",
+      "book": "the small i is to become the egomaniac so when milosevic feels not the slightest contrition feels it’s his perfect right to destroy millions",
       "op": "replace",
       "transcript": "megalomaniac"
      }
@@ -943,7 +943,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "not the slightest contrition feels it s his perfect right to destroy millions of people mainly because they disagree with him or represent something he",
+      "book": "not the slightest contrition feels it’s his perfect right to destroy millions of people mainly because they disagree with him or represent something he",
       "op": "replace",
       "transcript": "merely"
      }
@@ -1019,7 +1019,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "spiritual will hears that enlightenment is possible it clicks onto it and now it begins to reorganize the intention of all the intricacies of the ego and somehow you just find yourself in the right place and moving in a certain direction that s a result of spiritual will so integrity then is a decision the reason i used sam walton as an example was because he seemed to represent in a widely experiential way the value",
+      "book": "spiritual will hears that enlightenment is possible it clicks onto it and now it begins to reorganize the intention of all the intricacies of the ego and somehow you just find yourself in the right place and moving in a certain direction that’s a result of spiritual will so integrity then is a decision the reason i used sam walton as an example was because he seemed to represent in a widely experiential way the value",
       "op": "replace",
       "transcript": "experienceable"
      }
@@ -1095,7 +1095,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "how are you going to get reelected if you re going to be integrous you know what i mean",
+      "book": "how are you going to get reelected if you’re going to be integrous you know what i mean",
       "op": "replace",
       "transcript": "an integrist"
      }
@@ -1172,7 +1172,12 @@
     "divergence": [
      {
       "book": "and krishna and buddha have physical functions then when they were at",
-      "op": "replace",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
       "transcript": "say"
      },
      {
@@ -1252,7 +1257,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "via the sheep s clothing it is the one that the",
+      "book": "via the sheep’s clothing it is the one that the",
       "op": "insert",
       "transcript": null
      },
@@ -1262,7 +1267,7 @@
       "transcript": "uses"
      },
      {
-      "book": "the satanic both use it s because of man s not knowing truth",
+      "book": "the satanic both use it’s because of man’s not knowing truth",
       "op": "insert",
       "transcript": null
      }

@@ -159,7 +159,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "calibrated and if you go back to sir francis bacon all the",
+      "book": "calibrated 499 and if you go back to sir francis bacon all the",
       "op": "insert",
       "transcript": null
      },
@@ -169,7 +169,7 @@
       "transcript": null
      },
      {
-      "book": "throughout history seem to stop at the",
+      "book": "throughout history seem to stop at 499 the",
       "op": "replace",
       "transcript": "scientific"
      }
@@ -245,7 +245,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "millions get out of it they don t even get to see it right hey there are millions of people getting slaughtered and chopped up out",
+      "book": "millions get out of it they don’t even get to see it right hey there are millions of people getting slaughtered and chopped up out",
       "op": "replace",
       "transcript": "being"
      }
@@ -402,7 +402,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "had numerous incarnations and hopefully up the evolutionary tree then we d say that every act of the will every assent of the spiritual",
+      "book": "had numerous incarnations and hopefully up the evolutionary tree then we’d say that every act of the will every assent of the spiritual",
       "op": "replace",
       "transcript": "ascent"
      }
@@ -478,7 +478,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "care if people are unable to do it or just believe in it it s just a tool you understand what i m saying but it s an",
+      "book": "care if people are unable to do it or just believe in it it’s just a tool you understand what i’m saying but it’s an",
       "op": "replace",
       "transcript": "disbelieve"
      }
@@ -554,7 +554,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "is that simple enough it does not require any arbitrary god or judgment day because the consequence of that which you are is automatic as the consequence of the reality of that which it is there s no arbitrary god who has to sit up there and wait until you get up there and boy you re going to",
+      "book": "is that simple enough it does not require any arbitrary god or judgment day because the consequence of that which you are is automatic as the consequence of the reality of that which it is there’s no arbitrary god who has to sit up there and wait until you get up there and boy you’re going to",
       "op": "replace",
       "transcript": "till"
      }
@@ -706,7 +706,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "not killing somebody that i should have killed haha and going through a hernia repair without anesthesia as a karmic undo ment of the fact that",
+      "book": "not killing somebody that i should have killed haha and going through a hernia repair without anesthesia as a karmic undo-ment of the fact that",
       "op": "replace",
       "transcript": "unduement"
      }
@@ -782,7 +782,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "play these dumb games i couldn t wait until i grew up so i read plato in the meantime while i waited to grow",
+      "book": "play these dumb games i couldn’t wait until i grew up so i read plato in the meantime while i waited to grow",
       "op": "replace",
       "transcript": "till"
      }

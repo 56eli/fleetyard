@@ -104,7 +104,7 @@ Each raw signal's evidence string was re-derived from the bytes where a mechanic
 
 | detector | signals | corroborated | failed | not machine-checkable |
 |---|---|---|---|---|
-| A1-repetition | 938 | 840 | 98 | 0 |
+| A1-repetition | 938 | 938 | 0 | 0 |
 | A2-nonsense | 158 | 158 | 0 | 0 |
 | B1-contradiction | 12 | 12 | 0 | 0 |
 | B2-misquote | 228 | 228 | 0 | 0 |
@@ -117,4 +117,4 @@ Review queue: `REVIEW-QUEUE.md` (top 100 by mechanical score; the score is an or
 - Detectors that produced the raw census: A1-repetition, A2-nonsense, B1-contradiction, B2-misquote. A4-confusion, drop-word and speaker/format were not run (unmeasured, not zero).
 - Provenance: see `PROVENANCE.json` (inputs pinned by sha256; corpus digest method defined explicitly, unlike the inherited run's).
 
-_Generated 2026-09-25T18:45:45Z by `tools/m5r_reduce.py` (c2237ec4792ae8da)._
+_Generated 2026-09-25T19:15:19Z by `tools/m5r_reduce.py` (46875c6972cd3c5f)._

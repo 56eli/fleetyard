@@ -64,3 +64,18 @@ Corrected numbers (supersede the block above):
 - Everything else (1,334 findings, 0 citation failures, 242/242 book quotes
   byte-exact, determinism) is unchanged. New ledger digest is in
   `findings/PROVENANCE.json`.
+
+## Errata #2 (append-only) — 2026-09-25T19:4xZ · A1 claim re-derivation fixed
+
+M5-R's claim-corroboration table was wrong for A1: 98 "not re-derived" flags came
+from **two defects in `tools/m5r_reduce.py`**, not from the v1 detector — (a) an
+ASCII-only tokenizer (non-Latin spans tokenized to zero tokens), (b) a unit-length
+search bound of 8 tokens while A1 claims reference units up to 11. Both fixed
+(Unicode token rule + `kmax=16`), with the full analysis in
+`findings/M4-q5-A1-CLAIM-RECONCILIATION.md`.
+
+Corrected corroboration (supersedes the table above): **A1 938/938 · A2 158/158 ·
+B1 12/12 · B2 228/228 — 0 flagged.** Everything else unchanged (1,334 findings;
+CERTAIN-inherited 3 / HIGH 0 / CANDIDATE 1,331; seeded 3/1,331; 242/242 book quotes
+byte-exact; 0 citation failures). New ledger sha256 `64977c2f…` in
+`findings/PROVENANCE.json`.

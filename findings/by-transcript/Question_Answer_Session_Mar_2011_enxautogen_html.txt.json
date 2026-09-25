@@ -517,12 +517,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 9-token x4 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 9-token x4 vs re-derived 9 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -535,17 +535,19 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "rederived_repetition": {
-   "longest_run": null,
-   "span_fully_periodic": false,
-   "span_period_tokens": null,
-   "span_repeats": null,
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 9
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 9,
+   "span_repeats": 4,
    "tokens": 36
   },
   "review_score": [
-   1,
-   [
-    "runner claim not re-derived"
-   ]
+   0,
+   []
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
   "seeded": false,
@@ -558,10 +560,14 @@
     "quote_len": 167,
     "quote_verified": true,
     "rederived": {
-     "longest_run": null,
-     "span_fully_periodic": false,
-     "span_period_tokens": null,
-     "span_repeats": null,
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 9
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 9,
+     "span_repeats": 4,
      "tokens": 36
     },
     "runner_evidence": "signals: A1-repetition (9-token unit repeated 4 times back-to-back)",
@@ -973,12 +979,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 10-token x4 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 10-token x4 vs re-derived 10 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -991,17 +997,19 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "rederived_repetition": {
-   "longest_run": null,
-   "span_fully_periodic": false,
-   "span_period_tokens": null,
-   "span_repeats": null,
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 10
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 10,
+   "span_repeats": 4,
    "tokens": 40
   },
   "review_score": [
-   1,
-   [
-    "runner claim not re-derived"
-   ]
+   0,
+   []
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
   "seeded": false,
@@ -1014,10 +1022,14 @@
     "quote_len": 187,
     "quote_verified": true,
     "rederived": {
-     "longest_run": null,
-     "span_fully_periodic": false,
-     "span_period_tokens": null,
-     "span_repeats": null,
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 10
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 10,
+     "span_repeats": 4,
      "tokens": 40
     },
     "runner_evidence": "signals: A1-repetition (10-token unit repeated 4 times back-to-back)",

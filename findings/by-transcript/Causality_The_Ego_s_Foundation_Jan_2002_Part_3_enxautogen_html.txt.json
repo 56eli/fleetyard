@@ -83,7 +83,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "the reprieve comes through some people say it s the",
+      "book": "the reprieve comes through some people say it’s the",
       "op": "insert",
       "transcript": null
      },
@@ -256,7 +256,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "it s like i saw everybody who had ever been through that pass and i saw their choice and i said it cannot be used for personal gain and refused you mean refuse all that power you re going to refuse all that power all that dominion over anyway so",
+      "book": "it’s like i saw everybody who had ever been through that pass and i saw their choice and i said it cannot be used for personal gain and refused you mean refuse all that power you’re going to refuse all that power all that dominion over anyway so",
       "op": "replace",
       "transcript": "path"
      }
@@ -332,7 +332,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "so it means in the beginning they d let go of enough",
+      "book": "so it means in the beginning they’d let go of enough",
       "op": "insert",
       "transcript": null
      },
@@ -580,7 +580,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "loving and as you come down life just doesn t disappear it takes a different form below degrees water turns to ice below life",
+      "book": "loving and as you come down life just doesn’t disappear it takes a different form below 32 degrees water turns to ice below 200 life",
       "op": "replace",
       "transcript": "beyond"
      }
@@ -656,7 +656,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "way you have a choice if you re depressed you",
+      "book": "way you have a choice if you’re depressed you",
       "op": "insert",
       "transcript": null
      },
@@ -818,7 +818,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "wheel whether there s a prayer in the canon or not as it rolls around and around probably has nothing to do with it but the",
+      "book": "wheel whether there’s a prayer in the canon or not as it rolls around and around probably has nothing to do with it but the",
       "op": "replace",
       "transcript": "rotates"
      }
@@ -894,7 +894,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "may calibrate just below or above about those levels there denote the general realms the s have to do",
+      "book": "may calibrate just below or above about 200 those levels there denote the general realms the 300s have to do",
       "op": "insert",
       "transcript": null
      },
@@ -904,7 +904,7 @@
       "transcript": "really"
      },
      {
-      "book": "is willingness",
+      "book": "310 is willingness",
       "op": "insert",
       "transcript": null
      }
@@ -980,7 +980,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "negativity of the lower dimensions with neutral it s okay if you get the raise and it s okay if you don t so you don t worry down lower you don t get the raise you think of suicide or you go into a",
+      "book": "negativity of the lower dimensions with neutral it’s okay if you get the raise and it’s okay if you don’t so you don’t worry down lower you don’t get the raise you think of suicide or you go into a",
       "op": "insert",
       "transcript": null
      },
@@ -1061,7 +1061,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "is neutral a very nice comfortable place to be you see people are prideful and they get tiddleyed if they make",
+      "book": "is neutral a very nice comfortable place to be 175 you see people are prideful and they get tiddleyed if they make",
       "op": "replace",
       "transcript": "titillated"
      }
@@ -1137,7 +1137,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "up saying i was on the phone for minutes and i never got a human being to hell with them what does it",
+      "book": "up saying i was on the phone for 20 minutes and i never got a human being to hell with them what does it",
       "op": "replace",
       "transcript": "help"
      }
@@ -1213,14 +1213,9 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "get a lot of apathy on the telephone those are about fourth",
+      "book": "get a lot of apathy on the telephone those are about fourth-grade dropouts and the government has assured them some kind of a",
       "op": "replace",
-      "transcript": "th"
-     },
-     {
-      "book": "dropouts and the government has assured them some kind of a",
-      "op": "insert",
-      "transcript": null
+      "transcript": "4th grade"
      }
     ],
     "hawkins_own": true,
@@ -1446,7 +1441,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "field for detailed research what we ve really done is sketch out the broad outlines but we haven t mapped out every nook and cranny in",
+      "book": "field for detailed research what we’ve really done is sketch out the broad outlines but we haven’t mapped out every nook and cranny in",
       "op": "replace",
       "transcript": "crook"
      }
@@ -1522,7 +1517,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "third step at great depth will take you all the way from the bottom to the top resist true what i did was what s called in",
+      "book": "third step at great depth will take you all the way from the bottom to the top resist true what i did was what’s called in",
       "op": "replace",
       "transcript": "away"
      }
@@ -1598,7 +1593,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "and he never left the mountain i know what he experienced because in walking through what should we say in completely surrendering everything",
+      "book": "700 and he never left the mountain i know what he experienced because in walking through what should we say in completely surrendering everything",
       "op": "replace",
       "transcript": "shall"
      }
@@ -1750,7 +1745,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "death resist true that s a fact you don t have to worry about experiencing your death because it ain t gonna happen the other question that we sort of",
+      "book": "death resist true that’s a fact you don’t have to worry about experiencing your death because it ain’t gonna happen the other question that we sort of",
       "op": "replace",
       "transcript": "cause"
      }
@@ -1826,7 +1821,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "you re not going to experience any death anyway one of the biggest reasons for the propagation of the ego is fear of death to merely know that you re not going to die you re not going to experience any death and it s already set already relieves a great deal of reason for the ego to continue its dominion",
+      "book": "you’re not going to experience any death anyway one of the biggest reasons for the propagation of the ego is fear of death to merely know that you’re not going to die you’re not going to experience any death and it’s already set already relieves a great deal of reason for the ego to continue its dominion",
       "op": "replace",
       "transcript": "release"
      }
@@ -1902,7 +1897,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "same as the roman colosseum blood for the sake of blood you don t have to give them a lecture about that that",
+      "book": "same as the roman colosseum blood for the sake of blood you don’t have to give them a lecture about that that",
       "op": "replace",
       "transcript": "coliseum"
      }
@@ -1978,7 +1973,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "you re giving it back to the world do you understand what i m saying but to store up riches on earth i think is foolish storing up riches on earth is",
+      "book": "you’re giving it back to the world do you understand what i’m saying but to store up riches on earth i think is foolish storing up riches on earth is",
       "op": "replace",
       "transcript": "ridges"
      }
@@ -2054,7 +2049,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "you re giving it back to the world do you understand what i m saying but to store up riches on earth i think is foolish storing up riches on earth is",
+      "book": "you’re giving it back to the world do you understand what i’m saying but to store up riches on earth i think is foolish storing up riches on earth is",
       "op": "replace",
       "transcript": "ridges"
      }
@@ -2135,7 +2130,7 @@
       "transcript": "propelled"
      },
      {
-      "book": "continuation the joy of one s",
+      "book": "continuation the joy of one’s",
       "op": "insert",
       "transcript": null
      }
@@ -2287,7 +2282,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "of the truth of who you are once that s validated after that things don t really matter whether you get better in terms of the world or not is sort of irrelevant the capacity to do that is what propelled the continuation the joy of one s perfection or expertise or whatever you call it you know",
+      "book": "of the truth of who you are once that’s validated after that things don’t really matter whether you get better in terms of the world or not is sort of irrelevant the capacity to do that is what propelled the continuation the joy of one’s perfection or expertise or whatever you call it you know",
       "op": "replace",
       "transcript": "musicians"
      },

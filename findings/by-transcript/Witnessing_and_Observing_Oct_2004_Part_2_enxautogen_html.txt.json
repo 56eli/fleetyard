@@ -165,9 +165,9 @@
     "detector": "B1-contradiction",
     "divergence": [
      {
-      "book": "love",
-      "op": "insert",
-      "transcript": null
+      "book": "love 500 89",
+      "op": "replace",
+      "transcript": "98"
      }
     ],
     "hawkins_own": true,
@@ -332,9 +332,9 @@
     "detector": "B1-contradiction",
     "divergence": [
      {
-      "book": "guilt",
-      "op": "insert",
-      "transcript": null
+      "book": "guilt 30 4",
+      "op": "replace",
+      "transcript": "50"
      }
     ],
     "hawkins_own": true,

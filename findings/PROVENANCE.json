@@ -12,12 +12,12 @@
   "records_files": 230
  },
  "outputs": {
-  "by_transcript_digest": "76af4637e1ee20bc4c2c70017ee02d4fa3393b3fabc4b1d47ff9bd8a327f4640",
+  "by_transcript_digest": "1740a848c621ffce50ac0b06b55b0321c9faa9b16d284b93dfd9143fb611ea93",
   "by_transcript_files": 230,
   "findings": 1334,
-  "ledger.jsonl": "62b33da5fda712c27c5044dbd9dea2acb4c1f02959506eff91b0c22587a67138"
+  "ledger.jsonl": "64977c2fed5be3f5814cf0bf6099d5565d51497572ed6cd559d0554fb72e5e04"
  },
- "run_utc": "2026-09-25T18:45:45Z",
+ "run_utc": "2026-09-25T19:15:19Z",
  "stats": {
   "book_refs": 242,
   "book_refs_bad": 0,
@@ -27,8 +27,8 @@
   "claims": {
    "A1-repetition": {
     "checked": 938,
-    "corroborated": 840,
-    "failed": 98,
+    "corroborated": 938,
+    "failed": 0,
     "not_checked": 0
    },
    "A2-nonsense": {
@@ -65,5 +65,5 @@
   "transcripts_with_findings": 206
  },
  "tool": "tools/m5r_reduce.py",
- "tool_sha256": "c2237ec4792ae8da3f1ad7ddf8b54b2cdc7db42676f2508d5145f3989d190162"
+ "tool_sha256": "46875c6972cd3c5f684841f3e08c4fc6b630cfaed7b7d59d3d28ebc999cc1b5d"
 }

@@ -88,7 +88,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "to give up a positionality and we use a thermometer as an example you can t",
+      "book": "to give up a positionality and we use a thermometer as an example you can’t",
       "op": "insert",
       "transcript": null
      },
@@ -250,14 +250,9 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "day every day and they re very very adept at it they know various techniques there s the o",
-      "op": "insert",
-      "transcript": null
-     },
-     {
-      "book": "technique where you can pull and see",
-      "op": "insert",
-      "transcript": null
+      "book": "day every day and they’re very very adept at it they know various techniques there’s the o-ring technique where you can pull and see",
+      "op": "replace",
+      "transcript": "ring"
      }
     ],
     "hawkins_own": true,
@@ -498,7 +493,7 @@
       "transcript": "real"
      },
      {
-      "book": "beginning of empowerment at below that you get",
+      "book": "beginning of empowerment at 200 below that you get",
       "op": "insert",
       "transcript": null
      }
@@ -574,7 +569,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "the scale become increasingly agreeable these are low on the map everybody comes to see the doctor in these states this is my office down here despair anxiety depression angriness people don t see me out of arrogance but yeah they do anyway as we go up we see the levels are far more and that s because the process is different here at the level of integrity you have the true beginning of empowerment at below that you get inflation the reason i don t like political correctness is because it calibrates",
+      "book": "the scale become increasingly agreeable these are low on the map everybody comes to see the doctor in these states this is my office down here despair anxiety depression angriness people don’t see me out of arrogance but yeah they do anyway as we go up we see the levels are far more and that’s because the process is different here at the level of integrity you have the true beginning of empowerment at 200 below that you get inflation the reason i don’t like political correctness is because it calibrates",
       "op": "replace",
       "transcript": "politically correct"
      }
@@ -650,7 +645,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "autonomous so these people under are not autonomous what people think about them makes",
+      "book": "autonomous so these people under 200 are not autonomous what people think about them makes",
       "op": "insert",
       "transcript": null
      },
@@ -822,7 +817,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "then they rip off their business for million and",
+      "book": "then they rip off their business for 300 million and",
       "op": "insert",
       "transcript": null
      },
@@ -832,7 +827,7 @@
       "transcript": "everybody"
      },
      {
-      "book": "the stock owners probably say he s got three hundred million why does he need more i don t know what you",
+      "book": "the stock owners probably say he’s got three hundred million why does he need more i don’t know what you",
       "op": "insert",
       "transcript": null
      }
@@ -918,7 +913,7 @@
       "transcript": null
      },
      {
-      "book": "doesn t really solve it because",
+      "book": "doesn’t really solve it because",
       "op": "replace",
       "transcript": "a"
      }
@@ -994,7 +989,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "is what s important it s not where you re at it isn t bad that you re low on the map and good that you re higher maybe subjectively experientially it is",
+      "book": "is what’s important it’s not where you’re at it isn’t bad that you’re low on the map and good that you’re higher maybe subjectively experientially it is",
       "op": "replace",
       "transcript": "here"
      }
@@ -1460,7 +1455,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "here is here because we ve all made choices and i want",
+      "book": "here is here because we’ve all made choices and i want",
       "op": "replace",
       "transcript": "everybody"
      },
@@ -1619,7 +1614,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "the gang that runs that block or you get eliminated you don t have the choices to see that then you see that each person is to some degree the victim of where they are in the evolution of consciousness to some degree if you like victimology victimology is",
+      "book": "the gang that runs that block or you get eliminated you don’t have the choices to see that then you see that each person is to some degree the victim of where they are in the evolution of consciousness to some degree if you like victimology victimology is",
       "op": "replace",
       "transcript": "ablution"
      }
@@ -1695,7 +1690,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "life evil tragic frightening disappointing weak now as we get up toward anger one s self view",
+      "book": "life evil tragic frightening disappointing weak now as we get up toward anger one’s self-view",
       "op": "insert",
       "transcript": null
      },
@@ -1774,12 +1769,12 @@
   "citation_ok": true,
   "claim_checks": [
    {
-    "claim_ok": false,
+    "claim_ok": true,
     "detector": "A1-repetition",
-    "note": "claim 9-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+    "note": "claim 9-token x3 vs re-derived 9 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
    }
   ],
-  "claims_all_corroborated": false,
+  "claims_all_corroborated": true,
   "class": "CANDIDATE",
   "detectors": [
    "A1-repetition"
@@ -1792,17 +1787,19 @@
   "paragraph": 0,
   "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
   "rederived_repetition": {
-   "longest_run": null,
-   "span_fully_periodic": false,
-   "span_period_tokens": null,
-   "span_repeats": null,
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 9
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 9,
+   "span_repeats": 3,
    "tokens": 27
   },
   "review_score": [
-   1,
-   [
-    "runner claim not re-derived"
-   ]
+   0,
+   []
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
   "seeded": false,
@@ -1815,10 +1812,14 @@
     "quote_len": 128,
     "quote_verified": true,
     "rederived": {
-     "longest_run": null,
-     "span_fully_periodic": false,
-     "span_period_tokens": null,
-     "span_repeats": null,
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 9
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 9,
+     "span_repeats": 3,
      "tokens": 27
     },
     "runner_evidence": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
@@ -1932,7 +1933,7 @@
     "detector": "B2-misquote",
     "divergence": [
      {
-      "book": "of empowerment now we get to courage our view of god begins to change god is perhaps a possibility and of a different nature now because now is a level of empowerment you remember est back in the s werner erhard seminars training the purpose of est was to get you off",
+      "book": "of empowerment now we get to courage our view of god begins to change god is perhaps a possibility and of a different nature now because now 200 is a level of empowerment you remember est back in the 70s werner erhard seminars training the purpose of est was to get you off",
       "op": "replace",
       "transcript": "hardt"
      }
@@ -2013,7 +2014,7 @@
       "transcript": null
      },
      {
-      "book": "some more and the elevator was slow uh huh and the alarm",
+      "book": "some more and the elevator was slow uh-huh and the alarm",
       "op": "replace",
       "transcript": "wait"
      }
@@ -2094,9 +2095,14 @@
       "transcript": null
      },
      {
-      "book": "or hours in this heat and no water",
-      "op": "replace",
+      "book": null,
+      "op": "delete",
       "transcript": "maybe"
+     },
+     {
+      "book": "or 14 hours in this heat and no water",
+      "op": "insert",
+      "transcript": null
      }
     ],
     "hawkins_own": true,
