@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T23:19Z
+updated: 2026-09-25T23:24Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -39,7 +39,7 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 ## lanes (verified by explicit-refspec fetch 2026-09-25T22:56Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
 - worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `4fc40c81c9484b5ed9cd16f0d118638d06d5a216` (ALIVE; bound leg-d floor-5 table to PATTERNS @ `4fc40c8`, delivered TASK-020 items 1-11 @ `d7fee6e`, suite 227 OK)
-- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `ba32676caf4709663cbedb34e116c07f90a34d3d` (ALIVE; committed mechanical gate instrument orch2_verify.py 107 rows, 97 PASS, 7 FAIL matching open items)
+- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `53c235ea1e744e31876d60ac7df197a940f0b118` (ALIVE; extending gate instrument orch2_verify.py with read-scope/one-shot sections; ready to re-run on worker head)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
   - worker v1: `arena/01a0d581-fleetyard` @ `bf97d85` (HALT ack)
