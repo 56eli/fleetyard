@@ -188,3 +188,29 @@ units ("Mm-hmm") remain a labelling nuance — documented, not hidden.
 
 Every step: suite green before push, control line per quantum, commit + push,
 heartbeat with task id + sha.
+
+
+---
+
+## Provenance binding (append-only; TASK-018 item 0b — repairs TASK-014 q1.4d)
+
+**Rule: any M5-R-derived figure on this page is VOID unless the named ledger digest
+matches the ledger it was read from.** Binding as of 2026-09-25T20:1xZ:
+
+- source ledger: `findings/ledger.jsonl`, sha256
+  `d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32`
+- companion manifest: `findings/PROVENANCE.json`, `by_transcript_digest`
+  `c1ec4da8…`, producing `tool_commit` `dada3e602689cb900971fda0dccce8267f31a2b2`
+- worker head at which the figures were read: `1beadd9151331168f528940a303ffc36a1af222f`
+- read utc: 2026-09-25T19:40Z · re-verified at `219075a` / ORCH-2 gate `45959ca`
+  (provenance-only delta: ledger digest unchanged)
+
+Figures bound by this block: the coverage count 3/16 (fixtures covered by a detector) and
+the corroboration column 938/938 · 158/158 · 12/12 · 228/228.
+
+**Control status (append-only, same date):** `PAUSE-WORKER-A-2026-09-25-001` was
+**REMOVED** by ORCH-2 at 2026-09-25T20:02Z on the M5-R re-gate **PASS** (worker head
+`1beadd9`; all 13 criteria, fresh independent evidence). The earlier note on this page
+saying M4 is "parked under PAUSE" is superseded for control state only — the task order
+it cites (ERRATA-25e §1) also put TASK-016 first, which is delivered. M4 q3–q5 resume
+per TASK-018 (leg-(d) adjudication) then TASK-017.

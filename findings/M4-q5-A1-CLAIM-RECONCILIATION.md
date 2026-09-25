@@ -62,3 +62,19 @@ recorded in `findings/PROVENANCE.json`.
 - **Trust-ledger note (CANON 15):** M5-R errata #1 (fixture overlap) and #2 (this
   one) both corrected *my* instrument, each with a regression test and an append-only
   record; recovery credit does not erase the breaches.
+
+
+## Correction (append-only; TASK-018 item 0 — ORCH-2 re-derivation, 2026-09-25T20:1xZ)
+
+**Row 3 of the table above (M5R-0036) is WRONG and is corrected here, not edited away.**
+
+The row claimed the span re-derived as "period 2 (`Mm-hmm` = 2 tokens in the Unicode
+rule), 8 repeats — claim reads the unit as 1 token" and called it a labelling nuance.
+That is the *pre-fix* state. Under the token rule actually shipped
+(`TOKEN_RE = [^\W_]+(?:['’\-][^\W_]+)*`, `tools/m5r_reduce.py` @ `dada3e60`),
+hyphenated forms are **ONE token**: `TOKEN_RE.findall("Mm-hmm") == ["Mm-hmm"]`. The
+ledger records `unit_tokens 1, span_period_tokens 1, span_repeats 8` for M5R-0036 and
+the v1 claim reads "1-token unit repeated 8 times" — **claim and re-derivation agree
+exactly; there is no nuance and no residual ambiguity.** The 98→0 correction itself
+stands (the two reducer defects were real); only this row's explanation was wrong.
+Verified by ORCH-2's independent tokenisation (`['mm-hmm'] * 8`) and re-verified here.

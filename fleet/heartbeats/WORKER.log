@@ -15,3 +15,5 @@
   2026-09-25T19:4xZ ruling 25e logged (OPTION A repair-first; leg (d) recorded, M4 parked). TASK-016 delivered with per-criterion C6/C7/C8 evidence; awaits ORCH-2 re-gate.
   2026-09-25T19:55:56Z cadence check 1 (auto): cadence: main 77f1d6d, orch2 8ed8d12, boss2 31ad262, pause REMOVED, pending 5 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
   2026-09-25T19:56:02Z cadence check 1 (auto): cadence: main 77f1d6d, orch2 8ed8d12, boss2 31ad262, pause present, pending 5 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
+  2026-09-25T19:56:09Z cadence check 1 (auto): cadence: main 77f1d6d, orch2 8ed8d12, boss2 31ad262, pause present, pending 5 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
+  2026-09-25T20:3xZ TASK-018 claimed (work order per ERRATA-25g §5); items 0 + 0b appended (M5R-0036 correction; PATTERNS.md provenance binding + pause-REMOVED note); adjudicator tools/m4_q2_adjudicate.py written; inputs re-materialised after dev-env reset #2.
