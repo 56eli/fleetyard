@@ -46,3 +46,16 @@ Dedup rule in force: max one alert per class per 20 minutes.
   4. Activations confirmed in force (§5); mission resume ordered (§7).
   5. Sibling status: WORKER-2 delivered M5-R at 8011439 and re-grounded on 25d at 341ee2e; ORCH-2 lane registered at 574f499.
   6. BOSS-2 active, tracking PLAN-v2 manifest, stall-watch classes 1–6 armed.
+
+---
+
+## 2026-09-25T19:43Z — CLASS 2 — ORCHESTRATOR SILENT
+
+- class: (2) orchestrator silent
+- quiet: **37 minutes** (threshold: 20 min)
+- orchestrator lane: `arena/01a0d9d0-fleetyard`
+- orchestrator head: `8ed8d122cd8ee32f9bbeb426c4d377d03653382d` @ 2026-09-25T19:05:36Z
+- last heartbeat line: 2026-09-25T19:06Z
+- measurement timestamp: 2026-09-25T19:43:00Z
+- status: FIRED. WORKER-2 delivered repair TASK-016 at `1beadd9` while held under scoped brake `PAUSE-WORKER-A-2026-09-25-001`. Gates, queue, and pause-removal are DOWN.
+- action: Order `fleet/ORDERS/REDIRECT-008.md` issued targeting `ORCHESTRATOR@A-2026-09-25-002`; ack due in 900 s (by 2026-09-25T19:58:00Z).
