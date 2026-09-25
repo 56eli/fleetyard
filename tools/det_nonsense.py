@@ -10,6 +10,12 @@ Rules (each yields one signal):
                        Long non-Latin runs (e.g. the inline Korean
                        interpretation in Sedona Dec 2008) are NOT flagged
                        here: they are a real second language, not garble.
+                       Korean code-switch (TASK-010): an English word with a
+                       Korean case particle attached ("yes나", "no를",
+                       "archangel이") INSIDE Korean text is normal Korean
+                       grammar, not garble, and is not flagged. The same
+                       token shape in English context ("My hand은 You saw")
+                       is still flagged.
   replacement-char   : U+FFFD (undecodable bytes in the source file).
 
 Stdlib only. Self-test: python3 tools/det_nonsense.py --self-test
@@ -26,6 +32,13 @@ DETECTOR_ID = "A2-nonsense"
 MIN_FOREIGN_RUN = 4
 _PCT = re.compile(r"(?<![\d.])(\d{1,3}(?:,\d{3})*(?:\.\d+)?)\s?(%|percent\b)")
 _VIET = set("ăâđêôơưĂÂĐÊÔƠƯ")
+# Korean particles that attach to a (loan)word: case/topic/conjunctive
+KO_PARTICLES = frozenset(
+    "이 가 은 는 을 를 의 에 와 과 도 나 로 만 랑 이나 으로 에서 에게 "
+    "한테 까지 부터 처럼 보다 이랑 이라고 라고 라는".split())
+KO_CONTEXT = 3          # tokens each side inspected
+KO_CONTEXT_MIN = 2      # Hangul tokens needed among them
+_LATIN_HANGUL = re.compile(r"^([A-Za-z][A-Za-z'\-]*)([\uac00-\ud7a3]{1,3})$")
 
 
 def _script(ch):
@@ -45,6 +58,19 @@ def _is_viet(tok):
         0x1EA0 <= ord(ch) <= 0x1EF9 for ch in tok)
 
 
+def _hangul(tok):
+    return any(0xAC00 <= ord(ch) <= 0xD7A3 for ch in tok)
+
+
+def is_korean_codeswitch(toks, i):
+    """English word + Korean particle, embedded in Korean text."""
+    m = _LATIN_HANGUL.match(toks[i].text)
+    if not m or m.group(2) not in KO_PARTICLES:
+        return False
+    near = toks[max(0, i - KO_CONTEXT):i] + toks[i + 1:i + 1 + KO_CONTEXT]
+    return sum(1 for t in near if _hangul(t.text)) >= KO_CONTEXT_MIN
+
+
 def detect(text, **_ctx):
     out = []
     for m in _PCT.finditer(text):
@@ -59,6 +85,9 @@ def detect(text, **_ctx):
     for t in toks:
         s = {_script(ch) for ch in t.text} - {None}
         kinds.append("M" if s == {"L", "O"} else ("O" if s == {"O"} else "L"))
+    for i in range(len(toks)):
+        if kinds[i] == "M" and is_korean_codeswitch(toks, i):
+            kinds[i] = "O"      # part of the surrounding Korean run
     i = 0
     while i < len(toks):
         t = toks[i]
@@ -98,6 +127,12 @@ SELF_TEST = [
      "\uad00\uacc4\ud558\uace0 \uac70\uc9d3\uc740 \ud604\uc0c1\uc785\ub2c8\ub2e4.", 0),
     ("caf\u00e9 na\u00efve r\u00e9sum\u00e9", 0),
     ("bad \ufffd byte", 1),
+    # TASK-010 negative: Sedona Dec 2008 Part 2 @9671 interpreter Korean
+    ("\uadf8\ub798\uc11c \uc9c4\uc815\ud55c \uc2a4\uc2b9\uc740 \uc790\uc720\ub97c "
+     "\ud5c8\ub77d\ud558\uace0, \uadf8\uc5d0\uac8c yes\ub098 no\ub97c \uc120\ud0dd\ud560 "
+     "\uae30\ud68c\ub97c \uc8fc\uace0,", 0),
+    # same token shape in English context is still garble
+    ("didn't answer. No, never. My hand\uc740 You saw stop complaining", 1),
 ]
 
 

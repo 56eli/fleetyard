@@ -63,3 +63,13 @@ Honest limits:
   earlier in a B2 detector dump, so it is not independent of detector output.
 - Withdrawn records are excluded from every evaluation denominator
   (`run_detectors.py --eval`, retrieval `--eval`); they are not deleted.
+
+## negative/negative.json (TASK-010)
+
+Negative regression examples: spans where detectors must NOT produce an
+error signal (or must not reach HIGH CONFIDENCE). Stored as pointers
+(transcript, offset, length, sha256) plus a short quote and the expected
+outputs. NEG-001: Sedona Dec 2008 Part 2 @9671, the Korean interpreter's
+legitimate `yes나` / `no를` code-switch; expected A2 = 0 signals, max
+confidence CANDIDATE (A1's repeat may stand). Negatives are never counted as
+recall or precision.

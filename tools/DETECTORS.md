@@ -113,3 +113,33 @@ as a clean set: 0 signals (test-enforced).
     FAILED, owner ERRATA-2026-09-25 §3). No detector catches the new
     CF-019..CF-022. All clean-set numbers are IN-SAMPLE (the 59 passages were
     seen while tuning A4, B1 and B2) and are not independent FP rates.
+13. TASK-010 (false HIGH on bilingual Sedona, successor gate CYCLE 3):
+    Sedona Dec 2008 Part 2, paragraph 0 @9671 was emitted as HIGH
+    CONFIDENCE (A1-repetition + A2-nonsense) because A2 flagged the
+    interpreter's `yes나` / `no를` (English words + Korean particles 나 'or',
+    를 object marker) as script-mix garble. Fix (A2 only; merge/taxonomy
+    rules unchanged): a Latin-letters + Hangul token whose Hangul suffix is a
+    Korean particle (`det_nonsense.KO_PARTICLES`) and which has >= 2 Hangul
+    tokens within 3 tokens either side is a Korean code-switch; it is not
+    flagged and is treated as part of the surrounding Korean run. Measured
+    effect over all 230 transcripts: A2 signals 180 -> 159, changes only in
+    Sedona Dec 2008 Part 1 and Part 2 (suppressed tokens: yes나 x5, no를 x4,
+    no가 x3, archangel이 x2, yes가, energy가, plus Korean fragments that had
+    been split into "short runs" by those tokens); one short run shifted
+    ('yes가' -> 'yes가 아니고', Part 1). Family-A records corpus-wide: 1251,
+    0 HIGH (was 1 HIGH, this one). @9671 now emits exactly
+    `A1-repetition CANDIDATE` under `--family A` and `--family AB`. Kept:
+    `hand은` / `can부터` / `sub었는데` in English context, `spirit持`,
+    `question君`, Vietnamese `động`, impossible percentages, U+FFFD.
+    Negative regression fixture: `fixtures/negative/negative.json` (NEG-001,
+    pointer + sha256 + expected outputs). The fix was written for this
+    reported case (seeded), so it is not evidence of recall or precision.
+    Remaining, NOT fixed (out of this task's failed criterion): A2's
+    short-non-Latin-run rule still flags ~34 legitimate short Korean
+    fragments of the interpreter track in Sedona Dec 2008 Parts 1, 2, 4
+    (e.g. '열두 살 때였는데요', '돈 좀 보내주세요'). All are single-signal
+    CANDIDATE records (never HIGH, never in headline rates). Outside Sedona,
+    stray Hangul runs occur in files with 1-3 Hangul characters and look like
+    genuine ASR garble. A follow-up could exempt short Hangul runs in
+    transcripts with a Korean interpretation track; not done here to keep
+    the repair focused.

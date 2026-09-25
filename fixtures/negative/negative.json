@@ -1,0 +1,20 @@
+[
+ {
+  "id": "NEG-001",
+  "transcript": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "paragraph": 0,
+  "char_offset": 9671,
+  "length": 187,
+  "sha256": "754ac14d66ea3a14f0000c1f2cb784ba52a091f5a3440d95f5a589c0f28f1e58",
+  "context_quote": "s. And if a person declines, then the proper thing for the teacher is to pray for that person's enlightenment.",
+  "unit_quote": "그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고,",
+  "kind": "legitimate Korean code-switch (interpreter)",
+  "note": "The Korean interpreter translates 'allows you to say yes or no without any consequences' as '... 그에게 yes나 no를 선택할 기회를 주고' ('gives them the chance to choose yes or no'); 'yes나' / 'no를' are English words with the Korean particles 나 ('or') and 를 (object marker) — normal Korean grammar, not ASR garble. The 11-token unit is repeated 4x (A1 CANDIDATE, may be a real ASR repeat). Expected: A2 emits NO signal in this span; the runner never emits HIGH CONFIDENCE here from A1+A2.",
+  "expected": {
+   "A2-nonsense": 0,
+   "max_confidence": "CANDIDATE",
+   "A1-repetition": "present"
+  },
+  "provenance": "successor orchestrator gate CYCLE 3 (GATES.md) -> TASK-010; negative regression, never counted as recall or precision"
+ }
+]
