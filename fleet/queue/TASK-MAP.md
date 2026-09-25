@@ -27,3 +27,4 @@ worker v1 arena/01a0d581 @ bf97d85: 0923265/2a3eb2b -> v1 TASK-011 raw census (P
 orch v2 arena/01a0d5b7 @ fcc9834: GATES.md (v1 gate ledger) · ORCH-STATE.md (final handoff)
 boss v1 arena/01a0d585 @ 37e7260: final audit of the M6-P numbers (boss audit, not a gate)
 orch v1 arena/01a0d582 @ 191b1f8: ARCHIVE (cycles 41+ unauthorised; gates advisory only)
+2026-09-25T18:52:41Z e07be0e -> (records) owner rulings 1-2 logged by WORKER-2; M4 q1 approved PROVISIONAL-UNGATED; no task content

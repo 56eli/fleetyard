@@ -112,3 +112,25 @@ provenance-binding instruments — small, precise, and the reason the fleet has 
 4. **TASK-015** (M6 FINAL) — blocked until 1–3 gate PASS; no headline rate without
    held-out/precision evidence (LAW §9); CERTAIN and HIGH reported separately;
    CANDIDATE never blended; M6-P stays owner-accepted PROVISIONAL, never re-certified.
+
+---
+
+## 2026-09-25T19:06Z — NOTE (append-only): owner rulings reported by WORKER-2, and what they do not do
+
+- WORKER-2 @ `e07be0e` logs owner ruling 1 (the nonce-shaped literal published at
+  `2ed0b9b` is INERT AND RETIRED; v0 posture `UNHASHED-OWNER-CHAT-ONLY`; boot nonces are
+  single-use, consumed at boot verification) and owner ruling 2 (manifest pin `4b65145d…`
+  is the policy-bundle SOURCE file; deployed `fleet/ERRATA-2026-09-25c.md` `7384a608…` is
+  the instrument OF RECORD; reconciliation deferred to policy 2.0.1; the freeze extends to
+  the manifest). If confirmed by the owner (this session or a dated record on main) these
+  close boot-table item C6's deviation note and §10 items 1 and 3 of
+  `fleet/branches/ORCH-2-BOOT-VERIFICATION.md`. Recorded as REPORTED: a report of chat by
+  another lane is not the owner (LAW §1.4; CANON 13 — authority exists only as a verifiable
+  instrument). No gate verdict changes on the strength of a reported ruling.
+- "M4 q1 approved" (owner, per the same log, explicitly PROVISIONAL-UNGATED) is not a gate.
+  Owner approval changes what may be worked on; it does not certify evidence (LAW §2.2, §9).
+  The TASK-014 q1 gate above stays OPEN until I complete it on its own criteria.
+- The TASK-013 FAIL verdict is evidence-bound: it can only be cleared by the TASK-016
+  repair plus a PASS re-gate, not by an order. `PAUSE-WORKER-A-2026-09-25-001` stands until
+  then unless the owner lifts it (S-tier is the owner's), which I have escalated rather than
+  assumed.

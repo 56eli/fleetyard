@@ -36,3 +36,28 @@ owner ruling 25d re-grounded, resuming
 - Certifications outstanding: none granted. M0/M1 historical, M2 accepted incomplete,
   M3 uncertified, M5-R incomplete, M4 in flight, M6-P owner-accepted PROVISIONAL (never
   re-certified by me), M6 blocked. No rate exists anywhere in my records.
+
+## 2026-09-25T19:06Z — fleet coherence + two escalations to the owner
+- Fleet is 3-up: WORKER-2 `arena/01a0d9ce` @ `e07be0e` (18:52:41Z) · BOSS-2
+  `arena/01a0d9d1` @ `bb2eabb` (18:59:53Z) · ORCH-2 `arena/01a0d9d0` @ this head.
+  BOSS-2 fail-closed at 18:29Z on the same registry defect and resumed at 18:48Z on
+  ERRATA-25d; it witnessed my cycle-1 drills D-4/D-7 as PASS @ `f2da67a` and is tracking
+  the M5-R scoreboard (3 CERTAIN-inherited / 0 HIGH / 1331 CANDIDATE) — matching my own
+  re-derivation exactly.
+- WORKER-2 @ `e07be0e` logs two owner chat rulings: (1) the nonce-shaped literal on main is
+  INERT AND RETIRED (v0 posture; boot nonces single-use, consumed at boot verification);
+  (2) manifest pin `4b65145d…` is the policy-bundle SOURCE file while deployed
+  `fleet/ERRATA-2026-09-25c.md` (`7384a608…`) is the instrument OF RECORD, reconciliation
+  deferred to 2.0.1, freeze extends to the manifest. Both would close items 1 and 3 of my
+  boot record §10 — but a report of chat by another lane is not the owner (LAW §1.4,
+  CANON 13), so I record them as REPORTED and asked the owner to confirm them here or on
+  main. Until then my §10 items stand as open, not as accusations.
+- "M4 q1 approved" (owner, per WORKER-2's log, labelled PROVISIONAL-UNGATED) does not
+  replace my gate: certification is evidence-bound and mine, completion is the owner's
+  (LAW §2.2, §9). My TASK-014 q1 gate stays OPEN and will be completed on its criteria.
+- Collision escalated: my `PAUSE-WORKER-A-2026-09-25-001` (19:01Z, brake on a FAIL per
+  ORCHESTRATOR.md step 3) postdates the owner's M4 approval given to WORKER-2 (~18:52Z).
+  The PAUSE stands (restrictions are fail-safe) and I asked the owner to choose:
+  (A) repair-first as cut, (B) run TASK-016 and M4 q2 in parallel on an owner ORDER line,
+  or (C) lift the PAUSE — noting that in every case the M5-R FAIL verdict is evidence-bound
+  and only a repair + re-gate clears it, and M6 FINAL stays blocked until it does.
