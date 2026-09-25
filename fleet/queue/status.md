@@ -158,3 +158,23 @@ Role: ORCHESTRATOR (ORCH-2, A-2026-09-25-002) · lane arena/01a0d9d0-fleetyard.
   evaluation). Mine this shift: gate q3 → q2 (determinable criteria; leg-(d) items pending
   TASK-018) → q4 execution discipline → q5 residuals, then TASK-018/019/017 as they land;
   TASK-015 (M6 FINAL) stays BLOCKED until 019b + 017 + the M4 gates.
+
+2026-09-25T20:41:49Z GATE TASK-014 q3 (C2-format speaker/format) = FAIL / INCOMPLETE (ORCH-2, worker head
+  219075a, main 7d033ab): q3.2 fixture results absent (and PATTERNS.md §3 line 45 still says
+  "speaker/format — not built", contradicting §5c/line 179), q3.3 clean-set results absent
+  (only a toy clean control in the self-test; no run over fixtures/clean or the known-good
+  books), q3.5 LAW §8 manifest missing tool_commit/policy_sha256/main_head/output digest AND
+  detector_sha256 c322e053 binds the file at 4425763 while head is ef9ff4f2 (q4 changed only
+  the runner; I proved rule logic unchanged by reading the diff and reproducing the run
+  byte-identically). PASS: q3.1 self-test (rc=0, 6 tests), q3.4 threshold provenance (gap:
+  the camel-glue rejection count 35/18 is not reproducible from the published description —
+  my probes give 126/61 or 6/6 — while double-word 3436/228 reproduces exactly; publish both
+  probes), q3.6 tuning isolation (193 keys == tuning, 0 holdout, seal 481d8513 unmoved),
+  q3.7 reproduction (my run byte-identical signals.json 86c8f57d; 49/49 citations byte-exact),
+  q3.8 scope/stdlib/no-network (book store never read -> binding N/A), q3.9 mechanical
+  definition + census corroborated by my own probes over all 230 (speaker labels 0, stage
+  directions 0, HTML 0, strict JS syntax 0, control chars 0, tabs 0, nbsp 0, double spaces 0,
+  space-before-semicolon 0) + CANDIDATE discipline + no rates. No pause (proportionality
+  recorded, reversible); restriction: q3 not citable as passed, C2-format not promotable, its
+  49 signals may not feed any rate or M6 figure. Repair to be cut as ONE task for q2+q3
+  shipping gaps after the q2 gate this shift. Detail: fleet/GATES.md 20:44Z.

@@ -396,3 +396,53 @@ manifest re-run and a new ops utility. I re-verified rather than assuming:
   on-disk file byte-equal to the pushed blobs. LAW §8's "push every commit; a durable step
   ends with a push" is the only reason neither lane lost work. Recorded as evidence for the
   2.0.1 policy notes, not as an incident.
+
+---
+
+## 2026-09-25T20:44Z — GATE: TASK-014 q3 (M4 C2-format speaker/format detector) — VERDICT: **FAIL / INCOMPLETE** (three criteria)
+
+- gated at WORKER-2 head `219075a` (main `7d033ab`); artefacts `tools/det_format.py`
+  (sha256 at head `ef9ff4f257cd9b75edd1dc888abac17ace21ad65ec8ff78e8c088c5ea527b7b9`),
+  `runs/m4-q3-format/{README.md,PROVENANCE.json,signals.json}` (signals.json sha256
+  `86c8f57dea9443f3…` — computed by me; the manifest does not carry it),
+  `tests/test_det_format.py` (6 tests), `tools/PATTERNS.md` §5c.
+- criteria are TASK-014 q3's as cut at 19:01Z ("same shipping requirements as q2, plus an
+  explicit statement of what speaker/format error means mechanically and what it cannot see"),
+  labelled q3.1–q3.9 below. Gate scratch re-created at `/home/user/gate-scratch/w219075a`
+  (the previous scratch was lost to a sandbox reset; inputs re-materialised read-only via the
+  worker's own `tools/m5r_inputs.sh`, corpus zip sha `3f36c520…` verified).
+
+| # | criterion | verdict | independent evidence (my own runs) |
+|---|---|---|---|
+| q3.1 | ships WITH a self-test (STANDARDS tool gate 1) | **PASS** | `python3 tools/det_format.py --self-test` → `C2-format self-test OK (5 signals on the toy, 0 on the clean control)`, rc=0. 6 module tests: `test_each_rule_fires`, `test_abbreviations_are_not_glued_periods`, `test_clean_control_is_silent`, `test_self_test_entry_point`, `test_signals_carry_offsets_and_excerpts`, `test_tuning_and_holdout_disjoint_in_split`. Lane suite at head: **Ran 26 tests, OK, 0 skipped** |
+| q3.2 | fixture results — which of the 16 confirmed fixtures it catches | **FAIL** | No fixture-recall result for C2-format exists anywhere: not in `runs/m4-q3-format/README.md`, not in `PROVENANCE.json`, not in PATTERNS.md §5c. Worse, PATTERNS.md §3's per-detector table still reads `speaker/format | — | **not built (M2 accepted incomplete)** | — | unmeasured | no` (line 45) while §5c (line 118) documents the shipped detector and line 179 marks q3 done — the catalogue contradicts itself, and §3 is the table M6 FINAL would quote. The honest answer is probably `0/16` (format artifacts are not what the 16 fixtures encode), but STANDARDS gate 1 requires it **measured and stated**, not left blank |
+| q3.3 | clean-set results — false positives on genuinely held-out known-good text (the books are known-good; flagging book text is misfiring by definition) | **FAIL** | The only clean evidence is the self-test's **toy** control (0 signals) and `test_clean_control_is_silent`. There is **no run over `evidence/fixtures/clean/clean.json`** and **no run over known-good book passages** (the 24-slug store is present and the detector never reads it — `grep parse_book_store tools/det_format.py` → no match). For 7 punctuation/whitespace rules this is a cheap, decisive test and it is owed |
+| q3.4 | disclosed threshold provenance (fitted on what, measured on what) | **PASS with a recorded gap** | Disclosed: the 7 rules with their exact shapes in the module docstring, the `ABBREV` exclusion list in-file, the run labelled tuning-only, and two candidate rules **measured then rejected** with counts so the rejection is auditable. Gap: the camel-glue rejection count (**35 hits / 18 files**) is **not reproducible** from the published description — my own probes give 126 hits / 61 files (any internal capital: `WorldCom`, `PhD`) or 6 / 6 (lowercase-start: `veryCapitalist`, `dimensionONE`, `iPad`); the double-word count (**3,436 / 228**) reproduces **exactly** with `\b(\w+)\s+\1\b` (case-insensitive). The *decision* is corroborated by both my probes (proper nouns dominate), so this is a documentation gap, not a soundness problem: publish both rejected-rule probes verbatim (regex + flags) |
+| q3.5 | LAW §8 manifest for the run | **FAIL** | Present and recomputed MATCH by me: `corpus_zip_sha256 3f36c520…`, `split_file` + `split_corpus_files_sha256 9ae90185…` (I reproduce this digest from its written derivation), `holdout_enforced: true`, `holdout_reads: []`, full `transcripts_read` (193, set-equal to the split's tuning list), `outputs.per_rule` (R1 22 · R2 3 · R3 5 · R4 1 · R5 15 · R6 2 · R7 1 = 49), `run_utc 19:08:01Z`, status CANDIDATE/PROVISIONAL-UNGATED. **Missing: `tool_commit` (reachable), `policy_sha256`, `main_head`, and the output digest** (signals.json `86c8f57d…`). And **`detector_sha256 c322e053…` does not match the file at head** (`ef9ff4f2…`): it matches `det_format.py` at `4425763` (verified by `git show`), and `4e114f1` (q4) later changed **only the runner** (added `--set {tuning,holdout}` and a `set` provenance field) — I read the full diff and then reproduced the run at head: **byte-identical `signals.json` (`86c8f57d…` both)**, so the outputs are attributable to unchanged rule logic. But that attribution cost me a commit archaeology + a fresh replay; the manifest cannot show it. This is exactly the mismatch LAW §8 exists to reject |
+| q3.6 | tuning runs must not read the holdout; the seal must not change | **PASS** | `signals.json` keys == the split's tuning set **exactly** (193/193), ∩ holdout = **0**; manifest `transcripts_read` == tuning, `holdout_reads: []`; `run_tuning` raises `SystemExit` on any tuning∩holdout overlap; the split file is byte-identical to the sealed original (`481d8513…`, unchanged since `593cad3`) |
+| q3.7 | orchestrator reproduces the run (STANDARDS gate 3); citations byte-exact | **PASS** | my own run `python3 tools/det_format.py --tuning --split tools/HELD-OUT-SPLIT.json --corpus corpus --out <scratch>` → `193 transcripts, 49 signals {R1 22, R2 3, R3 5, R4 1, R5 15, R6 2, R7 1}` — per-rule counts identical to the manifest and **`signals.json` byte-identical** to the committed file; then, with my own code, **49/49** signals' `start`/`end`/`match` re-verified against the frozen overlays: **0 citation mismatches** |
+| q3.8 | frozen corpus only, stdlib only, no network, writes only to named outputs | **PASS** | imports `argparse, json, os, re, sys` + same-lane `m5r_reduce` for the loaders (stdlib only, no urllib/socket/subprocess); reads `corpus/**` + the split; writes only under `--out`. The detector never reads the book store, so a book-store binding is **N/A for this detector** — recorded as N/A, not as a gap |
+| q3.9 | explicit mechanical definition + what it cannot see; unmeasured ≠ zero; CANDIDATE discipline; no rates | **PASS** | The docstring and README state precisely what the 7 rules claim, that a format artifact is mechanically demonstrable while "whether it changed meaning" is not claimed, and that **speaker attribution is out of mechanical scope** — backed by a corpus census I **independently corroborated with my own probes over all 230 transcripts**: speaker labels **0**, bracketed stage directions **0**, HTML tags/entities **0**, strict JS syntax (`function(`, `=>`, `var/const/let x =`, `document.x(`, `window.x(`, `<script`) **0**, control chars **0**, tabs **0**, nbsp/U+2007/U+202F **0**, double spaces **0**, space-before-semicolon **0**. (Instrument lesson, mine: a naive word-level probe `\b(var|const|function|document\.|window\.)\b` yields 470 hits / 153 files — all ordinary English ("function", "document.", "window."); the strict syntax probe gives 0. Their claim is right; a loose probe would have "refuted" it.) All 49 signals are CANDIDATE-class and unreviewed; precision **unmeasured**; no rate anywhere; delivery labelled PROVISIONAL-UNGATED; the M2 remainder is resolved honestly (format half measured, speaker half an explicit M6 limitation) |
+
+### Verdict
+
+**TASK-014 q3 = FAIL / INCOMPLETE** (q3.2 fixture results, q3.3 clean-set results, q3.5 §8
+manifest bindings; q3.1, q3.4-with-gap, q3.6–q3.9 PASS). LAW §9: any failed criterion =
+INCOMPLETE, never PASS. The detector's **substance is clean**: I reproduced its run
+byte-for-byte, re-verified every citation, corroborated its scope census with my own probes,
+and confirmed the rule logic has not moved since delivery. What is missing is the shipping
+evidence STANDARDS gate 1 demands (fixtures + clean set) and the LAW §8 bindings that would
+let a verifier attribute the run without archaeology. **C2-format is not promotable, its 49
+signals stay CANDIDATE, and no M6 figure may quote them.**
+
+### Brake decision (same proportionality test as q1, recorded and reversible)
+
+No activation-scoped PAUSE: the failed criteria are evidence instruments on a quantum whose
+substance I reproduced byte-identically; nothing false was shipped; the worker's current task
+is owner-ordered (ERRATA-25g §5: claim TASK-018 now, then TASK-017), and a pause would make a
+doc/evidence repair the only actionable task and idle the fleet. Restriction applied instead,
+artefact-scoped and fail-safe: **q3 is INCOMPLETE and may not be cited as passed; C2-format is
+not promotable; its signals may not feed any rate or M6 figure.** The repair will be cut as a
+**single task covering the q2+q3 shipping gaps** once the q2 gate completes this shift (queue
+stays small, ERRATA-25f §4). If BOSS-2 or the owner reads ORCHESTRATOR.md step 3 as requiring a
+pause on any FAIL, I will issue one in the same cycle on request.
