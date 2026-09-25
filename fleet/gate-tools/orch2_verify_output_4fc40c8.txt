@@ -36,6 +36,7 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   split v2 file digest
   PASS   split v2 bucket counts [n=230]
   INFO   split v2 fixtures-adjacent binding
+         expected c40d272f… (item v2.a owed) | observed None
          criterion v2.5: the seal binds the actual fixtures-adjacent digest
   PASS   m5r_reduce.py identical across 219075a/ffb8811/head [n=3]
          the M5-R PASS depends on this
@@ -47,6 +48,7 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   unchanged: tools/det_dropword.py
   PASS   unchanged: tools/det_format.py
   FAIL   criterion 20.10: tool_commit contains the generator [n=1]  <<< FAIL
+         expected present | observed ABSENT at ffb881158b88
          item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256
 
 == 1b. v1 toolchain pins (three-way) ==
@@ -84,6 +86,7 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   A1 unit-size tally (regex over claim notes) [n=938]
          sum 938, max k 12 with 9 claims -> kmax=16 is max-observed + 4 tokens headroom
   PROXY  book_refs  <<< PROXY
+         expected 242 | observed not re-derivable by proxy
          a substring proxy over claim_checks gives 240; recorded as PROXY, never as a mismatch
 
 == 3. census, exposure and the three Poisson rows ==
@@ -101,12 +104,14 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   Poisson C1-drop: expected [n=1]
   PASS   Poisson C1-drop: P(X<=obs) [n=1]
   FAIL   worker's published v1 row vs the census [n=1]  <<< FAIL
+         expected 187.9 / 0.44 | observed census gives 187.5548 / 0.4451
          item 11a: publish the per-row tuning-side counts 1149 / 49 / 122 and reconcile 187.9 with 187.6
   PASS   drop-leg config identical tuning vs holdout [n=8]
   PASS   format-leg rule list identical [n=7]
   PASS   format-leg abbreviations (pinned detector vs q3 config) [n=38]
   PASS   format-leg excerpt width (pinned detector vs q3 config) [n=1]
   FAIL   q4 format config digest covers a SUBSET  <<< FAIL
+         expected state the subset relation (item 14) | observed q3 8e7e35a2795f… vs q4 805241dd0930…
          comparability established from the pinned source, not from the digests
 
 == 4. TASK-018 adjudication set ==
@@ -123,6 +128,7 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   adjudicated rows living in a fixture-bearing transcript [n=122]
          fixture transcripts: ['A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html', 'Love_Sep_2011_Part_1_enxautogen_html', 'Satsang_Series_Volume_IX_Part_6_enxautogen_html'] — this is the decisive form of the overlap test
   INFO   interval overlaps with any fixture span [n=0]
+         expected 0 | observed 0
          R1 satisfied and the row is honestly VACUOUS-by-data: 0 interval comparisons were possible because no adjudicated row shares a transcript with any fixture. The membership test above (0 of 122 rows in a fixture-bearing transcript, n=122) is the decisive one.
   PASS   rows with seeded == true [n=122]
          the seeded KEY is present on 122/122 rows (value false on all of them); in_sample true on 122/122 — SUMMARY.md's '4 of the 57 carry seeded: true' is FALSE (TASK-018 item 0d, and its copy in PATTERNS §5b-bis)
@@ -140,11 +146,15 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   PATTERNS §5e section located [n=11]
          sliced by heading, never by 'from the first label occurrence to EOF' (which lets a later section's wording satisfy an earlier section's check)
   FAIL   PATTERNS §5e carries '98' (superseded flag count) [n=11]  <<< FAIL
+         expected corrected or annotated (item 11b) | observed present, UNANNOTATED
          §5e may not be quoted for these two numbers until item 11b lands; the corrected figures are 97 = 9 + 61 + 27 and max unit 12 with 9 claims
   FAIL   PATTERNS §5e carries 'up to 11' (superseded unit bound) [n=11]  <<< FAIL
+         expected corrected or annotated (item 11b) | observed present, UNANNOTATED
          §5e may not be quoted for these two numbers until item 11b lands; the corrected figures are 97 = 9 + 61 + 27 and max unit 12 with 9 claims
   FAIL   PATTERNS §5b-bis fuzzy timestamp (item 12 / criterion 20.14) [n=1]  <<< FAIL
+         expected exact UTC + source | observed ['21:5xZ']
   FAIL   PATTERNS §5b-bis repeats the false seeded sentence (item 0d) [n=1]  <<< FAIL
+         expected corrected append-only | observed present
          0 of 122 rows carry seeded: true; the four seeded rows live in fixtures-adjudication.json
 
 == 6. read-scope and one-shot discipline ==
@@ -172,24 +182,34 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   q4 v1-holdout.PROVENANCE.json: transcripts_read == v1 holdout (37) [n=37]
   PASS   q4 v1-holdout.PROVENANCE.json: reads ∩ v1 tuning == 0 [n=37]
   INFO   q4 v1-holdout.PROVENANCE.json: holdout_reads declared [n=37]
+         expected the 37 spent transcripts (or empty with the read set declared elsewhere) | observed 37 entries
   INFO   q4 part-holdout-drop.PROVENANCE.json: holdout_consumed [n=1]
+         expected run-level field | observed absent here; declared at run level (True)
          holdout_consumed is a property of the RUN, not of each part manifest; requiring it per part was over-strict (this instrument's third-run defect)
   PASS   q4 part-holdout-drop.PROVENANCE.json: transcripts_read == v1 holdout (37) [n=37]
   PASS   q4 part-holdout-drop.PROVENANCE.json: reads ∩ v1 tuning == 0 [n=37]
   INFO   q4 part-holdout-drop.PROVENANCE.json: holdout_reads declared [n=37]
+         expected the 37 spent transcripts (or empty with the read set declared elsewhere) | observed 37 entries
   INFO   q4 part-holdout-format.PROVENANCE.json: holdout_consumed [n=1]
+         expected run-level field | observed absent here; declared at run level (True)
          holdout_consumed is a property of the RUN, not of each part manifest; requiring it per part was over-strict (this instrument's third-run defect)
   PASS   q4 part-holdout-format.PROVENANCE.json: transcripts_read == v1 holdout (37) [n=37]
   PASS   q4 part-holdout-format.PROVENANCE.json: reads ∩ v1 tuning == 0 [n=37]
   INFO   q4 part-holdout-format.PROVENANCE.json: holdout_reads declared [n=37]
+         expected the 37 spent transcripts (or empty with the read set declared elsewhere) | observed 37 entries
   FAIL   criterion 20.14a: FUZZY timestamps ASSERTED in committed docs (item 12) [n=554]  <<< FAIL
+         expected 0 instances | observed 26 instances: [('findings/M4-q5-A1-CLAIM-RECONCILIATION.md', '20:1xZ'), ('findings/M4-q5-A1-CLAIM-RECONCILIATION.md', '21:4xZ'), ('findings/README.md', '21:4xZ'), ('fixtures/v2/dropword.json', '19:1xZ'), ('fleet/LOG.md', '18:4xZ'), ('fleet/LOG.md', '18:5xZ'), ('fleet/LOG.md', '19:1xZ'), ('fleet/LOG.md', '19:2xZ'), ('fleet/LOG.md', '19:3xZ'), ('fleet/LOG.md', '19:4xZ'), ('fleet/LOG.md', '20:0xZ'), 
          plus 4 sites that QUOTE a fuzzy value in order to report or supersede it (not instances): [('fixtures/v2/dropword.json', '19:1xZ'), ('fleet/LOG.md', '18:5xZ'), ('fleet/branches/WORKER-2-TASK-020-DELIVERY.md', '19:1xZ'), ('tools/PATTERNS.md', '20:1xZ')]
   FAIL   criterion 20.14b: an artefact's OWN time field exact to the second [n=554]  <<< FAIL
+         expected 0 offenders | observed 1 offenders: [('tools/INHERITED-V1-MANIFEST.json', 'materialised_utc', '2026-09-25T20:5xZ')]
          minute precision cannot order an artefact against a commit - the q2 parts ran 18:57:11Z-19:05:21Z before their delivery commit at 19:06:53Z, a sequencing question only seconds can settle
   INFO   criterion 20.14b-compliant: fuzzy own-time field superseded in-file by an exact sibling [n=554]
+         expected reported | observed 1 sites: [('fixtures/v2/dropword.json', 'generated_utc', '2026-09-25T19:1xZ')]
          this is the repair pattern the lane already owns - fuzzy left readable, exact sibling added; flagging it would punish the correct fix
   INFO   criterion 20.14c: exact-to-the-second timestamps found [n=554]
+         expected reported | observed 38 sites
   INFO   criterion 20.14d: minute-precision timestamps anywhere else (citations, prose, headers) [n=554]
+         expected allowed when the source is named; ORCH-2 audits its own headers here | observed 43 sites, first 8: [('fixtures/confirmed/corrections.json', '2026-09-24T23:44Z'), ('fleet/HALT-2026-09-25.md', '2026-09-25T13:22Z'), ('fleet/LOG.md', '2026-09-25T18:26Z'), ('fleet/LOG.md', '2026-09-25T18:34Z'), ('fleet/LOG.md', '2026-09-25T18:43Z'), ('fleet/LOG.md', '2026-09-25T18:52Z'), ('fleet/alerts/ALERTS.md', '2026-09-25T18:26Z'), ('fleet/alerts/WORKER-2-FAIL-CLOSED.md', '2026-09-25T18:26Z')]
          ORCH-2's own GATES.md headers are minute-precise, so ORCH-2 is an instance of this defect and adopts exact-second headers from this cycle; two worker EVAL.json files cite those headers verbatim and are faithful to their source
 
 == 7. drop-word signal evidence (q2.6) ==
@@ -198,9 +218,16 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   book citations found in the book store (substring) [n=122]
          failures []
   INFO   book citations offset-exact within the slug region [n=122]
+         expected reported, not required | observed 0/122
          offset semantics are the store's own; the substring test above is the binding one
   PASS   dropped_words present and contained in the suspected span [n=122]
+  INFO   drop consistency under FIVE natural rules (rule sensitivity) [n=610]
+         expected the q2.6 gate figure 113/9 is reproduced by none of them | observed A remove-all-occurrences: 114/122 · B remove-first-occurrence: 122/122 · C quoted-subseq+count: 122/122 · D suspected-minus-quoted==dropped: 114/122 · E quoted-contiguous-in-suspected: 8/122
+         ORCH-2 self-item O-1: the previously published 113/9 with a 3+6 decomposition is WITHDRAWN as not reproducible. The token rule is load-bearing: under a hyphen-SPLITTING rule, rule A collapses to 67/122.
+  PASS   STATED CRITERION — shape-defective rows under rule A [n=122]
+         token rule: apostrophes (straight AND curly, normalised) and hyphens INSIDE tokens; every other character a separator. Examples: [(['evidence'], 'evidence; evidence of'), (['staggering'], 'staggering, staggering. This')]
   PROXY  drop consistency: tokens(suspected) minus dropped == tokens(quoted) [n=122]  <<< PROXY
+         expected the q2.6 gate figure was 113 consistent / 9 shape-defective | observed 114 consistent / 8 shape-defective
          PROXY, not FAIL: this mechanical rule (remove every occurrence of each dropped word from the token list, then compare) is NOT the procedure the q2.6 gate used. Until that procedure is encoded here this row may not be used as a criterion; the binding rows are the byte-exact span and citation checks above. Examples: [('Causality_The_Ego_s_', 'evidence of'), ('Causality_The_Ego_s_', 'Staggering. This'), ('Causality_The_Ego_s_', 'be sovereign')]
 
 == 8. LAW §8 manifest completeness ==
@@ -213,31 +240,36 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: original pin defect disclosed [n=3]
   PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: detector_sha256_at_head == tools/det_dropword.py
   FAIL   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: tool_commit 71c37cf21928 contains its generator tools/m4_t20_supplement.py [n=1]  <<< FAIL
+         expected present | observed ABSENT
          item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: required keys [n=6]
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: run_utc exact to the second [n=1]
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: book store bound or N/A stated [n=1]
   FAIL   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.16) [n=1]  <<< FAIL
+         expected config_digest_note present | observed ABSENT
          the q2 supplement states it; the others must adopt it (item 14)
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: status forbids promotion/rate [n=1]
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: original pin defect disclosed [n=3]
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: detector_sha256_at_head == tools/det_format.py
   FAIL   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: tool_commit 71c37cf21928 contains its generator tools/m4_t20_supplement.py [n=1]  <<< FAIL
+         expected present | observed ABSENT
          item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256
   PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: required keys [n=6]
   PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: run_utc exact to the second [n=1]
   PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: book store bound or N/A stated [n=1]
   FAIL   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.16) [n=1]  <<< FAIL
+         expected config_digest_note present | observed ABSENT
          the q2 supplement states it; the others must adopt it (item 14)
   PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: status forbids promotion/rate [n=1]
   FAIL   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: tool_commit ffb881158b88 contains its generator tools/m4_q4_supplement.py [n=1]  <<< FAIL
+         expected present | observed ABSENT
          item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256
   PASS   runs/m4-q2-dropword/README.md: threshold provenance section names every parameter [n=9]
          for C2-format the correct provenance answer is that the seven rules are shape predicates with NO numeric thresholds; the rule names are catalogued in the same README and in the supplement's `rules` list, so they are not required inside the provenance section itself
   PASS   runs/m4-q3-format/README.md: threshold provenance section names every parameter [n=2]
          for C2-format the correct provenance answer is that the seven rules are shape predicates with NO numeric thresholds; the rule names are catalogued in the same README and in the supplement's `rules` list, so they are not required inside the provenance section itself
 
-== summary: 172 rows · FAIL 14 · INFO 11 · PASS 145 · PROXY 2
+== summary: 174 rows · FAIL 14 · INFO 12 · PASS 146 · PROXY 2
 
 rows not passing (each is an owed item or a known restriction, not necessarily a defect):
   FAIL   criterion 20.10: tool_commit contains the generator: expected present | observed ABSENT at ffb881158b88
@@ -267,9 +299,3 @@ rows not passing (each is an owed item or a known restriction, not necessarily a
          the q2 supplement states it; the others must adopt it (item 14)
   FAIL   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: tool_commit ffb881158b88 contains its generator tools/m4_q4_supplement.py: expected present | observed ABSENT
          item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256
-
-== 9. SELF-AUDIT of /home/user/fleetyard (same criteria applied to ORCH-2's own tree) ==
-  files scanned 52 | FUZZY asserted 11 | FUZZY quoted 19 | own-time not exact 0 | exact-to-second 171 | minute-precision 66
-  fuzzy INSTANCES: [('fleet/CONTROL.log', '20:5xZ'), ('fleet/CONTROL.log', '21:4xZ'), ('fleet/CONTROL.log', '21:5xZ'), ('fleet/GATES.md', '19:1xZ'), ('fleet/GATES.md', '20:2xZ'), ('fleet/GATES.md', '20:5xZ'), ('fleet/GATES.md', '21:0xZ'), ('fleet/GATES.md', '21:4xZ'), ('fleet/GATES.md', '21:5xZ'), ('fleet/queue/pending/TASK-020.md', '19:1xZ'), ('fleet/queue/status.md', '19:2xZ')]
-  fuzzy CITATIONS (reporting the defect, not committing it): [('fleet/CONTROL.log', '19:1xZ'), ('fleet/CONTROL.log', '20:5xZ'), ('fleet/CONTROL.log', '21:5xZ'), ('fleet/GATES.md', '19:1xZ'), ('fleet/GATES.md', '20:5xZ'), ('fleet/ORCH-2-VERIFICATION-LEDGER.md', '21:5xZ')]
-  minute-precision by file (top 8): [('fleet/queue/status.md', 14), ('fleet/GATES.md', 10), ('fleet/queue/pending/TASK-014.md', 7), ('fleet/CONTROL.log', 5), ('fleet/heartbeats/ORCHESTRATOR.log', 5), ('fleet/queue/TASK-MAP.md', 5), ('fleet/ORCH-STATE.md', 4), ('fleet/alerts/ALERTS.md', 2)]

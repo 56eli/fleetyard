@@ -823,3 +823,31 @@ Both failed criteria are repaired. **q5.7** (three live documents presenting a s
 
 ### Consequences of this cycle
 **M4 quanta now citable as passed: q1, q4, q5.** q2 and q3 remain FAIL/INCOMPLETE. Nothing else moves: **no detector is promotable** (precision is unmeasured and gated behind quantum b), **no rate, no M6 figure**, the 122 drop-word and 48 format signals stay **CANDIDATE / PROVISIONAL-UNGATED**, **TASK-015 (M6 Final) stays BLOCKED** behind TASK-019 quantum b, and **M6-P remains owner-accepted and is not re-certified**. Ledger `d42136c6…` and by-transcript `c1ec4da8…` unchanged across every head examined this cycle → the M5-R PASS and the TASK-016 re-gate PASS stand.
+
+
+---
+
+## ORCH-2 SELF-CORRECTION #2 (append-only) — the q2.6 caveat figure `113/9` is WITHDRAWN and restated with its rule
+
+**2026-09-25T23:32:36Z · verified at WORKER-2 head `4fc40c8` · full derivation in `fleet/ORCH-2-VERIFICATION-LEDGER.md` §10.**
+
+My q2 gate published the caveat *"**113/122** fully consistent drops, **9/122** shape-defective — 3 repetition
+artifacts, 6 partial-overlap of which 2 are my own hyphen tokenization."* Mechanising that check showed **no natural
+rule reproduces 113/9**, so the figure is **withdrawn**. The restatement now binding:
+
+- Under **rule A** — remove every occurrence of each dropped word from `tokens(suspected)` and compare with
+  `tokens(quoted)`, apostrophes (straight **and** curly) normalised and hyphens kept inside tokens — **8 of 122** rows
+  are shape-defective and **all 8 are repetition artifacts** (the dropped word occurs more than once in the book-side
+  span, so removing every occurrence over-deletes: `"evidence; evidence of"` → `"evidence of"` with `['evidence']`).
+- Under **rule B** (remove the **first** occurrence) **122/122** are consistent — the semantically right model, since
+  the book side repeats and the transcript drops one copy.
+- The **3 + 6 decomposition is withdrawn**; the "partial-overlap" class disappears once curly apostrophes are
+  normalised (the 8 rows I had attributed partly to my own tokenization were an instrument defect, not a data property).
+- **The token rule is load-bearing:** hyphen-splitting turns 114/8 into **67/55**. The number may not be quoted
+  without naming the rule and the token convention.
+
+**Unchanged by this correction:** every substantive q2 finding — 122/122 transcript spans and 122/122 book citations
+byte-exact, my byte-identical shard reproduction (`64a97be5…` / `092d6341…`), keys == the v1 tuning 193 with zero
+holdout reads, the filter arithmetic 122 − 1 = 121 − 7 = 114, and the verdict **q2 FAIL/INCOMPLETE** pending item 8a
+and TASK-018 items 0d–0g. What changes is that the caveat is now **precise, mechanised and reproducible** instead of a
+hand count nobody could re-derive — the same standard item 11a asks WORKER-2 to meet for `187.9`.

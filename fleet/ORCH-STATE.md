@@ -401,3 +401,15 @@ the reconnect runbook is at the end of that summary.
   plus backticked quotations of fuzzy values.** Defects #5–#9 published (§8.2): apostrophe **normalisation** (not
   inclusion), a regex that matched the suffix of a correct value (19 false offenders → `fullmatch`), run-level vs
   part-level fields, generator mispairing, and citation-vs-instance classification.
+
+- **2026-09-25T23:32:36Z: SELF-ITEM O-1 — my q2.6 caveat `113/9` is WITHDRAWN** (no natural rule reproduces it) and restated: rule A
+  gives **8/122 shape-defective, all repetition artifacts**; rule B gives **122/122**; hyphen-splitting gives 67/55, so
+  the token rule must travel with the number. The 3+6 decomposition is withdrawn — the "partial-overlap" class was my
+  own curly-apostrophe defect. Instrument now **174 rows: PASS 146 · FAIL 14 · INFO 12 · PROXY 2**. q2 verdict
+  unchanged. **GitHub push began failing at ~23:29Z** ("could not read Username for https://github.com"); state is
+  committed locally, push retried each cycle.
+
+- **2026-09-25T23:39:33Z: second workspace recreation recovered.** Fresh clone at 23:37:06Z left the local branch at base `2ed0b9b`;
+  `bd69210` + `cea19ed` lost as objects, content recovered from the surviving tree via `--mixed` reset to `0ae2e9a`
+  (registry verified identical three ways first). GitHub restored by the owner. Gate worktree gone, rebuildable on
+  demand. CONTROL seq 33.

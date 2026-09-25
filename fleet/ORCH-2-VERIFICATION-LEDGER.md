@@ -273,3 +273,42 @@ audit distinguishes asserting a fuzzy timestamp from reporting one.
 
 Also recorded: the instrument crashed once on a duplicated `note=` keyword argument while these rows were being added —
 a reminder that the instrument is code and is subject to the same review as any delivery.
+
+---
+
+## 10. ORCH-2 SELF-ITEM O-1 — a gate figure of mine is WITHDRAWN and restated with its rule (2026-09-25T23:32:36Z)
+
+My q2 gate (criterion q2.6) published the caveat **"113/122 fully consistent drops, 9/122 shape-defective — 3
+repetition artifacts, 6 partial-overlap of which 2 are my own hyphen tokenization."** Mechanising it showed that
+**no natural rule reproduces 113/9**, so the figure is **withdrawn** and replaced by a rule-stated one. This is the
+same standard I applied to WORKER-2's exposure-normalized v1 row (item 11a: *"187.9 does not reproduce from the stated
+inputs"*); it applies to my own numbers first.
+
+**Five natural consistency rules over the same 122 signals** (apostrophes — straight *and* curly — normalised, hyphens
+inside tokens, every other character a separator):
+
+| Rule | Consistent | Shape-defective |
+|---|---|---|
+| A — remove **every** occurrence of each dropped word from `tokens(suspected)`, compare with `tokens(quoted)` | **114/122** | **8** |
+| B — remove the **first** occurrence of each dropped word | **122/122** | 0 |
+| C — `quoted` is a subsequence of `suspected` and the token-count difference equals the number of dropped words | **122/122** | 0 |
+| D — `tokens(suspected) − tokens(quoted) == dropped_words` | **114/122** | 8 |
+| E — `quoted` appears contiguously inside `suspected` | 8/122 | 114 |
+| A again, under a **hyphen-splitting** token rule | 67/122 | 55 |
+
+**The restatement now binding (encoded in the instrument as a PASS row):** under **rule A** with the token rule above,
+**8 of 122** signals are shape-defective and **every one of the 8 is a repetition artifact** — the dropped word occurs
+more than once in the book-side span, so removing *every* occurrence over-deletes. Examples: `['evidence']` against
+`"evidence; evidence of"` → `"evidence of"`; `['staggering']` against `"staggering, staggering. This"` →
+`"Staggering. This"`; `['sudden','jumps']` against `"make sudden jumps, sudden"` → `"make sudden"`. Under rule B (remove
+the first occurrence) **all 122 are consistent**, which is the semantically right model: the book side repeats, the
+transcript drops one copy.
+
+**Two consequences.** (1) The **3 + 6 decomposition is withdrawn** — the defective rows are 8 repetition artifacts, not
+3 repetition + 6 partial-overlap; the "partial-overlap" class disappears once apostrophes are normalised (defect #5).
+(2) **The token rule is load-bearing and must always travel with the number**: hyphen-splitting turns 114/8 into 67/55.
+Any future quotation of this caveat must name rule A, the token rule, and the count 8 — or quote rule B's 122/122 and
+say why.
+
+**Effect on the q2 re-gate: none on the verdict** (q2 stays FAIL/INCOMPLETE pending item 8a and TASK-018 items 0d–0g),
+but the q2.6 caveat is now precise, mechanised and reproducible instead of a hand count that could not be re-derived.

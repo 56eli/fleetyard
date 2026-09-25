@@ -135,6 +135,8 @@ class Report:
         flag = "" if verdict in (PASS, INFO) else f"  <<< {verdict}"
         nn = "" if n is None else f" [n={n}]"
         print(f"  {verdict:6s} {name}{nn}{flag}")
+        if verdict != PASS and observed:
+            print(f"         expected {str(expected)[:150]} | observed {str(observed)[:400]}")
         if note:
             print(f"         {note}")
 
@@ -809,6 +811,45 @@ def section_signal_evidence(wt, rep):
             note="offset semantics are the store's own; the substring test above is the binding one")
     rep.add("7", "dropped_words present and contained in the suspected span", f"{n}/{n}", f"{dw_ok}/{n}",
             PASS if dw_ok == n else FAIL, n=n)
+    # publish the rule sensitivity instead of a single number: the q2.6 gate figure (113/9)
+    # has no published procedure, and five natural rules disagree by a factor of two.
+    variants = collections.Counter()
+    for _k, sg in flat:
+        dw = [w.lower() for w in (sg.get("dropped_words") or [])]
+        st, qt = tokens(sg.get("suspected")), tokens(sg.get("quoted"))
+        variants["A remove-all-occurrences"] += [w for w in st if w not in dw] == qt
+        first = st.copy()
+        for w in dw:
+            if w in first:
+                first.remove(w)
+        variants["B remove-first-occurrence"] += first == qt
+        variants["C quoted-subseq+count"] += (all(x in st for x in qt) and len(st) - len(qt) == len(dw))
+        variants["D suspected-minus-quoted==dropped"] += [w for w in st if w not in qt] == dw
+        variants["E quoted-contiguous-in-suspected"] += (" ".join(qt) in " ".join(st) and
+                                                        len(st) == len(qt) + len(dw))
+    rep.add("7", "drop consistency under FIVE natural rules (rule sensitivity)",
+            "the q2.6 gate figure 113/9 is reproduced by none of them",
+            " · ".join(f"{k}: {v}/{len(flat)}" for k, v in sorted(variants.items())), INFO, n=5 * len(flat),
+            note="ORCH-2 self-item O-1: the previously published 113/9 with a 3+6 decomposition is WITHDRAWN as "
+                 "not reproducible. The token rule is load-bearing: under a hyphen-SPLITTING rule, rule A collapses "
+                 "to 67/122.")
+    # the STATED criterion: rule A with an explicit token rule, plus a characterisation of
+    # every row that fails it (all of them are repetition artifacts)
+    rep_rows = []
+    for _k, sg in flat:
+        dw = [w.lower() for w in (sg.get("dropped_words") or [])]
+        st, qt = tokens(sg.get("suspected")), tokens(sg.get("quoted"))
+        if [w for w in st if w not in dw] != qt:
+            rep_rows.append((dw, [w for w in dw if st.count(w) > 1], sg.get("suspected"), sg.get("quoted")))
+    all_rep = all(r[1] for r in rep_rows)
+    rep.add("7", "STATED CRITERION — shape-defective rows under rule A", 
+            "8 of 122, every one a repetition artifact (a dropped word occurring more than once in the "
+            "book-side span, so removing every occurrence over-deletes)",
+            f"{len(rep_rows)} of {len(flat)}; repetition artifacts among them: {sum(1 for r in rep_rows if r[1])}"
+            f"; all-defective-rows-are-repetition-artifacts: {all_rep}",
+            PASS if (len(rep_rows), all_rep) == (8, True) else FAIL, n=len(flat),
+            note="token rule: apostrophes (straight AND curly, normalised) and hyphens INSIDE tokens; every other "
+                 "character a separator. Examples: " + str([(r[0], r[2]) for r in rep_rows[:2]])[:200])
     rep.add("7", "drop consistency: tokens(suspected) minus dropped == tokens(quoted)",
             "the q2.6 gate figure was 113 consistent / 9 shape-defective",
             f"{consist} consistent / {n - consist} shape-defective",
