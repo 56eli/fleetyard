@@ -61,3 +61,51 @@ owner ruling 25d re-grounded, resuming
   (A) repair-first as cut, (B) run TASK-016 and M4 q2 in parallel on an owner ORDER line,
   or (C) lift the PAUSE — noting that in every case the M5-R FAIL verdict is evidence-bound
   and only a repair + re-gate clears it, and M6 FINAL stays blocked until it does.
+
+## 2026-09-25T20:04:10Z — M5-R gate-PASS, PAUSE removed, queue kept small
+- main observed `77f1d6de80ec0ae77d7ca06fdfd581671cea7cae` (merged into this lane @
+  44139d7): ERRATA-25e (OPTION A; M4 parked; CERTAIN leg (d)) + ERRATA-25f (liveness =
+  signals not output; worker idle-cycles are correct; orchestrator review takes the time it
+  takes but never overfills the queue; boss CONCERN scope narrowed, REDIRECT-008's urgency
+  framing retired with its re-gate substance standing; owner is not the cycle pump; never
+  end a turn for idleness). Registry frozen and unchanged; policy manifest unchanged.
+- REDIRECT-008 (boss, 19:43Z, ack due 19:58Z) ACKED 19:57:21Z @ 5f6d698: all four orders
+  accepted and executed this cycle. The Class-2 fire was correct on the facts (my signals
+  stale 19:06Z→19:56Z mid-review) — defect owned, cadence now written inside the loop.
+- **GATE: TASK-016 = PASS → TASK-013 / M5-R = PASS** at WORKER-2 `1beadd9` (fleet/GATES.md
+  19:58Z). All thirteen criteria re-run with fresh evidence, nothing inherited from the
+  19:01Z gate: ledger `d42136c6…`, by-transcript `c1ec4da8…`, tool `6d4bb9ce…` ==
+  blob at `tool_commit dada3e60` (reachable), pinned replay byte-identical, unpinned replay
+  proves pins fail closed to `UNPINNED`, 1334/1334 spans + 1336/1336 signal quotes +
+  242/242 book bytes re-verified with my own parsers, all seven §8 digests recomputed MATCH
+  (incl. inherited detector commit `7b8863d` reachable), coverage row recomputed
+  230/230/230/0/230/24 (+206 with findings, 24 zero-signal), record shape 1334/1334 with
+  157 explicit nulls, classes CERTAIN-inherited 3 / HIGH 0 / CANDIDATE 1331, seeded 3/1331,
+  suite **26 tests OK, 0 skipped, WITH corpus**.
+- Errata #2 (M4-q5's reducer fix) changed the ledger, so I re-derived it myself: my own
+  implementation of the documented token/period rule matches the ledger's `rederived` on
+  **938/938** A1 spans and every runner claim holds → the 98 withdrawn flags were correctly
+  withdrawn. Field-level diff vs the gated `62b33da5…`: 4 fields added on 1334; values
+  changed on signals/claim_checks/claims_all_corroborated/rederived_repetition (98),
+  review_score (99), and book_checks (144 findings / 146 entries, **`divergence` only**).
+  No class, count, citation or book quote moved.
+- **PAUSE-WORKER-A-2026-09-25-001 REMOVED** (marked, never deleted) per its own removal
+  clause + ERRATA-25e §1 + REDIRECT-008 §2.3. TASK-013/TASK-016 CLOSED (files kept with
+  CLOSED status lines). Not certified: milestone certification is the owner's (LAW §2.2);
+  no rate exists; M6-P untouched.
+- Queue (deliberately small, ERRATA-25f §4): **TASK-018** cut — owner-ordered leg-(d)
+  individual adjudication of the 122 drop-word signals + 4 provisional fixtures under the
+  standing guidance L1–L6 in fleet/GATES.md, item 0 = one append-only correction to
+  findings/M4-q5-A1-CLAIM-RECONCILIATION.md (its M5R-0036 row contradicts the artefact:
+  `Mm-hmm` is ONE token under the Unicode rule; the ledger says 1×8 and the claim agrees).
+  Then **TASK-017** (v1 toolchain inheritance). M4 q2–q5 stay DELIVERED-PROVISIONAL-UNGATED
+  (resumable, ungated, uncertified); gating order q1 → q2 → q3 → q4 → q5. TASK-015 (M6
+  FINAL) still BLOCKED: M4 gates + a **fresh sealed holdout** (the one-shot split was spent
+  19:12–19:14Z, counts only) + TASK-017 + TASK-018.
+- Coherence facts handed to BOSS-2 + owner without inventing verdicts:
+  fleet/alerts/ORCH-2-COHERENCE-2026-09-25-001.md (post-PAUSE q3/q4/q5 timeline and the
+  worker's duplicated seq 10–15 / missing control-check lines; holdout spent; STANDARDS.md
+  still lacks leg (d); §8 literalism residuals; my boot §10 items still REPORTED).
+- Next this cycle: complete the TASK-014 q1 full gate (PATTERNS.md + held-out split) —
+  including whether PATTERNS.md still binds the superseded ledger digest; control check
+  ≤300 s; cadence lines inside the work, not after it.

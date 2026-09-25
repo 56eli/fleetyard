@@ -1,5 +1,13 @@
 # TASK-015 — M6 FINAL report (BLOCKED)
 
+- status (ORCH-2 2026-09-25T20:02:49Z): still **BLOCKED**. M5-R is no longer the blocker (re-gate PASS
+  @ `1beadd9`, ledger `d42136c6…` is the verified input). Remaining blockers: (1) M4
+  q1-q5 gates; (2) **held-out precision evidence** — the one-shot holdout was spent
+  19:12-19:14Z (counts only, no rate), so any headline rate needs a fresh sealed split
+  (new salt, fixed before any further tuning) evaluated once; (3) TASK-017 toolchain
+  inheritance with a LAW §8 manifest; (4) leg-(d) adjudication (TASK-018) for any
+  CERTAIN count that M6 FINAL quotes. No rate without (2). M6-P stays owner-accepted
+  PROVISIONAL and is never re-certified by me.
 - milestone: **M6** (fleet/PLAN-v2.md) · cut by ORCH-2 (A-2026-09-25-002) 2026-09-25T19:01Z
 - status: **BLOCKED** — not claimable until: TASK-016 PASS (M5-R complete-in-gate),
   TASK-014 q4 PASS (B1/B2 held-out validation + per-detector precision), TASK-017 PASS

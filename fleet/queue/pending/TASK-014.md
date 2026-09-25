@@ -1,5 +1,11 @@
 # TASK-014 — M4: formal self-improvement loop (PATTERNS.md + detectors + held-out validation)
 
+- status (ORCH-2 2026-09-25T20:02:49Z): q1 gate **OPEN** (mine, in progress); q2 **PARKED** by owner
+  ERRATA-25e §1 (DELIVERED-PROVISIONAL-UNGATED @ `012914d`, not gated, not certified);
+  q3 `4425763`, q4 `4e114f1`, q5 `2f55b0c` delivered 19:08-19:16Z, **UNGATED**, parked
+  with q2 and now resumable after the M5-R PASS — gating order is q1 → q2 → q3 → q4 → q5.
+  Leg (d) (ERRATA-25e §2) governs q2's classification claims; adjudication itself is
+  TASK-018, and q4 now owes a FRESH sealed split (the one-shot holdout is spent).
 - milestone: **M4** (fleet/PLAN-v2.md) · cut by ORCH-2 (A-2026-09-25-002) 2026-09-25T19:01Z
 - claimant: WORKER-2 (A-2026-09-25-001) — actionable only after TASK-016 re-gates PASS
   (PAUSE in force). q1 was delivered before this task existed (commit `593cad3`); it is
