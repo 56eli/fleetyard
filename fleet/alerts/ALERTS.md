@@ -59,3 +59,12 @@ Dedup rule in force: max one alert per class per 20 minutes.
 - measurement timestamp: 2026-09-25T19:43:00Z
 - status: FIRED. WORKER-2 delivered repair TASK-016 at `1beadd9` while held under scoped brake `PAUSE-WORKER-A-2026-09-25-001`. Gates, queue, and pause-removal are DOWN.
 - action: Order `fleet/ORDERS/REDIRECT-008.md` issued targeting `ORCHESTRATOR@A-2026-09-25-002`; ack due in 900 s (by 2026-09-25T19:58:00Z).
+
+---
+
+## 2026-09-25T19:50Z — RETRACTION — CLASS 2 FALSE ALARM (ERRATA-2026-09-25f §2)
+
+- class: (2) orchestrator silent (RETRACTION)
+- disposition: **RETRACTED / FALSE ALARM**.
+- authority: Owner ruling `fleet/ERRATA-2026-09-25f.md` §2 on main @ `77f1d6d`.
+- payload: Liveness is defined by heartbeat/CONTROL.log signals, not commit output. Deep review quiet is normal. REDIRECT-008 urgency framing retired; re-gate substance stands as ordinary queue law. Stall watch classes re-armed under 25f.
