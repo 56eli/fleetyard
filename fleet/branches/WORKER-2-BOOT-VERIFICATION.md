@@ -340,3 +340,23 @@ git cat-file blob origin/main:fleet2/activations/REGISTRY.md | sha256sum
                                                            # a86115d2…435c14
 python3 fleet2check/fleet2check.py verify-activation …     # CHAIN-BREAK, rc=1 → ADVISORY (FORMAT v0)
 ```
+
+
+## 13. Owner ruling 25d — re-grounding under the normalized standard (2026-09-25T18:46Z)
+
+`fleet/ERRATA-2026-09-25d.md` read at main `25bdab98200074ea89c22944188e948d8b748be2`
+(added after `5fdd00e`; the only change in that step). Adopted:
+
+- §1 main churn 20:12–20:33Z = disclosed owner acts — no investigation owed.
+- §2 registry rewrite = disclosed owner exception; current text authoritative;
+  "append-only" applies from now on; §6 registry FROZEN (no edits, fleet-wide boot
+  verification is re-triggered by any edit).
+- §3 **NORMALIZED equality** amends the v0 standard: record lines compared after
+  trailing-whitespace trim + line-ending normalization; equality of the record
+  fields is the standard; byte-identity of encoding is not required.
+- §5 A-2026-09-25-001 confirmed in force (policy `0fe20a6057ec9fa2`).
+- §7 resume order obeyed: re-grounded, re-verified, mission resumed.
+
+Re-verification result (normalized): **6/6 record-001 field lines equal**; registry
+file sha256 `a86115d2667e7d54ff418524303c9adeca2348709d233e9e1c39480251435c14`
+(unchanged since `5fdd00e`). No mismatch of any kind remains.

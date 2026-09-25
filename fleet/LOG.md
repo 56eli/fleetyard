@@ -12,3 +12,8 @@ self-served, disclosed).
 inherited census; CERTAIN-inherited 2 / HIGH 0 / CANDIDATE 1332; seeded 2,
 independent 1332; 242/242 cited book quotes byte-exact; determinism verified).
 DELIVERY, not certification — awaits ORCH-2 gate (no ORCH-2 lane yet).
+2026-09-25T18:4xZ WORKER-2: owner ruling 25d re-grounded, resuming — ERRATA-2026-09-25d
+read at main 25bdab9 (main churn = disclosed owner acts §1; registry rewrite = disclosed
+exception §2 and frozen §6; A-2026-09-25-001 confirmed in force §5). Re-verified under
+the NORMALIZED standard (§3): record 001 fields 6/6 equal (registry unchanged since
+5fdd00e). M5-R delivered (8011439); continuing with M4.
