@@ -48,3 +48,13 @@ maintained by the BOSS role. sober tone, strict chronological order.
      b. Clause d-i scope: Per ERRATA-25e §2 text, "not accounted for by ... transcriber formatting convention". Notation variants (% vs percent) represent transcriber formatting conventions, not missing spoken words; ORCH-2's refusal recommendation for notation variants is sound. Fillers/interjections should remain in-file but stratified with explicit disclosure of audio-unknowability, accompanied at all times by the 71/57/33/22 sensitivity band and 55 distinct sites count.
 2026-09-25T22:42Z BOSS-2 ASSESS — Cadence check: Fleet 3-up, zero active brakes; ORCH-2 preparing items 9-11 gate; WORKER-2 steady @ 4fc40c8; continuous shift cadence active.
 2026-09-25T22:47Z BOSS-2 ASSESS — Cadence check: Fleet 3-up, zero active brakes; ORCH-2 in gating review; WORKER-2 steady @ 4fc40c8; continuous shift cadence active.
+2026-09-25T22:58Z BOSS-2 ASSESS — Witnessed ORCH-2 cycle G delivery @ ee4ea5e:
+  1. TASK-020 items 9-11 gated: 20.11 PASS, 20.12 PASS, 20.10 FAIL on tool_commit pin only (item 8a extended to all 6 supplements).
+  2. M4 RE-GATES on strength of TASK-020:
+     - q1: RE-GATED PASS ✓ (q1.4d repaired)
+     - q4: RE-GATED PASS ✓ (q4.6 and q4.8 repaired; holdout receipt verified 185/185)
+     - q5: RE-GATED PASS ✓ (q5.7 and q5.8 repaired; A1 corroboration verified 938/938)
+     - q3: 1 repair item remaining (item 8a tool pin); substance 100% verified (0/16 recall, 1/59 clean set traced to store)
+     - q2: item 8a + TASK-018 items 0d-0g
+  3. M4 Scoreboard: q1 PASS, q2 INCOMPLETE, q3 INCOMPLETE (1 item), q4 PASS, q5 PASS.
+  4. Quantum b pre-registration protocol in preparation by ORCH-2; WORKER-2 in steady state @ 4fc40c8; zero controls; cadence active.

@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T22:47Z
+updated: 2026-09-25T22:58Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -19,22 +19,27 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
   Findings ledger: `findings/ledger.jsonl` with 1,334 findings: **3 CERTAIN-inherited**
   [CF-003, CF-006, CF-015] / **0 HIGH** / **1,331 CANDIDATE**; 242/242 book refs byte-exact;
   deterministic; 26 tests green. Scoreboard: **3 / 0 / 1,331**. Milestone **CLEARED**.
-- M4 self-improvement loop — **IN PROGRESS** on worker lane:
+- M4 self-improvement loop — **IN PROGRESS** on worker lane (Scoreboard: **q1 PASS, q2 INCOMPLETE, q3 INCOMPLETE [1 item], q4 PASS, q5 PASS**):
+  - q1 catalog + split: **RE-GATED PASS ✓** by ORCH-2 @ `ee4ea5e` (repaired by TASK-020 item 0b; PATTERNS binds ledger, by-transcript, tool_commit dada3e60, worker head 1beadd9, policy 0fe20a60).
+  - q4 one-shot holdout run: **RE-GATED PASS ✓** by ORCH-2 @ `ee4ea5e` (repaired by TASK-020 item 9; holdout receipt verified 185/185; 13/13 tool pins verified to archive lane; exposure-normalized Poisson deficit P=7.7e-05 published; receipt only, no rates, spent holdout never re-run).
+  - q5 residuals: **RE-GATED PASS ✓** by ORCH-2 @ `ee4ea5e` (repaired by TASK-020 item 11; supersession blocks name findings/PROVENANCE.json as binding of record; A1 corroboration verified 938/938 under direct claim test).
+  - q3 C2-format: NEAR-PASS (substance verified 0/16 fixture recall, 1/59 clean set traced to book store, LAW §8 bindings recompute MATCH; pending 1 item: item 8a tool re-pin).
+  - q2 C1-drop: INCOMPLETE (substance reproduced 93/122 byte-identical; pending item 8a tool pin + TASK-018 items 0d-0g).
   - Toolchain foundation: TASK-017 **GATED PASS ON ALL SIX CRITERIA** by ORCH-2 @ `a022ef9` (266 manifest entries verified three ways head == archive, suite 217 OK / 1 skip, 16 fixtures verified, fresh sweep 10/10 four-way equality; item 17.a owed non-blocking).
-  - Leg-(d) individual adjudication: TASK-018 GATED FAIL / INCOMPLETE (no pause) by ORCH-2 @ `a022ef9`. Substance verified 57/57 byte-exact under strict reconstruction; 4 repairs owed: 0d (false seeded sentence in SUMMARY), 0e (dedupe 2 duplicate sites, 55 distinct sites), 0f (stratification table: 27/57 fillers/interjections, 6 notation variants, 11 function words, ~13 content; audio-unknowability disclosure), 0g (reconcile D-002/D-039 contradictions). Restriction: 57 never quoted without sensitivity table 71/57/33/22, strata, 55 sites, notation status.
+  - Leg-(d) individual adjudication: TASK-018 GATED FAIL / INCOMPLETE (no pause) by ORCH-2 @ `a022ef9`. Substance verified 57/57 byte-exact under strict reconstruction; 4 repairs owed: 0d (false seeded sentence in SUMMARY and PATTERNS 5b-bis), 0e (dedupe 2 duplicate sites, 55 distinct sites), 0f (stratification table: 27/57 fillers/interjections, 6 notation variants, 11 function words, ~13 content; audio-unknowability disclosure), 0g (reconcile D-002/D-039 contradictions). Restriction: 57 never quoted without sensitivity table 71/57/33/22, strata, 55 sites, notation status.
   - Fresh split v2: TASK-019a GATED FAIL / INCOMPLETE on v2.5 only by ORCH-2 @ `a022ef9`. Seal is VALID, reproducible, uncontaminated, NOT void (197 tuning / 33 holdout). Defect: post-seal dropword fixture append changed digest c8e96319 -> c40d272f. Item v2.a (dated append-only note) and v2.b cut. Quantum b held pending v2.a.
-  - Consolidated repair: TASK-020 items 1-8 GATED FAIL / INCOMPLETE (no pause) by ORCH-2 @ `a022ef9` on 20.1 (tool_commit pins) and 20.5 (D-002/D-039 contradictions); passed 20.2-20.4, 20.6-20.9 (content digests match, clean set 59/59 exact, filter 1 suppression, shape 113+3+5+1=122, provenance reproducible). Items 8a, 8b cut. Items 9-11 delivered by WORKER-2 @ `d7fee6e` and leg-d table bound @ `4fc40c8` pending gate.
+  - Consolidated repair: TASK-020 items 1-8 gated @ `a022ef9` (fails 20.1 tool pins, 20.5 D-002/039 contradictions); items 9-11 gated @ `ee4ea5e` (20.11 PASS, 20.12 PASS, 20.10 FAIL on tool pin only). Item 8a extended to 6 supplement files. Item 11a, 11b, item 12 (exact timestamps) cut.
   - C1-drop sensitivity: TASK-021 CUT by ORCH-2 @ `a022ef9` (grid over v2 tuning half 197 files; min_flank 2/3/5/8, min_ratio 0.80/0.85/0.90, min_matched 8/10/14; HoldoutGuard in code; criteria 21.1-21.8).
   - BOSS Guidance on clause d-i: Per ERRATA-25e §2 text ("not accounted for by ... transcriber formatting convention"), notation variants (% vs percent) are transcriber formatting conventions and excluded from omission counts. Fillers/interjections must be stratified with audio-unknowability disclosure and sensitivity table 71/57/33/22.
-  - Actionable queue: WORKER-2 to claim repair items (0d-0g, v2.a-v2.b, 8a-8b, 17.a) and TASK-021; ORCH-2 gating items 9-11 @ `d7fee6e` and PATTERNS binding @ `4fc40c8`.
+  - Actionable queue: WORKER-2 to claim repair items (0d-0g, v2.a-v2.b, 8a-8b, 11a-11b, 12, 17.a) and TASK-021; ORCH-2 drafting quantum-b pre-registration protocol.
 - M6 final audit report — **BLOCKED on fresh sealed holdout split v2 repair v2.a + M4 completion**
-  (holdout evaluated at q4; fresh split with new salt sealed in TASK-019a @ `79eb401`; TASK-017 passed).
+  (TASK-017 passed; q1, q4, q5 passed; awaiting quantum b one-shot evaluation).
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T22:36Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T22:56Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
 - worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `4fc40c81c9484b5ed9cd16f0d118638d06d5a216` (ALIVE; bound leg-d floor-5 table to PATTERNS @ `4fc40c8`, delivered TASK-020 items 1-11 @ `d7fee6e`, suite 227 OK)
-- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `a022ef93c88757e9ca808e0214764e4c7eede561` (ALIVE; pushed gating battery for 017/018/019a/020; cut TASK-021; preparing to gate items 9-11 @ `d7fee6e`)
+- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `ee4ea5ea19ea45d022167d74fb5e30e21c5d0f9f` (ALIVE; cycle G: q1 PASS, q4 PASS, q5 PASS; drafting quantum b protocol)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
   - worker v1: `arena/01a0d581-fleetyard` @ `bf97d85` (HALT ack)
@@ -54,8 +59,8 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 
 ## stall watch (re-armed per ERRATA-25f §2: signals only)
 - Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `4fc40c8`).
-- Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `a022ef9`).
-- Class 3 (starvation): NOT FIRED (ORCH-2 gating battery delivered; repairs cut; TASK-021 cut).
+- Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `ee4ea5e`).
+- Class 3 (starvation): NOT FIRED (M4 re-gates delivering passes; repairs and protocol in flight).
 - Class 4 (post-handoff): NOT FIRED (all v1 archives verified frozen).
 - Class 5 (LOUD ZOMBIE): ARMED.
 - Class 6 (context-rot support): ARMED.
