@@ -239,6 +239,13 @@ ledger digest `d42136c6…` and the by-transcript digest `c1ec4da8…` above are
 this append; that is the whole attribution chain (ledger → companion manifest → tool commit
 `dada3e6` → policy sha), so no figure on this page needs commit archaeology to check.
 
+**Re-verification (appended 2026-09-25T21:2xZ, TASK-020 item 3):** both digests in this
+block were recomputed at head and match — `findings/ledger.jsonl` sha256 is still
+`d42136c6…` (1334 findings), and `sha256` over the sorted `<sha256>  <relpath>` lines of
+`findings/by-transcript/` reproduces `c1ec4da8…` (230 files, `m5r_reduce.dir_digest`). The
+page's figures are therefore bound to the same ledger generation they were read from, and
+the check is one command, not archaeology.
+
 **TASK-020 supplement bindings (appended 2026-09-25T21:2xZ):** the q2 and q3 run
 directories now carry `PROVENANCE-SUPPLEMENT.json` files (LAW §8 completion: tool_commit,
 main_head, policy_sha256, book-store digest, corpus/split digests, config digest, per-part
