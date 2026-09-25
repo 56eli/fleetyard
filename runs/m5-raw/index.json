@@ -1,10 +1,10 @@
 {
  "task": "TASK-011",
  "status": "PROVISIONAL raw census, unreviewed; M5 NOT certified",
- "generated_utc": "2026-09-25T00:54:33Z",
+ "generated_utc": "2026-09-25T09:32:05Z",
  "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
  "overlays_sha256": "dec55ef15b05a5b4c23bfa98ff578964dd7b19ffe8a44fcd091d08fef7a1751a",
- "tool_commit": "382095fd9d3a84c53e34983c41fb2109e6a8515c",
+ "tool_commit": "7b8863d0727b4dd7fbaa71683fd00feeebc832cd",
  "detectors": [
   "A1-repetition",
   "A2-nonsense",
