@@ -212,3 +212,47 @@ threshold changed as a result.
 **Items 9–11 (20.10–20.12) remain undelivered**; q4.6/q4.8/q5.7/q5.8 stay FAILED until they land. Restriction: no
 count from either detector may be quoted without its `PROVISIONAL-UNGATED` status line and, for C1-drop, without the
 shape/filter dispositions and the TASK-018 restrictions.
+
+
+---
+
+## Gate result for items 9–11 + items 11a/11b/12 + criterion 20.14 (ORCH-2, 2026-09-25T22:52:19Z, at head `4fc40c8`)
+
+**Items 9–11 gated: FAIL / INCOMPLETE on 20.10 only; 20.11 PASS (item 11a owed); 20.12 PASS (item 11b owed).**
+Suite at head, ORCH-2's own run: **227 tests, OK, skipped=1**. Verified independently: every digest in
+`runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json` recomputes MATCH (three signal files with byte counts, three
+provenance files, three config digests, corpus zip, book store + `book_store_why`, split file/salt/digest,
+`main_head`, policy, exact `run_utc`); **the 13 v1 toolchain pins are byte-identical to `bf97d85` by ORCH-2's own
+check, 13/13**, now cited lane+commit+blob instead of a sandbox path; the **B1 zero is explicit** with its
+consequence (B1 gets no validation; v1's B1 hold stands) and ORCH-2 reproduced the holdout side from the inherited
+census as **185 = A1 162 + A2 15 + B2 8 + B1 0**; **one-shot discipline verified in code** (`m4_q4_supplement.py`
+has 0 references to `overlays`, `parse_book_store` or `run_tuning` — it cannot read the corpus); PATTERNS §5d's
+wrong "dominated by sampling noise" claim is **left readable and contradicted in place**, with ORCH-2's own
+arithmetic confirming ratio **0.16323**, C2-format **8.0 / P=0.9363**, C1-drop **19.9 / P=7.677e-05** and the v1 leg
+**1149 × ratio = 187.6 / P=0.4451**; all three stale ledger-digest lines carry appended SUPERSESSION blocks naming
+`findings/PROVENANCE.json` as the binding of record (verified `outputs.ledger.jsonl` = `d42136c6…` = the ledger at
+head); and q5's numbers are corrected append-only, including the unit-size tally that **ORCH-2 re-derived exactly
+from the ledger's 938 A1 claim notes** (k=1 248 · 2 179 · 3 92 · 4 124 · 5 84 · 6 63 · 7 57 · 8 30 · 9 21 · 10 20 ·
+11 11 · **12 9**; sum 938; max 12 with 9 claims → `kmax=16` is max-observed + 4 tokens headroom).
+
+**Owed:**
+- **Item 8a (extended):** the q4 supplement's `tool_commit ffb8811` does not contain `tools/m4_q4_supplement.py`
+  (introduced by `d7fee6e`). Item 8a now covers **all six supplement artefacts** (q2 ×3, q3 ×2, q4 ×1). Convention:
+  `tool_commit` = lane head at run time is acceptable **only** alongside `generator_tool` +
+  `generator_tool_commit` + `generator_tool_sha256`.
+- **Item 11a (20.11 precision):** publish the tuning-side count per row (**1149 / 49 / 122**) so all three rows of
+  the §5d table recompute, and reconcile the published **187.9 / 0.44** with the census-supported **187.6 / 0.4451**.
+  The conclusion is unaffected: v1 consistent, C2-format consistent, C1-drop a real ~4× deficit at P ≈ 7.7e-05.
+- **Item 11b (20.12 residual):** `tools/PATTERNS.md §5e` still reads "All **98** … units **up to 11**" with no
+  supersession note. Append the same treatment (98 → **97 = 9 + 61 + 27**; max unit **12** with 9 claims; cite the
+  reconciliation doc). **Restriction until then: §5e may not be quoted for those two numbers.**
+- **Item 12 + criterion 20.14 (recurring defect):** four appended notes carry fuzzy timestamps — the three
+  SUPERSESSION blocks (`21:4xZ`), PATTERNS §5b-bis (`21:5xZ`) and TASK-017's `materialised_utc` (`20:5xZ`, item
+  17.a). Apply the pattern this lane already owns in `fixtures/v2/dropword.json`: an exact value **plus its source**
+  (the committer timestamps of `d7fee6e` / `4fc40c8` / `b2e0761` recover them), the fuzzy value superseded and left
+  readable. **Criterion 20.14: every appended note and every manifest timestamp is exact to the second and carries
+  its source.**
+
+**TASK-020 overall stays FAIL/INCOMPLETE** — outstanding: 8a, 8b, 11a, 11b, 12, criterion 20.13.
+**Consequence of this gate: q1, q4 and q5 RE-GATE PASS** (see `fleet/GATES.md`); **q3 is unblocked by item 8a alone**;
+q2 waits on 8a/8b plus TASK-018 items 0d–0g.

@@ -67,3 +67,13 @@ main 7d033ab -> fleet/ERRATA-2026-09-25g.md (owner: 24-hour shift, turn discipli
   TASK-020 items 9–11 + the TASK-018 repairs). Invariants unchanged: ledger `d42136c6…`, by-transcript `c1ec4da8…`
   → the M5-R PASS and the TASK-016 re-gate PASS stand. No detector promotable, no rate, no M6 figure.
 - Full record: `fleet/ORCH-2-CYCLE-F-GATE-SUMMARY.md` · platform outage: `fleet/alerts/ORCH-2-PLATFORM-2026-09-25-001.md`.
+
+
+## Cycle G (2026-09-25T22:55:00Z) — three re-gates PASS
+
+**M4 scoreboard: q1 PASS · q2 FAIL/INCOMPLETE · q3 FAIL/INCOMPLETE (item 8a alone) · q4 PASS · q5 PASS.**
+TASK-020 items 9–11 gated FAIL on 20.10 only (20.11/20.12 PASS with items 11a/11b owed; item 12 + criterion 20.14 for
+four recurring fuzzy timestamps). TASK-017 PASS. TASK-018 FAIL (items 0d–0g). TASK-019a FAIL on v2.5 only (items
+v2.a/v2.b; quantum b held). Outstanding across the queue: TASK-020 8a/8b/11a/11b/12 + 20.13 · TASK-018 0d–0g +
+L7–L10 · TASK-019 v2.a/v2.b + v2.10/v2.11 · TASK-017 17.a · TASK-021 (new). Blocked: TASK-019b (behind v2.a/v2.b) ·
+TASK-015 M6-Final (behind quantum b) · q2 re-gate (behind 8a/8b + 0d–0g) · q3 re-gate (behind 8a only).

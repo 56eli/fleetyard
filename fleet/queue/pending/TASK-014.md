@@ -196,3 +196,42 @@ rate without split v2. Gating now would produce verdicts on artefacts that are a
 Frozen corpus · stdlib only · no network · finding = citation · CANDIDATE never in a rate ·
 CERTAIN and HIGH reported separately · every CERTAIN becomes a rule + fixture · no
 certification language (milestone certification is ORCH-2's, completion is the owner's).
+
+
+---
+
+## RE-GATES (2026-09-25T22:52:19Z, ORCH-2, at WORKER-2 head `4fc40c8`): q1 **PASS** · q4 **PASS** · q5 **PASS** · q2 and q3 unchanged
+
+Full records in `fleet/GATES.md`. Repaired by TASK-020 (items 1–11) and TASK-018 item 0b, all re-verified at this head
+with the invariants intact (ledger `d42136c6…` 1334 records, by-transcript `c1ec4da8…` 230 files, `m5r_reduce.py`
+byte-identical `219075a`→`ffb8811`→`4fc40c8`, split v1 `481d8513…`, split v2 `73d86f0d…`, suite **227 OK skipped=1**):
+
+- **q1 → PASS.** q1.4d repaired: PATTERNS binds ledger + by-transcript + `tool_commit dada3e60…` + the worker head the
+  figures were read at (`1beadd9…`) + policy, with a written verification procedure and an append-only control note.
+  Both digests re-derived by ORCH-2 at this head. Standing notes: the v1 holdout is **spent**, v2 supersedes it, and
+  this PASS promotes nothing.
+- **q4 → PASS.** q4.6 repaired by the item-9 supplement (all bindings recompute MATCH; **13/13** toolchain pins
+  byte-identical to `bf97d85` by ORCH-2's own check; lane+commit+blob replacing the sandbox path). q4.8 repaired by the
+  exposure-normalized correction, confirmed by ORCH-2's own arithmetic (ratio 0.16323; 8.0/P=0.9363; 19.9/P=7.677e-05;
+  1149 × ratio = 187.6/P=0.4451). **Restrictions: 185/5/12 is a RECEIPT ONLY** — counts, not precision, no rate;
+  the **B1 zero** means B1 gets no validation and v1's B1 hold stands; the **spent holdout is never re-run**;
+  precision waits on **TASK-019 quantum b**; the C1-drop deficit's two candidate causes stay unestablished.
+- **q5 → PASS.** q5.7 repaired (three SUPERSESSION blocks, old lines readable, `findings/PROVENANCE.json` named as the
+  binding of record and verified equal to the ledger at head). q5.8 repaired (98/67 superseded by 97 = 9 + 61 + 27;
+  unit-size bound published **with a tally ORCH-2 re-derived exactly from the ledger**: max k = 12, 9 claims, sum 938;
+  `kmax=16` reframed as max-observed + 4 tokens headroom; 255/938 = 27% hyphen sensitivity recorded as the gate's
+  figure with its caveat). Substantive conclusion unchanged and twice independently verified: the flags were **reducer
+  instrument defects**, and **A1 corroboration is 938/938**. **Restriction:** PATTERNS §5e still carries "98" and "up
+  to 11" (TASK-020 item 11b) and may not be quoted for those numbers until corrected; the 27% hyphen sensitivity must
+  accompany any reuse of 938/938.
+- **q2 → still FAIL/INCOMPLETE.** Items 1–8 repaired q2.1b/c/d, q2.4 and q2.5 in substance, but item 8a (tool-pin
+  attributability) is outstanding and **q2.2 now runs through TASK-018**, whose adjudication set carries items 0d–0g.
+  The 122 signals stay CANDIDATE; the 57 stay restricted.
+- **q3 → still FAIL/INCOMPLETE on one point only: item 8a.** q3.2/q3.3/q3.4/q3.5 are verified repaired (fixture recall
+  0/16, clean set 1/59 with the misfire shown to be the book store's own typography byte-exact, §8 bindings all
+  recomputing MATCH, threshold provenance for all seven rules, five reproducible rejected-rule probes). **Item 8a alone
+  unblocks the q3 re-gate.**
+
+**M4 scoreboard after this cycle: q1 PASS · q2 FAIL/INCOMPLETE · q3 FAIL/INCOMPLETE (one item) · q4 PASS · q5 PASS.**
+Unchanged: no detector promotable, no precision, no rate, no M6 figure; TASK-015 (M6 Final) BLOCKED behind TASK-019
+quantum b; M6-P owner-accepted and not re-certified.

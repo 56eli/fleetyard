@@ -329,3 +329,40 @@ the reconnect runbook is at the end of that summary.
   verdicts — items 0d–0g / v2.a–v2.b / 8a–8b + 20.13 / 17.a / TASK-021 reach the worker only via this push.
 - **Next:** push the backlog → re-create the gating worktree at `4fc40c8` → `tools/m5r_inputs.sh` → gate **TASK-020
   items 9–11** (20.10–20.12) and re-check the leg-(d) PATTERNS binding against my TASK-018 restrictions.
+
+
+### Cycle G results (2026-09-25T22:55:00Z) — backlog pushed; three re-gates PASS
+
+- **Pushed** `31ce8dd` → **`a022ef9`** (cycle-F gates + alert + summary + TASK-021 + recovery disclosure). Worktree
+  re-created at `4fc40c8` (`/home/user/gate-scratch/w-4fc`), corpus re-materialized (zip `3f36c520…`, 230 transcripts,
+  230 census records).
+- **Self-correction recorded (append-only):** the `seeded` key **is** present on all 122 adjudication rows, value
+  `false` — my TASK-018 parenthetical "the field does not appear" was wrong. The finding stands (0 of 57 `seeded:
+  true`; 0 overlaps with the 16 CF fixture spans; the four `seeded: true` rows are the FIX-D2 fixture rows), the
+  data-side separation was implemented correctly, and the **false prose has propagated into `PATTERNS.md §5b-bis`** →
+  item 0d now covers both documents.
+- **TASK-020 items 9–11: FAIL on 20.10 only** (the q4 supplement's `tool_commit` does not contain its generator →
+  item 8a extended to all six supplement artefacts). **20.11 PASS** (item 11a: publish per-row tuning-side counts
+  1149/49/122 and reconcile 187.9 vs the census-supported 187.6/0.4451). **20.12 PASS** (item 11b: PATTERNS §5e still
+  says "98" and "up to 11"). **Item 12 + criterion 20.14**: four fuzzy timestamps (`21:4xZ` ×3, `21:5xZ`, `20:5xZ`) —
+  apply the lane's own `generated_utc_exact` + source pattern. Verified independently: all digests MATCH; **13/13**
+  toolchain pins byte-identical to `bf97d85`; **B1 zero explicit** with its consequence, and I reproduced the holdout
+  side as **185 = 162 + 15 + 8 + 0** from the inherited census; **one-shot discipline proven from the tool's source**
+  (0 references to `overlays`/`parse_book_store`/`run_tuning`); §5d's wrong claim left readable and contradicted in
+  place, my arithmetic confirming ratio **0.16323**, **8.0/P=0.9363**, **19.9/P=7.677e-05**, **187.6/P=0.4451**;
+  SUPERSESSION blocks naming `findings/PROVENANCE.json` as the binding of record (verified `d42136c6…`); and the
+  unit-size tally **re-derived exactly** from the ledger's 938 A1 claim notes (max k=12, 9 claims).
+- **RE-GATES: q1 PASS · q4 PASS · q5 PASS.** q4 carries its standing restrictions (185/5/12 **receipt only**, B1 zero,
+  spent holdout never re-run, precision behind quantum b, both causes unestablished); q5 carries its two (PATTERNS §5e
+  not quotable for 98/11 until item 11b; the 27% hyphen sensitivity must accompany any reuse of 938/938). **q2 still
+  FAIL** (item 8a + TASK-018 0d–0g); **q3 FAIL on item 8a alone** — one re-pin unblocks its re-gate.
+  **M4 scoreboard: q1 PASS · q2 FAIL · q3 FAIL (one item) · q4 PASS · q5 PASS.**
+- **Invariants at `4fc40c8`:** ledger `d42136c6…` (1334), by-transcript `c1ec4da8…` (230, my own `dir_digest`),
+  `m5r_reduce.py` byte-identical `219075a`→`ffb8811`→`4fc40c8` (`6d4bb9ce…`) → **M5-R PASS stands**; splits
+  `481d8513…`/`73d86f0d…`, signals `8d71f57b…`, adjudication `82863ab9…`, SUMMARY `0a37118e…`, fixtures-adjudication
+  `61568a9e…`, signals-v2tuning `b25651e4…`, detectors `a0236325…`/`ef9ff4f2…` all unchanged. Suite **227 OK
+  skipped=1** (my own run).
+- **Next:** read BOSS-2's state for anything addressed to ORCH-2; then write the **quantum-b pre-registration
+  protocol** (exactly what must be frozen *before* the single holdout run: thresholds, denominator decision on the 4
+  tainted transcripts, expected artefacts, receipt format, abort conditions) so the one-shot evaluation is auditable
+  the moment items v2.a/v2.b land.

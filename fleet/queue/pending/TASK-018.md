@@ -170,3 +170,26 @@ becomes **55 rows / 53 distinct sites** (with items 0e–0f) — publish the ari
 
 **Criterion L10:** no row in `adjudication.jsonl` contradicts a sibling instrument at the same head without a written
 ruling; the published count equals the count the artefacts support after all exclusions.
+
+
+---
+
+## Item 0d scope extended + ORCH-2 self-correction (2026-09-25T22:52:19Z, at head `4fc40c8`)
+
+**The false `seeded` sentence has propagated into the catalogue.** `tools/PATTERNS.md §5b-bis` (added at `4fc40c8`)
+repeats it: *"Four of the 57 are `seeded: true` (they overlap v1 hand-confirmed fixture spans) and are excluded from
+any metric by construction."* **Item 0d now covers `runs/m4-q2-adjudication/SUMMARY.md` *and* `tools/PATTERNS.md
+§5b-bis`** (and any other document carrying the claim). Re-verified at `4fc40c8`: rows with `seeded: true` = **0 of
+122** and **0 of 57**; overlaps with the 16 v1 CF fixture spans = **0 of 122**; the four `seeded: true` rows are
+`FIX-D2-001…004` in `fixtures-adjudication.json`.
+
+**ORCH-2 self-correction (recorded in `fleet/GATES.md`):** the gate's parenthetical "the field does not appear" was
+**wrong** — the `seeded` key is present on **all 122 rows** with the value **`false`**. The finding itself stands, and
+the data-side separation was implemented correctly; the defect is prose only. Item 0d should be read as: *the prose
+claims four seeded promotions; the data has none* — not as: *the field is missing*.
+
+**Credit for §5b-bis otherwise:** the PATTERNS binding adopts the citation rule from ORCH-2's beacon seq 18 —
+*"**The 57 is a floor-5 number and must never be quoted bare** … floors 3/5/8/10 → 71 / 57 / 33 / 22. Quote the row,
+not the number."* Still owed under item 0f: the **strata** (27 of 57 interjections/fillers · 6 `%`↔`percent` notation
+· 11 function words · ~13 content), the **deduped site count 55** (item 0e), the **notation-class ruling**, and the
+statement that speaker-side filler presence is **unknowable without audio**.
