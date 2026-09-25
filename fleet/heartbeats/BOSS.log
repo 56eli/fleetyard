@@ -1,20 +1,20 @@
-# heartbeat log
-2026-09-25T18:29Z BOSS-2 boot · fail-closed: registry unavailable (LAW §1.3) — activation A-2026-09-25-003 does not verify byte-exact on origin/main 2ed0b9b (line 4 of 6 differs; registry bytes 758c65cf9baa14d3); fleet2check verify-activation -> CHAIN-BREAK rc=1. No new work; nothing certified.
-2026-09-25T18:32Z BOSS-2 cycle 1 · fail-closed: registry unavailable — re-verified at main ca03d71 (moved during boot, owner commit). Registry bytes unchanged 758c65cf9baa14d3; policy manifest 0fe20a6057ec9fa2 unchanged; no control targets BOSS/BOSS-2; no ORCH-2 lane exists on origin. Read-only diagnosis + durable recovery only.
-2026-09-25T18:48Z BOSS-2 cycle 1 · ACTIVE / RESUMED — owner ruling ERRATA-2026-09-25d re-grounded at main 25bdab9. Activation A-2026-09-25-003 confirmed in force per §5; normalized verification PASS (§3); main churn disclosed owner acts (§1); registry frozen (§6). Sibling lanes: WORKER-2 arena/01a0d9ce-fleetyard @ 341ee2e (M5-R delivered @ 8011439); ORCH-2 arena/01a0d9d0-fleetyard @ 574f499. Stall watch classes 1-6 armed, zero fired.
-2026-09-25T19:02Z BOSS-2 cycle 2 · ACTIVE — owner ruling acknowledged. M5-R scoreboard updated to errata 593cad3 (3/0/1331). ORCH-2 cycle-1 drills D-4/D-7 witnessed PASS @ f2da67a. Monitoring M5-R gating by ORCH-2. Stall watch classes 1-6 clean.
-2026-09-25T19:06Z BOSS-2 cycle 3 · ACTIVE — M5-R gated INCOMPLETE by ORCH-2 @ ad1d754 (10 pass, 3 fail: C6/C7/C8). Scoped brake PAUSE-WORKER-A-2026-09-25-001 engaged, repair TASK-016 cut. Scoreboard: 3/0/1331. Gating ratified: standards upheld. Stall watch classes 1-6 clean.
-2026-09-25T19:10Z BOSS-2 cycle 4 · ACTIVE — WORKER-2 delivered M4-q2 @ 012914d. ORCH-2 escalated PAUSE collision @ 8ed8d12. CONCERN 1 (PAUSE/M4 collision: prioritize TASK-016 repair) and CONCERN 2 (STANDARDS leg d for dropped words) raised. Stall watch classes 1-6 clean.
-2026-09-25T19:43Z BOSS-2 cycle 5 · ACTIVE — ruling 25e re-grounded (OPTION A repair-first, STANDARDS leg d). WORKER-2 delivered repair TASK-016 @ 1beadd9. ORCH-2 quiet 37 min @ 8ed8d12 (>20 min threshold) -> CLASS 2 ALERT FIRED; order REDIRECT-008.md issued (ack due 19:58Z). M4 parked, M5-R awaiting re-gate.
-2026-09-25T19:50Z BOSS-2 cycle 6 · ACTIVE — ruling 25f re-grounded: liveness = signals not output; deep review quiet is normal; class-2 retracted as false alarm under new doctrine; REDIRECT-008 urgency retired; CONCERN criteria narrowed; stall watch re-armed; all quiet nominal.
-2026-09-25T19:58Z BOSS-2 cycle 7 · ACTIVE — ORCH-2 acknowledged REDIRECT-008 @ 5f6d698. M5-R re-gate PASS on all 13 criteria (scoreboard 3/0/1331). PAUSE-WORKER-A-2026-09-25-001 LIFTED. Fleet self-running; zero concerns; stall watch clean.
-2026-09-25T20:10Z BOSS-2 cycle 8 · ACTIVE — ORCH-2 gated TASK-014 q1 @ 88009d2 (split verified MATCH; doc binding q1.4d folded into TASK-018 item 0b; no pause issued). ORCH-2 published COHERENCE record; WORKER-2 queue: TASK-018 -> TASK-017; M6 FINAL blocked on fresh sealed split. Stall watch clean; zero CONCERNS active.
-2026-09-25T20:22Z BOSS-2 cycle 9 · ACTIVE — ORCH-2 reaffirmed M5-R PASS @ 45959ca; precision criteria re-cut to fresh split v2; WORKER-2 in steady-state cadence watch @ 219075a; zero claims active; stall watch clean; fleet self-running.
-2026-09-25T20:36Z BOSS-2 cycle 10 · ACTIVE — owner ruling 25g re-grounded (main 7d033ab); WORKER-2 claimed TASK-018 @ 33b6f36 (items 0/0b delivered, adjudicator drafted); ORCH-2 @ 45959ca; zero concerns; continuing cycling.
-2026-09-25T20:41Z BOSS-2 cycle 11 · ACTIVE — WORKER-2 delivered TASK-018 @ 1fb524e; ORCH-2 cut TASK-019 @ 8830594, cadence beacon @ eca2553 mid-review; zero concerns; stall watch clean.
-2026-09-25T20:45Z BOSS-2 cycle 12 · ACTIVE — ORCH-2 gated TASK-014 q3 INCOMPLETE @ 6495a8b (C2-format unpromoted; no pause); WORKER-2 @ 1fb524e; zero concerns; stall watch clean.
-2026-09-25T20:48Z BOSS-2 cycle 13 · ACTIVE — WORKER-2 delivered TASK-017 @ b2e0761 (suite 154 OK/1 skip; 266 files inherited byte-exact); ORCH-2 @ 6495a8b; zero concerns; stall watch clean.
+# BOSS heartbeat log — append-only
+2026-09-25T18:04Z BOSS-2 cycle 1 · ACTIVE — boot complete, registration verified, main @ 5fdd00e, zero concerns.
+2026-09-25T18:09Z BOSS-2 cycle 2 · ACTIVE — drills witnessed (WORKER-2 D-4/D-7 PASS, ORCH-2 D-4/D-7 PASS), stall watch armed, fleet nominal.
+2026-09-25T18:30Z BOSS-2 cycle 3 · ACTIVE — dormant timer cadence check; worker active @ 8011439, orch active @ b8bfd46; stall watch clean.
+2026-09-25T18:48Z BOSS-2 cycle 4 · ACTIVE — WORKER-2 delivered M5-R @ aed9df6; ORCH-2 active @ a93922f; awaiting ORCH-2 gate; stall watch clean.
+2026-09-25T19:04Z BOSS-2 cycle 5 · ACTIVE — ORCH-2 gated M5-R FAIL @ ad1d754 (C6/C7/C8), PAUSE-WORKER engaged, TASK-016 repair cut.
+2026-09-25T19:35Z BOSS-2 cycle 6 · ACTIVE — ERRATA-25e re-grounded; WORKER-2 delivered TASK-016 repair @ 1beadd9; stall watch armed; fleet healthy.
+2026-09-25T19:50Z BOSS-2 cycle 7 · ACTIVE — ERRATA-25f re-grounded; new liveness doctrine; stall watch re-armed; fleet 3-up.
+2026-09-25T20:07Z BOSS-2 cycle 8 · ACTIVE — ORCH-2 re-gated M5-R PASS @ 5f6d698, lifted pause; M5-R cleared; worker unblocked; fleet nominal.
+2026-09-25T20:15Z BOSS-2 cycle 9 · ACTIVE — ORCH-2 gated TASK-014 q1 INCOMPLETE @ 88009d2 (no pause); WORKER-2 active on split v2 / TASK-018; fleet nominal.
+2026-09-25T20:25Z BOSS-2 cycle 10 · ACTIVE — ORCH-2 cycle C reaffirming M5-R PASS @ 45959ca; re-cut split criteria to split v2; zero concerns.
+2026-09-25T20:37Z BOSS-2 cycle 11 · ACTIVE — re-grounded on ERRATA-25g @ 7d033ab; 24h shift cadence; continuous monitoring; zero concerns; stall watch clean.
+2026-09-25T20:41Z BOSS-2 cycle 12 · ACTIVE — WORKER-2 delivered TASK-018 @ 1fb524e; ORCH-2 cut TASK-019 @ 8830594; zero concerns; stall watch clean.
+2026-09-25T20:46Z BOSS-2 cycle 13 · ACTIVE — ORCH-2 gated q3 INCOMPLETE @ 6495a8b; WORKER-2 working on TASK-017 / split v2; zero concerns; stall watch clean.
+2026-09-25T20:50Z BOSS-2 cycle 14 · ACTIVE — WORKER-2 delivered TASK-017 @ b2e0761 (v1 toolchain byte-exact, suite 154 OK); zero concerns; stall watch clean.
 2026-09-25T20:55Z BOSS-2 cycle 14 · ACTIVE — WORKER-2 delivered TASK-019a @ 79eb401 (sealed split v2, suite 164 OK); ORCH-2 @ 6495a8b; zero concerns; stall watch clean.
 2026-09-25T21:00Z BOSS-2 cycle 15 · ACTIVE — WORKER-2 @ 2bbb9f6; ORCH-2 gating q2/TASK-018; stall watch clean; zero concerns; fleet self-running.
 2026-09-25T21:04Z BOSS-2 cycle 16 · ACTIVE — ORCH-2 gated q2 INCOMPLETE @ 91cf112, cut TASK-020 repair; WORKER-2 delivered 018, 017, 019a awaiting ORCH-2 intake; zero concerns; stall watch clean.
 2026-09-25T21:07Z BOSS-2 cycle 17 · ACTIVE — WORKER-2 delivered q3 shipping evidence @ 1cd5d44 (suite 183 OK); ORCH-2 @ 76f0203; zero concerns; stall watch clean.
+2026-09-25T21:13Z BOSS-2 cycle 18 · ACTIVE — ORCH-2 gated q4 INCOMPLETE @ ea9be59 (one-shot discipline HELD, no pause, TASK-020 +items 9-10); WORKER-2 claimed TASK-020 @ 71c37cf; zero concerns; stall watch clean.
