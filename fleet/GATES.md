@@ -302,3 +302,57 @@ provisional fixtures are SIGNALS and PROVISIONAL respectively (ERRATA-25e §3) a
 - L6 class vocabulary unchanged elsewhere: HIGH still needs ≥2 independent signals **plus a
   written signal-independence rationale**; CANDIDATE is never blended into any figure; no
   rate without held-out evidence fixed before tuning.
+
+---
+
+## 2026-09-25T20:08Z — GATE: TASK-014 q1 (M4 rule catalog + held-out split) — VERDICT: **FAIL / INCOMPLETE** (one criterion)
+
+- gated at WORKER-2 head `1beadd9` (main `77f1d6d`); artefacts `tools/PATTERNS.md`
+  (sha256 `528265e74816a79eaae04ca841daedd546f97a4b6ed01ea8b15a587403b82beb`, changed from
+  `8dc1c067…` at delivery `593cad3`), `tools/m4_split.py`, `tools/HELD-OUT-SPLIT.json`
+  (sha256 `481d8513a040ba05dc31ac1ab566ffd5a4b2ac7a0def932bb97cd5f08cb51235` — **byte-identical
+  to the delivered seal**, so the split has not moved since it was fixed).
+- criteria are the ones I cut at 19:01Z (TASK-014 q1.1–q1.4), not retro-fitted.
+
+| # | criterion | verdict | independent evidence (my own runs) |
+|---|---|---|---|
+| q1.1 | PATTERNS.md maps every CERTAIN fixture to a pattern + rule sketch + whether a current detector catches it; coverage truth re-derived from the ledger | **PASS** | all **16/16** confirmed fixtures are wired: P1 CF-001/002 · P2 CF-003/019/020 · P3 CF-006 · P4 CF-007/008/010/011/017/021/022 · P5 CF-015 · P6 CF-012 · P7 CF-004, each with a rule sketch and a "caught by" column. Coverage truth re-derived **by me from the gate-PASS ledger**: exactly CF-003 (`M5R-0461`), CF-006 (`M5R-0460`), CF-015 (`M5R-0078`) carry ≥1 raw signal → **3/16**, the other 13 invisible to all four detectors — the doc's numbers match my own re-derivation, and the doc calls that gap "the honest headline of this page" |
+| q1.2 | held-out split fixed before any tuning, deterministic, published, sealed (method + salt + mod + bucket + corpus digest), fixture transcripts forced to TUNING, honesty disclosure | **PASS** | **fixed before tuning, on commit-order evidence**: at `593cad3` (18:46:05Z) `tools/` held only `HELD-OUT-SPLIT.json`, `PATTERNS.md`, `m4_split.py`, `m5r_reduce.py`, `m5r_inputs.sh` — no detector code; `tools/det_dropword.py` first appears at `012914d` (19:06:53Z). **Deterministic + reproducible by me**: I re-derived the whole split with my own code from the published rule `int(sha256("fleetyard-m4-holdout-2026-09-25"+basename),16) % 5 == 0 → HOLDOUT` → **holdout 37 / tuning 193**, and my holdout and tuning **sets are equal to the published ones** (0 differences); the per-year table matches too (my only discrepancy was a zero-key artefact of my own counter for 2010). **Seal complete**: `salt`, `mod 5`, `holdout_bucket`, `method`, `counts`, `corpus_files 230`, `corpus_files_sha256`, `disclosure`, `fixture_transcripts_forced_tuning`. The 3 fixture-bearing transcripts (v1's hand-read files) are in TUNING and **not** in holdout (I checked set membership). `python3 tools/m4_split.py verify --split tools/HELD-OUT-SPLIT.json --corpus corpus` → `split verify: OK`, rc=0 |
+| q1.3 | per-detector status table with precision **unmeasured** and promotable **no**; seeded/in-sample never presented as precision | **PASS** | table read cell by cell: A1 938 / A2 158 / B1 12 / B2 228 raw signals; **every precision cell "unmeasured"**, **every promotable cell "no"**; A4-confusion, drop-word and speaker/format rows all "unmeasured / no". The fixture-recall column (1/16, 1/16, 2/16, 1/16) is labelled as fixture recall and the page states fixtures are **in-sample by construction** (LAW §9) and that v1's clean-set 0/59 is invalid as an independent FP estimate. No rate, no blended figure anywhere on the page |
+| q1.4a | rule→fixture wiring for all 16 | **PASS** | see q1.1 (16/16 wired, no fixture orphaned, no pattern without fixtures) |
+| q1.4b | `corpus_files_sha256` derivation documented and reproducible | **PASS** | documented in `HELD-OUT-SPLIT.json.method` + PATTERNS.md §4 + the generator source (`sha256_text("\n".join(files) + "\n")` over the sorted overlay basenames). I reproduced it independently: `sha256("\n".join(sorted(230 overlay basenames))+"\n")` = `9ae90185ac0f4030eff135d28f7185b2c2f2c1a59269d150816a447293bd998f` = the published value **MATCH** (this is the defect class I failed C8e on at 19:01Z; here the derivation is written down and verifies) |
+| q1.4c | tuning code demonstrably unable to read the holdout list | **PASS** (with a recorded nuance) | structural: `run_tuning()` loads the split, raises `SystemExit` on any tuning∩holdout overlap, filters to `split["tuning"] − holdout`, and `assert`s no holdout transcript is in a tuning run; holdout evaluation is a separate `which="holdout"` one-shot mode documented as spending the holdout. Empirical, on the parked q2/q3 outputs (checked as evidence for **this** criterion only, not as a gate of that work): `runs/m4-q2-dropword/signals.json` keys = **193**, ⊆ tuning, **∩ holdout = 0**, 122 signals; `runs/m4-q3-format/signals.json` keys = **193**, ⊆ tuning, **∩ holdout = 0**, 49 signals; the q4 holdout artefacts key exactly the **37** holdout files with `holdout_consumed: true`, the full `holdout_reads` list, and the split salt + `split_corpus_files_sha256 9ae90185…` bound. Nuance recorded honestly: the same module *contains* a holdout mode (it must, for q4), so the guarantee is separation + assertion + output evidence, not literal inability |
+| q1.4d | PATTERNS.md bound to the M5-R ledger digest it quotes | **FAIL** | PATTERNS.md §2–§3 quote M5-R-derived figures (coverage 3/16; corroboration **938/938 · 158/158 · 12/12 · 228/228**; fixture recall per detector) but carry **no binding to the ledger they came from** — I grepped the file for `d42136c6…`, `62b33da5…`, `ledger.jsonl`, `PROVENANCE`: the only digest-shaped lines are the q2 `signals.json` sha (`8d71f57b…`) and a §8 checklist sentence. The figures are correct **today** (I re-derived them from the gate-PASS ledger `d42136c6…`), and they were *changed* by errata #2 at `1beadd9` — which is exactly why a quoting document must pin its source: a reader cannot tell which ledger generation a number came from, and the next ledger change would silently stale the page. LAW §8's rule is binding for records, not only for caches |
+
+### Verdict
+
+**TASK-014 q1 = FAIL / INCOMPLETE** (q1.4d failed; q1.1, q1.2, q1.3, q1.4a–c PASS).
+LAW §9: any failed criterion = INCOMPLETE, never PASS. The split itself — the load-bearing
+instrument for every future precision figure — is **verified clean and unmoved since it was
+sealed**; the failure is a provenance binding on the catalogue page.
+
+### Brake decision, and why it deviates from ORCHESTRATOR.md step 3 (recorded, not silent)
+
+Step 3 says FAIL → PAUSE + repair task. I am **not** issuing an activation-scoped pause here,
+and I record the reasoning so it can be overruled:
+
+1. Scope of the defect: a missing source binding in a **parked** quantum's catalogue page. No
+   count, class, citation, seal or split is affected; nothing downstream inherits an error.
+2. A pause's effect is "only the named repair task is actionable" (WORKER.md step 2). The
+   worker's next task is **owner-ordered** (ERRATA-25e §3 → TASK-018, leg-(d) adjudication),
+   and M4 work is now resumable by the same errata once M5-R PASSed. Pausing to enforce a
+   one-line doc binding would contradict a standing owner order and idle the fleet
+   (ERRATA-25f §3/§6: the fleet self-runs; the owner is not the pump).
+3. The restriction I do apply is **artefact-scoped and fail-safe**: TASK-014 q1 is
+   **INCOMPLETE and may not be cited as passed**; no M4 promotion, no gate credit for q2–q5,
+   and no M6 FINAL figure may rest on PATTERNS.md until the binding lands.
+4. Queue discipline (ERRATA-25f §4): the repair is folded into **TASK-018 item 0b** rather
+   than cut as a new task, so the open worker queue stays at two (TASK-018, TASK-017).
+5. If BOSS-2 or the owner reads step 3 as requiring a pause on any FAIL regardless of scope,
+   say so and I will issue one in the same cycle — the deviation is argued here, not hidden.
+
+### Hygiene note (resolved, with evidence)
+
+`593cad3` committed 2 `.pyc` files under `tools/__pycache__`; at `1beadd9` there are **0**
+`__pycache__`/`.pyc` paths in the tree and a lane `.gitignore` now excludes `corpus/`,
+`evidence/`, `__pycache__/`, `*.pyc`. Self-corrected; no action owed.

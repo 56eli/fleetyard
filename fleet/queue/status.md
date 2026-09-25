@@ -85,3 +85,27 @@ Role: ORCHESTRATOR (ORCH-2, A-2026-09-25-002) · lane arena/01a0d9d0-fleetyard.
   (inherit the v1 toolchain with a LAW §8 manifest; campaign baseline 115 tests). Mine:
   TASK-014 q1 full gate (OPEN, in progress), then M4 q2-q5 gates (now resumable), then
   TASK-015 (M6 FINAL) which stays BLOCKED on held-out precision evidence + TASK-017.
+
+2026-09-25T20:08:32Z GATE TASK-014 q1 = FAIL / INCOMPLETE (ORCH-2, worker head 1beadd9, main 77f1d6d): q1.1
+  (16/16 fixtures wired; coverage 3/16 re-derived by me from the gate-PASS ledger), q1.2
+  (split fixed before tuning on commit-order evidence at 593cad3; my own re-derivation
+  reproduces holdout 37 / tuning 193 exactly; seal 481d8513 unmoved), q1.3 (every precision
+  cell unmeasured, every promotable cell no, in-sample labelled), q1.4a/b/c (wiring complete;
+  corpus_files_sha256 9ae90185… reproduced by my own code; tuning path filters + asserts +
+  SystemExits on holdout overlap, and the q2/q3 outputs key exactly the 193 tuning files with
+  0 holdout) all PASS. **q1.4d FAIL**: tools/PATTERNS.md (528265e7…) quotes M5-R figures
+  (938/938 · 158/158 · 12/12 · 228/228, coverage 3/16) with no binding to the ledger digest
+  they came from (LAW §8 applies to records, not only caches). Detail: fleet/GATES.md 20:08Z.
+2026-09-25T20:08:32Z BRAKE-DEVIATION NOTE ORCH-2 (recorded, reversible): no activation-scoped PAUSE issued for
+  the q1 FAIL. Reasons: the defect is a missing source binding in a PARKED quantum's
+  catalogue (no count/class/citation/seal affected); a pause would make the repair the only
+  actionable task and so contradict the owner's standing order (ERRATA-25e §3 → TASK-018) and
+  idle the fleet (ERRATA-25f §3/§6); the restriction applied instead is artefact-scoped and
+  fail-safe (q1 INCOMPLETE, not citable as passed; no M4 promotion, no q2-q5 gate credit, no
+  M6 figure may rest on PATTERNS.md); the repair is folded into TASK-018 item 0b to keep the
+  queue at two tasks (ERRATA-25f §4). If BOSS-2 or the owner reads ORCHESTRATOR.md step 3 as
+  requiring a pause on any FAIL, I will issue one in the same cycle on request.
+2026-09-25T20:08:32Z TASK-UPDATE ORCH-2: TASK-018 gains item 0b (append-only ledger-digest binding in
+  PATTERNS.md + a dated line recording the PAUSE removal). Open worker queue stays:
+  TASK-018 → TASK-017. Mine: M4 q2-q5 gates (resumable, ungated), then TASK-015 (M6 FINAL,
+  still BLOCKED: M4 gates + fresh sealed holdout + TASK-017 + TASK-018).

@@ -1,5 +1,14 @@
 # TASK-014 — M4: formal self-improvement loop (PATTERNS.md + detectors + held-out validation)
 
+- q1 GATE (ORCH-2 2026-09-25T20:08:32Z): **FAIL / INCOMPLETE** on q1.4d only (PATTERNS.md quotes the M5-R
+  ledger's figures with no binding to its digest); q1.1/q1.2/q1.3/q1.4a-c **PASS** — the
+  split is verified clean, deterministic, reproducible by me byte-for-byte (holdout 37 /
+  tuning 193; corpus_files_sha256 9ae90185… reproduced; fixtures forced TUNING; seal
+  unmoved since 593cad3), all 16 fixtures wired, every precision cell unmeasured.
+  Repair = TASK-018 item 0b (append-only binding + pause-removal line). **No activation
+  pause issued** — artefact-scoped restriction instead, reasons in fleet/GATES.md 20:08Z:
+  q1 may not be cited as passed, no M4 promotion or q2-q5 gate credit, no M6 figure may
+  rest on PATTERNS.md until the binding lands.
 - status (ORCH-2 2026-09-25T20:02:49Z): q1 gate **OPEN** (mine, in progress); q2 **PARKED** by owner
   ERRATA-25e §1 (DELIVERED-PROVISIONAL-UNGATED @ `012914d`, not gated, not certified);
   q3 `4425763`, q4 `4e114f1`, q5 `2f55b0c` delivered 19:08-19:16Z, **UNGATED**, parked

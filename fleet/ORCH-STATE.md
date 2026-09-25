@@ -109,3 +109,26 @@ owner ruling 25d re-grounded, resuming
 - Next this cycle: complete the TASK-014 q1 full gate (PATTERNS.md + held-out split) —
   including whether PATTERNS.md still binds the superseded ledger digest; control check
   ≤300 s; cadence lines inside the work, not after it.
+
+## 2026-09-25T20:08:32Z — TASK-014 q1 gated: FAIL / INCOMPLETE on one criterion
+- q1.1/q1.2/q1.3/q1.4a-c **PASS** on my own re-derivation at `1beadd9`: all 16 CERTAIN
+  fixtures wired to P1-P7; coverage truth 3/16 (CF-003/006/015) reproduced from the
+  gate-PASS ledger; the split was fixed **before** any detector existed (commit order at
+  `593cad3`), is deterministic and reproducible by me exactly (holdout 37 / tuning 193, sets
+  equal, per-year table equal), its seal `481d8513…` is byte-identical to the delivered one,
+  `corpus_files_sha256 9ae90185…` reproduces from the documented derivation, fixture
+  transcripts are forced TUNING, every precision cell reads unmeasured and every promotable
+  cell no, and the tuning path filters + asserts + SystemExits on holdout overlap while the
+  parked q2/q3 outputs key exactly the 193 tuning files (0 holdout).
+- **q1.4d FAIL**: `tools/PATTERNS.md` (`528265e7…`) quotes M5-R figures (938/938 · 158/158 ·
+  12/12 · 228/228, coverage 3/16) with no binding to the ledger digest they came from — and
+  those very figures were changed by errata #2 at this head, which is the point of a binding.
+- Brake: **no activation-scoped PAUSE** (deviation from ORCHESTRATOR.md step 3, argued and
+  reversible in fleet/GATES.md 20:08Z); artefact-scoped restriction instead — q1 may not be
+  cited as passed, no M4 promotion, no q2-q5 gate credit, no M6 figure may rest on
+  PATTERNS.md. Repair folded into **TASK-018 item 0b** (queue stays at two tasks).
+- Hygiene: 2 `.pyc` files were committed at `593cad3`; at `1beadd9` there are 0 and a lane
+  `.gitignore` excludes corpus/, evidence/, __pycache__/, *.pyc — self-corrected.
+- Next: M4 q2-q5 gates are resumable and ungated (order q2 → q3 → q4 → q5); they will be
+  gated against TASK-014's criteria plus the leg-(d) standing guidance, and q4 cannot yield a
+  rate until a fresh sealed split exists (the one-shot holdout is spent).

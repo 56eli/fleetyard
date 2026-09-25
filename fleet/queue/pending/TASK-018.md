@@ -22,6 +22,18 @@ independently: `['mm-hmm'] * 8`). Append a correction line (never edit the claim
 append-only), and state the correct rule: hyphenated forms are ONE token under
 `[^\W_]+(?:['’\-][^\W_]+)*`.
 
+## Item 0b — bind PATTERNS.md to the ledger it quotes (repairs TASK-014 q1.4d, gate FAIL)
+`tools/PATTERNS.md` (sha256 `528265e7…`) quotes M5-R-derived figures — coverage 3/16 and the
+corroboration column 938/938 · 158/158 · 12/12 · 228/228 — with **no binding to the source
+ledger** (ORCH-2 gate, fleet/GATES.md 20:08Z). Append (never rewrite) a provenance block
+naming: `findings/ledger.jsonl` sha256 `d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32`,
+`findings/PROVENANCE.json` `by_transcript_digest c1ec4da8…`, the producing `tool_commit
+dada3e60…`, the worker head the figures were read at (`1beadd9`), and the read utc — plus the
+rule "any figure on this page is void unless the named ledger digest matches". While you are
+in the file, append one dated line recording that `PAUSE-WORKER-A-2026-09-25-001` was
+**REMOVED** at 2026-09-25T20:02Z on the M5-R re-gate PASS (the page still says M4 is parked
+under it). Both are append-only lines; no figure changes.
+
 ## Work
 1. For **each** of the 122 drop-word signals, individually decide: does it satisfy leg (d)
    (all three clauses, cited to bytes), or does it stay **CANDIDATE**? Record per finding:
