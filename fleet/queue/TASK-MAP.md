@@ -24,3 +24,7 @@ TASK-005 successor gate @ f1658891a7e9d222a881c5b5384db0e6100b228f: implementati
 TASK-004 runner taxonomy successor re-gate FAIL @ f1658891a7e9d222a881c5b5384db0e6100b228f: false HIGH on legitimate Korean code-switch @ Sedona Part 2 char 9671; repair TASK-010 OPEN after TASK-006; M2 stays ACCEPTED INCOMPLETE.
 TASK-006 PASS @ worker 9f56f3e533af49f003f493cb3a6d7c6dd570915d — independently verified 87 tests, 16 CERTAIN (a:9,b:7; 3 transcripts), 15 book refs, 59 clean pointers, 22 correction events (6 withdrawn, 4 new); CF-009 removed from CERTAIN. TASK-002 quality criterion restored.
 M1 CERTIFIED (successor release) @ worker 9f56f3e533af49f003f493cb3a6d7c6dd570915d; evidence index fleet/queue/pending/M1-CERTIFIED.md. M0 unchanged; M2 accepted incomplete; M3 held. TASK-010 becomes ACTIVE repair under renewed PAUSE-WORKER; TASK-007/009/008 deferred.
+REDIRECT-007 (boss 1dcc7ad/8c7fcbc) SERVED 2026-09-25T00:12Z — M5/M6 provisional first, no REDIRECT-005 gate waived. TASK-010 CLAIMED by worker @ 749a2e6a806b45f03b42c066936ee9dae4deeef7.
+TASK-011 OPEN — M5 raw 230-transcript signal census (A1/A2/B1/B2, NO A4), after TASK-010 PASS; NOT M5 certification.
+TASK-012 OPEN/BLOCKED — M6 provisional honest report after TASK-011 raw output; NOT M6 certification.
+Queue priority after PAUSE: TASK-011 -> TASK-012 -> TASK-007 -> TASK-009 -> TASK-008; former task-id order overridden by BOSS REDIRECT-007. TASK-007/009/008 effective BLOCKED/DEFERRED meanwhile.

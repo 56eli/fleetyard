@@ -16,3 +16,5 @@ After TASK-007 establishes fresh, pointer-hashed, disjoint book tune and sealed 
 3. `python3 -m unittest discover -s tests` green with no test-count drop from current 78; stdlib only, no network, corpus read-only, writes limited to named fixtures/tool docs/tests. Tool precision remains UNMEASURED until a human-reviewed flagged-span sample exists. M3 certification/M5 use of B1/B2 FP estimates is withheld until this passes.
 
 M3 also needs terminology-drift coverage and an explicit book-attribution path; those are separate future focused tasks, not silently claimed by this calibration task.
+
+REDIRECT-007 priority addendum 2026-09-25T00:12Z — effective status BLOCKED/DEFERRED until provisional M5 TASK-011/M6 TASK-012 and TASK-007's held-out pointer split. That raw M5 census may run B1/B2 only as unreviewed CANDIDATE-class signal producers without a precision/held-out FP claim; this task is still required before M3/M5/M6 *certification*. Do not infer a reduced gate from the reordered delivery.

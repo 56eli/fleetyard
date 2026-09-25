@@ -16,3 +16,5 @@ Introduce a negative regression example with a verbatim passage/offset from the 
 3. Python stdlib only, no network, corpus read-only, writes limited to named tools/fixtures/tests/M4 pattern ledger. A later successor gate independently reproduces the corrected Sedona sample before this repair can PASS.
 
 This task does not reopen owner-disposed M2 as a certification; M2 remains ACCEPTED INCOMPLETE, drop-word + speaker/format deferred to TASK-008.
+
+REDIRECT-007 priority note 2026-09-25T00:12Z — this is the only ACTIVE repair under PAUSE-WORKER (worker CLAIMED @ 749a2e6); the M5 raw sweep TASK-011 follows its PASS, then M6 provisional report TASK-012. No early A4/held-out tasks can displace this repair or the ordered raw census/report. M2 remains owner ACCEPTED INCOMPLETE.

@@ -17,3 +17,5 @@ By hand-reading additional transcript passages independently of detector outputs
 4. `python3 -m unittest discover -s tests` green with no reduction from the previous test count; corpus read-only, stdlib only, no network, writes limited to named fixture/tool/tests/pattern-ledger files.
 
 M2 remains ACCEPTED INCOMPLETE (never silently converted to PASS). M4's separate pattern-ledger/precision work still needs a focused subsequent task; M5 cannot run on unreviewed/uncalibrated detectors.
+
+REDIRECT-007 priority addendum 2026-09-25T00:12Z — effective status BLOCKED/DEFERRED until provisional M5 TASK-011 and M6 TASK-012 are delivered, and TASK-007/TASK-009 held-out upgrades are addressed. Missing drop-word and speaker/format remain UNMEASURED (not zero); owner M2 ACCEPTED INCOMPLETE remains. The worker does not claim this task simply because its numerical id sorts before M5/M6.
