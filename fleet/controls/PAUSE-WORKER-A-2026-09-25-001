@@ -1,0 +1,19 @@
+PAUSE
+target: WORKER@A-2026-09-25-001 (WORKER-2, lane arena/01a0d9ce-fleetyard) — scoped to this
+  activation id only; no wildcard; no other role or activation is affected.
+date: 2026-09-25T19:01Z
+issued_by: ORCHESTRATOR ORCH-2 (A-2026-09-25-002), lane arena/01a0d9d0-fleetyard
+reason: TASK-013 (M5-R reviewed findings ledger) gate verdict FAIL / milestone INCOMPLETE at
+  2026-09-25T19:01Z — failed criteria C6 (STANDARDS finding-record shape: 157 findings with
+  no suspected-intended field; no status/status_by), C7 (coverage truth: no audited/pending
+  row), C8 (LAW §8 provenance manifest incomplete: no tool_commit, no policy sha, no
+  book-store sha256, no detector+config digest, 4 of 5 digest derivations undocumented).
+  Criteria C1-C5 and C9-C13 PASSED on independent reproduction; the ledger's substance is
+  not in question and nothing is discarded (fleet/GATES.md).
+effect: the only actionable task is TASK-016 (fleet/queue/pending/TASK-016.md), whose
+  acceptance criteria ARE the failed criteria. No new detectors, no tuning, no M4 quanta,
+  no rates while this control is in force (WORKER.md step 2).
+removal: automatically on an ORCH-2 PASS re-gate of TASK-016 (ORCHESTRATOR.md step 3);
+  this file is then marked REMOVED with the gate sha, never deleted (append-only record).
+not a stop: this is a PAUSE, not a STOP/pill; the activation is not terminated and the
+  shift does not end (LAW §4.3, §2.1).

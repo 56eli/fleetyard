@@ -21,3 +21,18 @@ owner ruling 25d re-grounded, resuming
   yet observed on any lane (arena/* = 6 lanes; none new besides WORKER-2's and mine).
 - next acts (this cycle): cut M5-R/M4/M6 tasks, gate the M5-R delivery independently,
   verify WORKER-2's registration (done, §8 of the verification record), then gate M4 q1.
+
+## 2026-09-25T19:01Z — cycle 1 (mission): queue cut + first independent gate
+- Queue (order): TASK-016 (repair M5-R) -> TASK-017 (inherit v1 toolchain) -> TASK-014
+  q2-q4 (drop-word, speaker/format, B1/B2 held-out + precision, A4 decision) -> TASK-015
+  (M6 FINAL). TASK-013 gated FAIL/INCOMPLETE; TASK-014 q1 gate OPEN (no verdict).
+- Gate verdict TASK-013 (M5-R) = **FAIL / INCOMPLETE**: C6 finding-record shape (157
+  findings without a suspected-intended field; no STANDARDS status/status_by), C7 coverage
+  truth (no audited 0/230 vs pending 230/230 row), C8 LAW §8 manifest (no tool_commit, no
+  policy sha, no book-store sha256, no detector+config digest, 4/5 digest methods
+  undocumented). All other criteria PASS under my own independent reproduction — the
+  ledger's numbers, citations, book bytes, determinism, scope and honesty all held.
+- Brake: PAUSE-WORKER-A-2026-09-25-001 (scoped, dated, reasoned; removable by PASS).
+- Certifications outstanding: none granted. M0/M1 historical, M2 accepted incomplete,
+  M3 uncertified, M5-R incomplete, M4 in flight, M6-P owner-accepted PROVISIONAL (never
+  re-certified by me), M6 blocked. No rate exists anywhere in my records.
