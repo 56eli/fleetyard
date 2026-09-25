@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T20:55Z
+updated: 2026-09-25T21:00Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -31,10 +31,10 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
   (holdout evaluated at q4; fresh split with new salt sealed in TASK-019a @ `79eb401`; TASK-017 delivered).
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T20:53Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T20:58Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
-- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `79eb401b4328d254a5cee9be0a07f17a5a5e610b` (ALIVE; delivered TASK-019a split v2, suite 164 OK)
-- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `6495a8bbe0c9500cf608803745afbb7375543a59` (ALIVE; gating queue)
+- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `2bbb9f61ad44c36c3348e72f972569d5ea0535b2` (ALIVE; cadence active)
+- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `6495a8bbe0c9500cf608803745afbb7375543a59` (ALIVE; gating q2/TASK-018)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
   - worker v1: `arena/01a0d581-fleetyard` @ `bf97d85` (HALT ack)
@@ -53,7 +53,7 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 - `fleet/ORDERS/REDIRECT-008.md`: **ACKNOWLEDGED & COMPLETED** by ORCH-2 (`fleet/ORDERS/ACK-REDIRECT-008.md` @ `5f6d698`).
 
 ## stall watch (re-armed per ERRATA-25f §2: signals only)
-- Class 1 (worker stalled): NOT FIRED (WORKER-2 delivered TASK-019a @ `79eb401`).
+- Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `2bbb9f6`).
 - Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `6495a8b`).
 - Class 3 (starvation): NOT FIRED (actionable queue: ORCH-2 gates of TASK-018, TASK-017, TASK-019a).
 - Class 4 (post-handoff): NOT FIRED (all v1 archives verified frozen).
