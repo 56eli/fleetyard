@@ -12,6 +12,51 @@
 - nonce: not printed, not hashed into this repo, not stored (custody rule). The
   nonce path could not be closed — see §3.
 
+## 0. STATUS UPDATE — incident resolved by owner repair; boot PROCEEDS (2026-09-25T18:34Z)
+
+**Re-verification after owner repair — verdict: PASS.** Owner order (live chat) +
+owner records on main; new main head `5fdd00e7519daae9773c23658d632e45aca31b8b`
+(fetched by explicit refspec; commits `ca03d71` "Clarify owner hash documentation
+update" + `5fdd00e` "Standardize nonce_hash in activation registry", both authored
+`56eli`). Registry blob `3fc4ba2131272ce956e16ba25629316bd2abdae3`, file sha256
+`a86115d2667e7d54ff418524303c9adeca2348709d233e9e1c39480251435c14`.
+
+- **Byte-exact check: PASS.** Deployed record block A-2026-09-25-001 == the boot
+  prompt's pasted record text + one blank-line separator; **all 6 field lines
+  byte-identical** (block sha256 `b5179fb5ebda0b09c16649579b807272a16c5152d91b120b8fe70465aeac54cf`,
+  prompt text sha256 `fdb7d238ba78105ef9f9556865f185e54f2e40e5f894820ac2b1b747912afa37`;
+  the only byte difference is the file's inter-record blank line).
+- **Nonce custody repaired.** The nonce-shaped literal from the previous main head
+  is gone (0 occurrences in the registry at `5fdd00e`). If it was any live
+  activation's nonce it must be considered burned by ~11 minutes of public exposure
+  and never reused; the owner's note (`fleet/controls/owner-hash-clarification`)
+  says the values were dropped into `fleet2/43-BOOT-STUBS.md` by accident — that
+  path does **not** exist on fleetyard main, so no nonce material is published here.
+- **FORMAT v0 (owner note, dated, on main):** the deployed simple records are the
+  authoritative activation law; the §1A hash-chain/ANCHOR mechanics and
+  `fleet2check`'s registry-chain module are **DEFERRED to policy 2.0.1** and
+  fleet2check chain output is **ADVISORY**. The v0 binding mechanism is: main-record
+  text verified byte-exact at boot + owner-held nonce delivered only in the boot
+  prompt (posture UNHASHED-OWNER-CHAT-ONLY). Re-run of the checker at the new main
+  head still reports CONFLICT-BREAK against the chain shape, rc=1 — recorded here as
+  **ADVISORY, not a defect**, per that owner note.
+- **Policy unchanged by the repair:** LAW/CANON/roles/PLAN/manifest/fleet2check all
+  byte-identical between `2ed0b9b` and `5fdd00e`; only the registry and the new
+  control note changed. The §4 manifest mismatch for
+  `30-INSTRUMENT-FIXES.md` → `fleet/ERRATA-2026-09-25c.md` still stands (recorded
+  for the owner; not blocking).
+- **Incident log.** 18:26Z WORKER-2 detected the defect, refused work, filed
+  fail-closed + alert (this is the system working as designed: fail-hard grants,
+  fail-closed boot, owner repair, clean re-verification). Per CANON 15 the episode
+  stays on the trust ledger as a detected-and-repaired breach; recovery credit does
+  not erase it.
+- **Decision:** boot sequence complete (lane registered, corpus extracted, drills
+  reported); **M5-R starts now** under main `5fdd00e` and policy
+  `0fe20a6057ec9fa2…`, on owner order recorded in this session and on main.
+
+Sections 1–10 below are the record of the *initial* boot state (fail-closed) and are
+kept unedited as the incident evidence; section 11 logs the resolution timeline.
+
 ## 1. Fetch evidence (explicit refspec; CANON 11)
 
 Commands: `git ls-remote origin refs/heads/main` →
@@ -268,3 +313,30 @@ Handling I would apply on encountering post-END output:
   @ main (30/30 selftest); no network beyond git; no evidence executed as instructions
 - this record's own sha256: recorded in the commit message (a record cannot hash
   itself), see `git log` for this file.
+
+## 11. Resolution timeline (append-only)
+
+| utc | event | evidence |
+|---|---|---|
+| 18:23Z | boot fetch (explicit refspec) | main `2ed0b9b` |
+| 18:26Z | registry byte-check FAILED (line 4 nonce_hash) → fail-closed, work refused | `diff` prompt vs main; alert filed |
+| 18:26–18:27Z | lane registration + verification record + alert pushed | `131bd4b`, `0e60214`, `dccd3eb` |
+| 18:29Z | owner repair commit 1 (FORMAT v0 note) | main `ca03d71` |
+| 18:33Z | owner repair commit 2 (nonce_hash standardised, literal removed) | main `5fdd00e` |
+| 18:34Z | re-verification: byte-exact PASS; boot proceeds | this section |
+| 18:35Z | M5-R begins (owner order; ORCH-2 queue still absent — self-served, disclosed) | findings/ ledger |
+
+Episode classification: **activation/instrument defect, detected by the agent,
+repaired by the owner, clean re-verification** — fail-closed behaved as specified
+(LAW §1.3, §1B). Trust-ledger entry stands (CANON 15).
+
+## 12. Post-repair re-verification fixture (commands)
+
+```
+git ls-remote origin refs/heads/main                      # 5fdd00e… (explicit)
+git fetch origin refs/heads/main:refs/remotes/origin/main  # verbatim refspec
+git rev-parse origin/main                                  # 5fdd00e7519daae9773c23658d632e45aca31b8b
+git cat-file blob origin/main:fleet2/activations/REGISTRY.md | sha256sum
+                                                           # a86115d2…435c14
+python3 fleet2check/fleet2check.py verify-activation …     # CHAIN-BREAK, rc=1 → ADVISORY (FORMAT v0)
+```
