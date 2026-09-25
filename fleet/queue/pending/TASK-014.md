@@ -71,7 +71,8 @@ The q1 holdout (37 transcripts, salt `fleetyard-m4-holdout-2026-09-25`) was **ev
 at 19:12-19:14Z (`runs/m4-q4-holdout/`, `holdout_consumed: true`, counts only, no rate) and is
 **spent**: LAW §9 requires held-out data *fixed before tuning*, and both the reducer (errata #2)
 and the detector set have moved since. Therefore, for q2, q3 and q4:
-- any precision/recall or promotion criterion is evaluated against a **fresh sealed split v2**
+- any precision/recall or promotion criterion is evaluated against **TASK-019's fresh sealed
+  split v2** (owner-AUTHORIZED, ERRATA-25g §5 @ main 7d033ab; cut 20:35Z) — a **fresh sealed split v2**
   (new salt, dated record, sealed BEFORE any further tuning, evaluated exactly once) — not
   against the spent split, and not against the tuning set;
 - **do not re-run the spent split**; it stays on the lane as a receipt, and its counts

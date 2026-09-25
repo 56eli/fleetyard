@@ -40,3 +40,5 @@ orch v1 arena/01a0d582 @ 191b1f8: ARCHIVE (cycles 41+ unauthorised; gates adviso
 main 8e9e179 -> fleet/ERRATA-2026-09-25e.md (owner: OPTION A; M4 parked; CERTAIN leg (d))
 main 77f1d6d -> fleet/ERRATA-2026-09-25f.md (owner: liveness doctrine, queue discipline, boss CONCERN scope)
 boss 8ab0705 -> fleet/ORDERS/REDIRECT-008.md (Class-2 orchestrator silent; acked 19:57:21Z @ 5f6d698)
+main 7d033ab -> fleet/ERRATA-2026-09-25g.md (owner: 24-hour shift, turn discipline, split v2 AUTHORIZED)
+2026-09-25T20:35:12Z ORCH-2 -> TASK-019 cut (fresh sealed split v2 + one-shot evaluation)

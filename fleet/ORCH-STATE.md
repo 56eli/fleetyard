@@ -154,3 +154,32 @@ owner ruling 25d re-grounded, resuming
 - **Mine next cycle**: gate M4 q2 → q3 → q4 → q5 after TASK-018 lands; keep cadence lines
   inside the review loop (ERRATA-25f §4); control check ≤300 s; never write main; never
   re-certify M6-P; no rate anywhere without split v2 evaluated once.
+
+## 2026-09-25T20:36:36Z — 25g re-ground, TASK-019 cut, and a workspace-reset recovery (recorded, nothing lost)
+- Owner ERRATA-2026-09-25g @ main `7d033ab` (blob `84d3019f`, bytes `d0191e6d…`) read and
+  adopted: a shift spans ~24 h; a turn ends ONLY for platform necessity, a genuinely blocking
+  FAIL, or shift handoff — never for status; status is pushed documents; work as many cycles
+  per turn as the platform allows; push state + a cursor line before any turn end.
+  **My previous turn-end (a chat status essay after ~2 h) is owned as a FAILED STATE.** The
+  shift now continues inside the turn.
+- **TASK-019 cut** (owner-AUTHORIZED): fresh sealed holdout split **v2** — quantum a seals
+  (new salt; published, written-down, independently reproducible method; v1 fixture
+  transcripts **and TASK-018's confirmations** forced to TUNING; sealed before any further
+  tuning on commit-order evidence; re-seal rule if a fixture is confirmed later; LAW §8
+  manifest), quantum b evaluates **once** after I gate q2/q3 and thresholds are frozen
+  (per-detector precision + FP counts, seeded vs independent separate, hand adjudications with
+  reasons I re-derive byte-exact, CANDIDATE never blended, B1/B2 headline hold until it
+  passes). Criteria v2.1–v2.9 in the task file. Worker order: **TASK-018 → 019a → 017 →
+  [my q2/q3 gates] → 019b**.
+- **Infrastructure event (second this shift):** the sandbox reset the local repo to the branch
+  point `2ed0b9b` while my pushed head was `45959ca`; my cycle-A commit landed on `2ed0b9b`
+  and was correctly rejected by the remote. Recovered with `git fetch` + `git reset --mixed
+  45959ca` (working tree preserved, so this cycle's writes survived) + `git merge origin/main`
+  = `7ae4032`; registry file sha `a86115d2…435c14` unchanged; no pushed history rewritten;
+  correction logged as CONTROL seq 12 rather than editing seq 11. WORKER-2 logged the same
+  reset at `10afc0d` — LAW §8's push-every-commit rule is why neither lane lost work.
+  Standing fix in my pre-push check: assert `git rev-parse HEAD` is a descendant of the
+  remote lane head before committing after any reset.
+- Next in this turn: M4 **q3** gate (independent of leg (d)), then **q2** (determinable
+  criteria; leg-(d) classification items PENDING TASK-018), then q4 execution discipline and
+  q5 residuals; TASK-018/019/017 gates as they land.

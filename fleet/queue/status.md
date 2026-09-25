@@ -130,3 +130,31 @@ Role: ORCHESTRATOR (ORCH-2, A-2026-09-25-002) · lane arena/01a0d9d0-fleetyard.
   stale 19:06-19:56Z and the defect is owned regardless of the retraction); WORKER-2 head
   219075a, BOSS-2 head 54af117. Fleet self-running; open worker queue = TASK-018 then
   TASK-017 (small by design).
+
+2026-09-25T20:35:12Z ORDER ORCH-2 re-ground: owner fleet/ERRATA-2026-09-25g.md read on main 7d033ab (blob
+  84d3019f, bytes d0191e6d65d3eeb6969629678f54ec5ba1aa03f3d37dbaf896fa13feed405e6a) —
+  24-HOUR SHIFT EXPECTATION. Turn discipline: a turn ends ONLY for platform necessity, a
+  genuinely blocking FAIL, or shift handoff; NEVER for status, never for idleness. Status =
+  pushed documents, not chat. Within a turn, work as many cycles as the platform allows;
+  before any turn ends push all state + a cursor line. Registry still FROZEN and unchanged
+  (a86115d2…435c14); policy unchanged (0fe20a60…); STANDARDS.md still 1e38a345… (leg (d)
+  fold-in landing by owner edit; gating cites ERRATA-25e §2 until then, per 25g §5).
+2026-09-25T20:35:12Z DEFECT OWNED ORCH-2 (25g §2/§3a/§4): I ended my previous turn after ~2 hours to deliver a
+  chat status essay. That is a FAILED STATE, not a handoff: nothing was blocking, the
+  handoffs were already pushed documents, and the report belonged on the lane. The trackers
+  were right; the turn-end was wrong. Corrected in practice from this cycle: the shift
+  continues inside the turn, cycles run back-to-back, cadence lines are written inside the
+  work loop (25g §6), and reporting happens only as pushed files.
+2026-09-25T20:35:12Z TASK-CUT ORCH-2: **TASK-019** — fresh sealed holdout split v2 + its one-shot evaluation,
+  owner-AUTHORIZED (ERRATA-25g §5). Quantum a seals (new salt, published + reproducible
+  method, in-sample transcripts forced TUNING including TASK-018's confirmations, sealed
+  before any further tuning on commit-order evidence, re-seal rule if a fixture is confirmed
+  later, §8 manifest); quantum b evaluates ONCE after ORCH-2 gates q2/q3 and thresholds are
+  frozen (per-detector precision + FP counts, seeded vs independent separate, hand
+  adjudications with reasons, CANDIDATE never blended, B1/B2 headline hold until it passes).
+  Criteria v2.1-v2.9 cut in the task file. M6 FINAL's headline waits for it.
+2026-09-25T20:35:12Z QUEUE ORDER ORCH-2 (worker): TASK-018 (items 0/0b then leg-(d) adjudication) → TASK-019a
+  (seal v2) → TASK-017 (v1 toolchain) → [ORCH-2 gates q2/q3] → TASK-019b (one-shot
+  evaluation). Mine this shift: gate q3 → q2 (determinable criteria; leg-(d) items pending
+  TASK-018) → q4 execution discipline → q5 residuals, then TASK-018/019/017 as they land;
+  TASK-015 (M6 FINAL) stays BLOCKED until 019b + 017 + the M4 gates.
