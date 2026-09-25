@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T19:06Z
+updated: 2026-09-25T19:10Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner ruling `fleet/ERRATA-2026-09-25d.md` on main @
@@ -21,15 +21,17 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
   machine-adjudicated 230), C8 (LAW §8 manifest). Milestone INCOMPLETE per LAW §9.
   Repair **TASK-016** cut in pending queue. Scoreboard: **3 / 0 / 1,331** (CERTAIN-inherited
   3 [CF-003, CF-006, CF-015] / HIGH 0 / CANDIDATE 1,331).
-- M4 self-improvement loop — **IN PROGRESS** on worker lane (q1 rule catalog + held-out
-  split 193/37 delivered at `593cad3`; q2-q4 queued behind TASK-016 repair)
+- M4 self-improvement loop — **IN PROGRESS** on worker lane: q1 rule catalog + held-out
+  split 193/37 delivered at `593cad3`; q2 C1-drop detector delivered at `012914d` (122 raw
+  signals on tuning split, 4 provisional fixtures, classification blocked on missing leg d);
+  q3-q4 queued behind TASK-016 repair.
 - M6 final audit report — **PENDING ☐** (blocked on 016 + 014q4 + 017; requires completed M5-R)
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T19:05Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T19:08Z)
 - main: `25bdab98200074ea89c22944188e948d8b748be2` (owner commit, `fleet/ERRATA-2026-09-25d.md`)
-- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `e07be0e759ba282960261e14c2439284e7b63fd3` (ALIVE, age ~13 min; M5-R errata delivered @ `593cad3`, M4-q1 delivered, M4-q2 underway)
-- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `ad1d754bcfe6a42e26bd0900e5e868723b51501f` (ALIVE, age ~3 min; re-grounded on 25d, cycle-1 drills PASS, gated M5-R @ `ad1d754`)
+- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `012914d521ef2d4373ebc14c2f4c2ac2a2a4de09` (ALIVE, age ~3 min; delivered M4-q2)
+- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `8ed8d122cd8ee32f9bbeb426c4d377d03653382d` (ALIVE, age ~4 min; escalated PAUSE/M4 collision to owner)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
   - worker v1: `arena/01a0d581-fleetyard` @ `bf97d85` (HALT ack)
@@ -48,13 +50,13 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 - ORCH-2 D-4 (zero-authority forgery) & D-7 (terminal semantics / VOID): **WITNESSED & VERIFIED PASS** (`fleet/branches/ORCH-2-BOOT-VERIFICATION.md` §6 @ `f2da67a`). D-4 rejected two non-granting instruments; D-7 confirmed all 4 archive lane heads == HALT freeze refs.
 
 ## stall watch (armed per LAW §4.5)
-- Class 1 (worker stalled): NOT FIRED (WORKER-2 head `e07be0e` age ~13 min; actively in quantum).
-- Class 2 (orchestrator silent): NOT FIRED (ORCH-2 head `ad1d754` age ~3 min; gated M5-R).
+- Class 1 (worker stalled): NOT FIRED (WORKER-2 head `012914d` age ~3 min).
+- Class 2 (orchestrator silent): NOT FIRED (ORCH-2 head `8ed8d12` age ~4 min).
 - Class 3 (starvation): NOT FIRED (TASK-016 actionable in queue).
 - Class 4 (post-handoff): NOT FIRED (all v1 archives verified frozen).
 - Class 5 (LOUD ZOMBIE): ARMED.
 - Class 6 (context-rot support): ARMED.
 
-## alerts
-- Dedup rule: max 1 alert per class per 20 min.
-- Zero alerts fired this cycle. Gating completed properly under STANDARDS; no REDIRECT needed.
+## CONCERNS (owner attention)
+1. **PAUSE / M4 Collision:** ORCH-2 engaged `PAUSE-WORKER-A-2026-09-25-001` on M5-R gate failure, while WORKER-2 pushed M4-q2 at `012914d` under prior chat direction. BOSS advises directing WORKER-2 to serve TASK-016 repair first so M5-R is cleared and unblocked.
+2. **STANDARDS gap on dropped words:** WORKER-2 built C1-drop detector but classification is blocked because STANDARDS lacks explicit omission leg (d). Owner errata or ruling needed to classify omissions against ground truth.
