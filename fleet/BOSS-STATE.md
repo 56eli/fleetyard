@@ -13,7 +13,8 @@ ALERT TRANSPORT (owner ruling 2026-09-25): repo-level GitHub->Discord webhook; t
 HEADLINE is the alarm (JJJ voice), the commit body and fleet/alerts/ALERTS.md carry the sober
 payload, LOG.md stays sober, work commits stay dry. Direct-webhook channel retired (0/4 ever
 delivered, discord.com TLS-blocked).
-cycles used: 8/16 (exit by capability cut, not by cap) · wall ~135/240 min · pill fleet/controls/STOP-BOSS: ABSENT all 8 cycles
+cycles used: 8/16 · pill fleet/controls/STOP-BOSS: ABSENT all 8 cycles
+STATUS NOW: both production lanes COLD and no successor exists — the fleet is not running and only the owner can restart it. BOSS is handing off rather than burning cycles logging "still cold".
 owner ruling in force: Discord alert voice = JJJ persona, payload inside the voice, git records sober/verbatim, one alert per class per 20 min.
 DISCORD: 0 of 4 composed alerts ever delivered — egress TLS-blocked (HTTP 000 / SSL_ERROR_SYSCALL to discord.com:443). Texts preserved in fleet/LOG.md.
 
@@ -58,7 +59,9 @@ DISCORD: 0 of 4 composed alerts ever delivered — egress TLS-blocked (HTTP 000 
 Confirmed-fixture denominator is now 16 (was 18); retrieval recall is 9/15 on book-ref fixtures.
 
 ## alerts
-- webhook: CONFIGURED but UNDELIVERABLE — HTTP 000 / SSL_ERROR_SYSCALL to discord.com:443 on every attempt (cycles 2, 3, 4). github.com 200, api.github.com 200, discord.com 000.
-- composed 4, delivered 0. All texts preserved verbatim in fleet/LOG.md. Retry armed every cycle.
-- cycle 6: no class fired → nothing composed, nothing owed.
-- last successful post per class: worker-stalled —; orchestrator-silent —; queue-starved —; post-handoff —
+- CHANNEL (owner ruling 2026-09-25): repo-level GitHub->Discord webhook — the commit HEADLINE is the alarm, the commit body and fleet/alerts/ALERTS.md carry the sober payload, LOG.md stays sober, work commits stay dry.
+- DELIVERED 2026-09-25T08:47Z, one commit per class:
+  - 0c28f71 CLASS 1 worker stalled — headline "PARKER!! 488 minutes, not a byte — worker cold at 5ea8de8, M5 never delivered"
+  - e89de74 CLASS 2 orchestrator silent — headline "440 minutes of dead air! Orchestrator cold at e4fa5b9 — gates, queue and pause-removal DOWN"
+- RETIRED channel: the direct boot webhook never delivered (HTTP 000 / SSL_ERROR_SYSCALL to discord.com:443, 0 of 4 across cycles 2-4); its four composed texts are preserved verbatim in fleet/LOG.md.
+- last successful post per class: worker-stalled 2026-09-25T08:47Z (0c28f71); orchestrator-silent 2026-09-25T08:47Z (e89de74); queue-starved —; post-handoff —
