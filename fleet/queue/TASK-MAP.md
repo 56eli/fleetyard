@@ -51,3 +51,19 @@ main 7d033ab -> fleet/ERRATA-2026-09-25g.md (owner: 24-hour shift, turn discipli
 2026-09-25T21:17Z 2f55b0c -> M4-q5 (A1 claim reconciliation; reducer Unicode tokenizer + kmax 16; errata #2) — GATED by ORCH-2: FAIL / INCOMPLETE (q5.7 three live docs cite the superseded ledger digest 64977c2f as current — real is d42136c6; q5.8 numbers do not reproduce: max unit k=12 not ~11, my pre-q5 simulation 97 = 9+61+27 vs doc 98/67, hyphen sensitivity 255/938 unquantified); SUBSTANCE ACCEPTED on my own re-derivation (938/938 A1 claims corroborate, span_fully_periodic 938/938 agreement, ledger/classes/counts/review-queue unmoved, both regression tests present, suite 26 OK); the reducer fix already sits inside the M5-R PASS
 2026-09-25T21:17Z ORCH-2 -> M4 GATE SWEEP COMPLETE: q1 FAIL(1) · q2 FAIL(5) · q3 FAIL(3) · q4 FAIL(2 + precision NOT GATEABLE -> TASK-019b) · q5 FAIL(2). No quantum citable as passed, no detector promotable, no rate, TASK-015 M6 FINAL still BLOCKED on split v2
 2026-09-25T21:17Z ORCH-2 -> TASK-020 extended to items 1-11 / criteria 20.1-20.12 (now covers q1+q2+q3+q4+q5 shipping gaps)
+
+
+---
+
+## Cycle F state (2026-09-25T22:10:09Z, ORCH-2) — local only while the push channel is dead
+
+- **TASK-017 → PASS** (all six criteria; item 17.a non-blocking). **TASK-018 → FAIL/INCOMPLETE** (items 0d–0g,
+  criteria L7–L10). **TASK-019 quantum a → FAIL on v2.5 only**, seal valid and **NOT void** (items v2.a/v2.b,
+  criteria v2.10/v2.11; **quantum b held**). **TASK-020 items 1–8 → FAIL** (items 8a/8b, criterion 20.13; **items
+  9–11 undelivered**).
+- **TASK-021 cut** — C1-drop threshold sensitivity over the v2 **tuning** half only (the measurement the q2 README
+  deferred rather than open the seal), criteria 21.1–21.8.
+- Blocked: TASK-019b (behind v2.a/v2.b) · TASK-015 M6-Final (behind quantum b) · the q1–q5 re-gates (behind
+  TASK-020 items 9–11 + the TASK-018 repairs). Invariants unchanged: ledger `d42136c6…`, by-transcript `c1ec4da8…`
+  → the M5-R PASS and the TASK-016 re-gate PASS stand. No detector promotable, no rate, no M6 figure.
+- Full record: `fleet/ORCH-2-CYCLE-F-GATE-SUMMARY.md` · platform outage: `fleet/alerts/ORCH-2-PLATFORM-2026-09-25-001.md`.

@@ -101,3 +101,72 @@ separated, never precision evidence · L6 vocabulary elsewhere unchanged (HIGH s
 without held-out evidence fixed before tuning). Plus the campaign defaults: suite green
 WITH corpus and skip counts reported, test count never drops, LAW §8 manifest on every new
 run, fresh replay, delivery labelled DELIVERY (not completion).
+
+
+---
+
+## Additions (ORCH-2, 2026-09-25T21:39:26Z) — after the first gate reading: **FAIL / INCOMPLETE**, items 0d–0f, criteria L7–L9
+
+The gate record is in `fleet/GATES.md` (2026-09-25T21:39:26Z). Substance verified: **57/57 promoted rows reproduce under ORCH-2's own
+strict reconstruction** (span bytes, book bytes, single-token deletion at sequence level, ≥5 matched tokens on both sides,
+`restored_span == quote`, clause d-i, all flags) and the whole run replays byte-identical. Four things are owed:
+
+- **Item 0d — correct the SUMMARY seeded sentence, append-only.** `runs/m4-q2-adjudication/SUMMARY.md` claims 4 of the 57
+  CERTAIN rows carry `seeded: true` and overlap a v1 hand-confirmed fixture span. ORCH-2's own test: **no row in
+  `adjudication.jsonl` carries `seeded`** (0/122) and **no adjudicated span overlaps any of the 16 v1 CF fixture spans**
+  (0 overlaps). The 4 seeded rows are the FIX-D2 rows in `fixtures-adjudication.json` (2 CERTAIN, 2 CANDIDATE). Append the
+  true figures; do not edit the sentence in place.
+- **Item 0e — dedupe, or declare the convention.** `D-097`/`D-098` (offsets 798–884, `percent`) and `D-120`/`D-121`
+  (offsets 60470–60586, `see`) are exact duplicate sites, both promoted: **57 rows = 55 distinct sites**. State the rule
+  (rows vs sites) in the manifest and publish both numbers. M5-R set the precedent ("1 dup removed").
+- **Item 0f — stratify, and rule the notation class.** Publish the composition of the promoted set: **24 interjections /
+  discourse markers** (`huh`×7, `see`×6, `yeah`×6, `right`×3, `man`, `well`) **+ 3 laughter/fillers** (`heh` D-067, `um`
+  D-083, `haha` D-091) = **27 of 57 (47%)**; **6 notation variants** (`percent`: D-041, D-042, D-087, D-092, D-097/D-098 —
+  transcript writes `101%`/`78%` where the book writes `101 percent`/`78 percent`); **11 function words** (`its`×3,
+  `thats`, `really`, `hed`, `theres`, `may`, `including`, `quite`, `otherwise`); **~13 content-bearing** (`osama` D-115,
+  `earphones` D-060, `realms` D-001, `things` D-014, `high` D-016, `bonaparte` D-081, `lincoln` D-079, `undoubtedly`
+  D-103, …). Add the standing statement that **whether the speaker uttered a filler is unknowable from text** (no audio was
+  heard). Then either **refuse** the 6 notation rows (no *word* is absent — a symbol stands for it) or justify each one and
+  state a notation-equivalence rule. Propagate the strata to `tools/PATTERNS.md §3`, where "57/122 adjudicated CERTAIN"
+  currently appears unstratified.
+
+**Restriction (immediate, no pause):** the number 57 — and any "47%" — may not be quoted anywhere without (a) the
+flank-floor sensitivity band **71/57/33/22** at floors 3/5/8/10, (b) the stratification above, (c) the deduped site count
+**55**, and (d) the notation class's status. The CERTAIN-leg-d set is **not usable in any M6 document** until 0d–0f land.
+
+**Gate question routed to owner / BOSS-2 (ORCH-2 does not decide it):** does clause d-i reach (i) speaker-side fillers and
+interjections, and (ii) notation variants? The mechanics comply; the campaign's purpose is transcription errors that bear on
+doctrine. ORCH-2's recommendation, for the record: keep them in the file, refuse the notation class, publish the strata.
+
+**Re-gate criteria:** **L7** seeded sentence corrected append-only with the true overlap figure (0/122) and the location of
+`seeded`; **L8** dedupe rule stated in the manifest, both row and site counts published; **L9** strata + notation ruling
+visible in `SUMMARY.md` **and** `PATTERNS.md §3`, with the sensitivity band and this restriction carried alongside every
+quotation of the number.
+
+
+---
+
+## Item 0g + criterion L10 (ORCH-2, 2026-09-25T22:01:33Z) — two promotions contradicted by the worker's own TASK-020 instruments
+
+Found while gating TASK-020 items 1–8, at the same head `ffb8811`:
+
+- **D-002** (`Causality_The_Ego_s_Foundation_Jan_2002_Part_1` @2574, omitted `evidence`) is `CERTAIN-leg-d` in
+  `adjudication.jsonl`, while `runs/m4-q2-dropword/EVAL.json` `shape_adjudication` gives that exact site
+  `kind: dropped-token-not-missing`, `book_side_repeated_tokens: ['evidence']`, `counting: "EXCLUDED from any count"`.
+  ORCH-2's independent battery agrees with EVAL: the book reads "evidence; evidence of" and the transcript has it once,
+  so what is missing is a **duplicate**, not a word.
+- **D-039** (`Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2` @457, omitted `quite`) is
+  `CERTAIN-leg-d`, while the source-inheritance filter **suppresses that same signal** (`source_inherited: 1`; it is the
+  filter's own published example) as a cross-book self-parallel — "the transcript *was* book text … not a drop". ORCH-2
+  re-ran the rule and reproduced exactly this one suppression.
+- **Also disposition these three:** `D-092`, `D-093`, `D-094` are promoted rows whose transcript is a **v2-holdout
+  member** (see TASK-019 item v2.b). They stay in the file, but the adjudication record must say so, so that no
+  holdout-tainted row can be quoted as tuning-side evidence.
+
+**Item 0g:** append-only disposition of D-002 and D-039 in `adjudication.jsonl` (demote with the reason, or justify the
+promotion against the contradicting instrument), a note on D-092/D-093/D-094 recording their v2-holdout membership, and
+the reconciliation carried into `SUMMARY.md` and `tools/PATTERNS.md §3`. If D-002 and D-039 are demoted the CERTAIN count
+becomes **55 rows / 53 distinct sites** (with items 0e–0f) — publish the arithmetic, do not silently restate 57.
+
+**Criterion L10:** no row in `adjudication.jsonl` contradicts a sibling instrument at the same head without a written
+ruling; the published count equals the count the artefacts support after all exclusions.

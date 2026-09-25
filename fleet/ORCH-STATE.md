@@ -297,3 +297,35 @@ owner ruling 25d re-grounded, resuming
 - Next in this turn: fleet re-check cycle (boss lane for orders/CONCERNs, worker lane for a TASK-018
   claim, main for new errata), then idle-with-cadence — heartbeat + CONTROL.log at ≤300 s — while the
   worker's owner-ordered tasks run. Turn does not end for status or idleness (ERRATA-25g).
+
+### Cursor at turn end (platform necessity — push and fetch dead since 21:38Z)
+
+Cycle F gate queue **exhausted**: TASK-018 **FAIL/INCOMPLETE** · TASK-019a **FAIL on v2.5 only** (seal valid, NOT
+void; quantum b held) · TASK-020 items 1–8 **FAIL** (items 9–11 undelivered) · TASK-017 **PASS all six**. TASK-021
+cut. Nothing further is gateable until repairs land, and no delivery can be read while fetch is dead. Local commits
+awaiting push, in order: `8cd2f5c` → `cba2550` → `3dd0b45` → `1ca3941` → `430706b` → the cycle-F summary commit.
+Consolidated record: `fleet/ORCH-2-CYCLE-F-GATE-SUMMARY.md`. Owner action required: **reconnect GitHub in Arena**;
+the reconnect runbook is at the end of that summary.
+
+
+## Cycle G (2026-09-25T22:33:26Z) — reconnect, workspace-reset recovery, backlog push
+
+- **Credentials restored by the owner.** git fetch/push work; `gh api user` → 403 scope limit (not auth) — no
+  gh-API-only step may be relied on here.
+- **Second platform event:** the workspace had been **recreated** — fresh clone at `7d033ab`, my lane at its base
+  `2ed0b9b`, the six cycle-F commits **absent as objects**, `/home/user/gate-scratch` **wiped**. The **documents
+  survived** (snapshot). Recovered with `git fetch origin '+refs/heads/*:refs/remotes/origin/*'` +
+  **`git reset --mixed origin/arena/01a0d9d0-fleetyard`** (never `--hard`) → HEAD on the pushed head `31ce8dd`,
+  working tree intact, clean fast-forward. **Frozen registry verified intact** (`a86115d2667e7d54…` both from
+  `origin/main` and in my tree; nothing under `fleet2/` modified). `origin/main` still `7d033ab`.
+- **Disclosure:** the lost shas (`8cd2f5c`, `cba2550`, `3dd0b45`, `1ca3941`, `430706b`, `4d297d0`) were local-only;
+  their **content** is pushed now, re-committed on `31ce8dd`. Verdicts/criteria/items/restrictions/digests unchanged;
+  only container commits lost. Recorded in the alert §6.
+- **Fleet while blind:** BOSS-2 cycles 20–31, **zero controls, no CONCERN against ORCH-2**, reconnect noted at cycle
+  24; my silence read correctly as a gating battery. WORKER-2 `ffb8811` → **`4fc40c8`**: `d7fee6e` = **TASK-020 items
+  9–11 delivered** (q4 LAW §8 supplement, PATTERNS §5d exposure-normalized correction, the three stale ledger-digest
+  lines, q5's numbers; suite 227 OK per BOSS-2), `4fc40c8` = leg-(d) outcome bound into PATTERNS **with the floor-5
+  sensitivity row 71/57/33/22 attached** (my beacon seq 18 rule, adopted independently). Neither commit saw my four
+  verdicts — items 0d–0g / v2.a–v2.b / 8a–8b + 20.13 / 17.a / TASK-021 reach the worker only via this push.
+- **Next:** push the backlog → re-create the gating worktree at `4fc40c8` → `tools/m5r_inputs.sh` → gate **TASK-020
+  items 9–11** (20.10–20.12) and re-check the leg-(d) PATTERNS binding against my TASK-018 restrictions.

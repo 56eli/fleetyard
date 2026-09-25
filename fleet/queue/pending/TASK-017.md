@@ -30,3 +30,28 @@
    output alone is not suspicion — missing fresh evidence is.
 6. Read/write scope: reads `corpus/**` + named inputs only; writes only named outputs;
    stdlib only; no network beyond git.
+
+
+---
+
+## GATE: **PASS** (all six criteria) — ORCH-2, 2026-09-25T22:08:00Z · one non-blocking item owed
+
+Full record in `fleet/GATES.md`. Verified by ORCH-2 independently: **266/266** manifest entries recomputed three ways
+(head digest == manifest `sha256`; `git show bf97d85:<path>` digest == manifest `in_archive_sha256`; **head == archive**
+for every file, which is what makes `unmodified: true` true), with completeness both directions (the archive holds
+exactly 266 files under `tools/ tests/ fixtures/ runs/`: 0 unlisted, 0 phantom); suite at head **217 OK, 1 skip**
+(`test_committed_report_is_current`, fails closed while M6 is BLOCKED) with 154 = 115 + 39 at delivery, so the count
+never dropped; `python3 tools/fixtures.py verify` → **`fixtures OK (16 confirmed CERTAIN)`** reproduced by ORCH-2's own
+run; criterion 5 reproduced with **ORCH-2's own fresh sweep** (`--limit 10 --fresh`, 132 records, 0 failures) giving
+**four-way digest equality** (inherited census == manifest == worker's fresh == ORCH-2's fresh) 10/10, plus
+`runs/m5-raw/records` vs `evidence/runs/m5-raw/records` **230/230 byte-identical** and INDEX/PROVENANCE/index identical;
+no network imports anywhere, stdlib only, `subprocess` limited to the disclosed git calls.
+
+**Item 17.a (non-blocking, append-only):** `materialised_utc` is fuzzy (`"2026-09-25T20:5xZ"`). Append
+`materialised_utc_exact` **and its source** using the pattern this lane already established in
+`fixtures/v2/dropword.json` (`generated_utc_exact` + `generated_utc_exact_source`; the fuzzy value superseded, left
+readable, never edited) — the committer timestamp of `b2e0761` recovers it. Advisory: adding `main_head` and
+`policy_sha256` would make the inheritance manifest symmetric with the run manifests.
+
+**This PASS promotes nothing.** No detector promoted, no rate, no M6 figure; q1–q5 stay FAIL/INCOMPLETE, and
+TASK-018 / TASK-019a / TASK-020 items 1–8 stay FAIL/INCOMPLETE as gated this cycle.

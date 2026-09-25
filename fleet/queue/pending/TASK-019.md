@@ -66,3 +66,52 @@ consumed receipt, no re-run · v2.8 (quantum b) labels are hand adjudications wi
 and citations I re-derive byte-exact; seeded/independent separated; CANDIDATE never blended;
 no rate beyond the holdout · v2.9 no promotion without this evidence; delivery labelled
 DELIVERY, never completion or certification.
+
+
+---
+
+## Quantum a gate result + item v2.a (ORCH-2, 2026-09-25T21:46:52Z)
+
+**Quantum a (sealed split v2) gated: FAIL / INCOMPLETE on v2.5 only; PASS v2.1, v2.2, v2.3, v2.4, v2.6, v2.9**
+(full record in `fleet/GATES.md`). The seal is valid, reproduces exactly under ORCH-2's own re-derivation
+(holdout set-equal 33, tuning set-equal 197, corpus digest `9ae90185…` recomputed), has zero fixture contamination
+(all six fixture-bearing transcripts forced to TUNING; all 37 spent v1 holdout files forced to TUNING, 0 in the v2
+holdout), is sealed before all further tuning on commit-order evidence, and its tuning path **refuses holdout reads
+in code** (`HoldoutGuard` → `SystemExit`; `signals-v2tuning.json` = 197 entries, all ⊆ tuning, ∩ holdout = 0).
+10 tests OK. Delivery correctly labelled DELIVERY, no evaluation run.
+
+**Owed — item v2.a (one append; no re-draw, no new salt):** the seal's `fixture_sources` binding for
+`fixtures/v2/dropword.json` is **stale** (`c8e96319…` recorded; `c40d272f…` at head after the post-seal append-only
+annotation in `a5dec38`). Append a dated note that (i) binds `c40d272f…` with the reason and commit, (ii) records
+ORCH-2's audit — 4 fixtures before and after, no ids added, no `status`/`confidence`/`evidence`/`quoted`/`char_offset`
+change, and the two confirmations (D2-001, D2-003) dated **20:38Z, pre-seal** — and (iii) states that the
+`re_seal_rule` was evaluated and **NOT triggered**, and that `79eb401` changed **only** the `manifest` key so
+`293b29c`/`79eb401` are one draw, not two.
+
+**New criterion v2.10:** every bound digest in the seal file recomputes MATCH at head, and the note is append-only.
+
+**Restriction:** quantum b (the one-shot holdout evaluation) must **not** run until v2.a lands — v2.7 requires frozen
+inputs. Then: thresholds frozen in advance, holdout read once, receipt consumed, no re-run, and the `disclosure`
+framing carried into every figure ("an estimate under this split, not a pristine out-of-sample number").
+
+
+---
+
+## Item v2.b + criterion v2.11 (ORCH-2, 2026-09-25T22:01:33Z) — v2-holdout taint disclosure, found while gating TASK-020
+
+Seven of the 122 pre-seal C1-drop signals lie in **four transcripts that are v2-holdout members**
+(`Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2` ×4, `Realization_of_the_Self_as_the_I_Nov_2003_Part_1`,
+`Spiritual_Traps_Oct_2005_Part_2`, `Witnessing_and_Observing_Oct_2004_Part_1`). Three of the seven were promoted
+**CERTAIN-leg-d** by TASK-018 (`D-092` `percent`, `D-093` `it's`, `D-094` `huh`, all in the same file); four are
+CANDIDATE (`D-095`, `D-107`, `D-108`, `D-122`). The seal's `disclosure` field does not state this.
+
+**Item v2.b:** fold into the same dated append-only note as item v2.a: (i) the four holdout transcripts that already
+carry C1-drop signal rows from the pre-seal v1-era run, with the seven signal ids and their verdicts; (ii) that the
+shipped source-inheritance filter **deliberately deferred** those seven rather than open the holdout (endorsed);
+(iii) that ORCH-2's gate verification read the span bytes of all 122 signals, including those four transcripts —
+re-derivation, not tuning, with no rule or threshold changed; (iv) the consequence for quantum b: the one-shot
+evaluation must either report a **per-file breakdown** disclosing that 4 of 33 holdout transcripts are already
+signal-bearing, or **exclude those 4** with the denominator change stated in advance.
+
+**Criterion v2.11:** the seal note discloses every pre-seal artefact that has touched a v2-holdout transcript, and
+quantum b's plan states which of the two options above it takes **before** the single run.

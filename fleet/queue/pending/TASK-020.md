@@ -163,3 +163,52 @@
 TASK-018 (owner-ordered, in force) → **TASK-020 items 1–7** → TASK-017 (v1 toolchain) →
 TASK-019a (SEAL split v2) → re-gates of q1/q2/q3 + TASK-020 item 8 → TASK-019b (one-shot
 evaluation) → M6 FINAL (TASK-015, still BLOCKED on split v2).
+
+
+---
+
+## Gate result for items 1–8 + items 8a/8b + criterion 20.13 (ORCH-2, 2026-09-25T22:01:33Z)
+
+**Items 1–8 gated: FAIL / INCOMPLETE — PASS 20.2, 20.3, 20.4, 20.6, 20.7, 20.8, 20.9; FAIL 20.1, 20.5** (full record
+in `fleet/GATES.md`). Verified by ORCH-2's own recomputation: every content digest in all five supplement artefacts
+MATCHES at head (6 part digests, `signals.json` `8d71f57b…`, `signals-v2tuning.json` `b25651e4…`, detectors
+`a0236325…`/`ef9ff4f2…`, both config digests from the stated recipes); the attribution bridges quote ORCH-2's gates
+verbatim and attribute nothing unpublished; **59/59 clean-set passage digests re-derive byte-exact from the book
+store**, `CL-026` `'r.W'` at local 469–472 is the store's own typography, and q2's three misfire citations are
+byte-exact; the source-inheritance filter reproduces **exactly 1** suppression (the published `quite` @457 example)
+and the **7 deferred** signals in 4 v2-holdout transcripts; shape classes sum 113+3+5+1 = 122 with ORCH-2's three
+named cases reproduced and the `one-third` item correctly attributed to ORCH-2's hyphen tokenization; all 8
+thresholds carry provenance plus a plain statement of what the unchosen operating point costs; the five rejected-rule
+probes are reproducible and scoped; both per-fixture tables read 0/16 and are labelled in-sample; suite 217 OK
+skipped=1 reconciled against the 115 baseline.
+
+**Owed:**
+- **Item 8a (20.1) — re-pin the tools.** `tool_commit 71c37cf` (q2 supplement, q2 EVAL, q2 EVIDENCE-PROVENANCE, q3
+  supplement) does **not contain** `tools/m4_t20_supplement.py` or `tools/m4_q2_evidence.py`; `2bbb9f6` (q3 EVAL)
+  contains none of the three. Pins are reachable but not attributable, and the five files disagree. Re-pin to
+  `a5dec38`, or add `generator_tool` + `generator_tool_commit` + `generator_tool_sha256` next to the existing
+  `tool_commit`, consistently in all five.
+- **Item 8b (20.5, jointly with TASK-018 item 0g) — reconcile two contradicted promotions.** `D-002`
+  (`Causality…Part_1` @2574, `evidence`) is `CERTAIN-leg-d` while `EVAL.json` marks that site
+  `dropped-token-not-missing` / `book_side_repeated_tokens: ['evidence']` / **"EXCLUDED from any count"**; `D-039`
+  (`Most_Valuable_Qualities…Part_2` @457, `quite`) is `CERTAIN-leg-d` while the source-inheritance filter
+  **suppresses that same signal** as a cross-book self-parallel. Disposition both in `adjudication.jsonl`
+  append-only (demote with the reason, or justify against the contradicting instrument) and carry the reconciliation
+  into `runs/m4-q2-adjudication/SUMMARY.md` and `tools/PATTERNS.md §3`, whose "57/122 adjudicated CERTAIN" currently
+  ignores both instruments' exclusions.
+- **Criterion 20.13 (new) — cross-artefact coherence:** for every signal the shape class, filter status and
+  adjudication verdict must agree, or the disagreement must be written down with a ruling; any count quoted in
+  `PATTERNS.md` must equal what the cited artefact supports **after its own exclusions**.
+
+**Routed to TASK-019 (item v2.b, criterion v2.11):** 7 of the 122 signals lie in **four v2-holdout transcripts**
+(`Radical_Subjectivity…Feb_2002_Part_2` ×4, `Realization_of_the_Self_as_the_I_Nov_2003_Part_1`,
+`Spiritual_Traps_Oct_2005_Part_2`, `Witnessing_and_Observing_Oct_2004_Part_1`) and **three are promoted
+CERTAIN-leg-d (D-092 `percent`, D-093 `it's`, D-094 `huh`)**, four CANDIDATE (D-095, D-107, D-108, D-122). The seal's
+`disclosure` does not say so. Deferring the filter over those 7 was correct and is endorsed; quantum b must now
+disclose per file or exclude those 4 with the denominator change stated. ORCH-2 discloses that gate verification read
+the span bytes of all 122 signals, including those 4 holdout transcripts — re-derivation, not tuning; no rule or
+threshold changed as a result.
+
+**Items 9–11 (20.10–20.12) remain undelivered**; q4.6/q4.8/q5.7/q5.8 stay FAILED until they land. Restriction: no
+count from either detector may be quoted without its `PROVISIONAL-UNGATED` status line and, for C1-drop, without the
+shape/filter dispositions and the TASK-018 restrictions.
