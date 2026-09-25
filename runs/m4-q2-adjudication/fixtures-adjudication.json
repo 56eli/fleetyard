@@ -1,0 +1,168 @@
+[
+ {
+  "adjudication": "CONFIRMED under leg (d)",
+  "book_quote_ok": true,
+  "char_offset": 9156,
+  "citation_ok": true,
+  "clause": "d-i",
+  "detector": "C1-drop (M4-q2, tools/det_dropword.py @ 012914d)",
+  "detector_claim": "provisional fixture D2-001 (hand-read in M4-q2)",
+  "detector_dropped_words": [
+   "things"
+  ],
+  "detector_span": "fancy, they",
+  "fixture": "D2-001",
+  "fixture_claim": "DROP-CANDIDATE (hand-verified omission) — CLASS BLOCKED: STANDARDS defines no drop leg; proposed leg d needs a recorded errata + BOSS CONCERN (STANDARDS preamble). NOT counted as CERTAIN.",
+  "flank_tokens": {
+   "left": 5,
+   "right": 14
+  },
+  "ground_truth": {
+   "char_offset": 154747,
+   "kind": "book",
+   "quote": "have all kinds of fancy things they want to do—psychological testing; it’s usually an attempt to milk the parents",
+   "slug": "the_path_to_spiritual_advancem"
+  },
+  "id": "FIX-D2-001",
+  "in_sample": true,
+  "matched_span_tokens": 20,
+  "omitted_word": "things",
+  "reason": "the transcript span equals the ground-truth passage with exactly one word absent ('things') and >=5 token(s) exactly matched on each side; re-inserting the word makes the whole span token-equal to the ground truth — clauses 1-3 hold, cited to bytes",
+  "restoration_is_minimal": true,
+  "restored_matches_ground_truth": true,
+  "restored_span": "have all kinds of fancy things they want to do—psychological testing; it’s usually an attempt to milk the parents",
+  "seeded": true,
+  "span": "have all kinds of fancy, they want to do psychological testing. It's usually an attempt to milk the parents",
+  "span_end": 9167,
+  "span_end_matched": 9245,
+  "span_start": 9138,
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "verdict": "CERTAIN-leg-d"
+ },
+ {
+  "adjacent_repetition_found": false,
+  "adjudication": "DISCARDED from any CERTAIN claim (stays CANDIDATE)",
+  "book_quote_ok": true,
+  "char_offset": 58955,
+  "citation_ok": true,
+  "clause": null,
+  "detector": "C1-drop (M4-q2, tools/det_dropword.py @ 012914d)",
+  "detector_claim": "provisional fixture D2-002 (hand-read in M4-q2)",
+  "detector_dropped_words": [
+   "the",
+   "devotion"
+  ],
+  "detector_span": "of which",
+  "fixture": "D2-002",
+  "fixture_claim": "DROP-CANDIDATE (hand-verified omission) — CLASS BLOCKED: STANDARDS defines no drop leg; proposed leg d needs a recorded errata + BOSS CONCERN (STANDARDS preamble). NOT counted as CERTAIN.",
+  "flank_tokens": {
+   "left": 4,
+   "right": 41
+  },
+  "ground_truth": {
+   "char_offset": 62560,
+   "kind": "book",
+   "quote": "just the enormity of the devotion, which is the second way to God, which I don’t talk about because it cannot be talked about. The pathway to God I speak about is probably most closely aligned, as I said, with Zen or Advaita. It’s rather radical reality",
+   "slug": "the_path_to_spiritual_advancem"
+  },
+  "id": "FIX-D2-002",
+  "in_sample": true,
+  "matched_span_tokens": 47,
+  "omitted_word": null,
+  "reason": "2 words absent (['the', 'devotion']): restoring them is a larger edit than one word — not leg (d) (L3)",
+  "reason_code": "restoration-not-minimal",
+  "restoration_is_minimal": false,
+  "restored_matches_ground_truth": false,
+  "restored_span": null,
+  "seeded": true,
+  "span": "Just the enormity of which is the second way to God which I don't talk about because it cannot be talked about. The pathway to God I speak about is probably most closely aligned as I said with Zen or Advaita. It's rather radical reality",
+  "span_end": 58963,
+  "span_end_matched": 59173,
+  "span_start": 58937,
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "verdict": "CANDIDATE"
+ },
+ {
+  "adjudication": "CONFIRMED under leg (d)",
+  "book_quote_ok": true,
+  "char_offset": 48635,
+  "citation_ok": true,
+  "clause": "d-i",
+  "detector": "C1-drop (M4-q2, tools/det_dropword.py @ 012914d)",
+  "detector_claim": "provisional fixture D2-003 (hand-read in M4-q2)",
+  "detector_dropped_words": [
+   "high"
+  ],
+  "detector_span": "the 500s",
+  "fixture": "D2-003",
+  "fixture_claim": "DROP-CANDIDATE (hand-verified omission) — CLASS BLOCKED: STANDARDS defines no drop leg; proposed leg d needs a recorded errata + BOSS CONCERN (STANDARDS preamble). NOT counted as CERTAIN.",
+  "flank_tokens": {
+   "left": 11,
+   "right": 59
+  },
+  "ground_truth": {
+   "char_offset": 190224,
+   "kind": "book",
+   "quote": "no doubt that if you recite a mantra that’s in the high 500s, then the motivation behind doing such a thing is sufficient to drive one the whole way. In other words, there’s no magic in the mantra. There’s no magic in the mantra. A lot of these spiritual things get to be held in a magical way. No, the intention behind the prayer wheel, whether there’s a prayer in the",
+   "slug": "the_path_to_spiritual_advancem"
+  },
+  "id": "FIX-D2-003",
+  "in_sample": true,
+  "matched_span_tokens": 71,
+  "omitted_word": "high",
+  "reason": "the transcript span equals the ground-truth passage with exactly one word absent ('high') and >=5 token(s) exactly matched on each side; re-inserting the word makes the whole span token-equal to the ground truth — clauses 1-3 hold, cited to bytes",
+  "restoration_is_minimal": true,
+  "restored_matches_ground_truth": true,
+  "restored_span": "no doubt that if you recite a mantra that’s in the high 500s, then the motivation behind doing such a thing is sufficient to drive one the whole way. In other words, there’s no magic in the mantra. There’s no magic in the mantra. A lot of these spiritual things get to be held in a magical way. No, the intention behind the prayer wheel, whether there’s a prayer in the",
+  "seeded": true,
+  "span": "no doubt that if you recite a mantra that's in the 500s, then the motivation behind doing such a thing is sufficient to drive one the whole way. In other words, there's no magic in the mantra. There's no magic in the mantra. A lot of these spiritual things get to be held in a magical way. No, the intention behind the prayer wheel, whether there's a prayer in the",
+  "span_end": 48643,
+  "span_end_matched": 48952,
+  "span_start": 48588,
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "verdict": "CERTAIN-leg-d"
+ },
+ {
+  "adjacent_repetition_found": false,
+  "adjudication": "DISCARDED from any CERTAIN claim (stays CANDIDATE)",
+  "book_quote_ok": true,
+  "char_offset": 2218,
+  "citation_ok": true,
+  "clause": null,
+  "detector": "C1-drop (M4-q2, tools/det_dropword.py @ 012914d)",
+  "detector_claim": "provisional fixture D2-004 (hand-read in M4-q2)",
+  "detector_dropped_words": [
+   "which",
+   "perceives"
+  ],
+  "detector_span": "perception, the",
+  "fixture": "D2-004",
+  "fixture_claim": "DROP-CANDIDATE (hand-verified omission) — CLASS BLOCKED: STANDARDS defines no drop leg; proposed leg d needs a recorded errata + BOSS CONCERN (STANDARDS preamble). NOT counted as CERTAIN.",
+  "flank_tokens": {
+   "left": 6,
+   "right": 3
+  },
+  "ground_truth": {
+   "char_offset": 318680,
+   "kind": "book",
+   "quote": "opens the heart. Instead of perception, which perceives, the heart knows",
+   "slug": "letting_go__the_pathway_of_sur"
+  },
+  "id": "FIX-D2-004",
+  "in_sample": true,
+  "matched_span_tokens": 11,
+  "omitted_word": null,
+  "reason": "2 words absent (['which', 'perceives']): restoring them is a larger edit than one word — not leg (d) (L3)",
+  "reason_code": "restoration-not-minimal",
+  "restoration_is_minimal": false,
+  "restored_matches_ground_truth": false,
+  "restored_span": null,
+  "seeded": true,
+  "span": "opens the heart. Instead of perception, the heart knows",
+  "span_end": 2233,
+  "span_end_matched": 2245,
+  "span_start": 2190,
+  "transcript": "Love_Sep_2011_Part_2_enxautogen_html.txt",
+  "verdict": "CANDIDATE"
+ }
+]

@@ -93,3 +93,8 @@ complete the match; two-word omissions never promoted. Result: 57 of 122 signals
 clause (d)(i)), 65 CANDIDATE (48 restoration-not-minimal, 15 flank-too-short, 2 region-not-realignable);
 fixtures: D2-001 + D2-003 confirmed, D2-002 + D2-004 discarded from any CERTAIN claim (two-word
 omissions — narrowness is the point). 39 tests green (13 new). Artifacts under runs/m4-q2-adjudication/.
+2026-09-25T20:5xZ WORKER-2: TASK-018 DELIVERED (fleet/branches/WORKER-2-TASK-018-DELIVERY.md):
+57/122 CERTAIN-leg-d (all clause (d)(i); zero (d)(ii)), 65 CANDIDATE (48 two-word, 15 flank-too-short,
+2 not-realignable); fixtures D2-001/D2-003 confirmed, D2-002/D2-004 refused promotion under the narrow
+leg; L1-L6 evidence recorded; 57/57 promoted citations independently re-verified byte-exact; 39 tests
+green; spent holdout untouched. Next: TASK-017 (v1 toolchain inheritance).

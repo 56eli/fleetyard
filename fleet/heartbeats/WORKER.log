@@ -70,3 +70,7 @@
   2026-09-25T20:37:55Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-25T20:37:55Z TASK-018 adjudication: 120/122 signals (0s)
   2026-09-25T20:4xZ TASK-018 adjudication complete pending delivery: 57 CERTAIN-leg-d / 65 CANDIDATE of 122; fixtures 2 confirmed / 2 discarded-from-CERTAIN; 39 tests green.
+  2026-09-25T20:38:04Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-25T20:38:04Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-25T20:38:04Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-25T20:38:04Z TASK-018 adjudication: 120/122 signals (0s)

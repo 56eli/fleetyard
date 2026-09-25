@@ -1,0 +1,81 @@
+{
+ "adjudicator_sha256": "b197f950e9a9d7c05b94790a84bf9e4c80ef84b66a4e01bc705fd397c02c5777",
+ "authority": {
+  "gate_guidance": "ORCH-2 lane fleet/GATES.md 'Standing classification guidance — CERTAIN leg (d)' @ 45959ca",
+  "owner_errata_25e": "fleet/ERRATA-2026-09-25e.md §2-§4",
+  "owner_errata_25g": "fleet/ERRATA-2026-09-25g.md §5",
+  "task_file": "ORCH-2 lane fleet/queue/pending/TASK-018.md @ 45959ca"
+ },
+ "counts": {
+  "by_clause": {
+   "CANDIDATE": 65,
+   "d-i": 57
+  },
+  "by_verdict": {
+   "CANDIDATE": 65,
+   "CERTAIN-leg-d": 57
+  },
+  "candidate_reasons": {
+   "flank-too-short": 15,
+   "region-not-realignable": 2,
+   "restoration-not-minimal": 48
+  },
+  "fixtures": {
+   "CANDIDATE": 2,
+   "CERTAIN-leg-d": 2
+  },
+  "flank_sensitivity": {
+   "10": 22,
+   "3": 71,
+   "5": 57,
+   "8": 33
+  },
+  "signals": 122
+ },
+ "inputs": {
+  "book_store": {
+   "path": "corpus/docdocgo/html/merged-book-texts_json_1.js",
+   "sha256": "c0892fcd20502d49b99fffe87a4ec4b3b5ecc94a1f98606aab7909127934a4a8"
+  },
+  "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
+  "fixtures": {
+   "path": "fixtures/v2/dropword.json",
+   "sha256": "c8e963199a1ec5ee1b658c16bdc0dcab634a751199f6b3e00081efce4d97fd52"
+  },
+  "holdout_enforced": true,
+  "holdout_reads": [],
+  "ledger_reference": {
+   "path": "findings/ledger.jsonl",
+   "sha256": "d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32"
+  },
+  "signals": {
+   "expected_sha256": "8d71f57bcb80313fcf8a635587525e65ff7e4603fd431494c1c45c6d1eea83b4",
+   "path": "runs/m4-q2-dropword/signals.json",
+   "sha256": "8d71f57bcb80313fcf8a635587525e65ff7e4603fd431494c1c45c6d1eea83b4"
+  },
+  "split": {
+   "path": "tools/HELD-OUT-SPLIT.json",
+   "sha256": "481d8513a040ba05dc31ac1ab566ffd5a4b2ac7a0def932bb97cd5f08cb51235"
+  }
+ },
+ "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
+ "method": {
+  "adjacent_window_chars": 800,
+  "flank_floor_rationale": "mirrors the campaign near-verbatim floor MIN_MATCHED=10 as exactly-matched tokens; stricter than the detector's ratio-based match; sensitivity published in SUMMARY.md",
+  "flank_min_tokens_per_side": 5,
+  "matched_span": "maximal exactly-equal token runs immediately flanking the omission (byte-exact regions, not ratio-matched)",
+  "min_phrase_tokens": 5,
+  "token_rule": "[^\\W_]+(?:['’\\-][^\\W_]+)* (own copy; hyphen/apostrophe inside a token)",
+  "window_chars": 900
+ },
+ "outputs": {
+  "SUMMARY.md": "0a37118e0a1bbb23fe9a86ca9cd9fe60b2a3170245ebff577a6d7e7277058d2b",
+  "adjudication.jsonl": "82863ab9bfb38059e4cab1ddc504c786e7f305bda8e95570b9281c9c071f7bee",
+  "fixtures-adjudication.json": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451"
+ },
+ "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
+ "run_utc": "2026-09-25T20:38:04Z",
+ "status": "DELIVERY — per-finding adjudication with cited bytes; no rate, no precision, no certification language; in-sample labelled (LAW §9 / L5)",
+ "task": "TASK-018 — leg (d) individual adjudication",
+ "tool_commit": "9cd905d7c3d9c22def4b74e017288556a69d1cb8"
+}
