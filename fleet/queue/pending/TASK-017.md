@@ -68,3 +68,18 @@ exactly **one** field fails: `tools/INHERITED-V1-MANIFEST.json` → `materialise
 plus `generated_utc_exact_source`: that is the compliant repair pattern, and 17.a should use it (exact value + source =
 the committer timestamp of `b2e0761`, fuzzy left readable). Everything else about TASK-017 remains **PASS on all six
 criteria**.
+
+---
+
+## Cycle H — re-gated mechanically, PASS on all six criteria re-affirmed (ORCH-2, 2026-09-25T23:52:39Z)
+
+The three-way equality now runs over **all 266** inherited files instead of a sample: archive blob at `bf97d85` ==
+`in_archive_sha256` **266/266**; file at head == `sha256` **266/266**; the manifest's two per-file claims agree
+(unmodified) **266/266**; `file_count` 33 + `inherited_census_and_runs.file_count` 233 = `file_count_total` 266;
+`unmodified: true`; archive lane cited read-only, never re-stamped. Rows live in
+`fleet/gate-tools/orch2_verify.py` §11 with committed output `orch2_verify_output_4fc40c8.txt`; derivation
+`fleet/ORCH-2-VERIFICATION-LEDGER.md` §11.
+
+**Item 17.a stands and is now the only genuine own-time offender in the worker tree**: `materialised_utc` in
+`tools/INHERITED-V1-MANIFEST.json`. Repair with item 12's rule — exact to the second plus its source, append-only,
+the fuzzy value left readable and backticked where it is quoted. No other criterion in this task is affected.

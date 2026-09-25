@@ -346,3 +346,66 @@ true`; archive lane cited read-only and never re-stamped. **TASK-017 remains PAS
 **Standing caveat carried into v3.** The re-draw reads the *seal's own* method statement; because only one of two
 plausible readings reproduces it, a repair that changes the wording must re-run §10 rather than assume the draw
 still holds. The contamination and forcing checks are independent of the hash reading.
+
+### 11.1 INSTRUMENT v3.1 — §10 now closes every quantum-a criterion, and found four defects in itself
+
+Row count **206 → 222 · PASS 186 · FAIL 16 · INFO 18 · PROXY 2**. The FAIL set maps one-to-one onto the open
+items and nothing else: item 8a (4 rows), 11a, 11b (2), item 12 / 20.14 (2), 20.16 config notes (2), item 14,
+TASK-018 item 0d, 20.14b = item 17.a, **v2.5 = item v2.a**, **the v2.b note = item v2.b**.
+
+**Quantum-a criteria now mechanized (v2.1–v2.6, v2.9):**
+
+| criterion | verdict | the evidence the instrument recomputes |
+|---|---|---|
+| v2.1 | **PASS** | salt differs from the spent v1 salt; `mod 5` / `holdout_bucket 0` / method statement published; my independent re-draw is **set-equal in both buckets** (33 / 197) under `int(full hexdigest) % 5`. The rival reading `int(first 8 hex) % 5` yields 28 / 2 and does **not** reproduce — recorded as a caveat, because it means the method statement is executable under exactly one of two plausible readings |
+| v2.2 | **PASS** | `corpus_files_sha256 = 9ae90185…` reproduced from the **written** derivation; it is a LIST digest over sorted basenames, content being pinned separately by the corpus zip |
+| v2.3 | **PASS** | 43/43 forced transcripts (6 fixture-bearing ∪ 37 spent v1 holdout) are in v2 TUNING, each with a stated reason; `forced_not_by_fixture` empty; 0 fixture transcripts and 0 spent-holdout transcripts in the v2 holdout |
+| v2.4 | **PASS** | seal `293b29c` (20:50:46Z) precedes the commit that **introduced** the split-v2 reference in all 5 declaring artefacts (q3 `1cd5d44` 21:06:12Z; q2 `a5dec38` 21:21:03Z); the TASK-018 adjudication set pre-dates the seal by 12 minutes, so its labels are v1-era |
+| v2.5 | **FAIL → item v2.a** | seal binds `c8e96319…` for `fixtures/v2/dropword.json`, actual `c40d272f…`; `fixtures/confirmed/confirmed.json` binds correctly (`f2c15869…`); the fixture entered at `012914d` pre-seal and was modified afterwards |
+| v2.6 | **PASS** | `HoldoutGuard` raises `SystemExit` on a holdout name and is instantiated in three tuning-side tools; `det_dropword.py` carries all three named integrity protections, `det_format.py` both of its two; the post-seal v2 tuning run is keyed 197/197 ⊆ tuning with ∩ holdout = 0 |
+| v2.9 | **PASS** | the TASK-019a artefact is labelled DELIVERY and promotes nothing |
+| v2.b note | **FAIL → item v2.b** | the seal's own text does not state the holdout taint |
+
+**The taint, now DERIVED rather than asserted (item v2.b's expected content).** Reading
+`runs/m4-q2-dropword/signals.json` against the v2 holdout and `runs/m4-q2-adjudication/adjudication.jsonl`:
+
+- the pre-seal q2 run was keyed by the **v1 tuning 193**, and **all 33** v2-holdout transcripts sit inside it —
+  so every one of the 33 was read before the seal. This is **not** a v2.6 violation (the run pre-dates the seal) and
+  the seal's `disclosure` covers it in terms: *"v1 detectors were shaped with corpus-wide knowledge … a first figure
+  under v2 is an estimate under this split, not a pristine out-of-sample number."* That sentence must ride along with
+  every quantum-b figure.
+- **7 signals in 4 holdout transcripts** were deferred by the shipped source-inheritance filter (122 − 1 − 7 = 114):
+  `Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2` ×4, `Realization_of_the_Self_as_the_I_Nov_2003_Part_1` ×1,
+  `Spiritual_Traps_Oct_2005_Part_2` ×1, `Witnessing_and_Observing_Oct_2004_Part_1` ×1.
+- those same 7 carry **hand labels** from TASK-018: **3 CERTAIN-leg-d** (`D-092`, `D-093`, `D-094`, all in the
+  Radical_Subjectivity file) and **4 CANDIDATE** (`D-095`, `D-107`, `D-108`, `D-122`). So 4 of the 33 holdout
+  transcripts are already signal-bearing **and labelled**.
+- consequence for quantum b, which the pre-registration must decide **in advance**: either a per-file breakdown
+  disclosing those 4, or their exclusion with the denominator change stated up front. The instrument now emits both
+  facts as rows, so whichever way WORKER-2 decides, the landing check is mechanical.
+
+**Four more instrument defects, published (defects #21–#24; cumulative 24).** Two produced results in the
+**dangerous direction** — a false FAIL against a criterion that is in fact sound:
+
+- **#21 — variable shadowing crashed the run.** `seal_t` held the v2 tuning name-set and was later rebound to the
+  seal's commit timestamp, giving `TypeError: unsupported operand type(s) for -: 'set' and 'int'`. Renamed to
+  `seal_tn` / `seal_ct`. Rule: a name bound to a set is never rebound to a scalar in the same scope.
+- **#22 — a file's ADD time is not when a statement entered it.** Testing criterion v2.4 with
+  `git log --diff-filter=A` reported `runs/m4-q3-format/README.md` as predating the seal and so **failed a sound
+  criterion**: the README was added v1-era at 19:08Z but its split-v2 reference was introduced by `1cd5d44` at
+  21:06Z, after the seal. Ordering evidence about a *reference* must use `git log -S <needle>` (pickaxe), which is
+  what the row now does.
+- **#23 — counting occurrences of one pattern is not counting protections.** Requiring three hits of
+  `split integrity violation|not in corpus` falsely failed `det_format.py`, which has both protections it needs but
+  words the overlap check differently. The row now checks three **named** protections (both-buckets overlap, tuning
+  names in corpus, duplicates across parts) and requires the ones each detector actually owes.
+- **#24 — a function assumed the shape of a parameter it never loaded.** `sup['source_inheritance_filter']` raised
+  `KeyError` because the caller's `sup` was not the q2 supplement. The deferred count is now read from
+  `runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json` by the function that reports it.
+
+**SELF-ITEM O-2 (ORCH-2's own lane, owed).** Three of those four defects were a crash or a false FAIL caught only
+because I read the output line by line. The instrument has **no smoke test**: nothing asserts that a known tree
+yields known verdicts. Owed by me: a `--selftest` mode over a small fixture tree with expected row verdicts, so a
+refactor that breaks a section fails loudly instead of silently changing a gate result. Until it exists, every
+instrument change must be diffed against the previous committed output — which is why
+`fleet/gate-tools/orch2_verify_output_4fc40c8.txt` is committed beside the tool.

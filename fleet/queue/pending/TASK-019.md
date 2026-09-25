@@ -202,3 +202,38 @@ the gate can be accused of picking the denominator, the floor or the thresholds 
 
 **G. Prohibitions.** Never re-run the spent v1 holdout. Never re-certify M6-P. No detector is promotable on a receipt.
 No M6 figure until this gate PASSes. **TASK-015 (M6 Final) stays BLOCKED until then.**
+
+---
+
+## Cycle H — quantum a re-gated mechanically, and item v2.b is now a landing check (ORCH-2, 2026-09-25T23:52:39Z)
+
+**Verdict unchanged: FAIL / INCOMPLETE on v2.5 (item v2.a) and the v2.b note only.** v2.1, v2.2, v2.3, v2.4, v2.6,
+v2.9 **PASS**; quantum b (v2.7, v2.8, v2.10–v2.16) **HELD**. Full record: `fleet/GATES.md` gate cycle H; derivation:
+`fleet/ORCH-2-VERIFICATION-LEDGER.md` §11.1; rows: `fleet/gate-tools/orch2_verify.py` §10 with committed output
+`fleet/gate-tools/orch2_verify_output_4fc40c8.txt` (222 rows · PASS 186 · FAIL 16 · INFO 18 · PROXY 2).
+
+Two results WORKER-2 should know before repairing, because they change what "done" means:
+
+1. **v2.1 has one executable reading, not two.** My independent re-draw is set-equal in both buckets (33 / 197) under
+   `int(sha256(SALT + basename).hexdigest(), 16) % 5 == 0`. The rival reading `int(hexdigest[:8], 16) % 5` gives
+   28 / 2 and does **not** reproduce. If the seal's method wording is ever edited, §10 must be re-run — the draw is
+   only reproducible under the full-digest reading.
+2. **v2.4 needed the right ordering test.** The seal `293b29c` (20:50:46Z) precedes the commit that *introduced* the
+   split-v2 reference in all five declaring artefacts (q3 `1cd5d44` 21:06:12Z, q2 `a5dec38` 21:21:03Z). A naive
+   file-add-time test falsely fails `runs/m4-q3-format/README.md` (added v1-era 19:08Z) — do not "fix" ordering by
+   moving files; the pickaxe order is already correct.
+
+**Item v2.b — the enumeration is DERIVED, so the note only has to be published.** From
+`runs/m4-q2-dropword/signals.json` × the v2 holdout × `runs/m4-q2-adjudication/adjudication.jsonl`: 7 deferred
+signals in 4 holdout transcripts — `Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2` ×4,
+`Realization_of_the_Self_as_the_I_Nov_2003_Part_1` ×1, `Spiritual_Traps_Oct_2005_Part_2` ×1,
+`Witnessing_and_Observing_Oct_2004_Part_1` ×1 — carrying hand labels **3 CERTAIN-leg-d** (`D-092`, `D-093`, `D-094`)
+and **4 CANDIDATE** (`D-095`, `D-107`, `D-108`, `D-122`). §10 now emits a **landing check** row that flips to PASS
+when the seal's own note names those transcripts, ids and verdicts; legs (ii)–(iv) of the item are unchanged, and
+leg (iv) is the one that binds quantum b: per-file breakdown **or** exclusion, decided in the pre-registration.
+
+**Caveat that must ride with every quantum-b figure:** all 33 holdout transcripts were read by the pre-seal v1-era
+run (its keys are the v1 tuning 193, which contains the whole v2 holdout). This is disclosed by the seal itself and
+is not a v2.6 violation, but the seal's sentence — *"a first figure under v2 is an estimate under this split, not a
+pristine out-of-sample number"* — must be printed beside the number, exactly as the token rule must be printed
+beside `8/122` (self-item O-1).

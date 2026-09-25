@@ -851,3 +851,56 @@ byte-exact, my byte-identical shard reproduction (`64a97be5…` / `092d6341…`)
 holdout reads, the filter arithmetic 122 − 1 = 121 − 7 = 114, and the verdict **q2 FAIL/INCOMPLETE** pending item 8a
 and TASK-018 items 0d–0g. What changes is that the caveat is now **precise, mechanised and reproducible** instead of a
 hand count nobody could re-derive — the same standard item 11a asks WORKER-2 to meet for `187.9`.
+
+## GATE CYCLE H — TASK-019a quantum a and TASK-017 re-gated off ONE mechanized run (ORCH-2)
+
+**2026-09-25T23:52:39Z · WORKER-2 head `4fc40c8` · instrument `fleet/gate-tools/orch2_verify.py` v3.1, 222 rows
+(PASS 186 · FAIL 16 · INFO 18 · PROXY 2) · committed output
+`fleet/gate-tools/orch2_verify_output_4fc40c8.txt` · suite at this head **227 tests OK, skipped=1** · derivation in
+`fleet/ORCH-2-VERIFICATION-LEDGER.md` §11/§11.1.**
+
+Both verdicts are **unchanged** from cycle G; what changed is that they are now reproducible by one command instead
+of by hand, and that the item-v2.b enumeration is **derived from the data** rather than restated from memory.
+
+### TASK-019a — quantum a (sealed split v2): **FAIL / INCOMPLETE on v2.5 and the v2.b note only**
+
+v2.1 **PASS** · v2.2 **PASS** · v2.3 **PASS** · v2.4 **PASS** · v2.5 **FAIL (item v2.a)** · v2.6 **PASS** ·
+v2.9 **PASS** · quantum b (v2.7, v2.8, v2.10–v2.16) **HELD** behind the pre-registration protocol.
+
+The seal is **valid, reproducible, uncontaminated at the fixture level and NOT void**: 33 holdout / 197 tuning
+set-equal under my own re-draw, zero fixture transcripts and zero spent-v1-holdout transcripts inside the holdout,
+all 43 forced transcripts in tuning with reasons, sealed before every artefact that references it, guard in code.
+
+**Item v2.a** — the seal binds `c8e96319…` for `fixtures/v2/dropword.json` while the file at this head hashes to
+`c40d272f…`. Repair: a dated append-only seal note binding the actual digest and disclosing the taint, leaving the
+superseded line readable.
+
+**Item v2.b** — now **machine-checkable**, because the enumeration is derived: 7 deferred signals in 4 holdout
+transcripts, carrying TASK-018 hand labels — 3 **CERTAIN-leg-d** (`D-092`, `D-093`, `D-094`) and 4 **CANDIDATE**
+(`D-095`, `D-107`, `D-108`, `D-122`). The note must state (i) those four transcripts with the seven ids and
+verdicts, (ii) that the shipped filter deliberately deferred them rather than open the holdout — endorsed, (iii) that
+ORCH-2's gate re-derived span bytes for all 122 signals including these four transcripts, changing no rule or
+threshold, and (iv) the quantum-b consequence: a per-file breakdown disclosing the 4 signal-bearing holdout
+transcripts, **or** their exclusion with the denominator change stated **in the pre-registration, not afterwards**.
+
+**Standing caveat carried into any quantum-b figure:** all 33 v2-holdout transcripts were read by the pre-seal
+v1-era run (its keys are the v1 tuning 193, which contains the whole v2 holdout). The seal discloses this itself —
+*"a first figure under v2 is an estimate under this split, not a pristine out-of-sample number"* — and that sentence
+must travel with the number, in the same way self-item O-1 requires the token rule to travel with `8/122`.
+
+### TASK-017 — inherited v1 toolchain: **PASS on all six criteria** (re-affirmed)
+
+Three-way equality over **all 266** inherited files (33 tools/tests/fixtures + 233 census/runs): archive blob at
+`bf97d85` == `in_archive_sha256` **266/266**; file at head == `sha256` **266/266**; the manifest's two per-file
+claims agree **266/266**; counts 33 + 233 = 266; `unmodified: true`; the archive lane is cited read-only and never
+re-stamped. **Item 17.a stands**: `materialised_utc` is the one genuine own-time offender among the 26 asserted
+fuzzy timestamps, and it is repaired by the same rule as item 12 (exact to the second plus its source).
+
+### Instrument self-report
+
+Adding these sections produced four defects in my own tool (#21–#24, ledger §11.1), two of which would have
+**failed sound criteria** in the dangerous direction: an add-time test that mistook a v1-era README for a post-seal
+reference (fixed with `git log -S`), and a pattern-count that mistook `det_format.py`'s two real protections for
+missing ones. A shadowed variable crashed the run outright. **Self-item O-2** is opened on my own lane: the
+instrument owes a `--selftest` over a fixture tree with expected verdicts, so a refactor cannot silently move a gate
+result; until it exists, every change is diffed against the committed output.

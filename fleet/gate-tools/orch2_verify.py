@@ -984,13 +984,13 @@ def section_split_v2(wt, rep, sup):
         raw = {b for b in allb if fn(b) == bucket}
         draws[label] = (raw - forced, (set(allb) - raw) | forced)
     seal_h = {os.path.basename(x) for x in j["holdout"]}
-    seal_t = {os.path.basename(x) for x in j["tuning"]}
+    seal_tn = {os.path.basename(x) for x in j["tuning"]}
     matched = None
     for label, (h, t) in draws.items():
         rep.add("10", f"independent re-draw, {label}: holdout set-equal", f"{len(seal_h)}/{len(seal_h)}",
                 f"{len(h & seal_h)}/{len(seal_h)} (draw {len(h)})",
                 PASS if h == seal_h else INFO, n=len(allb))
-        if h == seal_h and t == seal_t:
+        if h == seal_h and t == seal_tn:
             matched = label
     rep.add("10", "MY DRAW REPRODUCES THE SEAL (33 holdout / 197 tuning, set-equal both buckets)",
             "one stated reading reproduces it exactly",
@@ -999,7 +999,7 @@ def section_split_v2(wt, rep, sup):
             note="if none reproduces, the seal's method statement is not executable as written - the same defect "
                  "class as item 13")
     rep.check("10", "bucket counts", {"holdout": 33, "tuning": 197, "total": 230}, j["counts"], n=230)
-    rep.check("10", "holdout ∩ tuning == 0", 0, len(seal_h & seal_t), n=len(seal_h) + len(seal_t))
+    rep.check("10", "holdout ∩ tuning == 0", 0, len(seal_h & seal_tn), n=len(seal_h) + len(seal_tn))
 
     # contamination: no v2-holdout transcript carries any fixture
     cont = sorted(seal_h & forced_fx)
@@ -1008,7 +1008,7 @@ def section_split_v2(wt, rep, sup):
     spent = sorted(seal_h & v1hol)
     rep.add("10", "ZERO spent-v1-holdout transcripts in the v2 holdout", "0", f"{len(spent)} {spent[:5]}",
             PASS if not spent else FAIL, n=len(v1hol))
-    miss = sorted(forced - seal_t)
+    miss = sorted(forced - seal_tn)
     rep.add("10", "every forced transcript is in v2 TUNING", f"{len(forced)}/{len(forced)}",
             f"{len(forced) - len(miss)}/{len(forced)} (missing {miss[:4]})", PASS if not miss else FAIL,
             n=len(forced))
@@ -1053,6 +1053,180 @@ def section_split_v2(wt, rep, sup):
                     PASS, n=nt or 1)
         else:
             rep.add("10", f"guard is code: {f} present", "present", "ABSENT", FAIL)
+
+    # --- criterion closure: v2.1 (salt is new), v2.4 (commit order), v2.6 (guard in code),
+    #     v2.9 (delivery labelled, no promotion) -------------------------------------------
+    v1salt = v1.get("salt")
+    rep.add("10", "criterion v2.1 — the salt is NEW (differs from the spent v1 salt)", "different",
+            f"v1 {str(v1salt)[:34]} / v2 {salt[:34]}", PASS if v1salt != salt else FAIL, n=1)
+    rep.check("10", "criterion v2.1 — method / modulus / bucket published",
+              {"mod": 5, "holdout_bucket": 0}, {"mod": j["mod"], "holdout_bucket": j["holdout_bucket"]}, n=1)
+    rep.add("10", "criterion v2.1 — method statement present", "stated", str(j.get("method"))[:110],
+            PASS if j.get("method") else FAIL, n=1)
+
+    def addtime(rel):
+        rc, out = git(wt, "log", "--diff-filter=A", "--format=%ct %h", "--", rel)
+        lines = [l for l in out.strip().splitlines() if l.strip()]
+        return (int(lines[-1].split()[0]), lines[-1].split()[1]) if lines else (None, None)
+
+    def since(rel, needle):
+        """When a STATEMENT entered a file (pickaxe), not when the file was added."""
+        rc, out = git(wt, "log", "-S", needle, "--format=%ct %h", "--", rel)
+        lines = [l for l in out.strip().splitlines() if l.strip()]
+        return (int(lines[-1].split()[0]), lines[-1].split()[1]) if lines else (None, None)
+
+    seal_ct, seal_ch = addtime("tools/HELD-OUT-SPLIT-V2.json")
+    # select the v2-tuning artefact set MECHANICALLY: anything that declares split v2 by name
+    declares = []
+    for root, dirs, files in os.walk(os.path.join(wt, "runs")):
+        dirs[:] = [d for d in dirs if not d.startswith(".")]
+        for fn in sorted(files):
+            if fn.endswith((".json", ".md")):
+                fp = os.path.join(root, fn)
+                try:
+                    txt = open(fp, encoding="utf-8", errors="replace").read()
+                except OSError:
+                    continue
+                if "HELD-OUT-SPLIT-V2" in txt:
+                    declares.append(os.path.relpath(fp, wt))
+    early, intro = [], []
+    for a in sorted(declares):
+        it, ic = since(a, "HELD-OUT-SPLIT-V2")
+        intro.append(f"{os.path.basename(a)}@{ic}")
+        if it is None or it < seal_ct:
+            early.append((a, ic or "ABSENT"))
+    rep.add("10", "criterion v2.4 — sealed BEFORE any further tuning, on commit-order evidence",
+            f"seal {seal_ch} precedes the commit that introduced the split-v2 reference in all "
+            f"{len(declares)} artefacts that declare it",
+            "PASS" if not early else f"{len(early)} exceptions: {early[:3]}",
+            PASS if not early else FAIL, n=len(declares),
+            note=f"seal added by {seal_ch} at {seal_ct}; introduction commits (git log -S, not file add time): "
+                 + ", ".join(intro[:6]))
+    # the pre-seal v1-era runs are disclosed by the seal itself, so they are INFO not FAIL
+    pre = []
+    for root, dirs, files in os.walk(os.path.join(wt, "runs")):
+        dirs[:] = [d for d in dirs if not d.startswith(".") and d.startswith("m4-")]
+        for fn in sorted(files):
+            if fn.endswith((".json", ".jsonl", ".md")):
+                rel = os.path.relpath(os.path.join(root, fn), wt)
+                at, ac = addtime(rel)
+                if at is not None and at < seal_ct and "HELD-OUT-SPLIT-V2" not in open(
+                        os.path.join(root, fn), encoding="utf-8", errors="replace").read():
+                    pre.append(f"{os.path.basename(os.path.dirname(rel))}/{fn}@{ac}")
+    rep.add("10", "criterion v2.4 corollary — pre-seal v1-era M4 run artefacts (shaped on the v1 tuning set)",
+            "disclosed by the seal, counted for the record", f"{len(pre)} file(s) under runs/m4-*: {sorted(set(pre))[:4]}",
+            INFO, n=len(pre),
+            note="the seal's own disclosure: 'v1 detectors were shaped with corpus-wide knowledge, and the "
+                 "drop-word and format rules were shaped on the v1 tuning set; a first figure under v2 is an "
+                 "estimate under this split, not a pristine out-of-sample number'")
+    adj_ct, adj_ch = addtime("runs/m4-q2-adjudication/adjudication.jsonl")
+    rep.add("10", "criterion v2.4 — the TASK-018 adjudication set PRE-DATES the seal (labels are v1-era)",
+            "adjudication added before the seal",
+            f"adjudication.jsonl {adj_ch} at {adj_ct} vs seal {seal_ch} at {seal_ct}"
+            + (f" — {(seal_ct - adj_ct) // 60} min earlier" if adj_ct and seal_ct else ""),
+            PASS if (adj_ct and seal_ct and adj_ct < seal_ct) else FAIL, n=1)
+    fx_t, fx_c = addtime("fixtures/v2/dropword.json")
+    rep.add("10", "criterion v2.5 corollary — when did the bound fixture change relative to the seal?",
+            "a post-seal edit is what taints the binding (item v2.a)",
+            f"fixtures/v2/dropword.json added {fx_c}" + (" AFTER the seal" if fx_t and seal_ct and fx_t > seal_ct else
+                                                         " BEFORE the seal (later modified)"),
+            INFO, n=1)
+
+    # criterion v2.6 — the guard must be code, and the tuning-side runs must not touch the v2 holdout
+    evp = os.path.join(wt, "tools/m4_q3_evidence.py")
+    ev = open(evp, encoding="utf-8").read() if os.path.exists(evp) else ""
+    m = re.search(r"class HoldoutGuard\b.*?(?=\nclass |\Z)", ev, re.S)
+    guard_body = m.group(0) if m else ""
+    ok_guard = bool(m) and "SystemExit" in guard_body and "holdout" in guard_body.lower()
+    sites = []
+    tdir = os.path.join(wt, "tools")
+    for f in sorted(os.listdir(tdir)) if os.path.isdir(tdir) else []:
+        if f.endswith(".py"):
+            k = len(re.findall(r"HoldoutGuard\(", open(os.path.join(tdir, f), encoding="utf-8").read()))
+            if k:
+                sites.append(f"{f}:{k}")
+    rep.add("10", "criterion v2.6 — the tuning path REFUSES holdout reads in code (not only in prose)",
+            "guard class raising SystemExit on a holdout name, instantiated by the tuning-side evidence tools",
+            ("HoldoutGuard raising SystemExit; instantiated at " + ", ".join(sites)) if ok_guard and sites else
+            f"guard={'ok' if ok_guard else 'ABSENT'} sites={sites}",
+            PASS if ok_guard and sites else FAIL, n=len(sites))
+    prots = (("both-buckets overlap", r"transcripts in both|split integrity violation"),
+             ("tuning names in corpus", r"not in corpus"), ("duplicate across parts", r"two parts"))
+    for f, need in (("tools/det_dropword.py", 3), ("tools/det_format.py", 2)):
+        fp = os.path.join(wt, f)
+        txt = open(fp, encoding="utf-8").read() if os.path.exists(fp) else ""
+        got = [lbl for lbl, pat in prots if re.search(pat, txt)]
+        rep.add("10", f"criterion v2.6 — {f} asserts split integrity in code", f"{need} named protections",
+                f"{len(got)}/3 present: {got}" if txt else "ABSENT",
+                PASS if len(got) >= need else FAIL, n=len(got))
+    sv = os.path.join(wt, "runs/m4-q3-format/signals-v2tuning.json")
+    if os.path.exists(sv):
+        d = json.load(open(sv, encoding="utf-8"))
+        keys = set(d) if isinstance(d, dict) else set()
+        outside = keys - seal_tn
+        rep.add("10", "criterion v2.6 — the post-seal v2 tuning run is keyed inside v2 TUNING, ∩ holdout = 0",
+                f"{len(seal_tn)}/{len(seal_tn)} ⊆ tuning and 0", f"{len(keys - outside)}/{len(keys)} ⊆ tuning, "
+                f"∩ holdout = {len(keys & seal_h)}, outside = {len(outside)}",
+                PASS if not outside and not (keys & seal_h) else FAIL, n=len(keys))
+    else:
+        rep.add("10", "criterion v2.6 — signals-v2tuning.json present", "present", "ABSENT", FAIL)
+
+    # the pre-seal q2 run is keyed by the v1 tuning set, which CONTAINS the whole v2 holdout
+    q2p = os.path.join(wt, "runs/m4-q2-dropword/signals.json")
+    if os.path.exists(q2p):
+        k2 = set(json.load(open(q2p, encoding="utf-8")))
+        v1tn = {os.path.basename(x) for x in v1["tuning"]}
+        rep.add("10", "criterion v2.6 — the pre-seal q2 run's keys ∩ the v2 HOLDOUT (the disclosed taint)",
+                "0 would be pristine; the seal discloses v1-era shaping",
+                f"{len(k2 & seal_h)} of {len(seal_h)} v2-holdout transcripts were read pre-seal "
+                f"(keys {len(k2)} == v1 tuning {len(k2 & v1tn)})", INFO, n=len(k2),
+                note="not a v2.6 violation - the run pre-dates the seal and the seal's disclosure covers it - but "
+                     "every quantum-b figure must carry the seal's sentence that this is an estimate under this "
+                     "split, not a pristine out-of-sample number")
+
+    # criterion v2.b / item v2.b — the seven deferred v2-holdout signals, DERIVED here from the data
+    adjp = os.path.join(wt, "runs/m4-q2-adjudication/adjudication.jsonl")
+    if os.path.exists(q2p) and os.path.exists(adjp):
+        q2 = json.load(open(q2p, encoding="utf-8"))
+        sig = {k: len(v) for k, v in q2.items() if k in seal_h and v}
+        adj = [json.loads(l) for l in open(adjp, encoding="utf-8") if l.strip()]
+        rows = [r for r in adj if os.path.basename(str(r.get("transcript", ""))) in seal_h]
+        ids = sorted(str(r.get("id")) for r in rows)
+        verd = {}
+        for r in rows:
+            verd[str(r.get("verdict"))] = verd.get(str(r.get("verdict")), 0) + 1
+        q2sup = {}
+        sp = os.path.join(wt, "runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json")
+        if os.path.exists(sp):
+            q2sup = json.load(open(sp, encoding="utf-8")).get("source_inheritance_filter", {})
+        decl = q2sup.get("deferred_holdout")
+        rep.add("10", "criterion v2.b — v2-holdout signals deferred by the tuning filter, ENUMERATED from the data",
+                f"{decl} signals (the supplement's own declaration)",
+                f"{sum(sig.values())} signals in {len(sig)} transcripts; adjudication rows on holdout transcripts "
+                f"{len(rows)}: {ids}",
+                PASS if sum(sig.values()) == len(rows) == decl else FAIL, n=len(rows),
+                note=f"per-transcript {dict(sorted((k[:34], v) for k, v in sig.items()))}; verdicts {verd}")
+        cert = [str(r.get("id")) for r in rows if "CERTAIN" in str(r.get("verdict"))]
+        rep.add("10", "criterion v2.b — holdout transcripts already carry hand LABELS from TASK-018",
+                "the quantum-b protocol must decide their handling IN ADVANCE (per-file breakdown or exclusion)",
+                f"{len(cert)} CERTAIN-leg-d ({cert}) + {len(rows) - len(cert)} CANDIDATE on "
+                f"{len(sig)} of {len(seal_h)} holdout transcripts", INFO, n=len(rows),
+                note="item v2.b leg (iv): the one-shot evaluation must either report a per-file breakdown "
+                     "disclosing that these holdout transcripts are already signal-bearing, or exclude them with "
+                     "the denominator change stated in the pre-registration - not decided afterwards")
+        sealnote = json.dumps(j).lower()
+        stated = all(x in sealnote for x in ("d-092", "deferred")) or "holdout transcripts that already" in sealnote
+        rep.add("10", "criterion v2.b — the seal's own note states the taint (item v2.b landing check)",
+                "a dated append-only note naming the four transcripts, the seven ids and their verdicts",
+                "STATED" if stated else "ABSENT — item v2.b still owed", PASS if stated else FAIL, n=1)
+
+    dl = [os.path.relpath(os.path.join(r, f), wt) for r, _, fs in os.walk(wt) for f in fs
+          if "TASK-019a-DELIVERY" in f and "/.git" not in r]
+    rep.add("10", "criterion v2.9 — the delivery is labelled DELIVERY, never completion or certification",
+            "a DELIVERY artefact that promotes nothing", f"{len(dl)} file(s): {sorted(dl)[:3]}",
+            PASS if dl else FAIL, n=len(dl))
+
+
     # criterion v2.b: the deferred v2-holdout signals must be documented
     hits = []
     for root, dirs, files in os.walk(os.path.join(wt, "runs")):

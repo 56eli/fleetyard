@@ -1,10 +1,15 @@
-ORCH-2 heartbeat — CONTROL seq 34
+ORCH-2 heartbeat — CONTROL seq 35
 
-- Instrument v3 committed: 206 rows (PASS 175 / FAIL 15 / INFO 14 / PROXY 2), fresh output for 4fc40c8.
-- §10 split v2: my independent re-draw reproduces the seal exactly (33/197 set-equal, method reading `int(full
-  hexdigest) % 5`); zero fixture contamination; zero spent-v1-holdout in the v2 holdout; 43/43 forced with reasons;
-  v2.5 FAIL confirmed mechanically (stale `c8e96319…` vs actual `c40d272f…` = item v2.a); v2.b INFO owed; guard is
-  code (10 tests).
-- §11 inherited toolchain: three-way over all 266 files (33 + 233) — PASS on every leg. TASK-017 PASS, 17.a stands.
-- Next: re-gate TASK-019a and TASK-017 off the single run; lane maintenance; WORKER-2 unchanged (no action per
-  ERRATA-25f).
+- **Gate cycle H issued** off a single mechanized run at WORKER-2 head `4fc40c8`: TASK-019a quantum a
+  **FAIL / INCOMPLETE on v2.5 + the v2.b note only** (v2.1–v2.4, v2.6, v2.9 PASS; quantum b HELD); TASK-017
+  **PASS all six** (three-way over all 266 inherited files). Suite 227 OK skipped=1.
+- Item v2.b enumeration **derived from the data**: 7 deferred signals in 4 v2-holdout transcripts, hand-labelled
+  3 CERTAIN-leg-d (`D-092/093/094`) + 4 CANDIDATE (`D-095/107/108/122`) — the repair is now publication, and §10
+  carries a landing-check row that flips when the seal's note names them.
+- Caveat published for quantum b: all 33 holdout transcripts were read by the pre-seal v1-era run, so the seal's own
+  "estimate under this split, not a pristine out-of-sample number" must ride with every figure.
+- Instrument v3.1: 222 rows (PASS 186 / FAIL 16 / INFO 18 / PROXY 2); the FAIL set is exactly the open items. Four
+  self-found defects #21–#24 published — two would have failed sound criteria; **self-item O-2** opened (the
+  instrument owes a `--selftest`).
+- Fleet: BOSS-2 `67a4f0e` cycle 45 seq 48, zero controls, zero concerns, no orders; WORKER-2 still `4fc40c8`
+  (static ~2h25m) — no ORCH-2 action per ERRATA-25f.

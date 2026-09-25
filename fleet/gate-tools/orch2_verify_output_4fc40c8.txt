@@ -299,6 +299,32 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   contamination disclosure present [n=1]
   PASS   guard is code: tools/m4_split_v2.py present [n=1]
   PASS   guard is code: tests/test_m4_split_v2.py present [n=10]
+  PASS   criterion v2.1 — the salt is NEW (differs from the spent v1 salt) [n=1]
+  PASS   criterion v2.1 — method / modulus / bucket published [n=1]
+  PASS   criterion v2.1 — method statement present [n=1]
+  PASS   criterion v2.4 — sealed BEFORE any further tuning, on commit-order evidence [n=5]
+         seal added by b'293b29c' at 1790369446; introduction commits (git log -S, not file add time): EVIDENCE-PROVENANCE.json@b'a5dec38', PROVENANCE-SUPPLEMENT.json@b'a5dec38', PROVENANCE-SUPPLEMENT.json@b'a5dec38', PROVENANCE-V2.json@b'1cd5d44', README.md@b'1cd5d44'
+  INFO   criterion v2.4 corollary — pre-seal v1-era M4 run artefacts (shaped on the v1 tuning set) [n=28]
+         expected disclosed by the seal, counted for the record | observed 28 file(s) under runs/m4-*: ["m4-q2-adjudication/PROVENANCE.json@b'1fb524e'", "m4-q2-adjudication/SUMMARY.md@b'1fb524e'", "m4-q2-adjudication/adjudication.jsonl@b'1fb524e'", "m4-q2-adjudication/fixtures-adjudication.json@b'1fb524e'"]
+         the seal's own disclosure: 'v1 detectors were shaped with corpus-wide knowledge, and the drop-word and format rules were shaped on the v1 tuning set; a first figure under v2 is an estimate under this split, not a pristine out-of-sample number'
+  PASS   criterion v2.4 — the TASK-018 adjudication set PRE-DATES the seal (labels are v1-era) [n=1]
+  INFO   criterion v2.5 corollary — when did the bound fixture change relative to the seal? [n=1]
+         expected a post-seal edit is what taints the binding (item v2.a) | observed fixtures/v2/dropword.json added b'012914d' BEFORE the seal (later modified)
+  PASS   criterion v2.6 — the tuning path REFUSES holdout reads in code (not only in prose) [n=3]
+  PASS   criterion v2.6 — tools/det_dropword.py asserts split integrity in code [n=3]
+  PASS   criterion v2.6 — tools/det_format.py asserts split integrity in code [n=2]
+  PASS   criterion v2.6 — the post-seal v2 tuning run is keyed inside v2 TUNING, ∩ holdout = 0 [n=197]
+  INFO   criterion v2.6 — the pre-seal q2 run's keys ∩ the v2 HOLDOUT (the disclosed taint) [n=193]
+         expected 0 would be pristine; the seal discloses v1-era shaping | observed 33 of 33 v2-holdout transcripts were read pre-seal (keys 193 == v1 tuning 193)
+         not a v2.6 violation - the run pre-dates the seal and the seal's disclosure covers it - but every quantum-b figure must carry the seal's sentence that this is an estimate under this split, not a pristine out-of-sample number
+  PASS   criterion v2.b — v2-holdout signals deferred by the tuning filter, ENUMERATED from the data [n=7]
+         per-transcript {'Radical_Subjectivity_The_I_of_Self': 4, 'Realization_of_the_Self_as_the_I_N': 1, 'Spiritual_Traps_Oct_2005_Part_2_en': 1, 'Witnessing_and_Observing_Oct_2004_': 1}; verdicts {'CERTAIN-leg-d': 3, 'CANDIDATE': 4}
+  INFO   criterion v2.b — holdout transcripts already carry hand LABELS from TASK-018 [n=7]
+         expected the quantum-b protocol must decide their handling IN ADVANCE (per-file breakdown or exclusion) | observed 3 CERTAIN-leg-d (['D-092', 'D-093', 'D-094']) + 4 CANDIDATE on 4 of 33 holdout transcripts
+         item v2.b leg (iv): the one-shot evaluation must either report a per-file breakdown disclosing that these holdout transcripts are already signal-bearing, or exclude them with the denominator change stated in the pre-registration - not decided afterwards
+  FAIL   criterion v2.b — the seal's own note states the taint (item v2.b landing check) [n=1]  <<< FAIL
+         expected a dated append-only note naming the four transcripts, the seven ids and their verdicts | observed ABSENT — item v2.b still owed
+  PASS   criterion v2.9 — the delivery is labelled DELIVERY, never completion or certification [n=1]
   INFO   criterion v2.b — the 7 deferred v2-holdout signals documented in a committed artefact [n=3]
          expected a manifest enumerating them (item v2.b) | observed 3 files mention deferral: ['runs/m4-q2-dropword/EVAL.json', 'runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json', 'runs/m4-q2-dropword/README.md']
          the q2 supplement records deferred_holdout: 7 and the filter arithmetic closes, but item v2.b owes an enumeration (which 4 transcripts, which 3 were promoted to D-092/093/094)
@@ -314,7 +340,7 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   unmodified declared [n=1]
   PASS   archive lane cited read-only, never re-stamped [n=1]
 
-== summary: 206 rows · FAIL 15 · INFO 14 · PASS 175 · PROXY 2
+== summary: 222 rows · FAIL 16 · INFO 18 · PASS 186 · PROXY 2
 
 rows not passing (each is an owed item or a known restriction, not necessarily a defect):
   FAIL   criterion 20.10: tool_commit contains the generator: expected present | observed ABSENT at ffb881158b88
@@ -346,3 +372,4 @@ rows not passing (each is an owed item or a known restriction, not necessarily a
          item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256
   FAIL   criterion v2.5 — seal binds the ACTUAL fixtures/v2/dropword.json: expected c40d272f30d0bbd5… | observed c8e963199a1ec5ee…
          ITEM v2.a: the seal binds a stale digest; append a dated seal note binding the actual digest and disclosing the taint, leaving this line readable
+  FAIL   criterion v2.b — the seal's own note states the taint (item v2.b landing check): expected a dated append-only note naming the four transcripts, the se | observed ABSENT — item v2.b still owed
