@@ -1,0 +1,622 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 20095,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x10 vs re-derived 2 x10 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0301",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 10,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 10,
+   "tokens": 20
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x10"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 20095,
+    "quote_len": 109,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 10,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 10,
+     "tokens": 20
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 10 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 10 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 20204,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 30114,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 5-token x6 vs re-derived 5 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0302",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 6,
+    "start_token": 0,
+    "unit_tokens": 5
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 5,
+   "span_repeats": 6,
+   "tokens": 30
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x6"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "How do you perceive it?",
+    "asserted_quote": "How do you perceive it? How do you perceive it? How do you perceive it? How do you perceive it? How do you perceive it? How do you perceive it?",
+    "detector": "A1-repetition",
+    "offset": 30114,
+    "quote_len": 143,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 6,
+      "start_token": 0,
+      "unit_tokens": 5
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 5,
+     "span_repeats": 6,
+     "tokens": 30
+    },
+    "runner_evidence": "signals: A1-repetition (5-token unit repeated 6 times back-to-back)",
+    "runner_subtypes": [
+     "5-token unit repeated 6 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 30257,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "How do you perceive it? How do you perceive it? How do you perceive it? How do you perceive it? How do you perceive it? How do you perceive it?",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 39483,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x9 vs re-derived 2 x9 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0303",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 9,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 9,
+   "tokens": 18
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x9"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 39483,
+    "quote_len": 98,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 9,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 9,
+     "tokens": 18
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 9 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 9 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 39581,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 49413,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x14 vs re-derived 2 x14 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0304",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 14,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 14,
+   "tokens": 28
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x14"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 49413,
+    "quote_len": 153,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 14,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 14,
+     "tokens": 28
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 14 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 14 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 49566,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 61099,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x3 vs re-derived 4 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0305",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 3,
+   "tokens": 12
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I'm trying to figure.",
+    "asserted_quote": "I'm trying to figure. I'm trying to figure. I'm trying to figure.",
+    "detector": "A1-repetition",
+    "offset": 61099,
+    "quote_len": 65,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 3,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 61164,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I'm trying to figure. I'm trying to figure. I'm trying to figure.",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 64024,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x10 vs re-derived 2 x10 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0306",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 10,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 10,
+   "tokens": 20
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x10"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 64024,
+    "quote_len": 109,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 10,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 10,
+     "tokens": 20
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 10 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 10 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 64133,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 71745,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x3 vs re-derived 7 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0307",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 3,
+   "tokens": 21
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "they're all a great joy to us.",
+    "asserted_quote": "they're all a great joy to us. They're all a great joy to us. They're all a great joy to us,",
+    "detector": "A1-repetition",
+    "offset": 71745,
+    "quote_len": 92,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 3,
+     "tokens": 21
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 71837,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "they're all a great joy to us. They're all a great joy to us. They're all a great joy to us,",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 73146,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x5 vs re-derived 2 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0308",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 5,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 73146,
+    "quote_len": 54,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 5,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 73200,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt"
+ }
+]

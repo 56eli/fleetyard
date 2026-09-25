@@ -1,0 +1,460 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 17589,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x10 vs re-derived 1 x10 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1241",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 10,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 10,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x10"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "ha,",
+    "asserted_quote": "ha, ha, ha, ha, ha, ha, ha, ha, ha, ha,",
+    "detector": "A1-repetition",
+    "offset": 17589,
+    "quote_len": 39,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 10,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 10,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 10 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 17628,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "ha, ha, ha, ha, ha, ha, ha, ha, ha, ha,",
+  "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 20883,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x3 vs re-derived 4 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1242",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 3,
+   "tokens": 12
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "they ask a question,",
+    "asserted_quote": "they ask a question, they ask a question, they ask a question,",
+    "detector": "A1-repetition",
+    "offset": 20883,
+    "quote_len": 62,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 3,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 20945,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "they ask a question, they ask a question, they ask a question,",
+  "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 25484,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 12-token x4 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1243",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 48
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I spent many years. I hitchhiked to school every day for years.",
+    "asserted_quote": "I spent many years. I hitchhiked to school every day for years. I spent many years. I hitchhiked to school every day for years. I spent many years. I hitchhiked to school every day for years. I spent many years. I hitchhiked to school every day for years.",
+    "detector": "A1-repetition",
+    "offset": 25484,
+    "quote_len": 255,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 48
+    },
+    "runner_evidence": "signals: A1-repetition (12-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "12-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 25739,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I spent many years. I hitchhiked to school every day for years. I spent many years. I hitchhiked to school every day for years. I spent many years. I hitchhiked to school every day for years. I spent many years. I hitchhiked to school every day for years.",
+  "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 54797,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x14 vs re-derived 3 x14 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1244",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 14,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 14,
+   "tokens": 42
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x14"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "It's like a,",
+    "asserted_quote": "It's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a.",
+    "detector": "A1-repetition",
+    "offset": 54797,
+    "quote_len": 181,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 14,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 14,
+     "tokens": 42
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 14 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 14 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 54978,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "It's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a.",
+  "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 57038,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x8 vs re-derived 4 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1245",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 8,
+   "tokens": 32
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "You become the witness.",
+    "asserted_quote": "You become the witness. You become the witness. You become the witness. You become the witness. You become the witness. You become the witness. You become the witness. You become the witness.",
+    "detector": "A1-repetition",
+    "offset": 57038,
+    "quote_len": 191,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 8,
+     "tokens": 32
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 57229,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "You become the witness. You become the witness. You become the witness. You become the witness. You become the witness. You become the witness. You become the witness. You become the witness.",
+  "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 58692,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x6 vs re-derived 2 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1246",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 6,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 6,
+   "tokens": 12
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x6"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Have it.",
+    "asserted_quote": "Have it. Have it. Have it. Have it. Have it. Have it.",
+    "detector": "A1-repetition",
+    "offset": 58692,
+    "quote_len": 53,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 6,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 6,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 6 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 6 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 58745,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Have it. Have it. Have it. Have it. Have it. Have it.",
+  "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
+ }
+]

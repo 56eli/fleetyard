@@ -1,0 +1,384 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 4380,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x33 vs re-derived 1 x33 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0519",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 33,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 33,
+   "tokens": 33
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x33"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Amen",
+    "asserted_quote": "Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen",
+    "detector": "A1-repetition",
+    "offset": 4380,
+    "quote_len": 164,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 33,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 33,
+     "tokens": 33
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 33 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 33 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 4544,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen",
+  "transcript": "Peace_Aug_2009_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 7929,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x6 vs re-derived 4 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0520",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 6,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 6,
+   "tokens": 24
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x6"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "this is the highest.",
+    "asserted_quote": "this is the highest. This is the highest. This is the highest. This is the highest. This is the highest. This is the highest.",
+    "detector": "A1-repetition",
+    "offset": 7929,
+    "quote_len": 125,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 6,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 6,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 6 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 6 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 8054,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "this is the highest. This is the highest. This is the highest. This is the highest. This is the highest. This is the highest.",
+  "transcript": "Peace_Aug_2009_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 19782,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x10 vs re-derived 1 x10 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0521",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 10,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 10,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x10"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Purr,",
+    "asserted_quote": "Purr, purr, purr, purr, purr, purr, purr, purr, purr, purr.",
+    "detector": "A1-repetition",
+    "offset": 19782,
+    "quote_len": 59,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 10,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 10,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 10 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 19841,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Purr, purr, purr, purr, purr, purr, purr, purr, purr, purr.",
+  "transcript": "Peace_Aug_2009_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 22956,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x8 vs re-derived 2 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0522",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 8,
+   "tokens": 16
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "They're indifferent.",
+    "asserted_quote": "They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent.",
+    "detector": "A1-repetition",
+    "offset": 22956,
+    "quote_len": 167,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 8,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 23123,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent.",
+  "transcript": "Peace_Aug_2009_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 25921,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived replacement-chars=1"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0523",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 1
+  },
+  "review_score": [
+   2,
+   [
+    "undecodable byte(s)"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "�",
+    "detector": "A2-nonsense",
+    "offset": 25921,
+    "quote_len": 1,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [],
+     "replacement_chars": 1
+    },
+    "runner_evidence": "signals: A2-nonsense (replacement-char: undecodable source bytes)",
+    "runner_subtypes": [
+     "replacement-char: undecodable source bytes"
+    ]
+   }
+  ],
+  "span_end": 25922,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 1
+  },
+  "span_text": "�",
+  "transcript": "Peace_Aug_2009_Part_1_enxautogen_html.txt"
+ }
+]

@@ -1,0 +1,1076 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 6665,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x18 vs re-derived 1 x18 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1308",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 18,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 18,
+   "tokens": 18
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x18"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yeah.",
+    "asserted_quote": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "detector": "A1-repetition",
+    "offset": 6665,
+    "quote_len": 107,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 18,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 18,
+     "tokens": 18
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 18 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 18 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 6772,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 12898,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 12-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1309",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 36
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "They weren't so crazy they wouldn't be doing yoga around the clock.",
+    "asserted_quote": "They weren't so crazy they wouldn't be doing yoga around the clock. They weren't so crazy they wouldn't be doing yoga around the clock. They weren't so crazy they wouldn't be doing yoga around the clock.",
+    "detector": "A1-repetition",
+    "offset": 12898,
+    "quote_len": 203,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 36
+    },
+    "runner_evidence": "signals: A1-repetition (12-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "12-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 13101,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "They weren't so crazy they wouldn't be doing yoga around the clock. They weren't so crazy they wouldn't be doing yoga around the clock. They weren't so crazy they wouldn't be doing yoga around the clock.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 19096,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x26 vs re-derived 1 x26 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1310",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 26,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 26,
+   "tokens": 26
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x26"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Perfection?",
+    "asserted_quote": "Perfection? Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection.",
+    "detector": "A1-repetition",
+    "offset": 19096,
+    "quote_len": 311,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 26,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 26,
+     "tokens": 26
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 26 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 26 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 19407,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Perfection? Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 24228,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 5-token x6 vs re-derived 5 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1311",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 6,
+    "start_token": 0,
+    "unit_tokens": 5
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 5,
+   "span_repeats": 6,
+   "tokens": 30
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x6"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the moment of her birth,",
+    "asserted_quote": "the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth,",
+    "detector": "A1-repetition",
+    "offset": 24228,
+    "quote_len": 149,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 6,
+      "start_token": 0,
+      "unit_tokens": 5
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 5,
+     "span_repeats": 6,
+     "tokens": 30
+    },
+    "runner_evidence": "signals: A1-repetition (5-token unit repeated 6 times back-to-back)",
+    "runner_subtypes": [
+     "5-token unit repeated 6 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 24377,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth,",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 31441,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x13 vs re-derived 1 x13 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1312",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 13,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 13,
+   "tokens": 13
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x13"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Okay.",
+    "asserted_quote": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "detector": "A1-repetition",
+    "offset": 31441,
+    "quote_len": 77,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 13,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 13,
+     "tokens": 13
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 13 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 31518,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 31927,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=1"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1313",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 1,
+   "non_latin_letters": 1,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "yourذ",
+    "detector": "A2-nonsense",
+    "offset": 31927,
+    "quote_len": 5,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 1,
+     "non_latin_letters": 1,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "runner_subtypes": [
+     "script-mix: mixed/foreign letters in token"
+    ]
+   }
+  ],
+  "span_end": 31932,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 1,
+   "non_latin_letters": 1,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "yourذ",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 33410,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x4 vs re-derived 4 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1314",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 4,
+   "tokens": 16
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "love goes to love.",
+    "asserted_quote": "love goes to love. Love goes to love. Love goes to love. Love goes to love.",
+    "detector": "A1-repetition",
+    "offset": 33410,
+    "quote_len": 75,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 4,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 33485,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "love goes to love. Love goes to love. Love goes to love. Love goes to love.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 34959,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x14 vs re-derived 3 x14 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1315",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 14,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 14,
+   "tokens": 42
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x14"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I don't know.",
+    "asserted_quote": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+    "detector": "A1-repetition",
+    "offset": 34959,
+    "quote_len": 195,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 14,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 14,
+     "tokens": 42
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 14 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 14 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 35154,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 35411,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x11 vs re-derived 2 x11 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1316",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 11,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 11,
+   "tokens": 22
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x11"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 35411,
+    "quote_len": 120,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 11,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 11,
+     "tokens": 22
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 11 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 11 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 35531,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 40644,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x17 vs re-derived 2 x17 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1317",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 17,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 17,
+   "tokens": 34
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x17"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 40644,
+    "quote_len": 186,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 17,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 17,
+     "tokens": 34
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 17 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 17 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 40830,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 58062,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x15 vs re-derived 2 x15 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1318",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 15,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 15,
+   "tokens": 30
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x15"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 58062,
+    "quote_len": 164,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 15,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 15,
+     "tokens": 30
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 15 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 15 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 58226,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 65533,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x20 vs re-derived 1 x20 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1319",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 20,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 20,
+   "tokens": 20
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x20"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yeah.",
+    "asserted_quote": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "detector": "A1-repetition",
+    "offset": 65533,
+    "quote_len": 119,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 20,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 20,
+     "tokens": 20
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 20 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 20 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 65652,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 70846,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x33 vs re-derived 1 x33 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1320",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 33,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 33,
+   "tokens": 33
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x33"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yes.",
+    "asserted_quote": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+    "detector": "A1-repetition",
+    "offset": 70846,
+    "quote_len": 164,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 33,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 33,
+     "tokens": 33
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 33 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 33 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 71010,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 78891,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x16 vs re-derived 1 x16 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1321",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 16,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 16,
+   "tokens": 16
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x16"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Okay.",
+    "asserted_quote": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "detector": "A1-repetition",
+    "offset": 78891,
+    "quote_len": 95,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 16,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 16,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 16 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 78986,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ }
+]

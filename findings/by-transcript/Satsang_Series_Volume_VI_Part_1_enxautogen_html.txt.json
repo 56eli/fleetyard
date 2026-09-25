@@ -1,0 +1,304 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 5702,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x13 vs re-derived 1 x13 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0895",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 13,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 13,
+   "tokens": 13
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x13"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Okay.",
+    "asserted_quote": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "detector": "A1-repetition",
+    "offset": 5702,
+    "quote_len": 77,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 13,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 13,
+     "tokens": 13
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 13 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 5779,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "transcript": "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 23807,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x14 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0896",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 0
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "1,000,",
+    "asserted_quote": "1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000,",
+    "detector": "A1-repetition",
+    "offset": 23807,
+    "quote_len": 97,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 0
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 14 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 14 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 23904,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000,",
+  "transcript": "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 29735,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x4 vs re-derived 7 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0897",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 4,
+   "tokens": 28
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "you don't want to sweep the place.",
+    "asserted_quote": "you don't want to sweep the place. You don't want to sweep the place. You don't want to sweep the place. You don't want to sweep the place.",
+    "detector": "A1-repetition",
+    "offset": 29735,
+    "quote_len": 139,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 4,
+     "tokens": 28
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 29874,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you don't want to sweep the place. You don't want to sweep the place. You don't want to sweep the place. You don't want to sweep the place.",
+  "transcript": "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 41125,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x44 vs re-derived 2 x44 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0898",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 44,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 44,
+   "tokens": 88
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x44"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Cultural mercs.",
+    "asserted_quote": "Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs.",
+    "detector": "A1-repetition",
+    "offset": 41125,
+    "quote_len": 703,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 44,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 44,
+     "tokens": 88
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 44 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 44 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 41828,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs.",
+  "transcript": "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt"
+ }
+]

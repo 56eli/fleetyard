@@ -1,0 +1,234 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 322,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x10 vs re-derived 1 x10 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0276",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 10,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 10,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x10"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Hey.",
+    "asserted_quote": "Hey. Hey. Hey. Hey. Hey. Hey. Hey. Hey. Hey. Hey.",
+    "detector": "A1-repetition",
+    "offset": 322,
+    "quote_len": 49,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 10,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 10,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 10 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 371,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Hey. Hey. Hey. Hey. Hey. Hey. Hey. Hey. Hey. Hey.",
+  "transcript": "Experiential_Reality_Feb_2006_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 2177,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x5 vs re-derived 3 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0277",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 5,
+   "tokens": 15
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I don't know.",
+    "asserted_quote": "I don't know. I don't know. I don't know. I don't know. I don't know.",
+    "detector": "A1-repetition",
+    "offset": 2177,
+    "quote_len": 69,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 5,
+     "tokens": 15
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 2246,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "transcript": "Experiential_Reality_Feb_2006_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 25614,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x3 vs re-derived 4 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0278",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 3,
+   "tokens": 12
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "you're glamorized by it.",
+    "asserted_quote": "you're glamorized by it. You're glamorized by it. You're glamorized by it.",
+    "detector": "A1-repetition",
+    "offset": 25614,
+    "quote_len": 74,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 3,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 25688,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you're glamorized by it. You're glamorized by it. You're glamorized by it.",
+  "transcript": "Experiential_Reality_Feb_2006_Part_1_enxautogen_html.txt"
+ }
+]

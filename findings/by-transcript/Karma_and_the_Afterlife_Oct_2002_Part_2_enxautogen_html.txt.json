@@ -1,0 +1,80 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 21614,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x5 vs re-derived 6 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0458",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 5,
+   "tokens": 30
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "To get your affairs in order.",
+    "asserted_quote": "To get your affairs in order. To get your affairs in order. To get your affairs in order. To get your affairs in order. To get your affairs in order.",
+    "detector": "A1-repetition",
+    "offset": 21614,
+    "quote_len": 149,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 5,
+     "tokens": 30
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 21763,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "To get your affairs in order. To get your affairs in order. To get your affairs in order. To get your affairs in order. To get your affairs in order.",
+  "transcript": "Karma_and_the_Afterlife_Oct_2002_Part_2_enxautogen_html.txt"
+ }
+]

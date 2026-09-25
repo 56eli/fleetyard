@@ -1,0 +1,72 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 1258,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 10-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0716",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 30
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "The enormous spiritual benefit to be gained here, which is",
+    "asserted_quote": "The enormous spiritual benefit to be gained here, which is the enormous spiritual benefit to be gained here, which is the enormous spiritual benefit to be gained here, which is",
+    "detector": "A1-repetition",
+    "offset": 1258,
+    "quote_len": 176,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 30
+    },
+    "runner_evidence": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "10-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 1434,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "The enormous spiritual benefit to be gained here, which is the enormous spiritual benefit to be gained here, which is the enormous spiritual benefit to be gained here, which is",
+  "transcript": "Realization_of_the_Self_as_the_I_Nov_2003_Part_3_enxautogen_html.txt"
+ }
+]

@@ -1,0 +1,850 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 960,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x3 vs re-derived 6 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0739",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 3,
+   "tokens": 18
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "we got permission to do Sedona.",
+    "asserted_quote": "we got permission to do Sedona. We got permission to do Sedona. We got permission to do Sedona,",
+    "detector": "A1-repetition",
+    "offset": 960,
+    "quote_len": 95,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 3,
+     "tokens": 18
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 1055,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "we got permission to do Sedona. We got permission to do Sedona. We got permission to do Sedona,",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 4765,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x16 vs re-derived 1 x16 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0740",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 16,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 16,
+   "tokens": 16
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x16"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yeah.",
+    "asserted_quote": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "detector": "A1-repetition",
+    "offset": 4765,
+    "quote_len": 95,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 16,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 16,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 16 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 4860,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 7514,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x5 vs re-derived 2 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0741",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 5,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I'm sorry.",
+    "asserted_quote": "I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry.",
+    "detector": "A1-repetition",
+    "offset": 7514,
+    "quote_len": 54,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 5,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 7568,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry.",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 23484,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x9 vs re-derived 1 x9 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0742",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 9,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 9,
+   "tokens": 9
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x9"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yes.",
+    "asserted_quote": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+    "detector": "A1-repetition",
+    "offset": 23484,
+    "quote_len": 44,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 9,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 9,
+     "tokens": 9
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 9 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 23528,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 29028,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x12 vs re-derived 1 x12 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0743",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 12,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 12,
+   "tokens": 12
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x12"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Okay.",
+    "asserted_quote": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "detector": "A1-repetition",
+    "offset": 29028,
+    "quote_len": 71,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 12,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 12,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 12 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 12 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 29099,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 31784,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x15 vs re-derived 1 x15 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0744",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 15,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 15,
+   "tokens": 15
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x15"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yeah.",
+    "asserted_quote": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "detector": "A1-repetition",
+    "offset": 31784,
+    "quote_len": 89,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 15,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 15,
+     "tokens": 15
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 15 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 15 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 31873,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 33410,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x10 vs re-derived 2 x10 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0745",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 10,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 10,
+   "tokens": 20
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x10"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "i'm not",
+    "asserted_quote": "i'm not i'm not i'm not i'm not i'm not i'm not i'm not i'm not i'm not i'm not",
+    "detector": "A1-repetition",
+    "offset": 33410,
+    "quote_len": 79,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 10,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 10,
+     "tokens": 20
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 10 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 10 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 33489,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "i'm not i'm not i'm not i'm not i'm not i'm not i'm not i'm not i'm not i'm not",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 48838,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 10-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0746",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 30
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the people on the planet she's more in touch with",
+    "asserted_quote": "the people on the planet she's more in touch with the people on the planet she's more in touch with the people on the planet she's more in touch with",
+    "detector": "A1-repetition",
+    "offset": 48838,
+    "quote_len": 149,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 30
+    },
+    "runner_evidence": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "10-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 48987,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "the people on the planet she's more in touch with the people on the planet she's more in touch with the people on the planet she's more in touch with",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 59904,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x14 vs re-derived 2 x14 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0747",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 14,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 14,
+   "tokens": 28
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x14"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 59904,
+    "quote_len": 153,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 14,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 14,
+     "tokens": 28
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 14 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 14 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 60057,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 67096,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x5 vs re-derived 7 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0748",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 5,
+   "tokens": 35
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I love the seven inches of snow.",
+    "asserted_quote": "I love the seven inches of snow. I love the seven inches of snow. I love the seven inches of snow. I love the seven inches of snow. I love the seven inches of snow.",
+    "detector": "A1-repetition",
+    "offset": 67096,
+    "quote_len": 164,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 5,
+     "tokens": 35
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 67260,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I love the seven inches of snow. I love the seven inches of snow. I love the seven inches of snow. I love the seven inches of snow. I love the seven inches of snow.",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 68401,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x11 vs re-derived 1 x11 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0749",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 11,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 11,
+   "tokens": 11
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x11"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "laughter",
+    "asserted_quote": "laughter laughter laughter laughter laughter laughter laughter laughter laughter laughter laughter",
+    "detector": "A1-repetition",
+    "offset": 68401,
+    "quote_len": 98,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 11,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 11,
+     "tokens": 11
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 11 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 11 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 68499,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "laughter laughter laughter laughter laughter laughter laughter laughter laughter laughter laughter",
+  "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
+ }
+]

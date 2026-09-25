@@ -1,0 +1,234 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 4896,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x4 vs re-derived 4 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0853",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 4,
+   "tokens": 16
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "it dawned on me,",
+    "asserted_quote": "it dawned on me, it dawned on me, it dawned on me, it dawned on me.",
+    "detector": "A1-repetition",
+    "offset": 4896,
+    "quote_len": 67,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 4,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 4963,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "it dawned on me, it dawned on me, it dawned on me, it dawned on me.",
+  "transcript": "Satsang_Series_Volume_I_Part_4_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 31379,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x41 vs re-derived 1 x41 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0854",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 41,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 41,
+   "tokens": 41
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x41"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I...",
+    "asserted_quote": "I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I...",
+    "detector": "A1-repetition",
+    "offset": 31379,
+    "quote_len": 204,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 41,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 41,
+     "tokens": 41
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 41 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 41 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 31583,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I... I...",
+  "transcript": "Satsang_Series_Volume_I_Part_4_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 42786,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x5 vs re-derived 3 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0855",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 5,
+   "tokens": 15
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you, God.",
+    "asserted_quote": "Thank you, God. Thank you, God. Thank you, God. Thank you, God. Thank you, God.",
+    "detector": "A1-repetition",
+    "offset": 42786,
+    "quote_len": 79,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 5,
+     "tokens": 15
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 42865,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you, God. Thank you, God. Thank you, God. Thank you, God. Thank you, God.",
+  "transcript": "Satsang_Series_Volume_I_Part_4_enxautogen_html.txt"
+ }
+]

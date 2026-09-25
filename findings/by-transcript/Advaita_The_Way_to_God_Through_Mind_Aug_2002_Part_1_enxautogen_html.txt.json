@@ -1,0 +1,154 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 9475,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[6000]"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0122",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    6000
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    6000
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   3,
+   [
+    "impossible percent"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "6,000%",
+    "detector": "A2-nonsense",
+    "offset": 9475,
+    "quote_len": 6,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      6000
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      6000
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 6,000 > 100)",
+    "runner_subtypes": [
+     "impossible-percent: 6,000 > 100"
+    ]
+   }
+  ],
+  "span_end": 9481,
+  "span_facts": {
+   "impossible_percent": [
+    6000
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    6000
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "6,000%",
+  "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 51824,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 9-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0123",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 27
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "lovingness then becomes the new context in which... That",
+    "asserted_quote": "lovingness then becomes the new context in which... That lovingness then becomes the new context in which... That lovingness then becomes the new context in which... That",
+    "detector": "A1-repetition",
+    "offset": 51824,
+    "quote_len": 170,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 27
+    },
+    "runner_evidence": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "9-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 51994,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "lovingness then becomes the new context in which... That lovingness then becomes the new context in which... That lovingness then becomes the new context in which... That",
+  "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_1_enxautogen_html.txt"
+ }
+]

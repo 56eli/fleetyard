@@ -1,0 +1,2363 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "justify within any kind of reason the reprieve at the last instant, even though you know you committed the crime, and yet suddenly",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "justify within any kind of reason the reprieve at the last instant even though you know you committed the crime and yet suddenly",
+      "op": "replace",
+      "transcript": "knew"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 151274,
+    "offset_ok": true,
+    "quote_head": "justify within any kind of reason the reprieve at the last instant, ev",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 5729,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0192",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "know",
+    "asserted_quote": "knew",
+    "detector": "B2-misquote",
+    "offset": 5729,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'knew' vs book 'know' inside a 22/24-word near-verbatim match (tf-idf 0.38))",
+    "runner_subtypes": [
+     "tf-idf 0.38"
+    ]
+   }
+  ],
+  "span_end": 5733,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "knew",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "the reprieve comes through. Some people say it’s the earned good karma from other lifetimes",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "the reprieve comes through some people say it s the",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "good",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "from other lifetimes",
+      "op": "replace",
+      "transcript": "good"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 151405,
+    "offset_ok": true,
+    "quote_head": "the reprieve comes through. Some people say it’s the earned good karma",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 5829,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0193",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "earned good",
+    "asserted_quote": "earned karma, good",
+    "detector": "B2-misquote",
+    "offset": 5829,
+    "quote_len": 18,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'karma' vs book '' inside a 15/16-word near-verbatim match (tf-idf 0.31))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 5847,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "earned karma, good",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "such powerful depths that they were never suspected—that the depths were that deep, that profound and pitiless, and hopelessness and despair, and",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "such powerful depths that they",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "never"
+     },
+     {
+      "book": "that the depths were that deep that profound and pitiless and hopelessness and despair and",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 160281,
+    "offset_ok": true,
+    "quote_head": "such powerful depths that they were never suspected—that the depths we",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 15629,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0194",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "were never",
+    "asserted_quote": "were never... Never suspected",
+    "detector": "B2-misquote",
+    "offset": 15629,
+    "quote_len": 29,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'never' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.49)); B2-misquote (extra transcript word(s) inside a book quote: transcript 'never' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.49))",
+    "runner_subtypes": [
+     "s",
+     "s"
+    ]
+   }
+  ],
+  "span_end": 15658,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "were never... Never suspected",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "It’s like I saw everybody who had ever been through that pass, and I saw their choice. And I said, it cannot be used for personal gain and refused.\n\n“You mean, refuse all that power? You’re going to refuse all that power, all that dominion over . . . ?” Anyway, so",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "it s like i saw everybody who had ever been through that pass and i saw their choice and i said it cannot be used for personal gain and refused you mean refuse all that power you re going to refuse all that power all that dominion over anyway so",
+      "op": "replace",
+      "transcript": "path"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 165053,
+    "offset_ok": true,
+    "quote_head": "It’s like I saw everybody who had ever been through that pass, and I s",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 20755,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0195",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "pass",
+    "asserted_quote": "path",
+    "detector": "B2-misquote",
+    "offset": 20755,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'path' vs book 'pass' inside a 16/18-word near-verbatim match (tf-idf 0.27))",
+    "runner_subtypes": [
+     "tf-idf 0.27"
+    ]
+   }
+  ],
+  "span_end": 20759,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "path",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "So, it means in the beginning,\n\nthey’d let go of enough personal ego to reach a good high personal spiritual state. That attracted many people. The person then",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "so it means in the beginning they d let go of enough",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "ego to reach a good high personal spiritual",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "that attracted many people the person then",
+      "op": "replace",
+      "transcript": "spiritual"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 166547,
+    "offset_ok": true,
+    "quote_head": "So, it means in the beginning,\n\nthey’d let go of enough personal ego t",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 22257,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0196",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "personal spiritual",
+    "asserted_quote": "personal state, spiritual",
+    "detector": "B2-misquote",
+    "offset": 22257,
+    "quote_len": 25,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'state' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.29))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 22282,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "personal state, spiritual",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 26871,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x3 vs re-derived 4 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0197",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 3,
+   "tokens": 12
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "What do we do?",
+    "asserted_quote": "What do we do? What do we do? What do we do?",
+    "detector": "A1-repetition",
+    "offset": 26871,
+    "quote_len": 44,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 3,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 26915,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "What do we do? What do we do? What do we do?",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "life can express itself in such a way? A couple of questions refer to that. There is no opposite to God. That",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "life can express itself in such a way a couple of",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "really"
+     },
+     {
+      "book": "to that there is no opposite to god that",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 179430,
+    "offset_ok": true,
+    "quote_head": "life can express itself in such a way? A couple of questions refer to ",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 37007,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0198",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "questions refer",
+    "asserted_quote": "questions really refer",
+    "detector": "B2-misquote",
+    "offset": 37007,
+    "quote_len": 22,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'really' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.34))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 37029,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "questions really refer",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "loving. And as you come down, life just doesn’t disappear; it takes a different form. Below 32 degrees, water turns to ice. Below 200, life",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "loving and as you come down life just doesn t disappear it takes a different form below degrees water turns to ice below life",
+      "op": "replace",
+      "transcript": "beyond"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 179719,
+    "offset_ok": true,
+    "quote_head": "loving. And as you come down, life just doesn’t disappear; it takes a ",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 37329,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0199",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Below",
+    "asserted_quote": "Beyond",
+    "detector": "B2-misquote",
+    "offset": 37329,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'beyond' vs book 'below' inside a 23/24-word near-verbatim match (tf-idf 0.46))",
+    "runner_subtypes": [
+     "tf-idf 0.46"
+    ]
+   }
+  ],
+  "span_end": 37335,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Beyond",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "way, you have a choice. If you’re depressed, you can go see a doctor about it. You can take an antidepressant about it. You can",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "way you have a choice if you re depressed you",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "see a doctor about it you can",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "an antidepressant about it you can",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 184087,
+    "offset_ok": true,
+    "quote_head": "way, you have a choice. If you’re depressed, you can go see a doctor a",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 41737,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0200",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "can take",
+    "asserted_quote": "can go take",
+    "detector": "B2-misquote",
+    "offset": 41737,
+    "quote_len": 11,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'go' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.38))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 41748,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "can go take",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "to my ear, is the sound of all questions. But they get translated into what I understand the human is saying by that, and",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "to my ear is the sound of all questions but they get translated into what i understand the human is saying by that and",
+      "op": "replace",
+      "transcript": "it gets"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 188349,
+    "offset_ok": true,
+    "quote_head": "to my ear, is the sound of all questions. But they get translated into",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 46082,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0201",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "they get",
+    "asserted_quote": "it gets",
+    "detector": "B2-misquote",
+    "offset": 46082,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'it gets' vs book 'they get' inside a 22/24-word near-verbatim match (tf-idf 0.28))",
+    "runner_subtypes": [
+     "tf-idf 0.28"
+    ]
+   }
+  ],
+  "span_end": 46089,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "it gets",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "wheel, whether there’s a prayer in the canon or not, as it rolls around and around probably has nothing to do with it—but the",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "wheel whether there s a prayer in the canon or not as it rolls around and around probably has nothing to do with it but the",
+      "op": "replace",
+      "transcript": "rotates"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 190555,
+    "offset_ok": true,
+    "quote_head": "wheel, whether there’s a prayer in the canon or not, as it rolls aroun",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 48971,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0202",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "rolls",
+    "asserted_quote": "rotates",
+    "detector": "B2-misquote",
+    "offset": 48971,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'rotates' vs book 'rolls' inside a 22/24-word near-verbatim match (tf-idf 0.27))",
+    "runner_subtypes": [
+     "tf-idf 0.27"
+    ]
+   }
+  ],
+  "span_end": 48978,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "rotates",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "may calibrate just below or above about 200? Those levels there denote the general realms. The 300s have to do with willingness—310 is Willingness",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "may calibrate just below or above about those levels there denote the general realms the s have to do",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "really"
+     },
+     {
+      "book": "is willingness",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 191845,
+    "offset_ok": true,
+    "quote_head": "may calibrate just below or above about 200? Those levels there denote",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 50211,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0203",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "with willingness",
+    "asserted_quote": "with really willingness",
+    "detector": "B2-misquote",
+    "offset": 50211,
+    "quote_len": 23,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'really' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.45))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 50234,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "with really willingness",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "Negativity of the lower dimensions. With Neutral, it’s okay if you get the raise and it’s okay if you don’t, so you don’t worry. Down lower, you don’t get the raise, you think of suicide or you go into a rage and",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "negativity of the lower dimensions with neutral it s okay if you get the raise and it s okay if you don t so you don t worry down lower you don t get the raise you think of suicide or you go into a",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "and",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 193043,
+    "offset_ok": true,
+    "quote_head": "Negativity of the lower dimensions. With Neutral, it’s okay if you get",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 51344,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0204",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "raise",
+    "asserted_quote": "rage",
+    "detector": "B2-misquote",
+    "offset": 51344,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'rage' vs book 'raise' inside a 22/24-word near-verbatim match (tf-idf 0.34))",
+    "runner_subtypes": [
+     "tf-idf 0.34"
+    ]
+   }
+  ],
+  "span_end": 51348,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "rage",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "is Neutral, a very nice, comfortable place to be; 175, you see, people are prideful, and they get “tiddleyed” if they make",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "is neutral a very nice comfortable place to be you see people are prideful and they get tiddleyed if they make",
+      "op": "replace",
+      "transcript": "titillated"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 195640,
+    "offset_ok": true,
+    "quote_head": "is Neutral, a very nice, comfortable place to be; 175, you see, people",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 53926,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0205",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "tiddleyed",
+    "asserted_quote": "titillated",
+    "detector": "B2-misquote",
+    "offset": 53926,
+    "quote_len": 10,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'titillated' vs book 'tiddleyed' inside a 21/24-word near-verbatim match (tf-idf 0.32))",
+    "runner_subtypes": [
+     "tf-idf 0.32"
+    ]
+   }
+  ],
+  "span_end": 53936,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "titillated",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "up, saying, “I was on the phone for 20 minutes, and I never got a human being. To hell with them.” What does it",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "up saying i was on the phone for minutes and i never got a human being to hell with them what does it",
+      "op": "replace",
+      "transcript": "help"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 198177,
+    "offset_ok": true,
+    "quote_head": "up, saying, “I was on the phone for 20 minutes, and I never got a huma",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 56285,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0206",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "hell",
+    "asserted_quote": "help",
+    "detector": "B2-misquote",
+    "offset": 56285,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'help' vs book 'hell' inside a 23/24-word near-verbatim match (tf-idf 0.34))",
+    "runner_subtypes": [
+     "tf-idf 0.34"
+    ]
+   }
+  ],
+  "span_end": 56289,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "help",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "get a lot of apathy on the telephone; those are about fourth-grade dropouts and the government has assured them some kind of a",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "get a lot of apathy on the telephone those are about fourth",
+      "op": "replace",
+      "transcript": "th"
+     },
+     {
+      "book": "dropouts and the government has assured them some kind of a",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 198999,
+    "offset_ok": true,
+    "quote_head": "get a lot of apathy on the telephone; those are about fourth-grade dro",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 57027,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0207",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "fourth-grade",
+    "asserted_quote": "4th grade",
+    "detector": "B2-misquote",
+    "offset": 57027,
+    "quote_len": 9,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript '4th grade' vs book 'fourth-grade' inside a 22/24-word near-verbatim match (tf-idf 0.33))",
+    "runner_subtypes": [
+     "tf-idf 0.33"
+    ]
+   }
+  ],
+  "span_end": 57036,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "4th grade",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "one of these fields [on the Map of Consciousness®] represents a certain level of consciousness, which is impersonal. Each one of these fields, by our assent, tends to dominate",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "one of these fields on the map of consciousness represents a certain level of consciousness which is impersonal each one of these fields by our assent tends to dominate",
+      "op": "replace",
+      "transcript": "ascent"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 199248,
+    "offset_ok": true,
+    "quote_head": "one of these fields [on the Map of Consciousness®] represents a certai",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 57274,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0208",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "assent",
+    "asserted_quote": "ascent",
+    "detector": "B2-misquote",
+    "offset": 57274,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ascent' vs book 'assent' inside a 23/24-word near-verbatim match (tf-idf 0.49))",
+    "runner_subtypes": [
+     "tf-idf 0.49"
+    ]
+   }
+  ],
+  "span_end": 57280,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "ascent",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "of our own agreement. We call that entrainment. The energy field prevails in society, and by your assent, you agree to that energy field",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "of our own agreement we call that entrainment the energy field prevails in society and by your assent you agree to that energy field",
+      "op": "replace",
+      "transcript": "ascent"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 199554,
+    "offset_ok": true,
+    "quote_head": "of our own agreement. We call that entrainment. The energy field preva",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 57523,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0209",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "assent",
+    "asserted_quote": "ascent",
+    "detector": "B2-misquote",
+    "offset": 57523,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ascent' vs book 'assent' inside a 23/24-word near-verbatim match (tf-idf 0.47))",
+    "runner_subtypes": [
+     "tf-idf 0.47"
+    ]
+   }
+  ],
+  "span_end": 57529,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "ascent",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "field for detailed research. What we’ve really done is sketch out the broad outlines, but we haven’t mapped out every nook and cranny in",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "field for detailed research what we ve really done is sketch out the broad outlines but we haven t mapped out every nook and cranny in",
+      "op": "replace",
+      "transcript": "crook"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 201972,
+    "offset_ok": true,
+    "quote_head": "field for detailed research. What we’ve really done is sketch out the ",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 59923,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0210",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "nook",
+    "asserted_quote": "crook",
+    "detector": "B2-misquote",
+    "offset": 59923,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'crook' vs book 'nook' inside a 23/24-word near-verbatim match (tf-idf 0.47))",
+    "runner_subtypes": [
+     "tf-idf 0.47"
+    ]
+   }
+  ],
+  "span_end": 59928,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "crook",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "third step at great depth will take you all the way from the bottom to the top: resist” (True). What I did was what’s called, in",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "third step at great depth will take you all the way from the bottom to the top resist true what i did was what s called in",
+      "op": "replace",
+      "transcript": "away"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 202734,
+    "offset_ok": true,
+    "quote_head": "third step at great depth will take you all the way from the bottom to",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 60567,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0211",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the way",
+    "asserted_quote": "away",
+    "detector": "B2-misquote",
+    "offset": 60567,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'away' vs book 'the way' inside a 22/24-word near-verbatim match (tf-idf 0.49))",
+    "runner_subtypes": [
+     "tf-idf 0.49"
+    ]
+   }
+  ],
+  "span_end": 60571,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "away",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "700. And he never left the mountain. I know what he experienced, because in walking through, what should we say . . . in completely surrendering everything",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "and he never left the mountain i know what he experienced because in walking through what should we say in completely surrendering everything",
+      "op": "replace",
+      "transcript": "shall"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 203693,
+    "offset_ok": true,
+    "quote_head": "700. And he never left the mountain. I know what he experienced, becau",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 61518,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0212",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "should",
+    "asserted_quote": "shall",
+    "detector": "B2-misquote",
+    "offset": 61518,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'shall' vs book 'should' inside a 23/24-word near-verbatim match (tf-idf 0.35))",
+    "runner_subtypes": [
+     "tf-idf 0.35"
+    ]
+   }
+  ],
+  "span_end": 61523,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "shall",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "bring about enormous change. It was through that great space that the splendor of That Which Is shone forth. You never experience your",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "bring about enormous change it was through that great space that the splendor of that which is shone forth you never experience your",
+      "op": "replace",
+      "transcript": "shown"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 204740,
+    "offset_ok": true,
+    "quote_head": "bring about enormous change. It was through that great space that the ",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 62524,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0213",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "shone",
+    "asserted_quote": "shown",
+    "detector": "B2-misquote",
+    "offset": 62524,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'shown' vs book 'shone' inside a 22/24-word near-verbatim match (tf-idf 0.34))",
+    "runner_subtypes": [
+     "tf-idf 0.34"
+    ]
+   }
+  ],
+  "span_end": 62529,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "shown",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "death: resist” (True). That’s a fact. You don’t have to worry about experiencing your death, because it ain’t gonna happen. The other question that we sort of",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "death resist true that s a fact you don t have to worry about experiencing your death because it ain t gonna happen the other question that we sort of",
+      "op": "replace",
+      "transcript": "cause"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 205026,
+    "offset_ok": true,
+    "quote_head": "death: resist” (True). That’s a fact. You don’t have to worry about ex",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 62778,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0214",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "because",
+    "asserted_quote": "cause",
+    "detector": "B2-misquote",
+    "offset": 62778,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'cause' vs book 'because' inside a 22/24-word near-verbatim match (tf-idf 0.65))",
+    "runner_subtypes": [
+     "tf-idf 0.65"
+    ]
+   }
+  ],
+  "span_end": 62783,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "cause",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "you’re not going to experience any death anyway. One of the biggest reasons for the propagation of the ego is fear of death. To merely know that you’re not going to die, you’re not going to experience any death, and it’s already set already, relieves a great deal of reason for the ego to continue its dominion",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "you re not going to experience any death anyway one of the biggest reasons for the propagation of the ego is fear of death to merely know that you re not going to die you re not going to experience any death and it s already set already relieves a great deal of reason for the ego to continue its dominion",
+      "op": "replace",
+      "transcript": "release"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 205398,
+    "offset_ok": true,
+    "quote_head": "you’re not going to experience any death anyway. One of the biggest re",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 63228,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0215",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "relieves",
+    "asserted_quote": "release",
+    "detector": "B2-misquote",
+    "offset": 63228,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'release' vs book 'relieves' inside a 22/24-word near-verbatim match (tf-idf 0.51))",
+    "runner_subtypes": [
+     "tf-idf 0.51"
+    ]
+   }
+  ],
+  "span_end": 63235,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "release",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "same as the Roman Colosseum: blood for the sake of blood. You don’t have to give them a lecture about that—that",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "same as the roman colosseum blood for the sake of blood you don t have to give them a lecture about that that",
+      "op": "replace",
+      "transcript": "coliseum"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 208301,
+    "offset_ok": true,
+    "quote_head": "same as the Roman Colosseum: blood for the sake of blood. You don’t ha",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 65883,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0216",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Colosseum",
+    "asserted_quote": "coliseum",
+    "detector": "B2-misquote",
+    "offset": 65883,
+    "quote_len": 8,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'coliseum' vs book 'colosseum' inside a 21/23-word near-verbatim match (tf-idf 0.32))",
+    "runner_subtypes": [
+     "tf-idf 0.32"
+    ]
+   }
+  ],
+  "span_end": 65891,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "coliseum",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "you’re giving it back to the world. Do you understand what I’m saying? But to store up riches on earth, I think is foolish. Storing up riches on earth is",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "you re giving it back to the world do you understand what i m saying but to store up riches on earth i think is foolish storing up riches on earth is",
+      "op": "replace",
+      "transcript": "ridges"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 210430,
+    "offset_ok": true,
+    "quote_head": "you’re giving it back to the world. Do you understand what I’m saying?",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 67965,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0217",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "riches",
+    "asserted_quote": "ridges",
+    "detector": "B2-misquote",
+    "offset": 67965,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ridges' vs book 'riches' inside a 22/24-word near-verbatim match (tf-idf 0.25))",
+    "runner_subtypes": [
+     "tf-idf 0.25"
+    ]
+   }
+  ],
+  "span_end": 67971,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "ridges",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "you’re giving it back to the world. Do you understand what I’m saying? But to store up riches on earth, I think is foolish. Storing up riches on earth is",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "you re giving it back to the world do you understand what i m saying but to store up riches on earth i think is foolish storing up riches on earth is",
+      "op": "replace",
+      "transcript": "ridges"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 210430,
+    "offset_ok": true,
+    "quote_head": "you’re giving it back to the world. Do you understand what I’m saying?",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 68011,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0218",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "riches",
+    "asserted_quote": "ridges",
+    "detector": "B2-misquote",
+    "offset": 68011,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ridges' vs book 'riches' inside a 22/24-word near-verbatim match (tf-idf 0.25))",
+    "runner_subtypes": [
+     "tf-idf 0.25"
+    ]
+   }
+  ],
+  "span_end": 68017,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "ridges",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "world or not is sort of irrelevant. The capacity to do that is what propelled the continuation: the joy of one’s",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "world or not is sort of irrelevant the capacity to do that is what",
+      "op": "replace",
+      "transcript": "propelled"
+     },
+     {
+      "book": "continuation the joy of one s",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 211788,
+    "offset_ok": true,
+    "quote_head": "world or not is sort of irrelevant. The capacity to do that is what pr",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 69206,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0219",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "propelled the",
+    "asserted_quote": "propelled propelled the",
+    "detector": "B2-misquote",
+    "offset": 69206,
+    "quote_len": 23,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'propelled' vs book '' inside a 21/23-word near-verbatim match (tf-idf 0.29))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 69229,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "propelled propelled the",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 69243,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x3 vs re-derived 4 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0220",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 3,
+   "tokens": 12
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the joy of one's",
+    "asserted_quote": "the joy of one's the joy of one's the joy of one's",
+    "detector": "A1-repetition",
+    "offset": 69243,
+    "quote_len": 50,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 3,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 69293,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "the joy of one's the joy of one's the joy of one's",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "of the truth of who you are. Once\n\nthat’s validated, after that, things don’t really matter. Whether you get better in terms of the world or not is sort of irrelevant. The capacity to do that is what propelled the continuation: the joy of one’s perfection or expertise, or whatever you call it.\n\nYou know, musicians typically live to be very",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "of the truth of who you are once that s validated after that things don t really matter whether you get better in terms of the world or not is sort of irrelevant the capacity to do that is what propelled the continuation the joy of one s perfection or expertise or whatever you call it you know",
+      "op": "replace",
+      "transcript": "musicians"
+     },
+     {
+      "book": "live to be very",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 211656,
+    "offset_ok": true,
+    "quote_head": "of the truth of who you are. Once\n\nthat’s validated, after that, thing",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 69351,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0221",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "musicians typically",
+    "asserted_quote": "musicians musicians typically",
+    "detector": "B2-misquote",
+    "offset": 69351,
+    "quote_len": 29,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'musicians' vs book '' inside a 21/23-word near-verbatim match (tf-idf 0.35))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 69380,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "musicians musicians typically",
+  "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+ }
+]

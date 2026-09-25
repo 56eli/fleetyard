@@ -1,0 +1,764 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 592372,
+    "book_quote": "Then out of nowhere came a profound, Infinite Radiance of Love beyond all imagination",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "then out",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "came a profound infinite radiance of love beyond all imagination",
+      "op": "replace",
+      "transcript": "nowhere"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 403770,
+    "offset_ok": true,
+    "quote_head": "Then out of nowhere came a profound, Infinite Radiance of Love beyond ",
+    "quote_ok": true,
+    "slug": "the_map_of_consciousness_expla"
+   }
+  ],
+  "char_offset": 15529,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0284",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "of nowhere",
+    "asserted_quote": "of nowhere nowhere",
+    "detector": "B2-misquote",
+    "offset": 15529,
+    "quote_len": 18,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'nowhere' vs book '' inside a 14/15-word near-verbatim match (tf-idf 0.33))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 15547,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "of nowhere nowhere",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 592372,
+    "book_quote": "nowhere came a profound, Infinite Radiance of Love beyond all imagination, beyond human love, timeless and eternal, no beginning and no end",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "nowhere came a profound infinite radiance of love beyond all imagination beyond human love",
+      "op": "replace",
+      "transcript": "timeless"
+     },
+     {
+      "book": "eternal no beginning and no end",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 403782,
+    "offset_ok": true,
+    "quote_head": "nowhere came a profound, Infinite Radiance of Love beyond all imaginat",
+    "quote_ok": true,
+    "slug": "the_map_of_consciousness_expla"
+   }
+  ],
+  "char_offset": 15631,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0285",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "timeless and",
+    "asserted_quote": "timeless timeless and",
+    "detector": "B2-misquote",
+    "offset": 15631,
+    "quote_len": 21,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'timeless' vs book '' inside a 22/23-word near-verbatim match (tf-idf 0.62))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 15652,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "timeless timeless and",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 16844,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=2"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0286",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 2,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "τη",
+    "detector": "A2-nonsense",
+    "offset": 16844,
+    "quote_len": 2,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 2,
+     "non_latin_letters": 2,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "runner_subtypes": [
+     "1 tokens"
+    ]
+   }
+  ],
+  "span_end": 16846,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 2,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "τη",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 18527,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x11 vs re-derived 2 x11 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0287",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 11,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 11,
+   "tokens": 22
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x11"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "you know",
+    "asserted_quote": "you know you know you know you know you know you know you know you know you know you know you know",
+    "detector": "A1-repetition",
+    "offset": 18527,
+    "quote_len": 98,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 11,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 11,
+     "tokens": 22
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 11 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 11 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 18625,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you know you know you know you know you know you know you know you know you know you know you know",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 18996,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x15 vs re-derived 2 x15 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0288",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 15,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 15,
+   "tokens": 30
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x15"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "you know",
+    "asserted_quote": "you know you know you know you know you know you know you know you know you know you know you know you know you know you know you know",
+    "detector": "A1-repetition",
+    "offset": 18996,
+    "quote_len": 134,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 15,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 15,
+     "tokens": 30
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 15 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 15 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 19130,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you know you know you know you know you know you know you know you know you know you know you know you know you know you know you know",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 34709,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 9-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0289",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 27
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "So, enlightenment, the enlightened state, then, is the state.",
+    "asserted_quote": "So, enlightenment, the enlightened state, then, is the state. So, enlightenment, the enlightened state, then, is the state. So, enlightenment, the enlightened state, then, is the state.",
+    "detector": "A1-repetition",
+    "offset": 34709,
+    "quote_len": 185,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 27
+    },
+    "runner_evidence": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "9-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 34894,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "So, enlightenment, the enlightened state, then, is the state. So, enlightenment, the enlightened state, then, is the state. So, enlightenment, the enlightened state, then, is the state.",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 592372,
+    "book_quote": "can set the stage for it, but it does not cause it. One can study theology day in and day out, and that study will",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "can set the stage for it but it does not cause it one can study theology day in and day out and that study will",
+      "op": "replace",
+      "transcript": "state"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 409048,
+    "offset_ok": true,
+    "quote_head": "can set the stage for it, but it does not cause it. One can study theo",
+    "quote_ok": true,
+    "slug": "the_map_of_consciousness_expla"
+   }
+  ],
+  "char_offset": 40705,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0290",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "stage",
+    "asserted_quote": "state",
+    "detector": "B2-misquote",
+    "offset": 40705,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'state' vs book 'stage' inside a 22/24-word near-verbatim match (tf-idf 0.34))",
+    "runner_subtypes": [
+     "tf-idf 0.34"
+    ]
+   }
+  ],
+  "span_end": 40710,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "state",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 592372,
+    "book_quote": "the intellectual approach in religious education, what we are describing here is the inner path. It arises from within. A religious education can set the stage for it, but it does not cause it. One can study theology day in and day out, and that study will not necessarily precipitate an inner spiritual realization. However, if there is an interest in religion, plus a certain motivation, the inner path becomes activated. The great saints of Christianity demonstrate that scriptural study, worship, and the devotion to religion can end up as a mystical inner awareness. Suddenly the words dissolve in the Realization of the inner Truth",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "the intellectual approach in religious education what we are describing here is the inner path it arises from within a religious education can set the stage for it but it does not cause it one can study theology day in and day out and that study will not necessarily precipitate an inner spiritual realization however if there is an interest in religion plus a certain motivation the inner path becomes activated the great saints of christianity demonstrate that scriptural study worship and the devotion to religion can end up as a mystical inner awareness suddenly the words dissolve in the realization of the inner truth",
+      "op": "replace",
+      "transcript": "then ends"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 408906,
+    "offset_ok": true,
+    "quote_head": "the intellectual approach in religious education, what we are describi",
+    "quote_ok": true,
+    "slug": "the_map_of_consciousness_expla"
+   }
+  ],
+  "char_offset": 41064,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0291",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "can end",
+    "asserted_quote": "then ends",
+    "detector": "B2-misquote",
+    "offset": 41064,
+    "quote_len": 9,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'then ends' vs book 'can end' inside a 19/22-word near-verbatim match (tf-idf 0.37))",
+    "runner_subtypes": [
+     "tf-idf 0.37"
+    ]
+   }
+  ],
+  "span_end": 41073,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "then ends",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 55169,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x4 vs re-derived 6 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0292",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 4,
+   "tokens": 24
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "We solved all the international problems.",
+    "asserted_quote": "We solved all the international problems. We solved all the international problems. We solved all the international problems. We solved all the international problems.",
+    "detector": "A1-repetition",
+    "offset": 55169,
+    "quote_len": 167,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 4,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 55336,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "We solved all the international problems. We solved all the international problems. We solved all the international problems. We solved all the international problems.",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 61426,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x3 vs re-derived 4 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0293",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 3,
+   "tokens": 12
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "look to your heart,",
+    "asserted_quote": "look to your heart, look to your heart, look to your heart.",
+    "detector": "A1-repetition",
+    "offset": 61426,
+    "quote_len": 59,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 3,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 61485,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "look to your heart, look to your heart, look to your heart.",
+  "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+ }
+]

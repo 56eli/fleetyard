@@ -1,0 +1,314 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 1004,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x22 vs re-derived 1 x22 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0838",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 22,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 22,
+   "tokens": 22
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x22"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Okay.",
+    "asserted_quote": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "detector": "A1-repetition",
+    "offset": 1004,
+    "quote_len": 131,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 22,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 22,
+     "tokens": 22
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 22 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 22 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 1135,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "transcript": "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 5882,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 5-token x6 vs re-derived 5 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0839",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 6,
+    "start_token": 0,
+    "unit_tokens": 5
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 5,
+   "span_repeats": 6,
+   "tokens": 30
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x6"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Everybody looks at the box.",
+    "asserted_quote": "Everybody looks at the box. Everybody looks at the box. Everybody looks at the box. Everybody looks at the box. Everybody looks at the box. Everybody looks at the box.",
+    "detector": "A1-repetition",
+    "offset": 5882,
+    "quote_len": 167,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 6,
+      "start_token": 0,
+      "unit_tokens": 5
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 5,
+     "span_repeats": 6,
+     "tokens": 30
+    },
+    "runner_evidence": "signals: A1-repetition (5-token unit repeated 6 times back-to-back)",
+    "runner_subtypes": [
+     "5-token unit repeated 6 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 6049,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Everybody looks at the box. Everybody looks at the box. Everybody looks at the box. Everybody looks at the box. Everybody looks at the box. Everybody looks at the box.",
+  "transcript": "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 8973,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x26 vs re-derived 1 x26 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0840",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 26,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 26,
+   "tokens": 26
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x26"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yeah.",
+    "asserted_quote": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "detector": "A1-repetition",
+    "offset": 8973,
+    "quote_len": 155,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 26,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 26,
+     "tokens": 26
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 26 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 26 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 9128,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "transcript": "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 18160,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x19 vs re-derived 1 x19 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0841",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 19,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 19,
+   "tokens": 19
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x19"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Okay.",
+    "asserted_quote": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "detector": "A1-repetition",
+    "offset": 18160,
+    "quote_len": 113,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 19,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 19,
+     "tokens": 19
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 19 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 19 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 18273,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "transcript": "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+ }
+]

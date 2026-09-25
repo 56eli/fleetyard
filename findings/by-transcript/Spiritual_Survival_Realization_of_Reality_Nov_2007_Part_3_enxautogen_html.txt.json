@@ -1,0 +1,234 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 65794,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x6 vs re-derived 3 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0988",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 6,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 6,
+   "tokens": 18
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x6"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "God bless you",
+    "asserted_quote": "God bless you God bless you God bless you God bless you God bless you God bless you",
+    "detector": "A1-repetition",
+    "offset": 65794,
+    "quote_len": 83,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 6,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 6,
+     "tokens": 18
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 6 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 6 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 65877,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "God bless you God bless you God bless you God bless you God bless you God bless you",
+  "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 65940,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x9 vs re-derived 1 x9 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0989",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 9,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 9,
+   "tokens": 9
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x9"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "ha",
+    "asserted_quote": "ha ha ha ha ha ha ha ha ha",
+    "detector": "A1-repetition",
+    "offset": 65940,
+    "quote_len": 26,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 9,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 9,
+     "tokens": 9
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 9 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 65966,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "ha ha ha ha ha ha ha ha ha",
+  "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 66128,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x3 vs re-derived 6 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0990",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 3,
+   "tokens": 18
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "God bless you now and forever",
+    "asserted_quote": "God bless you now and forever God bless you now and forever God bless you now and forever",
+    "detector": "A1-repetition",
+    "offset": 66128,
+    "quote_len": 89,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 3,
+     "tokens": 18
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 66217,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "God bless you now and forever God bless you now and forever God bless you now and forever",
+  "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_3_enxautogen_html.txt"
+ }
+]

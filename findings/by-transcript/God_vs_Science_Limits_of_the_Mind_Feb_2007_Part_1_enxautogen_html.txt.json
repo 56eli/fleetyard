@@ -1,0 +1,236 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 17910,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x8 vs re-derived 1 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0332",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 8,
+   "tokens": 8
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "grrr,",
+    "asserted_quote": "grrr, grrr, grrr, grrr, grrr, grrr, grrr, grrr.",
+    "detector": "A1-repetition",
+    "offset": 17910,
+    "quote_len": 47,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 8,
+     "tokens": 8
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 17957,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "grrr, grrr, grrr, grrr, grrr, grrr, grrr, grrr.",
+  "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 19154,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x5 vs re-derived 3 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0333",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 5,
+   "tokens": 15
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Here's my feelings.",
+    "asserted_quote": "Here's my feelings. Here's my feelings. Here's my feelings. Here's my feelings. Here's my feelings.",
+    "detector": "A1-repetition",
+    "offset": 19154,
+    "quote_len": 99,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 5,
+     "tokens": 15
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 19253,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Here's my feelings. Here's my feelings. Here's my feelings. Here's my feelings. Here's my feelings.",
+  "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 28624,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x16 vs re-derived 2 x16 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0334",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 16,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 16,
+   "tokens": 32
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x16"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "You know.",
+    "asserted_quote": "You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know.",
+    "detector": "A1-repetition",
+    "offset": 28624,
+    "quote_len": 159,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 16,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 16,
+     "tokens": 32
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 16 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 16 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 28783,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know.",
+  "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt"
+ }
+]

@@ -1,0 +1,304 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 39540,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x5 vs re-derived 3 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1210",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 5,
+   "tokens": 15
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "watch my fingers,",
+    "asserted_quote": "watch my fingers, watch my fingers, watch my fingers, watch my fingers, watch my fingers.",
+    "detector": "A1-repetition",
+    "offset": 39540,
+    "quote_len": 89,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 5,
+     "tokens": 15
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 39629,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "watch my fingers, watch my fingers, watch my fingers, watch my fingers, watch my fingers.",
+  "transcript": "Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 39665,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x6 vs re-derived 2 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1211",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 6,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 6,
+   "tokens": 12
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x6"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Wake up,",
+    "asserted_quote": "Wake up, wake up, wake up. Wake up, wake up, wake up.",
+    "detector": "A1-repetition",
+    "offset": 39665,
+    "quote_len": 53,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 6,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 6,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 6 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 6 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 39718,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Wake up, wake up, wake up. Wake up, wake up, wake up.",
+  "transcript": "Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 41980,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=1"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1212",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 1,
+   "non_latin_letters": 1,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "핑",
+    "detector": "A2-nonsense",
+    "offset": 41980,
+    "quote_len": 1,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 1,
+     "non_latin_letters": 1,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "runner_subtypes": [
+     "1 tokens"
+    ]
+   }
+  ],
+  "span_end": 41981,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 1,
+   "non_latin_letters": 1,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "핑",
+  "transcript": "Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 111036,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 5-token x3 vs re-derived 5 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1213",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 5
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 5,
+   "span_repeats": 3,
+   "tokens": 15
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "hell, he was destined for",
+    "asserted_quote": "hell, he was destined for hell. He was destined for hell. He was destined for",
+    "detector": "A1-repetition",
+    "offset": 111036,
+    "quote_len": 77,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 5
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 5,
+     "span_repeats": 3,
+     "tokens": 15
+    },
+    "runner_evidence": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "5-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 111113,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "hell, he was destined for hell. He was destined for hell. He was destined for",
+  "transcript": "Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.txt"
+ }
+]

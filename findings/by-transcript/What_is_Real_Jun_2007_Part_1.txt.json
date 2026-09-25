@@ -1,0 +1,308 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 32915,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x3 vs re-derived 4 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1269",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 3,
+   "tokens": 12
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I know that. And",
+    "asserted_quote": "I know that. And I know that. And I know that. And",
+    "detector": "A1-repetition",
+    "offset": 32915,
+    "quote_len": 50,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 3,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 32965,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I know that. And I know that. And I know that. And",
+  "transcript": "What_is_Real_Jun_2007_Part_1.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 53129,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x4 vs re-derived 6 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1270",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 4,
+   "tokens": 24
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I like and I don't like.",
+    "asserted_quote": "I like and I don't like. I like and I don't like. I like and I don't like. I like and I don't like.",
+    "detector": "A1-repetition",
+    "offset": 53129,
+    "quote_len": 99,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 4,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 53228,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I like and I don't like. I like and I don't like. I like and I don't like. I like and I don't like.",
+  "transcript": "What_is_Real_Jun_2007_Part_1.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 55042,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x14 vs re-derived 1 x14 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1271",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 14,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 14,
+   "tokens": 14
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x14"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Ha,",
+    "asserted_quote": "Ha, ha, ha, ha. Ha, ha, ha, ha. Ha, ha, ha. Ha, ha, ha.",
+    "detector": "A1-repetition",
+    "offset": 55042,
+    "quote_len": 55,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 14,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 14,
+     "tokens": 14
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 14 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 14 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 55097,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Ha, ha, ha, ha. Ha, ha, ha, ha. Ha, ha, ha. Ha, ha, ha.",
+  "transcript": "What_is_Real_Jun_2007_Part_1.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 55419,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x3 vs re-derived 6 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1272",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 3,
+   "tokens": 18
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "this is not a celestial realm.",
+    "asserted_quote": "this is not a celestial realm. This is not a celestial realm. This is not a celestial realm.",
+    "detector": "A1-repetition",
+    "offset": 55419,
+    "quote_len": 92,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 3,
+     "tokens": 18
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 55511,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "this is not a celestial realm. This is not a celestial realm. This is not a celestial realm.",
+  "transcript": "What_is_Real_Jun_2007_Part_1.txt"
+ }
+]

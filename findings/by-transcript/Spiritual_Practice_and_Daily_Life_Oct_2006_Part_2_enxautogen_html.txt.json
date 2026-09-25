@@ -1,0 +1,372 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 10201,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x3 vs re-derived 6 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0976",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 3,
+   "tokens": 18
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "that which you wish for yourself.",
+    "asserted_quote": "that which you wish for yourself. That which you wish for yourself. That which you wish for yourself",
+    "detector": "A1-repetition",
+    "offset": 10201,
+    "quote_len": 100,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 3,
+     "tokens": 18
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 10301,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "that which you wish for yourself. That which you wish for yourself. That which you wish for yourself",
+  "transcript": "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 27826,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 11-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0977",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 33
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "So you have to be willing to let go of guilt.",
+    "asserted_quote": "So you have to be willing to let go of guilt. So you have to be willing to let go of guilt. So you have to be willing to let go of guilt.",
+    "detector": "A1-repetition",
+    "offset": 27826,
+    "quote_len": 137,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 33
+    },
+    "runner_evidence": "signals: A1-repetition (11-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "11-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 27963,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "So you have to be willing to let go of guilt. So you have to be willing to let go of guilt. So you have to be willing to let go of guilt.",
+  "transcript": "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 58421,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 8-token x3 vs re-derived 8 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0978",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 8
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 8,
+   "span_repeats": 3,
+   "tokens": 24
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "yes. That has to do with the mammalian.",
+    "asserted_quote": "yes. That has to do with the mammalian. Yes. That has to do with the mammalian. Yes. That has to do with the mammalian.",
+    "detector": "A1-repetition",
+    "offset": 58421,
+    "quote_len": 119,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 8
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 8,
+     "span_repeats": 3,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "8-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 58540,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "yes. That has to do with the mammalian. Yes. That has to do with the mammalian. Yes. That has to do with the mammalian.",
+  "transcript": "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 58541,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x14 vs re-derived 1 x14 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0979",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 14,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 14,
+   "tokens": 14
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x14"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yes.",
+    "asserted_quote": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+    "detector": "A1-repetition",
+    "offset": 58541,
+    "quote_len": 69,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 14,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 14,
+     "tokens": 14
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 14 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 14 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 58610,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "transcript": "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 58727,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=1"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0980",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 1,
+   "non_latin_letters": 1,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "분yesoble",
+    "detector": "A2-nonsense",
+    "offset": 58727,
+    "quote_len": 8,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 1,
+     "non_latin_letters": 1,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "runner_subtypes": [
+     "script-mix: mixed/foreign letters in token"
+    ]
+   }
+  ],
+  "span_end": 58735,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 1,
+   "non_latin_letters": 1,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "분yesoble",
+  "transcript": "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_2_enxautogen_html.txt"
+ }
+]

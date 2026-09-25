@@ -1,0 +1,690 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 8402,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x9 vs re-derived 1 x9 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0385",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 9,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 9,
+   "tokens": 9
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x9"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Purr,",
+    "asserted_quote": "Purr, purr, purr, purr, purr, purr, purr, purr, purr.",
+    "detector": "A1-repetition",
+    "offset": 8402,
+    "quote_len": 53,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 9,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 9,
+     "tokens": 9
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 9 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 8455,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Purr, purr, purr, purr, purr, purr, purr, purr, purr.",
+  "transcript": "Happiness_Apr_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 58892,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x4 vs re-derived 4 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0386",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 4,
+   "tokens": 16
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Sing an inner song.",
+    "asserted_quote": "Sing an inner song. Sing an inner song. Sing an inner song. Sing an inner song.",
+    "detector": "A1-repetition",
+    "offset": 58892,
+    "quote_len": 79,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 4,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 58971,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Sing an inner song. Sing an inner song. Sing an inner song. Sing an inner song.",
+  "transcript": "Happiness_Apr_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 59248,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x17 vs re-derived 1 x17 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0387",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 17,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 17,
+   "tokens": 17
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x17"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Hum.",
+    "asserted_quote": "Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum.",
+    "detector": "A1-repetition",
+    "offset": 59248,
+    "quote_len": 84,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 17,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 17,
+     "tokens": 17
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 17 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 17 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 59332,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum. Hum.",
+  "transcript": "Happiness_Apr_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 60070,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x9 vs re-derived 1 x9 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0388",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 9,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 9,
+   "tokens": 9
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x9"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Ha,",
+    "asserted_quote": "Ha, ha, ha, ha, ha, ha, ha, ha, ha.",
+    "detector": "A1-repetition",
+    "offset": 60070,
+    "quote_len": 35,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 9,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 9,
+     "tokens": 9
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 9 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 60105,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Ha, ha, ha, ha, ha, ha, ha, ha, ha.",
+  "transcript": "Happiness_Apr_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 60456,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x4 vs re-derived 6 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0389",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 4,
+   "tokens": 24
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I'm going to go to heaven.",
+    "asserted_quote": "I'm going to go to heaven. I'm going to go to heaven. I'm going to go to heaven. I'm going to go to heaven.",
+    "detector": "A1-repetition",
+    "offset": 60456,
+    "quote_len": 107,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 4,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 60563,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I'm going to go to heaven. I'm going to go to heaven. I'm going to go to heaven. I'm going to go to heaven.",
+  "transcript": "Happiness_Apr_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 65886,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 5-token x3 vs re-derived 5 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0390",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 5
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 5,
+   "span_repeats": 3,
+   "tokens": 15
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Can you hear me now?",
+    "asserted_quote": "Can you hear me now? Can you hear me now? Can you hear me now?",
+    "detector": "A1-repetition",
+    "offset": 65886,
+    "quote_len": 62,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 5
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 5,
+     "span_repeats": 3,
+     "tokens": 15
+    },
+    "runner_evidence": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "5-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 65948,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Can you hear me now? Can you hear me now? Can you hear me now?",
+  "transcript": "Happiness_Apr_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 67595,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x13 vs re-derived 2 x13 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0391",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 13,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 13,
+   "tokens": 26
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x13"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 67595,
+    "quote_len": 142,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 13,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 13,
+     "tokens": 26
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 13 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 13 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 67737,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "Happiness_Apr_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 67742,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x5 vs re-derived 2 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0392",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 5,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "thank you.",
+    "asserted_quote": "thank you. Thank you. Thank you. Thank you. Thank you,",
+    "detector": "A1-repetition",
+    "offset": 67742,
+    "quote_len": 54,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 5,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 67796,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "thank you. Thank you. Thank you. Thank you. Thank you,",
+  "transcript": "Happiness_Apr_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 69743,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=1"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0393",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 1,
+   "non_latin_letters": 1,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "youх",
+    "detector": "A2-nonsense",
+    "offset": 69743,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 1,
+     "non_latin_letters": 1,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "runner_subtypes": [
+     "script-mix: mixed/foreign letters in token"
+    ]
+   }
+  ],
+  "span_end": 69747,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 1,
+   "non_latin_letters": 1,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "youх",
+  "transcript": "Happiness_Apr_2009_Part_2_enxautogen_html.txt"
+ }
+]

@@ -1,0 +1,156 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 23043,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x3 vs re-derived 6 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0330",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 3,
+   "tokens": 18
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "you're not run by it and",
+    "asserted_quote": "you're not run by it and you're not run by it and you're not run by it and",
+    "detector": "A1-repetition",
+    "offset": 23043,
+    "quote_len": 74,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 3,
+     "tokens": 18
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 23117,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you're not run by it and you're not run by it and you're not run by it and",
+  "transcript": "God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 24510,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x16 vs re-derived 1 x16 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0331",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 16,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 16,
+   "tokens": 16
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x16"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Why?",
+    "asserted_quote": "Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why?",
+    "detector": "A1-repetition",
+    "offset": 24510,
+    "quote_len": 79,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 16,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 16,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 16 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 24589,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why? Why?",
+  "transcript": "God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt"
+ }
+]

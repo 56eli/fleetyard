@@ -1,0 +1,1014 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 926,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x8 vs re-derived 3 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1096",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 8,
+   "tokens": 24
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you, sir.",
+    "asserted_quote": "Thank you, sir. Thank you, sir. Thank you, sir. Thank you, sir. Thank you, sir. Thank you, sir. Thank you, sir. Thank you, sir.",
+    "detector": "A1-repetition",
+    "offset": 926,
+    "quote_len": 127,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 8,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 1053,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you, sir. Thank you, sir. Thank you, sir. Thank you, sir. Thank you, sir. Thank you, sir. Thank you, sir. Thank you, sir.",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 23497,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x17 vs re-derived 1 x17 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1097",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 17,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 17,
+   "tokens": 17
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x17"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Risperdal.",
+    "asserted_quote": "Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal.",
+    "detector": "A1-repetition",
+    "offset": 23497,
+    "quote_len": 186,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 17,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 17,
+     "tokens": 17
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 17 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 17 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 23683,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal. Risperdal.",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 28271,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x4 vs re-derived 6 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1098",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 4,
+   "tokens": 24
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "serving God in the same way,",
+    "asserted_quote": "serving God in the same way, serving God in the same way, serving God in the same way, serving God in the same way,",
+    "detector": "A1-repetition",
+    "offset": 28271,
+    "quote_len": 115,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 4,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 28386,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "serving God in the same way, serving God in the same way, serving God in the same way, serving God in the same way,",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 29574,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x17 vs re-derived 1 x17 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1099",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 17,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 17,
+   "tokens": 17
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x17"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Five.",
+    "asserted_quote": "Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five.",
+    "detector": "A1-repetition",
+    "offset": 29574,
+    "quote_len": 101,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 17,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 17,
+     "tokens": 17
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 17 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 17 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 29675,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five. Five.",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 36191,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x17 vs re-derived 1 x17 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1100",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 17,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 17,
+   "tokens": 17
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x17"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Advocate.",
+    "asserted_quote": "Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate.",
+    "detector": "A1-repetition",
+    "offset": 36191,
+    "quote_len": 169,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 17,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 17,
+     "tokens": 17
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 17 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 17 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 36360,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate. Advocate.",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 46628,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x8 vs re-derived 1 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1101",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 8,
+   "tokens": 8
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Ha,",
+    "asserted_quote": "Ha, ha, ha, ha, ha, ha, ha, ha.",
+    "detector": "A1-repetition",
+    "offset": 46628,
+    "quote_len": 31,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 8,
+     "tokens": 8
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 46659,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Ha, ha, ha, ha, ha, ha, ha, ha.",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 55006,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x5 vs re-derived 2 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1102",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 5,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 55006,
+    "quote_len": 54,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 5,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 55060,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 56691,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x18 vs re-derived 3 x18 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1103",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 18,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 18,
+   "tokens": 54
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x18"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "know, I don't",
+    "asserted_quote": "know, I don't know, I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't",
+    "detector": "A1-repetition",
+    "offset": 56691,
+    "quote_len": 251,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 18,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 18,
+     "tokens": 54
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 18 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 18 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 56942,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "know, I don't know, I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 67300,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x23 vs re-derived 2 x23 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1104",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 23,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 23,
+   "tokens": 46
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x23"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you,",
+    "detector": "A1-repetition",
+    "offset": 67300,
+    "quote_len": 252,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 23,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 23,
+     "tokens": 46
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 23 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 23 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 67552,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you,",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 67689,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x5 vs re-derived 2 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1105",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 5,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 67689,
+    "quote_len": 54,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 5,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 67743,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 71473,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x10 vs re-derived 4 x10 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1106",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 10,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 10,
+   "tokens": 40
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x10"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "a music teacher. I'm",
+    "asserted_quote": "a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm",
+    "detector": "A1-repetition",
+    "offset": 71473,
+    "quote_len": 209,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 10,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 10,
+     "tokens": 40
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 10 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 10 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 71682,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm a music teacher. I'm",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 73686,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x6 vs re-derived 2 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1107",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 6,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 6,
+   "tokens": 12
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x6"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "The Renaissance.",
+    "asserted_quote": "The Renaissance. The Renaissance. The Renaissance. The Renaissance. The Renaissance. The Renaissance",
+    "detector": "A1-repetition",
+    "offset": 73686,
+    "quote_len": 100,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 6,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 6,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 6 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 6 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 73786,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "The Renaissance. The Renaissance. The Renaissance. The Renaissance. The Renaissance. The Renaissance",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 77141,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x43 vs re-derived 1 x43 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1108",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 43,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 43,
+   "tokens": 43
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x43"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Amen.",
+    "asserted_quote": "Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen.",
+    "detector": "A1-repetition",
+    "offset": 77141,
+    "quote_len": 257,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 43,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 43,
+     "tokens": 43
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 43 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 43 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 77398,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen.",
+  "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+ }
+]

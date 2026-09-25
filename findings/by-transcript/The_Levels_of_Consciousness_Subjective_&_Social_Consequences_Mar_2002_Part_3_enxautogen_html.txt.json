@@ -1,0 +1,1485 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "In the experiences I’ve described to you today, there was never any other entity there. On the way to hell, I passed no devils. Dante was correct. Dante’s description of hell is literally correct, exactly the way it is. The upper levels are torture and torment and agony and suffering and dismemberment, et cetera. But those are just jacks for openers. Then you get to the real hell. All that stops, and a nameless dread, which goes on for eons, prevails. In the higher realms, there are celestial beings, and many of them have",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "in the experiences i ve described to you today there was never any other entity there on the way to hell i passed no devils dante was correct dante s description of hell is literally correct exactly the way it is the upper levels are torture and torment and agony and suffering and dismemberment et cetera but those are just jacks for openers then you get to the real hell all that stops and a nameless dread which goes on for",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "prevails in the higher realms there are celestial beings and many of them have",
+      "op": "replace",
+      "transcript": "prevail"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 164664,
+    "offset_ok": true,
+    "quote_head": "In the experiences I’ve described to you today, there was never any ot",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 10041,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1162",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "prevails",
+    "asserted_quote": "Eons prevail",
+    "detector": "B2-misquote",
+    "offset": 10041,
+    "quote_len": 12,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'eons prevail' vs book 'prevails' inside a 22/24-word near-verbatim match (tf-idf 0.44))",
+    "runner_subtypes": [
+     "tf-idf 0.44"
+    ]
+   }
+  ],
+  "span_end": 10053,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Eons prevail",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "because it’s God as present both transcendent and immanent—in other words, the divinity of all living things. The Native American sees",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "because it s god as present both transcendent and immanent in other words the divinity of all living things the native american sees",
+      "op": "replace",
+      "transcript": "imminent"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 166771,
+    "offset_ok": true,
+    "quote_head": "because it’s God as present both transcendent and immanent—in other wo",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 12016,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1163",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "immanent",
+    "asserted_quote": "imminent",
+    "detector": "B2-misquote",
+    "offset": 12016,
+    "quote_len": 8,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'imminent' vs book 'immanent' inside a 21/23-word near-verbatim match (tf-idf 0.41))",
+    "runner_subtypes": [
+     "tf-idf 0.41"
+    ]
+   }
+  ],
+  "span_end": 12024,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "imminent",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "that’s about 740. But that’s not the reality of the reader. We say, “What about the starving children? What about the cat that just",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "that s about but that s not the reality of the reader we say what about the starving children what about the cat that just",
+      "op": "replace",
+      "transcript": "who says"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 167851,
+    "offset_ok": true,
+    "quote_head": "that’s about 740. But that’s not the reality of the reader. We say, “W",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 13218,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1164",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "We say",
+    "asserted_quote": "Who says",
+    "detector": "B2-misquote",
+    "offset": 13218,
+    "quote_len": 8,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'who says' vs book 'we say' inside a 22/24-word near-verbatim match (tf-idf 0.42))",
+    "runner_subtypes": [
+     "tf-idf 0.42"
+    ]
+   }
+  ],
+  "span_end": 13226,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Who says",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "life and not at other times. The Transmission of Mind—even the title, people say, “Huh?” Huang Po, The Transmission of Mind. That’s about, what, 740? “Huang Po, Transmission of No Mind",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "life and not at other times the transmission of mind even the title people say huh huang po the transmission of mind that s about what huang po transmission of no mind",
+      "op": "replace",
+      "transcript": "wang"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 168463,
+    "offset_ok": true,
+    "quote_head": "life and not at other times. The Transmission of Mind—even the title, ",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 14558,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1165",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Huang",
+    "asserted_quote": "Wang",
+    "detector": "B2-misquote",
+    "offset": 14558,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'wang' vs book 'huang' inside a 22/24-word near-verbatim match (tf-idf 0.63))",
+    "runner_subtypes": [
+     "tf-idf 0.63"
+    ]
+   }
+  ],
+  "span_end": 14562,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Wang",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "That’s about, what, 740? “Huang Po, Transmission of No Mind, is over 700.” (True.) “720.” (True.) “730.”\n\n(True.) “740.” (True.) “750.” (True.) “760.” (Not true.) About 750",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "that s about what huang po transmission of no mind is over true true true true true not true about",
+      "op": "replace",
+      "transcript": "wang"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 168588,
+    "offset_ok": true,
+    "quote_head": "That’s about, what, 740? “Huang Po, Transmission of No Mind, is over 7",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 14621,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1166",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Huang",
+    "asserted_quote": "Wang",
+    "detector": "B2-misquote",
+    "offset": 14621,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'wang' vs book 'huang' inside a 18/20-word near-verbatim match (tf-idf 0.42))",
+    "runner_subtypes": [
+     "tf-idf 0.42"
+    ]
+   }
+  ],
+  "span_end": 14625,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Wang",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 14905,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x8 vs re-derived 2 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1167",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 8,
+   "tokens": 16
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Thank you.",
+    "asserted_quote": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+    "detector": "A1-repetition",
+    "offset": 14905,
+    "quote_len": 87,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 8,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 14992,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "CIA, and the Alcohol, Tobacco and Firearms—ATF. At the time, the ATF, CIA, and FBI all made you go weak. And I think it’s",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "cia and the alcohol tobacco and firearms atf at the time the atf cia and fbi all made you go weak and i think it s",
+      "op": "replace",
+      "transcript": "farms"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 169290,
+    "offset_ok": true,
+    "quote_head": "CIA, and the Alcohol, Tobacco and Firearms—ATF. At the time, the ATF, ",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 15489,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1168",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Firearms",
+    "asserted_quote": "Farms",
+    "detector": "B2-misquote",
+    "offset": 15489,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'farms' vs book 'firearms' inside a 23/24-word near-verbatim match (tf-idf 0.51))",
+    "runner_subtypes": [
+     "tf-idf 0.51"
+    ]
+   }
+  ],
+  "span_end": 15494,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Farms",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 20938,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x5 vs re-derived 2 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1169",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 5,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the largest,",
+    "asserted_quote": "the largest, the largest, the largest, the largest, the largest,",
+    "detector": "A1-repetition",
+    "offset": 20938,
+    "quote_len": 64,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 5,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 21002,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "the largest, the largest, the largest, the largest, the largest,",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 23998,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x3 vs re-derived 6 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1170",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 3,
+   "tokens": 18
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "They're not going to do that.",
+    "asserted_quote": "They're not going to do that. They're not going to do that. They're not going to do that.",
+    "detector": "A1-repetition",
+    "offset": 23998,
+    "quote_len": 89,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 3,
+     "tokens": 18
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 24087,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "They're not going to do that. They're not going to do that. They're not going to do that.",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "then you get a disappointment.\n\nAlthough the FAA may calibrate as an agency in its formal structure, bureaucracy at 200, what does it",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "then you get a disappointment although the faa may calibrate as an agency in",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "formal",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "bureaucracy at what does it",
+      "op": "replace",
+      "transcript": "formal"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 173842,
+    "offset_ok": true,
+    "quote_head": "then you get a disappointment.\n\nAlthough the FAA may calibrate as an a",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 25617,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1171",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "its formal",
+    "asserted_quote": "its structure, formal",
+    "detector": "B2-misquote",
+    "offset": 25617,
+    "quote_len": 21,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'structure' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.70))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 25638,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "its structure, formal",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "contrary” choice. So, to choose power for its own sake, then, is the temptation of the Luciferic when you get to a very",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "contrary choice so to",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "for its own sake then is the temptation of the luciferic when you get to a very",
+      "op": "replace",
+      "transcript": "power"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 182354,
+    "offset_ok": true,
+    "quote_head": "contrary” choice. So, to choose power for its own sake, then, is the t",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 37385,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1172",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "choose power",
+    "asserted_quote": "choose power, power",
+    "detector": "B2-misquote",
+    "offset": 37385,
+    "quote_len": 19,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'power' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.63))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 37404,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "choose power, power",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "the small “i” is to become the egomaniac. So, when Milosevic feels not the slightest contrition, feels it’s his perfect right to destroy millions",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "the small i is to become the egomaniac so when milosevic feels not the slightest contrition feels it s his perfect right to destroy millions",
+      "op": "replace",
+      "transcript": "megalomaniac"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 183968,
+    "offset_ok": true,
+    "quote_head": "the small “i” is to become the egomaniac. So, when Milosevic feels not",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 39052,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1173",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "egomaniac",
+    "asserted_quote": "megalomaniac",
+    "detector": "B2-misquote",
+    "offset": 39052,
+    "quote_len": 12,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'megalomaniac' vs book 'egomaniac' inside a 23/24-word near-verbatim match (tf-idf 0.49))",
+    "runner_subtypes": [
+     "tf-idf 0.49"
+    ]
+   }
+  ],
+  "span_end": 39064,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "megalomaniac",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "not the slightest contrition, feels it’s his perfect right to destroy millions of people mainly because they disagree with him or represent something he",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "not the slightest contrition feels it s his perfect right to destroy millions of people mainly because they disagree with him or represent something he",
+      "op": "replace",
+      "transcript": "merely"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 184035,
+    "offset_ok": true,
+    "quote_head": "not the slightest contrition, feels it’s his perfect right to destroy ",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 39180,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1174",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "mainly",
+    "asserted_quote": "merely",
+    "detector": "B2-misquote",
+    "offset": 39180,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'merely' vs book 'mainly' inside a 23/24-word near-verbatim match (tf-idf 0.48))",
+    "runner_subtypes": [
+     "tf-idf 0.48"
+    ]
+   }
+  ],
+  "span_end": 39186,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "merely",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "spiritual will hears that enlightenment is possible, it clicks onto it and now it begins to reorganize the intention of all the intricacies of the ego.\n\nAnd somehow, you just find yourself in the right place and moving in a certain direction. That’s a result of spiritual will.\n\nSo, integrity, then, is a decision. The reason I used Sam Walton as an example was because he seemed to represent in a widely experiential way the value",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "spiritual will hears that enlightenment is possible it clicks onto it and now it begins to reorganize the intention of all the intricacies of the ego and somehow you just find yourself in the right place and moving in a certain direction that s a result of spiritual will so integrity then is a decision the reason i used sam walton as an example was because he seemed to represent in a widely experiential way the value",
+      "op": "replace",
+      "transcript": "experienceable"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 192665,
+    "offset_ok": true,
+    "quote_head": "spiritual will hears that enlightenment is possible, it clicks onto it",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 49002,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1175",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "experiential",
+    "asserted_quote": "experienceable",
+    "detector": "B2-misquote",
+    "offset": 49002,
+    "quote_len": 14,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'experienceable' vs book 'experiential' inside a 22/24-word near-verbatim match (tf-idf 0.34))",
+    "runner_subtypes": [
+     "tf-idf 0.34"
+    ]
+   }
+  ],
+  "span_end": 49016,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "experienceable",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "How are you going to get reelected if you’re going to be integrous, you know what I mean",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "how are you going to get reelected if you re going to be integrous you know what i mean",
+      "op": "replace",
+      "transcript": "an integrist"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 193576,
+    "offset_ok": true,
+    "quote_head": "How are you going to get reelected if you’re going to be integrous, yo",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 49585,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1176",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "integrous",
+    "asserted_quote": "an integrist",
+    "detector": "B2-misquote",
+    "offset": 49585,
+    "quote_len": 12,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'an integrist' vs book 'integrous' inside a 17/19-word near-verbatim match (tf-idf 0.28))",
+    "runner_subtypes": [
+     "tf-idf 0.28"
+    ]
+   }
+  ],
+  "span_end": 49597,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "an integrist",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "and Krishna and Buddha have physical functions, then, when they were at 1000 level of consciousness?\n\nWell, Buddha had a great deal",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "and krishna and buddha have physical functions then when they were at",
+      "op": "replace",
+      "transcript": "say"
+     },
+     {
+      "book": "of consciousness well buddha had a great deal",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 197501,
+    "offset_ok": true,
+    "quote_head": "and Krishna and Buddha have physical functions, then, when they were a",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 54443,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1177",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "1000 level",
+    "asserted_quote": "1000, say, level",
+    "detector": "B2-misquote",
+    "offset": 54443,
+    "quote_len": 16,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'say' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.37))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 54459,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "1000, say, level",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "via the sheep’s clothing. It is the one that the Luciferic and the satanic both use. It’s because of man’s not knowing truth",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "via the sheep s clothing it is the one that the",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "uses"
+     },
+     {
+      "book": "the satanic both use it s because of man s not knowing truth",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 203357,
+    "offset_ok": true,
+    "quote_head": "via the sheep’s clothing. It is the one that the Luciferic and the sat",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 64041,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1178",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Luciferic and",
+    "asserted_quote": "Luciferic uses and",
+    "detector": "B2-misquote",
+    "offset": 64041,
+    "quote_len": 18,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'uses' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.39))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 64059,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Luciferic uses and",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "karmic setup for it; you have to have had the good fortune to run into good teachers. You have to have fallen into the",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "karmic setup for it you have to have had the good fortune to run into good teachers you have to have fallen into the",
+      "op": "replace",
+      "transcript": "of running"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 204005,
+    "offset_ok": true,
+    "quote_head": "karmic setup for it; you have to have had the good fortune to run into",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 64715,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1179",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "to run",
+    "asserted_quote": "of running",
+    "detector": "B2-misquote",
+    "offset": 64715,
+    "quote_len": 10,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'of running' vs book 'to run' inside a 22/24-word near-verbatim match (tf-idf 0.41))",
+    "runner_subtypes": [
+     "tf-idf 0.41"
+    ]
+   }
+  ],
+  "span_end": 64725,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "of running",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "We said that that which is Infinite and manifests itself as all the universes is like a gigantic electromagnetic field, in which through spiritual",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "we said that that which is infinite and manifests itself as all the universes is like a gigantic electromagnetic field in which through spiritual",
+      "op": "replace",
+      "transcript": "giant"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 204923,
+    "offset_ok": true,
+    "quote_head": "We said that that which is Infinite and manifests itself as all the un",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 65800,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1180",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "gigantic",
+    "asserted_quote": "giant",
+    "detector": "B2-misquote",
+    "offset": 65800,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'giant' vs book 'gigantic' inside a 23/24-word near-verbatim match (tf-idf 0.32))",
+    "runner_subtypes": [
+     "tf-idf 0.32"
+    ]
+   }
+  ],
+  "span_end": 65805,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "giant",
+  "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+ }
+]

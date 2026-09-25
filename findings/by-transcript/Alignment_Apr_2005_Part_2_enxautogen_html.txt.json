@@ -1,0 +1,536 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 1659,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x8 vs re-derived 2 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0134",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 8,
+   "tokens": 16
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "It's like,",
+    "asserted_quote": "It's like, it's like, it's like, it's like, it's like, it's like, it's like, it's like,",
+    "detector": "A1-repetition",
+    "offset": 1659,
+    "quote_len": 87,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 8,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 1746,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "It's like, it's like, it's like, it's like, it's like, it's like, it's like, it's like,",
+  "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 15990,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 8-token x3 vs re-derived 8 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0135",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 8
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 8,
+   "span_repeats": 3,
+   "tokens": 24
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the emotional part of it is, you know,",
+    "asserted_quote": "the emotional part of it is, you know, the emotional part of it is, you know, the emotional part of it is, you know,",
+    "detector": "A1-repetition",
+    "offset": 15990,
+    "quote_len": 116,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 8
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 8,
+     "span_repeats": 3,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "8-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 16106,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "the emotional part of it is, you know, the emotional part of it is, you know, the emotional part of it is, you know,",
+  "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 52085,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x3 vs re-derived 4 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0136",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 3,
+   "tokens": 12
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "This is causing this,",
+    "asserted_quote": "This is causing this, this is causing this, this is causing this.",
+    "detector": "A1-repetition",
+    "offset": 52085,
+    "quote_len": 65,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 3,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 52150,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "This is causing this, this is causing this, this is causing this.",
+  "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 56643,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x16 vs re-derived 4 x16 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0137",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 16,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 16,
+   "tokens": 64
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x16"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "all desire and want",
+    "asserted_quote": "all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want",
+    "detector": "A1-repetition",
+    "offset": 56643,
+    "quote_len": 319,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 16,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 16,
+     "tokens": 64
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 16 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 16 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 56962,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want all desire and want",
+  "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 59898,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x7 vs re-derived 2 x7 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0138",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 7,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 7,
+   "tokens": 14
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x7"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "All right.",
+    "asserted_quote": "All right. All right. All right. All right. All right. All right. All right.",
+    "detector": "A1-repetition",
+    "offset": 59898,
+    "quote_len": 76,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 7,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 7,
+     "tokens": 14
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 7 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 7 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 59974,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "All right. All right. All right. All right. All right. All right. All right.",
+  "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 64317,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 10-token x5 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0139",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 50
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "It would be like picking yourself up in the desert.",
+    "asserted_quote": "It would be like picking yourself up in the desert. It would be like picking yourself up in the desert. It would be like picking yourself up in the desert. It would be like picking yourself up in the desert. It would be like picking yourself up in the desert.",
+    "detector": "A1-repetition",
+    "offset": 64317,
+    "quote_len": 259,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 50
+    },
+    "runner_evidence": "signals: A1-repetition (10-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "10-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 64576,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "It would be like picking yourself up in the desert. It would be like picking yourself up in the desert. It would be like picking yourself up in the desert. It would be like picking yourself up in the desert. It would be like picking yourself up in the desert.",
+  "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 77697,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x24 vs re-derived 1 x24 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0140",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 24,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 24,
+   "tokens": 24
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x24"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Okay.",
+    "asserted_quote": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+    "detector": "A1-repetition",
+    "offset": 77697,
+    "quote_len": 143,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 24,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 24,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 24 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 24 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 77840,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html.txt"
+ }
+]

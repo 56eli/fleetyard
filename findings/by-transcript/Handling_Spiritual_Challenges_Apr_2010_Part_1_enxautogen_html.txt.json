@@ -1,0 +1,619 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 14094,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x16 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0355",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 0
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "204.",
+    "asserted_quote": "204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204.",
+    "detector": "A1-repetition",
+    "offset": 14094,
+    "quote_len": 79,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 0
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 16 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 14173,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204. 204.",
+  "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 26473,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x8 vs re-derived 1 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0356",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 8,
+   "tokens": 8
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "ha",
+    "asserted_quote": "ha ha ha ha ha ha ha ha",
+    "detector": "A1-repetition",
+    "offset": 26473,
+    "quote_len": 23,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 8,
+     "tokens": 8
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 26496,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "ha ha ha ha ha ha ha ha",
+  "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 27215,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 5-token x3 vs re-derived 5 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0357",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 5
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 5,
+   "span_repeats": 3,
+   "tokens": 15
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "increases immunity increases healing and",
+    "asserted_quote": "increases immunity increases healing and increases immunity increases healing and increases immunity increases healing and",
+    "detector": "A1-repetition",
+    "offset": 27215,
+    "quote_len": 122,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 5
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 5,
+     "span_repeats": 3,
+     "tokens": 15
+    },
+    "runner_evidence": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "5-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 27337,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "increases immunity increases healing and increases immunity increases healing and increases immunity increases healing and",
+  "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 29270,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[590]"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0358",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    590
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    590
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   3,
+   [
+    "impossible percent"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "590 percent",
+    "detector": "A2-nonsense",
+    "offset": 29270,
+    "quote_len": 11,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      590
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      590
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 590 > 100)",
+    "runner_subtypes": [
+     "impossible-percent: 590 > 100"
+    ]
+   }
+  ],
+  "span_end": 29281,
+  "span_facts": {
+   "impossible_percent": [
+    590
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    590
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "590 percent",
+  "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 664076,
+    "book_quote": "Reason 400 79",
+    "detector": "B1-contradiction",
+    "divergence": [
+     {
+      "book": "reason",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "numbers": {
+     "book": [],
+     "differ": true,
+     "transcript": [
+      "80"
+     ]
+    },
+    "offset": 275935,
+    "offset_ok": true,
+    "quote_head": "Reason 400 79",
+    "quote_ok": true,
+    "slug": "reality_spirituality_and_mode"
+   }
+  ],
+  "char_offset": 29371,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B1-contradiction",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B1-contradiction"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0359",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   3,
+   [
+    "book-table number differs"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "79%",
+    "asserted_quote": "80%",
+    "detector": "B1-contradiction",
+    "offset": 29371,
+    "quote_len": 3,
+    "quote_verified": true,
+    "runner_evidence": "signals: B1-contradiction (happiness-percent: book table gives Reason = 79%, transcript says 80%)",
+    "runner_subtypes": [
+     "happiness-percent: book table gives Reason = 79%, transcript says 80%"
+    ]
+   }
+  ],
+  "span_end": 29374,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    80
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "80%",
+  "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 34450,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=2"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0360",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 2,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "currentلم",
+    "detector": "A2-nonsense",
+    "offset": 34450,
+    "quote_len": 9,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 2,
+     "non_latin_letters": 2,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "runner_subtypes": [
+     "script-mix: mixed/foreign letters in token"
+    ]
+   }
+  ],
+  "span_end": 34459,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 2,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "currentلم",
+  "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 38774,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x10 vs re-derived 1 x10 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0361",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 10,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 10,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x10"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "peep",
+    "asserted_quote": "peep peep peep peep peep peep peep peep peep peep",
+    "detector": "A1-repetition",
+    "offset": 38774,
+    "quote_len": 49,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 10,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 10,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 10 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 38823,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "peep peep peep peep peep peep peep peep peep peep",
+  "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 39571,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x7 vs re-derived 6 x7 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0362",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 7,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 7,
+   "tokens": 42
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x7"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "thanks a lot George you're welcome",
+    "asserted_quote": "thanks a lot George you're welcome thanks a lot George you're welcome thanks a lot George you're welcome thanks a lot George you're welcome thanks a lot George you're welcome thanks a lot George you're welcome thanks a lot George you're welcome",
+    "detector": "A1-repetition",
+    "offset": 39571,
+    "quote_len": 244,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 7,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 7,
+     "tokens": 42
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 7 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 7 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 39815,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "thanks a lot George you're welcome thanks a lot George you're welcome thanks a lot George you're welcome thanks a lot George you're welcome thanks a lot George you're welcome thanks a lot George you're welcome thanks a lot George you're welcome",
+  "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.txt"
+ }
+]

@@ -1,0 +1,304 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 8702,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x8 vs re-derived 1 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0717",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 8,
+   "tokens": 8
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "We.",
+    "asserted_quote": "We. We. We. We. We. We. We. We.",
+    "detector": "A1-repetition",
+    "offset": 8702,
+    "quote_len": 31,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 8,
+     "tokens": 8
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 8733,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "We. We. We. We. We. We. We. We.",
+  "transcript": "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 9634,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x40 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0718",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 0
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "007.00",
+    "asserted_quote": "007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00",
+    "detector": "A1-repetition",
+    "offset": 9634,
+    "quote_len": 279,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 0
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 40 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 40 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 9913,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00 007.00",
+  "transcript": "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 33914,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x3 vs re-derived 7 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0719",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 3,
+   "tokens": 21
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "you no longer say this is I.",
+    "asserted_quote": "you no longer say this is I. You no longer say this is I. You no longer say this is I.",
+    "detector": "A1-repetition",
+    "offset": 33914,
+    "quote_len": 86,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 3,
+     "tokens": 21
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 34000,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you no longer say this is I. You no longer say this is I. You no longer say this is I.",
+  "transcript": "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 39383,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x6 vs re-derived 7 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0720",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 6,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 6,
+   "tokens": 42
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x6"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I mean, do you know this thing?",
+    "asserted_quote": "I mean, do you know this thing? I mean, do you know this thing? I mean, do you know this thing? I mean, do you know this thing? I mean, do you know this thing? I mean, do you know this thing?",
+    "detector": "A1-repetition",
+    "offset": 39383,
+    "quote_len": 191,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 6,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 6,
+     "tokens": 42
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 6 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 6 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 39574,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I mean, do you know this thing? I mean, do you know this thing? I mean, do you know this thing? I mean, do you know this thing? I mean, do you know this thing? I mean, do you know this thing?",
+  "transcript": "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_1_enxautogen_html.txt"
+ }
+]

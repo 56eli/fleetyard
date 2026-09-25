@@ -1,0 +1,2205 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "Or we can put them down with ignoring them. So, it’s really the willingness, and to make",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "or we can put them down",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "ignorance"
+     },
+     {
+      "book": "them so it s really the willingness and to make",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 274993,
+    "offset_ok": true,
+    "quote_head": "Or we can put them down with ignoring them. So, it’s really the willin",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 2648,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0588",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "with ignoring",
+    "asserted_quote": "with ignorance. Ignoring",
+    "detector": "B2-misquote",
+    "offset": 2648,
+    "quote_len": 24,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'ignorance' vs book '' inside a 17/18-word near-verbatim match (tf-idf 0.26))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 2672,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "with ignorance. Ignoring",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "anything; much less can I discern its karma. Therefore, all judgment is up to God. Judgment is Mine, sayeth the Lord. Why? Because you’re",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "anything much less can i discern its karma therefore all judgment is up to god judgment is mine sayeth the lord why because you re",
+      "op": "replace",
+      "transcript": "saith"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 277625,
+    "offset_ok": true,
+    "quote_head": "anything; much less can I discern its karma. Therefore, all judgment i",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 8583,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0589",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "sayeth",
+    "asserted_quote": "saith",
+    "detector": "B2-misquote",
+    "offset": 8583,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'saith' vs book 'sayeth' inside a 23/24-word near-verbatim match (tf-idf 0.42))",
+    "runner_subtypes": [
+     "tf-idf 0.42"
+    ]
+   }
+  ],
+  "span_end": 8588,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "saith",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "determine it yourself. So, the freedom then to realize the source of your own existence is that you have infinite freedom. That infinite",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "determine it yourself so",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "ultimate"
+     },
+     {
+      "book": "then to realize the source of your own existence is that you have infinite freedom that infinite",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 279405,
+    "offset_ok": true,
+    "quote_head": "determine it yourself. So, the freedom then to realize the source of y",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 10446,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0590",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the freedom",
+    "asserted_quote": "the ultimate freedom",
+    "detector": "B2-misquote",
+    "offset": 10446,
+    "quote_len": 20,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'ultimate' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.35))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 10466,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "the ultimate freedom",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "the fourth step is where you take a spiritual inventory—a strict, honest spiritual inventory. Most people hate Step Four. And would rather",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "the",
+      "op": "replace",
+      "transcript": "hate"
+     },
+     {
+      "book": "is where you take a spiritual inventory a strict honest spiritual inventory most people hate step four and would rather",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 281367,
+    "offset_ok": true,
+    "quote_head": "the fourth step is where you take a spiritual inventory—a strict, hone",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 12867,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0591",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "hate Step",
+    "asserted_quote": "hate fourth step",
+    "detector": "B2-misquote",
+    "offset": 12867,
+    "quote_len": 16,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'fourth' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.68))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 12883,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "hate fourth step",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "that’s because they value that dominance.\n\nI don’t value dominance. Someone tells me he’s got a bigger car, more money, and he’s governor",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "that s because they value that dominance i don t value dominance someone tells me he s got a bigger car more money and he s governor",
+      "op": "replace",
+      "transcript": "somebody"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 284072,
+    "offset_ok": true,
+    "quote_head": "that’s because they value that dominance.\n\nI don’t value dominance. So",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 15622,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0592",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Someone",
+    "asserted_quote": "Somebody",
+    "detector": "B2-misquote",
+    "offset": 15622,
+    "quote_len": 8,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'somebody' vs book 'someone' inside a 22/24-word near-verbatim match (tf-idf 0.43))",
+    "runner_subtypes": [
+     "tf-idf 0.43"
+    ]
+   }
+  ],
+  "span_end": 15630,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Somebody",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "all this has been going on, so obviously it’s not done by an angry god to get even with man, ’cause man wasn’t even",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "all this has been going on so obviously it s not done by an angry god to get even with man cause man wasn t even",
+      "op": "replace",
+      "transcript": "because"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 294575,
+    "offset_ok": true,
+    "quote_head": "all this has been going on, so obviously it’s not done by an angry god",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 28020,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0593",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "cause",
+    "asserted_quote": "because",
+    "detector": "B2-misquote",
+    "offset": 28020,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'because' vs book 'cause' inside a 23/24-word near-verbatim match (tf-idf 0.34))",
+    "runner_subtypes": [
+     "tf-idf 0.34"
+    ]
+   }
+  ],
+  "span_end": 28027,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "because",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "this morning there’s an infinite universe of universes, these universes have different dimensions. The higher and lower astrals are the most commonly known to",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "this morning there s an infinite universe of universes these universes have different dimensions the higher and lower astrals are the",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "common"
+     },
+     {
+      "book": "known to",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 297013,
+    "offset_ok": true,
+    "quote_head": "this morning there’s an infinite universe of universes, these universe",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 30456,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0594",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "most commonly",
+    "asserted_quote": "most common commonly",
+    "detector": "B2-misquote",
+    "offset": 30456,
+    "quote_len": 20,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'common' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.46))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 30476,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "most common commonly",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "nightmares, illusions. So mankind has been able to contact the higher astral, where there’s devas and beautiful channelers of sort of angelic level and",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "nightmares illusions so mankind has been able to contact the higher astral where there s devas and beautiful channelers of sort of angelic level and",
+      "op": "replace",
+      "transcript": "divas"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 297260,
+    "offset_ok": true,
+    "quote_head": "nightmares, illusions. So mankind has been able to contact the higher ",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 30667,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0595",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "devas",
+    "asserted_quote": "divas",
+    "detector": "B2-misquote",
+    "offset": 30667,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'divas' vs book 'devas' inside a 22/24-word near-verbatim match (tf-idf 0.43))",
+    "runner_subtypes": [
+     "tf-idf 0.43"
+    ]
+   }
+  ],
+  "span_end": 30672,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "divas",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "trust them with your bank account, but when it comes to the religion and all that, they say, “I don’t know; I just can’t handle it.”\n\nI’ve got a patient like that. He’s getting older and older and he knows he’s going to die, and he says, “Doc, I",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "trust them with",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "account but when it comes to the religion and all that they say i don t know i just can t handle it i ve got a patient like that he s getting older and older and he knows he s going to die and he says doc i",
+      "op": "replace",
+      "transcript": "bank"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 298739,
+    "offset_ok": true,
+    "quote_head": "trust them with your bank account, but when it comes to the religion a",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 32110,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0596",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "your bank",
+    "asserted_quote": "your bank bank",
+    "detector": "B2-misquote",
+    "offset": 32110,
+    "quote_len": 14,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'bank' vs book '' inside a 21/22-word near-verbatim match (tf-idf 0.30))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 32124,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "your bank bank",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "So, the lower astral is very common in Sedona. There’s channelers all over, from all kinds of",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "so the lower astral is very common in sedona there s channelers all over from all kinds of",
+      "op": "replace",
+      "transcript": "chandlers"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 299811,
+    "offset_ok": true,
+    "quote_head": "So, the lower astral is very common in Sedona. There’s channelers all ",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 33160,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0597",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "channelers",
+    "asserted_quote": "chandlers",
+    "detector": "B2-misquote",
+    "offset": 33160,
+    "quote_len": 9,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'chandlers' vs book 'channelers' inside a 16/17-word near-verbatim match (tf-idf 0.25))",
+    "runner_subtypes": [
+     "tf-idf 0.25"
+    ]
+   }
+  ],
+  "span_end": 33169,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "chandlers",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "And a lot of it sounds very glamorous, glamorous and entrancing. “I went to get a psychic reading, and he told me all about",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "and a lot of it sounds very glamorous glamorous and entrancing i went to get a psychic reading and he told me all about",
+      "op": "replace",
+      "transcript": "greeting"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 300251,
+    "offset_ok": true,
+    "quote_head": "And a lot of it sounds very glamorous, glamorous and entrancing. “I we",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 33623,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0598",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "reading",
+    "asserted_quote": "greeting",
+    "detector": "B2-misquote",
+    "offset": 33623,
+    "quote_len": 8,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'greeting' vs book 'reading' inside a 22/23-word near-verbatim match (tf-idf 0.47))",
+    "runner_subtypes": [
+     "tf-idf 0.47"
+    ]
+   }
+  ],
+  "span_end": 33631,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "greeting",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "the calibrated level of what’s on this side—the trans-medium and the source. There’s a glamour and a trap in it all, in",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "the calibrated level of what s on this side the trans",
+      "op": "replace",
+      "transcript": "trance"
+     },
+     {
+      "book": "and the source there s a glamour and a trap in it all in",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 300874,
+    "offset_ok": true,
+    "quote_head": "the calibrated level of what’s on this side—the trans-medium and the s",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 34204,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0599",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "trans-medium",
+    "asserted_quote": "trance medium",
+    "detector": "B2-misquote",
+    "offset": 34204,
+    "quote_len": 13,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'trance medium' vs book 'trans-medium' inside a 22/24-word near-verbatim match (tf-idf 0.33))",
+    "runner_subtypes": [
+     "tf-idf 0.33"
+    ]
+   }
+  ],
+  "span_end": 34217,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "trance medium",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "if you get people young enough and small enough and begin brainwashing them with this belief, they will believe it by the time",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "if you get people young enough and small enough and begin brainwashing them with this belief they will believe it by the time",
+      "op": "replace",
+      "transcript": "disbelief"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 303020,
+    "offset_ok": true,
+    "quote_head": "if you get people young enough and small enough and begin brainwashing",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 36477,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0600",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "this belief",
+    "asserted_quote": "disbelief",
+    "detector": "B2-misquote",
+    "offset": 36477,
+    "quote_len": 9,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'disbelief' vs book 'this belief' inside a 21/24-word near-verbatim match (tf-idf 0.29))",
+    "runner_subtypes": [
+     "tf-idf 0.29"
+    ]
+   }
+  ],
+  "span_end": 36486,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "disbelief",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "So, lots of people have tuned in on that lower-astral thing—seeing the end of the world, the great apocalypse",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "so lots of people have tuned in on that",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "astral thing seeing the end of the world the great apocalypse",
+      "op": "replace",
+      "transcript": "estuary"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 306251,
+    "offset_ok": true,
+    "quote_head": "So, lots of people have tuned in on that lower-astral thing—seeing the",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 39603,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0601",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "lower-astral",
+    "asserted_quote": "lower estuary",
+    "detector": "B2-misquote",
+    "offset": 39603,
+    "quote_len": 13,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'lower estuary' vs book 'lower-astral' inside a 19/21-word near-verbatim match (tf-idf 0.33))",
+    "runner_subtypes": [
+     "tf-idf 0.33"
+    ]
+   }
+  ],
+  "span_end": 39616,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "lower estuary",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "Whenever anything negative befalls you, it’s always very practical to presume it’s some kind of karma coming back",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "whenever anything negative befalls you it s always very practical to presume it s some kind of karma coming back",
+      "op": "replace",
+      "transcript": "follows"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 310660,
+    "offset_ok": true,
+    "quote_head": "Whenever anything negative befalls you, it’s always very practical to ",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 43838,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0602",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "befalls",
+    "asserted_quote": "follows",
+    "detector": "B2-misquote",
+    "offset": 43838,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'follows' vs book 'befalls' inside a 17/18-word near-verbatim match (tf-idf 0.35))",
+    "runner_subtypes": [
+     "tf-idf 0.35"
+    ]
+   }
+  ],
+  "span_end": 43845,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "follows",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "at the same time. We were good, and I got him right through the heart, and he killed me deader than a mackerel. And",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "at the same time we were good",
+      "op": "replace",
+      "transcript": "dinner"
+     },
+     {
+      "book": "i got him right through the heart and he killed me deader than a mackerel and",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 313542,
+    "offset_ok": true,
+    "quote_head": "at the same time. We were good, and I got him right through the heart,",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 46540,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0603",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "deader than",
+    "asserted_quote": "dinner and",
+    "detector": "B2-misquote",
+    "offset": 46540,
+    "quote_len": 10,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'dinner and' vs book 'deader than' inside a 22/24-word near-verbatim match (tf-idf 0.33))",
+    "runner_subtypes": [
+     "tf-idf 0.33"
+    ]
+   }
+  ],
+  "span_end": 46550,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "dinner and",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "of the depression, then you can go back to establishing a life that is as supportive as you can. And depressions are periodic; they come on cyclically; they come on for many reasons unknown. Many of them are temporary. And some are biological; bipolar disorder, there’s a genetic factor. So, because it’s like diabetes for which you take insulin, or migraine headaches for which you take Imitrex, there’s no point to",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "of the depression then you can go back to establishing a life that is as supportive as you can and depressions are periodic they come on cyclically they come on for many reasons unknown many of them are temporary and some are biological bipolar disorder there s a genetic factor so because it s like diabetes for which you take insulin or migraine headaches for which you take imitrex there s no point to",
+      "op": "replace",
+      "transcript": "imetrex"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 320049,
+    "offset_ok": true,
+    "quote_head": "of the depression, then you can go back to establishing a life that is",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 54712,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0604",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Imitrex",
+    "asserted_quote": "imetrex",
+    "detector": "B2-misquote",
+    "offset": 54712,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'imetrex' vs book 'imitrex' inside a 22/24-word near-verbatim match (tf-idf 0.41))",
+    "runner_subtypes": [
+     "tf-idf 0.41"
+    ]
+   }
+  ],
+  "span_end": 54719,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "imetrex",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "is a potential home for the human spirit. But it’s not until the third month that it",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "is a potential home for the human spirit but it s not until the third month that it",
+      "op": "replace",
+      "transcript": "till"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 321739,
+    "offset_ok": true,
+    "quote_head": "is a potential home for the human spirit. But it’s not until the third",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 56017,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0605",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "until",
+    "asserted_quote": "till",
+    "detector": "B2-misquote",
+    "offset": 56017,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'till' vs book 'until' inside a 16/17-word near-verbatim match (tf-idf 0.37))",
+    "runner_subtypes": [
+     "tf-idf 0.37"
+    ]
+   }
+  ],
+  "span_end": 56021,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "till",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "a problem that doesn’t arise until about level 840.” (True.) Yeah. It’s not a problem until 840. So, you really don’t have to study how to transcend",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "a problem that doesn t arise until about level true yeah it s not a problem until so you really don t have to",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "laughter"
+     },
+     {
+      "book": "to transcend",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 325352,
+    "offset_ok": true,
+    "quote_head": "a problem that doesn’t arise until about level 840.” (True.) Yeah. It’",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 60237,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0606",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "study how",
+    "asserted_quote": "study laughter how",
+    "detector": "B2-misquote",
+    "offset": 60237,
+    "quote_len": 18,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'laughter' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.33))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 60255,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "study laughter how",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "wood. And then of course, you have the pageantry of the parade of the bishop and the miter and the incense. And I was",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "wood and then of course you have the pageantry of the parade of the bishop and the miter and the incense and i was",
+      "op": "replace",
+      "transcript": "mitre"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 327487,
+    "offset_ok": true,
+    "quote_head": "wood. And then of course, you have the pageantry of the parade of the ",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 62308,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0607",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "miter",
+    "asserted_quote": "mitre",
+    "detector": "B2-misquote",
+    "offset": 62308,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'mitre' vs book 'miter' inside a 23/24-word near-verbatim match (tf-idf 0.56))",
+    "runner_subtypes": [
+     "tf-idf 0.56"
+    ]
+   }
+  ],
+  "span_end": 62313,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "mitre",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "is incapacitating. You can, of course, get incapacitated along the way. The high 500s is one place you can get incapacitated. As you get",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "is incapacitating you can of course get incapacitated along the way the high s is one place you can get incapacitated as you get",
+      "op": "replace",
+      "transcript": "incapacitate"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 328038,
+    "offset_ok": true,
+    "quote_head": "is incapacitating. You can, of course, get incapacitated along the way",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 62887,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0608",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "get incapacitated",
+    "asserted_quote": "incapacitate",
+    "detector": "B2-misquote",
+    "offset": 62887,
+    "quote_len": 12,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'incapacitate' vs book 'get incapacitated' inside a 21/24-word near-verbatim match (tf-idf 0.37))",
+    "runner_subtypes": [
+     "tf-idf 0.37"
+    ]
+   }
+  ],
+  "span_end": 62899,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "incapacitate",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "filthy alley, probably full of dead cats and rats and druggies, and it was just like an incredible",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "filthy alley probably full of dead cats and rats and druggies and it was just like an incredible",
+      "op": "replace",
+      "transcript": "doggies"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 329989,
+    "offset_ok": true,
+    "quote_head": "filthy alley, probably full of dead cats and rats and druggies, and it",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 64740,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0609",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "druggies",
+    "asserted_quote": "doggies",
+    "detector": "B2-misquote",
+    "offset": 64740,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'doggies' vs book 'druggies' inside a 17/18-word near-verbatim match (tf-idf 0.53))",
+    "runner_subtypes": [
+     "tf-idf 0.53"
+    ]
+   }
+  ],
+  "span_end": 64747,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "doggies",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "Just discovered it a few weeks ago—I was writing something; I said, “That’s the quantum potentiality, man!” Where the infinite potentiality of the manifest contacts the manifest and influences",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "just discovered it a few weeks ago i was writing something i said that s the quantum potentiality man where the infinite potentiality of the manifest contacts the manifest and influences",
+      "op": "replace",
+      "transcript": "context"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 333923,
+    "offset_ok": true,
+    "quote_head": "Just discovered it a few weeks ago—I was writing something; I said, “T",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 68672,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0610",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "contacts",
+    "asserted_quote": "context",
+    "detector": "B2-misquote",
+    "offset": 68672,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'context' vs book 'contacts' inside a 22/24-word near-verbatim match (tf-idf 0.48))",
+    "runner_subtypes": [
+     "tf-idf 0.48"
+    ]
+   }
+  ],
+  "span_end": 68679,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "context",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "and agony, and black, total despair, which went on forever, forever, then access a space that is indescribably magnificent?” Because first of all, there is no temporality to temporality. So, what seems to be",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "and agony and black total despair which went on forever forever then access a space that is indescribably magnificent because first of all there is no temporality to temporality so what seems to be",
+      "op": "replace",
+      "transcript": "reality"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 339053,
+    "offset_ok": true,
+    "quote_head": "and agony, and black, total despair, which went on forever, forever, t",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 73596,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0611",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "temporality",
+    "asserted_quote": "reality",
+    "detector": "B2-misquote",
+    "offset": 73596,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'reality' vs book 'temporality' inside a 21/24-word near-verbatim match (tf-idf 0.35))",
+    "runner_subtypes": [
+     "tf-idf 0.35"
+    ]
+   }
+  ],
+  "span_end": 73603,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "reality",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "in life, you hit your thumb with a hammer and you find yourself saying the same thing. Well, to use the name",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "in life you hit your thumb with a hammer and you find yourself saying",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "same",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "well to use the name",
+      "op": "replace",
+      "transcript": "same"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 340434,
+    "offset_ok": true,
+    "quote_head": "in life, you hit your thumb with a hammer and you find yourself saying",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 75358,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0612",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the same",
+    "asserted_quote": "the thing same",
+    "detector": "B2-misquote",
+    "offset": 75358,
+    "quote_len": 14,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'thing' vs book '' inside a 21/23-word near-verbatim match (tf-idf 0.44))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 75372,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "the thing same",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "in World War II. I mean, to not smoke, you must be a wimp or really weird, you know. It’s hard to get",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "in world war ii i mean to not smoke you must be a wimp or really weird you know it s hard to get",
+      "op": "replace",
+      "transcript": "early"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 341609,
+    "offset_ok": true,
+    "quote_head": "in World War II. I mean, to not smoke, you must be a wimp or really we",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 76759,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0613",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "really",
+    "asserted_quote": "early",
+    "detector": "B2-misquote",
+    "offset": 76759,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'early' vs book 'really' inside a 22/24-word near-verbatim match (tf-idf 0.54))",
+    "runner_subtypes": [
+     "tf-idf 0.54"
+    ]
+   }
+  ],
+  "span_end": 76764,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "early",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "I consider God invincible, without positionality, without partiality; certainly not sensitive, vain, or anything else. For the good of the believer, one—it’s for",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "i consider god invincible without positionality without partiality certainly not sensitive vain or anything else for the good of the believer one it s for",
+      "op": "replace",
+      "transcript": "personality"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 344651,
+    "offset_ok": true,
+    "quote_head": "I consider God invincible, without positionality, without partiality; ",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 80108,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0614",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "partiality",
+    "asserted_quote": "personality",
+    "detector": "B2-misquote",
+    "offset": 80108,
+    "quote_len": 11,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'personality' vs book 'partiality' inside a 22/24-word near-verbatim match (tf-idf 0.56))",
+    "runner_subtypes": [
+     "tf-idf 0.56"
+    ]
+   }
+  ],
+  "span_end": 80119,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "personality",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 402850,
+    "book_quote": "And many of them are frequent: “What about the Great White Brotherhood?” They calibrate about 700. “What about Alice Bailey?” She calibrates over",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "and many of them are frequent what about the great white brotherhood they calibrate about what about alice bailey she calibrates over",
+      "op": "replace",
+      "transcript": "around"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 346791,
+    "offset_ok": true,
+    "quote_head": "And many of them are frequent: “What about the Great White Brotherhood",
+    "quote_ok": true,
+    "slug": "the_evolution_of_consciousness"
+   }
+  ],
+  "char_offset": 82441,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0615",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "about",
+    "asserted_quote": "around",
+    "detector": "B2-misquote",
+    "offset": 82441,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'around' vs book 'about' inside a 21/24-word near-verbatim match (tf-idf 0.52))",
+    "runner_subtypes": [
+     "tf-idf 0.52"
+    ]
+   }
+  ],
+  "span_end": 82447,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "around",
+  "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+ }
+]

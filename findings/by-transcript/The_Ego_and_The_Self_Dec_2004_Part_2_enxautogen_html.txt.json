@@ -1,0 +1,156 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 76013,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x27 vs re-derived 2 x27 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1083",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 27,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 27,
+   "tokens": 54
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x27"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I know",
+    "asserted_quote": "I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know",
+    "detector": "A1-repetition",
+    "offset": 76013,
+    "quote_len": 188,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 27,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 27,
+     "tokens": 54
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 27 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 27 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 76201,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know I know",
+  "transcript": "The_Ego_and_The_Self_Dec_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 103864,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 8-token x3 vs re-derived 8 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1084",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 6,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 8,
+   "span_repeats": 3,
+   "tokens": 24
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I can't, I can't do that. I can't.",
+    "asserted_quote": "I can't, I can't do that. I can't. I can't, I can't do that. I can't. I can't, I can't do that. I can't",
+    "detector": "A1-repetition",
+    "offset": 103864,
+    "quote_len": 103,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 6,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 8,
+     "span_repeats": 3,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "8-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 103967,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I can't, I can't do that. I can't. I can't, I can't do that. I can't. I can't, I can't do that. I can't",
+  "transcript": "The_Ego_and_The_Self_Dec_2004_Part_2_enxautogen_html.txt"
+ }
+]

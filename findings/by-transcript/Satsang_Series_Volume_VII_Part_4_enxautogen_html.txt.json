@@ -1,0 +1,538 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 2336,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x18 vs re-derived 1 x18 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0888",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 18,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 18,
+   "tokens": 18
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x18"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Hey,",
+    "asserted_quote": "Hey, hey, hey. Hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey.",
+    "detector": "A1-repetition",
+    "offset": 2336,
+    "quote_len": 89,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 18,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 18,
+     "tokens": 18
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 18 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 18 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 2425,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Hey, hey, hey. Hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey.",
+  "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 23803,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x8 vs re-derived 1 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0889",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 8,
+   "tokens": 8
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yeah.",
+    "asserted_quote": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "detector": "A1-repetition",
+    "offset": 23803,
+    "quote_len": 47,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 8,
+     "tokens": 8
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 23850,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 32397,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x45 vs re-derived 1 x45 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0890",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 45,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 45,
+   "tokens": 45
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x45"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Krishna",
+    "asserted_quote": "Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna",
+    "detector": "A1-repetition",
+    "offset": 32397,
+    "quote_len": 359,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 45,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 45,
+     "tokens": 45
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 45 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 45 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 32756,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna Krishna",
+  "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 33469,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x8 vs re-derived 2 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0891",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 8,
+   "tokens": 16
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "over and",
+    "asserted_quote": "over and over and over and over and over and over and over and over and",
+    "detector": "A1-repetition",
+    "offset": 33469,
+    "quote_len": 71,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 8,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 33540,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "over and over and over and over and over and over and over and over and",
+  "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 33908,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=2"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0892",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 2,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "Fallenירs",
+    "detector": "A2-nonsense",
+    "offset": 33908,
+    "quote_len": 9,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 2,
+     "non_latin_letters": 2,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "runner_subtypes": [
+     "script-mix: mixed/foreign letters in token"
+    ]
+   }
+  ],
+  "span_end": 33917,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 2,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Fallenירs",
+  "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 38343,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x5 vs re-derived 4 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0893",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 5,
+   "tokens": 20
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "oh Lord. Thank you,",
+    "asserted_quote": "oh Lord. Thank you, oh Lord. Thank you, oh Lord. Thank you, oh Lord. Thank you, oh Lord. Thank you",
+    "detector": "A1-repetition",
+    "offset": 38343,
+    "quote_len": 98,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 5,
+     "tokens": 20
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 38441,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "oh Lord. Thank you, oh Lord. Thank you, oh Lord. Thank you, oh Lord. Thank you, oh Lord. Thank you",
+  "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 40410,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x3 vs re-derived 7 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0894",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 3,
+   "tokens": 21
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Hooray for us. We're one to us.",
+    "asserted_quote": "Hooray for us. We're one to us. Hooray for us. We're one to us. Hooray for us. We're one to us.",
+    "detector": "A1-repetition",
+    "offset": 40410,
+    "quote_len": 95,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 3,
+     "tokens": 21
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 40505,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Hooray for us. We're one to us. Hooray for us. We're one to us. Hooray for us. We're one to us.",
+  "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt"
+ }
+]

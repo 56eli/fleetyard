@@ -1,0 +1,486 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 13169,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x5 vs re-derived 2 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0257",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 5,
+   "tokens": 10
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Look here,",
+    "asserted_quote": "Look here, look here, look here, look here, look here.",
+    "detector": "A1-repetition",
+    "offset": 13169,
+    "quote_len": 54,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 5,
+     "tokens": 10
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 13223,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Look here, look here, look here, look here, look here.",
+  "transcript": "Emotions_and_Sensations_Apr_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 27016,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x8 vs re-derived 1 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0258",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 8,
+   "tokens": 8
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Ha,",
+    "asserted_quote": "Ha, ha, ha, ha, ha, ha, ha, ha.",
+    "detector": "A1-repetition",
+    "offset": 27016,
+    "quote_len": 31,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 8,
+     "tokens": 8
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 27047,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Ha, ha, ha, ha, ha, ha, ha, ha.",
+  "transcript": "Emotions_and_Sensations_Apr_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 80966,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[250]"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0259",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    250
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    250
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   3,
+   [
+    "impossible percent"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "250%",
+    "detector": "A2-nonsense",
+    "offset": 80966,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      250
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      250
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 250 > 100)",
+    "runner_subtypes": [
+     "impossible-percent: 250 > 100"
+    ]
+   }
+  ],
+  "span_end": 80970,
+  "span_facts": {
+   "impossible_percent": [
+    250
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    250
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "250%",
+  "transcript": "Emotions_and_Sensations_Apr_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 81228,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[250]"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0260",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    250
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    250
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   3,
+   [
+    "impossible percent"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "250%",
+    "detector": "A2-nonsense",
+    "offset": 81228,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      250
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      250
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 250 > 100)",
+    "runner_subtypes": [
+     "impossible-percent: 250 > 100"
+    ]
+   }
+  ],
+  "span_end": 81232,
+  "span_facts": {
+   "impossible_percent": [
+    250
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    250
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "250%",
+  "transcript": "Emotions_and_Sensations_Apr_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 81248,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[260]"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0261",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    260
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    260
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   3,
+   [
+    "impossible percent"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "260%",
+    "detector": "A2-nonsense",
+    "offset": 81248,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      260
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      260
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 260 > 100)",
+    "runner_subtypes": [
+     "impossible-percent: 260 > 100"
+    ]
+   }
+  ],
+  "span_end": 81252,
+  "span_facts": {
+   "impossible_percent": [
+    260
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    260
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "260%",
+  "transcript": "Emotions_and_Sensations_Apr_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 81253,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[250]"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0262",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    250
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    250
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   3,
+   [
+    "impossible percent"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "250%",
+    "detector": "A2-nonsense",
+    "offset": 81253,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      250
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      250
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 250 > 100)",
+    "runner_subtypes": [
+     "impossible-percent: 250 > 100"
+    ]
+   }
+  ],
+  "span_end": 81257,
+  "span_facts": {
+   "impossible_percent": [
+    250
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    250
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "250%",
+  "transcript": "Emotions_and_Sensations_Apr_2004_Part_2_enxautogen_html.txt"
+ }
+]

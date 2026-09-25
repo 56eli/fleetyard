@@ -1,0 +1,226 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 592372,
+    "book_quote": "it is. In Reality, you see that the meaning of any thing is what it is. That is its meaning. Its meaning is what it is. What’s the",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "it is in reality you see that the meaning of any thing is what it is that is its meaning its meaning is what it is what s the",
+      "op": "replace",
+      "transcript": "everything"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 206167,
+    "offset_ok": true,
+    "quote_head": "it is. In Reality, you see that the meaning of any thing is what it is",
+    "quote_ok": true,
+    "slug": "the_map_of_consciousness_expla"
+   }
+  ],
+  "char_offset": 1914,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0447",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "any thing",
+    "asserted_quote": "everything",
+    "detector": "B2-misquote",
+    "offset": 1914,
+    "quote_len": 10,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'everything' vs book 'any thing' inside a 20/21-word near-verbatim match (tf-idf 0.36))",
+    "runner_subtypes": [
+     "tf-idf 0.36"
+    ]
+   }
+  ],
+  "span_end": 1924,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "everything",
+  "transcript": "Intention_May_2005_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 8785,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 11-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0448",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 33
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "that how you see the world is the way it is.",
+    "asserted_quote": "that how you see the world is the way it is. that how you see the world is the way it is. that how you see the world is the way it is.",
+    "detector": "A1-repetition",
+    "offset": 8785,
+    "quote_len": 134,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 33
+    },
+    "runner_evidence": "signals: A1-repetition (11-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "11-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 8919,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "that how you see the world is the way it is. that how you see the world is the way it is. that how you see the world is the way it is.",
+  "transcript": "Intention_May_2005_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 14077,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x18 vs re-derived 2 x18 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0449",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 18,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 18,
+   "tokens": 36
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x18"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I'm me.",
+    "asserted_quote": "I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me.",
+    "detector": "A1-repetition",
+    "offset": 14077,
+    "quote_len": 143,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 18,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 18,
+     "tokens": 36
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 18 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 18 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 14220,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me.",
+  "transcript": "Intention_May_2005_Part_1_enxautogen_html.txt"
+ }
+]

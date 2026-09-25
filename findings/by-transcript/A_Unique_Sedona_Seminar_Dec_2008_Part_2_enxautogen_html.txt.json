@@ -1,0 +1,1100 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 999,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x4 vs re-derived 6 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0077",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 4,
+   "tokens": 24
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "a better place for you. It's",
+    "asserted_quote": "a better place for you. It's a better place for you. It's a better place for you. It's a better place for you. It's",
+    "detector": "A1-repetition",
+    "offset": 999,
+    "quote_len": 115,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 4,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 1114,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "a better place for you. It's a better place for you. It's a better place for you. It's a better place for you. It's",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 592372,
+    "book_quote": "Spiritual purity has no interest in the personal lives of",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "spiritual purity has",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "influence"
+     },
+     {
+      "book": "in the personal lives of",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 386963,
+    "offset_ok": true,
+    "quote_head": "Spiritual purity has no interest in the personal lives of",
+    "quote_ok": true,
+    "slug": "the_map_of_consciousness_expla"
+   }
+  ],
+  "char_offset": 5854,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0078",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "no interest",
+    "asserted_quote": "no influence. Interest",
+    "detector": "B2-misquote",
+    "offset": 5854,
+    "quote_len": 22,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'influence' vs book '' inside a 10/11-word near-verbatim match (tf-idf 0.24))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 5876,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "no influence. Interest",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 8628,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=8"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0079",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 8,
+   "non_latin_letters": 8,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "열두 살 때였는데요",
+    "detector": "A2-nonsense",
+    "offset": 8628,
+    "quote_len": 10,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 8,
+     "non_latin_letters": 8,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: short non-Latin run (3 tokens) inside English)",
+    "runner_subtypes": [
+     "3 tokens"
+    ]
+   }
+  ],
+  "span_end": 8638,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 8,
+   "non_latin_letters": 8,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "열두 살 때였는데요",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 8764,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=6"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0080",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 6,
+   "non_latin_letters": 6,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "이것에 대해서",
+    "detector": "A2-nonsense",
+    "offset": 8764,
+    "quote_len": 7,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 6,
+     "non_latin_letters": 6,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: short non-Latin run (2 tokens) inside English)",
+    "runner_subtypes": [
+     "2 tokens"
+    ]
+   }
+  ],
+  "span_end": 8771,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 6,
+   "non_latin_letters": 6,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "이것에 대해서",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 9671,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 11-token x4 vs re-derived 2 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0081",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 4,
+   "tokens": 8
+  },
+  "review_score": [
+   3,
+   [
+    "script-mix",
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고,",
+    "asserted_quote": "그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고, 그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고, 그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고, 그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고,",
+    "detector": "A1-repetition",
+    "offset": 9671,
+    "quote_len": 187,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 4,
+     "tokens": 8
+    },
+    "runner_evidence": "signals: A1-repetition (11-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "11-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 9858,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 116,
+   "non_latin_letters": 116,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고, 그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고, 그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고, 그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고,",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 10023,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 5-token x7 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0082",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 0
+  },
+  "review_score": [
+   3,
+   [
+    "script-mix",
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "어떤 유혹하는 것이나, 그 다음에",
+    "asserted_quote": "어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에",
+    "detector": "A1-repetition",
+    "offset": 10023,
+    "quote_len": 132,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 0
+    },
+    "runner_evidence": "signals: A1-repetition (5-token unit repeated 7 times back-to-back)",
+    "runner_subtypes": [
+     "5-token unit repeated 7 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 10155,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 91,
+   "non_latin_letters": 91,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 10840,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=3"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0083",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 3,
+   "non_latin_letters": 3,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "그것은",
+    "detector": "A2-nonsense",
+    "offset": 10840,
+    "quote_len": 3,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 3,
+     "non_latin_letters": 3,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "runner_subtypes": [
+     "1 tokens"
+    ]
+   }
+  ],
+  "span_end": 10843,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 3,
+   "non_latin_letters": 3,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "그것은",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 13273,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=7"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0084",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 7,
+   "non_latin_letters": 7,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "돈 좀 보내주세요",
+    "detector": "A2-nonsense",
+    "offset": 13273,
+    "quote_len": 9,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 7,
+     "non_latin_letters": 7,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: short non-Latin run (3 tokens) inside English)",
+    "runner_subtypes": [
+     "3 tokens"
+    ]
+   }
+  ],
+  "span_end": 13282,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 7,
+   "non_latin_letters": 7,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "돈 좀 보내주세요",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 13310,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=6"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0085",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 6,
+   "non_latin_letters": 6,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "좀 보내주시고",
+    "detector": "A2-nonsense",
+    "offset": 13310,
+    "quote_len": 7,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 6,
+     "non_latin_letters": 6,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: short non-Latin run (2 tokens) inside English)",
+    "runner_subtypes": [
+     "2 tokens"
+    ]
+   }
+  ],
+  "span_end": 13317,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 6,
+   "non_latin_letters": 6,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "좀 보내주시고",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 13402,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=10"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0086",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 10,
+   "non_latin_letters": 10,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "블로그도 좀 보내주시고",
+    "detector": "A2-nonsense",
+    "offset": 13402,
+    "quote_len": 12,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 10,
+     "non_latin_letters": 10,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: short non-Latin run (3 tokens) inside English)",
+    "runner_subtypes": [
+     "3 tokens"
+    ]
+   }
+  ],
+  "span_end": 13414,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 10,
+   "non_latin_letters": 10,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "블로그도 좀 보내주시고",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 13593,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x11 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0087",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 0
+  },
+  "review_score": [
+   3,
+   [
+    "script-mix",
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "블로그?",
+    "asserted_quote": "블로그? 블로그? 블로그? 블로그? 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그.",
+    "detector": "A1-repetition",
+    "offset": 13593,
+    "quote_len": 54,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 0
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 11 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 11 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 13647,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 33,
+   "non_latin_letters": 33,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "블로그? 블로그? 블로그? 블로그? 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그.",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 13799,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x12 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0088",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 0
+  },
+  "review_score": [
+   3,
+   [
+    "script-mix",
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "블로그.",
+    "asserted_quote": "블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그.",
+    "detector": "A1-repetition",
+    "offset": 13799,
+    "quote_len": 59,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 0
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 12 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 12 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 13858,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 36,
+   "non_latin_letters": 36,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그.",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 19990,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x3 vs re-derived 7 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0089",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 3,
+   "tokens": 21
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I thought, wow, that must be something.",
+    "asserted_quote": "I thought, wow, that must be something. I thought, wow, that must be something. I thought, wow, that must be something.",
+    "detector": "A1-repetition",
+    "offset": 19990,
+    "quote_len": 119,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 3,
+     "tokens": 21
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 20109,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I thought, wow, that must be something. I thought, wow, that must be something. I thought, wow, that must be something.",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 20828,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 12-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0090",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 36
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Truth is sought, is found through freedom, rather than rules and restrictions.",
+    "asserted_quote": "Truth is sought, is found through freedom, rather than rules and restrictions. Truth is sought, is found through freedom, rather than rules and restrictions. Truth is sought, is found through freedom, rather than rules and restrictions.",
+    "detector": "A1-repetition",
+    "offset": 20828,
+    "quote_len": 236,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 36
+    },
+    "runner_evidence": "signals: A1-repetition (12-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "12-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 21064,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Truth is sought, is found through freedom, rather than rules and restrictions. Truth is sought, is found through freedom, rather than rules and restrictions. Truth is sought, is found through freedom, rather than rules and restrictions.",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 26695,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x22 vs re-derived 6 x22 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0091",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 22,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 22,
+   "tokens": 132
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x22"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "you take it back upon yourself",
+    "asserted_quote": "you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself",
+    "detector": "A1-repetition",
+    "offset": 26695,
+    "quote_len": 681,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 22,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 22,
+     "tokens": 132
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 22 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 22 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 27376,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself",
+  "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+ }
+]

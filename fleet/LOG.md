@@ -8,3 +8,7 @@ Alert: fleet/alerts/WORKER-2-FAIL-CLOSED.md. Awaiting owner.
 registry a86115d2…; record A-2026-09-25-001 byte-exact; FORMAT v0 note = fleet2check
 chain output ADVISORY). Fail-closed episode closed. M5-R begins (ORCH-2 queue absent,
 self-served, disclosed).
+2026-09-25T18:43Z WORKER-2: M5-R DELIVERY (findings/ ledger, 1334 findings from the
+inherited census; CERTAIN-inherited 2 / HIGH 0 / CANDIDATE 1332; seeded 2,
+independent 1332; 242/242 cited book quotes byte-exact; determinism verified).
+DELIVERY, not certification — awaits ORCH-2 gate (no ORCH-2 lane yet).

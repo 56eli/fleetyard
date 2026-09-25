@@ -1,0 +1,404 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 406428,
+    "book_quote": "of the consciousness of every great teacher or avatar who has ever lived still remains and is available. To focus on a teacher or their",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "of the consciousness of every great teacher or avatar who has ever lived still remains and",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "still"
+     },
+     {
+      "book": "to focus on a teacher or their",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 402408,
+    "offset_ok": true,
+    "quote_head": "of the consciousness of every great teacher or avatar who has ever liv",
+    "quote_ok": true,
+    "slug": "the_wisdom_of_dr_david_r_haw"
+   }
+  ],
+  "char_offset": 1883,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0494",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "is available",
+    "asserted_quote": "is still available",
+    "detector": "B2-misquote",
+    "offset": 1883,
+    "quote_len": 18,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'still' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.64))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 1901,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "is still available",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 406428,
+    "book_quote": "of the consciousness of every great teacher or avatar who has ever lived still remains and is available. To focus on a teacher or their",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "of the consciousness of every great teacher or avatar who has ever lived still remains and is available to focus on",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "particular"
+     },
+     {
+      "book": "or their",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 402408,
+    "offset_ok": true,
+    "quote_head": "of the consciousness of every great teacher or avatar who has ever liv",
+    "quote_ok": true,
+    "slug": "the_wisdom_of_dr_david_r_haw"
+   }
+  ],
+  "char_offset": 1914,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0495",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "a teacher",
+    "asserted_quote": "a particular teacher",
+    "detector": "B2-misquote",
+    "offset": 1914,
+    "quote_len": 20,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'particular' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.64))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 1934,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "a particular teacher",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 15645,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 8-token x3 vs re-derived 8 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0496",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 8
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 8,
+   "span_repeats": 3,
+   "tokens": 24
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "sleeves. I don't have any buttons on my",
+    "asserted_quote": "sleeves. I don't have any buttons on my sleeves. I don't have any buttons on my sleeves. I don't have any buttons on my",
+    "detector": "A1-repetition",
+    "offset": 15645,
+    "quote_len": 119,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 8
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 8,
+     "span_repeats": 3,
+     "tokens": 24
+    },
+    "runner_evidence": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "8-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 15764,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "sleeves. I don't have any buttons on my sleeves. I don't have any buttons on my sleeves. I don't have any buttons on my",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 16896,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x4 vs re-derived 7 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0497",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 4,
+   "tokens": 28
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Anybody not satisfied with who you are?",
+    "asserted_quote": "Anybody not satisfied with who you are? Anybody not satisfied with who you are? Anybody not satisfied with who you are? Anybody not satisfied with who you are?",
+    "detector": "A1-repetition",
+    "offset": 16896,
+    "quote_len": 159,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 4,
+     "tokens": 28
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 17055,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Anybody not satisfied with who you are? Anybody not satisfied with who you are? Anybody not satisfied with who you are? Anybody not satisfied with who you are?",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 30806,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x13 vs re-derived 1 x13 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0498",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 13,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 13,
+   "tokens": 13
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x13"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Photo.",
+    "asserted_quote": "Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo.",
+    "detector": "A1-repetition",
+    "offset": 30806,
+    "quote_len": 90,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 13,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 13,
+     "tokens": 13
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 13 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 30896,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo.",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt"
+ }
+]

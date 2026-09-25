@@ -1,0 +1,412 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 3285,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x3 vs re-derived 7 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1328",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 3,
+   "tokens": 21
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "and they, when I was a kid,",
+    "asserted_quote": "and they, when I was a kid, and they, when I was a kid, and they, when I was a kid,",
+    "detector": "A1-repetition",
+    "offset": 3285,
+    "quote_len": 83,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 3,
+     "tokens": 21
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 3368,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "and they, when I was a kid, and they, when I was a kid, and they, when I was a kid,",
+  "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 25829,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[999]"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1329",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    999
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    999
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   3,
+   [
+    "impossible percent"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "999%",
+    "detector": "A2-nonsense",
+    "offset": 25829,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      999
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      999
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 999 > 100)",
+    "runner_subtypes": [
+     "impossible-percent: 999 > 100"
+    ]
+   }
+  ],
+  "span_end": 25833,
+  "span_facts": {
+   "impossible_percent": [
+    999
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    999
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "999%",
+  "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 664076,
+    "book_quote": "Love 500 89",
+    "detector": "B1-contradiction",
+    "divergence": [
+     {
+      "book": "love",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "numbers": {
+     "book": [],
+     "differ": true,
+     "transcript": [
+      "98"
+     ]
+    },
+    "offset": 275922,
+    "offset_ok": true,
+    "quote_head": "Love 500 89",
+    "quote_ok": true,
+    "slug": "reality_spirituality_and_mode"
+   }
+  ],
+  "char_offset": 49194,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B1-contradiction",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B1-contradiction"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1330",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   3,
+   [
+    "book-table number differs"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "89%",
+    "asserted_quote": "98%",
+    "detector": "B1-contradiction",
+    "offset": 49194,
+    "quote_len": 3,
+    "quote_verified": true,
+    "runner_evidence": "signals: B1-contradiction (happiness-percent: book table gives Love = 89%, transcript says 98%)",
+    "runner_subtypes": [
+     "happiness-percent: book table gives Love = 89%, transcript says 98%"
+    ]
+   }
+  ],
+  "span_end": 49197,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    98
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "98%",
+  "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 50275,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[200]"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1331",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    200
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    200
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   3,
+   [
+    "impossible percent"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "200%",
+    "detector": "A2-nonsense",
+    "offset": 50275,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      200
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      200
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 200 > 100)",
+    "runner_subtypes": [
+     "impossible-percent: 200 > 100"
+    ]
+   }
+  ],
+  "span_end": 50279,
+  "span_facts": {
+   "impossible_percent": [
+    200
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    200
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "200%",
+  "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 664076,
+    "book_quote": "Guilt 30 4",
+    "detector": "B1-contradiction",
+    "divergence": [
+     {
+      "book": "guilt",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "numbers": {
+     "book": [],
+     "differ": true,
+     "transcript": [
+      "50"
+     ]
+    },
+    "offset": 276113,
+    "offset_ok": true,
+    "quote_head": "Guilt 30 4",
+    "quote_ok": true,
+    "slug": "reality_spirituality_and_mode"
+   }
+  ],
+  "char_offset": 50606,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B1-contradiction",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B1-contradiction"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1332",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   3,
+   [
+    "book-table number differs"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "4%",
+    "asserted_quote": "50%",
+    "detector": "B1-contradiction",
+    "offset": 50606,
+    "quote_len": 3,
+    "quote_verified": true,
+    "runner_evidence": "signals: B1-contradiction (happiness-percent: book table gives Guilt = 4%, transcript says 50%)",
+    "runner_subtypes": [
+     "happiness-percent: book table gives Guilt = 4%, transcript says 50%"
+    ]
+   }
+  ],
+  "span_end": 50609,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    50
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "50%",
+  "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt"
+ }
+]

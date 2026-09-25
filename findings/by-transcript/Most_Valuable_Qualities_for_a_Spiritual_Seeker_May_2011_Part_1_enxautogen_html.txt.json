@@ -1,0 +1,702 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 7039,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x13 vs re-derived 2 x13 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0485",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 13,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 13,
+   "tokens": 26
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x13"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "You see,",
+    "asserted_quote": "You see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see,",
+    "detector": "A1-repetition",
+    "offset": 7039,
+    "quote_len": 116,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 13,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 13,
+     "tokens": 26
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 13 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 13 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 7155,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "You see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see,",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 7197,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x11 vs re-derived 2 x11 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0486",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 11,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 11,
+   "tokens": 22
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x11"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "see, you",
+    "asserted_quote": "see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you",
+    "detector": "A1-repetition",
+    "offset": 7197,
+    "quote_len": 98,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 11,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 11,
+     "tokens": 22
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 11 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 11 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 7295,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 17902,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x4 vs re-derived 3 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0487",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 4,
+   "tokens": 12
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "200 above consciousness level",
+    "asserted_quote": "200 above consciousness level 200 above consciousness level 200 above consciousness level 200 above consciousness level",
+    "detector": "A1-repetition",
+    "offset": 17902,
+    "quote_len": 119,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 4,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 18021,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "200 above consciousness level 200 above consciousness level 200 above consciousness level 200 above consciousness level",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 417315,
+    "book_quote": "Joy 540",
+    "detector": "B1-contradiction",
+    "divergence": [
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "at"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 363307,
+    "offset_ok": true,
+    "quote_head": "Joy 540",
+    "quote_ok": true,
+    "slug": "discovery_of_the_presence_of_g"
+   }
+  ],
+  "char_offset": 23090,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B1-contradiction",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B1-contradiction"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0488",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Joy 540/570",
+    "asserted_quote": "joy at 400",
+    "detector": "B1-contradiction",
+    "offset": 23090,
+    "quote_len": 10,
+    "quote_verified": true,
+    "runner_evidence": "signals: B1-contradiction (level-log: books give Joy = [540, 570], transcript says 400)",
+    "runner_subtypes": [
+     "level-log: books give Joy = [540, 570], transcript says 400"
+    ]
+   }
+  ],
+  "span_end": 23100,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "joy at 400",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 27742,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 8-token x4 vs re-derived 8 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0489",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 8
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 8,
+   "span_repeats": 4,
+   "tokens": 32
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I have trouble reading without my glasses on.",
+    "asserted_quote": "I have trouble reading without my glasses on. I have trouble reading without my glasses on. I have trouble reading without my glasses on. I have trouble reading without my glasses on.",
+    "detector": "A1-repetition",
+    "offset": 27742,
+    "quote_len": 183,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 8
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 8,
+     "span_repeats": 4,
+     "tokens": 32
+    },
+    "runner_evidence": "signals: A1-repetition (8-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "8-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 27925,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I have trouble reading without my glasses on. I have trouble reading without my glasses on. I have trouble reading without my glasses on. I have trouble reading without my glasses on.",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 406428,
+    "book_quote": "Realize these are all human notions you have about being better. And God is not limited by human notions.\n\nAccept that the concept",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "realize these are all human notions you have about being better and god is not limited by human notions accept that the concept",
+      "op": "replace",
+      "transcript": "except"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 394037,
+    "offset_ok": true,
+    "quote_head": "Realize these are all human notions you have about being better. And G",
+    "quote_ok": true,
+    "slug": "the_wisdom_of_dr_david_r_haw"
+   }
+  ],
+  "char_offset": 33212,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0490",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Accept",
+    "asserted_quote": "Except",
+    "detector": "B2-misquote",
+    "offset": 33212,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'except' vs book 'accept' inside a 21/22-word near-verbatim match (tf-idf 0.39))",
+    "runner_subtypes": [
+     "tf-idf 0.39"
+    ]
+   }
+  ],
+  "span_end": 33218,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Except",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 406428,
+    "book_quote": "of the “fear of God” is ignorance. God is peace and love, and nothing else. There are lots of people who talk about",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "of the fear of god is ignorance god is peace and love and nothing else there are lots of people who talk about",
+      "op": "replace",
+      "transcript": "a lot"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 394168,
+    "offset_ok": true,
+    "quote_head": "of the “fear of God” is ignorance. God is peace and love, and nothing ",
+    "quote_ok": true,
+    "slug": "the_wisdom_of_dr_david_r_haw"
+   }
+  ],
+  "char_offset": 33319,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0491",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "lots",
+    "asserted_quote": "a lot",
+    "detector": "B2-misquote",
+    "offset": 33319,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'a lot' vs book 'lots' inside a 22/24-word near-verbatim match (tf-idf 0.42))",
+    "runner_subtypes": [
+     "tf-idf 0.42"
+    ]
+   }
+  ],
+  "span_end": 33324,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "a lot",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 406428,
+    "book_quote": "transcend the common human failings that are inherent in the structure of the human ego. Whatever defects you have are not just personal",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "transcend the common human failings that are inherent in the structure of the human ego whatever defects you have are not just personal",
+      "op": "replace",
+      "transcript": "feelings"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 398369,
+    "offset_ok": true,
+    "quote_head": "transcend the common human failings that are inherent in the structure",
+    "quote_ok": true,
+    "slug": "the_wisdom_of_dr_david_r_haw"
+   }
+  ],
+  "char_offset": 39612,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0492",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "failings",
+    "asserted_quote": "feelings",
+    "detector": "B2-misquote",
+    "offset": 39612,
+    "quote_len": 8,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'feelings' vs book 'failings' inside a 22/24-word near-verbatim match (tf-idf 0.51))",
+    "runner_subtypes": [
+     "tf-idf 0.51"
+    ]
+   }
+  ],
+  "span_end": 39620,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "feelings",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 406428,
+    "book_quote": "teacher at some point in one’s spiritual evolution. Happily, there’s enough power in the teachers that are available, because it accumulates over",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "teacher at some point in one s spiritual evolution happily there s enough",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "in the teachers that are",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "because it accumulates over",
+      "op": "replace",
+      "transcript": "in"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 401069,
+    "offset_ok": true,
+    "quote_head": "teacher at some point in one’s spiritual evolution. Happily, there’s e",
+    "quote_ok": true,
+    "slug": "the_wisdom_of_dr_david_r_haw"
+   }
+  ],
+  "char_offset": 44072,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0493",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "power in",
+    "asserted_quote": "power available in",
+    "detector": "B2-misquote",
+    "offset": 44072,
+    "quote_len": 18,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'available' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.45))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 44090,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "power available in",
+  "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
+ }
+]

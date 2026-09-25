@@ -1,0 +1,232 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 221512,
+    "book_quote": "I had the longest paper route in the state of Wisconsin, 18\n\nmiles out in the country. This one time, it was 10-below zero, blizzard conditions, and",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "i had the longest paper route in the state of wisconsin miles out in the country this one time it was below zero blizzard conditions and",
+      "op": "replace",
+      "transcript": "biggest"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 10712,
+    "offset_ok": true,
+    "quote_head": "I had the longest paper route in the state of Wisconsin, 18\n\nmiles out",
+    "quote_ok": true,
+    "slug": "the_highest_level_of_enlighten"
+   }
+  ],
+  "char_offset": 1899,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0475",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "longest",
+    "asserted_quote": "biggest",
+    "detector": "B2-misquote",
+    "offset": 1899,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'biggest' vs book 'longest' inside a 10/11-word near-verbatim match (tf-idf 0.28))",
+    "runner_subtypes": [
+     "tf-idf 0.28"
+    ]
+   }
+  ],
+  "span_end": 1906,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "biggest",
+  "transcript": "Love_is_a_Way_of_Being_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 34748,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x9 vs re-derived 1 x9 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0476",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 9,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 9,
+   "tokens": 9
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x9"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "ha,",
+    "asserted_quote": "ha, ha, ha, ha, ha, ha, ha, ha, ha.",
+    "detector": "A1-repetition",
+    "offset": 34748,
+    "quote_len": 35,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 9,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 9,
+     "tokens": 9
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 9 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 34783,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "ha, ha, ha, ha, ha, ha, ha, ha, ha.",
+  "transcript": "Love_is_a_Way_of_Being_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 51214,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 5-token x4 vs re-derived 5 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0477",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 5
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 5,
+   "span_repeats": 4,
+   "tokens": 20
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "a rather interesting point. It's",
+    "asserted_quote": "a rather interesting point. It's a rather interesting point. It's a rather interesting point. It's a rather interesting point. It's",
+    "detector": "A1-repetition",
+    "offset": 51214,
+    "quote_len": 131,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 5
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 5,
+     "span_repeats": 4,
+     "tokens": 20
+    },
+    "runner_evidence": "signals: A1-repetition (5-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "5-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 51345,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "a rather interesting point. It's a rather interesting point. It's a rather interesting point. It's a rather interesting point. It's",
+  "transcript": "Love_is_a_Way_of_Being_Part_2_enxautogen_html.txt"
+ }
+]

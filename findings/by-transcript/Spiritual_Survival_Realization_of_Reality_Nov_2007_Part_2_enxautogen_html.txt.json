@@ -1,0 +1,236 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 3160,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x9 vs re-derived 6 x9 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0985",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 9,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 9,
+   "tokens": 54
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x9"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "you get rid of, you know,",
+    "asserted_quote": "you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know,",
+    "detector": "A1-repetition",
+    "offset": 3160,
+    "quote_len": 233,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 9,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 9,
+     "tokens": 54
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 9 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 9 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 3393,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know,",
+  "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 3410,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 6-token x17 vs re-derived 6 x17 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0986",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 17,
+    "start_token": 0,
+    "unit_tokens": 6
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 6,
+   "span_repeats": 17,
+   "tokens": 102
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x17"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "you get rid of, you know,",
+    "asserted_quote": "you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know,",
+    "detector": "A1-repetition",
+    "offset": 3410,
+    "quote_len": 441,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 17,
+      "start_token": 0,
+      "unit_tokens": 6
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 6,
+     "span_repeats": 17,
+     "tokens": 102
+    },
+    "runner_evidence": "signals: A1-repetition (6-token unit repeated 17 times back-to-back)",
+    "runner_subtypes": [
+     "6-token unit repeated 17 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 3851,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know,",
+  "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 46652,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x10 vs re-derived 4 x10 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0987",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 10,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 10,
+   "tokens": 40
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x10"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "you can't see it.",
+    "asserted_quote": "you can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it.",
+    "detector": "A1-repetition",
+    "offset": 46652,
+    "quote_len": 179,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 10,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 10,
+     "tokens": 40
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 10 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 10 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 46831,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it.",
+  "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.txt"
+ }
+]

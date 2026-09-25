@@ -1,0 +1,702 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "At level 200, energy goes positive",
+    "detector": "A1-repetition",
+    "divergence": [
+     {
+      "book": "at level energy goes positive",
+      "op": "replace",
+      "transcript": "which all the energies are negative and above which all the energies are negative and above which all the energies are negative and above which all the energies are negative and above"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 22947,
+    "offset_ok": true,
+    "quote_head": "At level 200, energy goes positive",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   },
+   {
+    "book_chars": 797545,
+    "book_quote": "At level 200, energy goes positive",
+    "detector": "B1-contradiction",
+    "divergence": [
+     {
+      "book": "at level energy goes positive",
+      "op": "replace",
+      "transcript": "which all the energies are negative and above which all the energies are negative and above which all the energies are negative and above which all the energies are negative and above"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 22947,
+    "offset_ok": true,
+    "quote_head": "At level 200, energy goes positive",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 2318,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 8-token x4 vs re-derived 8 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   },
+   {
+    "claim_ok": true,
+    "detector": "B1-contradiction",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CERTAIN (inherited fixture)",
+  "detectors": [
+   "A1-repetition",
+   "B1-contradiction"
+  ],
+  "families": [
+   "content/doctrine",
+   "surface-form"
+  ],
+  "fixture_overlap": [
+   {
+    "confidence": "CERTAIN",
+    "evidence_class": "b",
+    "id": "CF-006",
+    "offset": 2355,
+    "quoted": "And above which all the energies are negative. And above which all the energies are negative. And above which all the energies are negative.",
+    "status": "confirmed",
+    "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN",
+    "suspected": "And above which all the energies are positive."
+   }
+  ],
+  "id": "M5R-0460",
+  "paragraph": 0,
+  "rationale": "Covers hand-confirmed fixture(s) CF-006 — CERTAIN per STANDARDS, inherited (v1 hand-read, gate-reviewed); in-sample for detector metrics (seeded=true), not admissible as precision evidence (LAW §9).",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 8
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 8,
+   "span_repeats": 4,
+   "tokens": 32
+  },
+  "review_score": [
+   5,
+   [
+    "book quote diverges word-level",
+    "book quote diverges word-level",
+    "multi-detector",
+    "in-sample (fixture overlap)"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": true,
+  "signals": [
+   {
+    "asserted_intended": "which all the energies are negative. And above",
+    "asserted_quote": "which all the energies are negative. And above which all the energies are negative. And above which all the energies are negative. And above which all the energies are negative. And above",
+    "detector": "A1-repetition",
+    "offset": 2318,
+    "quote_len": 187,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 8
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 8,
+     "span_repeats": 4,
+     "tokens": 32
+    },
+    "runner_evidence": "signals: A1-repetition (8-token unit repeated 4 times back-to-back); B1-contradiction (polarity: the side above the 200 line stated as negative; books: energy goes positive at 200)",
+    "runner_subtypes": [
+     "8-token unit repeated 4 times back-to-back"
+    ]
+   },
+   {
+    "asserted_intended": "which all the energies are negative. And above",
+    "asserted_quote": "which all the energies are negative. And above which all the energies are negative. And above which all the energies are negative. And above which all the energies are negative. And above",
+    "detector": "B1-contradiction",
+    "offset": 2318,
+    "quote_len": 187,
+    "quote_verified": true,
+    "runner_evidence": "signals: A1-repetition (8-token unit repeated 4 times back-to-back); B1-contradiction (polarity: the side above the 200 line stated as negative; books: energy goes positive at 200)",
+    "runner_subtypes": [
+     "8-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 2505,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "which all the energies are negative. And above which all the energies are negative. And above which all the energies are negative. And above which all the energies are negative. And above",
+  "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 664076,
+    "book_quote": "Courage 200 55",
+    "detector": "A2-nonsense",
+    "divergence": [
+     {
+      "book": "courage",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "numbers": {
+     "book": [],
+     "differ": true,
+     "transcript": [
+      "255"
+     ]
+    },
+    "offset": 276008,
+    "offset_ok": true,
+    "quote_head": "Courage 200 55",
+    "quote_ok": true,
+    "slug": "reality_spirituality_and_mode"
+   },
+   {
+    "book_chars": 664076,
+    "book_quote": "Courage 200 55",
+    "detector": "B1-contradiction",
+    "divergence": [
+     {
+      "book": "courage",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "numbers": {
+     "book": [],
+     "differ": true,
+     "transcript": [
+      "255"
+     ]
+    },
+    "offset": 276008,
+    "offset_ok": true,
+    "quote_head": "Courage 200 55",
+    "quote_ok": true,
+    "slug": "reality_spirituality_and_mode"
+   }
+  ],
+  "char_offset": 4543,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[255]"
+   },
+   {
+    "claim_ok": true,
+    "detector": "B1-contradiction",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CERTAIN (inherited fixture)",
+  "detectors": [
+   "A2-nonsense",
+   "B1-contradiction"
+  ],
+  "families": [
+   "content/doctrine",
+   "surface-form"
+  ],
+  "fixture_overlap": [
+   {
+    "confidence": "CERTAIN",
+    "evidence_class": "b",
+    "id": "CF-003",
+    "offset": 4543,
+    "quoted": "255% of people are happy",
+    "status": "confirmed",
+    "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN",
+    "suspected": "55% of people are happy"
+   }
+  ],
+  "id": "M5R-0461",
+  "paragraph": 0,
+  "rationale": "Covers hand-confirmed fixture(s) CF-003 — CERTAIN per STANDARDS, inherited (v1 hand-read, gate-reviewed); in-sample for detector metrics (seeded=true), not admissible as precision evidence (LAW §9).",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    255
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    255
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   10,
+   [
+    "book-table number differs",
+    "book-table number differs",
+    "impossible percent",
+    "multi-detector",
+    "in-sample (fixture overlap)"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": true,
+  "signals": [
+   {
+    "asserted_intended": "55%",
+    "asserted_quote": "255%",
+    "detector": "A2-nonsense",
+    "offset": 4543,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      255
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      255
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 255 > 100); B1-contradiction (happiness-percent: book table gives Courage = 55%, transcript says 255%)",
+    "runner_subtypes": [
+     "impossible-percent: 255 > 100",
+     "happiness-percent: book table gives Courage = 55%, transcript says 255%"
+    ]
+   },
+   {
+    "asserted_intended": "55%",
+    "asserted_quote": "255%",
+    "detector": "B1-contradiction",
+    "offset": 4543,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 255 > 100); B1-contradiction (happiness-percent: book table gives Courage = 55%, transcript says 255%)",
+    "runner_subtypes": [
+     "impossible-percent: 255 > 100",
+     "happiness-percent: book table gives Courage = 55%, transcript says 255%"
+    ]
+   }
+  ],
+  "span_end": 4547,
+  "span_facts": {
+   "impossible_percent": [
+    255
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    255
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "255%",
+  "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 664076,
+    "book_quote": "Love 500 89",
+    "detector": "B1-contradiction",
+    "divergence": [
+     {
+      "book": "love",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "numbers": {
+     "book": [],
+     "differ": true,
+     "transcript": [
+      "90"
+     ]
+    },
+    "offset": 275922,
+    "offset_ok": true,
+    "quote_head": "Love 500 89",
+    "quote_ok": true,
+    "slug": "reality_spirituality_and_mode"
+   }
+  ],
+  "char_offset": 27565,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B1-contradiction",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B1-contradiction"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0462",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   3,
+   [
+    "book-table number differs"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "89%",
+    "asserted_quote": "90%",
+    "detector": "B1-contradiction",
+    "offset": 27565,
+    "quote_len": 3,
+    "quote_verified": true,
+    "runner_evidence": "signals: B1-contradiction (happiness-percent: book table gives Love = 89%, transcript says 90%)",
+    "runner_subtypes": [
+     "happiness-percent: book table gives Love = 89%, transcript says 90%"
+    ]
+   }
+  ],
+  "span_end": 27568,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    90
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "90%",
+  "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 28028,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x5 vs re-derived 7 x5 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0463",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 5,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 5,
+   "tokens": 35
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x5"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "It is discovered that to be loved.",
+    "asserted_quote": "It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved.",
+    "detector": "A1-repetition",
+    "offset": 28028,
+    "quote_len": 174,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 5,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 5,
+     "tokens": 35
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 5 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 5 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 28202,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved.",
+  "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 31214,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x26 vs re-derived 1 x26 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0464",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 26,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 26,
+   "tokens": 26
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x26"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "No.",
+    "asserted_quote": "No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No.",
+    "detector": "A1-repetition",
+    "offset": 31214,
+    "quote_len": 103,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 26,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 26,
+     "tokens": 26
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 26 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 26 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 31317,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No.",
+  "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 32639,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=2"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0465",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "động",
+    "detector": "A2-nonsense",
+    "offset": 32639,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 2,
+     "non_latin_letters": 0,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "runner_subtypes": [
+     "script-mix: mixed/foreign letters in token"
+    ]
+   }
+  ],
+  "span_end": 32643,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "động",
+  "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 32667,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=1"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0466",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 1,
+   "non_latin_letters": 1,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "杛",
+    "detector": "A2-nonsense",
+    "offset": 32667,
+    "quote_len": 1,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 1,
+     "non_latin_letters": 1,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "runner_subtypes": [
+     "1 tokens"
+    ]
+   }
+  ],
+  "span_end": 32668,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 1,
+   "non_latin_letters": 1,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "杛",
+  "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+ }
+]

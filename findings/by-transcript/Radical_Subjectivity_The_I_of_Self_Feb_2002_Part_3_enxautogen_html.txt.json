@@ -1,0 +1,874 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 838,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[101]"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0700",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    101
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    101
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   3,
+   [
+    "impossible percent"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "101%",
+    "detector": "A2-nonsense",
+    "offset": 838,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      101
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      101
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 101 > 100)",
+    "runner_subtypes": [
+     "impossible-percent: 101 > 100"
+    ]
+   }
+  ],
+  "span_end": 842,
+  "span_facts": {
+   "impossible_percent": [
+    101
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    101
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "101%",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "the planet. If you examine poisons, you will find some interesting things.\n\nThe black mamba has 14 different poisonous enzymes; any one of them",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "planet if you examine poisons you will find some interesting things the black",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "has different poisonous enzymes any one of them",
+      "op": "replace",
+      "transcript": "black"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 386283,
+    "offset_ok": true,
+    "quote_head": "the planet. If you examine poisons, you will find some interesting thi",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 13180,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0701",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "The black",
+    "asserted_quote": "The mamba, black",
+    "detector": "B2-misquote",
+    "offset": 13180,
+    "quote_len": 16,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'mamba' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.59))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 13196,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "The mamba, black",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "interesting book called Red World/Green World by a lady named Margaret Chaney, and she said that there’s Red people and Green people, and there’s Red foods",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "interesting book called red world green world by a lady named margaret chaney and she said that there s red people and green people and there s red foods",
+      "op": "replace",
+      "transcript": "cheney"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 391263,
+    "offset_ok": true,
+    "quote_head": "interesting book called Red World/Green World by a lady named Margaret",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 18528,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0702",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Chaney",
+    "asserted_quote": "Cheney",
+    "detector": "B2-misquote",
+    "offset": 18528,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'cheney' vs book 'chaney' inside a 22/24-word near-verbatim match (tf-idf 0.59))",
+    "runner_subtypes": [
+     "tf-idf 0.59"
+    ]
+   }
+  ],
+  "span_end": 18534,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Cheney",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "interesting book called Red World/Green World by a lady named Margaret Chaney, and she said that there’s Red people and Green people, and there’s Red foods",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "interesting book called red world green world by a lady named margaret chaney and she said that there s red",
+      "op": "replace",
+      "transcript": "there's"
+     },
+     {
+      "book": "and green people and there s",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "foods",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 391263,
+    "offset_ok": true,
+    "quote_head": "interesting book called Red World/Green World by a lady named Margaret",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 18554,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0703",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "there’s Red",
+    "asserted_quote": "there's people, red",
+    "detector": "B2-misquote",
+    "offset": 18554,
+    "quote_len": 19,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'people' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.59))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 18573,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "there's people, red",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 19943,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=2"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0704",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 2,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "הע",
+    "detector": "A2-nonsense",
+    "offset": 19943,
+    "quote_len": 2,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 2,
+     "non_latin_letters": 2,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+    "runner_subtypes": [
+     "1 tokens"
+    ]
+   }
+  ],
+  "span_end": 19945,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 2,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "הע",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "thing collapsed of itself without a shot. Gorbachev did not fire a shot. So, the West with all of its brave talk about “the",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "thing collapsed of itself without a shot gorbachev did not fire a shot so the west with all of its brave talk about the",
+      "op": "replace",
+      "transcript": "brief"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 404701,
+    "offset_ok": true,
+    "quote_head": "thing collapsed of itself without a shot. Gorbachev did not fire a sho",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 33836,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0705",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "brave",
+    "asserted_quote": "brief",
+    "detector": "B2-misquote",
+    "offset": 33836,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'brief' vs book 'brave' inside a 23/24-word near-verbatim match (tf-idf 0.40))",
+    "runner_subtypes": [
+     "tf-idf 0.40"
+    ]
+   }
+  ],
+  "span_end": 33841,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "brief",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "universe, which is consistent with the concept of the holographic universe and also the nonlinear dimensions of reality, it isn’t that “this",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "universe which is consistent with",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "whole"
+     },
+     {
+      "book": "of the holographic universe and also the nonlinear dimensions of reality it isn t that this",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 412998,
+    "offset_ok": true,
+    "quote_head": "universe, which is consistent with the concept of the holographic univ",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 41914,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0706",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the concept",
+    "asserted_quote": "the whole concept",
+    "detector": "B2-misquote",
+    "offset": 41914,
+    "quote_len": 17,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'whole' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.80))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 41931,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "the whole concept",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "for all things. And the appropriate timing of peace appearing and the appropriate time of praying for peace are probably simultaneous but not causal",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "for all things and the appropriate timing of peace",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "and the appropriate time of praying for peace are probably simultaneous but not causal",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 414285,
+    "offset_ok": true,
+    "quote_head": "for all things. And the appropriate timing of peace appearing and the ",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 43288,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0707",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "praying",
+    "asserted_quote": "appearing",
+    "detector": "B2-misquote",
+    "offset": 43288,
+    "quote_len": 9,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'appearing' vs book 'praying' inside a 23/24-word near-verbatim match (tf-idf 0.47))",
+    "runner_subtypes": [
+     "tf-idf 0.47"
+    ]
+   }
+  ],
+  "span_end": 43297,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "appearing",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 45555,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived impossible percent=[101]"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0708",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [
+    101
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    101
+   ],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   3,
+   [
+    "impossible percent"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "101%",
+    "detector": "A2-nonsense",
+    "offset": 45555,
+    "quote_len": 4,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [
+      101
+     ],
+     "non_ascii_letters": 0,
+     "non_latin_letters": 0,
+     "percent_values": [
+      101
+     ],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (impossible-percent: 101 > 100)",
+    "runner_subtypes": [
+     "impossible-percent: 101 > 100"
+    ]
+   }
+  ],
+  "span_end": 45559,
+  "span_facts": {
+   "impossible_percent": [
+    101
+   ],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [
+    101
+   ],
+   "replacement_chars": 0
+  },
+  "span_text": "101%",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "energy and vibration. And there were always friendly dogs running around. So again, it isn’t that this caused that, but a higher level of",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "energy and vibration and there were always friendly dogs running around so again it isn t that this caused that but a higher level of",
+      "op": "replace",
+      "transcript": "going"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 419385,
+    "offset_ok": true,
+    "quote_head": "energy and vibration. And there were always friendly dogs running arou",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 48548,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0709",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "running",
+    "asserted_quote": "going",
+    "detector": "B2-misquote",
+    "offset": 48548,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'going' vs book 'running' inside a 22/24-word near-verbatim match (tf-idf 0.35))",
+    "runner_subtypes": [
+     "tf-idf 0.35"
+    ]
+   }
+  ],
+  "span_end": 48553,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "going",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "instrument. So, a person who is profoundly committed to God and digs with a small shovel will get further than a person with a",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "instrument so a person who is profoundly committed to god and digs with a small shovel will get further than a person with a",
+      "op": "replace",
+      "transcript": "farther"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 424347,
+    "offset_ok": true,
+    "quote_head": "instrument. So, a person who is profoundly committed to God and digs w",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 53186,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0710",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "further",
+    "asserted_quote": "farther",
+    "detector": "B2-misquote",
+    "offset": 53186,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'farther' vs book 'further' inside a 23/24-word near-verbatim match (tf-idf 0.47))",
+    "runner_subtypes": [
+     "tf-idf 0.47"
+    ]
+   }
+  ],
+  "span_end": 53193,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "farther",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+ }
+]

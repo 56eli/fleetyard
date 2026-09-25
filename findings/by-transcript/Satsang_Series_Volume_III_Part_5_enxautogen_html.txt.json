@@ -1,0 +1,306 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 544,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x44 vs re-derived 1 x44 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0766",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 44,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 44,
+   "tokens": 44
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x44"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Sweetheart.",
+    "asserted_quote": "Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart.",
+    "detector": "A1-repetition",
+    "offset": 544,
+    "quote_len": 527,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 44,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 44,
+     "tokens": 44
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 44 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 44 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 1071,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart.",
+  "transcript": "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 19093,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x27 vs re-derived 1 x27 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0767",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 27,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 27,
+   "tokens": 27
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x27"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yeah.",
+    "asserted_quote": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "detector": "A1-repetition",
+    "offset": 19093,
+    "quote_len": 161,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 27,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 27,
+     "tokens": 27
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 27 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 27 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 19254,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "transcript": "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 30571,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 1-token x9 vs re-derived 1 x9 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0768",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 9,
+    "start_token": 0,
+    "unit_tokens": 1
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 1,
+   "span_repeats": 9,
+   "tokens": 9
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x9"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Yeah.",
+    "asserted_quote": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+    "detector": "A1-repetition",
+    "offset": 30571,
+    "quote_len": 53,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 9,
+      "start_token": 0,
+      "unit_tokens": 1
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 1,
+     "span_repeats": 9,
+     "tokens": 9
+    },
+    "runner_evidence": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+    "runner_subtypes": [
+     "1-token unit repeated 9 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 30624,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "transcript": "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 30640,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A2-nonsense",
+    "note": "re-derived non-ASCII letters=2"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A2-nonsense"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0769",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_anomaly": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 2,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "review_score": [
+   2,
+   [
+    "script-mix"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": null,
+    "asserted_quote": "greatкрiterian",
+    "detector": "A2-nonsense",
+    "offset": 30640,
+    "quote_len": 14,
+    "quote_verified": true,
+    "rederived": {
+     "impossible_percent": [],
+     "non_ascii_letters": 2,
+     "non_latin_letters": 2,
+     "percent_values": [],
+     "replacement_chars": 0
+    },
+    "runner_evidence": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+    "runner_subtypes": [
+     "script-mix: mixed/foreign letters in token"
+    ]
+   }
+  ],
+  "span_end": 30654,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 2,
+   "non_latin_letters": 2,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "greatкрiterian",
+  "transcript": "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt"
+ }
+]

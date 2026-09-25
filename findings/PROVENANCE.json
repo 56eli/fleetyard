@@ -1,0 +1,69 @@
+{
+ "inputs": {
+  "archive_ref": "origin/arena/01a0d581-fleetyard",
+  "book_store": "corpus/docdocgo/html/merged-book-texts_json_1.js",
+  "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
+  "fixtures_digest_sha256": "c5d8f6f3db3b0d01005a06f9ad40b649b09584f38e4c98b531251c73555f755a",
+  "fixtures_files": 2,
+  "overlays_digest": "027f82a0d2522f3e0f9403c7d0f787a67e30560e941b29fa4ee813f6dbb5dd6e",
+  "overlays_digest_method": "sha256 over sorted lines '<sha256(text)>  <basename>' for all 230 corpus/docdocgo/overlays/*.txt",
+  "records_digest_sha256": "d8c935367c8d0ab87b1c7b99ef1f0a54bcd44d62ca2aec5c8fab3d36b45ec6c4",
+  "records_dir": "evidence/runs/m5-raw/records",
+  "records_files": 230
+ },
+ "outputs": {
+  "by_transcript_digest": "107b6d346a79fdce3f96704f2b1ae743e9f899fc02cc8ceb97b1e91a7b33acb9",
+  "by_transcript_files": 230,
+  "findings": 1334,
+  "ledger.jsonl": "c05429f941ed2444ed48017748f3cfda2e35b7f313e5fdf018b06eff56c79740"
+ },
+ "run_utc": "2026-09-25T18:39:30Z",
+ "stats": {
+  "book_refs": 242,
+  "book_refs_bad": 0,
+  "book_refs_nonhawkins": 0,
+  "book_refs_ok": 242,
+  "citation_failures": 0,
+  "claims": {
+   "A1-repetition": {
+    "checked": 938,
+    "corroborated": 840,
+    "failed": 98,
+    "not_checked": 0
+   },
+   "A2-nonsense": {
+    "checked": 158,
+    "corroborated": 158,
+    "failed": 0,
+    "not_checked": 0
+   },
+   "B1-contradiction": {
+    "checked": 12,
+    "corroborated": 12,
+    "failed": 0,
+    "not_checked": 0
+   },
+   "B2-misquote": {
+    "checked": 228,
+    "corroborated": 228,
+    "failed": 0,
+    "not_checked": 0
+   }
+  },
+  "duplicates_removed": 0,
+  "fixtures_active": 16,
+  "per_detector": {
+   "A1-repetition": 938,
+   "A2-nonsense": 158,
+   "B1-contradiction": 12,
+   "B2-misquote": 228
+  },
+  "raw_signals": 1336,
+  "record_files": 230,
+  "seeded": 2,
+  "transcripts_total": 230,
+  "transcripts_with_findings": 206
+ },
+ "tool": "tools/m5r_reduce.py",
+ "tool_sha256": "a3db2f9618fd174718491875b1360b6bfd61f8aa18321788a7015e4305f010ec"
+}

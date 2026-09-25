@@ -1,0 +1,812 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "infinite, and analogous to a movie screen upon which we experience the movement of the movie. It is because of consciousness that we experience what is",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "infinite and analogous to a movie screen upon which we experience the movement of the movie it is because of consciousness that we experience what is",
+      "op": "replace",
+      "transcript": "moving"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 53344,
+    "offset_ok": true,
+    "quote_head": "infinite, and analogous to a movie screen upon which we experience the",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 3481,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0436",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "movement",
+    "asserted_quote": "moving",
+    "detector": "B2-misquote",
+    "offset": 3481,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'moving' vs book 'movement' inside a 21/24-word near-verbatim match (tf-idf 0.39))",
+    "runner_subtypes": [
+     "tf-idf 0.39"
+    ]
+   }
+  ],
+  "span_end": 3487,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "moving",
+  "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "none of those illnesses whatsoever. That personality says, “I don’t believe in any of those things. I am not subject to them",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "none of those illnesses whatsoever that personality says i don t believe in any of those things i am not subject to them",
+      "op": "replace",
+      "transcript": "may say"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 55810,
+    "offset_ok": true,
+    "quote_head": "none of those illnesses whatsoever. That personality says, “I don’t be",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 6313,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0437",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "says",
+    "asserted_quote": "may say",
+    "detector": "B2-misquote",
+    "offset": 6313,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'may say' vs book 'says' inside a 19/22-word near-verbatim match (tf-idf 0.48))",
+    "runner_subtypes": [
+     "tf-idf 0.48"
+    ]
+   }
+  ],
+  "span_end": 6320,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "may say",
+  "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "picked up very early in life from a chance remark heard on television, or something misunderstood in a book, or a remark that a teacher",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "picked up very early in life from a chance",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "heard on television or",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "misunderstood in a book or a remark that a teacher",
+      "op": "replace",
+      "transcript": "heard"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 58783,
+    "offset_ok": true,
+    "quote_head": "picked up very early in life from a chance remark heard on television,",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 10047,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0438",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "remark heard",
+    "asserted_quote": "remark, something heard",
+    "detector": "B2-misquote",
+    "offset": 10047,
+    "quote_len": 23,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'something' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.48))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 10070,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "remark, something heard",
+  "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "are going on in the cells, resulting in pathological changes within the anatomy and dysfunction that results in a coronary attack, heart disease, or heart failure. The heart failure comes about partly as a result of years of negative mental attitudes. The mind would like to blame it on cholesterol, stress, one’s lifestyle, genetics, what goes on in the family, and so on. These are all merely explanations, excuses, and rationalizations to try to make intelligible that which is not clearly defined",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "are going on in the cells resulting in pathological changes within the anatomy and dysfunction that results in a coronary attack heart disease or heart failure the heart failure comes about partly as a result of years of negative mental attitudes the mind would like to blame it on cholesterol stress one s lifestyle genetics what goes on in the family and so on these are all merely explanations excuses and rationalizations to try to make intelligible that which is not clearly defined",
+      "op": "replace",
+      "transcript": "trying"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 70133,
+    "offset_ok": true,
+    "quote_head": "are going on in the cells, resulting in pathological changes within th",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 23410,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0439",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "to try",
+    "asserted_quote": "Trying",
+    "detector": "B2-misquote",
+    "offset": 23410,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'trying' vs book 'to try' inside a 13/15-word near-verbatim match (tf-idf 0.33))",
+    "runner_subtypes": [
+     "tf-idf 0.33"
+    ]
+   }
+  ],
+  "span_end": 23416,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Trying",
+  "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "allergies. I was also sensitive to inhalants in the atmosphere. I could not walk into a place that had been exterminated within the previous couple",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "allergies i was also sensitive to",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "things"
+     },
+     {
+      "book": "the atmosphere i could not walk into a place that had been exterminated within the previous couple",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 73244,
+    "offset_ok": true,
+    "quote_head": "allergies. I was also sensitive to inhalants in the atmosphere. I coul",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 26340,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0440",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "inhalants in",
+    "asserted_quote": "inhalants things in",
+    "detector": "B2-misquote",
+    "offset": 26340,
+    "quote_len": 19,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'things' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.46))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 26359,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "inhalants things in",
+  "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "with so many illnesses could hardly be said to be free of conflict. I began to study my perfectionism and see how this tendency, which allowed me to forgive others but did not allow me to forgive",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "with so many illnesses could hardly be said to be free of conflict i began to study my perfectionism and see how",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "perfectionistic"
+     },
+     {
+      "book": "which allowed me to forgive others but did not allow me to forgive",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 76900,
+    "offset_ok": true,
+    "quote_head": "with so many illnesses could hardly be said to be free of conflict. I ",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 28955,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0441",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "this tendency",
+    "asserted_quote": "this perfectionistic tendency",
+    "detector": "B2-misquote",
+    "offset": 28955,
+    "quote_len": 29,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'perfectionistic' vs book '' inside a 21/23-word near-verbatim match (tf-idf 0.52))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 28984,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "this perfectionistic tendency",
+  "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 144920,
+    "book_quote": "it can be healed. The healing of the body comes about with the healing of the mind. All the physical illnesses, which I eventually let",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "it can be healed the healing of the body comes",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "automatically"
+     },
+     {
+      "book": "the healing of the mind all the physical illnesses which i eventually let",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 52571,
+    "offset_ok": true,
+    "quote_head": "it can be healed. The healing of the body comes about with the healing",
+    "quote_ok": true,
+    "slug": "the_ego_is_not_the_real_you__w"
+   }
+  ],
+  "char_offset": 38574,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0442",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "about with",
+    "asserted_quote": "about automatically with",
+    "detector": "B2-misquote",
+    "offset": 38574,
+    "quote_len": 24,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'automatically' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.43))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 38598,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "about automatically with",
+  "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "and to alcoholism in particular. It was a very important issue. I was a firm believer in it when I came to the",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "and to alcoholism in particular it was a very important issue",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "myself"
+     },
+     {
+      "book": "a firm believer in it when i came to the",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 89514,
+    "offset_ok": true,
+    "quote_head": "and to alcoholism in particular. It was a very important issue. I was ",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 42967,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0443",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I was",
+    "asserted_quote": "i myself was",
+    "detector": "B2-misquote",
+    "offset": 42967,
+    "quote_len": 12,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'myself' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.37))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 42979,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "i myself was",
+  "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 53332,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x3 vs re-derived 4 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0444",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 3,
+   "tokens": 12
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I am the source,",
+    "asserted_quote": "I am the source, I am the source. I am the source.",
+    "detector": "A1-repetition",
+    "offset": 53332,
+    "quote_len": 50,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 3,
+     "tokens": 12
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 53382,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I am the source, I am the source. I am the source.",
+  "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "all because the minute I got the pesticide story, goodbye, fruit. Then I went to vegetables. Oh, oh! Vegetables are full of it, too. They",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "all because the minute i got the pesticide story goodbye fruit then i went to vegetables oh oh vegetables are full of it too they",
+      "op": "replace",
+      "transcript": "you get"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 99010,
+    "offset_ok": true,
+    "quote_head": "all because the minute I got the pesticide story, goodbye, fruit. Then",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 56099,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0445",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I got",
+    "asserted_quote": "you get",
+    "detector": "B2-misquote",
+    "offset": 56099,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'you get' vs book 'i got' inside a 21/24-word near-verbatim match (tf-idf 0.55))",
+    "runner_subtypes": [
+     "tf-idf 0.55"
+    ]
+   }
+  ],
+  "span_end": 56106,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "you get",
+  "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+ }
+]

@@ -1,0 +1,685 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "appears friendly, and the future looks hopeful and promising. The view of the God of this kind of world is promising, hopeful, and",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "appears friendly and the future looks hopeful and promising the view",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "the",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "of this kind of world is promising hopeful and",
+      "op": "replace",
+      "transcript": "the"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 221995,
+    "offset_ok": true,
+    "quote_head": "appears friendly, and the future looks hopeful and promising. The view",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 17166,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0942",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "of the",
+    "asserted_quote": "of god, the",
+    "detector": "B2-misquote",
+    "offset": 17166,
+    "quote_len": 11,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'god' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.65))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 17177,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "of god, the",
+  "transcript": "Spiritual_First_Aid_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "we have an orientation to the field.\n\nThat which is truthful carries greater power and calibrates at a higher number. It is a",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "we have an orientation to the field that which is",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "dan"
+     },
+     {
+      "book": "greater power and calibrates at a higher number it is a",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 225552,
+    "offset_ok": true,
+    "quote_head": "we have an orientation to the field.\n\nThat which is truthful carries g",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 21205,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0943",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "truthful carries",
+    "asserted_quote": "truthful, Dan, carries",
+    "detector": "B2-misquote",
+    "offset": 21205,
+    "quote_len": 22,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'dan' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.33))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 21227,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "truthful, Dan, carries",
+  "transcript": "Spiritual_First_Aid_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "way to avoid spiritual crises and the need for spiritual first aid in the future is to back up a bit and do some individual",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "way to avoid spiritual crises and the need for spiritual first aid in the future is to back",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "perhaps"
+     },
+     {
+      "book": "bit and do some individual",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 226523,
+    "offset_ok": true,
+    "quote_head": "way to avoid spiritual crises and the need for spiritual first aid in ",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 22271,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0944",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "up a",
+    "asserted_quote": "up perhaps a",
+    "detector": "B2-misquote",
+    "offset": 22271,
+    "quote_len": 12,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'perhaps' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.43))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 22283,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "up perhaps a",
+  "transcript": "Spiritual_First_Aid_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "of the teaching?” This is helpful because the child within continues to be naïve and innocent. The innocence, on the other hand, is what",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "of the teaching this is helpful because the child",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "us"
+     },
+     {
+      "book": "to be na ve and innocent the innocence on the other hand is what",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 226725,
+    "offset_ok": true,
+    "quote_head": "of the teaching?” This is helpful because the child within continues t",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 22479,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0945",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "within continues",
+    "asserted_quote": "within us continues",
+    "detector": "B2-misquote",
+    "offset": 22479,
+    "quote_len": 19,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'us' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.41))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 22498,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "within us continues",
+  "transcript": "Spiritual_First_Aid_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "one can experience the truth of oneself through one’s inner spiritual work. The creation of a safe space then requires teachers who have no desire to exploit or invalidate anyone and are therefore examples of their own principles. They are devoid of exploitation of followers for ‘the sake of the movement’ or ‘the cause’. There is",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "one can experience the truth",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "within"
+     },
+     {
+      "book": "through one s inner spiritual work the creation of a safe space then requires teachers who have no desire to exploit or invalidate anyone and are therefore examples of their own principles they are devoid of exploitation of followers for the sake of the movement or the cause there is",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 234421,
+    "offset_ok": true,
+    "quote_head": "one can experience the truth of oneself through one’s inner spiritual ",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 31979,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0946",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "of oneself",
+    "asserted_quote": "of within oneself",
+    "detector": "B2-misquote",
+    "offset": 31979,
+    "quote_len": 17,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'within' vs book '' inside a 20/22-word near-verbatim match (tf-idf 0.32))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 31996,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "of within oneself",
+  "transcript": "Spiritual_First_Aid_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "as negative and associated with sin and suffering for which the God of that level is the great destroyer, with the process being one of destruction, self-hatred, self-pity, and",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "as negative and associated with sin and suffering for",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "the",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "of that level is",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "great destroyer with the process being one of destruction self hatred self pity and",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 240104,
+    "offset_ok": true,
+    "quote_head": "as negative and associated with sin and suffering for which the God of",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 38370,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0947",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "which the",
+    "asserted_quote": "which God the",
+    "detector": "B2-misquote",
+    "offset": 38370,
+    "quote_len": 13,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'god' vs book '' inside a 18/19-word near-verbatim match (tf-idf 0.37))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 38383,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "which God the",
+  "transcript": "Spiritual_First_Aid_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "is not devious. It hasn’t learned to lie; it hasn’t learned the values of judgment and criticism. The child is openly trusting",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "is not devious it hasn t learned to lie it hasn t learned",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": null,
+      "op": "delete",
+      "transcript": "spurious"
+     },
+     {
+      "book": "of judgment and criticism the child is openly trusting",
+      "op": "insert",
+      "transcript": null
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 250202,
+    "offset_ok": true,
+    "quote_head": "is not devious. It hasn’t learned to lie; it hasn’t learned the values",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 50649,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0948",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the values",
+    "asserted_quote": "the spurious values",
+    "detector": "B2-misquote",
+    "offset": 50649,
+    "quote_len": 19,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'spurious' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.49))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 50668,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "the spurious values",
+  "transcript": "Spiritual_First_Aid_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 797545,
+    "book_quote": "but from the ultimate compassion, the owning of ourself from this level, the joy of the spiritual work, and the saying “thank you” to all the",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "but from the ultimate compassion the owning of ourself from this level the joy of the spiritual work and the saying thank you to all the",
+      "op": "replace",
+      "transcript": "oneself"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 258765,
+    "offset_ok": true,
+    "quote_head": "but from the ultimate compassion, the owning of ourself from this leve",
+    "quote_ok": true,
+    "slug": "healing_and_recovery"
+   }
+  ],
+  "char_offset": 61525,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0949",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "ourself",
+    "asserted_quote": "oneself",
+    "detector": "B2-misquote",
+    "offset": 61525,
+    "quote_len": 7,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'oneself' vs book 'ourself' inside a 23/24-word near-verbatim match (tf-idf 0.36))",
+    "runner_subtypes": [
+     "tf-idf 0.36"
+    ]
+   }
+  ],
+  "span_end": 61532,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "oneself",
+  "transcript": "Spiritual_First_Aid_enxautogen_html.txt"
+ }
+]

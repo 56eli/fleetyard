@@ -1,0 +1,150 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 8841,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x44 vs re-derived 3 x44 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1226",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 44,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 44,
+   "tokens": 132
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x44"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "And we did.",
+    "asserted_quote": "And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did.",
+    "detector": "A1-repetition",
+    "offset": 8841,
+    "quote_len": 527,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 44,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 44,
+     "tokens": 132
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 44 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 44 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 9368,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did.",
+  "transcript": "Transcending_Barriers_Jun_2005_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 72894,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": false,
+    "detector": "A1-repetition",
+    "note": "claim 10-token x3 vs re-derived None xNone (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": false,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1227",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": null,
+   "span_fully_periodic": false,
+   "span_period_tokens": null,
+   "span_repeats": null,
+   "tokens": 30
+  },
+  "review_score": [
+   1,
+   [
+    "runner claim not re-derived"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "Truth is comparable, then, to electricity running down a wire.",
+    "asserted_quote": "Truth is comparable, then, to electricity running down a wire. Truth is comparable, then, to electricity running down a wire. Truth is comparable, then, to electricity running down a wire.",
+    "detector": "A1-repetition",
+    "offset": 72894,
+    "quote_len": 188,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": null,
+     "span_fully_periodic": false,
+     "span_period_tokens": null,
+     "span_repeats": null,
+     "tokens": 30
+    },
+    "runner_evidence": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "10-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 73082,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "Truth is comparable, then, to electricity running down a wire. Truth is comparable, then, to electricity running down a wire. Truth is comparable, then, to electricity running down a wire.",
+  "transcript": "Transcending_Barriers_Jun_2005_Part_1_enxautogen_html.txt"
+ }
+]

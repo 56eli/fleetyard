@@ -1,0 +1,386 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 664076,
+    "book_quote": "All contextualizations of the world are conjectural mentations as life is lived solely by subjective experience",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "all contextualizations of the world are conjectural mentations as life is lived solely by subjective experience",
+      "op": "replace",
+      "transcript": "limitations"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 436571,
+    "offset_ok": true,
+    "quote_head": "All contextualizations of the world are conjectural mentations as life",
+    "quote_ok": true,
+    "slug": "reality_spirituality_and_mode"
+   }
+  ],
+  "char_offset": 24350,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1303",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "mentations",
+    "asserted_quote": "limitations",
+    "detector": "B2-misquote",
+    "offset": 24350,
+    "quote_len": 11,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'limitations' vs book 'mentations' inside a 15/16-word near-verbatim match (tf-idf 0.48))",
+    "runner_subtypes": [
+     "tf-idf 0.48"
+    ]
+   }
+  ],
+  "span_end": 24361,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "limitations",
+  "transcript": "What_is_the_World_Feb_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 37324,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 5-token x8 vs re-derived 5 x8 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1304",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 8,
+    "start_token": 0,
+    "unit_tokens": 5
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 5,
+   "span_repeats": 8,
+   "tokens": 40
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x8"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I'm going to go and",
+    "asserted_quote": "I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and",
+    "detector": "A1-repetition",
+    "offset": 37324,
+    "quote_len": 159,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 8,
+      "start_token": 0,
+      "unit_tokens": 5
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 5,
+     "span_repeats": 8,
+     "tokens": 40
+    },
+    "runner_evidence": "signals: A1-repetition (5-token unit repeated 8 times back-to-back)",
+    "runner_subtypes": [
+     "5-token unit repeated 8 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 37483,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and",
+  "transcript": "What_is_the_World_Feb_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 37494,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 5-token x27 vs re-derived 5 x27 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1305",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 27,
+    "start_token": 0,
+    "unit_tokens": 5
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 5,
+   "span_repeats": 27,
+   "tokens": 135
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x27"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "and I'm going to go",
+    "asserted_quote": "and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go",
+    "detector": "A1-repetition",
+    "offset": 37494,
+    "quote_len": 539,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 27,
+      "start_token": 0,
+      "unit_tokens": 5
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 5,
+     "span_repeats": 27,
+     "tokens": 135
+    },
+    "runner_evidence": "signals: A1-repetition (5-token unit repeated 27 times back-to-back)",
+    "runner_subtypes": [
+     "5-token unit repeated 27 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 38033,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go and I'm going to go",
+  "transcript": "What_is_the_World_Feb_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 53254,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x3 vs re-derived 7 x3 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1306",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 3,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 3,
+   "tokens": 21
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "what do you really need to survive?",
+    "asserted_quote": "what do you really need to survive? What do you really need to survive? What do you really need to survive?",
+    "detector": "A1-repetition",
+    "offset": 53254,
+    "quote_len": 107,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 3,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 3,
+     "tokens": 21
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 3 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 53361,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "what do you really need to survive? What do you really need to survive? What do you really need to survive?",
+  "transcript": "What_is_the_World_Feb_2009_Part_2_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 72081,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x4 vs re-derived 7 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1307",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 4,
+   "tokens": 28
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "I wonder what they meant by that.",
+    "asserted_quote": "I wonder what they meant by that. I wonder what they meant by that. I wonder what they meant by that. I wonder what they meant by that.",
+    "detector": "A1-repetition",
+    "offset": 72081,
+    "quote_len": 135,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 4,
+     "tokens": 28
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 72216,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "I wonder what they meant by that. I wonder what they meant by that. I wonder what they meant by that. I wonder what they meant by that.",
+  "transcript": "What_is_the_World_Feb_2009_Part_2_enxautogen_html.txt"
+ }
+]

@@ -1,0 +1,853 @@
+[
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "God is both immanent and transcendent. Religion has to do with God as transcendent. Spirituality, Enlightenment, the way of Zen and the",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "god is both immanent and transcendent religion has to do with god as transcendent spirituality enlightenment the way of zen and the",
+      "op": "replace",
+      "transcript": "imminent"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 216019,
+    "offset_ok": true,
+    "quote_head": "God is both immanent and transcendent. Religion has to do with God as ",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 2873,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0681",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "immanent",
+    "asserted_quote": "imminent",
+    "detector": "B2-misquote",
+    "offset": 2873,
+    "quote_len": 8,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'imminent' vs book 'immanent' inside a 21/22-word near-verbatim match (tf-idf 0.35))",
+    "runner_subtypes": [
+     "tf-idf 0.35"
+    ]
+   }
+  ],
+  "span_end": 2881,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "imminent",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "called them back from their vacation. Would you believe the academic committee came back from their vacation to review the material because they thought",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "called them back from their vacation would you believe the academic committee came back from their vacation to review the material because they thought",
+      "op": "replace",
+      "transcript": "community"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 217312,
+    "offset_ok": true,
+    "quote_head": "called them back from their vacation. Would you believe the academic c",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 4776,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0682",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "committee",
+    "asserted_quote": "community",
+    "detector": "B2-misquote",
+    "offset": 4776,
+    "quote_len": 9,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'community' vs book 'committee' inside a 23/24-word near-verbatim match (tf-idf 0.44))",
+    "runner_subtypes": [
+     "tf-idf 0.44"
+    ]
+   }
+  ],
+  "span_end": 4785,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "community",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "calibrated 499. And if you go back to Sir Francis Bacon, all the great scientific intellects throughout history seem to stop at 499. The",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "calibrated and if you go back to sir francis bacon all the",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "scientific",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "throughout history seem to stop at the",
+      "op": "replace",
+      "transcript": "scientific"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 218429,
+    "offset_ok": true,
+    "quote_head": "calibrated 499. And if you go back to Sir Francis Bacon, all the great",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 7061,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0683",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "great scientific",
+    "asserted_quote": "great intellects, scientific",
+    "detector": "B2-misquote",
+    "offset": 7061,
+    "quote_len": 28,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'intellects' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.45))",
+    "runner_subtypes": [
+     "s"
+    ]
+   }
+  ],
+  "span_end": 7089,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "great intellects, scientific",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "millions get out of it? They don’t even get to see it, right? Hey, there are millions of people getting slaughtered and chopped up out",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "millions get out of it they don t even get to see it right hey there are millions of people getting slaughtered and chopped up out",
+      "op": "replace",
+      "transcript": "being"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 286573,
+    "offset_ok": true,
+    "quote_head": "millions get out of it? They don’t even get to see it, right? Hey, the",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 10570,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0684",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "getting",
+    "asserted_quote": "being",
+    "detector": "B2-misquote",
+    "offset": 10570,
+    "quote_len": 5,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'being' vs book 'getting' inside a 21/24-word near-verbatim match (tf-idf 0.36))",
+    "runner_subtypes": [
+     "tf-idf 0.36"
+    ]
+   }
+  ],
+  "span_end": 10575,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "being",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "how positionality makes everything wrong. You can make the goose who lays the golden egg the bad guy. So positionalities swing back and forth",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "how",
+      "op": "insert",
+      "transcript": null
+     },
+     {
+      "book": "makes everything wrong you can make the goose who lays the golden egg the bad guy so positionalities swing back and forth",
+      "op": "replace",
+      "transcript": "swinging"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 290232,
+    "offset_ok": true,
+    "quote_head": "how positionality makes everything wrong. You can make the goose who l",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 14269,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0685",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "positionalities swing",
+    "asserted_quote": "positionality, swinging",
+    "detector": "B2-misquote",
+    "offset": 14269,
+    "quote_len": 23,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'positionality swinging' vs book 'positionalities swing' inside a 22/24-word near-verbatim match (tf-idf 0.41))",
+    "runner_subtypes": [
+     "tf-idf 0.41"
+    ]
+   }
+  ],
+  "span_end": 14292,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "positionality, swinging",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "had numerous incarnations and, hopefully, up the evolutionary tree.\n\nThen we’d say that every act of the will, every assent of the Spiritual",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "had numerous incarnations and hopefully up the evolutionary tree then we d say that every act of the will every assent of the spiritual",
+      "op": "replace",
+      "transcript": "ascent"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 311131,
+    "offset_ok": true,
+    "quote_head": "had numerous incarnations and, hopefully, up the evolutionary tree.\n\nT",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 37389,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0686",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "assent",
+    "asserted_quote": "ascent",
+    "detector": "B2-misquote",
+    "offset": 37389,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ascent' vs book 'assent' inside a 22/24-word near-verbatim match (tf-idf 0.53))",
+    "runner_subtypes": [
+     "tf-idf 0.53"
+    ]
+   }
+  ],
+  "span_end": 37395,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "ascent",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "care if people are unable to do it or just believe in it. It’s just a tool, you\n\nunderstand what I’m saying, but it’s an",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "care if people are unable to do it or just believe in it it s just a tool you understand what i m saying but it s an",
+      "op": "replace",
+      "transcript": "disbelieve"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 311654,
+    "offset_ok": true,
+    "quote_head": "care if people are unable to do it or just believe in it. It’s just a ",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 37843,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0687",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "just believe",
+    "asserted_quote": "disbelieve",
+    "detector": "B2-misquote",
+    "offset": 37843,
+    "quote_len": 10,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'disbelieve' vs book 'just believe' inside a 23/24-word near-verbatim match (tf-idf 0.51))",
+    "runner_subtypes": [
+     "tf-idf 0.51"
+    ]
+   }
+  ],
+  "span_end": 37853,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "disbelieve",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "Is that simple enough? It does not require any arbitrary God or Judgment Day, because the consequence of that which you are is automatic as the consequence of the reality of that which it is. There’s no arbitrary God who has to sit up there and wait until you get up there and, boy, you’re going to",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "is that simple enough it does not require any arbitrary god or judgment day because the consequence of that which you are is automatic as the consequence of the reality of that which it is there s no arbitrary god who has to sit up there and wait until you get up there and boy you re going to",
+      "op": "replace",
+      "transcript": "till"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 314517,
+    "offset_ok": true,
+    "quote_head": "Is that simple enough? It does not require any arbitrary God or Judgme",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 42339,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0688",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "until",
+    "asserted_quote": "till",
+    "detector": "B2-misquote",
+    "offset": 42339,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'till' vs book 'until' inside a 20/23-word near-verbatim match (tf-idf 0.37))",
+    "runner_subtypes": [
+     "tf-idf 0.37"
+    ]
+   }
+  ],
+  "span_end": 42343,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "till",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "go. Andy Warhol and all the elite intellectual, artistic types\n\nwent to the Electric Circus—and the groups that later became famous, they",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "go andy warhol and all the elite intellectual artistic types went to the electric circus and the groups that later became famous they",
+      "op": "replace",
+      "transcript": "litter"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 316410,
+    "offset_ok": true,
+    "quote_head": "go. Andy Warhol and all the elite intellectual, artistic types\n\nwent t",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 44086,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0689",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "later",
+    "asserted_quote": "litter",
+    "detector": "B2-misquote",
+    "offset": 44086,
+    "quote_len": 6,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'litter' vs book 'later' inside a 22/24-word near-verbatim match (tf-idf 0.46))",
+    "runner_subtypes": [
+     "tf-idf 0.46"
+    ]
+   }
+  ],
+  "span_end": 44092,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "litter",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "not killing somebody that I should have killed, haha, and going through a hernia repair without anesthesia as a karmic undo-ment of the fact that",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "not killing somebody that i should have killed haha and going through a hernia repair without anesthesia as a karmic undo ment of the fact that",
+      "op": "replace",
+      "transcript": "unduement"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 321688,
+    "offset_ok": true,
+    "quote_head": "not killing somebody that I should have killed, haha, and going throug",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 49671,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0690",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "undo-ment",
+    "asserted_quote": "unduement",
+    "detector": "B2-misquote",
+    "offset": 49671,
+    "quote_len": 9,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'unduement' vs book 'undo-ment' inside a 23/24-word near-verbatim match (tf-idf 0.41))",
+    "runner_subtypes": [
+     "tf-idf 0.41"
+    ]
+   }
+  ],
+  "span_end": 49680,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "unduement",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [
+   {
+    "book_chars": 433278,
+    "book_quote": "play these dumb games.” I couldn’t wait until I grew up. So I read Plato in the meantime while I waited to grow",
+    "detector": "B2-misquote",
+    "divergence": [
+     {
+      "book": "play these dumb games i couldn t wait until i grew up so i read plato in the meantime while i waited to grow",
+      "op": "replace",
+      "transcript": "till"
+     }
+    ],
+    "hawkins_own": true,
+    "known_book": true,
+    "offset": 323761,
+    "offset_ok": true,
+    "quote_head": "play these dumb games.” I couldn’t wait until I grew up. So I read Pla",
+    "quote_ok": true,
+    "slug": "the_path_to_spiritual_advancem"
+   }
+  ],
+  "char_offset": 51685,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "B2-misquote",
+    "note": "book quote verified at cited offset"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "B2-misquote"
+  ],
+  "families": [
+   "content/doctrine"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0691",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "review_score": [
+   2,
+   [
+    "book quote diverges word-level"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "until",
+    "asserted_quote": "till",
+    "detector": "B2-misquote",
+    "offset": 51685,
+    "quote_len": 4,
+    "quote_verified": true,
+    "runner_evidence": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'till' vs book 'until' inside a 22/24-word near-verbatim match (tf-idf 0.48))",
+    "runner_subtypes": [
+     "tf-idf 0.48"
+    ]
+   }
+  ],
+  "span_end": 51689,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "till",
+  "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+ }
+]

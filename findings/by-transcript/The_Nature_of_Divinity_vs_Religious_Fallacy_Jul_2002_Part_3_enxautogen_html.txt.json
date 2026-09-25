@@ -1,0 +1,158 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 14527,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x10 vs re-derived 4 x10 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1194",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 10,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 10,
+   "tokens": 40
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x10"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "You're in the center.",
+    "asserted_quote": "You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center.",
+    "detector": "A1-repetition",
+    "offset": 14527,
+    "quote_len": 219,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 10,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 10,
+     "tokens": 40
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 10 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 10 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 14746,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center.",
+  "transcript": "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_3_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 33424,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 7-token x6 vs re-derived 7 x6 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-1195",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 6,
+    "start_token": 0,
+    "unit_tokens": 7
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 7,
+   "span_repeats": 6,
+   "tokens": 42
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x6"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "They do it in the United States.",
+    "asserted_quote": "They do it in the United States. They do it in the United States. They do it in the United States. They do it in the United States. They do it in the United States. They do it in the United States.",
+    "detector": "A1-repetition",
+    "offset": 33424,
+    "quote_len": 197,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 6,
+      "start_token": 0,
+      "unit_tokens": 7
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 7,
+     "span_repeats": 6,
+     "tokens": 42
+    },
+    "runner_evidence": "signals: A1-repetition (7-token unit repeated 6 times back-to-back)",
+    "runner_subtypes": [
+     "7-token unit repeated 6 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 33621,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "They do it in the United States. They do it in the United States. They do it in the United States. They do it in the United States. They do it in the United States. They do it in the United States.",
+  "transcript": "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_3_enxautogen_html.txt"
+ }
+]

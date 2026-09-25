@@ -1,0 +1,234 @@
+[
+ {
+  "book_checks": [],
+  "char_offset": 35052,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 3-token x35 vs re-derived 3 x35 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0472",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 35,
+    "start_token": 0,
+    "unit_tokens": 3
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 3,
+   "span_repeats": 35,
+   "tokens": 105
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x35"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "quantum mechanics and",
+    "asserted_quote": "quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and",
+    "detector": "A1-repetition",
+    "offset": 35052,
+    "quote_len": 769,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 35,
+      "start_token": 0,
+      "unit_tokens": 3
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 3,
+     "span_repeats": 35,
+     "tokens": 105
+    },
+    "runner_evidence": "signals: A1-repetition (3-token unit repeated 35 times back-to-back)",
+    "runner_subtypes": [
+     "3-token unit repeated 35 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 35821,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and",
+  "transcript": "Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 43493,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 2-token x7 vs re-derived 2 x7 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0473",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 7,
+    "start_token": 0,
+    "unit_tokens": 2
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 2,
+   "span_repeats": 7,
+   "tokens": 14
+  },
+  "review_score": [
+   1,
+   [
+    "periodic run x7"
+   ]
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "please don't.",
+    "asserted_quote": "please don't. Please don't. Please don't. Please don't. Please don't. Please don't. Please don't.",
+    "detector": "A1-repetition",
+    "offset": 43493,
+    "quote_len": 97,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 7,
+      "start_token": 0,
+      "unit_tokens": 2
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 2,
+     "span_repeats": 7,
+     "tokens": 14
+    },
+    "runner_evidence": "signals: A1-repetition (2-token unit repeated 7 times back-to-back)",
+    "runner_subtypes": [
+     "2-token unit repeated 7 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 43590,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "please don't. Please don't. Please don't. Please don't. Please don't. Please don't. Please don't.",
+  "transcript": "Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt"
+ },
+ {
+  "book_checks": [],
+  "char_offset": 45095,
+  "citation_ok": true,
+  "claim_checks": [
+   {
+    "claim_ok": true,
+    "detector": "A1-repetition",
+    "note": "claim 4-token x4 vs re-derived 4 x4 (this tool's simple tokenizer; a mismatch may be claim shape OR tokenizer shape — review, do not read as detector error)"
+   }
+  ],
+  "claims_all_corroborated": true,
+  "class": "CANDIDATE",
+  "detectors": [
+   "A1-repetition"
+  ],
+  "families": [
+   "surface-form"
+  ],
+  "fixture_overlap": [],
+  "id": "M5R-0474",
+  "paragraph": 0,
+  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rederived_repetition": {
+   "longest_run": {
+    "repeats": 4,
+    "start_token": 0,
+    "unit_tokens": 4
+   },
+   "span_fully_periodic": true,
+   "span_period_tokens": 4,
+   "span_repeats": 4,
+   "tokens": 16
+  },
+  "review_score": [
+   0,
+   []
+  ],
+  "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
+  "seeded": false,
+  "signals": [
+   {
+    "asserted_intended": "the moment of birth.",
+    "asserted_quote": "the moment of birth. The moment of birth. The moment of birth. The moment of birth.",
+    "detector": "A1-repetition",
+    "offset": 45095,
+    "quote_len": 83,
+    "quote_verified": true,
+    "rederived": {
+     "longest_run": {
+      "repeats": 4,
+      "start_token": 0,
+      "unit_tokens": 4
+     },
+     "span_fully_periodic": true,
+     "span_period_tokens": 4,
+     "span_repeats": 4,
+     "tokens": 16
+    },
+    "runner_evidence": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+    "runner_subtypes": [
+     "4-token unit repeated 4 times back-to-back"
+    ]
+   }
+  ],
+  "span_end": 45178,
+  "span_facts": {
+   "impossible_percent": [],
+   "non_ascii_letters": 0,
+   "non_latin_letters": 0,
+   "percent_values": [],
+   "replacement_chars": 0
+  },
+  "span_text": "the moment of birth. The moment of birth. The moment of birth. The moment of birth.",
+  "transcript": "Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt"
+ }
+]
