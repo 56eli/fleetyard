@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T21:28Z
+updated: 2026-09-25T21:33Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -33,9 +33,9 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
   (holdout evaluated at q4; fresh split with new salt sealed in TASK-019a @ `79eb401`; TASK-017 delivered).
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T21:28Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T21:30Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
-- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `d7fee6e142ebbeecbd0e605395aa3d848499bf8a` (ALIVE; delivered TASK-020 all items 1-11, suite 227 OK)
+- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `4fc40c81c9484b5ed9cd16f0d118638d06d5a216` (ALIVE; bound leg-d floor-5 table to PATTERNS @ `4fc40c8`, delivered TASK-020 items 1-11 @ `d7fee6e`, suite 227 OK)
 - orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `31ce8dd87eb5a6c0cac787ace3a5dae4fae85309` (ALIVE; gating pipeline active, order: 018 -> 019a -> 020 -> 017)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
@@ -55,7 +55,7 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 - `fleet/ORDERS/REDIRECT-008.md`: **ACKNOWLEDGED & COMPLETED** by ORCH-2 (`fleet/ORDERS/ACK-REDIRECT-008.md` @ `5f6d698`).
 
 ## stall watch (re-armed per ERRATA-25f §2: signals only)
-- Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `d7fee6e`).
+- Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `4fc40c8`).
 - Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `31ce8dd`).
 - Class 3 (starvation): NOT FIRED (ORCH-2 executing gating pipeline on 4 deliveries).
 - Class 4 (post-handoff): NOT FIRED (all v1 archives verified frozen).
