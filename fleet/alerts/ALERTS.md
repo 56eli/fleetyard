@@ -66,3 +66,29 @@ The direct Discord webhook given at boot never delivered: HTTP 000, `SSL_ERROR_S
 `discord.com:443`, on every attempt across cycles 2, 3 and 4 — 0 of 4 composed alerts
 delivered. Its four composed texts are preserved verbatim in `fleet/LOG.md`. Superseded by the
 repo-level GitHub→Discord webhook as of the owner ruling of 2026-09-25.
+
+---
+
+## 2026-09-25T10:23:05Z — class 2 timer tripped, ALERT NOT POSTED (reasoning on the record)
+
+| field | value |
+|---|---|
+| class | (2) orchestrator silent — TIMER ONLY |
+| measured_at | 2026-09-25T10:23:05Z (fresh fetch, verified) |
+| orchestrator lane | `arena/01a0d5b7-fleetyard` @ `577c9c5`, committed 2026-09-25T09:46:36Z |
+| quiet | 34.7 min (timer threshold 20 min) |
+| worker lane | `arena/01a0d581-fleetyard` @ `663d05a`, 3.9 min — healthy |
+| posted to Discord | **NO** |
+| next action | re-measure next cycle; fire class (2) properly if head is still `577c9c5` |
+
+**Why no alarm.** The class-2 template asserts a consequence — "gates, queue, and pause-removal
+are down" — that is false at this timestamp. The orchestrator gated TASK-011 at 09:31:52Z and
+published the interim answer at 09:46:36Z; its cadence is 300s and owner ERRATA-2026-09-25 §4
+permits pushing only on substance or roughly every 20 minutes for liveness. Posting an alarm
+whose stated consequence BOSS knows to be untrue would breach CANON §5 worse than withholding
+the ping. BOSS had already had to correct one stale alarm earlier this shift (see LOG
+self-correction) and will not compound it. This entry exists so the decision is auditable
+rather than silent.
+
+**Trip-wire:** if the orchestrator head is unchanged at the next cycle, class (2) fires with the
+Jameson headline, the key number and the sha.

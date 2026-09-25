@@ -1,30 +1,31 @@
 # boss cursor
 
-updated: 2026-09-25T00:38Z
+updated: 2026-09-25T10:24:11Z
 boss lane: arena/01a0d585-fleetyard
 STATUS: **RESUMED at cycle 8/16** — the capability cut is over. GitHub auth restored
 (`git ls-remote origin HEAD` -> 3900071; `gh auth status` -> logged in as
 arena-ai-coding-agent[bot]). Fetch re-established with explicit refspecs per CANON 11 BEFORE
-any sha below was quoted, so everything here is freshly verified at 2026-09-25T08:44Z.
-WALL-CLOCK DISCLOSURE: this shift's 4-hour cap expired ~02:26Z; it is now 08:44Z, so the cap
-is exceeded by ~6 h. BOSS continues ONLY on the owner's explicit 2026-09-25 interjection and
-cites that as the authority — no invented override.
+any sha below was quoted, The lane table below is freshly verified at 2026-09-25T10:21:18Z.
+WALL-CLOCK DISCLOSURE: this shift's 4-hour cap expired ~02:26Z; it is now 10:21Z, so the cap is
+exceeded by ~7.9 h. BOSS continues ONLY on the owner's explicit 2026-09-25 interjections
+("continue your shift, same cycle number, same caps") and cites that as the authority — no
+invented override. Caps are disclosed, never silently absorbed.
 ALERT TRANSPORT (owner ruling 2026-09-25): repo-level GitHub->Discord webhook; the commit
 HEADLINE is the alarm (JJJ voice), the commit body and fleet/alerts/ALERTS.md carry the sober
 payload, LOG.md stays sober, work commits stay dry. Direct-webhook channel retired (0/4 ever
 delivered, discord.com TLS-blocked).
-cycles used: 8/16 · pill fleet/controls/STOP-BOSS: ABSENT all 8 cycles
-STATUS NOW: both production lanes COLD and no successor exists — the fleet is not running and only the owner can restart it. BOSS is handing off rather than burning cycles logging "still cold".
+cycles used: 9/16 · pill fleet/controls/STOP-BOSS: ABSENT all 9 cycles
+STATUS NOW: **THE FLEET IS ALIVE AGAIN** and BOSS's cycle-8 "fleet is cold, handoff" verdict was WRONG — overtaken within roughly an hour. Both production lanes are pushing. M5 has been delivered, independently gated and independently verified by BOSS with ZERO discrepancies. This is the third BOSS verdict corrected by events (see LOG).
 owner ruling in force: Discord alert voice = JJJ persona, payload inside the voice, git records sober/verbatim, one alert per class per 20 min.
 DISCORD: 0 of 4 composed alerts ever delivered — egress TLS-blocked (HTTP 000 / SSL_ERROR_SYSCALL to discord.com:443). Texts preserved in fleet/LOG.md.
 
 ## lanes (read-only) — VERIFIED 2026-09-25T08:44Z
-- seed: main @ 3900071e4d8e25b3923858efe7df31a10f9f9358 (unchanged; BOSS never writes main — re-verified)
-- worker: arena/01a0d581-fleetyard @ 5ea8de8b8eb5ceb1b1aa6d0e9360c8d10b79478b (00:36:28Z) — **COLD 488 min**, TASK-011 CLAIMED, never delivered
-- orchestrator (ACTIVE): arena/01a0d5b7-fleetyard @ e4fa5b9 (01:24:53Z) — **COLD 440 min**, stopped at cycle 16/40 with no handoff line
-- orchestrator (PREDECESSOR): arena/01a0d582-fleetyard @ 191b1f8 — stopped cycle 84, superseded, read-only
-- boss: arena/01a0d585-fleetyard
-- NO successor worker or orchestrator lane exists. The fleet is not running.
+Re-verified by explicit-refspec fetch at 2026-09-25T10:24:11Z (CANON 11 — no sha quoted below was not fetched):
+- seed: main @ e8d81ae — owner added `fleet/2026-09-25 Express permission 08:43 UTC and follows` (note the spaces in the filename). BOSS never writes main — re-verified.
+- worker: arena/01a0d581-fleetyard @ 663d05a (10:17:25Z, 3.9 min) — **ALIVE**, TASK-011 DELIVERED @ 0923265, now claims TASK-012 (M6 report)
+- orchestrator (ACTIVE): arena/01a0d5b7-fleetyard @ 577c9c5 (09:46:36Z, 34.7 min) — **ALIVE**, gated TASK-011 PASS @ 5bad887, published truthful interim answer
+- orchestrator (PREDECESSOR): arena/01a0d582-fleetyard @ 191b1f8 — superseded, read-only; its silence is expected and NOT alertable
+- boss: arena/01a0d585-fleetyard @ 4c80b5d before this cycle
 
 ## milestone state (the campaign scoreboard)
 - M0 corpus inventory — CERTIFIED @ 863c97d (owner §2 + BOSS ratified)
@@ -32,11 +33,12 @@ DISCORD: 0 of 4 composed alerts ever delivered — egress TLS-blocked (HTTP 000 
 - M2 detector family A — ACCEPTED INCOMPLETE (owner §3); drop-word + speaker/format never built
 - M3 detector family B — B1/B2 delivered, NOT certified; terminology drift + book-attribution unimplemented
 - M4 self-improvement — NOT STARTED
-- M5 full-corpus sweep — TASK-011 cut and CLAIMED after REDIRECT-007 was SERVED at 11812b9; tools/sweep_m5.py + tests shipped @ 5ea8de8; **NO SWEEP OUTPUT COMMITTED, 0 of 230 transcripts audited**
-- M6 the report — TASK-012 cut, still BLOCKED, never started; no reports/ on any lane
+- M5 full-corpus sweep — **DELIVERED @ 0923265, gated PASS @ 5bad887, BOSS-VERIFIED with ZERO discrepancies.** 230/230 transcripts detector-run, 1334 raw records, all tallies reproduce exactly, 25/25 sampled citations byte-exact, overlays_sha256 reproduced, 0 of 1334 records cite a NON_HAWKINS slug. **NOT CERTIFIED** — 0/230 finding-pass audited, no precision figure exists, and that is stated honestly in the INDEX. Coverage truth: 230 detector-run / 0 audited / 230 pending review.
+- M6 the report — TASK-012 **CLAIMED @ 663d05a (10:17:25Z), in flight**; still no reports/ on any lane. Interim answer published @ 577c9c5 at explicitly zero reviewed coverage.
 
 ## brakes engaged
-- fleet/controls/PAUSE-WORKER **ABSENT** — removed at 00:21:00Z on an actual TASK-010 gate PASS, correctly. No brake is holding the fleet; it is simply not running.
+- fleet/controls/PAUSE-WORKER **ABSENT** — removed at 00:21:00Z on an actual TASK-010 gate PASS, correctly. No brake is holding the fleet and it is running.
+- fleet/controls/STOP-BOSS **ABSENT** — checked every cycle including this one (9/9).
 - (historical) PAUSE-WORKER was ACTIVE from 23:58:00Z naming TASK-010 ONLY (false HIGH on legitimate Korean code-switch `yes나`/`no를` @ Sedona Dec 2008 P2 char 9671). Correctly paired with an OPEN repair task. Previous TASK-006/CF-009 pause RESOLVED by independent PASS.
 - No STOP-WORKER, no worker-insanity, no STOP-BOSS.
 
