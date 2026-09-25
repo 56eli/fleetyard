@@ -296,11 +296,11 @@
   "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
   "output_digest_note": "the digest of this seal file is recorded in the TASK-019a delivery record and in the commit that seals it (a file cannot contain its own hash)",
   "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
-  "run_utc": "2026-09-25T20:48:54Z",
+  "run_utc": "2026-09-25T20:51:54Z",
   "sealed_by": "WORKER-2 (A-2026-09-25-001), lane arena/01a0d9ce-fleetyard",
   "tool": "tools/m4_split_v2.py",
-  "tool_commit": "PENDING",
-  "tool_sha256": "c6615e22b3338028b8d9da044a9cb62b9053a360b39fe46f9bcb634d10d7150d"
+  "tool_commit": "f4ab7bb6b1215c536f52df735bc0a64b59bf091a",
+  "tool_sha256": "fe043aee19dd156cabb27ad63d78f619f4bc6b7358d85751b0326c4b1b43f9bd"
  },
  "method": "sha256(SALT+basename) mod 5 == 0 -> HOLDOUT; fixture transcripts forced to TUNING",
  "milestone": "M4",

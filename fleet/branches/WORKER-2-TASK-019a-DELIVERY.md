@@ -8,7 +8,7 @@
 
 ## The seal
 
-`tools/HELD-OUT-SPLIT-V2.json` — **sha256 `f357ed210a9198cd63261cdaff626483cc2813f09439259883f43adb7e3c5919`**
+`tools/HELD-OUT-SPLIT-V2.json` — **sha256 `73d86f0dafe5e51162723bd92121021a099a5c6b5b89fc5386421c496ced5d8a`**
 (committed *before* any further tuning; commit order is the evidence, v2.4).
 
 | field | value |
@@ -20,7 +20,7 @@
 | v1-holdout ∩ v2-holdout | **0** (disclosed contamination-avoidance rule: the v2 holdout is entirely unseen; the 37 read-once v1-holdout transcripts are forced into tuning) |
 | corpus file-list digest | `sha256_text("\n".join(sorted basenames) + "\n")`, derivation written into the seal file itself (v2.2) |
 | per-year table | inside the seal (`by_year`) |
-| generator/verifier | `tools/m4_split_v2.py` (`build` / `verify`), stdlib only |
+| generator/verifier | `tools/m4_split_v2.py` (`build` / `verify`), stdlib only — the seal's `manifest.tool_sha256` binds the head revision of that file |
 
 `python3 tools/m4_split_v2.py verify --split tools/HELD-OUT-SPLIT-V2.json --corpus corpus`
 → **OK** (run_utc `2026-09-25T20:5xZ`). Independent re-derivation from the published rule is
