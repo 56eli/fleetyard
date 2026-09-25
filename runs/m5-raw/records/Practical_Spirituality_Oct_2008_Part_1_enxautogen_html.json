@@ -1,0 +1,19 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 11573
+  },
+  "quoted_text": "he didn't have the strength to plow. He didn't have the strength to plow. He didn't have the strength to plow.",
+  "suspected_intended_text": "he didn't have the strength to plow.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

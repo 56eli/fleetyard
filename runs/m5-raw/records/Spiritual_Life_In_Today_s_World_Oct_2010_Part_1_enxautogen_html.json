@@ -1,0 +1,142 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 8190
+  },
+  "quoted_text": "Unconditional love is 570",
+  "suspected_intended_text": "Unconditional Love 540",
+  "evidence_class": "signals: B1-contradiction (level-log: books give Unconditional Love = [540], transcript says 570)",
+  "detector_id": "B1-contradiction",
+  "book_reference": {
+   "slug": "reality_spirituality_and_mode",
+   "char_offset": 275895,
+   "quote": "Unconditional Love 540 96"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 20840
+  },
+  "quoted_text": "�",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (replacement-char: undecodable source bytes)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 20845
+  },
+  "quoted_text": "law平",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 21038
+  },
+  "quoted_text": "получить",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32814
+  },
+  "quoted_text": "you totally change the energy field. You totally change the energy field. You totally change the energy field.",
+  "suspected_intended_text": "you totally change the energy field.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 42070
+  },
+  "quoted_text": "Harvard Law calibrates over 200. Harvard Law calibrates over 200. Harvard Law calibrates over 200.",
+  "suspected_intended_text": "Harvard Law calibrates over 200.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 47002
+  },
+  "quoted_text": "Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh.",
+  "suspected_intended_text": "Uh-huh.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 44 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51422
+  },
+  "quoted_text": "It's a beautiful church. It's a beautiful church. It's a beautiful church.",
+  "suspected_intended_text": "It's a beautiful church.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

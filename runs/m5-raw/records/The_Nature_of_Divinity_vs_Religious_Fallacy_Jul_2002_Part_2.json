@@ -1,0 +1,87 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 30861
+  },
+  "quoted_text": "you don't have to pick it up. You don't have to pick it up. You don't have to pick it up.",
+  "suspected_intended_text": "you don't have to pick it up.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 42490
+  },
+  "quoted_text": "you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell you can't tell",
+  "suspected_intended_text": "you can't tell",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 16 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 46834
+  },
+  "quoted_text": "the innocence is the most important thing. The innocence is the most important thing. The innocence is the most important thing. The innocence is the most important thing.",
+  "suspected_intended_text": "the innocence is the most important thing.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 54325
+  },
+  "quoted_text": "you can't do anything about it. You can't do anything about it. You can't do anything about it. You can't do anything about it. You can't do anything about it. You can't do anything about it.",
+  "suspected_intended_text": "you can't do anything about it.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 55386
+  },
+  "quoted_text": "you can't do anything about it. You can't do anything about it. You can't do anything about it.",
+  "suspected_intended_text": "you can't do anything about it.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

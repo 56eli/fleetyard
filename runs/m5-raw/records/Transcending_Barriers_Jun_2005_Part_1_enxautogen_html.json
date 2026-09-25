@@ -1,0 +1,36 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Barriers_Jun_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 8841
+  },
+  "quoted_text": "And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did.",
+  "suspected_intended_text": "And we did.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 44 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Barriers_Jun_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 72894
+  },
+  "quoted_text": "Truth is comparable, then, to electricity running down a wire. Truth is comparable, then, to electricity running down a wire. Truth is comparable, then, to electricity running down a wire.",
+  "suspected_intended_text": "Truth is comparable, then, to electricity running down a wire.",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

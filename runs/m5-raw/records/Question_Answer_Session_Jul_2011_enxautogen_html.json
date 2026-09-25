@@ -1,0 +1,138 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25690
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 28171
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 14 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 29525
+  },
+  "quoted_text": "i've been in the midst of a final run and i've been in the midst of a final run and i've been in the midst of a final run and",
+  "suspected_intended_text": "i've been in the midst of a final run and",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 30569
+  },
+  "quoted_text": "we had a meeting with a pastor and we had a meeting with a pastor and we had a meeting with a pastor and we had a meeting with a pastor and",
+  "suspected_intended_text": "we had a meeting with a pastor and",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 35786
+  },
+  "quoted_text": "God's problem. God's problem. God's problem. God's problem. God's problem. God's problem. God's problem. God's problem. God's problem.",
+  "suspected_intended_text": "God's problem.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 40593
+  },
+  "quoted_text": "Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen. Amen.",
+  "suspected_intended_text": "Amen.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 63 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 42948
+  },
+  "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "suspected_intended_text": "Okay.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 11 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 48737
+  },
+  "quoted_text": "um um um um um um um um",
+  "suspected_intended_text": "um",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

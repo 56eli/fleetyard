@@ -1,0 +1,53 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 17910
+  },
+  "quoted_text": "grrr, grrr, grrr, grrr, grrr, grrr, grrr, grrr.",
+  "suspected_intended_text": "grrr,",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19154
+  },
+  "quoted_text": "Here's my feelings. Here's my feelings. Here's my feelings. Here's my feelings. Here's my feelings.",
+  "suspected_intended_text": "Here's my feelings.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 28624
+  },
+  "quoted_text": "You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know.",
+  "suspected_intended_text": "You know.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 16 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

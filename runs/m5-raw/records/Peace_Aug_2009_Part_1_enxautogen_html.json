@@ -1,0 +1,87 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4380
+  },
+  "quoted_text": "Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen Amen",
+  "suspected_intended_text": "Amen",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 33 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 7929
+  },
+  "quoted_text": "this is the highest. This is the highest. This is the highest. This is the highest. This is the highest. This is the highest.",
+  "suspected_intended_text": "this is the highest.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19782
+  },
+  "quoted_text": "Purr, purr, purr, purr, purr, purr, purr, purr, purr, purr.",
+  "suspected_intended_text": "Purr,",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 22956
+  },
+  "quoted_text": "They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent. They're indifferent.",
+  "suspected_intended_text": "They're indifferent.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Peace_Aug_2009_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25921
+  },
+  "quoted_text": "�",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (replacement-char: undecodable source bytes)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

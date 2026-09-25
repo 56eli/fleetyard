@@ -1,0 +1,19 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Realization_of_the_Self_as_the_I_Nov_2003_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1258
+  },
+  "quoted_text": "The enormous spiritual benefit to be gained here, which is the enormous spiritual benefit to be gained here, which is the enormous spiritual benefit to be gained here, which is",
+  "suspected_intended_text": "The enormous spiritual benefit to be gained here, which is",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

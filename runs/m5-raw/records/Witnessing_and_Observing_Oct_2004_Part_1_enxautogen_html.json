@@ -1,0 +1,108 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15384
+  },
+  "quoted_text": "it really extinguishes",
+  "suspected_intended_text": "it extinguishes",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'really' vs book '' inside a 20/22-word near-verbatim match (tf-idf 0.54))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 205372,
+   "quote": "Many years ago, the personal self disappeared, and the mind became silent, a state that continues to this day. The Infinite Presence is so powerful that it extinguishes anything that is not Itself"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 20305
+  },
+  "quoted_text": "this fish comes up here, this fish comes up here, this fish comes up here,",
+  "suspected_intended_text": "this fish comes up here,",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 42930
+  },
+  "quoted_text": "died he fell himself down and then he died he fell himself down and then he died he fell himself down and then he died he fell himself down and then he",
+  "suspected_intended_text": "died he fell himself down and then he",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45175
+  },
+  "quoted_text": "か",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 50258
+  },
+  "quoted_text": "unmanifest becomes manifest so the universe evolved unmanifest becomes manifest so the universe evolved unmanifest becomes manifest so the universe evolved",
+  "suspected_intended_text": "unmanifest becomes manifest so the universe evolved",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 62062
+  },
+  "quoted_text": "we were in Toronto, we were in Toronto. We were in Toronto.",
+  "suspected_intended_text": "we were in Toronto,",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

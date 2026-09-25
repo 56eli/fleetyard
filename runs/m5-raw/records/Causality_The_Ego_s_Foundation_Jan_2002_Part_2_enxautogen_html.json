@@ -1,0 +1,305 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1246
+  },
+  "quoted_text": "it's not a duality. It's not a duality. It's not a duality. It's not a duality. It's not a duality. It's not a duality",
+  "suspected_intended_text": "it's not a duality.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 6729
+  },
+  "quoted_text": "That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice. That's sacrifice.",
+  "suspected_intended_text": "That's sacrifice.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 17 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 10327
+  },
+  "quoted_text": "which comes, is",
+  "suspected_intended_text": "which is",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'comes' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.31))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 75409,
+   "quote": "its innate capacity to manifest as that which it is. The becoming of that which is witnessed as existence, then, is merely"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 11431
+  },
+  "quoted_text": "challenged",
+  "suspected_intended_text": "channelers",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'challenged' vs book 'channelers' inside a 22/24-word near-verbatim match (tf-idf 0.73))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 75739,
+   "quote": "Age communities, channeling is very popular. Certain prophets—\n\nBiblical prophets, scriptures—also were really channelers; they were channeling another entity on the other side"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 17775
+  },
+  "quoted_text": "And therefore... Then",
+  "suspected_intended_text": "And then",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'therefore' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.53))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 80067,
+   "quote": "of the Old Testament are projections from the unconscious, Freud said. And then he made a mistake; he said, “Therefore, God doesn’t exist"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18744
+  },
+  "quoted_text": "is it",
+  "suspected_intended_text": "resist” (True",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'is it' vs book 'resist true' inside a 15/17-word near-verbatim match (tf-idf 0.43))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 80998,
+   "quote": "the way to salvation. Let’s see if that’s correct. “That is correct: resist” (True). That is correct"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25113
+  },
+  "quoted_text": "meaning",
+  "suspected_intended_text": "representing",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'meaning' vs book 'representing' inside a 22/24-word near-verbatim match (tf-idf 0.49))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 89023,
+   "quote": "attachment. I was in conflict between Jesus and Buddha. So, I had the misunderstanding of Buddha as representing the ultimate Reality as Void. And"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 42507
+  },
+  "quoted_text": "then maybe",
+  "suspected_intended_text": "they may",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'then maybe' vs book 'they may' inside a 22/24-word near-verbatim match (tf-idf 0.40))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 97706,
+   "quote": "meaning in life; or they may read something that inspires them, and for karmic reasons unknown. Or there may be a period of life"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 42832
+  },
+  "quoted_text": "who seems",
+  "suspected_intended_text": "He needs",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'who seems' vs book 'he needs' inside a 22/24-word near-verbatim match (tf-idf 0.38))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 97977,
+   "quote": "now this priority is coming up. You find a teacher to whom you can relate. He needs to make sense. It has to be"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45172
+  },
+  "quoted_text": "much bones",
+  "suspected_intended_text": "bare-bones",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'much bones' vs book 'bare-bones' inside a 21/24-word near-verbatim match (tf-idf 0.42))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 100264,
+   "quote": "isn’t sufficient meat to the bones. So, some teachings, to me, are just too bare-bones. So, anyway, you\n\nwant to calibrate the level"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 53965
+  },
+  "quoted_text": "incredible organism, mechanism",
+  "suspected_intended_text": "incredible mechanism",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'organism' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.51))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 137595,
+   "quote": "known, all your perceptions, all your belief systems, comparing it with past calculating, and it’s an extremely complex and incredible mechanism. The ego"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 58247
+  },
+  "quoted_text": "speaking",
+  "suspected_intended_text": "thinking",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'speaking' vs book 'thinking' inside a 20/23-word near-verbatim match (tf-idf 0.46))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 141777,
+   "quote": "the thought.\n\nThere’s no speaker behind the thought; the thoughts are thinking themselves; the thinking is speaking of its own, you understand"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 59369
+  },
+  "quoted_text": "Ha, ha, ha, ha, ha, ha. Ha, ha, ha, ha, ha, ha. Ha, ha, ha, ha, ha, ha, ha. Ha, ha, ha, ha, ha, ha, ha. Ha, ha, ha, ha, ha, ha, ha. Ha, ha, ha, ha, ha, ha. Ha, ha, ha, ha, ha, ha, ha. Ha, ha, ha, ha, ha, ha, ha. Ha, ha, ha, ha, ha, ha, ha. Ha, ha, ha, ha, ha, ha, ha. Ha, ha, ha, ha, ha, ha, ha.",
+  "suspected_intended_text": "Ha,",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 74 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 63855
+  },
+  "quoted_text": "himself",
+  "suspected_intended_text": "themselves",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'himself' vs book 'themselves' inside a 21/24-word near-verbatim match (tf-idf 0.64))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 143945,
+   "quote": "everybody else. So, all that Homo sapiens did was sort of a refined dragon themselves. Whether a Mongol horde or Tyrannosaurus rex is"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 65345
+  },
+  "quoted_text": "question",
+  "suspected_intended_text": "explanation",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'question' vs book 'explanation' inside a 23/24-word near-verbatim match (tf-idf 0.76))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 145377,
+   "quote": "the common view is to return to its source.\n\nI want to clarify the explanation we had before about co-creator. Co-creator indicates “two”: there’s"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

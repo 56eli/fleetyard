@@ -1,0 +1,138 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Perception_vs_Essence_Apr_2006_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 356
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Perception_vs_Essence_Apr_2006_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 6616
+  },
+  "quoted_text": "emotions. These are emotions. These are emotions. These are emotions. These are emotions. These are emotions. These are emotions. These are emotions. These are emotions. These are emotions. These are",
+  "suspected_intended_text": "emotions. These are",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Perception_vs_Essence_Apr_2006_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 7196
+  },
+  "quoted_text": "they're not at the end of hate. They're not at the end of hate. They're not at the end of hate. They're not at the end of hate. They're not at the end of hate. They're not at the end of hate. They're not at the end of hate. They're not at the end of hate. They're not at the end of hate. They're not at the end of hate. They're not at the end of hate.",
+  "suspected_intended_text": "they're not at the end of hate.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 11 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Perception_vs_Essence_Apr_2006_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 14379
+  },
+  "quoted_text": "screenむ",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Perception_vs_Essence_Apr_2006_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18121
+  },
+  "quoted_text": "And that's what we're talking about. And that's what we're talking about. And that's what we're talking about.",
+  "suspected_intended_text": "And that's what we're talking about.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Perception_vs_Essence_Apr_2006_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 22027
+  },
+  "quoted_text": "It's about the mind as a whole. It's about the mind as a whole. It's about the mind as a whole. It's about the mind as a whole. It's about the mind as a whole. It's about the mind as a whole.",
+  "suspected_intended_text": "It's about the mind as a whole.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Perception_vs_Essence_Apr_2006_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 53918
+  },
+  "quoted_text": "when you've got that mastered when you've got that mastered when you've got that mastered",
+  "suspected_intended_text": "when you've got that mastered",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Perception_vs_Essence_Apr_2006_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 59516
+  },
+  "quoted_text": "you become a black turtle turner over you become a black turtle turner over you become a black turtle turner over",
+  "suspected_intended_text": "you become a black turtle turner over",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

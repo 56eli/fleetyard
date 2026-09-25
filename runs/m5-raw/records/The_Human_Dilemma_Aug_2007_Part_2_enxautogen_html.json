@@ -1,0 +1,116 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13773
+  },
+  "quoted_text": "spell it out for them. Spell it out for them. Spell it out for them.",
+  "suspected_intended_text": "spell it out for them.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 29122
+  },
+  "quoted_text": "Krauss",
+  "suspected_intended_text": "Cross",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'krauss' vs book 'cross' inside a 23/24-word near-verbatim match (tf-idf 0.52))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "in_the_world_but_not_of_it__t",
+   "char_offset": 62733,
+   "quote": "music and Shakespeare, and then Saturday afternoon, the Metropolitan Opera would come on the radio from New York City, and Milton Cross would explain the opera. And"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 39496
+  },
+  "quoted_text": "I myself was",
+  "suspected_intended_text": "I was",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'myself' vs book '' inside a 21/22-word near-verbatim match (tf-idf 0.46))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "in_the_world_but_not_of_it__t",
+   "char_offset": 64779,
+   "quote": "Skepticism is one thing, but atheism is another. I was a devout agnostic for many years. I was an atheist, but as I trained my brain, my thinking became more sophisticated, and I"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 62548
+  },
+  "quoted_text": "Yeah man. Yeah man. Yeah man. Yeah man. Yeah man.",
+  "suspected_intended_text": "Yeah man.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 68101
+  },
+  "quoted_text": "life throat flows",
+  "suspected_intended_text": "Life flows",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'throat' vs book '' inside a 14/16-word near-verbatim match (tf-idf 0.24))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_wisdom_of_dr_david_r_haw",
+   "char_offset": 263835,
+   "quote": "energy. The energy flows through you as a certain energy. Life flows as an energy"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 75617
+  },
+  "quoted_text": "in, and your family, in, and your family, in, and your family,",
+  "suspected_intended_text": "in, and your family,",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

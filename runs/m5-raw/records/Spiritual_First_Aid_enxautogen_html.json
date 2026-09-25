@@ -1,0 +1,170 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 17166
+  },
+  "quoted_text": "of god, the",
+  "suspected_intended_text": "of the",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'god' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.65))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 221995,
+   "quote": "appears friendly, and the future looks hopeful and promising. The view of the God of this kind of world is promising, hopeful, and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 21205
+  },
+  "quoted_text": "truthful, Dan, carries",
+  "suspected_intended_text": "truthful carries",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'dan' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.33))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 225552,
+   "quote": "we have an orientation to the field.\n\nThat which is truthful carries greater power and calibrates at a higher number. It is a"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 22271
+  },
+  "quoted_text": "up perhaps a",
+  "suspected_intended_text": "up a",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'perhaps' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.43))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 226523,
+   "quote": "way to avoid spiritual crises and the need for spiritual first aid in the future is to back up a bit and do some individual"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 22479
+  },
+  "quoted_text": "within us continues",
+  "suspected_intended_text": "within continues",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'us' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.41))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 226725,
+   "quote": "of the teaching?” This is helpful because the child within continues to be naïve and innocent. The innocence, on the other hand, is what"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 31979
+  },
+  "quoted_text": "of within oneself",
+  "suspected_intended_text": "of oneself",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'within' vs book '' inside a 20/22-word near-verbatim match (tf-idf 0.32))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 234421,
+   "quote": "one can experience the truth of oneself through one’s inner spiritual work. The creation of a safe space then requires teachers who have no desire to exploit or invalidate anyone and are therefore examples of their own principles. They are devoid of exploitation of followers for ‘the sake of the movement’ or ‘the cause’. There is"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 38370
+  },
+  "quoted_text": "which God the",
+  "suspected_intended_text": "which the",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'god' vs book '' inside a 18/19-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 240104,
+   "quote": "as negative and associated with sin and suffering for which the God of that level is the great destroyer, with the process being one of destruction, self-hatred, self-pity, and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 50649
+  },
+  "quoted_text": "the spurious values",
+  "suspected_intended_text": "the values",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'spurious' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.49))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 250202,
+   "quote": "is not devious. It hasn’t learned to lie; it hasn’t learned the values of judgment and criticism. The child is openly trusting"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_First_Aid_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 61525
+  },
+  "quoted_text": "oneself",
+  "suspected_intended_text": "ourself",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'oneself' vs book 'ourself' inside a 23/24-word near-verbatim match (tf-idf 0.36))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 258765,
+   "quote": "but from the ultimate compassion, the owning of ourself from this level, the joy of the spiritual work, and the saying “thank you” to all the"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

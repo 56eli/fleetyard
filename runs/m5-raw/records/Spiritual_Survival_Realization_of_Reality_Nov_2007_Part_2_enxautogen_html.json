@@ -1,0 +1,53 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3160
+  },
+  "quoted_text": "you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know,",
+  "suspected_intended_text": "you get rid of, you know,",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3410
+  },
+  "quoted_text": "you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know, you get rid of, you know,",
+  "suspected_intended_text": "you get rid of, you know,",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 17 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 46652
+  },
+  "quoted_text": "you can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it. You can't see it.",
+  "suspected_intended_text": "you can't see it.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

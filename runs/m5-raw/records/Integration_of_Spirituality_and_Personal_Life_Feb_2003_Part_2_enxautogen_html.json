@@ -1,0 +1,19 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 55382
+  },
+  "quoted_text": "group of people in the same group of people in the same group of people in the same group of people in the same group of people in the same",
+  "suspected_intended_text": "group of people in the same",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

@@ -1,0 +1,57 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_is_a_Way_of_Being_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1899
+  },
+  "quoted_text": "biggest",
+  "suspected_intended_text": "longest",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'biggest' vs book 'longest' inside a 10/11-word near-verbatim match (tf-idf 0.28))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_highest_level_of_enlighten",
+   "char_offset": 10712,
+   "quote": "I had the longest paper route in the state of Wisconsin, 18\n\nmiles out in the country. This one time, it was 10-below zero, blizzard conditions, and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_is_a_Way_of_Being_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 34748
+  },
+  "quoted_text": "ha, ha, ha, ha, ha, ha, ha, ha, ha.",
+  "suspected_intended_text": "ha,",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_is_a_Way_of_Being_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51214
+  },
+  "quoted_text": "a rather interesting point. It's a rather interesting point. It's a rather interesting point. It's a rather interesting point. It's",
+  "suspected_intended_text": "a rather interesting point. It's",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

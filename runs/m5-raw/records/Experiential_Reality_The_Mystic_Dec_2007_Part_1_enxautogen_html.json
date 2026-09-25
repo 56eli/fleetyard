@@ -1,0 +1,188 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15529
+  },
+  "quoted_text": "of nowhere nowhere",
+  "suspected_intended_text": "of nowhere",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'nowhere' vs book '' inside a 14/15-word near-verbatim match (tf-idf 0.33))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 403770,
+   "quote": "Then out of nowhere came a profound, Infinite Radiance of Love beyond all imagination"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15631
+  },
+  "quoted_text": "timeless timeless and",
+  "suspected_intended_text": "timeless and",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'timeless' vs book '' inside a 22/23-word near-verbatim match (tf-idf 0.62))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 403782,
+   "quote": "nowhere came a profound, Infinite Radiance of Love beyond all imagination, beyond human love, timeless and eternal, no beginning and no end"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 16844
+  },
+  "quoted_text": "τη",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18527
+  },
+  "quoted_text": "you know you know you know you know you know you know you know you know you know you know you know",
+  "suspected_intended_text": "you know",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 11 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18996
+  },
+  "quoted_text": "you know you know you know you know you know you know you know you know you know you know you know you know you know you know you know",
+  "suspected_intended_text": "you know",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 15 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 34709
+  },
+  "quoted_text": "So, enlightenment, the enlightened state, then, is the state. So, enlightenment, the enlightened state, then, is the state. So, enlightenment, the enlightened state, then, is the state.",
+  "suspected_intended_text": "So, enlightenment, the enlightened state, then, is the state.",
+  "evidence_class": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 40705
+  },
+  "quoted_text": "state",
+  "suspected_intended_text": "stage",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'state' vs book 'stage' inside a 22/24-word near-verbatim match (tf-idf 0.34))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 409048,
+   "quote": "can set the stage for it, but it does not cause it. One can study theology day in and day out, and that study will"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 41064
+  },
+  "quoted_text": "then ends",
+  "suspected_intended_text": "can end",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'then ends' vs book 'can end' inside a 19/22-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 408906,
+   "quote": "the intellectual approach in religious education, what we are describing here is the inner path. It arises from within. A religious education can set the stage for it, but it does not cause it. One can study theology day in and day out, and that study will not necessarily precipitate an inner spiritual realization. However, if there is an interest in religion, plus a certain motivation, the inner path becomes activated. The great saints of Christianity demonstrate that scriptural study, worship, and the devotion to religion can end up as a mystical inner awareness. Suddenly the words dissolve in the Realization of the inner Truth"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 55169
+  },
+  "quoted_text": "We solved all the international problems. We solved all the international problems. We solved all the international problems. We solved all the international problems.",
+  "suspected_intended_text": "We solved all the international problems.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 61426
+  },
+  "quoted_text": "look to your heart, look to your heart, look to your heart.",
+  "suspected_intended_text": "look to your heart,",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

@@ -1,0 +1,121 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4068
+  },
+  "quoted_text": "The suffering gets worse and worse. The suffering gets worse and worse. The suffering gets worse and worse.",
+  "suspected_intended_text": "The suffering gets worse and worse.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 8233
+  },
+  "quoted_text": "he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy he tries to surround the child with high spiritual energy",
+  "suspected_intended_text": "he tries to surround the child with high spiritual energy",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 18 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 11631
+  },
+  "quoted_text": "you love everyone as though they're your family. You love everyone as though they're your family. You love everyone as though they're your family.",
+  "suspected_intended_text": "you love everyone as though they're your family.",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13324
+  },
+  "quoted_text": "cuộc",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15292
+  },
+  "quoted_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "suspected_intended_text": "Yes.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 34 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 22584
+  },
+  "quoted_text": "and then to the eye and then to the eye and then to the eye",
+  "suspected_intended_text": "and then to the eye",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32069
+  },
+  "quoted_text": "You also see the acupuncturist You also see the acupuncturist You also see the acupuncturist You also see the acupuncturist",
+  "suspected_intended_text": "You also see the acupuncturist",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

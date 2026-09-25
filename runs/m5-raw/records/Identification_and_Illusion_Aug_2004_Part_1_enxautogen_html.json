@@ -1,0 +1,206 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 11
+  },
+  "quoted_text": "two at a time, two at a time, two at a time,",
+  "suspected_intended_text": "two at a time,",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 6484
+  },
+  "quoted_text": "had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he had the opportunity to leave it wasn't just because he",
+  "suspected_intended_text": "had the opportunity to leave it wasn't just because he",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 7 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 34232
+  },
+  "quoted_text": "650%",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (impossible-percent: 650 > 100)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 38857
+  },
+  "quoted_text": "were just being who they were. Just being who they were. Just being who they",
+  "suspected_intended_text": "were just being who they",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45195
+  },
+  "quoted_text": "it's pretty evolved it comes in it's pretty evolved it comes in it's pretty evolved it comes in it's pretty evolved it comes in it's pretty evolved it comes in",
+  "suspected_intended_text": "it's pretty evolved it comes in",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45485
+  },
+  "quoted_text": "Wow so she came in at 250 when Wow so she came in at 250 when Wow so she came in at 250 when",
+  "suspected_intended_text": "Wow so she came in at 250 when",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45578
+  },
+  "quoted_text": "we got her she was what did I say she we got her she was what did I say she we got her she was what did I say she",
+  "suspected_intended_text": "we got her she was what did I say she",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45692
+  },
+  "quoted_text": "was at 350 sound like that all right so was at 350 sound like that all right so was at 350 sound like that all right so",
+  "suspected_intended_text": "was at 350 sound like that all right so",
+  "evidence_class": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45812
+  },
+  "quoted_text": "here you see that these animals are more here you see that these animals are more here you see that these animals are more",
+  "suspected_intended_text": "here you see that these animals are more",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45935
+  },
+  "quoted_text": "evolved you see the the effect of human evolved you see the the effect of human evolved you see the the effect of human",
+  "suspected_intended_text": "evolved you see the the effect of human",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 56626
+  },
+  "quoted_text": "Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490. Aristotle at 490.",
+  "suspected_intended_text": "Aristotle at 490.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 20 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 65885
+  },
+  "quoted_text": "Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha. Ha ha.",
+  "suspected_intended_text": "Ha",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 44 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

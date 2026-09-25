@@ -1,0 +1,528 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3295
+  },
+  "quoted_text": "The end of the story. The end of the story. The end of the story. The end of the story. The end of the story. The end of the story. The end of the story.",
+  "suspected_intended_text": "The end of the story.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 7 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3773
+  },
+  "quoted_text": "other side",
+  "suspected_intended_text": "downside",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'other side' vs book 'downside' inside a 22/24-word near-verbatim match (tf-idf 0.49))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 83787,
+   "quote": "that was like, right? So, that was the animal—just couldn’t stop sniffing, poking its nose in. The downside of the animal, then"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4312
+  },
+  "quoted_text": "ruins",
+  "suspected_intended_text": "runes",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ruins' vs book 'runes' inside a 22/23-word near-verbatim match (tf-idf 0.30))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 84403,
+   "quote": "all the time—from psychic reading here to running the runes on you there, to casting the stones, to doing your numbers, to"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4415
+  },
+  "quoted_text": "reeling",
+  "suspected_intended_text": "reading",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'reeling' vs book 'reading' inside a 23/24-word near-verbatim match (tf-idf 0.30))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 84463,
+   "quote": "on you there, to casting the stones, to doing your numbers, to reading the sole of your foot, to reading your hand, to looking"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 5937
+  },
+  "quoted_text": "forgot",
+  "suspected_intended_text": "forget—the",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'forgot' vs book 'forget the' inside a 23/24-word near-verbatim match (tf-idf 0.28))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 85430,
+   "quote": "no time.” And in the book—one of the books, first one, I think, or the second one—I forget—the second one, I think"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 6923
+  },
+  "quoted_text": "integrative",
+  "suspected_intended_text": "integrous",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'integrative' vs book 'integrous' inside a 20/22-word near-verbatim match (tf-idf 0.58))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 86383,
+   "quote": "religion and spirituality. It says spirituality okay, but no establishment of religion, so our trust in God is spiritually integrous with the Constitution"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 14356
+  },
+  "quoted_text": "drowning",
+  "suspected_intended_text": "dying",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'drowning' vs book 'dying' inside a 23/24-word near-verbatim match (tf-idf 0.42))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 92863,
+   "quote": "fear of death at all. Mines could be going off and minesweepers blowing up and people dying. I mean, I was interested in whether we had coffee this morning. The generator was out because the electromagnetic tail took all the power, so there was no coffee. Well, that was the tragedy of the day: no coffee—not that you"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15558
+  },
+  "quoted_text": "to everyone, almost",
+  "suspected_intended_text": "to almost",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'everyone' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.30))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 93865,
+   "quote": "yourself and others is benign. And it’s sort of a falling in love . . . it happens to almost everybody spontaneously. You’ll be walking along"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15713
+  },
+  "quoted_text": "of delight. Delight",
+  "suspected_intended_text": "of delight",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'delight' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.39))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 94061,
+   "quote": "a sudden, you feel like a sense of delight. Unplanned moment out of nowhere. You were worrying about paying the rent, and all"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 21515
+  },
+  "quoted_text": "calibrate higher, higher",
+  "suspected_intended_text": "calibrate higher",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'higher' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.55))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 98710,
+   "quote": "many world leaders, including spiritual great gurus, et cetera, calibrate higher in the beginning of their careers than later. This is true of"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 28289
+  },
+  "quoted_text": "itself",
+  "suspected_intended_text": "as Self",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'itself' vs book 'as self' inside a 22/24-word near-verbatim match (tf-idf 0.64))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 104926,
+   "quote": "the Purusha, the Presence of God within as Self, which is manifesting through the human physicality as, let’s say, this speakingness; this speakingness. There’s no choice involved"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 31277
+  },
+  "quoted_text": "the great, great spirit",
+  "suspected_intended_text": "the Great",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'great' vs book '' inside a 18/19-word near-verbatim match (tf-idf 0.28)); B2-misquote (extra transcript word(s) inside a book quote: transcript 'great' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.30))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 107729,
+   "quote": "give thanks to the Great Spirit.” A sanctification of life. So, intention then is what sets the karma"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 36185
+  },
+  "quoted_text": "play",
+  "suspected_intended_text": "pull you",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'play' vs book 'pull you' inside a 22/24-word near-verbatim match (tf-idf 0.41))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 111805,
+   "quote": "know what I mean? Pick a tragedy and mull on it and pull you off of it. The ego gets great satisfactions out of"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 57049
+  },
+  "quoted_text": "to really keep",
+  "suspected_intended_text": "to keep",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'really' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.48))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 128843,
+   "quote": "first hits you, this is how it hits you. So, you’re not going to keep your job at XYZ\n\nCorporation for very long, sitting"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 59581
+  },
+  "quoted_text": "more powerful than the snake. And the snake is more powerful than the snake. And the snake is more powerful than the snake. And the snake is",
+  "suspected_intended_text": "more powerful than the snake. And the snake is",
+  "evidence_class": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 59845
+  },
+  "quoted_text": "wailed",
+  "suspected_intended_text": "walked",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'wailed' vs book 'walked' inside a 21/24-word near-verbatim match (tf-idf 0.28))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 130447,
+   "quote": "And the meaningfulness of it comes to you from a different domain, so there’s a translation of form into non-form so that one is aware of what favorite fish you are talking about. Anyway, fish and I understand each other. The nonverbal communication becomes progressively important.\n\nThat’s why the communication with animals becomes very easy. You and the animal know exactly where you’re at with each other, and nothing need be said. Your intention is read in an instant by that animal, and you can read its intention and come back to it with what it needs to calm it. And the snake will lay there. The snake will coil up and start to strike, and then this profound stillness and peace prevails. It dominates the snake; the snake cannot strike out of that field, because it’s a perfect field of peace and safety, and it’s more powerful than the snake. The snake is just entranced with you, and it sits there and looks at you for minutes. It’s never seen a human being before, and he’s just walked away from it"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 60115
+  },
+  "quoted_text": "spiritual",
+  "suspected_intended_text": "serious",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'spiritual' vs book 'serious' inside a 23/24-word near-verbatim match (tf-idf 0.46))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 131650,
+   "quote": "it’s not possible to function, and those of you that are into serious spiritual work, it’s probably advisable to have somebody that knows you"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 65704
+  },
+  "quoted_text": "read",
+  "suspected_intended_text": "reach",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'read' vs book 'reach' inside a 22/24-word near-verbatim match (tf-idf 0.40))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 137151,
+   "quote": "Which I Am” as existence, anybody can reach through meditation.\n\nThe letting go of identification with the physicality of the body itself; then letting"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 66276
+  },
+  "quoted_text": "and I have a lot of knowledge and I have a lot of knowledge and I have a lot of knowledge",
+  "suspected_intended_text": "and I have a lot of knowledge",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 71005
+  },
+  "quoted_text": "맞아요",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 77480
+  },
+  "quoted_text": "this person here. This person here. This person here. This person here. This person here. This person here. This person here. This person here. This person here. This person here. This person here.",
+  "suspected_intended_text": "this person here.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 11 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 82149
+  },
+  "quoted_text": "of divinity. Divinity",
+  "suspected_intended_text": "of Divinity",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'divinity' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.42))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 150703,
+   "quote": "out of which Divinity arises, and the nature of Divinity is creation. And henceforth, everything that evolves out of creation itself has the"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 83504
+  },
+  "quoted_text": "imminent",
+  "suspected_intended_text": "immanent",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'imminent' vs book 'immanent' inside a 23/24-word near-verbatim match (tf-idf 0.29))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 151966,
+   "quote": "burned at the stake. He says, “No, God is immanent.” That which is the Source of life itself, within oneself—the source of existence"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 83816
+  },
+  "quoted_text": "imminent",
+  "suspected_intended_text": "immanent",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'imminent' vs book 'immanent' inside a 23/24-word near-verbatim match (tf-idf 0.35))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 152229,
+   "quote": "that is the truth of the enlightened sage, who says that God is not only transcendent, but immanent. He doesn’t say that. The sage"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 84042
+  },
+  "quoted_text": "imminent",
+  "suspected_intended_text": "immanent",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'imminent' vs book 'immanent' inside a 21/24-word near-verbatim match (tf-idf 0.30))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 152423,
+   "quote": "opposites; they’re only two different ways of looking at it. That which is transcendent obviously would have to be immanent, and that which"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 84070
+  },
+  "quoted_text": "imminent",
+  "suspected_intended_text": "immanent",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'imminent' vs book 'immanent' inside a 22/24-word near-verbatim match (tf-idf 0.26))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 152489,
+   "quote": "which is transcendent obviously would have to be immanent, and that which is immanent would obviously, by definition, also have to be transcendent. To"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

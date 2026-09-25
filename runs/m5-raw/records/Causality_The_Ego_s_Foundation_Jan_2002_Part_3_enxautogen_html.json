@@ -1,0 +1,624 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 5729
+  },
+  "quoted_text": "knew",
+  "suspected_intended_text": "know",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'knew' vs book 'know' inside a 22/24-word near-verbatim match (tf-idf 0.38))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 151274,
+   "quote": "justify within any kind of reason the reprieve at the last instant, even though you know you committed the crime, and yet suddenly"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 5829
+  },
+  "quoted_text": "earned karma, good",
+  "suspected_intended_text": "earned good",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'karma' vs book '' inside a 15/16-word near-verbatim match (tf-idf 0.31))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 151405,
+   "quote": "the reprieve comes through. Some people say it’s the earned good karma from other lifetimes"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15629
+  },
+  "quoted_text": "were never... Never suspected",
+  "suspected_intended_text": "were never",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'never' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.49)); B2-misquote (extra transcript word(s) inside a book quote: transcript 'never' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.49))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 160281,
+   "quote": "such powerful depths that they were never suspected—that the depths were that deep, that profound and pitiless, and hopelessness and despair, and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 20755
+  },
+  "quoted_text": "path",
+  "suspected_intended_text": "pass",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'path' vs book 'pass' inside a 16/18-word near-verbatim match (tf-idf 0.27))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 165053,
+   "quote": "It’s like I saw everybody who had ever been through that pass, and I saw their choice. And I said, it cannot be used for personal gain and refused.\n\n“You mean, refuse all that power? You’re going to refuse all that power, all that dominion over . . . ?” Anyway, so"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 22257
+  },
+  "quoted_text": "personal state, spiritual",
+  "suspected_intended_text": "personal spiritual",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'state' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.29))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 166547,
+   "quote": "So, it means in the beginning,\n\nthey’d let go of enough personal ego to reach a good high personal spiritual state. That attracted many people. The person then"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 26871
+  },
+  "quoted_text": "What do we do? What do we do? What do we do?",
+  "suspected_intended_text": "What do we do?",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37007
+  },
+  "quoted_text": "questions really refer",
+  "suspected_intended_text": "questions refer",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'really' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.34))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 179430,
+   "quote": "life can express itself in such a way? A couple of questions refer to that. There is no opposite to God. That"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37329
+  },
+  "quoted_text": "Beyond",
+  "suspected_intended_text": "Below",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'beyond' vs book 'below' inside a 23/24-word near-verbatim match (tf-idf 0.46))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 179719,
+   "quote": "loving. And as you come down, life just doesn’t disappear; it takes a different form. Below 32 degrees, water turns to ice. Below 200, life"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 41737
+  },
+  "quoted_text": "can go take",
+  "suspected_intended_text": "can take",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'go' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.38))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 184087,
+   "quote": "way, you have a choice. If you’re depressed, you can go see a doctor about it. You can take an antidepressant about it. You can"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 46082
+  },
+  "quoted_text": "it gets",
+  "suspected_intended_text": "they get",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'it gets' vs book 'they get' inside a 22/24-word near-verbatim match (tf-idf 0.28))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 188349,
+   "quote": "to my ear, is the sound of all questions. But they get translated into what I understand the human is saying by that, and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 48971
+  },
+  "quoted_text": "rotates",
+  "suspected_intended_text": "rolls",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'rotates' vs book 'rolls' inside a 22/24-word near-verbatim match (tf-idf 0.27))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 190555,
+   "quote": "wheel, whether there’s a prayer in the canon or not, as it rolls around and around probably has nothing to do with it—but the"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 50211
+  },
+  "quoted_text": "with really willingness",
+  "suspected_intended_text": "with willingness",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'really' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.45))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 191845,
+   "quote": "may calibrate just below or above about 200? Those levels there denote the general realms. The 300s have to do with willingness—310 is Willingness"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51344
+  },
+  "quoted_text": "rage",
+  "suspected_intended_text": "raise",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'rage' vs book 'raise' inside a 22/24-word near-verbatim match (tf-idf 0.34))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 193043,
+   "quote": "Negativity of the lower dimensions. With Neutral, it’s okay if you get the raise and it’s okay if you don’t, so you don’t worry. Down lower, you don’t get the raise, you think of suicide or you go into a rage and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 53926
+  },
+  "quoted_text": "titillated",
+  "suspected_intended_text": "tiddleyed",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'titillated' vs book 'tiddleyed' inside a 21/24-word near-verbatim match (tf-idf 0.32))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 195640,
+   "quote": "is Neutral, a very nice, comfortable place to be; 175, you see, people are prideful, and they get “tiddleyed” if they make"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 56285
+  },
+  "quoted_text": "help",
+  "suspected_intended_text": "hell",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'help' vs book 'hell' inside a 23/24-word near-verbatim match (tf-idf 0.34))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 198177,
+   "quote": "up, saying, “I was on the phone for 20 minutes, and I never got a human being. To hell with them.” What does it"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 57027
+  },
+  "quoted_text": "4th grade",
+  "suspected_intended_text": "fourth-grade",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript '4th grade' vs book 'fourth-grade' inside a 22/24-word near-verbatim match (tf-idf 0.33))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 198999,
+   "quote": "get a lot of apathy on the telephone; those are about fourth-grade dropouts and the government has assured them some kind of a"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 57274
+  },
+  "quoted_text": "ascent",
+  "suspected_intended_text": "assent",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ascent' vs book 'assent' inside a 23/24-word near-verbatim match (tf-idf 0.49))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 199248,
+   "quote": "one of these fields [on the Map of Consciousness®] represents a certain level of consciousness, which is impersonal. Each one of these fields, by our assent, tends to dominate"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 57523
+  },
+  "quoted_text": "ascent",
+  "suspected_intended_text": "assent",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ascent' vs book 'assent' inside a 23/24-word near-verbatim match (tf-idf 0.47))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 199554,
+   "quote": "of our own agreement. We call that entrainment. The energy field prevails in society, and by your assent, you agree to that energy field"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 59923
+  },
+  "quoted_text": "crook",
+  "suspected_intended_text": "nook",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'crook' vs book 'nook' inside a 23/24-word near-verbatim match (tf-idf 0.47))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 201972,
+   "quote": "field for detailed research. What we’ve really done is sketch out the broad outlines, but we haven’t mapped out every nook and cranny in"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 60567
+  },
+  "quoted_text": "away",
+  "suspected_intended_text": "the way",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'away' vs book 'the way' inside a 22/24-word near-verbatim match (tf-idf 0.49))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 202734,
+   "quote": "third step at great depth will take you all the way from the bottom to the top: resist” (True). What I did was what’s called, in"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 61518
+  },
+  "quoted_text": "shall",
+  "suspected_intended_text": "should",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'shall' vs book 'should' inside a 23/24-word near-verbatim match (tf-idf 0.35))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 203693,
+   "quote": "700. And he never left the mountain. I know what he experienced, because in walking through, what should we say . . . in completely surrendering everything"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 62524
+  },
+  "quoted_text": "shown",
+  "suspected_intended_text": "shone",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'shown' vs book 'shone' inside a 22/24-word near-verbatim match (tf-idf 0.34))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 204740,
+   "quote": "bring about enormous change. It was through that great space that the splendor of That Which Is shone forth. You never experience your"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 62778
+  },
+  "quoted_text": "cause",
+  "suspected_intended_text": "because",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'cause' vs book 'because' inside a 22/24-word near-verbatim match (tf-idf 0.65))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 205026,
+   "quote": "death: resist” (True). That’s a fact. You don’t have to worry about experiencing your death, because it ain’t gonna happen. The other question that we sort of"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 63228
+  },
+  "quoted_text": "release",
+  "suspected_intended_text": "relieves",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'release' vs book 'relieves' inside a 22/24-word near-verbatim match (tf-idf 0.51))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 205398,
+   "quote": "you’re not going to experience any death anyway. One of the biggest reasons for the propagation of the ego is fear of death. To merely know that you’re not going to die, you’re not going to experience any death, and it’s already set already, relieves a great deal of reason for the ego to continue its dominion"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 65883
+  },
+  "quoted_text": "coliseum",
+  "suspected_intended_text": "Colosseum",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'coliseum' vs book 'colosseum' inside a 21/23-word near-verbatim match (tf-idf 0.32))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 208301,
+   "quote": "same as the Roman Colosseum: blood for the sake of blood. You don’t have to give them a lecture about that—that"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 67965
+  },
+  "quoted_text": "ridges",
+  "suspected_intended_text": "riches",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ridges' vs book 'riches' inside a 22/24-word near-verbatim match (tf-idf 0.25))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 210430,
+   "quote": "you’re giving it back to the world. Do you understand what I’m saying? But to store up riches on earth, I think is foolish. Storing up riches on earth is"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 68011
+  },
+  "quoted_text": "ridges",
+  "suspected_intended_text": "riches",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ridges' vs book 'riches' inside a 22/24-word near-verbatim match (tf-idf 0.25))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 210430,
+   "quote": "you’re giving it back to the world. Do you understand what I’m saying? But to store up riches on earth, I think is foolish. Storing up riches on earth is"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 69206
+  },
+  "quoted_text": "propelled propelled the",
+  "suspected_intended_text": "propelled the",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'propelled' vs book '' inside a 21/23-word near-verbatim match (tf-idf 0.29))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 211788,
+   "quote": "world or not is sort of irrelevant. The capacity to do that is what propelled the continuation: the joy of one’s"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 69243
+  },
+  "quoted_text": "the joy of one's the joy of one's the joy of one's",
+  "suspected_intended_text": "the joy of one's",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 69351
+  },
+  "quoted_text": "musicians musicians typically",
+  "suspected_intended_text": "musicians typically",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'musicians' vs book '' inside a 21/23-word near-verbatim match (tf-idf 0.35))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 211656,
+   "quote": "of the truth of who you are. Once\n\nthat’s validated, after that, things don’t really matter. Whether you get better in terms of the world or not is sort of irrelevant. The capacity to do that is what propelled the continuation: the joy of one’s perfection or expertise, or whatever you call it.\n\nYou know, musicians typically live to be very"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

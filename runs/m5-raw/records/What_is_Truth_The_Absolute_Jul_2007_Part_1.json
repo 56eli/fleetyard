@@ -1,0 +1,36 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_Truth_The_Absolute_Jul_2007_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 47351
+  },
+  "quoted_text": "Isn't that weird? Isn't that weird? Isn't that weird? Isn't that weird? Isn't that weird?",
+  "suspected_intended_text": "Isn't that weird?",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_Truth_The_Absolute_Jul_2007_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 53474
+  },
+  "quoted_text": "we quit using the methodology, we quit using the methodology, we quit using the methodology, we quit using the methodology,",
+  "suspected_intended_text": "we quit using the methodology,",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

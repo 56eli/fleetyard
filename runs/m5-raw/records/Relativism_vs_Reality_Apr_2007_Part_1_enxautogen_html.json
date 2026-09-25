@@ -1,0 +1,74 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Relativism_vs_Reality_Apr_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 11837
+  },
+  "quoted_text": "It cost me 50 bucks, though. It cost me 50 bucks, though. It cost me 50 bucks, though.",
+  "suspected_intended_text": "It cost me 50 bucks, though.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Relativism_vs_Reality_Apr_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 16918
+  },
+  "quoted_text": "magicalע",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Relativism_vs_Reality_Apr_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37100
+  },
+  "quoted_text": "I want it. I want it. I want it. I want it. I want it.",
+  "suspected_intended_text": "I want it.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Relativism_vs_Reality_Apr_2007_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 62974
+  },
+  "quoted_text": "peace calibrates at 375",
+  "suspected_intended_text": "Peace 600",
+  "evidence_class": "signals: B1-contradiction (level-log: books give Peace = [600], transcript says 375)",
+  "detector_id": "B1-contradiction",
+  "book_reference": {
+   "slug": "discovery_of_the_presence_of_g",
+   "char_offset": 363264,
+   "quote": "Peace 600"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

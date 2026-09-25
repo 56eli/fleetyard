@@ -1,0 +1,2047 @@
+{
+ "task": "TASK-011",
+ "status": "PROVISIONAL raw census, unreviewed; M5 NOT certified",
+ "generated_utc": "2026-09-25T00:54:33Z",
+ "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
+ "overlays_sha256": "dec55ef15b05a5b4c23bfa98ff578964dd7b19ffe8a44fcd091d08fef7a1751a",
+ "tool_commit": "382095fd9d3a84c53e34983c41fb2109e6a8515c",
+ "detectors": [
+  "A1-repetition",
+  "A2-nonsense",
+  "B1-contradiction",
+  "B2-misquote"
+ ],
+ "excluded": {
+  "A4-confusion": "no independent held-out FP rate; fixture recall 0/16 independent (TASK-007 pending)",
+  "drop-word": "detector never built (M2 accepted incomplete); unmeasured, NOT zero",
+  "speaker/format": "detector never built (M2 accepted incomplete); unmeasured, NOT zero"
+ },
+ "command": "python3 tools/sweep_m5.py --out runs/m5-raw",
+ "precision": "UNMEASURED",
+ "clean_set": "0/59 in-sample only, invalid as independent FP estimate",
+ "transcripts_total": 230,
+ "processed": 230,
+ "pending_detector_run": 0,
+ "next_pending": null,
+ "failed_reads": [],
+ "finding_pass_audited": 0,
+ "pending_review": 230,
+ "records_total": 1334,
+ "records_per_detector_signal": {
+  "A1-repetition": 938,
+  "A2-nonsense": 158,
+  "B1-contradiction": 12,
+  "B2-misquote": 228
+ },
+ "records_per_detector_combination": {
+  "A1-repetition": 937,
+  "A1-repetition+B1-contradiction": 1,
+  "A2-nonsense": 157,
+  "A2-nonsense+B1-contradiction": 1,
+  "B1-contradiction": 10,
+  "B2-misquote": 228
+ },
+ "raw_runner_confidence": {
+  "CANDIDATE": 1332,
+  "HIGH CONFIDENCE": 2
+ },
+ "by_year": {
+  "2002": {
+   "transcripts": 36,
+   "processed": 36,
+   "records": 282
+  },
+  "2003": {
+   "transcripts": 18,
+   "processed": 18,
+   "records": 16
+  },
+  "2004": {
+   "transcripts": 16,
+   "processed": 16,
+   "records": 97
+  },
+  "2005": {
+   "transcripts": 21,
+   "processed": 21,
+   "records": 90
+  },
+  "2006": {
+   "transcripts": 12,
+   "processed": 12,
+   "records": 57
+  },
+  "2007": {
+   "transcripts": 27,
+   "processed": 27,
+   "records": 199
+  },
+  "2008": {
+   "transcripts": 22,
+   "processed": 22,
+   "records": 175
+  },
+  "2009": {
+   "transcripts": 12,
+   "processed": 12,
+   "records": 76
+  },
+  "2010": {
+   "transcripts": 6,
+   "processed": 6,
+   "records": 52
+  },
+  "2011": {
+   "transcripts": 8,
+   "processed": 8,
+   "records": 60
+  },
+  "unknown": {
+   "transcripts": 52,
+   "processed": 52,
+   "records": 230
+  }
+ },
+ "zero_hit_transcripts": [
+  "Belief,_Trust_and_Credibility_Jun_2008_Part_1_enxautogen_html",
+  "Belief,_Trust_and_Credibility_Jun_2008_Part_2_enxautogen_html",
+  "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_1",
+  "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_3_enxautogen_html",
+  "Dialogue,_Questions,_and_Answers_Dec_2003_Part_2_enxautogen_html",
+  "Dialogue_Questions_and_Answers_Dec_2003_Part_3",
+  "Enlightenment_Aug_2003_Part_1_enxautogen_html",
+  "Enlightenment_Aug_2003_Part_3_enxautogen_html",
+  "God_Transcendent_and_Immanent_Nov_2002_Part_3_enxautogen_html",
+  "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_1_enxautogen_html",
+  "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_3_enxautogen_html",
+  "Perception_vs_Essence_Apr_2006_Part_2_enxautogen_html",
+  "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_2_enxautogen_html",
+  "Realization_of_the_Self_as_the_I_Nov_2003_Part_2_enxautogen_html",
+  "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_3_enxautogen_html",
+  "Satsang_Series_Volume_II_Part_1_enxautogen_html",
+  "Spiritual_Community_Jun_2003_Part_1_enxautogen_html",
+  "Spiritual_Community_Jun_2003_Part_2_enxautogen_html",
+  "Spiritual_Community_Jun_2003_Part_3_enxautogen_html",
+  "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_1_enxautogen_html",
+  "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_1_enxautogen_html",
+  "Transcending_Obstacles_Sep_2005_Part_3",
+  "What_is_Real_Jun_2007_Part_2_enxautogen_html",
+  "What_is_the_World_Feb_2009_Part_1_enxautogen_html"
+ ],
+ "per_transcript": [
+  {
+   "transcript": "A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html",
+   "year": "2007",
+   "records": 17,
+   "per_detector": {
+    "A1-repetition": 15,
+    "A2-nonsense": 2
+   }
+  },
+  {
+   "transcript": "A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html",
+   "year": "2007",
+   "records": 12,
+   "per_detector": {
+    "A1-repetition": 12
+   }
+  },
+  {
+   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html",
+   "year": "2007",
+   "records": 13,
+   "per_detector": {
+    "A1-repetition": 11,
+    "A2-nonsense": 1,
+    "B2-misquote": 1
+   }
+  },
+  {
+   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_1_enxautogen_html",
+   "year": "2008",
+   "records": 34,
+   "per_detector": {
+    "A1-repetition": 8,
+    "A2-nonsense": 26
+   }
+  },
+  {
+   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html",
+   "year": "2008",
+   "records": 15,
+   "per_detector": {
+    "A1-repetition": 8,
+    "A2-nonsense": 6,
+    "B2-misquote": 1
+   }
+  },
+  {
+   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html",
+   "year": "2008",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 6,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html",
+   "year": "2008",
+   "records": 23,
+   "per_detector": {
+    "A1-repetition": 18,
+    "A2-nonsense": 5
+   }
+  },
+  {
+   "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 1,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 3,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Alignment_Apr_2005_Part_1_enxautogen_html",
+   "year": "2005",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Alignment_Apr_2005_Part_2_enxautogen_html",
+   "year": "2005",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 7
+   }
+  },
+  {
+   "transcript": "Alignment_Apr_2005_Part_3_enxautogen_html",
+   "year": "2005",
+   "records": 9,
+   "per_detector": {
+    "A1-repetition": 9
+   }
+  },
+  {
+   "transcript": "Belief,_Trust_and_Credibility_Jun_2008_Part_1_enxautogen_html",
+   "year": "2008",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Belief,_Trust_and_Credibility_Jun_2008_Part_2_enxautogen_html",
+   "year": "2008",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Belief,_Trust_and_Credibility_Jun_2008_Part_3_enxautogen_html",
+   "year": "2008",
+   "records": 9,
+   "per_detector": {
+    "A1-repetition": 9
+   }
+  },
+  {
+   "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 18,
+   "per_detector": {
+    "A1-repetition": 9,
+    "B2-misquote": 9
+   }
+  },
+  {
+   "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 15,
+   "per_detector": {
+    "A1-repetition": 3,
+    "B2-misquote": 12
+   }
+  },
+  {
+   "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 30,
+   "per_detector": {
+    "A1-repetition": 2,
+    "B2-misquote": 28
+   }
+  },
+  {
+   "transcript": "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html",
+   "year": "2007",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 3,
+    "A2-nonsense": 4
+   }
+  },
+  {
+   "transcript": "Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html",
+   "year": "2007",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Creation_vs_Evolution_Oct_2007_Part_3_enxautogen_html",
+   "year": "2007",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 7
+   }
+  },
+  {
+   "transcript": "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_1",
+   "year": "2002",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Dialogue,_Questions,_and_Answers_Dec_2003_Part_1_enxautogen_html",
+   "year": "2003",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Dialogue,_Questions,_and_Answers_Dec_2003_Part_2_enxautogen_html",
+   "year": "2003",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Dialogue_Questions_and_Answers_Dec_2003_Part_3",
+   "year": "2003",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Emotions_and_Sensations_Apr_2004_Part_1_enxautogen_html",
+   "year": "2004",
+   "records": 9,
+   "per_detector": {
+    "A1-repetition": 6,
+    "A2-nonsense": 2,
+    "B2-misquote": 1
+   }
+  },
+  {
+   "transcript": "Emotions_and_Sensations_Apr_2004_Part_2_enxautogen_html",
+   "year": "2004",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 2,
+    "A2-nonsense": 4
+   }
+  },
+  {
+   "transcript": "Emotions_and_Sensations_Apr_2004_Part_3_enxautogen_html",
+   "year": "2004",
+   "records": 12,
+   "per_detector": {
+    "A1-repetition": 12
+   }
+  },
+  {
+   "transcript": "Enlightenment_Aug_2003_Part_1_enxautogen_html",
+   "year": "2003",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Enlightenment_Aug_2003_Part_2_enxautogen_html",
+   "year": "2003",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Enlightenment_Aug_2003_Part_3_enxautogen_html",
+   "year": "2003",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Experiential_Reality_Feb_2006_Part_1_enxautogen_html",
+   "year": "2006",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Experiential_Reality_Feb_2006_Part_2_enxautogen_html",
+   "year": "2006",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Experiential_Reality_Feb_2006_Part_3_enxautogen_html",
+   "year": "2006",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html",
+   "year": "2007",
+   "records": 10,
+   "per_detector": {
+    "A1-repetition": 5,
+    "A2-nonsense": 1,
+    "B2-misquote": 4
+   }
+  },
+  {
+   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_2_enxautogen_html",
+   "year": "2007",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 7
+   }
+  },
+  {
+   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html",
+   "year": "2007",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 8
+   }
+  },
+  {
+   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html",
+   "year": "2008",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_2_enxautogen_html",
+   "year": "2008",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html",
+   "year": "2008",
+   "records": 10,
+   "per_detector": {
+    "A1-repetition": 9,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "God_Transcendent_and_Immanent_Nov_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 2,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "God_Transcendent_and_Immanent_Nov_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html",
+   "year": "2007",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html",
+   "year": "2007",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_3_enxautogen_html",
+   "year": "2007",
+   "records": 17,
+   "per_detector": {
+    "A1-repetition": 15,
+    "A2-nonsense": 2
+   }
+  },
+  {
+   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html",
+   "year": "2010",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 5,
+    "A2-nonsense": 2,
+    "B1-contradiction": 1
+   }
+  },
+  {
+   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html",
+   "year": "2010",
+   "records": 10,
+   "per_detector": {
+    "A1-repetition": 9,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_3_enxautogen_html",
+   "year": "2010",
+   "records": 11,
+   "per_detector": {
+    "A1-repetition": 11
+   }
+  },
+  {
+   "transcript": "Happiness_Apr_2009_Part_1_enxautogen_html",
+   "year": "2009",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Happiness_Apr_2009_Part_2_enxautogen_html",
+   "year": "2009",
+   "records": 9,
+   "per_detector": {
+    "A1-repetition": 8,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html",
+   "year": "2009",
+   "records": 18,
+   "per_detector": {
+    "A1-repetition": 14,
+    "A2-nonsense": 4
+   }
+  },
+  {
+   "transcript": "Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html",
+   "year": "2004",
+   "records": 12,
+   "per_detector": {
+    "A1-repetition": 11,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Identification_and_Illusion_Aug_2004_Part_2_enxautogen_html",
+   "year": "2004",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 1,
+    "A2-nonsense": 3
+   }
+  },
+  {
+   "transcript": "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html",
+   "year": "2004",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 8
+   }
+  },
+  {
+   "transcript": "Illness_and_SelfHealing_enxautogen_html",
+   "year": "unknown",
+   "records": 10,
+   "per_detector": {
+    "A1-repetition": 1,
+    "B2-misquote": 9
+   }
+  },
+  {
+   "transcript": "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_1_enxautogen_html",
+   "year": "2003",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_2_enxautogen_html",
+   "year": "2003",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_3_enxautogen_html",
+   "year": "2003",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Intention_May_2005_Part_1_enxautogen_html",
+   "year": "2005",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 2,
+    "B2-misquote": 1
+   }
+  },
+  {
+   "transcript": "Intention_May_2005_Part_2_enxautogen_html",
+   "year": "2005",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 1,
+    "A2-nonsense": 4
+   }
+  },
+  {
+   "transcript": "Intention_May_2005_Part_3_enxautogen_html",
+   "year": "2005",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Karma_and_the_Afterlife_Oct_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Karma_and_the_Afterlife_Oct_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Karma_and_the_Afterlife_Oct_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Love_Sep_2011_Part_1_enxautogen_html",
+   "year": "2011",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 3,
+    "A2-nonsense": 3,
+    "B1-contradiction": 3
+   }
+  },
+  {
+   "transcript": "Love_Sep_2011_Part_2_enxautogen_html",
+   "year": "2011",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Love_is_a_Way_of_Being_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Love_is_a_Way_of_Being_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 2,
+    "B2-misquote": 1
+   }
+  },
+  {
+   "transcript": "Love_is_a_Way_of_Being_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 6,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html",
+   "year": "2011",
+   "records": 9,
+   "per_detector": {
+    "A1-repetition": 4,
+    "B1-contradiction": 1,
+    "B2-misquote": 4
+   }
+  },
+  {
+   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html",
+   "year": "2011",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 3,
+    "B2-misquote": 2
+   }
+  },
+  {
+   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_3_enxautogen_html",
+   "year": "2011",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 6
+   }
+  },
+  {
+   "transcript": "Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_1_enxautogen_html",
+   "year": "2008",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_2_enxautogen_html",
+   "year": "2008",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html",
+   "year": "2008",
+   "records": 11,
+   "per_detector": {
+    "A1-repetition": 11
+   }
+  },
+  {
+   "transcript": "Peace_Aug_2009_Part_1_enxautogen_html",
+   "year": "2009",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 4,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Peace_Aug_2009_Part_2_enxautogen_html",
+   "year": "2009",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Peace_Aug_2009_Part_3_enxautogen_html",
+   "year": "2009",
+   "records": 11,
+   "per_detector": {
+    "A1-repetition": 10,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Perception_and_Positionality_Jun_2004_Part_1_enxautogen_html",
+   "year": "2004",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 6
+   }
+  },
+  {
+   "transcript": "Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html",
+   "year": "2004",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Perception_and_Positionality_Jun_2004_Part_3_enxautogen_html",
+   "year": "2004",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Perception_vs_Essence_Apr_2006_Part_1",
+   "year": "2006",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 7,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Perception_vs_Essence_Apr_2006_Part_2_enxautogen_html",
+   "year": "2006",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Perception_vs_Essence_Apr_2006_Part_3_enxautogen_html",
+   "year": "2006",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 6
+   }
+  },
+  {
+   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 14,
+   "per_detector": {
+    "A1-repetition": 3,
+    "B2-misquote": 11
+   }
+  },
+  {
+   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 28,
+   "per_detector": {
+    "B2-misquote": 28
+   }
+  },
+  {
+   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 15,
+   "per_detector": {
+    "A1-repetition": 5,
+    "B2-misquote": 10
+   }
+  },
+  {
+   "transcript": "Practical_Spirituality_Oct_2008_Part_1_enxautogen_html",
+   "year": "2008",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Practical_Spirituality_Oct_2008_Part_2_enxautogen_html",
+   "year": "2008",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 8
+   }
+  },
+  {
+   "transcript": "Practical_Spirituality_Oct_2008_Part_3_enxautogen_html",
+   "year": "2008",
+   "records": 13,
+   "per_detector": {
+    "A1-repetition": 12,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Question_Answer_Session_Jan_2011_enxautogen_html",
+   "year": "2011",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Question_Answer_Session_Jul_2011_enxautogen_html",
+   "year": "2011",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 8
+   }
+  },
+  {
+   "transcript": "Question_Answer_Session_Mar_2011_enxautogen_html",
+   "year": "2011",
+   "records": 16,
+   "per_detector": {
+    "A1-repetition": 12,
+    "A2-nonsense": 4
+   }
+  },
+  {
+   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 11,
+   "per_detector": {
+    "B2-misquote": 11
+   }
+  },
+  {
+   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 1,
+    "B2-misquote": 7
+   }
+  },
+  {
+   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 11,
+   "per_detector": {
+    "A2-nonsense": 3,
+    "B2-misquote": 8
+   }
+  },
+  {
+   "transcript": "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Realization_of_the_Self_as_the_I_Nov_2003_Part_1_enxautogen_html",
+   "year": "2003",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Realization_of_the_Self_as_the_I_Nov_2003_Part_2_enxautogen_html",
+   "year": "2003",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Realization_of_the_Self_as_the_I_Nov_2003_Part_3_enxautogen_html",
+   "year": "2003",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Relativism_vs_Reality_Apr_2007_Part_1_enxautogen_html",
+   "year": "2007",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 2,
+    "A2-nonsense": 1,
+    "B1-contradiction": 1
+   }
+  },
+  {
+   "transcript": "Relativism_vs_Reality_Apr_2007_Part_2_enxautogen_html",
+   "year": "2007",
+   "records": 11,
+   "per_detector": {
+    "A1-repetition": 11
+   }
+  },
+  {
+   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html",
+   "year": "2007",
+   "records": 11,
+   "per_detector": {
+    "A1-repetition": 11
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_III_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 6
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_III_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_III_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_III_Part_4_enxautogen_html",
+   "year": "unknown",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_III_Part_5_enxautogen_html",
+   "year": "unknown",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 3,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_III_Part_6_enxautogen_html",
+   "year": "unknown",
+   "records": 2,
+   "per_detector": {
+    "A2-nonsense": 2
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_II_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Satsang_Series_Volume_II_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 5,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_II_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_II_Part_4_enxautogen_html",
+   "year": "unknown",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_II_Part_5_enxautogen_html",
+   "year": "unknown",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_II_Part_6_enxautogen_html",
+   "year": "unknown",
+   "records": 9,
+   "per_detector": {
+    "A1-repetition": 6,
+    "A2-nonsense": 3
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_IV_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_IV_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_IV_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_IV_Part_4_enxautogen_html",
+   "year": "unknown",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_IX_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 6
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_IX_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 3,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_IX_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_IX_Part_4_enxautogen_html",
+   "year": "unknown",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 4,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_IX_Part_5_enxautogen_html",
+   "year": "unknown",
+   "records": 9,
+   "per_detector": {
+    "A1-repetition": 9
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_IX_Part_6_enxautogen_html",
+   "year": "unknown",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_I_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_I_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_I_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 2,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_I_Part_4_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_I_Part_5_enxautogen_html",
+   "year": "unknown",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html",
+   "year": "unknown",
+   "records": 10,
+   "per_detector": {
+    "A1-repetition": 10
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VIII_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VIII_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VIII_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VIII_Part_4_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VII_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VII_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 4,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VII_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VII_Part_4_enxautogen_html",
+   "year": "unknown",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 6,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VI_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VI_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VI_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_VI_Part_4_enxautogen_html",
+   "year": "unknown",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_V_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 7
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_V_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 5,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_V_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 8
+   }
+  },
+  {
+   "transcript": "Satsang_Series_Volume_V_Part_4_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Serenity_Aug_2005_Part_1",
+   "year": "2005",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Serenity_Aug_2005_Part_2",
+   "year": "2005",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Serenity_Aug_2005_Part_3_enxautogen_html",
+   "year": "2005",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 3,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Spiritual_Community_Jun_2003_Part_1_enxautogen_html",
+   "year": "2003",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Spiritual_Community_Jun_2003_Part_2_enxautogen_html",
+   "year": "2003",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Spiritual_Community_Jun_2003_Part_3_enxautogen_html",
+   "year": "2003",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Spiritual_First_Aid_enxautogen_html",
+   "year": "unknown",
+   "records": 8,
+   "per_detector": {
+    "B2-misquote": 8
+   }
+  },
+  {
+   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html",
+   "year": "2010",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 4,
+    "A2-nonsense": 3,
+    "B1-contradiction": 1
+   }
+  },
+  {
+   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_2_enxautogen_html",
+   "year": "2010",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 1,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html",
+   "year": "2010",
+   "records": 13,
+   "per_detector": {
+    "A1-repetition": 10,
+    "A2-nonsense": 3
+   }
+  },
+  {
+   "transcript": "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html",
+   "year": "2006",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_2_enxautogen_html",
+   "year": "2006",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 4,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html",
+   "year": "2006",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 3,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_1_enxautogen_html",
+   "year": "2007",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html",
+   "year": "2007",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_3_enxautogen_html",
+   "year": "2007",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "Spiritual_Traps_Oct_2005_Part_1_enxautogen_html",
+   "year": "2005",
+   "records": 9,
+   "per_detector": {
+    "A1-repetition": 5,
+    "A2-nonsense": 4
+   }
+  },
+  {
+   "transcript": "Spiritual_Traps_Oct_2005_Part_2_enxautogen_html",
+   "year": "2005",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 2,
+    "B2-misquote": 2
+   }
+  },
+  {
+   "transcript": "Spiritual_Traps_Oct_2005_Part_3_enxautogen_html",
+   "year": "2005",
+   "records": 1,
+   "per_detector": {
+    "A1-repetition": 1
+   }
+  },
+  {
+   "transcript": "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html",
+   "year": "2006",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 3,
+    "A2-nonsense": 1,
+    "B2-misquote": 1
+   }
+  },
+  {
+   "transcript": "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_2_enxautogen_html",
+   "year": "2006",
+   "records": 16,
+   "per_detector": {
+    "A1-repetition": 11,
+    "A2-nonsense": 5
+   }
+  },
+  {
+   "transcript": "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_3",
+   "year": "2006",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html",
+   "year": "2008",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 4,
+    "A2-nonsense": 4
+   }
+  },
+  {
+   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_2_enxautogen_html",
+   "year": "2008",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_3_enxautogen_html",
+   "year": "2008",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 8
+   }
+  },
+  {
+   "transcript": "Spirituality_and_the_World_Apr_2003_Part_1_enxautogen_html",
+   "year": "2003",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 1,
+    "A2-nonsense": 3,
+    "B1-contradiction": 1
+   }
+  },
+  {
+   "transcript": "Spirituality_and_the_World_Apr_2003_Part_2_enxautogen_html",
+   "year": "2003",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 2,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Spirituality_and_the_World_Apr_2003_Part_3_enxautogen_html",
+   "year": "2003",
+   "records": 1,
+   "per_detector": {
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Success_Oct_2009_Part_1_enxautogen_html",
+   "year": "2009",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 3,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Success_Oct_2009_Part_2_enxautogen_html",
+   "year": "2009",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 1,
+    "B2-misquote": 1
+   }
+  },
+  {
+   "transcript": "Success_Oct_2009_Part_3_enxautogen_html",
+   "year": "2009",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_1_enxautogen_html",
+   "year": "2008",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_2_enxautogen_html",
+   "year": "2008",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 2,
+    "A2-nonsense": 4
+   }
+  },
+  {
+   "transcript": "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_3_enxautogen_html",
+   "year": "2008",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 6,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "The_Ego_and_The_Self_Dec_2004_Part_1_enxautogen_html",
+   "year": "2004",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "The_Ego_and_The_Self_Dec_2004_Part_2_enxautogen_html",
+   "year": "2004",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "The_Human_Dilemma_Aug_2007_Part_1_enxautogen_html",
+   "year": "2007",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html",
+   "year": "2007",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 3,
+    "B2-misquote": 3
+   }
+  },
+  {
+   "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html",
+   "year": "2007",
+   "records": 13,
+   "per_detector": {
+    "A1-repetition": 13
+   }
+  },
+  {
+   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 27,
+   "per_detector": {
+    "A1-repetition": 2,
+    "B2-misquote": 25
+   }
+  },
+  {
+   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html",
+   "year": "2002",
+   "records": 26,
+   "per_detector": {
+    "A1-repetition": 4,
+    "A2-nonsense": 1,
+    "B2-misquote": 21
+   }
+  },
+  {
+   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 19,
+   "per_detector": {
+    "A1-repetition": 3,
+    "B2-misquote": 16
+   }
+  },
+  {
+   "transcript": "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html",
+   "year": "2002",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 7,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_2",
+   "year": "2002",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_3_enxautogen_html",
+   "year": "2002",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "The_Presence_of_Spiritual_Awareness_Part_1_enxautogen_html",
+   "year": "unknown",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 5
+   }
+  },
+  {
+   "transcript": "The_Presence_of_Spiritual_Awareness_Part_2_enxautogen_html",
+   "year": "unknown",
+   "records": 3,
+   "per_detector": {
+    "A1-repetition": 3
+   }
+  },
+  {
+   "transcript": "The_Presence_of_Spiritual_Awareness_Part_3_enxautogen_html",
+   "year": "unknown",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 5,
+    "B1-contradiction": 1
+   }
+  },
+  {
+   "transcript": "Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html",
+   "year": "2004",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 3,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Thought_and_Ideation_Feb_2004_Part_3_enxautogen_html",
+   "year": "2004",
+   "records": 12,
+   "per_detector": {
+    "A1-repetition": 9,
+    "A2-nonsense": 3
+   }
+  },
+  {
+   "transcript": "Transcending_Barriers_Jun_2005_Part_1_enxautogen_html",
+   "year": "2005",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Transcending_Barriers_Jun_2005_Part_2",
+   "year": "2005",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 6,
+    "B2-misquote": 1
+   }
+  },
+  {
+   "transcript": "Transcending_Barriers_Jun_2005_Part_3_enxautogen_html",
+   "year": "2005",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 4,
+    "A2-nonsense": 2
+   }
+  },
+  {
+   "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html",
+   "year": "2005",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 6
+   }
+  },
+  {
+   "transcript": "Transcending_Obstacles_Sep_2005_Part_2_enxautogen_html",
+   "year": "2005",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "Transcending_Obstacles_Sep_2005_Part_3",
+   "year": "2005",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "Vision_Feb_2005_Part_1_enxautogen_html",
+   "year": "2005",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "Vision_Feb_2005_Part_2_enxautogen_html",
+   "year": "2005",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 5,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Vision_Feb_2005_Part_3_enxautogen_html",
+   "year": "2005",
+   "records": 10,
+   "per_detector": {
+    "A1-repetition": 9,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "What_is_Real_Jun_2007_Part_1",
+   "year": "2007",
+   "records": 4,
+   "per_detector": {
+    "A1-repetition": 4
+   }
+  },
+  {
+   "transcript": "What_is_Real_Jun_2007_Part_2_enxautogen_html",
+   "year": "2007",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "What_is_Real_Jun_2007_Part_3_enxautogen_html",
+   "year": "2007",
+   "records": 8,
+   "per_detector": {
+    "A1-repetition": 5,
+    "A2-nonsense": 3
+   }
+  },
+  {
+   "transcript": "What_is_Truth_The_Absolute_Jul_2007_Part_1",
+   "year": "2007",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  },
+  {
+   "transcript": "What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html",
+   "year": "2007",
+   "records": 7,
+   "per_detector": {
+    "A1-repetition": 5,
+    "A2-nonsense": 1,
+    "B1-contradiction": 1
+   }
+  },
+  {
+   "transcript": "What_is_Truth_The_Absolute_Jul_2007_Part_3_enxautogen_html",
+   "year": "2007",
+   "records": 13,
+   "per_detector": {
+    "A1-repetition": 11,
+    "A2-nonsense": 2
+   }
+  },
+  {
+   "transcript": "What_is_the_World_Feb_2009_Part_1_enxautogen_html",
+   "year": "2009",
+   "records": 0,
+   "per_detector": {}
+  },
+  {
+   "transcript": "What_is_the_World_Feb_2009_Part_2_enxautogen_html",
+   "year": "2009",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 4,
+    "B2-misquote": 1
+   }
+  },
+  {
+   "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html",
+   "year": "2009",
+   "records": 14,
+   "per_detector": {
+    "A1-repetition": 13,
+    "A2-nonsense": 1
+   }
+  },
+  {
+   "transcript": "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html",
+   "year": "2004",
+   "records": 6,
+   "per_detector": {
+    "A1-repetition": 4,
+    "A2-nonsense": 1,
+    "B2-misquote": 1
+   }
+  },
+  {
+   "transcript": "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html",
+   "year": "2004",
+   "records": 5,
+   "per_detector": {
+    "A1-repetition": 1,
+    "A2-nonsense": 2,
+    "B1-contradiction": 2
+   }
+  },
+  {
+   "transcript": "Witnessing_and_Observing_Oct_2004_Part_3",
+   "year": "2004",
+   "records": 2,
+   "per_detector": {
+    "A1-repetition": 2
+   }
+  }
+ ],
+ "fixture_overlap": [
+  {
+   "fixture": "CF-003",
+   "char_offset": 4543,
+   "detector_id": "A2-nonsense+B1-contradiction",
+   "raw_runner_confidence": "HIGH CONFIDENCE"
+  },
+  {
+   "fixture": "CF-006",
+   "char_offset": 2318,
+   "detector_id": "A1-repetition+B1-contradiction",
+   "raw_runner_confidence": "HIGH CONFIDENCE"
+  },
+  {
+   "fixture": "CF-015",
+   "char_offset": 5854,
+   "detector_id": "B2-misquote",
+   "raw_runner_confidence": "CANDIDATE"
+  }
+ ]
+}

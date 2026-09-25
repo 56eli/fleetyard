@@ -1,0 +1,36 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_3.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19222
+  },
+  "quoted_text": "a deep love of astrology a deep love of astrology a deep love of astrology",
+  "suspected_intended_text": "a deep love of astrology",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_3.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 20475
+  },
+  "quoted_text": "it's not it's not it's not it's not it's not it's not it's not it's not it's not",
+  "suspected_intended_text": "it's not",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

@@ -1,0 +1,233 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 2873
+  },
+  "quoted_text": "imminent",
+  "suspected_intended_text": "immanent",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'imminent' vs book 'immanent' inside a 21/22-word near-verbatim match (tf-idf 0.35))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 216019,
+   "quote": "God is both immanent and transcendent. Religion has to do with God as transcendent. Spirituality, Enlightenment, the way of Zen and the"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4776
+  },
+  "quoted_text": "community",
+  "suspected_intended_text": "committee",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'community' vs book 'committee' inside a 23/24-word near-verbatim match (tf-idf 0.44))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 217312,
+   "quote": "called them back from their vacation. Would you believe the academic committee came back from their vacation to review the material because they thought"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 7061
+  },
+  "quoted_text": "great intellects, scientific",
+  "suspected_intended_text": "great scientific",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'intellects' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.45))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 218429,
+   "quote": "calibrated 499. And if you go back to Sir Francis Bacon, all the great scientific intellects throughout history seem to stop at 499. The"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 10570
+  },
+  "quoted_text": "being",
+  "suspected_intended_text": "getting",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'being' vs book 'getting' inside a 21/24-word near-verbatim match (tf-idf 0.36))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 286573,
+   "quote": "millions get out of it? They don’t even get to see it, right? Hey, there are millions of people getting slaughtered and chopped up out"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 14269
+  },
+  "quoted_text": "positionality, swinging",
+  "suspected_intended_text": "positionalities swing",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'positionality swinging' vs book 'positionalities swing' inside a 22/24-word near-verbatim match (tf-idf 0.41))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 290232,
+   "quote": "how positionality makes everything wrong. You can make the goose who lays the golden egg the bad guy. So positionalities swing back and forth"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37389
+  },
+  "quoted_text": "ascent",
+  "suspected_intended_text": "assent",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ascent' vs book 'assent' inside a 22/24-word near-verbatim match (tf-idf 0.53))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 311131,
+   "quote": "had numerous incarnations and, hopefully, up the evolutionary tree.\n\nThen we’d say that every act of the will, every assent of the Spiritual"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37843
+  },
+  "quoted_text": "disbelieve",
+  "suspected_intended_text": "just believe",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'disbelieve' vs book 'just believe' inside a 23/24-word near-verbatim match (tf-idf 0.51))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 311654,
+   "quote": "care if people are unable to do it or just believe in it. It’s just a tool, you\n\nunderstand what I’m saying, but it’s an"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 42339
+  },
+  "quoted_text": "till",
+  "suspected_intended_text": "until",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'till' vs book 'until' inside a 20/23-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 314517,
+   "quote": "Is that simple enough? It does not require any arbitrary God or Judgment Day, because the consequence of that which you are is automatic as the consequence of the reality of that which it is. There’s no arbitrary God who has to sit up there and wait until you get up there and, boy, you’re going to"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 44086
+  },
+  "quoted_text": "litter",
+  "suspected_intended_text": "later",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'litter' vs book 'later' inside a 22/24-word near-verbatim match (tf-idf 0.46))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 316410,
+   "quote": "go. Andy Warhol and all the elite intellectual, artistic types\n\nwent to the Electric Circus—and the groups that later became famous, they"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 49671
+  },
+  "quoted_text": "unduement",
+  "suspected_intended_text": "undo-ment",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'unduement' vs book 'undo-ment' inside a 23/24-word near-verbatim match (tf-idf 0.41))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 321688,
+   "quote": "not killing somebody that I should have killed, haha, and going through a hernia repair without anesthesia as a karmic undo-ment of the fact that"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51685
+  },
+  "quoted_text": "till",
+  "suspected_intended_text": "until",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'till' vs book 'until' inside a 22/24-word near-verbatim match (tf-idf 0.48))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 323761,
+   "quote": "play these dumb games.” I couldn’t wait until I grew up. So I read Plato in the meantime while I waited to grow"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

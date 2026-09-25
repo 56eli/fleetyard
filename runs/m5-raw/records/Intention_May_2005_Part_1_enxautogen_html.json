@@ -1,0 +1,57 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Intention_May_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1914
+  },
+  "quoted_text": "everything",
+  "suspected_intended_text": "any thing",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'everything' vs book 'any thing' inside a 20/21-word near-verbatim match (tf-idf 0.36))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 206167,
+   "quote": "it is. In Reality, you see that the meaning of any thing is what it is. That is its meaning. Its meaning is what it is. What’s the"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Intention_May_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 8785
+  },
+  "quoted_text": "that how you see the world is the way it is. that how you see the world is the way it is. that how you see the world is the way it is.",
+  "suspected_intended_text": "that how you see the world is the way it is.",
+  "evidence_class": "signals: A1-repetition (11-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Intention_May_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 14077
+  },
+  "quoted_text": "I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me.",
+  "suspected_intended_text": "I'm me.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 18 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

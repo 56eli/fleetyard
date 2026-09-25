@@ -1,0 +1,19 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Karma_and_the_Afterlife_Oct_2002_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 21614
+  },
+  "quoted_text": "To get your affairs in order. To get your affairs in order. To get your affairs in order. To get your affairs in order. To get your affairs in order.",
+  "suspected_intended_text": "To get your affairs in order.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

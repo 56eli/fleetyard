@@ -1,0 +1,95 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3285
+  },
+  "quoted_text": "and they, when I was a kid, and they, when I was a kid, and they, when I was a kid,",
+  "suspected_intended_text": "and they, when I was a kid,",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25829
+  },
+  "quoted_text": "999%",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (impossible-percent: 999 > 100)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 49194
+  },
+  "quoted_text": "98%",
+  "suspected_intended_text": "89%",
+  "evidence_class": "signals: B1-contradiction (happiness-percent: book table gives Love = 89%, transcript says 98%)",
+  "detector_id": "B1-contradiction",
+  "book_reference": {
+   "slug": "reality_spirituality_and_mode",
+   "char_offset": 275922,
+   "quote": "Love 500 89"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 50275
+  },
+  "quoted_text": "200%",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (impossible-percent: 200 > 100)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 50606
+  },
+  "quoted_text": "50%",
+  "suspected_intended_text": "4%",
+  "evidence_class": "signals: B1-contradiction (happiness-percent: book table gives Guilt = 4%, transcript says 50%)",
+  "detector_id": "B1-contradiction",
+  "book_reference": {
+   "slug": "reality_spirituality_and_mode",
+   "char_offset": 276113,
+   "quote": "Guilt 30 4"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

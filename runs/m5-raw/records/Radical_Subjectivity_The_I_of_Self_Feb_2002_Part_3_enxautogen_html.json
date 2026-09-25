@@ -1,0 +1,221 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 838
+  },
+  "quoted_text": "101%",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (impossible-percent: 101 > 100)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13180
+  },
+  "quoted_text": "The mamba, black",
+  "suspected_intended_text": "The black",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'mamba' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.59))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 386283,
+   "quote": "the planet. If you examine poisons, you will find some interesting things.\n\nThe black mamba has 14 different poisonous enzymes; any one of them"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18528
+  },
+  "quoted_text": "Cheney",
+  "suspected_intended_text": "Chaney",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'cheney' vs book 'chaney' inside a 22/24-word near-verbatim match (tf-idf 0.59))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 391263,
+   "quote": "interesting book called Red World/Green World by a lady named Margaret Chaney, and she said that there’s Red people and Green people, and there’s Red foods"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18554
+  },
+  "quoted_text": "there's people, red",
+  "suspected_intended_text": "there’s Red",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'people' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.59))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 391263,
+   "quote": "interesting book called Red World/Green World by a lady named Margaret Chaney, and she said that there’s Red people and Green people, and there’s Red foods"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19943
+  },
+  "quoted_text": "הע",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 33836
+  },
+  "quoted_text": "brief",
+  "suspected_intended_text": "brave",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'brief' vs book 'brave' inside a 23/24-word near-verbatim match (tf-idf 0.40))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 404701,
+   "quote": "thing collapsed of itself without a shot. Gorbachev did not fire a shot. So, the West with all of its brave talk about “the"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 41914
+  },
+  "quoted_text": "the whole concept",
+  "suspected_intended_text": "the concept",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'whole' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.80))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 412998,
+   "quote": "universe, which is consistent with the concept of the holographic universe and also the nonlinear dimensions of reality, it isn’t that “this"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 43288
+  },
+  "quoted_text": "appearing",
+  "suspected_intended_text": "praying",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'appearing' vs book 'praying' inside a 23/24-word near-verbatim match (tf-idf 0.47))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 414285,
+   "quote": "for all things. And the appropriate timing of peace appearing and the appropriate time of praying for peace are probably simultaneous but not causal"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45555
+  },
+  "quoted_text": "101%",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (impossible-percent: 101 > 100)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 48548
+  },
+  "quoted_text": "going",
+  "suspected_intended_text": "running",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'going' vs book 'running' inside a 22/24-word near-verbatim match (tf-idf 0.35))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 419385,
+   "quote": "energy and vibration. And there were always friendly dogs running around. So again, it isn’t that this caused that, but a higher level of"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 53186
+  },
+  "quoted_text": "farther",
+  "suspected_intended_text": "further",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'farther' vs book 'further' inside a 23/24-word near-verbatim match (tf-idf 0.47))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 424347,
+   "quote": "instrument. So, a person who is profoundly committed to God and digs with a small shovel will get further than a person with a"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

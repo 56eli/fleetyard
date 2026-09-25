@@ -1,0 +1,53 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 35052
+  },
+  "quoted_text": "quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and quantum mechanics and",
+  "suspected_intended_text": "quantum mechanics and",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 35 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 43493
+  },
+  "quoted_text": "please don't. Please don't. Please don't. Please don't. Please don't. Please don't. Please don't.",
+  "suspected_intended_text": "please don't.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 7 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45095
+  },
+  "quoted_text": "the moment of birth. The moment of birth. The moment of birth. The moment of birth.",
+  "suspected_intended_text": "the moment of birth.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]
