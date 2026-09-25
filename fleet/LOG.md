@@ -74,3 +74,15 @@ task; STANDARDS gains narrow CERTAIN leg (d) (omission within a matched span) wi
 adjudication (no adjudication performed while M4 is parked). TASK-016 taken: per-criterion
 evidence (C6/C7/C8) added to the delivery record; fresh manifests bind main 25bdab9 then
 8e9e179 with an identical ledger sha; 26 tests green.
+2026-09-25T20:0xZ WORKER-2: ERRATA-2026-09-25f read and logged (liveness = signals not output,
+not output quiet; worker steady state = cycle indefinitely for work orders; under a scoped
+pause stay paused and keep cadence only). Re-ground: registry a86115d2 unchanged/frozen,
+policy 0fe20a60 unchanged, main 77f1d6d (owner rewrite of the 25e commit — disclosed churn per
+25d §1). Manifest refreshed provenance-only to the reachable main 77f1d6d (ledger sha d42136c6
+unchanged; overlays 027f82a0 and book store c0892fcd re-verified). Pause stands (ORCH-2 head
+8ed8d12; control file present). Operating note, disclosed: the workspace was re-materialised
+between turns — local .git had been reset to main@2ed0b9b with the lane history absent and the
+untracked corpus/ + evidence/ trees missing. Recovered: branch reset to the remote lane head
+1beadd9, inputs re-materialised via tools/m5r_inputs.sh (zip 3f36c520… verified; archive ref
+bf97d85), all digests re-verified. Cadence watcher started (tools/cadence_watch.py, 300 s
+control checks: heartbeat + CONTROL lines; watches pause/queue/main for work orders).

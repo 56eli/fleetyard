@@ -38,7 +38,7 @@
   "records_dir": "evidence/runs/m5-raw/records",
   "records_files": 230
  },
- "main_head": "8e9e179ad3facca6288edf0a32d66d82c07a61cb",
+ "main_head": "77f1d6de80ec0ae77d7ca06fdfd581671cea7cae",
  "outputs": {
   "by_transcript_digest": "c1ec4da86a6ce4f43bb9f5a4da8677e28c2f9e3d781e6409c4a0d84ab06174af",
   "by_transcript_files": 230,
@@ -46,7 +46,7 @@
   "ledger.jsonl": "d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32"
  },
  "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
- "run_utc": "2026-09-25T19:39:48Z",
+ "run_utc": "2026-09-25T19:55:24Z",
  "stats": {
   "book_refs": 242,
   "book_refs_bad": 0,
