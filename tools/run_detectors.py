@@ -47,10 +47,22 @@ import tokenizer  # noqa: E402
 FAMILY = {"A": [det_repetition, det_nonsense, det_confusion],
           "B": [det_contradiction, det_misquote]}
 DETECTORS = FAMILY["A"] + FAMILY["B"]
+BY_SHORT = {d.DETECTOR_ID.split("-")[0]: d for d in DETECTORS}   # A1, A2, ...
+M5_SELECTION = "A1,A2,B1,B2"   # TASK-011: A4 excluded (no independent FP rate)
 
 
 def select(families):
     return [d for f in families.upper() for d in FAMILY[f]]
+
+
+def select_ids(spec):
+    """'A1,A2,B1,B2' -> detector modules in canonical order (TASK-011)."""
+    want = [x.strip().upper() for x in spec.split(",") if x.strip()]
+    bad = [x for x in want if x not in BY_SHORT]
+    if bad or not want:
+        raise ValueError("unknown detector id(s): %s (known: %s)"
+                         % (",".join(bad) or "<none>", ",".join(BY_SHORT)))
+    return [d for d in DETECTORS if d.DETECTOR_ID.split("-")[0] in want]
 
 
 def book_context(books, detectors=DETECTORS):
@@ -193,10 +205,18 @@ def main(argv=None):
     ap.add_argument("--eval", action="store_true")
     ap.add_argument("--family", default="AB",
                     help="detector families to run: A, B or AB (default)")
+    ap.add_argument("--detectors",
+                    help="explicit detector ids, e.g. %s (overrides --family)"
+                    % M5_SELECTION)
     a = ap.parse_args(argv)
     if not a.family or set(a.family.upper()) - set(FAMILY):
         ap.error("--family must be A, B or AB")
     dets = select(a.family)
+    if a.detectors:
+        try:
+            dets = select_ids(a.detectors)
+        except ValueError as e:
+            ap.error(str(e))
     books = loaders.read_book_store()
     if a.eval:
         conf = fixtures.load_json(fixtures.CONFIRMED_PATH)
@@ -206,8 +226,10 @@ def main(argv=None):
     paths = loaders.list_transcripts() if a.all else a.paths
     if not paths:
         ap.error("give transcript paths or --all")
-    lex = det_confusion.build_lexicon(hawkins_books(books))
-    tfreq = transcript_frequencies(loaders.list_transcripts())
+    lex = tfreq = None
+    if det_confusion in dets:
+        lex = det_confusion.build_lexicon(hawkins_books(books))
+        tfreq = transcript_frequencies(loaders.list_transcripts())
     ctx = book_context(books, dets)
     out = []
     for p in paths:

@@ -41,6 +41,13 @@ import json  # noqa: E402
 
 CORPUS = os.path.join(ROOT, "corpus", "docdocgo")
 NEGATIVE = os.path.join(ROOT, "fixtures", "negative", "negative.json")
+
+
+def _load(path):
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
 KO_UNIT = ("\uadf8\ub798\uc11c \uc9c4\uc815\ud55c \uc2a4\uc2b9\uc740 "
            "\uc790\uc720\ub97c \ud5c8\ub77d\ud558\uace0, \uadf8\uc5d0\uac8c "
            "yes\ub098 no\ub97c \uc120\ud0dd\ud560 \uae30\ud68c\ub97c \uc8fc\uace0, ")
@@ -79,7 +86,7 @@ class KoreanCodeSwitchTest(unittest.TestCase):
         self.assertEqual(flags, ["yes\ub098", "no\ub97c"])
 
     def test_negative_fixture_shape(self):
-        (rec,) = json.load(open(NEGATIVE, encoding="utf-8"))
+        (rec,) = _load(NEGATIVE)
         self.assertEqual(rec["id"], "NEG-001")
         self.assertEqual(rec["char_offset"], 9671)
         self.assertEqual(rec["expected"]["max_confidence"], "CANDIDATE")
@@ -94,7 +101,7 @@ class SedonaNegativeCorpusTest(unittest.TestCase):
     def setUpClass(cls):
         import loaders
         import run_detectors as rd
-        (cls.rec,) = json.load(open(NEGATIVE, encoding="utf-8"))
+        (cls.rec,) = _load(NEGATIVE)
         cls.t = loaders.read_transcript(os.path.join(ROOT,
                                                      cls.rec["transcript"]))
         cls.a = cls.rec["char_offset"]
