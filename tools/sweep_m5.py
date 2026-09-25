@@ -142,6 +142,22 @@ def summarise(paths, per_file, failures, meta):
     })
 
 
+def fixture_overlap(per_file, confirmed):
+    """Raw records overlapping a hand-read CERTAIN fixture (dedupe aid)."""
+    out = []
+    for c in confirmed:
+        recs = per_file.get(stem(c["transcript"]), [])
+        a, b = c["char_offset"], c["char_offset"] + len(c["quoted"])
+        for r in recs:
+            o = r["location"]["char_offset"]
+            if o < b and a < o + len(r["quoted_text"]):
+                out.append({"fixture": c["id"], "char_offset": o,
+                            "detector_id": r["detector_id"],
+                            "raw_runner_confidence":
+                                r["raw_runner_confidence"]})
+    return out
+
+
 def render_md(ix):
     L = []
     w = L.append
@@ -214,6 +230,18 @@ def render_md(ix):
                                      ", ".join("%s %d" % kv for kv in
                                                r["per_detector"].items())))
     w("")
+    w("## Overlap with the 16 hand-read CERTAIN fixtures (dedupe before any "
+      "findings ledger)")
+    w("")
+    w("%d raw records overlap a confirmed fixture. They are the SAME errors, "
+      "not additional ones; this is not a precision measurement." %
+      len(ix.get("fixture_overlap", [])))
+    w("")
+    for o in ix.get("fixture_overlap", []):
+        w("- %s @%d: %s (runner: %s)" % (o["fixture"], o["char_offset"],
+                                         o["detector_id"],
+                                         o["raw_runner_confidence"]))
+    w("")
     w("## Zero-raw-hit transcripts (%d; not evidence of zero errors)" %
       len(ix["zero_hit_transcripts"]))
     w("")
@@ -283,6 +311,9 @@ def main(argv=None):
         "clean_set": "0/59 in-sample only, invalid as independent FP estimate",
     }
     ix = summarise(paths, per_file, failures, meta)
+    with open(os.path.join(ROOT, "fixtures", "confirmed", "confirmed.json"),
+              encoding="utf-8") as fh:
+        ix["fixture_overlap"] = fixture_overlap(per_file, json.load(fh))
     with open(os.path.join(a.out, "index.json"), "w", encoding="utf-8") as fh:
         fh.write(json.dumps(ix, ensure_ascii=False, indent=1) + "\n")
     with open(os.path.join(a.out, "INDEX.md"), "w", encoding="utf-8") as fh:

@@ -80,6 +80,18 @@ class SummaryTest(unittest.TestCase):
         self.assertIn("| 3 | 2 | 1 | 0 | 2 | 0 |", md)
 
 
+class FixtureOverlapTest(unittest.TestCase):
+    def test_overlap_is_span_based(self):
+        conf = [{"id": "CF-X", "transcript": "o/T.txt", "char_offset": 10,
+                 "quoted": "abcde"}]
+        rec = lambda o, q: {"location": {"char_offset": o}, "quoted_text": q,
+                            "detector_id": "A1-repetition",
+                            "raw_runner_confidence": "CANDIDATE"}
+        per = {"T": [rec(0, "0123456789"), rec(12, "xy"), rec(15, "z")]}
+        got = sweep_m5.fixture_overlap(per, conf)
+        self.assertEqual([g["char_offset"] for g in got], [12])
+
+
 @unittest.skipUnless(os.path.isdir(CORPUS), "corpus/ not extracted locally")
 class SmokeCorpusTest(unittest.TestCase):
     """Book-referenced B result + repetition sample on Sedona Dec 2008 P2,
@@ -144,6 +156,50 @@ class SmokeCorpusTest(unittest.TestCase):
             self.assertNotIn("A4-confusion", ix["detectors"])
             self.assertTrue(ix["corpus_zip_sha256"].startswith("3f36c5203910"))
             self.assertEqual(len(os.listdir(os.path.join(d, "records"))), 1)
+
+
+RUN_DIR = os.path.join(ROOT, "runs", "m5-raw")
+
+
+@unittest.skipUnless(os.path.isdir(CORPUS) and
+                     os.path.isfile(os.path.join(RUN_DIR, "index.json")),
+                     "corpus/ or committed runs/m5-raw missing")
+class CommittedCensusTest(unittest.TestCase):
+    """Re-read EVERY committed raw record against the frozen corpus bytes."""
+
+    def test_index_matches_record_files_and_corpus(self):
+        import loaders
+        with open(os.path.join(RUN_DIR, "index.json"), encoding="utf-8") as fh:
+            ix = json.load(fh)
+        books = loaders.read_book_store()
+        self.assertEqual(ix["finding_pass_audited"], 0)
+        self.assertNotIn("A4-confusion", ix["detectors"])
+        total = 0
+        for row in ix["per_transcript"]:
+            with open(os.path.join(RUN_DIR, "records",
+                                   row["transcript"] + ".json"),
+                      encoding="utf-8") as fh:
+                recs = json.load(fh)
+            self.assertEqual(len(recs), row["records"])
+            total += len(recs)
+            if not recs:
+                continue
+            t = loaders.read_transcript(os.path.join(
+                ROOT, recs[0]["transcript_path"]))
+            for r in recs:
+                o = r["location"]["char_offset"]
+                self.assertEqual(t.text[o:o + len(r["quoted_text"])],
+                                 r["quoted_text"])
+                self.assertEqual(r["review_status"], "unreviewed")
+                ref = r["book_reference"]
+                if ref:
+                    self.assertNotIn(ref["slug"], loaders.NON_HAWKINS_SLUGS)
+                    b = books[ref["slug"]]
+                    self.assertEqual(
+                        b[ref["char_offset"]:ref["char_offset"] +
+                          len(ref["quote"])], ref["quote"])
+        self.assertEqual(total, ix["records_total"])
+        self.assertEqual(len(ix["per_transcript"]), ix["processed"])
 
 
 if __name__ == "__main__":

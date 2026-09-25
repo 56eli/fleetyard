@@ -143,3 +143,18 @@ as a clean set: 0 signals (test-enforced).
     genuine ASR garble. A follow-up could exempt short Hangul runs in
     transcripts with a Korean interpretation track; not done here to keep
     the repair focused.
+
+## M5 raw signal census (TASK-011)
+
+`python3 tools/sweep_m5.py --out runs/m5-raw` runs exactly A1, A2, B1, B2
+(`run_detectors.M5_SELECTION`; the runner accepts the same list via
+`--detectors A1,A2,B1,B2`) over all 230 overlay `.txt` files, writing one
+`runs/m5-raw/records/<transcript>.json` per transcript (resumable) plus
+`index.json` / `INDEX.md`. A4 is excluded (no independent FP rate, 0/16
+independent recall); drop-word and speaker/format detectors were never built,
+so those classes are unmeasured, not zero. Every record is
+`review_status: unreviewed`, reporting class "CANDIDATE-class raw signal,
+unreviewed"; the runner's label is kept as `raw_runner_confidence`. A runner
+"HIGH CONFIDENCE" is not a reviewed HIGH finding. No transcript counts as
+audited (finding pass not done): audited 0/230. Precision unmeasured; the
+0/59 clean checks are in-sample only.
