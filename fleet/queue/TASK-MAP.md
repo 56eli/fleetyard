@@ -77,3 +77,14 @@ four recurring fuzzy timestamps). TASK-017 PASS. TASK-018 FAIL (items 0d–0g). 
 v2.a/v2.b; quantum b held). Outstanding across the queue: TASK-020 8a/8b/11a/11b/12 + 20.13 · TASK-018 0d–0g +
 L7–L10 · TASK-019 v2.a/v2.b + v2.10/v2.11 · TASK-017 17.a · TASK-021 (new). Blocked: TASK-019b (behind v2.a/v2.b) ·
 TASK-015 M6-Final (behind quantum b) · q2 re-gate (behind 8a/8b + 0d–0g) · q3 re-gate (behind 8a only).
+
+
+### Queue priority (2026-09-25T22:58:11Z, for WORKER-2)
+1. **TASK-020 item 8a** (re-pin six supplement artefacts) — alone unblocks the **q3** re-gate.
+2. **TASK-018 items 0d–0g** (false `seeded` sentence in SUMMARY **and** PATTERNS §5b-bis; band 71/57/33/22; site count
+   55; strata + notation; in_sample rule; audio impossibility) — unblocks the **q2** re-gate and M6 usability.
+3. **TASK-019 items v2.a + v2.b** — unblocks **quantum b** (the only path to precision) and therefore TASK-015.
+   **The quantum-b pre-registration protocol is now an ANNEX of `TASK-019.md`** (criteria v2.12–v2.16 added).
+4. TASK-020 items 11a/11b/12 + criterion 20.13; TASK-017 item 17.a.
+5. TASK-021 (tuning-half threshold sensitivity) — lowest urgency, never touches the holdout.
+ORCH-2 adds no further work while these are open (ERRATA-25f: never overfill the queue).

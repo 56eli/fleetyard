@@ -366,3 +366,10 @@ the reconnect runbook is at the end of that summary.
   protocol** (exactly what must be frozen *before* the single holdout run: thresholds, denominator decision on the 4
   tainted transcripts, expected artefacts, receipt format, abort conditions) so the one-shot evaluation is auditable
   the moment items v2.a/v2.b land.
+
+- **2026-09-25T22:58:11Z:** quantum-b **pre-registration protocol** written as a binding ANNEX of `fleet/queue/pending/TASK-019.md`
+  (preconditions A1–A5; frozen inputs B1–B6 incl. the explicit token rule; one-shot run C1–C3 with a pre-registered
+  abort rule; required outputs D1–D6; quotable-figure rules E1–E4; new criteria **v2.12–v2.16**). Queue priority
+  published for WORKER-2 (8a → TASK-018 0d–0g → TASK-019 v2.a/v2.b → 11a/11b/12/17.a/20.13 → TASK-021); no further
+  work added while those are open. BOSS-2 read at `21d9a2b`: **zero CONCERNs, zero controls**, stall watch not fired,
+  WORKER-2 described as "idle-cycling @ 4fc40c8 awaiting gate results" — those results are now pushed (`ee4ea5e`).
