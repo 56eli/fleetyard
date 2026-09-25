@@ -227,3 +227,40 @@ owner ruling 25d re-grounded, resuming
   the field fill is disclosed here and in CONTROL seq 15. Standing fix: the pre-push check now
   asserts the registry field of the newest CONTROL line is 64 hex chars and equals the frozen
   digest.
+
+## Cycle D (2026-09-25T21:10:55Z) — M4-q4 gate FAIL/INCOMPLETE on 2 criteria; the one-shot discipline HELD and I could prove it
+- **q4 GATE = FAIL / INCOMPLETE** on q4.6 (§8 manifests: the v1 leg has no corpus binding, no
+  book-store digest, no tool_commit/main_head/policy sha and no output digest for a 127 KB file;
+  drop/format legs lack the book-store digest and output digests) and q4.8 (the C1-drop gap is
+  called sampling noise). PASS on q4.1/q4.2/q4.3/q4.4/q4.5/q4.7; q4.9 **NOT GATEABLE** → TASK-019b.
+  Table: fleet/GATES.md 21:09Z.
+- **The discipline checks are the ones that matter here and they pass on evidence, not assertion:**
+  the q2 tuning params block and the q4 holdout params block are identical value-for-value, the
+  C2-format rules list is identical, neither detector file changed in any commit after the run
+  (det_dropword a0236325, det_format ef9ff4f2 from 4e114f1 through head), and unlike q2/q3 the q4
+  detector pins **do** resolve to committed blobs. Inverse isolation is airtight (holdout_reads ==
+  the 37 names, transcripts_read ∩ tuning = 0, in all three manifests) and holdout_consumed is
+  stamped everywhere. **I did not re-run the spent holdout** — arithmetic over committed artefacts
+  and blob comparisons only.
+- **I verified the delivery's one positive claim myself:** recounting v1-holdout.json gives 185
+  signals (A1 162 / A2 15 / B2 8 / B1 0, exactly as manifested) and per-transcript counts match the
+  committed M5-R raw records for all 37 holdout transcripts with **0 mismatches**. The reproduction
+  receipt is real.
+- **Attribution surprise, in the worker's favour:** all 13 v1 tool shas pinned by the q4 manifest are
+  **byte-identical to the archived v1 lane** origin/arena/01a0d581-fleetyard:tools/*.py, so the v1
+  leg is attributable to committed code even though evidence/tools/ (the directory the manifest
+  cites) is not in this tree at all. That
+  refines my q2.5 evidence line (the v1 files are absent from THIS lane, not lost) and sharpens
+  TASK-017: inherit 13 named files + the v1 suite, cite lane+commit+blob.
+- **New analysis contributed by this gate (exposure normalization):** holdout transcripts are 14.9%
+  shorter, so per-transcript densities mislead. Normalized by character exposure with a Poisson
+  tail: v1 185 vs 187.6 expected (P=0.45 — the 5.95-vs-5.00/tx difference is entirely exposure),
+  C2-format 12 vs 8.0 (P=0.94 — consistent), **C1-drop 5 vs 19.9 (P=7.7e-05)** — a real ~4x deficit.
+  So PATTERNS §5d's "dominated by sampling noise" is wrong for the one detector where it matters,
+  and right-by-accident for the other two. Two live causes: thresholds fitted to the tuning half
+  (untestable while q2.1d's provenance is missing) or a book-exposure difference between halves
+  (testable only on split v2). Either way: C1-drop stays not-promotable and TASK-019's
+  seal-before-tuning rule is exactly the control that would have prevented the ambiguity.
+- Repair folded into **TASK-020** (now items 1-10, criteria 20.1-20.11) rather than a fourth task;
+  queue still three actionable items (018, 020, 017). Next in this turn: **q5** (2f55b0c — A1 claim
+  reconciliation, reducer Unicode tokenizer + kmax 16, errata #2) as the last ungated M4 quantum.

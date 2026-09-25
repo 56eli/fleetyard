@@ -1,10 +1,11 @@
-# TASK-020 — M4 shipping-gap repair (q1 + q2 + q3): fixtures, clean set, threshold provenance, LAW §8 bindings
+# TASK-020 — M4 shipping-gap repair (q1 + q2 + q3 + q4): fixtures, clean set, threshold provenance, LAW §8 bindings
 
 - cut by: ORCH-2 (A-2026-09-25-002), lane `arena/01a0d9d0-fleetyard`, 2026-09-25T20:58Z
 - claimant: WORKER-2 (A-2026-09-25-001) — **after TASK-018** (owner ERRATA-25g §5 order), and
   with **TASK-017** landed before item 8 can close
 - milestone: **M4** (fleet/PLAN-v2.md) · repairs the FAILED criteria of TASK-014 q1 (`88009d2`
-  gate), q3 (`6495a8b` gate) and q2 (gate at 20:58Z, `fleet/GATES.md`)
+  gate), q3 (`6495a8b` gate), q2 (gate 20:58Z) and q4 (gate 21:09Z) — all four in
+  `fleet/GATES.md`
 - why one task: the three gates failed on the **same four shapes** — no fixture-recall run, no
   clean-set run, no threshold provenance, incomplete §8 manifests. Cutting three tasks would
   triple the queue for one bundle of work (ERRATA-25f §4: never overfill the queue).
@@ -81,6 +82,30 @@
    `evidence/fixtures/README.md`: `tools/fixtures.py` and `tools/loaders.py` are **absent at
    head**, so `fixtures.py verify` / `build-clean` cannot be run in this lane until TASK-017.
 
+9. **q4 holdout manifests (q4.6).** For all three runs in `runs/m4-q4-holdout/` publish a
+   supplement manifest carrying: `corpus_zip_sha256` (`3f36c520…`) and the **book-store digest**
+   (`c0892fcd…`) — load-bearing for the v1 leg (B2-misquote produced 8 book-referenced signals)
+   and for C1-drop; `tool_commit` + `main_head` + `policy_sha256` (`0fe20a60…`); a config digest;
+   and an **output digest for `v1-holdout.json`** (127 KB, currently undigested anywhere). Re-cite
+   the v1 toolchain as **lane + commit + blob path** (`origin/arena/01a0d581-fleetyard:tools/<file>`)
+   instead of the absolute sandbox path `/home/user/fleetyard/evidence/tools`, and record that
+   ORCH-2 verified all 13 pinned shas byte-identical to that archive lane. Add the **explicit zero**
+   for `B1-contradiction: 0` to `per_detector_signal_instances` (append a supplement field; never
+   edit the original) and state that B1 therefore receives no validation from this run, so v1's B1
+   headline hold (TASK-005 FAIL / REDIRECT-005) stands.
+10. **Correct the C1-drop gap characterization (q4.8) — append-only.** PATTERNS §5d says the
+    5-vs-122 gap is "dominated by sampling noise". ORCH-2's exposure-normalized arithmetic says
+    otherwise, and the correction must carry the numbers: holdout transcripts are **14.9% shorter**
+    (53,949 vs 63,361 chars mean; holdout = 1,996,122 of 14,224,783 corpus chars), so normalize by
+    character exposure, not by file count — **v1: observed 185 vs expected 187.6, P(X≤185) = 0.45**
+    (the 5.95-vs-5.00/tx difference is entirely exposure); **C2-format: 12 vs 8.0, P(X≤12) = 0.94**
+    (consistent); **C1-drop: 5 vs 19.9, P(X≤5) = 7.7e-05** (5.1e-06 per-file) — a real ~4x deficit,
+    not noise. Append the corrected sentence with both candidate causes (parameters fitted to the
+    tuning half — untestable while q2.1d's provenance is missing; or a book-exposure difference
+    between halves — testable **only** on split v2) and the standing prohibition: **never re-run the
+    spent holdout to find out**. Rename the §5d column "rate/tx" to "signals/tx (density, not a
+    rate)" so a density is never cited as an error rate.
+
 ## Acceptance (per-item verdicts will be gated by ORCH-2)
 
 - 20.1 every supplement manifest carries tool_commit (reachable), main_head, policy_sha256,
@@ -100,6 +125,12 @@
   exact generated_utc — appended, never edited in place.
 - 20.8 test count reconciled against the 115 baseline (or the reduction recorded), and the
   fixture-tooling instruction no longer dangles.
+- 20.10 q4 supplement manifests carry corpus + book-store + split digests, tool_commit, main_head,
+  policy sha, config digest and an output digest for v1-holdout.json; the v1 toolchain is cited by
+  lane + commit + blob path; B1's zero is explicit and its "no validation" consequence stated.
+- 20.11 PATTERNS §5d carries the exposure-normalized correction (185/187.6 P=0.45 · 12/8.0 P=0.94 ·
+  5/19.9 P=7.7e-05) appended, never rewritten in place, with both candidate causes and the
+  never-re-run prohibition; the density column is renamed.
 - 20.9 global: no threshold changed; no precision/rate/M6 figure claimed; every output stays
   CANDIDATE-class; LAW §8 manifest for every new run; suite green WITH corpus and skip counts
   reported; nothing written outside the claimant's lane; the sealed split v1 stays byte-identical

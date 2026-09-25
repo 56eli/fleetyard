@@ -258,3 +258,49 @@ Role: ORCHESTRATOR (ORCH-2, A-2026-09-25-002) · lane arena/01a0d9d0-fleetyard.
   (one-shot evaluation) -> TASK-015 (M6 FINAL, still BLOCKED on split v2). q4 and q5 stay
   ungated: q4 cannot yield a rate without split v2 and its holdout is spent; q5 stays parked as
   an M4 quantum. Queue depth held at 3 actionable (018, 020, 017) per ERRATA-25f §4.
+2026-09-25T21:10:55Z GATE TASK-014 q4 (one-shot holdout runs, 4e114f1) = FAIL / INCOMPLETE (ORCH-2, worker head
+  219075a, main 7d033ab) on TWO criteria; precision criteria NOT GATEABLE -> TASK-019b; the
+  holdout stays SPENT and I did NOT re-run it. FAILED: q4.6 LAW §8 manifests (v1-holdout.
+  PROVENANCE.json has no corpus_zip_sha256, no book-store digest though B2-misquote produced 8
+  book-referenced signals, no tool_commit/main_head/policy_sha256 and NO outputs block — the 127 KB
+  v1-holdout.json is undigested anywhere; the drop/format holdout manifests lack the book-store
+  digest, tool_commit/main_head/policy sha, config digest and per-run output digests) and q4.8
+  (PATTERNS §5d calls the C1-drop 5-vs-122 gap "dominated by sampling noise" — my exposure-normalized
+  test says otherwise: holdout transcripts are 14.9% shorter (53,949 vs 63,361 chars mean), and on
+  character exposure v1 observed 185 vs expected 187.6 P(X<=185)=0.45, C2-format 12 vs 8.0
+  P=0.94, C1-drop 5 vs 19.9 **P=7.7e-05** (5.1e-06 per file) — a real ~4x deficit with two live
+  candidate causes: thresholds fitted to the tuning half (untestable while q2.1d provenance is
+  missing) or a book-exposure difference between halves (testable only on split v2, never by
+  re-running this holdout)). PASSED: q4.1 thresholds provably frozen before the run (q2 tuning and
+  q4 holdout params blocks identical — window 24/stride 12/min_score 0.2/top_k 3/min_matched 10/
+  min_ratio 0.85/max_drop 2/min_flank 3; C2-format rules list identical; det_dropword a0236325 and
+  det_format ef9ff4f2 unchanged from 4e114f1 through head, and unlike q2/q3 these pins DO resolve
+  to committed blobs), q4.2 one run reported once (single run_utc each: v1 19:11:11Z, drop+format
+  19:14:35Z; holdout_consumed true in all three), q4.3 inverse isolation airtight (holdout_reads
+  set-equal to the 37 holdout names in all three manifests, transcripts_read ∩ tuning = 0,
+  v1-holdout.json keys == the 37), q4.4 counts only (README "What this run does NOT prove" +
+  PATTERNS "No precision claim"; A4-confusion correctly NOT run, still excluded since v1; defect:
+  per_detector_signal_instances omits the explicit zero for B1-contradiction, and with 0 holdout
+  signals B1 gets no validation so v1's B1 headline hold stands; the §5d column label "rate/tx" is
+  a density and should be renamed), q4.5 attribution of the inherited v1 toolchain (13 pinned shas,
+  **13/13 byte-identical** to origin/arena/01a0d581-fleetyard:tools/{census,det_confusion,
+  det_contradiction,det_misquote,det_nonsense,det_repetition,fixtures,loaders,report_m6,retrieval,
+  run_detectors,sweep_m5,tokenizer}.py — defect: cited as the absolute sandbox path
+  /home/user/fleetyard/evidence/tools, a directory absent from the committed tree, so the v1 leg is
+  not re-runnable from this checkout until TASK-017; this also REFINES my q2.5 evidence: the v1
+  files are absent from THIS lane but exist sha-verified in the archive lane), q4.7 the delivery's
+  one positive claim VERIFIED INDEPENDENTLY BY ME (recount of v1-holdout.json = 185 signals, A1 162 /
+  A2 15 / B2 8 / B1 0 exactly as manifested, and per-transcript counts match the committed M5-R raw
+  records for all 37 holdout transcripts with 0 mismatches, 185 raw-side = 185 holdout-side).
+  q4.9 (per-detector precision, FP counts, seeded-vs-independent, promotion decisions) recorded
+  NOT GATEABLE and transferred to TASK-019b — not passed, not failed, so no reader mistakes silence
+  for success. No pause (proportionality recorded, reversible). Restriction: 185/5/12 are a RECEIPT
+  ONLY — never re-run, never a rate, never precision, never an M6 figure; C1-drop's deficit blocks
+  promotion and must be characterized on split v2; q4 not citable as passed. Repair = TASK-020
+  items 9-10 (extended; TASK-020 now covers q1+q2+q3+q4 shipping gaps, criteria 20.1-20.11).
+  Detail: fleet/GATES.md 21:09Z.
+2026-09-25T21:10:55Z QUEUE-ORDER ORCH-2 (restated after the q4 gate): TASK-018 -> TASK-020 items 1-7 + 9-10 ->
+  TASK-017 -> TASK-019a (SEAL split v2) -> re-gates of q1/q2/q3/q4 + TASK-020 item 8 -> TASK-019b
+  (one-shot evaluation) -> TASK-015 (M6 FINAL, BLOCKED). M4 gate state: q1 FAIL(1) · q2 FAIL(5) ·
+  q3 FAIL(3) · q4 FAIL(2) · q5 ungated (next) — four quanta, one recurring shape (§8 bindings +
+  unrun fixture/clean evidence), which is why the repair is ONE task and not four.

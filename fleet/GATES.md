@@ -522,3 +522,66 @@ store itself. Transfer check: **0/49** of the shipped format signals are source-
 (span ±30-char context absent from the store), so the 49 signals remain transcript-side
 artifacts and q3.7/q3.9 stand. q3.3 stays **FAIL** (the worker still owes the run and the
 filter), now with a measured target: reproduce 1/59 and add the source-inheritance filter.
+
+## 2026-09-25T21:09Z — GATE: TASK-014 q4 (M4 one-shot holdout runs) — VERDICT: **FAIL / INCOMPLETE** (two criteria) · precision criteria **NOT GATEABLE** → TASK-019b · holdout stays **SPENT**
+
+- gated at WORKER-2 head `219075a` (main `7d033ab`); artefacts `runs/m4-q4-holdout/{README.md,
+  v1-holdout.json, v1-holdout.PROVENANCE.json, part-holdout-drop.json,
+  part-holdout-drop.PROVENANCE.json, part-holdout-format.json,
+  part-holdout-format.PROVENANCE.json}`, runner `tools/m4_q4_holdout.py`, `tools/PATTERNS.md` §5d.
+- **What kind of gate this is (declared up front):** q4's original criteria asked for
+  per-detector precision on data fixed before tuning. The one-shot holdout is **spent**, and my
+  20:2xZ re-cut moved every precision question to the fresh sealed split v2 (TASK-019,
+  owner-AUTHORIZED per ERRATA-25g §5). So this gate decides only what is still decidable:
+  **one-shot execution discipline, isolation, counts-only discipline, attribution, §8 manifests,
+  and the one positive claim the delivery makes (a reproduction receipt).** Precision criteria
+  are recorded **NOT GATEABLE — transferred to TASK-019b**, not passed and not failed.
+- **I did not re-run the holdout.** Re-running spent single-use evidence is forbidden (LAW §9;
+  TASK-018 boundaries repeat it). Every check below is arithmetic over committed artefacts, my
+  own re-parsing of the frozen corpus, or a blob comparison against the read-only archive lane.
+
+| # | criterion | verdict | independent evidence (my own runs) |
+|---|---|---|---|
+| q4.1 | thresholds and rule set frozen **before** the holdout run | **PASS** (proven, not taken on assertion) | The q2 tuning-run params and the q4 holdout params are the **same eight values** (`window 24, stride 12, min_score 0.2, top_k 3, min_matched 10, min_ratio 0.85, max_drop 2, min_flank 3`) — I diffed the two manifests' `params` blocks. C2-format's `rules` list is the same 7 rules in both runs. No commit after the run touched either detector: `det_dropword.py` = `a0236325…` at `4e114f1` = `2f55b0c` = head; `det_format.py` = `ef9ff4f2…` at `4e114f1` = `2f55b0c` = head (the run's own pins, `a0236325…` and `ef9ff4f2…`, **do** resolve to committed blobs — unlike q2's and q3's). `thresholds_frozen_before_run: true` plus the note "no threshold was tuned against the holdout; this report is one-shot (LAW §9)" |
+| q4.2 | one run, reported once, consumption stamped | **PASS** | Exactly one artefact pair per detector set; single `run_utc` each (v1 `19:11:11Z`, drop and format `19:14:35Z`); no second or overwritten run anywhere in the tree; **`holdout_consumed: true` in all three manifests**; PATTERNS §5d states the holdout is spent for these detector versions and that any later tuning informed by the counts owes a new split |
+| q4.3 | the holdout runs read **only** the holdout (inverse isolation) | **PASS** | In all three manifests `holdout_reads` is set-equal to the split's 37 holdout names and `transcripts_read` (37) has **∩ tuning = 0**; `v1-holdout.json` `per_transcript` keys == the 37 holdout names exactly; `set: "holdout"`; `holdout_enforced: false` is the correct semantics for evaluation mode (the runner sets it to `which != "holdout"`), not a disabled guard |
+| q4.4 | counts only — no precision, no rate, no promotion; A4 stays excluded | **PASS with one hygiene defect** | README section "**What this run does NOT prove**" is explicit: "Counts are not precision… no rate is claimed", and PATTERNS §5d repeats it ("No precision claim: precision/recall require *reviewed* holdout labels; none exist"). No promotable flag is set anywhere; every status field says PROVISIONAL-UNGATED / CANDIDATE. **A4-confusion was correctly NOT run** (`detector_set: "A1,A2,B1,B2"`; PATTERNS §3 line 43 still records it as excluded since v1 for want of an independent FP rate). Defect: `per_detector_signal_instances` records `A1 162 · A2 15 · B2 8` and **omits the explicit zero for B1-contradiction** — the README states B1 = 0, the manifest does not, and an absent key reads as "not measured" rather than "measured, zero". (Consequence worth stating: with 0 holdout signals, B1 gets **no** validation from this run either, so v1's B1 headline hold — TASK-005 FAIL / REDIRECT-005 — stands untouched.) Also: the §5d table column headed "tuning raw signals (**rate/tx**)" is a *density* (signals per transcript); the label invites misreading as an error rate → rename to "signals/tx (density, not a rate)" |
+| q4.5 | the inherited v1 toolchain is attributable | **PASS with a binding-form defect** | `v1_tool_shas` pins **13 files** by sha256. I compared every one against the read-only archive lane: **13/13 byte-identical** to `origin/arena/01a0d581-fleetyard:tools/{census,det_confusion,det_contradiction,det_misquote,det_nonsense,det_repetition,fixtures,loaders,report_m6,retrieval,run_detectors,sweep_m5,tokenizer}.py` (e.g. `loaders.py 3452c95d…`, `run_detectors.py d7d109c5…`, `det_misquote.py 3b8d1cd4…`). So the run **is** attributable to committed code. Defects: the manifest cites an absolute sandbox path (`v1_tools_dir: /home/user/fleetyard/evidence/tools`) instead of lane + commit + blob path, and `evidence/tools/` **does not exist in the committed tree** — the toolchain is still not inherited into this lane (that is TASK-017), so nobody can re-run q4's v1 leg from this checkout. This also refines my q2.5 evidence line: `tools/loaders.py` and `tools/fixtures.py` are absent **from this lane**, but they exist and are sha-verified in the archive lane — TASK-017's job is inheritance + the suite, not reconstruction |
+| q4.6 | LAW §8 manifests for all three runs | **FAIL** | `v1-holdout.PROVENANCE.json` carries split file/salt/`9ae90185…`, `transcripts_read`, `holdout_reads`, `run_utc`, the 13 tool shas and the one-shot note — but has **no `corpus_zip_sha256`, no book-store digest** (and B2-misquote is book-anchored: 8 of the 185 signals carry book references, so the store is a load-bearing input), **no `tool_commit`/`main_head`/`policy_sha256`, and no `outputs` block at all** — the 127 KB `v1-holdout.json` has no digest anywhere. The drop and format holdout manifests are better (corpus zip `3f36c520…`, split digest, params/rules, detector sha that resolves to a committed blob) but still lack the **book-store digest** (C1-drop is book-anchored by construction), `tool_commit`, `main_head`, `policy_sha256`, a config digest and **per-run output digests**. Same shape as q2.4 and q3.5 → TASK-020 item 9 |
+| q4.7 | the delivery's one positive claim: a reproduction receipt for the inherited census | **PASS — verified independently by me** | I re-derived it from the committed artefacts: recounting `v1-holdout.json` gives **185 signals**, per-detector **A1-repetition 162 · A2-nonsense 15 · B2-misquote 8** (B1 0) — identical to the manifest — and comparing per-transcript counts against the committed M5-R raw records (`evidence/runs/m5-raw/records/`, 230 files) for all 37 holdout transcripts gives **0 mismatches, 185 raw-side vs 185 holdout-side**. The claim "185/185, 0 per-transcript count mismatches" is therefore **true on my own arithmetic**, and it is correctly scoped by the worker as reproduction, not precision |
+| q4.8 | the C1-drop tuning↔holdout gap is characterized honestly | **FAIL (the characterization is measurably wrong)** | PATTERNS §5d: "C1-drop's holdout rate is ~4.5x lower than its tuning rate (5 vs 122). With 37 holdout transcripts this is **dominated by sampling noise**, but it may also indicate parameters fitted to the tuning half — flagged for M4 follow-up." I tested that. Holdout transcripts are **14.9% shorter** on average (53,949 vs 63,361 chars; holdout = 1,996,122 of 14,224,783 corpus chars), so per-transcript densities mislead; normalizing by **character exposure** and using a Poisson tail: **v1 A1/A2/B1/B2 → observed 185 vs expected 187.6, P(X≤185) = 0.45** (a perfect fit — the "5.95 vs 5.00/tx" difference is *entirely* exposure); **C2-format → observed 12 vs expected 8.0, P(X≤12) = 0.94** (consistent); **C1-drop → observed 5 vs expected 19.9, P(X≤5) = 7.7e-05** (and 5.1e-06 on a per-file normalization). So the C1-drop deficit is **not** dominated by sampling noise — it is a real, unexplained ~4x shortfall, while the other two detector sets behave exactly as exposure predicts. Two candidate causes remain: parameters fitted to the tuning half (untestable, because q2.1d's threshold provenance was never disclosed) or a genuine book-exposure difference between the halves (testable **only** on a fresh split — never by re-running this one). The worker's instinct to flag it was right; the emphasis was wrong, and the wrong emphasis is the kind that later becomes a citation. Correction owed append-only with these numbers → TASK-020 item 10 |
+| q4.9 | precision / recall / FP counts / seeded-vs-independent / promotion decisions (q4's original output criteria) | **NOT GATEABLE — transferred to TASK-019b** | No reviewed holdout labels exist, so no precision or FP count is computable from this run, and the worker claims none. Under the re-cut, per-detector precision, seeded-vs-independent separation and promotion decisions are TASK-019b's deliverable on the fresh sealed split v2, evaluated **once**. Recorded as not-gateable rather than passed or failed, so no reader can mistake silence for success |
+
+### Verdict
+
+**TASK-014 q4 = FAIL / INCOMPLETE** on q4.6 (§8 manifests: no book-store digest on two
+book-anchored detector sets, no corpus binding or output digest at all on the v1 leg, no
+tool_commit/main_head/policy sha anywhere) and q4.8 (the C1-drop gap is characterized as
+sampling noise when exposure-normalized arithmetic gives P ≈ 8e-05). Passed: q4.1 (thresholds
+provably frozen before the run), q4.2 (single run, consumption stamped), q4.3 (inverse
+isolation airtight), q4.4 (counts only, A4 correctly not run — one explicit-zero hygiene
+defect), q4.5 (all 13 v1 tool shas byte-match the archive lane — binding-form defect), q4.7
+(**the reproduction receipt verifies on my own arithmetic: 185/185, 0 mismatches**). q4.9 is
+**NOT GATEABLE** and moves to TASK-019b.
+
+This is the strongest delivery of the four M4 quanta on discipline and the weakest on bindings:
+the one-shot rules were actually kept (I could prove it from params equality and the absence of
+any post-run threshold commit), the spent holdout was never re-run, nothing was claimed beyond
+counts, and the central positive claim survives independent recomputation. What fails is the
+same shape that failed q2 and q3 — LAW §8 manifests that do not bind the load-bearing inputs —
+plus one sentence that understates a real 4x detector deficit.
+
+**Restriction (artefact-scoped, fail-safe):** the holdout counts (v1 185 · C1-drop 5 ·
+C2-format 12) are a **receipt only** — never re-run, never a rate, never precision, never an M6
+figure; **C1-drop's exposure-normalized deficit (P ≈ 8e-05) is an open item that blocks its
+promotion** and must be characterized on split v2, not on this spent holdout; B1 remains
+unvalidated (0 holdout signals) so v1's B1 headline hold stands; q4 may not be cited as passed.
+
+### Brake decision (same proportionality test as q1, q2, q3 — recorded and reversible)
+
+No activation-scoped PAUSE: the failed criteria are manifest bindings and one documentation
+sentence on a run whose discipline I could verify and whose positive claim I reproduced
+independently; nothing false was shipped and the holdout was not abused. Repair folds into
+**TASK-020** (items 9–10) rather than a fourth task, keeping the queue at three actionable items
+(ERRATA-25f §4). If BOSS-2 or the owner reads ORCHESTRATOR.md step 3 as requiring a pause on any
+FAIL, I will issue one in the same cycle on request.

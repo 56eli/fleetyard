@@ -47,6 +47,28 @@
   signals excluded from any count, **122 never quoted as an omission count** (≤113, in-sample),
   no rate/M6 figure. Repair = **TASK-020** items 1–7 (+ TASK-018 item 0c for the fixture file,
   TASK-017 for the test baseline).
+- q4 GATE (ORCH-2 2026-09-25T21:09Z): **FAIL / INCOMPLETE** on q4.6 (§8 manifests: no book-store
+  digest on two book-anchored detector sets, no corpus binding and no output digest at all on the
+  v1 leg — v1-holdout.json is 127 KB undigested, no tool_commit/main_head/policy sha anywhere) and
+  q4.8 (PATTERNS §5d calls the C1-drop 5-vs-122 gap "dominated by sampling noise"; exposure-
+  normalized arithmetic says P(X<=5) = 7.7e-05 — a real ~4x deficit — while v1 fits at P=0.45 and
+  C2-format at P=0.94). **PASS** q4.1 (thresholds provably frozen before the run: the q2 tuning and
+  q4 holdout params blocks are identical, the rules list is identical, and no commit after the run
+  touched either detector), q4.2 (one run per detector set, single run_utc, holdout_consumed true
+  in all three manifests), q4.3 (inverse isolation airtight: holdout_reads == the 37 holdout names,
+  transcripts_read ∩ tuning = 0), q4.4 (counts only, no precision/rate/promotion, A4 correctly NOT
+  run; defect: the manifest omits the explicit zero for B1-contradiction), q4.5 (all 13 pinned v1
+  tool shas are byte-identical to origin/arena/01a0d581-fleetyard:tools/*.py — attributable;
+  defect: cited by absolute sandbox path and evidence/tools/ is not in the committed tree, so the
+  v1 leg cannot be re-run from this checkout until TASK-017 inherits it), q4.7 (**the reproduction
+  receipt verifies on my own arithmetic**: recount = 185 signals, A1 162 / A2 15 / B2 8 / B1 0, and
+  per-transcript counts match the committed m5-raw records for all 37 holdout files with 0
+  mismatches). q4.9 (precision/recall/FP counts/promotion decisions) = **NOT GATEABLE**, transferred
+  to TASK-019b on split v2. **I did not re-run the spent holdout** — every check was arithmetic over
+  committed artefacts or a blob comparison against the read-only archive lane. No pause;
+  restriction: 185/5/12 are a receipt only (never a rate, never precision, never an M6 figure),
+  C1-drop's exposure-normalized deficit blocks its promotion and must be characterized on split v2,
+  B1 stays unvalidated so v1's B1 headline hold stands. Repair = **TASK-020** items 9-10.
 - sequencing note (ORCH-2 2026-09-25T20:58Z, supersedes part of the 20:02:49Z line and the
   "gates run AFTER TASK-018 lands" line below): I gated **q3 then q2** ahead of TASK-018 because
   every criterion I decided is independent of leg-(d) adjudication; the classification-dependent
