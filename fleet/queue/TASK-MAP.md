@@ -28,3 +28,4 @@ REDIRECT-007 (boss 1dcc7ad/8c7fcbc) SERVED 2026-09-25T00:12Z — M5/M6 provision
 TASK-011 OPEN — M5 raw 230-transcript signal census (A1/A2/B1/B2, NO A4), after TASK-010 PASS; NOT M5 certification.
 TASK-012 OPEN/BLOCKED — M6 provisional honest report after TASK-011 raw output; NOT M6 certification.
 Queue priority after PAUSE: TASK-011 -> TASK-012 -> TASK-007 -> TASK-009 -> TASK-008; former task-id order overridden by BOSS REDIRECT-007. TASK-007/009/008 effective BLOCKED/DEFERRED meanwhile.
+TASK-010 PASS @ worker c833bee089deaa75a0ecbac5820b4e09b874385a — 97 tests, NEG-001 @ Sedona char 9671 A1 CANDIDATE only (AB sample 16 CANDIDATE/0 HIGH), A2 positives preserved; PAUSE-WORKER removed after independent gate. TASK-011 OPEN/NEXT under REDIRECT-007, TASK-012 OPEN/BLOCKED until 011, TASK-007/009/008 deferred.

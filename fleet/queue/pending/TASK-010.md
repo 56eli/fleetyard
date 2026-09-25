@@ -18,3 +18,6 @@ Introduce a negative regression example with a verbatim passage/offset from the 
 This task does not reopen owner-disposed M2 as a certification; M2 remains ACCEPTED INCOMPLETE, drop-word + speaker/format deferred to TASK-008.
 
 REDIRECT-007 priority note 2026-09-25T00:12Z — this is the only ACTIVE repair under PAUSE-WORKER (worker CLAIMED @ 749a2e6); the M5 raw sweep TASK-011 follows its PASS, then M6 provisional report TASK-012. No early A4/held-out tasks can displace this repair or the ordered raw census/report. M2 remains owner ACCEPTED INCOMPLETE.
+
+## Successor gate — 2026-09-25T00:21Z (append-only)
+PASS @ worker c833bee089deaa75a0ecbac5820b4e09b874385a: independently ran 97 tests, fixture verifier and A/B eval; `NEG-001` hash/quote at Sedona P2 @9671 matches frozen transcript, A1 only CANDIDATE there, A2 zero, combined runner 16 CANDIDATE and zero HIGH on that transcript; positive A2 garble/255%/U+FFFD preserved. PAUSE-WORKER removed; this task CLOSED notwithstanding historical OPEN header. Next worker task TASK-011 M5 provisional raw sweep, not deferred TASK-007/009/008.
