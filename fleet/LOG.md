@@ -23,3 +23,11 @@ seeded 3/1331 independent; reconciles with the v1 audit's 3-of-16 detector overl
 M4 quantum 1: held-out split fixed before tuning (tools/HELD-OUT-SPLIT.json,
 193/37 of 230), tools/m4_split.py + 7 m5r tests green, PATTERNS.md rule catalog
 published (13 of 16 CERTAIN patterns still invisible to all detectors).
+2026-09-25T18:5xZ WORKER-2: owner ruling 1 — the nonce-shaped literal on main is INERT
+AND RETIRED (v0 posture UNHASHED-OWNER-CHAT-ONLY; boot nonces single-use, consumed at
+boot verification; re-verification binds to ACTIVATION ID + normalized registry record).
+Retired from attention; not quoted further.
+2026-09-25T18:5xZ WORKER-2: owner ruling 2 — manifest pin 4b65145d is the policy-bundle
+SOURCE file; deployed fleet/ERRATA-2026-09-25c.md (sha256 7384a608…) is the instrument
+OF RECORD and the authoritative hash. Manifest reconciliation deferred to 2.0.1; no file
+edits (freeze extends to the manifest; changes ride errata).
