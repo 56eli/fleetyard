@@ -105,3 +105,48 @@ control (`fleet/controls/PAUSE-WORKER-A-2026-09-25-001`), per TASK-016:
   gives `58274f46…`; the implemented sort-by-basename gives `027f82a0…`, which is the
   correct, reproducible value).
 - No detector logic changed in this repair; **three tests added (23 → 26, all green)**.
+
+## TASK-016 — per-criterion evidence (claimed per owner ERRATA-25e §1, OPTION A)
+
+Claim: TASK-016 taken as directed ("your ONLY task now"); boundaries respected — no
+new detectors, no tuning, no class promotion, no rates (TASK-016 §Boundaries).
+
+**C6 — STANDARDS finding-record shape.** Fresh reads at head: 1,334 findings; 1,334
+carry `suspected_intended`, `suspected_intended_status`, `status`, `status_by`; status
+vocabulary `{open: 1334}`; the 157 A2-nonsense spans carry an explicit
+`suspected_intended: null` with status "not proposable mechanically; human read
+required"; `status_by` = "machine-adjudicated by tools/m5r_reduce.py@dada3e60…; human
+confirmation required". Regression test:
+`tests/test_m5r.py::test_standards_finding_record_shape_is_complete`.
+
+**C7 — coverage truth.** `findings/PROVENANCE.json` stats.coverage =
+`{transcripts 230, detector_run 230, machine_adjudicated 230,
+human_finding_pass_audited 0, pending_human_review 230,
+zero_finding_transcripts 24, with_findings 206}`; the row is printed verbatim in
+`findings/SUMMARY.md` §0 and in `findings/README.md`, with titles qualified
+("reviewed" = machine-adjudicated reduction of the raw census). Regression test:
+`test_coverage_truth_row_is_emitted`.
+
+**C8 — LAW §8 manifest.** `tool_sha256` `6d4bb9ce…` equals the sha256 of
+`tools/m5r_reduce.py` as stored in `dada3e60` (reachable on this lane, verified by
+`git show`); `policy_sha256` `0fe20a60…` equals sha256(`fleet2/POLICY-MANIFEST.sha256`
+on main, re-verified at main `8e9e179`); `book_store.sha256` `c0892fcd…` recomputed
+from the frozen corpus; `inherited_census.detector_tool_commit` `7b8863d` reachable on
+the predecessor archive with its detector set and exclusions; `derivations` written for
+all seven digest fields (including the trap: sorting the digest *lines* gives
+`58274f46…`, the correct sort-by-basename value is `027f82a0…`). Regression test:
+`test_law8_manifest_bindings_and_derivations`. Fresh manifests were produced by fresh
+runs (never stamped on inherited data): run 1 binds main `25bdab9`; run 2 (after
+ERRATA-25e) binds main `8e9e179`; ledger sha is identical in both (`d42136c6…`), so the
+manifest change is provenance-only.
+
+**Substance stability (no quiet edit).** Against the gated head `aed9df6`: the
+1,334 (transcript, char_offset, span_end, span_text) keys are identical; no field was
+removed; the only additions are the four R1 fields; class counts unchanged —
+CERTAIN (inherited fixture) 3 · HIGH 0 · CANDIDATE 1,331 · seeded 3; citation
+failures 0; book refs 242/242.
+
+**Determinism + suite.** Two runs with the same `--utc` are byte-identical (fresh full
+replay against committed `findings/` also byte-identical); `python3 -m unittest
+discover -s tests` → **26 tests, OK, 0 skipped, 0 errors** (7 at M5-R delivery → 15 at
+M4-q2 → 26 now; never dropped).

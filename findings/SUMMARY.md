@@ -123,4 +123,4 @@ Review queue: `REVIEW-QUEUE.md` (top 100 by mechanical score; the score is an or
 - Detectors that produced the raw census: A1-repetition, A2-nonsense, B1-contradiction, B2-misquote. A4-confusion, drop-word and speaker/format were not run (unmeasured, not zero).
 - Provenance: see `PROVENANCE.json` (inputs pinned by sha256; corpus digest method defined explicitly, unlike the inherited run's).
 
-_Generated 2026-09-25T19:17:57Z by `tools/m5r_reduce.py` (6d4bb9ce78f2964e)._
+_Generated 2026-09-25T19:39:48Z by `tools/m5r_reduce.py` (6d4bb9ce78f2964e)._

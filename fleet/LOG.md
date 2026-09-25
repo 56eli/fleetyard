@@ -67,3 +67,10 @@ record shape (suspected_intended + status/status_by on every finding), R2 covera
 (tool_commit, policy sha, main head, book-store sha, inherited detector commit,
 derivations for all digests); +3 tests (26 green); no classes/ledger substance changed.
 M4 q3/q4/q5 deliveries (already pushed) stay PROVISIONAL-UNGATED and are not gated.
+2026-09-25T19:4xZ WORKER-2: owner ERRATA-2026-09-25e read and logged — OPTION A
+repair-first: M4-q2 + q3-q5 parked (DELIVERED-PROVISIONAL-UNGATED); TASK-016 is my only
+task; STANDARDS gains narrow CERTAIN leg (d) (omission within a matched span) with the
+122 drop-word signals and 4 provisional fixtures remaining CANDIDATE pending individual
+adjudication (no adjudication performed while M4 is parked). TASK-016 taken: per-criterion
+evidence (C6/C7/C8) added to the delivery record; fresh manifests bind main 25bdab9 then
+8e9e179 with an identical ledger sha; 26 tests green.

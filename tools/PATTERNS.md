@@ -105,6 +105,16 @@ with the book citation that supplies them (inverse of B2's replace/insert cases)
 - Coverage honesty: only book-anchored drops are detectable here; conversational
   drops stay unmeasured. The class is narrowed, not closed.
 
+> **Taxonomy update (owner ERRATA-2026-09-25e §2, in force 2026-09-25T21:38+02:00):**
+> STANDARDS now has a narrow **CERTAIN leg (d)** — *omission within a matched span*
+> (a word clearly present in a ground-truth span the transcript closely tracks is
+> absent, and restoring it completes the match; omissions outside matched spans do
+> **not** qualify). Per §3 of that errata, the 122 C1-drop signals and the four
+> provisional fixtures remain **CANDIDATE/provisional** — each needs individual
+> adjudication under (d) before any CERTAIN/HIGH claim. No adjudication is performed
+> here: M4 is parked under `PAUSE-WORKER-A-2026-09-25-001` (ERRATA-25e §1) until M5-R
+> re-gates PASS. Recorded, not acted on.
+
 ## 5c. M4-q3 — speaker/format: format half measured, speaker half out of scope
 
 `tools/det_format.py` (C2-format) runs seven conservative mechanical rules:
