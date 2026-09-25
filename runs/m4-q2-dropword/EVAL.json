@@ -1,0 +1,5957 @@
+{
+ "clean_set": {
+  "misfires": 3,
+  "misfires_after_source_filter": 0,
+  "passages": 59,
+  "raw_misfires_detail": [
+   {
+    "bare_match_books": [
+     "the_ego_is_not_the_real_you__w"
+    ],
+    "book_ref": {
+     "char_offset": 80391,
+     "quote": "meaninglessness remains. Power",
+     "slug": "daily_reflections_from_dr_dav"
+    },
+    "books": [
+     "the_ego_is_not_the_real_you__w"
+    ],
+    "context": "here remains the emptiness of meaninglessness. Power, on the other hand, motivates",
+    "dropped_words": [
+     "remains"
+    ],
+    "end": 421,
+    "id": "CL-034",
+    "quoted": "meaninglessness. Power",
+    "slug": "the_ego_is_not_the_real_you__w",
+    "source_inherited": true,
+    "start": 399
+   },
+   {
+    "bare_match_books": [
+     "discovery_of_the_presence_of_g",
+     "dissolving_the_ego_realizing_",
+     "healing_and_recovery",
+     "in_the_world_but_not_of_it__t",
+     "letting_go__the_pathway_of_sur"
+    ],
+    "book_ref": {
+     "char_offset": 295761,
+     "quote": "them by ownership as",
+     "slug": "discovery_of_the_presence_of_g"
+    },
+    "books": [
+     "dissolving_the_ego_realizing_",
+     "the_ego_is_not_the_real_you__w"
+    ],
+    "context": "ions and qualities and labels them as “me” and says that is “who I ",
+    "dropped_words": [
+     "by",
+     "ownership"
+    ],
+    "end": 217,
+    "id": "CL-035",
+    "quoted": "them as",
+    "slug": "the_ego_is_not_the_real_you__w",
+    "source_inherited": true,
+    "start": 210
+   },
+   {
+    "bare_match_books": [
+     "healing_and_recovery",
+     "transcending_the_levels_of_con"
+    ],
+    "book_ref": {
+     "char_offset": 134304,
+     "quote": "nothing so-called out",
+     "slug": "the_map_of_consciousness_expla"
+    },
+    "books": [
+     "transcending_the_levels_of_con"
+    ],
+    "context": ". At this more evolved stage, nothing ‘out there’ has the capacity to ma",
+    "dropped_words": [
+     "so-called"
+    ],
+    "end": 185,
+    "id": "CL-055",
+    "quoted": "nothing ‘out",
+    "slug": "transcending_the_levels_of_con",
+    "source_inherited": true,
+    "start": 173
+   }
+  ],
+  "reading": "a book passage cannot drop words from itself — every hit is a misfire; this is a misfire check, not a precision measurement"
+ },
+ "detector": "C1-drop",
+ "detector_sha256_at_head": "a0236325c5f5be4a945bc125750fccfbe1669844775fa26bafaed20e309b0946",
+ "fixture_recall": {
+  "detail": [
+   {
+    "char_offset": 5292,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "delete": 1,
+       "equal": 4,
+       "replace": 4
+      },
+      "book": "discovery_of_the_presence_of_g",
+      "insert_ops": [],
+      "matched": 4,
+      "min_flank": 0,
+      "offset": 253505,
+      "preconditions": {
+       "content_word": false,
+       "flank": false,
+       "max_drop": true,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.5,
+      "score": 0.2125,
+      "span": 8
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 1
+    },
+    "fixture": "CF-001",
+    "hit": false,
+    "quoted": "Dilgo. Quince.",
+    "signals": [],
+    "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 15635,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "equal": 5,
+       "insert": 1,
+       "replace": 5
+      },
+      "book": "letting_go__the_pathway_of_sur",
+      "insert_ops": [],
+      "matched": 11,
+      "min_flank": 0,
+      "offset": 307008,
+      "preconditions": {
+       "content_word": false,
+       "flank": false,
+       "max_drop": true,
+       "min_matched": true,
+       "ratio": false
+      },
+      "ratio": 0.5238,
+      "score": 0.4015,
+      "span": 21
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 1
+    },
+    "fixture": "CF-002",
+    "hit": false,
+    "quoted": "Jerry Jempolski's book",
+    "signals": [],
+    "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 4543,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "equal": 5,
+       "insert": 3,
+       "replace": 3
+      },
+      "book": "the_map_of_consciousness_expla",
+      "insert_ops": [
+       {
+        "book_start": 3846,
+        "dropped": "ergy "
+       },
+       {
+        "book_start": 3898,
+        "dropped": "el 175: P"
+       }
+      ],
+      "matched": 6,
+      "min_flank": 1,
+      "offset": 3833,
+      "preconditions": {
+       "content_word": true,
+       "flank": false,
+       "max_drop": false,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.2609,
+      "score": 0.2215,
+      "span": 23
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 1
+    },
+    "fixture": "CF-003",
+    "hit": false,
+    "quoted": "255% of people are happy",
+    "signals": [],
+    "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 31158,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "delete": 1,
+       "equal": 4,
+       "insert": 1,
+       "replace": 3
+      },
+      "book": "the_map_of_consciousness_expla",
+      "insert_ops": [],
+      "matched": 7,
+      "min_flank": 0,
+      "offset": 445852,
+      "preconditions": {
+       "content_word": false,
+       "flank": false,
+       "max_drop": true,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.7,
+      "score": 0.258,
+      "span": 10
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 1
+    },
+    "fixture": "CF-004",
+    "hit": false,
+    "quoted": "at the level of unquestionable love, there was no love",
+    "signals": [],
+    "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 2355,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "equal": 6,
+       "insert": 2,
+       "replace": 5
+      },
+      "book": "the_path_to_spiritual_advancem",
+      "insert_ops": [
+       {
+        "book_start": 393040,
+        "dropped": "ke"
+       },
+       {
+        "book_start": 393054,
+        "dropped": " out "
+       }
+      ],
+      "matched": 9,
+      "min_flank": 1,
+      "offset": 392764,
+      "preconditions": {
+       "content_word": true,
+       "flank": false,
+       "max_drop": false,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.6429,
+      "score": 0.2167,
+      "span": 14
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 3
+    },
+    "fixture": "CF-006",
+    "hit": false,
+    "quoted": "And above which all the energies are negative. And above which all the energies are negative. And above which all the energies are negative.",
+    "signals": [],
+    "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 32832,
+    "diagnosis": {
+     "best": null,
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 0
+    },
+    "fixture": "CF-007",
+    "hit": false,
+    "quoted": "Pathology and infatuation is suicide",
+    "signals": [],
+    "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 32927,
+    "diagnosis": {
+     "best": null,
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 0
+    },
+    "fixture": "CF-008",
+    "hit": false,
+    "quoted": "Judgment and infatuation is impaired",
+    "signals": [],
+    "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 3062,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "equal": 7,
+       "insert": 2,
+       "replace": 6
+      },
+      "book": "reality_spirituality_and_mode",
+      "insert_ops": [
+       {
+        "book_start": 10044,
+        "dropped": "can see from the Map of Consciousness (see pg. xxvii), on a s"
+       },
+       {
+        "book_start": 10492,
+        "dropped": "ru"
+       }
+      ],
+      "matched": 8,
+      "min_flank": 1,
+      "offset": 9938,
+      "preconditions": {
+       "content_word": true,
+       "flank": false,
+       "max_drop": false,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.6667,
+      "score": 0.2315,
+      "span": 12
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 1
+    },
+    "fixture": "CF-010",
+    "hit": false,
+    "quoted": "Given to Caesar that which is Caesar's",
+    "signals": [],
+    "transcript": "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 12766,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "equal": 4,
+       "insert": 1,
+       "replace": 4
+      },
+      "book": "the_path_to_spiritual_advancem",
+      "insert_ops": [
+       {
+        "book_start": 64662,
+        "dropped": "s, each one ev"
+       }
+      ],
+      "matched": 5,
+      "min_flank": 1,
+      "offset": 64423,
+      "preconditions": {
+       "content_word": true,
+       "flank": false,
+       "max_drop": false,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.2778,
+      "score": 0.2445,
+      "span": 18
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 2
+    },
+    "fixture": "CF-011",
+    "hit": false,
+    "quoted": "Except that God loves you or he would not have created you.",
+    "signals": [],
+    "transcript": "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 32406,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "delete": 1,
+       "equal": 5,
+       "insert": 1,
+       "replace": 4
+      },
+      "book": "the_wisdom_of_dr_david_r_haw",
+      "insert_ops": [],
+      "matched": 8,
+      "min_flank": 0,
+      "offset": 392408,
+      "preconditions": {
+       "content_word": false,
+       "flank": false,
+       "max_drop": true,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.3636,
+      "score": 0.2931,
+      "span": 22
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 1
+    },
+    "fixture": "CF-012",
+    "hit": false,
+    "quoted": "We are in excelsis Deo.",
+    "signals": [],
+    "transcript": "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 5833,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "delete": 1,
+       "equal": 2,
+       "replace": 2
+      },
+      "book": "the_map_of_consciousness_expla",
+      "insert_ops": [],
+      "matched": 10,
+      "min_flank": 0,
+      "offset": 386600,
+      "preconditions": {
+       "content_word": false,
+       "flank": false,
+       "max_drop": true,
+       "min_matched": true,
+       "ratio": true
+      },
+      "ratio": 0.9091,
+      "score": 0.2049,
+      "span": 11
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 2
+    },
+    "fixture": "CF-015",
+    "hit": false,
+    "quoted": "Spiritual purity has no influence. Interest in the personal lives of students.",
+    "required_statement": "CF-015 (the task's named target) is NOT caught: the best near-verbatim window scores 0.2049 on `the_map_of_consciousness_expla` @386600 with matched=10 and ratio=0.9091 (both preconditions pass) but its alignment ops are replace x2 / delete x1 / equal x2 and NO insertion op (the drop-only shape C1-drop reports) — the difference is a substitution, not an omission, and C1-drop only reports book words *missing* from the transcript inside a matched span. Stated, not assumed.",
+    "signals": [],
+    "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 203,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "equal": 2,
+       "insert": 1,
+       "replace": 2
+      },
+      "book": "discovery_of_the_presence_of_g",
+      "insert_ops": [],
+      "matched": 2,
+      "min_flank": 0,
+      "offset": 60596,
+      "preconditions": {
+       "content_word": false,
+       "flank": false,
+       "max_drop": true,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.2857,
+      "score": 0.2105,
+      "span": 7
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 1
+    },
+    "fixture": "CF-017",
+    "hit": false,
+    "quoted": "spiritual integrus",
+    "signals": [],
+    "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 4226,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "equal": 4,
+       "insert": 1,
+       "replace": 4
+      },
+      "book": "the_map_of_consciousness_expla",
+      "insert_ops": [
+       {
+        "book_start": 148443,
+        "dropped": "t levels o"
+       }
+      ],
+      "matched": 5,
+      "min_flank": 1,
+      "offset": 148298,
+      "preconditions": {
+       "content_word": true,
+       "flank": false,
+       "max_drop": false,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.5,
+      "score": 0.3512,
+      "span": 10
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 1
+    },
+    "fixture": "CF-019",
+    "hit": false,
+    "quoted": "40% happiness",
+    "signals": [],
+    "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 14681,
+    "diagnosis": {
+     "best": null,
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 0
+    },
+    "fixture": "CF-020",
+    "hit": false,
+    "quoted": "calibrating at 380",
+    "signals": [],
+    "transcript": "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 32998,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "equal": 5,
+       "insert": 2,
+       "replace": 4
+      },
+      "book": "the_map_of_consciousness_expla",
+      "insert_ops": [
+       {
+        "book_start": 365555,
+        "dropped": "pplies to the difference between infatuation (cal. 145) and Love (cal. 500)."
+       },
+       {
+        "book_start": 366082,
+        "dropped": "When infat"
+       }
+      ],
+      "matched": 6,
+      "min_flank": 1,
+      "offset": 365484,
+      "preconditions": {
+       "content_word": true,
+       "flank": false,
+       "max_drop": false,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.5,
+      "score": 0.224,
+      "span": 12
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 1
+    },
+    "fixture": "CF-021",
+    "hit": false,
+    "quoted": "Perception and infatuation is exaggerated",
+    "signals": [],
+    "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 33186,
+    "diagnosis": {
+     "best": {
+      "alignment_ops": {
+       "equal": 4,
+       "insert": 1,
+       "replace": 4
+      },
+      "book": "the_map_of_consciousness_expla",
+      "insert_ops": [
+       {
+        "book_start": 366106,
+        "dropped": "n infatuated, you “have” to have and possess the"
+       }
+      ],
+      "matched": 4,
+      "min_flank": 1,
+      "offset": 365484,
+      "preconditions": {
+       "content_word": true,
+       "flank": false,
+       "max_drop": false,
+       "min_matched": false,
+       "ratio": false
+      },
+      "ratio": 0.5,
+      "score": 0.2197,
+      "span": 8
+     },
+     "preconditions_label": "matched>=10, ratio>=0.85, flank>=3, max_drop<=2, content word, no numeral",
+     "windows_tried": 1
+    },
+    "fixture": "CF-022",
+    "hit": false,
+    "quoted": "Productivity and infatuation is disrupted",
+    "signals": [],
+    "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "fixtures": 16,
+  "hits": 0,
+  "label": "IN-SAMPLE / seeded — the fixture transcripts are forced-TUNING by the seal; this is never recall evidence (LAW §9)"
+ },
+ "gate_context": {
+  "criteria_addressed": [
+   "q2.1b fixture recall",
+   "q2.1c clean set",
+   "q2.4 §8 bindings",
+   "q2.8 shape defects + filters"
+  ],
+  "gate": "ORCH-2 GATES.md 2026-09-25T20:58Z q2 FAIL/INCOMPLETE (5 criteria)",
+  "gate_side_targets": {
+   "clean_set_misfires": "3/59",
+   "source_inheritance_in_tuning_run": "1/122"
+  },
+  "note": "evidence only; the restriction on C1-drop is unchanged by this file"
+ },
+ "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
+ "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
+ "provenance_file": "EVIDENCE-PROVENANCE.json",
+ "provenance_sha256": "605a64956ad54d0a1b45ff116394107c11a3e7cfdfa53c8d01de4376814b69c3",
+ "run_utc": "2026-09-25T21:10:13Z",
+ "shape_adjudication": {
+  "count_reconciliation": {
+   "countable": 113,
+   "excluded_dropped_token_not_missing": 3,
+   "gate_figure": 113,
+   "gate_list_overlap": "the gate's three named cases (`evidence` @2574, `staggering` @54983, `sovereign` @55220) are reproduced as dropped-token-not-missing",
+   "note": "this instrument finds 114 deletion-closing signals; the 5 partial-overlap items and the gate's own hyphen-tokenization item (`one-third`, transcript 'A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt' @40831) are excluded pending a human read, which lands the published bound on the gate's 113 independently",
+   "raw": 122,
+   "re_labelled_needs_human_read": 6
+  },
+  "countable_shape_consistent": 113,
+  "counts": {
+   "consistent": 113,
+   "dropped-token-not-missing": 3,
+   "gate-boundary-excluded": 1,
+   "partial-overlap": 5
+  },
+  "reading": "token-already-in-span = the 'dropped' token already occurs in the transcript span (book-side repetition, not an omission) → EXCLUDED from any count; hyphen-tokenization = a checker artifact, judged per item; arithmetic-not-closing = the claim cannot be reconstructed, re-labelled not-consistent",
+  "signals": [
+   {
+    "book_ref": {
+     "char_offset": 8036,
+     "quote": "imaginary realms. So",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "realms"
+    ],
+    "end": 1812,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "realms"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "imaginary",
+      "so"
+     ],
+     "transcript_tokens": [
+      "imaginary",
+      "so"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "ving into the purely mystical imaginary. So I was presenting it from the ",
+     "source_inherited": false
+    },
+    "start": 1799,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 8805,
+     "quote": "evidence; evidence of",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "evidence"
+    ],
+    "end": 2585,
+    "shape": {
+     "book_side_repeated_tokens": [
+      "evidence"
+     ],
+     "counting": "EXCLUDED from any count",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      0,
+      1
+     ],
+     "dropped_words": [
+      "evidence"
+     ],
+     "kind": "dropped-token-not-missing",
+     "rebuilt_from_book_span": [
+      "evidence",
+      "of"
+     ],
+     "transcript_tokens": [
+      "evidence",
+      "of"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery",
+      "power_vs_force__the_hidden_de",
+      "reality_spirituality_and_mode"
+     ],
+     "books": [],
+     "context": " And prepare us that there is evidence of the reality of the non-linear",
+     "source_inherited": false
+    },
+    "start": 2574,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 28482,
+     "quote": "something that’s very",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "that's"
+    ],
+    "end": 18219,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "that's"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "something",
+      "very"
+     ],
+     "transcript_tokens": [
+      "something",
+      "very"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "power_vs_force__the_hidden_de",
+      "success_is_for_you",
+      "the_evolution_of_consciousness",
+      "I_AM_THAT",
+      "ACIM_workbook"
+     ],
+     "books": [],
+     "context": " is, you're expecting to find something very, very similar as cause number",
+     "source_inherited": false
+    },
+    "start": 18205,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 37686,
+     "quote": "of really highly",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "really"
+    ],
+    "end": 29823,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "really"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "of",
+      "highly"
+     ],
+     "transcript_tokens": [
+      "of",
+      "highly"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "power_vs_force__the_hidden_de",
+      "Be_as_you_are"
+     ],
+     "books": [],
+     "context": "spiritual errors in the works of highly esteemed teachers. That error",
+     "source_inherited": false
+    },
+    "start": 29814,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 56733,
+     "quote": "bed; I mean, he",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "i",
+     "mean"
+    ],
+    "end": 53184,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "i",
+      "mean"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "bed",
+      "he"
+     ],
+     "transcript_tokens": [
+      "bed",
+      "he"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "Be_as_you_are"
+     ],
+     "books": [],
+     "context": " There was Dave laying in the bed. He was a mess. He's not long for",
+     "source_inherited": false
+    },
+    "start": 53177,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 58610,
+     "quote": "staggering, staggering. This",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "staggering"
+    ],
+    "end": 54999,
+    "shape": {
+     "book_side_repeated_tokens": [
+      "staggering"
+     ],
+     "counting": "EXCLUDED from any count",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      0,
+      1
+     ],
+     "dropped_words": [
+      "staggering"
+     ],
+     "kind": "dropped-token-not-missing",
+     "rebuilt_from_book_span": [
+      "staggering",
+      "this"
+     ],
+     "transcript_tokens": [
+      "staggering",
+      "this"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "od became even more revealed. Staggering. This power is absolute. There's no",
+     "source_inherited": false
+    },
+    "start": 54983,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 59144,
+     "quote": "itself, see. People",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "see"
+    ],
+    "end": 55480,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "see"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "itself",
+      "people"
+     ],
+     "transcript_tokens": [
+      "itself",
+      "people"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_map_of_consciousness_expla"
+     ],
+     "books": [],
+     "context": " of things. It does it all by itself. People say, why do you do that? See ",
+     "source_inherited": false
+    },
+    "start": 55466,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 59433,
+     "quote": "there. However, it",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "however"
+    ],
+    "end": 55752,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "however"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "there",
+      "it"
+     ],
+     "transcript_tokens": [
+      "there",
+      "it"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "dissolving_the_ego_realizing_",
+      "letting_go__the_pathway_of_sur",
+      "success_is_for_you",
+      "the_ego_is_not_the_real_you__w",
+      "the_evolution_of_consciousness"
+     ],
+     "books": [],
+     "context": "and I can't believe it's even there. It took many years to get used t",
+     "source_inherited": false
+    },
+    "start": 55743,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 61983,
+     "quote": "are. So, even before",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "so",
+     "even"
+    ],
+    "end": 58380,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "so",
+      "even"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "are",
+      "before"
+     ],
+     "transcript_tokens": [
+      "are",
+      "before"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "u then reflect that which you are. Before I became that which I am, I w",
+     "source_inherited": false
+    },
+    "start": 58369,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 62545,
+     "quote": "pulpit—I mean, just",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "i",
+     "mean"
+    ],
+    "end": 58941,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "i",
+      "mean"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "pulpit",
+      "just"
+     ],
+     "transcript_tokens": [
+      "pulpit",
+      "just"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "le lifetime just to carve one pulpit. Just the enormity of which is the ",
+     "source_inherited": false
+    },
+    "start": 58929,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 62578,
+     "quote": "of the devotion, which",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "the",
+     "devotion"
+    ],
+    "end": 58963,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "the",
+      "devotion"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "of",
+      "which"
+     ],
+     "transcript_tokens": [
+      "of",
+      "which"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "one pulpit. Just the enormity of which is the second way to God whic",
+     "source_inherited": false
+    },
+    "start": 58955,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 138941,
+     "quote": "be sovereign, sovereign",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "sovereign"
+    ],
+    "end": 55232,
+    "shape": {
+     "book_side_repeated_tokens": [
+      "sovereign"
+     ],
+     "counting": "EXCLUDED from any count",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "sovereign"
+     ],
+     "kind": "dropped-token-not-missing",
+     "rebuilt_from_book_span": [
+      "be",
+      "sovereign"
+     ],
+     "transcript_tokens": [
+      "be",
+      "sovereign"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "reality_spirituality_and_mode",
+      "the_path_to_spiritual_advancem",
+      "transcending_the_levels_of_con"
+     ],
+     "books": [],
+     "context": "ing all this stuff. Claims to be sovereign. It is God. So the person the",
+     "source_inherited": false
+    },
+    "start": 55220,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 145886,
+     "quote": "God, you know, like",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 65790,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "god",
+      "like"
+     ],
+     "transcript_tokens": [
+      "god",
+      "like"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "dissolving_the_ego_realizing_",
+      "the_ego_is_not_the_real_you__w",
+      "the_eye_of_the_i__from_which_n",
+      "Lamsa_bible"
+     ],
+     "books": [],
+     "context": "o you're not co-creating with God, like in tandem. God doesn't say, g",
+     "source_inherited": false
+    },
+    "start": 65781,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 154765,
+     "quote": "fancy things they",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "things"
+    ],
+    "end": 9167,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "things"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "fancy",
+      "they"
+     ],
+     "transcript_tokens": [
+      "fancy",
+      "they"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "lin. People have all kinds of fancy, they want to do psychological test",
+     "source_inherited": false
+    },
+    "start": 9156,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 185403,
+     "quote": "state, see. So",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "see"
+    ],
+    "end": 43140,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "see"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "state",
+      "so"
+     ],
+     "transcript_tokens": [
+      "state",
+      "so"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "discovery_of_the_presence_of_g",
+      "the_evolution_of_consciousness"
+     ],
+     "books": [],
+     "context": "nts, they may go into a manic state. So it wasn't that Prozac drove p",
+     "source_inherited": false
+    },
+    "start": 43131,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 190271,
+     "quote": "the high 500s",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "high"
+    ],
+    "end": 48643,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "high"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "the",
+      "500s"
+     ],
+     "transcript_tokens": [
+      "the",
+      "500s"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "discovery_of_the_presence_of_g",
+      "healing_and_recovery",
+      "power_vs_force__the_hidden_de",
+      "reality_spirituality_and_mode",
+      "the_evolution_of_consciousness"
+     ],
+     "books": [],
+     "context": "you recite a mantra that's in the 500s, then the motivation behind d",
+     "source_inherited": false
+    },
+    "start": 48635,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 190631,
+     "quote": "around probably has",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "probably"
+    ],
+    "end": 49001,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "probably"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "around",
+      "has"
+     ],
+     "transcript_tokens": [
+      "around",
+      "has"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "not, as it rotates around and around, has nothing to do with it. But th",
+     "source_inherited": false
+    },
+    "start": 48990,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 191539,
+     "quote": "salvation, huh. Mankind",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "huh"
+    ],
+    "end": 49883,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "huh"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "salvation",
+      "mankind"
+     ],
+     "transcript_tokens": [
+      "salvation",
+      "mankind"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "mic merit earned the right to salvation. Mankind en masse, the totality of man",
+     "source_inherited": false
+    },
+    "start": 49865,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 192625,
+     "quote": "they’re very strong, very",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "very",
+     "strong"
+    ],
+    "end": 50906,
+    "shape": {
+     "book_side_repeated_tokens": [
+      "very"
+     ],
+     "counting": "RE-LABELLED — excluded from any count until a human read",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "very",
+      "strong"
+     ],
+     "kind": "partial-overlap",
+     "rebuilt_from_book_span": [
+      "they're",
+      "very"
+     ],
+     "transcript_tokens": [
+      "they're",
+      "very"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "things on you. And therefore, they're very strong. They really build the",
+     "source_inherited": false
+    },
+    "start": 50894,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 197801,
+     "quote": "12. I mean, how",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "i",
+     "mean"
+    ],
+    "end": 55914,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "i",
+      "mean"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "12",
+      "how"
+     ],
+     "transcript_tokens": [
+      "12",
+      "how"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "ch 6 and then you punch 8 and 12. How much does a human being cost ",
+     "source_inherited": false
+    },
+    "start": 55907,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 203194,
+     "quote": "again—it’s like you’re",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "it's",
+     "like"
+    ],
+    "end": 60965,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "it's",
+      "like"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "again",
+      "you're"
+     ],
+     "transcript_tokens": [
+      "again",
+      "you're"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "ou're looking for a personage again you're looking for a bigger better e",
+     "source_inherited": false
+    },
+    "start": 60953,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 208720,
+     "quote": "goal, see. But",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "see"
+    ],
+    "end": 66311,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "see"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "goal",
+      "but"
+     ],
+     "transcript_tokens": [
+      "goal",
+      "but"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "ACIM_workbook"
+     ],
+     "books": [],
+     "context": "at's not a primary goal not a goal but naturally one has reality nee",
+     "source_inherited": false
+    },
+    "start": 66303,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 209472,
+     "quote": "place. He’d say",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "he'd"
+    ],
+    "end": 67053,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "he'd"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "place",
+      "say"
+     ],
+     "transcript_tokens": [
+      "place",
+      "say"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "Lamsa_bible"
+     ],
+     "books": [],
+     "context": "he excitedly ran all over the place say wow this can stop disease thi",
+     "source_inherited": false
+    },
+    "start": 67044,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 211300,
+     "quote": "them, see. So",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "see"
+    ],
+    "end": 68693,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "see"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "them",
+      "so"
+     ],
+     "transcript_tokens": [
+      "them",
+      "so"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "success_is_for_you",
+      "the_evolution_of_consciousness",
+      "the_eye_of_the_i__from_which_n",
+      "the_highest_level_of_enlighten",
+      "the_map_of_consciousness_expla"
+     ],
+     "books": [],
+     "context": "heir own mother couldn't love them so what they needed was somebody",
+     "source_inherited": false
+    },
+    "start": 68686,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 212291,
+     "quote": "So, there’s something",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "there's"
+    ],
+    "end": 69682,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "there's"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "so",
+      "something"
+     ],
+     "transcript_tokens": [
+      "so",
+      "something"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_highest_level_of_enlighten"
+     ],
+     "books": [],
+     "context": "rous live into their late 90s so something about humor and art and music",
+     "source_inherited": false
+    },
+    "start": 69670,
+    "transcript": "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 750621,
+     "quote": "Earth\n\nInfinity\n\n\n\nRuler",
+     "slug": "truth_vs_falsehood"
+    },
+    "dropped_words": [
+     "infinity"
+    ],
+    "end": 21159,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "infinity"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "earth",
+      "ruler"
+     ],
+     "transcript_tokens": [
+      "earth",
+      "ruler"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "Almighty, maker of heaven and earth, ruler of the universe, maker of all",
+     "source_inherited": false
+    },
+    "start": 21147,
+    "transcript": "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 402335,
+     "quote": "mystic state, the",
+     "slug": "the_map_of_consciousness_expla"
+    },
+    "dropped_words": [
+     "state"
+    ],
+    "end": 11667,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "state"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "mystic",
+      "the"
+     ],
+     "transcript_tokens": [
+      "mystic",
+      "the"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": " studying theology now in the mystic the understanding comes about in ",
+     "source_inherited": false
+    },
+    "start": 11657,
+    "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 405461,
+     "quote": "You may find",
+     "slug": "the_map_of_consciousness_expla"
+    },
+    "dropped_words": [
+     "may"
+    ],
+    "end": 17892,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "may"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "you",
+      "find"
+     ],
+     "transcript_tokens": [
+      "you",
+      "find"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "dissolving_the_ego_realizing_",
+      "in_the_world_but_not_of_it__t",
+      "letting_go__the_pathway_of_sur",
+      "reality_spirituality_and_mode"
+     ],
+     "books": [],
+     "context": "en at very inconvenient times you find yourself completely incapacit",
+     "source_inherited": false
+    },
+    "start": 17884,
+    "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 409147,
+     "quote": "that study will",
+     "slug": "the_map_of_consciousness_expla"
+    },
+    "dropped_words": [
+     "study"
+    ],
+    "end": 40801,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "study"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "that",
+      "will"
+     ],
+     "transcript_tokens": [
+      "that",
+      "will"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "ology day in and day out, and that will not necessarily precipitate i",
+     "source_inherited": false
+    },
+    "start": 40792,
+    "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 54713,
+     "quote": "refractory, or resistant, to",
+     "slug": "healing_and_recovery"
+    },
+    "dropped_words": [
+     "or",
+     "resistant"
+    ],
+    "end": 5026,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "or",
+      "resistant"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "refractory",
+      "to"
+     ],
+     "transcript_tokens": [
+      "refractory",
+      "to"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "reality_spirituality_and_mode"
+     ],
+     "books": [],
+     "context": "nesses which had been totally refractory to traditional medical treatment",
+     "source_inherited": false
+    },
+    "start": 5013,
+    "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 59807,
+     "quote": "illness, including pride",
+     "slug": "healing_and_recovery"
+    },
+    "dropped_words": [
+     "including"
+    ],
+    "end": 11454,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "including"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "illness",
+      "pride"
+     ],
+     "transcript_tokens": [
+      "illness",
+      "pride"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "e feelings then contribute to illness. Pride, anger, desire, fear, grief, ",
+     "source_inherited": false
+    },
+    "start": 11440,
+    "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 73866,
+     "quote": "cane and medication in",
+     "slug": "healing_and_recovery"
+    },
+    "dropped_words": [
+     "and",
+     "medication"
+    ],
+    "end": 27041,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "and",
+      "medication"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "cane",
+      "in"
+     ],
+     "transcript_tokens": [
+      "cane",
+      "in"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "healing_and_recovery",
+      "letting_go__the_pathway_of_sur"
+     ],
+     "books": [],
+     "context": "uty arthritis and I carried a cane in the back of my car. Imagine c",
+     "source_inherited": false
+    },
+    "start": 27034,
+    "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 80193,
+     "quote": "the inherent nature",
+     "slug": "healing_and_recovery"
+    },
+    "dropped_words": [
+     "inherent"
+    ],
+    "end": 32460,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "inherent"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "the",
+      "nature"
+     ],
+     "transcript_tokens": [
+      "the",
+      "nature"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "never it never changes. It is the nature of consciousness itself. It's",
+     "source_inherited": false
+    },
+    "start": 32450,
+    "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 93931,
+     "quote": "cholesterol level, hypoglycemia",
+     "slug": "healing_and_recovery"
+    },
+    "dropped_words": [
+     "level"
+    ],
+    "end": 49928,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "level"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "cholesterol",
+      "hypoglycemia"
+     ],
+     "transcript_tokens": [
+      "cholesterol",
+      "hypoglycemia"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": " can imagine with an elevated cholesterol, hypoglycemia, diverticulitis, an active ul",
+     "source_inherited": false
+    },
+    "start": 49903,
+    "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 350324,
+     "quote": "not; in fact, they",
+     "slug": "the_map_of_consciousness_expla"
+    },
+    "dropped_words": [
+     "in",
+     "fact"
+    ],
+    "end": 23659,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "in",
+      "fact"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "not",
+      "they"
+     ],
+     "transcript_tokens": [
+      "not",
+      "they"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "healing_and_recovery",
+      "truth_vs_falsehood",
+      "Be_as_you_are",
+      "I_AM_THAT",
+      "ACIM_workbook"
+     ],
+     "books": [],
+     "context": "are the way you are. They are not. They are the opposite. You think i",
+     "source_inherited": false
+    },
+    "start": 23650,
+    "transcript": "Intention_May_2005_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 306248,
+     "quote": "to identify the",
+     "slug": "the_wisdom_of_dr_david_r_haw"
+    },
+    "dropped_words": [
+     "identify"
+    ],
+    "end": 9694,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "identify"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "to",
+      "the"
+     ],
+     "transcript_tokens": [
+      "to",
+      "the"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "ion as the pronoun I you move to the witness observer and then the",
+     "source_inherited": false
+    },
+    "start": 9688,
+    "transcript": "Intention_May_2005_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 318708,
+     "quote": "perception, which perceives, the",
+     "slug": "letting_go__the_pathway_of_sur"
+    },
+    "dropped_words": [
+     "which",
+     "perceives"
+    ],
+    "end": 2233,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "which",
+      "perceives"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "perception",
+      "the"
+     ],
+     "transcript_tokens": [
+      "perception",
+      "the"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery",
+      "letting_go__the_pathway_of_sur",
+      "the_eye_of_the_i__from_which_n"
+     ],
+     "books": [],
+     "context": "t opens the heart. Instead of perception, the heart knows. So the mind thin",
+     "source_inherited": false
+    },
+    "start": 2218,
+    "transcript": "Love_Sep_2011_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 135185,
+     "quote": "it is seen to",
+     "slug": "power_vs_force__the_hidden_de"
+    },
+    "dropped_words": [
+     "is",
+     "seen"
+    ],
+    "end": 6625,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "is",
+      "seen"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "it",
+      "to"
+     ],
+     "transcript_tokens": [
+      "it",
+      "to"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "s the world and everything in it to be an expression of love and ",
+     "source_inherited": false
+    },
+    "start": 6620,
+    "transcript": "Love_Sep_2011_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 447435,
+     "quote": "be quite formidable",
+     "slug": "the_map_of_consciousness_expla"
+    },
+    "dropped_words": [
+     "quite"
+    ],
+    "end": 470,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "quite"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "be",
+      "formidable"
+     ],
+     "transcript_tokens": [
+      "be",
+      "formidable"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_wisdom_of_dr_david_r_haw",
+      "I_reality_and_subj"
+     ],
+     "books": [
+      "the_wisdom_of_dr_david_r_haw"
+     ],
+     "context": ". The strength of the ego can be formidable. And without the assistance o",
+     "source_inherited": true
+    },
+    "start": 457,
+    "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 447619,
+     "quote": "teacher or avatar who",
+     "slug": "the_map_of_consciousness_expla"
+    },
+    "dropped_words": [
+     "or",
+     "avatar"
+    ],
+    "end": 1855,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "or",
+      "avatar"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "teacher",
+      "who"
+     ],
+     "transcript_tokens": [
+      "teacher",
+      "who"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "discovery_of_the_presence_of_g",
+      "letting_go__the_pathway_of_sur",
+      "the_evolution_of_consciousness",
+      "the_eye_of_the_i__from_which_n",
+      "the_map_of_consciousness_expla"
+     ],
+     "books": [],
+     "context": " consciousness of every great teacher who has ever lived remains and is",
+     "source_inherited": false
+    },
+    "start": 1844,
+    "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 216103,
+     "quote": "9 percent of",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "percent"
+    ],
+    "end": 9895,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "percent"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "9",
+      "of"
+     ],
+     "transcript_tokens": [
+      "9",
+      "of"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "lk around in the universe, 99.9% of people identify with form. An",
+     "source_inherited": false
+    },
+    "start": 9890,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 220436,
+     "quote": "85 percent, calibrated",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "percent"
+    ],
+    "end": 14928,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "percent"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "85",
+      "calibrated"
+     ],
+     "transcript_tokens": [
+      "85",
+      "calibrated"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "And 87% of the population, or 85%, calibrated below 200. And therefore, suc",
+     "source_inherited": false
+    },
+    "start": 14913,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 238710,
+     "quote": "deadly. Yeah. Every",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "yeah"
+    ],
+    "end": 39140,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "yeah"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "deadly",
+      "every"
+     ],
+     "transcript_tokens": [
+      "deadly",
+      "every"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": " They'll turn you in. They're deadly. Every whistleblower is grim. We wan",
+     "source_inherited": false
+    },
+    "start": 39127,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 239196,
+     "quote": "existence, huh? The capacity",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "huh",
+     "the"
+    ],
+    "end": 39568,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "huh",
+      "the"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "existence",
+      "capacity"
+     ],
+     "transcript_tokens": [
+      "existence",
+      "capacity"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "resist. Capacity to recognize existence. Capacity to recognize existence. So th",
+     "source_inherited": false
+    },
+    "start": 39549,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 241024,
+     "quote": "profound, yeah . . . I",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "yeah"
+    ],
+    "end": 42308,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "yeah"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "profound",
+      "i"
+     ],
+     "transcript_tokens": [
+      "profound",
+      "i"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_evolution_of_consciousness",
+      "the_path_to_spiritual_advancem"
+     ],
+     "books": [],
+     "context": "nd superficial, but it's very profound. I think it's profound. All righ",
+     "source_inherited": false
+    },
+    "start": 42297,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 252076,
+     "quote": "30, or whatever.\n\nSo",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "or",
+     "whatever"
+    ],
+    "end": 56859,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "or",
+      "whatever"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "30",
+      "so"
+     ],
+     "transcript_tokens": [
+      "30",
+      "so"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "e age of death is 26 or 29 or 30. So, we see consciousness then br",
+     "source_inherited": false
+    },
+    "start": 56853,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 254773,
+     "quote": "that, you know. Because",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 59976,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "that",
+      "because"
+     ],
+     "transcript_tokens": [
+      "that",
+      "because"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "discovery_of_the_presence_of_g",
+      "healing_and_recovery",
+      "in_the_world_but_not_of_it__t",
+      "reality_spirituality_and_mode",
+      "the_evolution_of_consciousness"
+     ],
+     "books": [],
+     "context": " some other people know about that because people can think they're far ",
+     "source_inherited": false
+    },
+    "start": 59964,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 278169,
+     "quote": "purgatorial, it’s certainly",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "it's"
+    ],
+    "end": 9047,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "it's"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "purgatorial",
+      "certainly"
+     ],
+     "transcript_tokens": [
+      "purgatorial",
+      "certainly"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": " purpose. If life on earth is purgatorial, certainly not heavenly. If human life o",
+     "source_inherited": false
+    },
+    "start": 9025,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 278621,
+     "quote": "megalomania, huh?\n\nConsequently",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "huh"
+    ],
+    "end": 9481,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "huh"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "megalomania",
+      "consequently"
+     ],
+     "transcript_tokens": [
+      "megalomania",
+      "consequently"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "shipping itself as the ego as megalomania. Consequently we can't even judge the purpo",
+     "source_inherited": false
+    },
+    "start": 9456,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 280863,
+     "quote": "worth, man. All",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "man"
+    ],
+    "end": 11998,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "man"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "worth",
+      "all"
+     ],
+     "transcript_tokens": [
+      "worth",
+      "all"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "transcending_the_levels_of_con"
+     ],
+     "books": [],
+     "context": "an they juice it for all it's worth. All the melodrama and the tears a",
+     "source_inherited": false
+    },
+    "start": 11988,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 284023,
+     "quote": "deal, you know, who’s",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 15527,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "deal",
+      "who's"
+     ],
+     "transcript_tokens": [
+      "deal",
+      "who's"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "g is this whole one-upmanship deal. Who's the more dominant one? And th",
+     "source_inherited": false
+    },
+    "start": 15516,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 284256,
+     "quote": "but you know, I",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 15745,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "but",
+      "i"
+     ],
+     "transcript_tokens": [
+      "but",
+      "i"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "healing_and_recovery",
+      "letting_go__the_pathway_of_sur",
+      "power_vs_force__the_hidden_de",
+      "reality_spirituality_and_mode",
+      "success_is_for_you"
+     ],
+     "books": [],
+     "context": " think that's all interesting but I don't react to it. So in othe",
+     "source_inherited": false
+    },
+    "start": 15740,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 284762,
+     "quote": "life, you know, such",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 16244,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "life",
+      "such"
+     ],
+     "transcript_tokens": [
+      "life",
+      "such"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": " you reach a certain point of life such things as status and all beco",
+     "source_inherited": false
+    },
+    "start": 16235,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 291269,
+     "quote": "have; otherwise it",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "otherwise"
+    ],
+    "end": 24293,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "otherwise"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "have",
+      "it"
+     ],
+     "transcript_tokens": [
+      "have",
+      "it"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "healing_and_recovery",
+      "in_the_world_but_not_of_it__t"
+     ],
+     "books": [],
+     "context": "th the body well yes it would have it wouldn't have chosen a body I",
+     "source_inherited": false
+    },
+    "start": 24286,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 302408,
+     "quote": "events, huh. The",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "huh"
+    ],
+    "end": 35815,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "huh"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "events",
+      "the"
+     ],
+     "transcript_tokens": [
+      "events",
+      "the"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery",
+      "power_vs_force__the_hidden_de",
+      "the_eye_of_the_i__from_which_n",
+      "truth_vs_falsehood"
+     ],
+     "books": [],
+     "context": "eemingly magical and wondrous events the spiritual seeker is best to s",
+     "source_inherited": false
+    },
+    "start": 35805,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 303800,
+     "quote": "Revelations. You know, when",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 37187,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "revelations",
+      "when"
+     ],
+     "transcript_tokens": [
+      "revelations",
+      "when"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "ing of Christianity plays off revelations when it shakes its fist with hatre",
+     "source_inherited": false
+    },
+    "start": 37171,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 306629,
+     "quote": "universe!\n\nOkay. It",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "okay"
+    ],
+    "end": 39907,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "okay"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "universe",
+      "it"
+     ],
+     "transcript_tokens": [
+      "universe",
+      "it"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "power_vs_force__the_hidden_de",
+      "reality_spirituality_and_mode",
+      "the_ego_is_not_the_real_you__w"
+     ],
+     "books": [],
+     "context": " planet it exists sorry wrong universe it is the truth but not for this",
+     "source_inherited": false
+    },
+    "start": 39896,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 307559,
+     "quote": "States. One-third of the",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "one-third",
+     "of"
+    ],
+    "end": 40841,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "EXCLUDED pending a human read (gate-listed)",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "one-third",
+      "of"
+     ],
+     "kind": "gate-boundary-excluded",
+     "reason": "gate-listed hyphen-tokenization case (`one-third of` dropped from `States. One-third of the`); this instrument's deletion closes exactly, so it is excluded from the count until a human read rather than called consistent",
+     "rebuilt_from_book_span": [
+      "states",
+      "the"
+     ],
+     "transcript_tokens": [
+      "states",
+      "the"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "discovery_of_the_presence_of_g",
+      "the_map_of_consciousness_expla",
+      "I_reality_and_subj",
+      "Be_as_you_are",
+      "ACIM_workbook"
+     ],
+     "books": [],
+     "context": "largest illness in the united states the population is subject to depr",
+     "source_inherited": false
+    },
+    "start": 40831,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 308821,
+     "quote": "up. Yeah. When",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "yeah"
+    ],
+    "end": 42075,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "yeah"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "up",
+      "when"
+     ],
+     "transcript_tokens": [
+      "up",
+      "when"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "healing_and_recovery",
+      "the_map_of_consciousness_expla",
+      "the_path_to_spiritual_advancem",
+      "truth_vs_falsehood",
+      "ACIM_workbook"
+     ],
+     "books": [],
+     "context": "now what in the world to pick up when I was young radio was new rad",
+     "source_inherited": false
+    },
+    "start": 42068,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 309215,
+     "quote": "for earphones, so",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "earphones"
+    ],
+    "end": 42451,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "earphones"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "for",
+      "so"
+     ],
+     "transcript_tokens": [
+      "for",
+      "so"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "which I didn't have the money for so I'd have to buy earphones to ",
+     "source_inherited": false
+    },
+    "start": 42445,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 310544,
+     "quote": "hell, right? So",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "right"
+    ],
+    "end": 43714,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "right"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "hell",
+      "so"
+     ],
+     "transcript_tokens": [
+      "hell",
+      "so"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "oneself by cursing another to hell so you simultaneously undo the k",
+     "source_inherited": false
+    },
+    "start": 43707,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 311427,
+     "quote": "recall, you know, what",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 44527,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "recall",
+      "what"
+     ],
+     "transcript_tokens": [
+      "recall",
+      "what"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_path_to_spiritual_advancem"
+     ],
+     "books": [],
+     "context": " in this lifetime you may not recall what went on in some lifetime but ",
+     "source_inherited": false
+    },
+    "start": 44516,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 313788,
+     "quote": "up, you know. It",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 46706,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "up",
+      "it"
+     ],
+     "transcript_tokens": [
+      "up",
+      "it"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "letting_go__the_pathway_of_sur",
+      "success_is_for_you",
+      "the_evolution_of_consciousness",
+      "the_eye_of_the_i__from_which_n",
+      "the_map_of_consciousness_expla"
+     ],
+     "books": [],
+     "context": "it for Allah he just broke us up it was hysterical we've been gre",
+     "source_inherited": false
+    },
+    "start": 46701,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 313985,
+     "quote": "go the payoffs of",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "the",
+     "payoffs"
+    ],
+    "end": 46879,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "the",
+      "payoffs"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "go",
+      "of"
+     ],
+     "transcript_tokens": [
+      "go",
+      "of"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "orning the willingness to let go of the ego the gratification the",
+     "source_inherited": false
+    },
+    "start": 46874,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 315566,
+     "quote": "it, you know, in",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 48359,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "it",
+      "in"
+     ],
+     "transcript_tokens": [
+      "it",
+      "in"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "y the opposite and we've done it in front of large populations an",
+     "source_inherited": false
+    },
+    "start": 48354,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 315780,
+     "quote": "cabbage, right. Somebody",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "right"
+    ],
+    "end": 48563,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "right"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "cabbage",
+      "somebody"
+     ],
+     "transcript_tokens": [
+      "cabbage",
+      "somebody"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": " no there was two packages of cabbage somebody gave us a package of cabbage ",
+     "source_inherited": false
+    },
+    "start": 48547,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 317233,
+     "quote": "There’s, heh, one",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "heh"
+    ],
+    "end": 49860,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "heh"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "there's",
+      "one"
+     ],
+     "transcript_tokens": [
+      "there's",
+      "one"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": " the belief system themselves there's one currently on the internet abo",
+     "source_inherited": false
+    },
+    "start": 49849,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 318840,
+     "quote": "78\n\npercent. It",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "percent"
+    ],
+    "end": 51764,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "percent"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "78",
+      "it"
+     ],
+     "transcript_tokens": [
+      "78",
+      "it"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": " people below 200 is now only 78% it was like 85% 7% of the popula",
+     "source_inherited": false
+    },
+    "start": 51758,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 326176,
+     "quote": "evolve go through",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "go"
+    ],
+    "end": 60979,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "go"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "evolve",
+      "through"
+     ],
+     "transcript_tokens": [
+      "evolve",
+      "through"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "I_reality_and_subj"
+     ],
+     "books": [],
+     "context": "ng group and many of us as we evolve through a number of groups we've chec",
+     "source_inherited": false
+    },
+    "start": 60965,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 328421,
+     "quote": "level. You know you",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 63172,
+    "shape": {
+     "book_side_repeated_tokens": [
+      "you"
+     ],
+     "counting": "RE-LABELLED — excluded from any count until a human read",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "partial-overlap",
+     "rebuilt_from_book_span": [
+      "level",
+      "you"
+     ],
+     "transcript_tokens": [
+      "level",
+      "you"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_evolution_of_consciousness",
+      "the_wisdom_of_dr_david_r_haw",
+      "I_AM_THAT"
+     ],
+     "books": [],
+     "context": "le come out to Sedona in that level you just can't function in the wo",
+     "source_inherited": false
+    },
+    "start": 63163,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 332353,
+     "quote": "reality, yeah. Just",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "yeah"
+    ],
+    "end": 67156,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "yeah"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "reality",
+      "just"
+     ],
+     "transcript_tokens": [
+      "reality",
+      "just"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "rdinary reality it's ordinary reality just as a big strong man can pick ",
+     "source_inherited": false
+    },
+    "start": 67144,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 332807,
+     "quote": "pounds, or something. He",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "or",
+     "something"
+    ],
+    "end": 67597,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "or",
+      "something"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "pounds",
+      "he"
+     ],
+     "transcript_tokens": [
+      "pounds",
+      "he"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "7 feet tall and he weighs 380 pounds he could probably just lift this",
+     "source_inherited": false
+    },
+    "start": 67588,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 333794,
+     "quote": "potentiality. Wait until the",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "wait",
+     "until"
+    ],
+    "end": 68474,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "wait",
+      "until"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "potentiality",
+      "the"
+     ],
+     "transcript_tokens": [
+      "potentiality",
+      "the"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_wisdom_of_dr_david_r_haw"
+     ],
+     "books": [],
+     "context": "e Holy Spirit and the quantum potentiality the Holy Spirit hears about this ",
+     "source_inherited": false
+    },
+    "start": 68458,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 341720,
+     "quote": "because it’s an",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "it's"
+    ],
+    "end": 76819,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "it's"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "because",
+      "an"
+     ],
+     "transcript_tokens": [
+      "because",
+      "an"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "letting_go__the_pathway_of_sur",
+      "the_evolution_of_consciousness",
+      "truth_vs_falsehood",
+      "ACIM_workbook"
+     ],
+     "books": [],
+     "context": " and it's hard to get over it because an identification with the whole",
+     "source_inherited": false
+    },
+    "start": 76809,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 351970,
+     "quote": "what?\n\nHuh? Did",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "huh"
+    ],
+    "end": 4168,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "huh"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "what",
+      "did"
+     ],
+     "transcript_tokens": [
+      "what",
+      "did"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "success_is_for_you",
+      "the_path_to_spiritual_advancem",
+      "the_wisdom_of_dr_david_r_haw",
+      "I_AM_THAT",
+      "Lamsa_bible"
+     ],
+     "books": [],
+     "context": "ody I mean is that bizarre or what did that come out of this kid's m",
+     "source_inherited": false
+    },
+    "start": 4160,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 353465,
+     "quote": "nature, huh? Like",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "huh"
+    ],
+    "end": 5664,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "huh"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "nature",
+      "like"
+     ],
+     "transcript_tokens": [
+      "nature",
+      "like"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "hing before it becomes second nature like riding a bicycle I mean soone",
+     "source_inherited": false
+    },
+    "start": 5653,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 361353,
+     "quote": "home. Right?\n\nA funny",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "right",
+     "a"
+    ],
+    "end": 13412,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "right",
+      "a"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "home",
+      "funny"
+     ],
+     "transcript_tokens": [
+      "home",
+      "funny"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "the comfort of a family and a home funny thing you know you read these",
+     "source_inherited": false
+    },
+    "start": 13402,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 361748,
+     "quote": "which, you know, is",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 13765,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "which",
+      "is"
+     ],
+     "transcript_tokens": [
+      "which",
+      "is"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "e presence of a family member which is a severe violation of any kin",
+     "source_inherited": false
+    },
+    "start": 13757,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 364856,
+     "quote": "46 Lincoln. I’ve",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "lincoln"
+    ],
+    "end": 16796,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "lincoln"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "46",
+      "i've"
+     ],
+     "transcript_tokens": [
+      "46",
+      "i've"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "omething that reminds me of a 46 I've never seen one since on the r",
+     "source_inherited": false
+    },
+    "start": 16789,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 365891,
+     "quote": "it already changes",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "already"
+    ],
+    "end": 17816,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "already"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "it",
+      "changes"
+     ],
+     "transcript_tokens": [
+      "it",
+      "changes"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "in_the_world_but_not_of_it__t",
+      "reality_spirituality_and_mode",
+      "the_evolution_of_consciousness",
+      "the_highest_level_of_enlighten",
+      "the_map_of_consciousness_expla"
+     ],
+     "books": [],
+     "context": "hinking about it or observing it changes the expected frequency of a c",
+     "source_inherited": false
+    },
+    "start": 17806,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 368382,
+     "quote": "Napoleon Bonaparte, for",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "bonaparte"
+    ],
+    "end": 20592,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "bonaparte"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "napoleon",
+      "for"
+     ],
+     "transcript_tokens": [
+      "napoleon",
+      "for"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "uch lower. That happened with Napoleon, for one thing. I think with Adolf",
+     "source_inherited": false
+    },
+    "start": 20579,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 372733,
+     "quote": "cases. You know, the",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 25448,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "cases",
+      "the"
+     ],
+     "transcript_tokens": [
+      "cases",
+      "the"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "power_vs_force__the_hidden_de"
+     ],
+     "books": [],
+     "context": "ce you're not seeing the mild cases. The mild cases that are amenable ",
+     "source_inherited": false
+    },
+    "start": 25438,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 381216,
+     "quote": "karmic, um, whatever",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "um"
+    ],
+    "end": 34871,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "um"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "karmic",
+      "whatever"
+     ],
+     "transcript_tokens": [
+      "karmic",
+      "whatever"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "lifetime, that they're like a karmic... whatever, and that it just floats. It ",
+     "source_inherited": false
+    },
+    "start": 34853,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 382004,
+     "quote": "happens, you know. It’s",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 35655,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "happens",
+      "it's"
+     ],
+     "transcript_tokens": [
+      "happens",
+      "it's"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "ing 75 at the highway when it happens. It's better to slowly take your fo",
+     "source_inherited": false
+    },
+    "start": 35642,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 389505,
+     "quote": "hungry, since you",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "since"
+    ],
+    "end": 43081,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "since"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "hungry",
+      "you"
+     ],
+     "transcript_tokens": [
+      "hungry",
+      "you"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": ", you're not even going to be hungry. You just snacked when you weren't",
+     "source_inherited": false
+    },
+    "start": 43070,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 395599,
+     "quote": "persist, yeah? So",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "yeah"
+    ],
+    "end": 49834,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "yeah"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "persist",
+      "so"
+     ],
+     "transcript_tokens": [
+      "persist",
+      "so"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_evolution_of_consciousness"
+     ],
+     "books": [],
+     "context": "tain things then will tend to persist. So there is a certain necessity ",
+     "source_inherited": false
+    },
+    "start": 49823,
+    "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 218067,
+     "quote": "4 percent of",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "percent"
+    ],
+    "end": 6529,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "percent"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "4",
+      "of"
+     ],
+     "transcript_tokens": [
+      "4",
+      "of"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "letting_go__the_pathway_of_sur",
+      "reality_spirituality_and_mode"
+     ],
+     "books": [],
+     "context": "tacle. And we discovered that 4% of the world's population goes f",
+     "source_inherited": false
+    },
+    "start": 6524,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 291491,
+     "quote": "death, you know. If",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 15395,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "death",
+      "if"
+     ],
+     "transcript_tokens": [
+      "death",
+      "if"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "power_vs_force__the_hidden_de",
+      "I_reality_and_subj"
+     ],
+     "books": [],
+     "context": "f it. The movies juice you to death. If you calibrate a lot of commer",
+     "source_inherited": false
+    },
+    "start": 15386,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 295840,
+     "quote": "face the nitty-gritty, the",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "the",
+     "nitty-gritty"
+    ],
+    "end": 20466,
+    "shape": {
+     "book_side_repeated_tokens": [
+      "the"
+     ],
+     "counting": "RE-LABELLED — excluded from any count until a human read",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "the",
+      "nitty-gritty"
+     ],
+     "kind": "partial-overlap",
+     "rebuilt_from_book_span": [
+      "face",
+      "the"
+     ],
+     "transcript_tokens": [
+      "face",
+      "the"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "healing_and_recovery",
+      "letting_go__the_pathway_of_sur",
+      "power_vs_force__the_hidden_de",
+      "the_evolution_of_consciousness",
+      "the_eye_of_the_i__from_which_n"
+     ],
+     "books": [],
+     "context": " Because they're unwilling to face the nitty-gritty facts. Radical t",
+     "source_inherited": false
+    },
+    "start": 20458,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 314506,
+     "quote": "God. Yeah? Is",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "yeah"
+    ],
+    "end": 42091,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "yeah"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "god",
+      "is"
+     ],
+     "transcript_tokens": [
+      "god",
+      "is"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_evolution_of_consciousness",
+      "ACIM_workbook"
+     ],
+     "books": [],
+     "context": "magnetic field of the will of God. Is that simple enough? It does n",
+     "source_inherited": false
+    },
+    "start": 42084,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 321728,
+     "quote": "killed, haha, and",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "haha"
+    ],
+    "end": 49608,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "haha"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "killed",
+      "and"
+     ],
+     "transcript_tokens": [
+      "killed",
+      "and"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "ACIM_workbook"
+     ],
+     "books": [],
+     "context": "g somebody that I should have killed. And going through a hernia repair",
+     "source_inherited": false
+    },
+    "start": 49597,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 331794,
+     "quote": "78 percent of",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "percent"
+    ],
+    "end": 3831,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "percent"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "78",
+      "of"
+     ],
+     "transcript_tokens": [
+      "78",
+      "of"
+     ]
+    },
+    "source_inheritance": {
+     "status": "DEFERRED — transcript is a v2-holdout member; measuring it would open the sealed holdout"
+    },
+    "start": 3825,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 337723,
+     "quote": "So it’s just",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "it's"
+    ],
+    "end": 10280,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "it's"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "so",
+      "just"
+     ],
+     "transcript_tokens": [
+      "so",
+      "just"
+     ]
+    },
+    "source_inheritance": {
+     "status": "DEFERRED — transcript is a v2-holdout member; measuring it would open the sealed holdout"
+    },
+    "start": 10273,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 355901,
+     "quote": "up, huh.\n\nIf",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "huh"
+    ],
+    "end": 29401,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "huh"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "up",
+      "if"
+     ],
+     "transcript_tokens": [
+      "up",
+      "if"
+     ]
+    },
+    "source_inheritance": {
+     "status": "DEFERRED — transcript is a v2-holdout member; measuring it would open the sealed holdout"
+    },
+    "start": 29395,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 361684,
+     "quote": "the pea . . . you can",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "pea",
+     "you"
+    ],
+    "end": 35359,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "pea",
+      "you"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "the",
+      "can"
+     ],
+     "transcript_tokens": [
+      "the",
+      "can"
+     ]
+    },
+    "source_inheritance": {
+     "status": "DEFERRED — transcript is a v2-holdout member; measuring it would open the sealed holdout"
+    },
+    "start": 35351,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 376592,
+     "quote": "conditions. You understand? Is",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "you",
+     "understand"
+    ],
+    "end": 626,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "understand"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "conditions",
+      "is"
+     ],
+     "transcript_tokens": [
+      "conditions",
+      "is"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "oment in the context of these conditions. Is that comprehensible? Each thi",
+     "source_inherited": false
+    },
+    "start": 612,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 376828,
+     "quote": "101 percent radiating",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "percent"
+    ],
+    "end": 852,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "percent"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "101",
+      "radiating"
+     ],
+     "transcript_tokens": [
+      "101",
+      "radiating"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "cat-ness. It's sitting there, 101% radiating cat-ness, and not anything el",
+     "source_inherited": false
+    },
+    "start": 838,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 377137,
+     "quote": "100 percent the",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "percent"
+    ],
+    "end": 1141,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "percent"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "100",
+      "the"
+     ],
+     "transcript_tokens": [
+      "100",
+      "the"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "ment. It is being absolutely, 100%, the infinite potentiality of kitt",
+     "source_inherited": false
+    },
+    "start": 1132,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 377197,
+     "quote": "moment, right? It’s",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "right"
+    ],
+    "end": 1198,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "right"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "moment",
+      "it's"
+     ],
+     "transcript_tokens": [
+      "moment",
+      "it's"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "tiality of kitty-ness at that moment. It's not dependent on anything out",
+     "source_inherited": false
+    },
+    "start": 1186,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 409325,
+     "quote": "Muhammad I’ve repeatedly",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "i've"
+    ],
+    "end": 38361,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "i've"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "muhammad",
+      "repeatedly"
+     ],
+     "transcript_tokens": [
+      "muhammad",
+      "repeatedly"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "mes were asked to read 1,000. Muhammad repeatedly calibrated at 700. So there w",
+     "source_inherited": false
+    },
+    "start": 38342,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 410335,
+     "quote": "the actions, collective",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "actions"
+    ],
+    "end": 39345,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "actions"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "the",
+      "collective"
+     ],
+     "transcript_tokens": [
+      "the",
+      "collective"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "he ego and its expression, as the collective actions of society. In any ca",
+     "source_inherited": false
+    },
+    "start": 39331,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 411971,
+     "quote": "again. Well anyway",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "well"
+    ],
+    "end": 40893,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "well"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "again",
+      "anyway"
+     ],
+     "transcript_tokens": [
+      "again",
+      "anyway"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "s and you're lucky to breathe again. Anyway, so from some very higher lev",
+     "source_inherited": false
+    },
+    "start": 40880,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 420049,
+     "quote": "is undoubtedly probably",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "undoubtedly"
+    ],
+    "end": 49117,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "undoubtedly"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "is",
+      "probably"
+     ],
+     "transcript_tokens": [
+      "is",
+      "probably"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "discovery_of_the_presence_of_g",
+      "healing_and_recovery",
+      "in_the_world_but_not_of_it__t",
+      "letting_go__the_pathway_of_sur",
+      "power_vs_force__the_hidden_de"
+     ],
+     "books": [],
+     "context": "And that which is most loving is probably what dominates most of the pe",
+     "source_inherited": false
+    },
+    "start": 49106,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 420394,
+     "quote": "this particular consciousness here",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "particular",
+     "consciousness"
+    ],
+    "end": 49424,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "particular",
+      "consciousness"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "this",
+      "here"
+     ],
+     "transcript_tokens": [
+      "this",
+      "here"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "arch tool. The strangeness of this here was that it went through a wh",
+     "source_inherited": false
+    },
+    "start": 49415,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 423800,
+     "quote": "shovel, you know. With",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "you",
+     "know"
+    ],
+    "end": 52659,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "you",
+      "know"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "shovel",
+      "with"
+     ],
+     "transcript_tokens": [
+      "shovel",
+      "with"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "ke calibrating the level of a shovel. With a shovel you can build a Taj ",
+     "source_inherited": false
+    },
+    "start": 52647,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 424578,
+     "quote": "greedy, and many people",
+     "slug": "the_path_to_spiritual_advancem"
+    },
+    "dropped_words": [
+     "and",
+     "many"
+    ],
+    "end": 53332,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "and",
+      "many"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "greedy",
+      "people"
+     ],
+     "transcript_tokens": [
+      "greedy",
+      "people"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "orget the intellect itself is greedy. People have many books and have not ",
+     "source_inherited": false
+    },
+    "start": 53318,
+    "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 32219,
+     "quote": "consciousness of people on",
+     "slug": "reality_spirituality_and_mode"
+    },
+    "dropped_words": [
+     "of",
+     "people"
+    ],
+    "end": 51176,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "of",
+      "people"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "consciousness",
+      "on"
+     ],
+     "transcript_tokens": [
+      "consciousness",
+      "on"
+     ]
+    },
+    "source_inheritance": {
+     "status": "DEFERRED — transcript is a v2-holdout member; measuring it would open the sealed holdout"
+    },
+    "start": 51160,
+    "transcript": "Realization_of_the_Self_as_the_I_Nov_2003_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 388544,
+     "quote": "impose on society. The",
+     "slug": "the_map_of_consciousness_expla"
+    },
+    "dropped_words": [
+     "on",
+     "society"
+    ],
+    "end": 49802,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "on",
+      "society"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "impose",
+      "the"
+     ],
+     "transcript_tokens": [
+      "impose",
+      "the"
+     ]
+    },
+    "source_inheritance": {
+     "status": "DEFERRED — transcript is a v2-holdout member; measuring it would open the sealed holdout"
+    },
+    "start": 49791,
+    "transcript": "Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 461616,
+     "quote": "the advanced, realized teacher",
+     "slug": "the_map_of_consciousness_expla"
+    },
+    "dropped_words": [
+     "advanced",
+     "realized"
+    ],
+    "end": 24570,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "advanced",
+      "realized"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "the",
+      "teacher"
+     ],
+     "transcript_tokens": [
+      "the",
+      "teacher"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "gy field. So it's the aura of the teacher has within itself the collect",
+     "source_inherited": false
+    },
+    "start": 24559,
+    "transcript": "Success_Oct_2009_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 747750,
+     "quote": "and merely avoids",
+     "slug": "truth_vs_falsehood"
+    },
+    "dropped_words": [
+     "merely"
+    ],
+    "end": 16844,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "merely"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "and",
+      "avoids"
+     ],
+     "transcript_tokens": [
+      "and",
+      "avoids"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "letting_go__the_pathway_of_sur",
+      "power_vs_force__the_hidden_de",
+      "reality_spirituality_and_mode"
+     ],
+     "books": [],
+     "context": "fe and all of its expressions and avoids that which is deleterious rat",
+     "source_inherited": false
+    },
+    "start": 16834,
+    "transcript": "The_Ego_and_The_Self_Dec_2004_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 88591,
+     "quote": "personal value. Why",
+     "slug": "in_the_world_but_not_of_it__t"
+    },
+    "dropped_words": [
+     "value"
+    ],
+    "end": 49309,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "value"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "personal",
+      "why"
+     ],
+     "transcript_tokens": [
+      "personal",
+      "why"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "r approved of. But it's of no personal. Why is that? Because as you evolv",
+     "source_inherited": false
+    },
+    "start": 49296,
+    "transcript": "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 82280,
+     "quote": "parents we need to",
+     "slug": "in_the_world_but_not_of_it__t"
+    },
+    "dropped_words": [
+     "we",
+     "need"
+    ],
+    "end": 76558,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "we",
+      "need"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "parents",
+      "to"
+     ],
+     "transcript_tokens": [
+      "parents",
+      "to"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "lding of these stacks. And as parents, to bring all the beauty, music, ",
+     "source_inherited": false
+    },
+    "start": 76547,
+    "transcript": "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 26528,
+     "quote": "212 degrees Fahrenheit, it",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "degrees",
+     "fahrenheit"
+    ],
+    "end": 23433,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "degrees",
+      "fahrenheit"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "212",
+      "it"
+     ],
+     "transcript_tokens": [
+      "212",
+      "it"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "anges it's quality then below 212 it turns back into liquid it cha",
+     "source_inherited": false
+    },
+    "start": 23427,
+    "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 54231,
+     "quote": "the forebrain. The capacity",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "forebrain",
+     "the"
+    ],
+    "end": 53036,
+    "shape": {
+     "book_side_repeated_tokens": [
+      "the"
+     ],
+     "counting": "RE-LABELLED — excluded from any count until a human read",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "forebrain",
+      "the"
+     ],
+     "kind": "partial-overlap",
+     "rebuilt_from_book_span": [
+      "the",
+      "capacity"
+     ],
+     "transcript_tokens": [
+      "the",
+      "capacity"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "e emergence of the forebrain. The capacity to think. Present even in bir",
+     "source_inherited": false
+    },
+    "start": 53024,
+    "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 65105,
+     "quote": "Is Osama bin",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "osama"
+    ],
+    "end": 67517,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "osama"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "is",
+      "bin"
+     ],
+     "transcript_tokens": [
+      "is",
+      "bin"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "ictim is all a point of view. Is Bin Laden a perpetrator? No. He i",
+     "source_inherited": false
+    },
+    "start": 67511,
+    "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 121248,
+     "quote": "time I tried walking",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "i",
+     "tried"
+    ],
+    "end": 47116,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "i",
+      "tried"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "time",
+      "walking"
+     ],
+     "transcript_tokens": [
+      "time",
+      "walking"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": " that was the mirror. And one time, walking through a wall, and bang, the",
+     "source_inherited": false
+    },
+    "start": 47103,
+    "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 132399,
+     "quote": "make sudden jumps, sudden",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "sudden",
+     "jumps"
+    ],
+    "end": 60854,
+    "shape": {
+     "book_side_repeated_tokens": [
+      "sudden"
+     ],
+     "counting": "RE-LABELLED — excluded from any count until a human read",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "sudden",
+      "jumps"
+     ],
+     "kind": "partial-overlap",
+     "rebuilt_from_book_span": [
+      "make",
+      "sudden"
+     ],
+     "transcript_tokens": [
+      "make",
+      "sudden"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "power_vs_force__the_hidden_de",
+      "the_evolution_of_consciousness",
+      "the_map_of_consciousness_expla"
+     ],
+     "books": [],
+     "context": "make sudden jumps and you can make sudden leaps in consciousness and yo",
+     "source_inherited": false
+    },
+    "start": 60843,
+    "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 154594,
+     "quote": "what? Huh? No",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "huh"
+    ],
+    "end": 86679,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "huh"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "what",
+      "no"
+     ],
+     "transcript_tokens": [
+      "what",
+      "no"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_wisdom_of_dr_david_r_haw"
+     ],
+     "books": [],
+     "context": "osity, megalomania, insanity, what? No, it's because the truth is th",
+     "source_inherited": false
+    },
+    "start": 86671,
+    "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 192970,
+     "quote": "decision. The reason I",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "the",
+     "reason"
+    ],
+    "end": 48932,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      3
+     ],
+     "dropped_words": [
+      "the",
+      "reason"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "decision",
+      "i"
+     ],
+     "transcript_tokens": [
+      "decision",
+      "i"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "the_eye_of_the_i__from_which_n",
+      "the_path_to_spiritual_advancem",
+      "transcending_the_levels_of_con",
+      "I_AM_THAT",
+      "ACIM_workbook"
+     ],
+     "books": [],
+     "context": "l will. Integrity, then, is a decision. I used Sam Walna's example beca",
+     "source_inherited": false
+    },
+    "start": 48921,
+    "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 201550,
+     "quote": "cauliflower, see. So",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "see"
+    ],
+    "end": 60521,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "see"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "cauliflower",
+      "so"
+     ],
+     "transcript_tokens": [
+      "cauliflower",
+      "so"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [],
+     "books": [],
+     "context": "ot like a beanstalk creates a cauliflower. So with nurturance and for some ",
+     "source_inherited": false
+    },
+    "start": 60506,
+    "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 202063,
+     "quote": "it, see. So",
+     "slug": "the_evolution_of_consciousness"
+    },
+    "dropped_words": [
+     "see"
+    ],
+    "end": 61020,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "see"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "it",
+      "so"
+     ],
+     "transcript_tokens": [
+      "it",
+      "so"
+     ]
+    },
+    "source_inheritance": {
+     "bare_match_books": [
+      "discovery_of_the_presence_of_g",
+      "healing_and_recovery",
+      "letting_go__the_pathway_of_sur",
+      "power_vs_force__the_hidden_de",
+      "reality_spirituality_and_mode"
+     ],
+     "books": [],
+     "context": "tly language that and explain it. So comes the awareness, wow, the",
+     "source_inherited": false
+    },
+    "start": 61014,
+    "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt"
+   },
+   {
+    "book_ref": {
+     "char_offset": 204772,
+     "quote": "own accord, with",
+     "slug": "the_map_of_consciousness_expla"
+    },
+    "dropped_words": [
+     "accord"
+    ],
+    "end": 14731,
+    "shape": {
+     "book_side_repeated_tokens": [],
+     "counting": "consistent — may be counted as a shape-consistent signal",
+     "deletion_closes": true,
+     "dropped_run_in_book_span": [
+      1,
+      2
+     ],
+     "dropped_words": [
+      "accord"
+     ],
+     "kind": "consistent",
+     "rebuilt_from_book_span": [
+      "own",
+      "with"
+     ],
+     "transcript_tokens": [
+      "own",
+      "with"
+     ]
+    },
+    "source_inheritance": {
+     "status": "DEFERRED — transcript is a v2-holdout member; measuring it would open the sealed holdout"
+    },
+    "start": 14722,
+    "transcript": "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt"
+   }
+  ]
+ },
+ "source_inheritance_filter": {
+  "clean_set": {
+   "after_filter": 0,
+   "misfires": 3,
+   "source_inherited": 3
+  },
+  "deferred_reason": "7 signals in 4 v2-holdout transcripts are not filtered here: reading them would open the sealed holdout for a filter pass. ORCH-2 measured 1/122 in its own scratch (pre-seal, gate 91cf112)",
+  "rule": "suppress a signal when the transcript's own wording (span ±30 chars) occurs verbatim in the book store — the transcript was book text, so the wording difference is a cross-book self-parallel, not a drop",
+  "shipped_run": {
+   "deferred": 7,
+   "filtered": 114,
+   "filtered_if_deferred_were_kept": 121,
+   "inherited": 1,
+   "raw": 122
+  }
+ },
+ "status": "CANDIDATE-class raw signals, unreviewed; PROVISIONAL-UNGATED; C1-drop is not promotable and no omission count may be quoted from it until ORCH-2 re-gates on this repair",
+ "task": "TASK-020 items 1 (q2 part), 2, 4 (q2 part), 5a, 5c — C1-drop shipping evidence",
+ "tool_commit": "71c37cf219285b4f54344b80c977df96f56de0c8"
+}

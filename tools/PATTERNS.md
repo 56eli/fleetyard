@@ -233,6 +233,19 @@ matches the ledger it was read from.** Binding as of 2026-09-25T20:1xZ:
 Figures bound by this block: the coverage count 3/16 (fixtures covered by a detector) and
 the corroboration column 938/938 · 158/158 · 12/12 · 228/228.
 
+**Policy pin (appended TASK-020 item 3):** the policy sha256 in force for every figure on
+this page is `0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85`. The
+ledger digest `d42136c6…` and the by-transcript digest `c1ec4da8…` above are unchanged at
+this append; that is the whole attribution chain (ledger → companion manifest → tool commit
+`dada3e6` → policy sha), so no figure on this page needs commit archaeology to check.
+
+**TASK-020 supplement bindings (appended 2026-09-25T21:2xZ):** the q2 and q3 run
+directories now carry `PROVENANCE-SUPPLEMENT.json` files (LAW §8 completion: tool_commit,
+main_head, policy_sha256, book-store digest, corpus/split digests, config digest, per-part
+output digest, detector re-pins with the original pins' defects stated). Digests are
+recorded in `fleet/branches/WORKER-2-TASK-020-DELIVERY.md`; the supplements are new files
+and nothing was edited in place.
+
 **Control status (append-only, same date):** `PAUSE-WORKER-A-2026-09-25-001` was
 **REMOVED** by ORCH-2 at 2026-09-25T20:02Z on the M5-R re-gate **PASS** (worker head
 `1beadd9`; all 13 criteria, fresh independent evidence). The earlier note on this page

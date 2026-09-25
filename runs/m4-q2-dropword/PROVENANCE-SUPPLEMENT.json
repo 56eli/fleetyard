@@ -1,0 +1,75 @@
+{
+ "book_store_sha256": "c0892fcd20502d49b99fffe87a4ec4b3b5ecc94a1f98606aab7909127934a4a8",
+ "config": {
+  "max_drop": 2,
+  "min_flank": 3,
+  "min_matched": 10,
+  "min_ratio": 0.85,
+  "min_score": 0.2,
+  "stride": 12,
+  "top_k": 3,
+  "window": 24
+ },
+ "config_digest_note": "sha256 over json.dumps(params, sort_keys=True, separators=(',',':'))",
+ "config_sha256": "409458723e165e06264d733cf05f4e72f5e1d818bd1529a81f55eba623c8959a",
+ "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
+ "detector": "C1-drop",
+ "detector_pin_defect": {
+  "attribution_bridge": "ORCH-2 re-ran shards 1 and 3 at head and got byte-identical part-1.json (64a97be5…) and part-3.json (092d6341…) = 66/193 transcripts and 93/122 signals; the 4e114f1 change was runner/CLI-only (--set {tuning,holdout}, provenance keys), read in full by the gate",
+  "committed_versions": {
+   "012914d": "588e1f22… (= head of det_dropword.py)"
+  },
+  "defect": "resolves to NO committed blob: the six parts ran 18:57:11Z–19:05:21Z, before the delivery commit 012914d (19:06:53Z), so every part manifest pinned an uncommitted working-tree state",
+  "original_pin": "84e5407f…"
+ },
+ "detector_sha256_at_head": "a0236325c5f5be4a945bc125750fccfbe1669844775fa26bafaed20e309b0946",
+ "holdout_enforced": true,
+ "holdout_reads": [],
+ "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
+ "merge": {
+  "signals_file": "signals.json",
+  "signals_sha256": "8d71f57bcb80313fcf8a635587525e65ff7e4603fd431494c1c45c6d1eea83b4",
+  "signals_total": 122
+ },
+ "parts": {
+  "part-1.json": "64a97be574e2412b925bfcd84f1eae7d191af4054506ec4d9a0232eaa27dcacb",
+  "part-2.json": "aa84a90fdfbefc76f092105c4c90766408bf90e000562846aeaf930564dd4279",
+  "part-3.json": "092d63417bb95592b1f0fce3cccdd6fe8182c46d99ee2c96efb9a8d12ebe9d30",
+  "part-4.json": "00769efc07ff9494adbf918bed13b22e14831f138ab174fd18b79477920773fc",
+  "part-5.json": "d81406aa716195e120e9f02e95171c9e620e44aebaa5fa4d2db75749b3f42287",
+  "part-6.json": "ef6c7910be1527e91fcd7b387851bdaf4c827d84a50a1904221f8a498a2b614b"
+ },
+ "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
+ "run_utc": "2026-09-25T21:11:01Z",
+ "source_inheritance_filter": {
+  "deferred_holdout": 7,
+  "examples": [
+   {
+    "books": [
+     "the_wisdom_of_dr_david_r_haw"
+    ],
+    "dropped_words": [
+     "quite"
+    ],
+    "start": 457,
+    "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt"
+   }
+  ],
+  "filtered": 114,
+  "filtered_if_deferred_were_kept": 121,
+  "raw": 122,
+  "rule": "suppress a drop when the transcript's own wording (span ±30 chars) occurs verbatim in the book store — the transcript *was* book text (cross-book self-parallel)",
+  "source_inherited": 1
+ },
+ "split_corpus_files_sha256": "9ae90185ac0f4030eff135d28f7185b2c2f2c1a59269d150816a447293bd998f",
+ "split_counts": {
+  "holdout": 33,
+  "total": 230,
+  "tuning": 197
+ },
+ "split_file": "tools/HELD-OUT-SPLIT-V2.json",
+ "status": "CANDIDATE-class raw signals, unreviewed; C1-drop is not promotable and no omission count may be quoted from it until ORCH-2 re-gates on the TASK-020 repair",
+ "task": "TASK-020 item 1 (q2 part) — LAW §8 supplement for runs/m4-q2-dropword",
+ "tool_commit": "71c37cf219285b4f54344b80c977df96f56de0c8",
+ "why_this_file_exists": "ORCH-2's q2/q3 gates failed the LAW §8 criteria: the original manifests carried no tool_commit / main_head / policy_sha256 / book-store digest / config digest / per-part output digest, and their detector pins resolved to uncommitted or older states. This supplement is new (nothing was edited in place); the originals stay readable and unchanged."
+}

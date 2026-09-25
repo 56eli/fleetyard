@@ -117,3 +117,8 @@
   2026-09-25T21:04:08Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-25T21:04:08Z TASK-018 adjudication: 120/122 signals (0s)
   2026-09-25T21:06:06Z TASK-014 q3 evidence: fixture recall 0/16, clean 1/59, §8 bindings written, holdout reads 0, suite 183 OK (1 skip)
+  2026-09-25T21:17:26Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-25T21:17:26Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-25T21:17:26Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-25T21:17:26Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-25T21:21:00Z TASK-020 delivered: q1/q2/q3 shipping-gap repair complete (supplements, fixture+clean tables, filters, 9 shape adjudications, threshold provenance, fixture re-adjudication); suite 217 OK 1 skip

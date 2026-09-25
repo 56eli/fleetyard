@@ -125,3 +125,20 @@ confound probe returned 0/48 but its control returned 0/15 on the same windows o
 book text -> probe recorded UNINFORMATIVE, not reported as independence. 19 new tests; suite 183 OK,
 1 skip. No detector changed, no threshold set, no rate claimed; C2-format is NOT promoted and the
 restriction stands pending ORCH-2 re-gate.
+2026-09-25T21:21:00Z WORKER-2: TASK-020 DELIVERED (fleet/branches/WORKER-2-TASK-020-DELIVERY.md) - M4 shipping-gap repair
+for q1/q2/q3. New: tools/m4_q2_evidence.py + tools/m4_t20_supplement.py (34 tests) and the artefacts they
+produce; runs/m4-q2-dropword/{EVAL,EVIDENCE-PROVENANCE,PROVENANCE-SUPPLEMENT}.json,
+runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json, fixtures/v2/dropword.json (appended only: 87 insertions, 0
+deletions). Measured: fixture recall 0/16 for both detectors (CF-015 missed because its difference is a
+substitution - replace x2/delete x1/equal x2, no insertion op; stated from the bytes); clean set 3/59
+(C1-drop, all cross-book self-parallels) and 1/59 (C2-format, book-store typography power.When), both
+reproducing ORCH-2's probe; the additive source-inheritance filter gives raw 122 -> filtered 114 (7 deferred
+to protect the v2 holdout; 1 inherited reproduces the gate) and 48 -> 48, with the clean set 3 -> 0 and
+1 -> 0; the 122 shipped C1-drop signals adjudicated (3 dropped-token-not-missing excluded - the gate's own
+three, 5 partial-overlap re-labelled, 1 gate hyphen case excluded pending a human read) for an independently
+reconciled bound of 113; threshold provenance published for all eight C1-drop params (chosen by inspection
+on the v1 tuning half; sensitivity study impossible under split v2 because 33 v1-tuning files are now v2
+holdout) and for C2-format's shape rules with both rejected rules verbatim. Split v2 was re-sealed once this
+shift (73d86f0d, same salt/rule/buckets) so its manifest binds the tool's head revision; disclosed. Suite 217
+tests OK, 1 skip, WITH corpus (baseline 115). No threshold changed; no rate or precision claimed; C1-drop and
+C2-format stay not promotable; TASK-019b still blocked on ORCH-2 re-gates.

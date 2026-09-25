@@ -91,3 +91,32 @@ Results, as measured (nothing here is a rate):
 
 `python3 tools/m4_q3_evidence.py verify --corpus corpus --split tools/HELD-OUT-SPLIT-V2.json \
     --out runs/m4-q3-format` → OK (holdout reads 0; 19 module tests).
+
+## Threshold provenance (TASK-020 item 6, append-only)
+
+C2-format has **no numeric decision thresholds**: the seven rules are shape predicates
+(`word.Next` without an abbreviation before it; 2+ identical punctuation marks; 4+ dots; a
+`_` run; `word ,`; `word . word`; `word,Word`), and the only numbers in the module are
+`EXCERPT = 60` (a display window, not a decision) and the hand-assembled `ABBREV` exclusion
+list. Their provenance:
+
+* the rule shapes were chosen by inspection of the corpus's artifact shapes during the
+  M4-q3 build and are enumerated in the module docstring;
+* the `ABBREV` list was hand-assembled from the abbreviations actually seen in the tuning
+  half; it is **not exhaustive by construction** — an abbreviation outside the list fires
+  R1. The clean-set misfire is the mirror image of that cost: `power.When` in the book
+  store is not an abbreviation at all but the book's own typography, and R1 cannot tell the
+  two apart without a book-side anchor;
+* two candidate rules were measured and **rejected**, and their probes are now published
+  verbatim (pattern + flags + counts) in `EVAL.json`: double-word `\b(\w+)\s+\1\b`
+  (re.IGNORECASE) 2,876 hits / 195 files; camel-glue probes 104 / 53 (any internal
+  capital), 6 / 6 (lowercase-start), 3 / 3 (classic), 2 / 2 (lower-upper run). The
+  historic census figure (35 / 18 files, all 230 transcripts) is **superseded**: its exact
+  pattern was never recorded, which was the documentation gap the q3 gate found.
+
+**What that costs.** The rules are conservative and mechanically demonstrable; what is
+unmeasured is their *operating point* — no sensitivity study exists (how many signals at a
+tighter dot run, a stricter abbreviation list), and no numeric threshold can be tuned
+because none exists to tune. See `EVAL.json` for the measurements that do exist
+(fixture recall 0/16, clean set 1/59, source-inheritance filter 48 → 48 raw/filtered on the
+run and 1 → 0 on the clean set).

@@ -7,6 +7,51 @@
   "task": "TASK-018 (ORCH-2 queue @ 45959ca)"
  },
  "count": 4,
+ "enacted_leg_d_note_2026_09_25": {
+  "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+  "artifact_sha256": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451",
+  "outcome": "2 of 4 confirmed under clause d-i (one word absent inside a matched span, restoration completes the match: D2-001 `things`, D2-003 `high`); 2 stay CANDIDATE because restoring two words is a larger edit than clause d-i allows (D2-002, D2-004). All four remain IN-SAMPLE / seeded and are never precision or recall evidence (LAW §9).",
+  "owner_instrument": "fleet/ERRATA-2026-09-25e §2 (enacted leg (d): omission WITHIN A MATCHED SPAN — a word clearly present in a ground-truth span the transcript closely tracks is absent, and restoring it completes the match; omissions outside matched spans do not qualify)",
+  "proposed_leg_values_superseded": "the per-fixture `proposed_leg` a/a/b/b values were provisional labels under the proposal; each fixture is re-adjudicated below under the enacted clause",
+  "re_adjudicated": {
+   "D2-001": {
+    "clause": "d-i",
+    "in_sample": true,
+    "omitted_word": "things",
+    "reason": "the transcript span equals the ground-truth passage with exactly one word absent ('things') and >=5 token(s) exactly matched on each side; re-inserting the word makes the whole span token-equal to the ground truth — clauses 1-3 hold, cited to bytes",
+    "verdict": "CERTAIN-leg-d"
+   },
+   "D2-002": {
+    "clause": null,
+    "in_sample": true,
+    "omitted_word": [
+     "the",
+     "devotion"
+    ],
+    "reason": "2 words absent (['the', 'devotion']): restoring them is a larger edit than one word — not leg (d) (L3)",
+    "verdict": "CANDIDATE"
+   },
+   "D2-003": {
+    "clause": "d-i",
+    "in_sample": true,
+    "omitted_word": "high",
+    "reason": "the transcript span equals the ground-truth passage with exactly one word absent ('high') and >=5 token(s) exactly matched on each side; re-inserting the word makes the whole span token-equal to the ground truth — clauses 1-3 hold, cited to bytes",
+    "verdict": "CERTAIN-leg-d"
+   },
+   "D2-004": {
+    "clause": null,
+    "in_sample": true,
+    "omitted_word": [
+     "which",
+     "perceives"
+    ],
+    "reason": "2 words absent (['which', 'perceives']): restoring them is a larger edit than one word — not leg (d) (L3)",
+    "verdict": "CANDIDATE"
+   }
+  },
+  "supersedes": "the top-level `proposed_leg_d` wording above (\"the transcript text is ungrammatical or incomplete AND the near-verbatim book source supplies the missing word(s)\") is NOT the enacted text and is superseded for adjudication; it is left readable, never edited",
+  "task": "TASK-020 item 7 (ORCH-2 queue @ 76f0203), append-only"
+ },
  "fixture_set": "v2-dropword (M4-q2, provisional)",
  "fixtures": [
   {
@@ -32,6 +77,15 @@
    "dropped_words": [
     "things"
    ],
+   "enacted_leg_re_adjudication_2026_09_25": {
+    "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+    "artifact_sha256": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451",
+    "clause": "d-i",
+    "in_sample": true,
+    "reason": "the transcript span equals the ground-truth passage with exactly one word absent ('things') and >=5 token(s) exactly matched on each side; re-inserting the word makes the whole span token-equal to the ground truth — clauses 1-3 hold, cited to bytes",
+    "seeded": true,
+    "verdict": "CERTAIN-leg-d"
+   },
    "evidence": "Transcript reads 'People have all kinds of fancy, they want to do psychological testing' — a dangling appositive; the book supplies 'things' ('They'll have all kinds of fancy things they want to do—psychological testing'). Grammar is restored only by the book's word. Book quote re-verified byte-exact at the cited slug+offset (tools/det_dropword.py run + this file's test).",
    "evidence_class": "drop / omission (proposed STANDARDS leg d; see proposed_leg_d)",
    "id": "D2-001",
@@ -40,6 +94,7 @@
    "quoted": "fancy, they",
    "span_end": 9167,
    "status": "confirmed as a real transcript-vs-book omission by WORKER-2 hand-read (M4-q2, tuning set); classification pending taxonomy errata",
+   "status_appended_2026_09_25": "CERTAIN under enacted leg (d) clause d-i — IN-SAMPLE/seeded, never precision evidence",
    "status_by": "WORKER-2 A-2026-09-25-001 (M4-q2)",
    "suspected": "fancy things they",
    "transcript": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
@@ -68,6 +123,15 @@
     "the",
     "devotion"
    ],
+   "enacted_leg_re_adjudication_2026_09_25": {
+    "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+    "artifact_sha256": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451",
+    "clause": null,
+    "in_sample": true,
+    "reason": "2 words absent (['the', 'devotion']): restoring them is a larger edit than one word — not leg (d) (L3)",
+    "seeded": true,
+    "verdict": "CANDIDATE"
+   },
    "evidence": "Transcript reads 'Just the enormity of which is the second way to God' — ungrammatical (dangling 'of which'); the book reads 'just the enormity of the devotion, which is the second way to God'. The omission removes the subject of the clause. Book quote re-verified byte-exact at the cited slug+offset (tools/det_dropword.py run + this file's test).",
    "evidence_class": "drop / omission (proposed STANDARDS leg d; see proposed_leg_d)",
    "id": "D2-002",
@@ -76,6 +140,7 @@
    "quoted": "of which",
    "span_end": 58963,
    "status": "confirmed as a real transcript-vs-book omission by WORKER-2 hand-read (M4-q2, tuning set); classification pending taxonomy errata",
+   "status_appended_2026_09_25": "CANDIDATE — two-word restoration falls outside enacted clause d-i; stays provisional",
    "status_by": "WORKER-2 A-2026-09-25-001 (M4-q2)",
    "suspected": "of the devotion, which",
    "transcript": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt"
@@ -103,6 +168,15 @@
    "dropped_words": [
     "high"
    ],
+   "enacted_leg_re_adjudication_2026_09_25": {
+    "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+    "artifact_sha256": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451",
+    "clause": "d-i",
+    "in_sample": true,
+    "reason": "the transcript span equals the ground-truth passage with exactly one word absent ('high') and >=5 token(s) exactly matched on each side; re-inserting the word makes the whole span token-equal to the ground truth — clauses 1-3 hold, cited to bytes",
+    "seeded": true,
+    "verdict": "CERTAIN-leg-d"
+   },
    "evidence": "Transcript: 'a mantra that's in the 500s'; book: 'a mantra that's in the high 500s'. The omitted qualifier changes the calibration claim (the high 500s is Hawkins' band); the transcript's own adjacent sentence ('They're in the 500s') matches the book's earlier sentence, so the drop is local to the quoted line. Book quote re-verified byte-exact at the cited slug+offset (tools/det_dropword.py run + this file's test).",
    "evidence_class": "drop / omission (proposed STANDARDS leg d; see proposed_leg_d)",
    "id": "D2-003",
@@ -111,6 +185,7 @@
    "quoted": "the 500s",
    "span_end": 48643,
    "status": "confirmed as a real transcript-vs-book omission by WORKER-2 hand-read (M4-q2, tuning set); classification pending taxonomy errata",
+   "status_appended_2026_09_25": "CERTAIN under enacted leg (d) clause d-i — IN-SAMPLE/seeded, never precision evidence",
    "status_by": "WORKER-2 A-2026-09-25-001 (M4-q2)",
    "suspected": "the high 500s",
    "transcript": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt"
@@ -139,6 +214,15 @@
     "which",
     "perceives"
    ],
+   "enacted_leg_re_adjudication_2026_09_25": {
+    "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+    "artifact_sha256": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451",
+    "clause": null,
+    "in_sample": true,
+    "reason": "2 words absent (['which', 'perceives']): restoring them is a larger edit than one word — not leg (d) (L3)",
+    "seeded": true,
+    "verdict": "CANDIDATE"
+   },
    "evidence": "Transcript: 'Instead of perception, the heart knows'; book: 'Instead of perception, which perceives, the heart knows'. The omitted relative clause is the definition of perception in the passage. Book quote re-verified byte-exact at the cited slug+offset (tools/det_dropword.py run + this file's test).",
    "evidence_class": "drop / omission (proposed STANDARDS leg d; see proposed_leg_d)",
    "id": "D2-004",
@@ -147,6 +231,7 @@
    "quoted": "perception, the",
    "span_end": 2233,
    "status": "confirmed as a real transcript-vs-book omission by WORKER-2 hand-read (M4-q2, tuning set); classification pending taxonomy errata",
+   "status_appended_2026_09_25": "CANDIDATE — two-word restoration falls outside enacted clause d-i; stays provisional",
    "status_by": "WORKER-2 A-2026-09-25-001 (M4-q2)",
    "suspected": "perception, which perceives, the",
    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_2_enxautogen_html.txt"
@@ -154,6 +239,8 @@
  ],
  "generated_by": "WORKER-2 A-2026-09-25-001, lane arena/01a0d9ce-fleetyard",
  "generated_utc": "2026-09-25T19:1xZ",
+ "generated_utc_exact": "2026-09-25T19:06:53Z",
+ "generated_utc_exact_source": "committer timestamp of commit 012914d, which introduced this file (git log -1 --format=%cI -- fixtures/v2/dropword.json); the earlier fuzzy value '2026-09-25T19:1xZ' wrote no seconds and could not be recovered exactly — it is superseded by this field and left readable, never edited",
  "in_sample_caveat": "Candidates were produced by the C1-drop detector itself on the tuning set, then hand-verified and (for 4) kept. Recall figures computed against these fixtures are therefore IN-SAMPLE and are not admissible as detector precision/recall evidence (LAW §9).",
  "proposed_leg_d": "STANDARDS leg (d) proposal (NOT in force; needs errata + BOSS CONCERN): 'the transcript text is ungrammatical or incomplete, AND the near-verbatim book source supplies the missing word(s), restoring grammar and doctrinal sense.'",
  "source_run": {

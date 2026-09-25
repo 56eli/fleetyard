@@ -1,0 +1,675 @@
+{
+ "book_store_digest_status": "N/A for this detector — C2-format never reads the book store (state, not an omission). The store digest above is recorded for the run directory's completeness only.",
+ "book_store_sha256": "c0892fcd20502d49b99fffe87a4ec4b3b5ecc94a1f98606aab7909127934a4a8",
+ "config": {
+  "abbreviations": [
+   "a.m",
+   "al",
+   "b.a",
+   "co",
+   "corp",
+   "d.d.s",
+   "d.o",
+   "dept",
+   "dr",
+   "e.g",
+   "ed",
+   "eds",
+   "est",
+   "etc",
+   "fig",
+   "i.e",
+   "inc",
+   "jr",
+   "l.p.n",
+   "ltd",
+   "m.a",
+   "m.d",
+   "mr",
+   "mrs",
+   "ms",
+   "n.j",
+   "n.y",
+   "no",
+   "p.m",
+   "ph.d",
+   "pp",
+   "r.n",
+   "sr",
+   "st",
+   "u.k",
+   "u.s",
+   "vol",
+   "vs"
+  ],
+  "excerpt_chars": 60,
+  "rules": [
+   "R1-glued-period",
+   "R2-repeated-punct",
+   "R3-long-dot-run",
+   "R4-underscore-run",
+   "R5-space-before-comma",
+   "R6-spaced-period",
+   "R7-glued-comma"
+  ]
+ },
+ "config_sha256": "8e7e35a2795f58b97504af440d804e03beb3f66007db9b615bab731972e6f77f",
+ "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
+ "detector": "C2-format",
+ "detector_pin_defect": {
+  "attribution_bridge": "ORCH-2 reproduced the whole run at head and got byte-identical signals.json (86c8f57d…), so the outputs are attributable to unchanged rule logic",
+  "defect": "matches det_format.py at 4425763, not at head; the intervening 4e114f1 changed only the runner (--set {tuning,holdout} + a `set` provenance field)",
+  "original_pin": "c322e053…"
+ },
+ "detector_sha256_at_head": "ef9ff4f257cd9b75edd1dc888abac17ace21ad65ec8ff78e8c088c5ea527b7b9",
+ "holdout_enforced": true,
+ "holdout_reads": [],
+ "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
+ "outputs": {
+  "notes": "signals.json is the historic v1-tuning run (193 → 49), cited by digest only; signals-v2tuning.json is the TASK-020-era run over the v2 tuning half (197 → 48)",
+  "signals_v1tuning.json": "86c8f57dea9443f3b9758add19dbfe01e75b1369b144c74a58d1735b5a8c15ee",
+  "signals_v2tuning.json": "b25651e4cbb5670e2685fef450b039ae42b175832c01d9bdf0a6606efc60f1c2"
+ },
+ "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
+ "rules": [
+  "R1-glued-period",
+  "R2-repeated-punct",
+  "R3-long-dot-run",
+  "R4-underscore-run",
+  "R5-space-before-comma",
+  "R6-spaced-period",
+  "R7-glued-comma"
+ ],
+ "run_utc": "2026-09-25T21:11:01Z",
+ "source_inheritance_filter": {
+  "clean_set": {
+   "misfires_after_filter": 0,
+   "misfires_raw": 1,
+   "signals": [
+    {
+     "bare_quoted_match": [
+      "power_vs_force__the_hidden_de"
+     ],
+     "books": [
+      "power_vs_force__the_hidden_de"
+     ],
+     "context": "neffectual substitute for power.When, as in our society, the pu",
+     "id": "CL-026",
+     "quoted": "r.W",
+     "rule": "R1-glued-period",
+     "slug": "power_vs_force__the_hidden_de",
+     "source_inherited": true
+    }
+   ],
+   "source_inherited": 1
+  },
+  "rule": "suppress a signal when the transcript's own wording (span ±30 chars) occurs verbatim in the book store; the format detector has no book anchor, so this is the gate's own shape applied without a matched span",
+  "run": {
+   "filtered": 48,
+   "raw": 48,
+   "signals": [
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "s as a result of conditions you , propensity becomes actuality ",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 8234,
+     "transcript": "Emotions_and_Sensations_Apr_2004_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "alright yes thank you thank you , thank you again um because of",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 55668,
+     "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "truth_vs_falsehood"
+     ],
+     "books": [],
+     "context": " O Lord. Subtitles by the Amara.org community\n",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 48732,
+     "transcript": "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "truth_vs_falsehood"
+     ],
+     "books": [],
+     "context": "uestion? Subtitles by the Amara.org community consequence of th",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 4333,
+     "transcript": "Intention_May_2005_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "ce, are met. kennt động ether ..... ani , ting 杛 ... are impaired",
+     "rule": "R3-long-dot-run",
+     "source_inherited": false,
+     "start": 32650,
+     "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "power_vs_force__the_hidden_de"
+     ],
+     "books": [],
+     "context": "met. kennt động ether ..... ani , ting 杛 ... are impaired, loss",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 32658,
+     "transcript": "Love_Sep_2011_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "nk your word for it yeah yes if , everything is god if all of u",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 33675,
+     "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "Be_as_you_are",
+      "reality_spirituality_and_mode",
+      "truth_vs_falsehood"
+     ],
+     "books": [],
+     "context": "h. Okay. So this is from Amazon.com. And what do you look up? W",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 38114,
+     "transcript": "Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "discovery_of_the_presence_of_g",
+      "dissolving_the_ego_realizing_",
+      "healing_and_recovery"
+     ],
+     "books": [],
+     "context": "here, go to the office and be P.O.ed at my boss and worry about",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 20228,
+     "transcript": "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "the_evolution_of_consciousness",
+      "the_path_to_spiritual_advancem",
+      "transcending_the_levels_of_con"
+     ],
+     "books": [],
+     "context": " today's world very well. Laugh . bacteria all right so the core",
+     "rule": "R6-spaced-period",
+     "source_inherited": false,
+     "start": 18980,
+     "transcript": "Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "y question on beyondtheordinary.net radio and your answer was b",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 56498,
+     "transcript": "Perception_and_Positionality_Jun_2004_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": " getting angry it scares people.You see that on the playground.",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 29446,
+     "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "ny second so i said so so so so , so if we go we go and the oth",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 12866,
+     "transcript": "Question_Answer_Session_Jan_2011_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "ment on dementia dementia right , how would you how is it treat",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 14002,
+     "transcript": "Question_Answer_Session_Jan_2011_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "power_vs_force__the_hidden_de",
+      "transcending_the_levels_of_con"
+     ],
+     "books": [],
+     "context": "please visit our website at www.veritaspub.com or call 928 282 ",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 40064,
+     "transcript": "Satsang_Series_Volume_II_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "dissolving_the_ego_realizing_",
+      "in_the_world_but_not_of_it__t"
+     ],
+     "books": [],
+     "context": "t our website at www.veritaspub.com or call 928 282 8722. Thank",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 40075,
+     "transcript": "Satsang_Series_Volume_II_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "power_vs_force__the_hidden_de",
+      "transcending_the_levels_of_con"
+     ],
+     "books": [],
+     "context": "please visit our website at www.veritaspub.com or call 928-282-",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 41449,
+     "transcript": "Satsang_Series_Volume_II_Part_6_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "dissolving_the_ego_realizing_",
+      "in_the_world_but_not_of_it__t"
+     ],
+     "books": [],
+     "context": "t our website at www.veritaspub.com or call 928-282-8722. Thank",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 41460,
+     "transcript": "Satsang_Series_Volume_II_Part_6_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "ACIM_workbook",
+      "reality_spirituality_and_mode",
+      "the_evolution_of_consciousness",
+      "truth_vs_falsehood"
+     ],
+     "books": [],
+     "context": "tle humor. Okay. And. Obsessors.com, huh? Tired of thinking? Ca",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 44531,
+     "transcript": "Satsang_Series_Volume_IV_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "truth_vs_falsehood"
+     ],
+     "books": [],
+     "context": "please visit our website at www.theinstituteforadvancedspiritua",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 3429,
+     "transcript": "Satsang_Series_Volume_I_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "uteforadvancedspiritualresearch.com. For additional materials, ",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 3470,
+     "transcript": "Satsang_Series_Volume_I_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "power_vs_force__the_hidden_de",
+      "transcending_the_levels_of_con"
+     ],
+     "books": [],
+     "context": "please visit our website at www.veritaspub.com, or call 928-282",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 3533,
+     "transcript": "Satsang_Series_Volume_I_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "dissolving_the_ego_realizing_",
+      "in_the_world_but_not_of_it__t"
+     ],
+     "books": [],
+     "context": "t our website at www.veritaspub.com, or call 928-282-8722. Than",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 3544,
+     "transcript": "Satsang_Series_Volume_I_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "dn't get those words... theまぁ ....... ...... alright so the explana",
+     "rule": "R3-long-dot-run",
+     "source_inherited": false,
+     "start": 11013,
+     "transcript": "Satsang_Series_Volume_I_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": " those words... theまぁ ....... ...... alright so the explanation fo",
+     "rule": "R3-long-dot-run",
+     "source_inherited": false,
+     "start": 11021,
+     "transcript": "Satsang_Series_Volume_I_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": ".. ... about mother of a ship ......... for the negative and the one ",
+     "rule": "R3-long-dot-run",
+     "source_inherited": false,
+     "start": 11093,
+     "transcript": "Satsang_Series_Volume_I_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "power_vs_force__the_hidden_de",
+      "transcending_the_levels_of_con"
+     ],
+     "books": [],
+     "context": "please visit our website at www.veritaspub.com at www.veritaspu",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 33727,
+     "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "dissolving_the_ego_realizing_",
+      "in_the_world_but_not_of_it__t"
+     ],
+     "books": [],
+     "context": "t our website at www.veritaspub.com at www.veritaspub.com or ca",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 33738,
+     "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "power_vs_force__the_hidden_de",
+      "transcending_the_levels_of_con"
+     ],
+     "books": [],
+     "context": "te at www.veritaspub.com at www.veritaspub.com or call 928-282-",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 33749,
+     "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "dissolving_the_ego_realizing_",
+      "in_the_world_but_not_of_it__t"
+     ],
+     "books": [],
+     "context": "eritaspub.com at www.veritaspub.com or call 928-282-8722 928-28",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 33760,
+     "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj",
+      "along_the_path_to_enlightenmen",
+      "daily_reflections_from_dr_dav",
+      "dissolving_the_ego_realizing_",
+      "in_the_world_but_not_of_it__t"
+     ],
+     "books": [],
+     "context": "can go online to at veritas pub.com to find out where all the e",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 629,
+     "transcript": "Satsang_Series_Volume_VII_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "d years. Oh, thank you, Lord. I , Ganesha. Ganesha. Yes. Ganesh",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 6180,
+     "transcript": "Satsang_Series_Volume_VII_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": ". But that, is correct. To cure,lly? Yes. Okay. So, a pharmacol",
+     "rule": "R7-glued-comma",
+     "source_inherited": false,
+     "start": 12130,
+     "transcript": "Satsang_Series_Volume_VII_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "truth_vs_falsehood"
+     ],
+     "books": [],
+     "context": "fferent. Subtitles by the Amara.org community It's because it's",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 11903,
+     "transcript": "Satsang_Series_Volume_V_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "power_vs_force__the_hidden_de"
+     ],
+     "books": [],
+     "context": "eople would run to get the hats , you know, like a great baseba",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 30992,
+     "transcript": "Satsang_Series_Volume_V_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "ess research we've done is risk , internal versus risk . the wo",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 10526,
+     "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "the_evolution_of_consciousness",
+      "the_map_of_consciousness_expla"
+     ],
+     "books": [],
+     "context": " is risk , internal versus risk . the world as it appear of appe",
+     "rule": "R6-spaced-period",
+     "source_inherited": false,
+     "start": 10549,
+     "transcript": "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_reality_and_subj"
+     ],
+     "books": [],
+     "context": "ated to be that way. You don't.... You only have to calibrate a ",
+     "rule": "R3-long-dot-run",
+     "source_inherited": false,
+     "start": 42886,
+     "transcript": "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": " a level consciousness required , to sort of and . be able to s",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 42981,
+     "transcript": "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "I_AM_THAT",
+      "Lamsa_bible",
+      "daily_reflections_from_dr_dav",
+      "the_evolution_of_consciousness",
+      "the_path_to_spiritual_advancem"
+     ],
+     "books": [],
+     "context": "sness required , to sort of and . be able to see, all you ask, e",
+     "rule": "R6-spaced-period",
+     "source_inherited": false,
+     "start": 42998,
+     "transcript": "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "power_vs_force__the_hidden_de"
+     ],
+     "books": [],
+     "context": "a wooden wagon. And here's this , 3-year-old body and top, sitt",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 15829,
+     "transcript": "The_Ego_and_The_Self_Dec_2004_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "reality_spirituality_and_mode"
+     ],
+     "books": [],
+     "context": " you go to consciousnessproject.org. Okay. He has a list of all",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 67140,
+     "transcript": "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "ACIM_workbook",
+      "power_vs_force__the_hidden_de"
+     ],
+     "books": [],
+     "context": " the past far from reality okay , the only thing to know then i",
+     "rule": "R5-space-before-comma",
+     "source_inherited": false,
+     "start": 6365,
+     "transcript": "The_Presence_of_Spiritual_Awareness_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "the_map_of_consciousness_expla"
+     ],
+     "books": [],
+     "context": "human soul. Then, a human soul**** There live souls, I say. Ther",
+     "rule": "R2-repeated-punct",
+     "source_inherited": false,
+     "start": 5072,
+     "transcript": "Thought_and_Ideation_Feb_2004_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "the_map_of_consciousness_expla"
+     ],
+     "books": [],
+     "context": "here do keep them. A holy soul**** is when I declare what ever w",
+     "rule": "R2-repeated-punct",
+     "source_inherited": false,
+     "start": 5133,
+     "transcript": "Thought_and_Ideation_Feb_2004_Part_3_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "f the seminars in it. DrHawkins.info DrHawkins.info If you'd li",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 857,
+     "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [],
+     "books": [],
+     "context": "in it. DrHawkins.info DrHawkins.info If you'd like to take a pe",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 872,
+     "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
+    },
+    {
+     "bare_quoted_match": [
+      "reality_spirituality_and_mode"
+     ],
+     "books": [],
+     "context": "ur from theconsciousnessproject.org. When we go through the pro",
+     "rule": "R1-glued-period",
+     "source_inherited": false,
+     "start": 22310,
+     "transcript": "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+    }
+   ],
+   "source_inherited": 0
+  }
+ },
+ "split_corpus_files_sha256": "9ae90185ac0f4030eff135d28f7185b2c2f2c1a59269d150816a447293bd998f",
+ "split_counts": {
+  "holdout": 33,
+  "total": 230,
+  "tuning": 197
+ },
+ "split_file": "tools/HELD-OUT-SPLIT-V2.json",
+ "status": "CANDIDATE-class raw signals, unreviewed; C2-format is not promotable and no M6 figure may quote it until ORCH-2 re-gates on the TASK-020 repair",
+ "task": "TASK-020 item 1+5b (q3 part) — LAW §8 supplement for runs/m4-q3-format",
+ "tool_commit": "71c37cf219285b4f54344b80c977df96f56de0c8",
+ "why_this_file_exists": "ORCH-2's q2/q3 gates failed the LAW §8 criteria: the original manifests carried no tool_commit / main_head / policy_sha256 / book-store digest / config digest / per-part output digest, and their detector pins resolved to uncommitted or older states. This supplement is new (nothing was edited in place); the originals stay readable and unchanged."
+}
