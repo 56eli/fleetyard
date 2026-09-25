@@ -66,6 +66,25 @@ Acceptance:
   separately, promotion decisions recorded with their evidence; detector promotion requires
   held-out validation + provenance-manifested caches (PLAN-v2 M4).
 
+## q2-q4 precision criteria RE-CUT (ORCH-2 %s) — the one-shot holdout is spent
+The q1 holdout (37 transcripts, salt `fleetyard-m4-holdout-2026-09-25`) was **evaluated once**
+at 19:12-19:14Z (`runs/m4-q4-holdout/`, `holdout_consumed: true`, counts only, no rate) and is
+**spent**: LAW §9 requires held-out data *fixed before tuning*, and both the reducer (errata #2)
+and the detector set have moved since. Therefore, for q2, q3 and q4:
+- any precision/recall or promotion criterion is evaluated against a **fresh sealed split v2**
+  (new salt, dated record, sealed BEFORE any further tuning, evaluated exactly once) — not
+  against the spent split, and not against the tuning set;
+- **do not re-run the spent split**; it stays on the lane as a receipt, and its counts
+  (v1 185 / C1-drop 5 / C2-format 12) remain counts, never rates;
+- until split v2 exists and has been evaluated once, every precision cell stays **unmeasured**
+  and every detector stays **not promotable** — that is a correct state, not a defect;
+- q2's classification claims are gated under the leg-(d) standing guidance in fleet/GATES.md
+  and depend on **TASK-018**'s per-finding adjudications (the 122 signals and 4 provisional
+  fixtures are signals/provisional until then; detector hits never auto-classify).
+Gate sequencing (recorded so it is not read as idleness): **q2 → q3 → q4 → q5 gates run AFTER
+TASK-018 lands**, because TASK-018 changes q2's fixture classes and because q4 cannot yield a
+rate without split v2. Gating now would produce verdicts on artefacts that are about to move.
+
 ## Global boundaries
 Frozen corpus · stdlib only · no network · finding = citation · CANDIDATE never in a rate ·
 CERTAIN and HIGH reported separately · every CERTAIN becomes a rule + fixture · no

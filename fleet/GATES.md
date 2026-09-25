@@ -356,3 +356,43 @@ and I record the reasoning so it can be overruled:
 `593cad3` committed 2 `.pyc` files under `tools/__pycache__`; at `1beadd9` there are **0**
 `__pycache__`/`.pyc` paths in the tree and a lane `.gitignore` now excludes `corpus/`,
 `evidence/`, `__pycache__/`, `*.pyc`. Self-corrected; no action owed.
+
+### 2026-09-25T20:12Z — ADDENDUM (append-only): M5-R PASS **re-affirmed at WORKER-2 head `219075a`**
+
+The worker pushed two commits after the head I gated (`1beadd9` → `10afc0d` → `219075a`,
+19:55–19:56Z): an ERRATA-25f re-ground, a workspace-reset recovery, a provenance-only
+manifest re-run and a new ops utility. I re-verified rather than assuming:
+
+- **Delta is provenance-only, as claimed.** `git diff --stat 1beadd9 219075a` →
+  `findings/PROVENANCE.json` (2 values: `main_head` `8e9e179…`→`77f1d6d…`, `run_utc`
+  `19:39:48Z`→`19:55:24Z`), `findings/SUMMARY.md` (one line: the generation timestamp),
+  the worker's own logs, and `tools/cadence_watch.py` (new). **`findings/ledger.jsonl`
+  sha256 `d42136c6…` unchanged; `by-transcript` digest `c1ec4da8…` unchanged; coverage block
+  unchanged; `tool_commit dada3e60…` and `tool_sha256 6d4bb9ce…` unchanged; policy
+  `0fe20a60…` unchanged and still equal to sha256(`fleet2/POLICY-MANIFEST.sha256`) at main
+  `77f1d6d`; new `main_head 77f1d6d…` is reachable and current.**
+- **Fresh pinned replay at `219075a` is byte-identical** (my own run, `--utc
+  2026-09-25T19:55:24Z --main-head 77f1d6d…`): `1336 raw signals -> 1334 findings (0 dup
+  removed); seeded=3; book refs ok=242 bad=0; citation failures=0`; `diff -r` vs committed
+  `findings/` clean apart from the two hand-written docs; `PROVENANCE.json` reproduced
+  byte-for-byte (sha256 `921bbc566016b2dc3fe9da76dc43075f7a7f77f047a1c45953cb85b6507f33b4`).
+- **Suite at `219075a`**: `Ran 26 tests … OK`, 0 skipped. Count did not drop.
+- So the **M5-R PASS stands at `219075a`**, and the gate-PASS ledger for M6 FINAL is
+  `d42136c6…` (unchanged by the re-run). Still **not certified**; still **no rate**.
+- **Observation (new tool, non-blocking):** `tools/cadence_watch.py` (93 lines, stdlib +
+  `subprocess` for `git fetch`/`git log`) appends to `fleet/heartbeats/WORKER.log` and
+  `fleet/CONTROL.log` and states it never commits or pushes. Requirements I will hold it to
+  when I next gate the lane: watcher-written CONTROL lines must be attributable as such in
+  the note field, seq must stay strictly monotonic (the lane already has a duplicated
+  seq 10–15 block from 18:55–19:05Z), and a watcher must never emit gate, verdict or
+  authority content — liveness only. Its own correction at `219075a` (removal detection
+  false-positived on the *wording* of my pause file's removal clause; now keyed to a
+  dedicated marker line) is the right fix and is noted: my REMOVED marker line is
+  `status: REMOVED — NOT IN FORCE` at the top of the control file.
+- **Campaign observation (both lanes):** the worker's log records a workspace reset recovered
+  by resetting to its remote lane head and re-verifying digests; I hit the same reset this
+  cycle (my local objects for `574f499…8ed8d12` were gone while the working tree survived) and
+  recovered the same way — `git fetch` + `git reset --hard 8ed8d12` after proving every
+  on-disk file byte-equal to the pushed blobs. LAW §8's "push every commit; a durable step
+  ends with a push" is the only reason neither lane lost work. Recorded as evidence for the
+  2.0.1 policy notes, not as an incident.

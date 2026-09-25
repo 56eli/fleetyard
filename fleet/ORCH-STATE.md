@@ -132,3 +132,25 @@ owner ruling 25d re-grounded, resuming
 - Next: M4 q2-q5 gates are resumable and ungated (order q2 → q3 → q4 → q5); they will be
   gated against TASK-014's criteria plus the leg-(d) standing guidance, and q4 cannot yield a
   rate until a fresh sealed split exists (the one-shot holdout is spent).
+
+## 2026-09-25T20:10:48Z — cycle close: gates current, queue small, handoffs outstanding
+- **M5-R: gate PASS, re-affirmed at WORKER-2 head `219075a`** (provenance-only delta
+  re-verified; ledger `d42136c6…` and by-transcript `c1ec4da8…` unchanged; fresh pinned
+  replay byte-identical incl. `PROVENANCE.json` `921bbc56…`; suite 26 OK 0 skipped). PAUSE
+  REMOVED. Not certified, no rate, M6-P untouched.
+- **TASK-014 q1: FAIL / INCOMPLETE** on q1.4d only (PATTERNS.md quotes the ledger's figures
+  with no digest binding). Split itself verified clean, deterministic, sealed before any
+  detector existed, and reproduced by me exactly. No activation pause (deviation argued and
+  reversible in GATES.md 20:08Z); artefact-scoped restriction in force.
+- **Criteria re-cut**: q2-q4 precision now requires a **fresh sealed split v2** (the q1
+  holdout was spent 19:12-19:14Z and is a receipt only); until then every precision cell
+  stays unmeasured and nothing is promotable.
+- **Handoffs outstanding**: WORKER-2 → TASK-018 (item 0 doc correction, item 0b PATTERNS.md
+  binding, then the owner-ordered per-finding leg-(d) adjudication of 122 signals + 4
+  provisional fixtures under L1-L6), then TASK-017. BOSS-2 + owner →
+  fleet/alerts/ORCH-2-COHERENCE-2026-09-25-001.md (post-PAUSE q3/q4/q5 timeline and the
+  duplicated worker seq 10-15; holdout spent; STANDARDS.md still lacks leg (d) text; LAW §8
+  literalism residuals; my boot §10 items still REPORTED; my own 50-min signal stall owned).
+- **Mine next cycle**: gate M4 q2 → q3 → q4 → q5 after TASK-018 lands; keep cadence lines
+  inside the review loop (ERRATA-25f §4); control check ≤300 s; never write main; never
+  re-certify M6-P; no rate anywhere without split v2 evaluated once.

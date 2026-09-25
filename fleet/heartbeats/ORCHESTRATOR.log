@@ -9,3 +9,4 @@
 2026-09-25T20:01:49Z ORCH-2 alive (cadence restored per ERRATA-25f §4): M5-R re-gate PASS @1beadd9; PAUSE REMOVED; TASK-013/016 closed; TASK-018 cut; REDIRECT-008 acked 19:57:21Z; next TASK-014 q1 full gate; control check <=300 s.
 2026-09-25T20:04:10Z ORCH-2 alive: coherence record filed (boss+owner); TASK-018 cut; queue small by design; starting TASK-014 q1 full gate; cadence <=300 s.
 2026-09-25T20:08:32Z ORCH-2 alive: q1 gate closed FAIL/INCOMPLETE on one criterion (q1.4d ledger-digest binding); no pause issued, deviation recorded and reversible; repair folded into TASK-018 item 0b; next M4 q2-q5 gates; cadence <=300 s.
+2026-09-25T20:10:48Z ORCH-2 alive: M5-R PASS re-affirmed at worker head 219075a (provenance-only delta re-verified, fresh replay byte-identical); q2-q4 precision criteria re-cut to a fresh sealed split v2; M4 gates sequenced after TASK-018; handoff outstanding to WORKER-2 (TASK-018 items 0/0b + adjudication) and facts filed to BOSS-2/owner.
