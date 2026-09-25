@@ -41,12 +41,28 @@ words, numbers, citations. That gap is the honest headline of this page.
 | B1-contradiction | 12 | 12/12 (book quotes byte-exact) | 2/16 (CF-003, CF-006) | **unmeasured** | no |
 | B2-misquote | 228 | 228/228 (book quotes byte-exact) | 1/16 (CF-015) | **unmeasured** | no |
 | A4-confusion | — | excluded since v1 (no independent FP rate) | — | unmeasured | no |
-| drop-word | — | not built (M2 accepted incomplete) | — | unmeasured | no |
-| speaker/format | — | not built (M2 accepted incomplete) | — | unmeasured | no |
+| drop-word | 122 (tuning, C1-drop) | built in M4-q2; 57/122 adjudicated CERTAIN, 65 CANDIDATE (`runs/m4-q2-adjudication/`, tool commit `9cd905d`) | 2/4 provisional fixtures confirmed (D2-001, D2-003; D2-002/D2-004 refused — two-word) | **unmeasured** | no |
+| speaker/format | 49 (v1 tuning, `signals.json` sha `86c8f57d…`) · 48 (v2 tuning, `signals-v2tuning.json`) | format half built in M4-q3 (speaker half out of mechanical scope — corpus census); **q3 gate INCOMPLETE**: shipping evidence was missing and has been rebuilt by WORKER-2 (fixture recall **0/16**, clean set **1/59**, §8 bindings) — ORCH-2 re-gate outstanding | 0/16 | **unmeasured** | no (restriction stands) |
 
 Fixtures are **in-sample** by construction (LAW §9: seeded hits are never
 precision/recall evidence). Clean-set figures from v1 (0/59) were tuned on those
 passages — invalid as an independent false-positive estimate.
+
+Shipping-evidence note (2026-09-25, after ORCH-2's q3 gate): the q2/q3 rows above were
+re-measured because §3 had read "not built" for both classes while §5b/§5c documented
+them as shipped — the catalogue contradicted itself. The C2-format rebuild is
+`runs/m4-q3-format/{EVAL.json,PROVENANCE-V2.json,signals-v2tuning.json}`: fixture recall
+**0/16** (format artifacts are not what the 16 fixtures encode), clean set **1/59**
+(in-sample tune passages — **not** an FP rate) and that single misfire is the book's own
+typography (`power.When` occurs verbatim in the book store at CL-026), so the clean
+passages are known-good but not certified artifact-free. The run is over the **v2 tuning
+half** (197); the historic 193-transcript run was **not replayed** because 33 of its files
+are v2-holdout members. Book-store confound probe: the ctx20/ctx50 window tiers returned
+0/48 — and a control over the 15 fixtures that carry a book reference returned 15/15 on the
+bare quote but **0/15** on the same windows, so the window probe is **UNINFORMATIVE** on
+this corpus (different transcript/book normalisation) and its negative result is not
+evidence of independence. No C2-format signal may feed a rate or an M6 figure.
+
 
 ## 4. Held-out split — fixed before any tuning (LAW §9)
 
@@ -129,6 +145,15 @@ R4 underscore run, R5 space-before-comma, R6 spaced period, R7 glued comma.
   rules were measured and **rejected as noise**: camel-glue (35 hits, dominated by
   proper nouns) and double-word (3,436 hits, ordinary spoken repetition). The
   census is recorded in `runs/m4-q3-format/README.md`.
+- **q3 shipping evidence rebuilt (2026-09-25, after ORCH-2's gate):** fixture recall
+  **0/16**; clean set **1/59** (in-sample, not a rate) with the single misfire traced to
+  the book store's own typography; §8 bindings (`tool_commit`, `main_head`,
+  `policy_sha256`, detector and output digests) in
+  `runs/m4-q3-format/PROVENANCE-V2.json`; rejected-rule probes republished verbatim
+  (pattern + flags) in `EVAL.json`. The camel-glue census **re-measured** on the v2
+  tuning half: any-internal-capital 104/53 files, lowercase-start 6/6, classic 3/3,
+  lower-upper-run 2/2, double-word 2,876/195 — the rejected decision stands, and the
+  historic 35/18 figure is marked superseded (its exact pattern was not recorded).
 - **Resolution of the M2 remainder:** the format half is measured; **speaker
   attribution is not mechanically detectable in this corpus** (no speaker turns are
   encoded), so it stays unmeasured and is recorded as an explicit M6 limitation —

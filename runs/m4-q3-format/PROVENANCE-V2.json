@@ -1,0 +1,43 @@
+{
+ "book_store_sha256": "c0892fcd20502d49b99fffe87a4ec4b3b5ecc94a1f98606aab7909127934a4a8",
+ "corpus_dir": "corpus",
+ "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
+ "detector": "C2-format",
+ "detector_sha256": "ef9ff4f257cd9b75edd1dc888abac17ace21ad65ec8ff78e8c088c5ea527b7b9",
+ "historic_artefact": {
+  "note": "run over the v1 tuning half (193) before split v2; not replayed here because 33 of its files are v2-holdout members",
+  "path": "runs/m4-q3-format/signals.json",
+  "sha256": "86c8f57dea9443f3b9758add19dbfe01e75b1369b144c74a58d1735b5a8c15ee"
+ },
+ "holdout_enforced": true,
+ "holdout_reads": [],
+ "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
+ "outputs": {
+  "per_rule": {
+   "R1-glued-period": 25,
+   "R2-repeated-punct": 2,
+   "R3-long-dot-run": 5,
+   "R5-space-before-comma": 12,
+   "R6-spaced-period": 3,
+   "R7-glued-comma": 1
+  },
+  "signals_file": "signals-v2tuning.json",
+  "signals_sha256": "b25651e4cbb5670e2685fef450b039ae42b175832c01d9bdf0a6606efc60f1c2",
+  "signals_total": 48
+ },
+ "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
+ "run_utc": "2026-09-25T20:58:42Z",
+ "split_corpus_files_sha256": "9ae90185ac0f4030eff135d28f7185b2c2f2c1a59269d150816a447293bd998f",
+ "split_counts": {
+  "holdout": 33,
+  "total": 230,
+  "tuning": 197
+ },
+ "split_file": "tools/HELD-OUT-SPLIT-V2.json",
+ "status": "CANDIDATE-class raw signals, unreviewed; PROVISIONAL-UNGATED; C2-format is not promotable and these signals may not feed any rate or M6 figure until ORCH-2 re-gates",
+ "task": "TASK-014 q3 (M4 C2-format) — shipping evidence rebuild",
+ "tool_commit": "2bbb9f61ad44c36c3348e72f972569d5ea0535b2",
+ "transcripts_read_count": 197,
+ "transcripts_read_sha256": "2e55f4319dbde957d81bf6e87b2bdebad53d476ea44acff97b4912c3289c68b6",
+ "worker": "WORKER-2 (A-2026-09-25-001), lane arena/01a0d9ce-fleetyard"
+}

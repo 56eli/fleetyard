@@ -1,0 +1,833 @@
+{
+ "book_store_confound": {
+  "control": {
+   "ctx20_in_book": 0,
+   "ctx50_in_book": 0,
+   "quote_in_book": 15,
+   "reading": "known book quotes score 15/15 on the bare tier but 0 on the window tiers: transcripts and the book store are normalised differently, so ctx20/ctx50 cannot detect book-derived text here",
+   "verdict": "UNINFORMATIVE",
+   "with_book_ref": 15
+  },
+  "examples": [],
+  "per_rule": {
+   "R1-glued-period": {
+    "book_count": 22,
+    "books": [
+     "ACIM_workbook",
+     "Be_as_you_are",
+     "I_reality_and_subj",
+     "along_the_path_to_enlightenmen",
+     "daily_reflections_from_dr_dav"
+    ],
+    "signals": 20,
+    "tiers": {
+     "bare": 20,
+     "ctx20": 0,
+     "ctx50": 0
+    }
+   },
+   "R2-repeated-punct": {
+    "book_count": 1,
+    "books": [
+     "the_map_of_consciousness_expla"
+    ],
+    "signals": 2,
+    "tiers": {
+     "bare": 2,
+     "ctx20": 0,
+     "ctx50": 0
+    }
+   },
+   "R3-long-dot-run": {
+    "book_count": 1,
+    "books": [
+     "I_reality_and_subj"
+    ],
+    "signals": 1,
+    "tiers": {
+     "bare": 1,
+     "ctx20": 0,
+     "ctx50": 0
+    }
+   },
+   "R5-space-before-comma": {
+    "book_count": 2,
+    "books": [
+     "ACIM_workbook",
+     "power_vs_force__the_hidden_de"
+    ],
+    "signals": 4,
+    "tiers": {
+     "bare": 4,
+     "ctx20": 0,
+     "ctx50": 0
+    }
+   },
+   "R6-spaced-period": {
+    "book_count": 9,
+    "books": [
+     "I_AM_THAT",
+     "I_reality_and_subj",
+     "Lamsa_bible",
+     "daily_reflections_from_dr_dav",
+     "the_evolution_of_consciousness"
+    ],
+    "signals": 3,
+    "tiers": {
+     "bare": 3,
+     "ctx20": 0,
+     "ctx50": 0
+    }
+   }
+  },
+  "reading": "ctx50 = the transcript carries the book's text verbatim across the artifact, so the transcript did not introduce it (a restriction on the signal's reading, not a refutation that the text is glued); bare matches are shown as an upper bound because short patterns match by chance",
+  "signals_ctx20": 0,
+  "signals_ctx50": 0,
+  "signals_matching_any_tier": 30,
+  "signals_total": 48,
+  "window_chars": 25
+ },
+ "clean_set": {
+  "detail": [
+   {
+    "char_offset": 249337,
+    "id": "CL-001",
+    "length": 619,
+    "sha256": "93eafa94cf0c9a81b8d384bfe1b4c84e64d30325b0af6965beda822f7924716d",
+    "signals": [],
+    "slug": "I_reality_and_subj"
+   },
+   {
+    "char_offset": 415274,
+    "id": "CL-002",
+    "length": 600,
+    "sha256": "6c5f29eb261d424846419726c33fb957177f0c05158720a23ed64adb4e112804",
+    "signals": [],
+    "slug": "I_reality_and_subj"
+   },
+   {
+    "char_offset": 581464,
+    "id": "CL-003",
+    "length": 607,
+    "sha256": "e6ef4e52ab72fd3352ebc3be998bf51e45aa66a670e50e7efc93cdd1d70b57a0",
+    "signals": [],
+    "slug": "I_reality_and_subj"
+   },
+   {
+    "char_offset": 87400,
+    "id": "CL-004",
+    "length": 612,
+    "sha256": "f11ed97765f59dc4b63a31d847bcd62167201f7ea5ea66428f51db62b1a63626",
+    "signals": [],
+    "slug": "along_the_path_to_enlightenmen"
+   },
+   {
+    "char_offset": 121704,
+    "id": "CL-005",
+    "length": 629,
+    "sha256": "549b7db47bd84cc34c0f73cf576030cc0838eef187d9e5c5bb701dc9d186d522",
+    "signals": [],
+    "slug": "along_the_path_to_enlightenmen"
+   },
+   {
+    "char_offset": 123502,
+    "id": "CL-006",
+    "length": 805,
+    "sha256": "458035e0b00c2638049fdecb05d1468b0ff384cc7357bf9e1947f650cb1b983f",
+    "signals": [],
+    "slug": "along_the_path_to_enlightenmen"
+   },
+   {
+    "char_offset": 37546,
+    "id": "CL-007",
+    "length": 619,
+    "sha256": "704b618792a8e615b217d646ad5b9aaf7209d4618dd01b1f8b689f1a1c28a312",
+    "signals": [],
+    "slug": "daily_reflections_from_dr_dav"
+   },
+   {
+    "char_offset": 62552,
+    "id": "CL-008",
+    "length": 691,
+    "sha256": "4edc4afd3ee81c16efc4f4bb37daa9405dfb63d7e5ecd4497d3a3219326d5126",
+    "signals": [],
+    "slug": "daily_reflections_from_dr_dav"
+   },
+   {
+    "char_offset": 87653,
+    "id": "CL-009",
+    "length": 801,
+    "sha256": "f242618fccd8cc5aa3623d3e74425f8ebaef4916f65dba4975efa023b14ff9f6",
+    "signals": [],
+    "slug": "daily_reflections_from_dr_dav"
+   },
+   {
+    "char_offset": 125272,
+    "id": "CL-010",
+    "length": 774,
+    "sha256": "0ac6844561c073b14f4260917f6bb8b5dfa1958555c6a3a5542192dd5e702bfa",
+    "signals": [],
+    "slug": "discovery_of_the_presence_of_g"
+   },
+   {
+    "char_offset": 208684,
+    "id": "CL-011",
+    "length": 754,
+    "sha256": "e3d4cd34128fa3a996d83d7ebc81212d736f35b59645d561256e18698ea1fbb4",
+    "signals": [],
+    "slug": "discovery_of_the_presence_of_g"
+   },
+   {
+    "char_offset": 292215,
+    "id": "CL-012",
+    "length": 622,
+    "sha256": "363218a3c631e90b5c4aba888668fd4cd39dcebaa4ce9666980ceb689bb1e11c",
+    "signals": [],
+    "slug": "discovery_of_the_presence_of_g"
+   },
+   {
+    "char_offset": 64117,
+    "id": "CL-013",
+    "length": 605,
+    "sha256": "6346048fd8d06b431aab3d9f3945c927f4ff163bdbb394560bfb39631b36d544",
+    "signals": [],
+    "slug": "dissolving_the_ego_realizing_"
+   },
+   {
+    "char_offset": 99874,
+    "id": "CL-014",
+    "length": 613,
+    "sha256": "40853f53feb73976cd2ed8c1194561bba6958161f9d730ed01e3446834ea919d",
+    "signals": [],
+    "slug": "dissolving_the_ego_realizing_"
+   },
+   {
+    "char_offset": 141925,
+    "id": "CL-015",
+    "length": 627,
+    "sha256": "4d30b901f28c6b6f22c3b9d49f656fc1092f6d494275c6653dc9a52c625de279",
+    "signals": [],
+    "slug": "dissolving_the_ego_realizing_"
+   },
+   {
+    "char_offset": 239347,
+    "id": "CL-016",
+    "length": 693,
+    "sha256": "30482c5743bf2bf13bb68376b1ddf16f9854d700eb350eff36a6efa46b2f0363",
+    "signals": [],
+    "slug": "healing_and_recovery"
+   },
+   {
+    "char_offset": 398797,
+    "id": "CL-017",
+    "length": 815,
+    "sha256": "0914d6a3e90a4c5106bf447222e3ccb9c8f9182609d70be3d6953ae05225bdb2",
+    "signals": [],
+    "slug": "healing_and_recovery"
+   },
+   {
+    "char_offset": 558374,
+    "id": "CL-018",
+    "length": 646,
+    "sha256": "6dd2793ef2fb94b71a122754dbc757402b4b74cd621295a88a1e12175b17ba85",
+    "signals": [],
+    "slug": "healing_and_recovery"
+   },
+   {
+    "char_offset": 30078,
+    "id": "CL-019",
+    "length": 641,
+    "sha256": "27d20ff2f5c2d8d745c78519be08c2e268c88fec8d7d8bdf97533e27ef3233e6",
+    "signals": [],
+    "slug": "in_the_world_but_not_of_it__t"
+   },
+   {
+    "char_offset": 52119,
+    "id": "CL-020",
+    "length": 736,
+    "sha256": "fb56f0e189508e9dc5abd3dea3d71085c0242b2b6c215b5d75875175f13803be",
+    "signals": [],
+    "slug": "in_the_world_but_not_of_it__t"
+   },
+   {
+    "char_offset": 70149,
+    "id": "CL-021",
+    "length": 633,
+    "sha256": "7573bc83ff7bf3415c9412974bf32e1bfe99f8c5417b77bb22b4f19b3440f7db",
+    "signals": [],
+    "slug": "in_the_world_but_not_of_it__t"
+   },
+   {
+    "char_offset": 184605,
+    "id": "CL-022",
+    "length": 640,
+    "sha256": "7949093aa81c80bbd132ffd1f0de7751c5b3ec650b7fcdebe00c9bd272ffde86",
+    "signals": [],
+    "slug": "letting_go__the_pathway_of_sur"
+   },
+   {
+    "char_offset": 309957,
+    "id": "CL-023",
+    "length": 661,
+    "sha256": "5449277db4e633af0363633f3c1fcdec31b22bd854d04e6e08b327b6d70cf7b4",
+    "signals": [],
+    "slug": "letting_go__the_pathway_of_sur"
+   },
+   {
+    "char_offset": 430632,
+    "id": "CL-024",
+    "length": 816,
+    "sha256": "d26be88a5eed52b23703edbf11b0448da991a244281a6d4ebfe7f5e95594cf28",
+    "signals": [],
+    "slug": "letting_go__the_pathway_of_sur"
+   },
+   {
+    "char_offset": 141939,
+    "id": "CL-025",
+    "length": 817,
+    "sha256": "ee6b2be962171dd5dcae95ecaf881e8981478afa90bab5ba562392a9047df23c",
+    "signals": [],
+    "slug": "power_vs_force__the_hidden_de"
+   },
+   {
+    "char_offset": 236391,
+    "id": "CL-026",
+    "length": 625,
+    "sha256": "e50359599ee21b341ee5f152a2c90c68aaab35f175179ae4bd62bd63c0dc7a5f",
+    "signals": [
+     {
+      "end": 472,
+      "quoted": "r.W",
+      "rule": "R1-glued-period",
+      "start": 469
+     }
+    ],
+    "slug": "power_vs_force__the_hidden_de"
+   },
+   {
+    "char_offset": 330966,
+    "id": "CL-027",
+    "length": 646,
+    "sha256": "d942730c7932edf55ce3f98a051b0f19a615c2d4fff7fcb6c4101e24e0a6e082",
+    "signals": [],
+    "slug": "power_vs_force__the_hidden_de"
+   },
+   {
+    "char_offset": 199445,
+    "id": "CL-028",
+    "length": 636,
+    "sha256": "21c9c2f4d4f4854d844dd6370ec67cc2de5a0e8dbc167fa12c47b156c27b54db",
+    "signals": [],
+    "slug": "reality_spirituality_and_mode"
+   },
+   {
+    "char_offset": 332060,
+    "id": "CL-029",
+    "length": 664,
+    "sha256": "19919979ec37ba78335c8caa420395f4910f2bd1f0f8a8b9225207d094d80954",
+    "signals": [],
+    "slug": "reality_spirituality_and_mode"
+   },
+   {
+    "char_offset": 467043,
+    "id": "CL-030",
+    "length": 613,
+    "sha256": "0d5a663903e8369093efb1da1a1a17288f2db3284b8b18a47d66a3a8e643d902",
+    "signals": [],
+    "slug": "reality_spirituality_and_mode"
+   },
+   {
+    "char_offset": 102708,
+    "id": "CL-031",
+    "length": 611,
+    "sha256": "552698c8ed34426b829e7fe505d16d3440b745363f7b44b3e34f649cd5497392",
+    "signals": [],
+    "slug": "success_is_for_you"
+   },
+   {
+    "char_offset": 171143,
+    "id": "CL-032",
+    "length": 640,
+    "sha256": "5be9e624f824dd135ca0c8e541f1b112d629e00d16a6a036f650d77f7e90835f",
+    "signals": [],
+    "slug": "success_is_for_you"
+   },
+   {
+    "char_offset": 239497,
+    "id": "CL-033",
+    "length": 669,
+    "sha256": "8619ca82d5998a42b3ce12cfc045bfb1dfa0273d6de76fb0719cb533980466f6",
+    "signals": [],
+    "slug": "success_is_for_you"
+   },
+   {
+    "char_offset": 43642,
+    "id": "CL-034",
+    "length": 601,
+    "sha256": "219dba93a2f51819b23fb51e3add23e313308b7f29eabc6a7f632277239133ce",
+    "signals": [],
+    "slug": "the_ego_is_not_the_real_you__w"
+   },
+   {
+    "char_offset": 124511,
+    "id": "CL-035",
+    "length": 644,
+    "sha256": "30537e9555d1ca55fba53455b7effae111751c15f11fb707aec33851e8a99944",
+    "signals": [],
+    "slug": "the_ego_is_not_the_real_you__w"
+   },
+   {
+    "char_offset": 120908,
+    "id": "CL-036",
+    "length": 680,
+    "sha256": "e24582f05b4744d93ac15923880726cf84280cfb85fac01233b69db09ff8f5e1",
+    "signals": [],
+    "slug": "the_evolution_of_consciousness"
+   },
+   {
+    "char_offset": 201487,
+    "id": "CL-037",
+    "length": 609,
+    "sha256": "c26bf34d04454f68547f827ae9655ad35273d0c34673378cb303ed727b5ad0f2",
+    "signals": [],
+    "slug": "the_evolution_of_consciousness"
+   },
+   {
+    "char_offset": 282145,
+    "id": "CL-038",
+    "length": 623,
+    "sha256": "d713b219685ab10d1013b77a902324c528edc0ef09a44ec9519359b4a3169712",
+    "signals": [],
+    "slug": "the_evolution_of_consciousness"
+   },
+   {
+    "char_offset": 183076,
+    "id": "CL-039",
+    "length": 774,
+    "sha256": "87691a7a589b611a0bd83bad0462b99d374a65b1305e4ae872c96f486f8e1212",
+    "signals": [],
+    "slug": "the_eye_of_the_i__from_which_n"
+   },
+   {
+    "char_offset": 305025,
+    "id": "CL-040",
+    "length": 689,
+    "sha256": "e0db841b16fc05ec6a5110127c0a01d0f64c887b8981d9f1e4d58ff8da8a73d9",
+    "signals": [],
+    "slug": "the_eye_of_the_i__from_which_n"
+   },
+   {
+    "char_offset": 427022,
+    "id": "CL-041",
+    "length": 673,
+    "sha256": "527a1c6b3af18f1533d3206a65990981160130788e7941654c826477cd09cd65",
+    "signals": [],
+    "slug": "the_eye_of_the_i__from_which_n"
+   },
+   {
+    "char_offset": 70857,
+    "id": "CL-042",
+    "length": 613,
+    "sha256": "6a8a29c8b5b71c38054c9a1ad5fcdca92efa33bfbe62cecdb305313d4d1b38b7",
+    "signals": [],
+    "slug": "the_highest_level_of_enlighten"
+   },
+   {
+    "char_offset": 110779,
+    "id": "CL-043",
+    "length": 633,
+    "sha256": "0a96fca458977987b87468d010dbe67eb98fc6e994761be1eb83d716c19dca92",
+    "signals": [],
+    "slug": "the_highest_level_of_enlighten"
+   },
+   {
+    "char_offset": 155117,
+    "id": "CL-044",
+    "length": 620,
+    "sha256": "210a0a763b2fc1b4b1dea5bf7c43e78a10f1b2e3c20e10bd6b859bd91be6b50d",
+    "signals": [],
+    "slug": "the_highest_level_of_enlighten"
+   },
+   {
+    "char_offset": 177731,
+    "id": "CL-045",
+    "length": 726,
+    "sha256": "22710aee8ac8bd0791de75c14cfd53f48f79504f107c27b0268b32ce6609e47e",
+    "signals": [],
+    "slug": "the_map_of_consciousness_expla"
+   },
+   {
+    "char_offset": 296235,
+    "id": "CL-046",
+    "length": 609,
+    "sha256": "822020b45884dfff618a6a30ce0254b1221338e1ec71009cbbacfa6c45475c69",
+    "signals": [],
+    "slug": "the_map_of_consciousness_expla"
+   },
+   {
+    "char_offset": 414714,
+    "id": "CL-047",
+    "length": 814,
+    "sha256": "903d0423e4be0dd4f5bf54649251118eb4f6d7dfae888b9981c497f6e041ed03",
+    "signals": [],
+    "slug": "the_map_of_consciousness_expla"
+   },
+   {
+    "char_offset": 132090,
+    "id": "CL-048",
+    "length": 652,
+    "sha256": "b1cfbd00345b10639c9313ec82423b38c48dd66e321622f381c3c57f6798a157",
+    "signals": [],
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   {
+    "char_offset": 216760,
+    "id": "CL-049",
+    "length": 726,
+    "sha256": "6a9c404b69fa9b42bcb995a0884edf9d14829197ce5d482d5c61b28d0f8561e3",
+    "signals": [],
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   {
+    "char_offset": 303320,
+    "id": "CL-050",
+    "length": 603,
+    "sha256": "6c3e9234cc828f1cbca56a941ef1e73fafb97fb913490db9aa4125a3931ac432",
+    "signals": [],
+    "slug": "the_path_to_spiritual_advancem"
+   },
+   {
+    "char_offset": 122031,
+    "id": "CL-051",
+    "length": 629,
+    "sha256": "ca41d46086ff65d3c886719884e477147f900f911f1fbca1be7ca5969107e537",
+    "signals": [],
+    "slug": "the_wisdom_of_dr_david_r_haw"
+   },
+   {
+    "char_offset": 209314,
+    "id": "CL-052",
+    "length": 655,
+    "sha256": "4106be13d14e63e26041359dc4974064d91e13b4195b2d59eba04566015434c9",
+    "signals": [],
+    "slug": "the_wisdom_of_dr_david_r_haw"
+   },
+   {
+    "char_offset": 284509,
+    "id": "CL-053",
+    "length": 634,
+    "sha256": "df3556e7557871e0f3fe87e896f7127302c621f982dd77632833cf523a44db05",
+    "signals": [],
+    "slug": "the_wisdom_of_dr_david_r_haw"
+   },
+   {
+    "char_offset": 164657,
+    "id": "CL-054",
+    "length": 635,
+    "sha256": "a8da45a42e23cc85675644e6ede324369e6818d45dd58dd6f2b64e4d966eeacb",
+    "signals": [],
+    "slug": "transcending_the_levels_of_con"
+   },
+   {
+    "char_offset": 274472,
+    "id": "CL-055",
+    "length": 614,
+    "sha256": "92411f80ab3bb6edce1504f5f3cdc732c6530671d696c36165dc846dfb88c667",
+    "signals": [],
+    "slug": "transcending_the_levels_of_con"
+   },
+   {
+    "char_offset": 386332,
+    "id": "CL-056",
+    "length": 658,
+    "sha256": "48c82bd988023db0104a77881e4f34bb4cb02d6863e4842ab71f8d06bff51dda",
+    "signals": [],
+    "slug": "transcending_the_levels_of_con"
+   },
+   {
+    "char_offset": 296563,
+    "id": "CL-057",
+    "length": 643,
+    "sha256": "615e62aaf96bc6a9e61b20630d3594e53d29a009d4567890c661241a1a505bd3",
+    "signals": [],
+    "slug": "truth_vs_falsehood"
+   },
+   {
+    "char_offset": 482237,
+    "id": "CL-058",
+    "length": 644,
+    "sha256": "5945d312138215d8dfd8caa989817e522cacaf0c4b59ae6037f57a54ce0bcf8a",
+    "signals": [],
+    "slug": "truth_vs_falsehood"
+   },
+   {
+    "char_offset": 677143,
+    "id": "CL-059",
+    "length": 715,
+    "sha256": "679aa1f968fd0d07a5fa828b5e26732b3cb0957932356f9950ed474b44c1882f",
+    "signals": [],
+    "slug": "truth_vs_falsehood"
+   }
+  ],
+  "false_positives": 1,
+  "fp_detail": [
+   {
+    "id": "CL-026",
+    "note": "missing space after a sentence period: 'r.W'",
+    "quoted": "r.W",
+    "rule": "R1-glued-period"
+   }
+  ],
+  "passages": 59,
+  "reading": "tune-set known-good book passages, in-sample; NOT an independent FP rate (LAW §9)"
+ },
+ "detector": "C2-format",
+ "detector_sha256": "ef9ff4f257cd9b75edd1dc888abac17ace21ad65ec8ff78e8c088c5ea527b7b9",
+ "fixture_recall": {
+  "detail": [
+   {
+    "char_offset": 5292,
+    "fixture": "CF-001",
+    "hit": false,
+    "quoted_len": 14,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 15635,
+    "fixture": "CF-002",
+    "hit": false,
+    "quoted_len": 22,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 4543,
+    "fixture": "CF-003",
+    "hit": false,
+    "quoted_len": 24,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 31158,
+    "fixture": "CF-004",
+    "hit": false,
+    "quoted_len": 54,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 2355,
+    "fixture": "CF-006",
+    "hit": false,
+    "quoted_len": 140,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 32832,
+    "fixture": "CF-007",
+    "hit": false,
+    "quoted_len": 36,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 32927,
+    "fixture": "CF-008",
+    "hit": false,
+    "quoted_len": 36,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 3062,
+    "fixture": "CF-010",
+    "hit": false,
+    "quoted_len": 38,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 12766,
+    "fixture": "CF-011",
+    "hit": false,
+    "quoted_len": 59,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 32406,
+    "fixture": "CF-012",
+    "hit": false,
+    "quoted_len": 23,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 5833,
+    "fixture": "CF-015",
+    "hit": false,
+    "quoted_len": 78,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 203,
+    "fixture": "CF-017",
+    "hit": false,
+    "quoted_len": 18,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 4226,
+    "fixture": "CF-019",
+    "hit": false,
+    "quoted_len": 13,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 14681,
+    "fixture": "CF-020",
+    "hit": false,
+    "quoted_len": 18,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 32998,
+    "fixture": "CF-021",
+    "hit": false,
+    "quoted_len": 41,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt"
+   },
+   {
+    "char_offset": 33186,
+    "fixture": "CF-022",
+    "hit": false,
+    "quoted_len": 41,
+    "signals": [],
+    "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt"
+   }
+  ],
+  "fixtures": 16,
+  "hits": 0
+ },
+ "gate_context": {
+  "criteria_addressed": [
+   "q3.2 fixture recall",
+   "q3.3 clean set",
+   "q3.4 rejected-rule probes verbatim",
+   "q3.5 §8 manifest bindings"
+  ],
+  "gate": "ORCH-2 GATES.md 2026-09-25T20:44Z q3 INCOMPLETE",
+  "note": "evidence only; the gate is ORCH-2's to re-run — the restriction on C2-format is unchanged by this file"
+ },
+ "historic_signals_sha256": "86c8f57dea9443f3b9758add19dbfe01e75b1369b144c74a58d1735b5a8c15ee",
+ "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
+ "per_rule": {
+  "R1-glued-period": 25,
+  "R2-repeated-punct": 2,
+  "R3-long-dot-run": 5,
+  "R5-space-before-comma": 12,
+  "R6-spaced-period": 3,
+  "R7-glued-comma": 1
+ },
+ "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
+ "provenance_file": "PROVENANCE-V2.json",
+ "provenance_sha256": "afeb53066fdff00864c11092df904f40eb61c7beabeddabf499788f4deffef8a",
+ "rejected_rule_probes": {
+  "historic_note": "the pre-v2 census figure (camel-glue 35 / 18 files) was measured over all 230 before the v2 seal and its exact pattern was not recorded; this table replaces it — every probe below is reproducible verbatim",
+  "probes": [
+   {
+    "examples": [
+     "That that",
+     "that that",
+     "and and",
+     "current current",
+     "packets packets",
+     "and and",
+     "actualizing actualizing",
+     "nuclear nuclear"
+    ],
+    "files": 195,
+    "flags": "re.IGNORECASE",
+    "hits": 2876,
+    "note": "ordinary spoken repetition (A1-repetition's domain), not an artifact",
+    "pattern": "\\b(\\w+)\\s+\\1\\b",
+    "probe": "P1-double-word"
+   },
+   {
+    "examples": [
+     "dC",
+     "dC",
+     "hD",
+     "hD",
+     "hD",
+     "bK",
+     "hD",
+     "hD"
+    ],
+    "files": 53,
+    "flags": "0",
+    "hits": 104,
+    "note": "any lowercase directly followed by an uppercase anywhere in the text",
+    "pattern": "[a-z][A-Z]",
+    "probe": "P2-camel-any-internal-capital"
+   },
+   {
+    "examples": [
+     "veryC",
+     "dimensionO",
+     "iP",
+     "aO",
+     "iP",
+     "ofG"
+    ],
+    "files": 6,
+    "flags": "0",
+    "hits": 6,
+    "note": "word starting lowercase that contains an uppercase later",
+    "pattern": "\\b[a-z][a-z]*[A-Z]",
+    "probe": "P3-camel-lowercase-start-word"
+   },
+   {
+    "examples": [
+     "veryCapitalist",
+     "iPad",
+     "iPod"
+    ],
+    "files": 3,
+    "flags": "0",
+    "hits": 3,
+    "note": "lowercase on both sides of the capital (true camel case)",
+    "pattern": "\\b[a-z]+[A-Z][a-z]+\\b",
+    "probe": "P4-camel-classic"
+   },
+   {
+    "examples": [
+     "dimensionONE",
+     "ofGA"
+    ],
+    "files": 2,
+    "flags": "0",
+    "hits": 2,
+    "note": "lowercase run then an uppercase run (dimensionONE-style)",
+    "pattern": "\\b[a-z]{2,}[A-Z]{2,}",
+    "probe": "P5-camel-lower-upper-run"
+   }
+  ],
+  "scope": "v2 tuning half only (197 transcripts)"
+ },
+ "run_utc": "2026-09-25T20:58:42Z",
+ "signals_file": "signals-v2tuning.json",
+ "signals_sha256": "b25651e4cbb5670e2685fef450b039ae42b175832c01d9bdf0a6606efc60f1c2",
+ "signals_total": 48,
+ "status": "CANDIDATE-class raw signals, unreviewed; PROVISIONAL-UNGATED; C2-format is not promotable and these signals may not feed any rate or M6 figure until ORCH-2 re-gates",
+ "task": "TASK-014 q3 (M4 C2-format) — shipping evidence rebuild",
+ "tool_commit": "2bbb9f61ad44c36c3348e72f972569d5ea0535b2"
+}

@@ -112,3 +112,16 @@ tuning 197 / holdout 33, forced 43 (6 fixture transcripts + the 37 read-once v1-
 so the v2 holdout is entirely unseen: v1∩v2 holdout = 0); corpus file-list digest derivation written
 into the seal; generator/verifier tools/m4_split_v2.py; 10 new tests (164 total green, 1 skip). No
 evaluation run (019b blocked on ORCH-2 q2/q3 gates + frozen thresholds).
+2026-09-25T21:06:06Z WORKER-2: TASK-014 q3 SHIPPING EVIDENCE rebuilt (fleet/branches/WORKER-2-TASK-014-Q3-EVIDENCE.md).
+ORCH-2's q3 gate was INCOMPLETE on three shipping criteria; the missing measurements now exist:
+fixture recall 0/16 (measured, stated), clean-set misfire 1/59 with the single hit traced to the book
+store's own typography (power.When verbatim in the book at CL-026 — clean passages are known-good but
+not certified artifact-free), rejected-rule probes republished verbatim (pattern+flags) with the
+historic 35/18 camel figure marked superseded, and a LAW 8 manifest carrying tool_commit, main_head,
+policy_sha256, detector_sha256 at head, corpus/split digests, output digest and holdout_reads []. New
+run is over the v2 tuning half (197 -> 48 signals); the historic 193-transcript run was NOT replayed
+(33 of its files are v2-holdout members) and is cited by digest 86c8f57d. The transcript/book-window
+confound probe returned 0/48 but its control returned 0/15 on the same windows over fixtures that ARE
+book text -> probe recorded UNINFORMATIVE, not reported as independence. 19 new tests; suite 183 OK,
+1 skip. No detector changed, no threshold set, no rate claimed; C2-format is NOT promoted and the
+restriction stands pending ORCH-2 re-gate.

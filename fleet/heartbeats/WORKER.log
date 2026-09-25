@@ -108,3 +108,12 @@
   2026-09-25T20:51:07Z cadence check 1 (auto): cadence: main 7d033ab, orch2 6495a8b, boss2 7a0911d, pause REMOVED, pending 7 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
   2026-09-25T20:51:20Z cadence check 1 (auto): cadence: main 7d033ab, orch2 6495a8b, boss2 7a0911d, pause REMOVED, pending 7 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
   2026-09-25T20:56:22Z cadence check 2 (auto): cadence: main 7d033ab, orch2 6495a8b, boss2 4fae89d, pause REMOVED, pending 7 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
+  2026-09-25T21:02:04Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-25T21:02:04Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-25T21:02:04Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-25T21:02:04Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-25T21:04:08Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-25T21:04:08Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-25T21:04:08Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-25T21:04:08Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-25T21:06:06Z TASK-014 q3 evidence: fixture recall 0/16, clean 1/59, §8 bindings written, holdout reads 0, suite 183 OK (1 skip)

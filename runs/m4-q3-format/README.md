@@ -54,3 +54,40 @@ instrument, not a silence.
 No audio; no human review of the 49 signals; no ORCH-2 gate (PROVISIONAL-UNGATED).
 Rules are deliberately conservative — the census entries that were *rejected* as
 rules (camel-glue, double word) are recorded above so the rejection is auditable.
+
+## Shipping-evidence rebuild (2026-09-25, after ORCH-2's q3 gate 20:44Z)
+
+ORCH-2 gated q3 INCOMPLETE on three shipping criteria (no fixture recall, no clean-set
+run, §8 bindings absent; C2-format not promotable, its signals stay CANDIDATE). The
+missing measurements were then produced by `tools/m4_q3_evidence.py` (build/verify) —
+**evidence only**: the restriction stands until ORCH-2 re-gates.
+
+| artefact | what it is |
+|---|---|
+| `EVAL.json` | fixture recall, clean-set run, rejected-rule probes (verbatim), book-store confound probe + control |
+| `PROVENANCE-V2.json` | §8 manifest for the new run: `tool_commit`, `main_head`, `policy_sha256`, `detector_sha256`, `corpus_zip_sha256`, `split_corpus_files_sha256`, output digest, `holdout_reads: []` |
+| `signals-v2tuning.json` | the run itself, over the **v2 tuning half** (197 transcripts) |
+| `PROVENANCE.json`, `signals.json` (unchanged, 2026-09-25T20:33Z) | the **historic** run over the v1 tuning half (193 → 49 signals); kept and cited by digest `86c8f57d…`, **not replayed** because 33 of its files are v2-holdout members |
+
+Results, as measured (nothing here is a rate):
+
+* **Fixture recall 0/16** — C2-format fires inside none of the 16 confirmed fixtures.
+  Format artifacts are not what those fixtures encode; measured and stated, per gate 1.
+* **Clean set 1/59** — one misfire, `R1` `r.W` in `power.When` inside CL-026
+  (`power_vs_force__the_hidden_de…`). That same glue sits in the **book store** verbatim:
+  the "known-good" passage is not artifact-free with respect to R1. Clean-set figure is
+  in-sample tune data — an FP count, **not** an independent FP rate.
+* **Rejected-rule probes republished** (pattern + flags, v2 tuning half): double-word
+  `\b(\w+)\s+\1\b` (re.IGNORECASE) **2,876 hits / 195 files**; camel probes
+  104/53 (any internal capital), 6/6 (lowercase-start), 3/3 (classic), 2/2 (lower-upper
+  run). The historic census figure (35 / 18 files over all 230) is marked **superseded**:
+  its exact pattern was not recorded, which was the documentation gap the gate found.
+* **Book-store confound probe — UNINFORMATIVE, recorded as such.** A nested-window probe
+  (bare glue / ±10 chars / ±25 chars versus every book) returned 0/48 on both window
+  tiers, but the **control** over the 15 fixtures that carry a book reference returned
+  15/15 on the bare quote and **0/15** on the same windows: transcripts and the book store
+  are normalised differently, so the window tiers cannot detect book-derived text here and
+  the negative result is *not* evidence that the transcripts are book-independent.
+
+`python3 tools/m4_q3_evidence.py verify --corpus corpus --split tools/HELD-OUT-SPLIT-V2.json \
+    --out runs/m4-q3-format` → OK (holdout reads 0; 19 module tests).
