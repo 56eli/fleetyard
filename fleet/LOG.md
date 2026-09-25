@@ -106,3 +106,9 @@ tools/INHERITED-V1-MANIFEST.json). Suite now 154 tests OK with corpus (115 inher
 sweep_m5 --limit 10 --fresh -> 132 records, 10/10 files byte-identical to the inherited census
 (runs/m5-raw-freshcheck/). No detector logic modified. Next: cadence / await ORCH-2 gate + fresh
 sealed split v2.
+2026-09-25T21:1xZ WORKER-2: TASK-019a DELIVERED (fleet/branches/WORKER-2-TASK-019A-DELIVERY.md):
+split v2 sealed (tools/HELD-OUT-SPLIT-V2.json, sha256 f357ed21...) — fresh salt v2, rule published,
+tuning 197 / holdout 33, forced 43 (6 fixture transcripts + the 37 read-once v1-holdout transcripts,
+so the v2 holdout is entirely unseen: v1∩v2 holdout = 0); corpus file-list digest derivation written
+into the seal; generator/verifier tools/m4_split_v2.py; 10 new tests (164 total green, 1 skip). No
+evaluation run (019b blocked on ORCH-2 q2/q3 gates + frozen thresholds).

@@ -1,0 +1,551 @@
+{
+ "by_year": {
+  "2002": {
+   "holdout": 6,
+   "tuning": 30
+  },
+  "2003": {
+   "holdout": 5,
+   "tuning": 13
+  },
+  "2004": {
+   "holdout": 1,
+   "tuning": 15
+  },
+  "2005": {
+   "holdout": 3,
+   "tuning": 18
+  },
+  "2006": {
+   "holdout": 0,
+   "tuning": 12
+  },
+  "2007": {
+   "holdout": 7,
+   "tuning": 20
+  },
+  "2008": {
+   "holdout": 4,
+   "tuning": 18
+  },
+  "2009": {
+   "holdout": 2,
+   "tuning": 10
+  },
+  "2010": {
+   "holdout": 1,
+   "tuning": 5
+  },
+  "2011": {
+   "holdout": 0,
+   "tuning": 8
+  },
+  "unknown": {
+   "holdout": 4,
+   "tuning": 48
+  }
+ },
+ "corpus_files": 230,
+ "corpus_files_sha256": "9ae90185ac0f4030eff135d28f7185b2c2f2c1a59269d150816a447293bd998f",
+ "counts": {
+  "holdout": 33,
+  "total": 230,
+  "tuning": 197
+ },
+ "derivations": {
+  "corpus_files_sha256": "sha256_text(\"\\n\".join(sorted basenames*) + \"\\n\") where sha256_text(t)=sha256(t.encode(\"utf-8\")).hexdigest(); basenames* = every *.txt directly under corpus/docdocgo/overlays (list digest, not content digest \u2014 content is pinned by the corpus zip sha256)",
+  "forced_transcripts": "union of os.path.basename(fx['transcript']) over fixtures/confirmed/confirmed.json and fixtures/v2/dropword.json, PLUS every transcript listed in tools/HELD-OUT-SPLIT.json['holdout'] (the spent v1 holdout, read once at M4-q4 as counts only) \u2014 a disclosed contamination-avoidance rule so the v2 holdout is entirely unseen",
+  "holdout_set": "basenames whose sha256(SALT+basename) mod 5 == 0",
+  "tuning_set": "the complement within the corpus file list, plus every forced transcript"
+ },
+ "disclosure": "v1 detectors were shaped with corpus-wide knowledge, and the drop-word and format rules were shaped on the v1 tuning set; a first figure under v2 is an estimate under this split, not a pristine out-of-sample number. What the split guarantees is that FUTURE tuning cannot silently consume the transcripts it is later measured on: no tuning run may read the v2 holdout, and the one-shot evaluation (TASK-019 quantum b) reads the holdout only, once, with thresholds frozen in advance.",
+ "fixture_sources": {
+  "fixtures/confirmed/confirmed.json": "f2c15869d6cfc3529246a114bbc72a7c86a6c5d4b6d70968af22412b5ac61582",
+  "fixtures/v2/dropword.json": "c8e963199a1ec5ee1b658c16bdc0dcab634a751199f6b3e00081efce4d97fd52"
+ },
+ "fixture_transcripts_forced_tuning": [
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt",
+  "Belief,_Trust_and_Credibility_Jun_2008_Part_1_enxautogen_html.txt",
+  "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt",
+  "Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.txt",
+  "God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt",
+  "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt",
+  "Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt",
+  "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_1_enxautogen_html.txt",
+  "Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "Love_Sep_2011_Part_2_enxautogen_html.txt",
+  "Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt",
+  "Peace_Aug_2009_Part_3_enxautogen_html.txt",
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt",
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt",
+  "Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt",
+  "Question_Answer_Session_Jan_2011_enxautogen_html.txt",
+  "Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_2_enxautogen_html.txt",
+  "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt",
+  "Satsang_Series_Volume_II_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_IV_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt",
+  "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "Satsang_Series_Volume_VIII_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_V_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_V_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_V_Part_4_enxautogen_html.txt",
+  "Serenity_Aug_2005_Part_2.txt",
+  "Spiritual_First_Aid_enxautogen_html.txt",
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.txt",
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt",
+  "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt",
+  "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt",
+  "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ ],
+ "forced_not_by_fixture": [],
+ "forced_with_reasons": {
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt": [
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)"
+  ],
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Belief,_Trust_and_Credibility_Jun_2008_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt": [
+   "TASK-018 leg-(d) adjudicated drop-word fixtures (in-sample by construction; D2-001..D2-004)"
+  ],
+  "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt": [
+   "TASK-018 leg-(d) adjudicated drop-word fixtures (in-sample by construction; D2-001..D2-004)",
+   "TASK-018 leg-(d) adjudicated drop-word fixtures (in-sample by construction; D2-001..D2-004)"
+  ],
+  "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Love_Sep_2011_Part_1_enxautogen_html.txt": [
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)"
+  ],
+  "Love_Sep_2011_Part_2_enxautogen_html.txt": [
+   "TASK-018 leg-(d) adjudicated drop-word fixtures (in-sample by construction; D2-001..D2-004)"
+  ],
+  "Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Peace_Aug_2009_Part_3_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Question_Answer_Session_Jan_2011_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Question_Answer_Session_Jul_2011_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_2_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_3_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_II_Part_2_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_IV_Part_2_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt": [
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)",
+   "v1 hand-confirmed fixtures (TASK-002/006)"
+  ],
+  "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_VIII_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_V_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_V_Part_2_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Satsang_Series_Volume_V_Part_4_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Serenity_Aug_2005_Part_2.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Spiritual_First_Aid_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ],
+  "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt": [
+   "read in the spent v1 holdout (M4-q4) \u2014 v2 holdout must be entirely unseen"
+  ]
+ },
+ "holdout": [
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_1_enxautogen_html.txt",
+  "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_3_enxautogen_html.txt",
+  "Creation_vs_Evolution_Oct_2007_Part_3_enxautogen_html.txt",
+  "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_2_enxautogen_html.txt",
+  "Dialogue,_Questions,_and_Answers_Dec_2003_Part_1_enxautogen_html.txt",
+  "Enlightenment_Aug_2003_Part_2_enxautogen_html.txt",
+  "Enlightenment_Aug_2003_Part_3_enxautogen_html.txt",
+  "Experiential_Reality_The_Mystic_Dec_2007_Part_2_enxautogen_html.txt",
+  "Happiness_Apr_2009_Part_1_enxautogen_html.txt",
+  "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_2_enxautogen_html.txt",
+  "Karma_and_the_Afterlife_Oct_2002_Part_2_enxautogen_html.txt",
+  "Karma_and_the_Afterlife_Oct_2002_Part_3_enxautogen_html.txt",
+  "Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt",
+  "Realization_of_the_Self_as_the_I_Nov_2003_Part_1_enxautogen_html.txt",
+  "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_II_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_I_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_VII_Part_3_enxautogen_html.txt",
+  "Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.txt",
+  "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_3_enxautogen_html.txt",
+  "Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.txt",
+  "Success_Oct_2009_Part_3_enxautogen_html.txt",
+  "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_1_enxautogen_html.txt",
+  "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_2_enxautogen_html.txt",
+  "The_Human_Dilemma_Aug_2007_Part_1_enxautogen_html.txt",
+  "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_2.txt",
+  "Transcending_Barriers_Jun_2005_Part_2.txt",
+  "Transcending_Obstacles_Sep_2005_Part_2_enxautogen_html.txt",
+  "What_is_Real_Jun_2007_Part_3_enxautogen_html.txt",
+  "What_is_Truth_The_Absolute_Jul_2007_Part_1.txt",
+  "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt"
+ ],
+ "holdout_bucket": 0,
+ "manifest": {
+  "book_store_sha256": "c0892fcd20502d49b99fffe87a4ec4b3b5ecc94a1f98606aab7909127934a4a8",
+  "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
+  "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
+  "output_digest_note": "the digest of this seal file is recorded in the TASK-019a delivery record and in the commit that seals it (a file cannot contain its own hash)",
+  "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
+  "run_utc": "2026-09-25T20:48:54Z",
+  "sealed_by": "WORKER-2 (A-2026-09-25-001), lane arena/01a0d9ce-fleetyard",
+  "tool": "tools/m4_split_v2.py",
+  "tool_commit": "PENDING",
+  "tool_sha256": "c6615e22b3338028b8d9da044a9cb62b9053a360b39fe46f9bcb634d10d7150d"
+ },
+ "method": "sha256(SALT+basename) mod 5 == 0 -> HOLDOUT; fixture transcripts forced to TUNING",
+ "milestone": "M4",
+ "mod": 5,
+ "purpose": "held-out data fixed before tuning (LAW \u00a79); replaces the spent v1 split",
+ "re_seal_rule": "if any fixture is confirmed after this seal, the split is VOID and must be re-sealed with a new salt + a dated record; never silently reused, never patched",
+ "salt": "fleetyard-m4-holdout-v2-2026-09-25",
+ "task": "TASK-019 quantum a (fresh sealed split v2) \u2014 ORCH-2 queue @ owner ERRATA-2026-09-25g \u00a75",
+ "tuning": [
+  "A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt",
+  "A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt",
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt",
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_1_enxautogen_html.txt",
+  "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html.txt",
+  "Alignment_Apr_2005_Part_1_enxautogen_html.txt",
+  "Alignment_Apr_2005_Part_2_enxautogen_html.txt",
+  "Alignment_Apr_2005_Part_3_enxautogen_html.txt",
+  "Belief,_Trust_and_Credibility_Jun_2008_Part_1_enxautogen_html.txt",
+  "Belief,_Trust_and_Credibility_Jun_2008_Part_2_enxautogen_html.txt",
+  "Belief,_Trust_and_Credibility_Jun_2008_Part_3_enxautogen_html.txt",
+  "Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt",
+  "Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt",
+  "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.txt",
+  "Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt",
+  "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_1.txt",
+  "Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_3_enxautogen_html.txt",
+  "Dialogue,_Questions,_and_Answers_Dec_2003_Part_2_enxautogen_html.txt",
+  "Dialogue_Questions_and_Answers_Dec_2003_Part_3.txt",
+  "Emotions_and_Sensations_Apr_2004_Part_1_enxautogen_html.txt",
+  "Emotions_and_Sensations_Apr_2004_Part_2_enxautogen_html.txt",
+  "Emotions_and_Sensations_Apr_2004_Part_3_enxautogen_html.txt",
+  "Enlightenment_Aug_2003_Part_1_enxautogen_html.txt",
+  "Experiential_Reality_Feb_2006_Part_1_enxautogen_html.txt",
+  "Experiential_Reality_Feb_2006_Part_2_enxautogen_html.txt",
+  "Experiential_Reality_Feb_2006_Part_3_enxautogen_html.txt",
+  "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt",
+  "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt",
+  "Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.txt",
+  "Freedom_Morality_and_Ethics_Nov_2008_Part_2_enxautogen_html.txt",
+  "Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "God_Transcendent_and_Immanent_Nov_2002_Part_1_enxautogen_html.txt",
+  "God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt",
+  "God_Transcendent_and_Immanent_Nov_2002_Part_3_enxautogen_html.txt",
+  "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt",
+  "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt",
+  "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_3_enxautogen_html.txt",
+  "Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.txt",
+  "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt",
+  "Handling_Spiritual_Challenges_Apr_2010_Part_3_enxautogen_html.txt",
+  "Happiness_Apr_2009_Part_2_enxautogen_html.txt",
+  "Happiness_Apr_2009_Part_3_enxautogen_html.txt",
+  "Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "Identification_and_Illusion_Aug_2004_Part_2_enxautogen_html.txt",
+  "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt",
+  "Illness_and_SelfHealing_enxautogen_html.txt",
+  "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_1_enxautogen_html.txt",
+  "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_3_enxautogen_html.txt",
+  "Intention_May_2005_Part_1_enxautogen_html.txt",
+  "Intention_May_2005_Part_2_enxautogen_html.txt",
+  "Intention_May_2005_Part_3_enxautogen_html.txt",
+  "Karma_and_the_Afterlife_Oct_2002_Part_1_enxautogen_html.txt",
+  "Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "Love_Sep_2011_Part_2_enxautogen_html.txt",
+  "Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt",
+  "Love_is_a_Way_of_Being_Part_2_enxautogen_html.txt",
+  "Love_is_a_Way_of_Being_Part_3_enxautogen_html.txt",
+  "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt",
+  "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt",
+  "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_3_enxautogen_html.txt",
+  "Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_1_enxautogen_html.txt",
+  "Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_2_enxautogen_html.txt",
+  "Peace_Aug_2009_Part_1_enxautogen_html.txt",
+  "Peace_Aug_2009_Part_2_enxautogen_html.txt",
+  "Peace_Aug_2009_Part_3_enxautogen_html.txt",
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt",
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt",
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_3_enxautogen_html.txt",
+  "Perception_and_Positionality_Jun_2004_Part_1_enxautogen_html.txt",
+  "Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt",
+  "Perception_and_Positionality_Jun_2004_Part_3_enxautogen_html.txt",
+  "Perception_vs_Essence_Apr_2006_Part_1.txt",
+  "Perception_vs_Essence_Apr_2006_Part_2_enxautogen_html.txt",
+  "Perception_vs_Essence_Apr_2006_Part_3_enxautogen_html.txt",
+  "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt",
+  "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "Practical_Spirituality_Oct_2008_Part_1_enxautogen_html.txt",
+  "Practical_Spirituality_Oct_2008_Part_2_enxautogen_html.txt",
+  "Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "Question_Answer_Session_Jan_2011_enxautogen_html.txt",
+  "Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.txt",
+  "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt",
+  "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_1_enxautogen_html.txt",
+  "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_2_enxautogen_html.txt",
+  "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_3_enxautogen_html.txt",
+  "Realization_of_the_Self_as_the_I_Nov_2003_Part_2_enxautogen_html.txt",
+  "Realization_of_the_Self_as_the_I_Nov_2003_Part_3_enxautogen_html.txt",
+  "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_1_enxautogen_html.txt",
+  "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_2_enxautogen_html.txt",
+  "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_3_enxautogen_html.txt",
+  "Relativism_vs_Reality_Apr_2007_Part_1_enxautogen_html.txt",
+  "Relativism_vs_Reality_Apr_2007_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_III_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_III_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_III_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_III_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt",
+  "Satsang_Series_Volume_III_Part_6_enxautogen_html.txt",
+  "Satsang_Series_Volume_II_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_II_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_II_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_II_Part_5_enxautogen_html.txt",
+  "Satsang_Series_Volume_II_Part_6_enxautogen_html.txt",
+  "Satsang_Series_Volume_IV_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_IV_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_IV_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_IV_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_5_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt",
+  "Satsang_Series_Volume_I_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_I_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_I_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_I_Part_5_enxautogen_html.txt",
+  "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "Satsang_Series_Volume_VIII_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_VIII_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_VIII_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_VIII_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_VII_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_VII_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_VII_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_VI_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_VI_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_V_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_V_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_V_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_V_Part_4_enxautogen_html.txt",
+  "Serenity_Aug_2005_Part_1.txt",
+  "Serenity_Aug_2005_Part_2.txt",
+  "Serenity_Aug_2005_Part_3_enxautogen_html.txt",
+  "Spiritual_Community_Jun_2003_Part_1_enxautogen_html.txt",
+  "Spiritual_Community_Jun_2003_Part_2_enxautogen_html.txt",
+  "Spiritual_Community_Jun_2003_Part_3_enxautogen_html.txt",
+  "Spiritual_First_Aid_enxautogen_html.txt",
+  "Spiritual_Life_In_Today_s_World_Oct_2010_Part_2_enxautogen_html.txt",
+  "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt",
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.txt",
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_2_enxautogen_html.txt",
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt",
+  "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_1_enxautogen_html.txt",
+  "Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.txt",
+  "Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt",
+  "Spiritual_Traps_Oct_2005_Part_3_enxautogen_html.txt",
+  "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.txt",
+  "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_2_enxautogen_html.txt",
+  "Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_3.txt",
+  "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt",
+  "Spirituality_Reason_and_Faith_Jan_2008_Part_2_enxautogen_html.txt",
+  "Spirituality_Reason_and_Faith_Jan_2008_Part_3_enxautogen_html.txt",
+  "Spirituality_and_the_World_Apr_2003_Part_1_enxautogen_html.txt",
+  "Spirituality_and_the_World_Apr_2003_Part_2_enxautogen_html.txt",
+  "Spirituality_and_the_World_Apr_2003_Part_3_enxautogen_html.txt",
+  "Success_Oct_2009_Part_1_enxautogen_html.txt",
+  "Success_Oct_2009_Part_2_enxautogen_html.txt",
+  "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_3_enxautogen_html.txt",
+  "The_Ego_and_The_Self_Dec_2004_Part_1_enxautogen_html.txt",
+  "The_Ego_and_The_Self_Dec_2004_Part_2_enxautogen_html.txt",
+  "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt",
+  "The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.txt",
+  "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt",
+  "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt",
+  "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_3_enxautogen_html.txt",
+  "The_Presence_of_Spiritual_Awareness_Part_1_enxautogen_html.txt",
+  "The_Presence_of_Spiritual_Awareness_Part_2_enxautogen_html.txt",
+  "The_Presence_of_Spiritual_Awareness_Part_3_enxautogen_html.txt",
+  "Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.txt",
+  "Thought_and_Ideation_Feb_2004_Part_3_enxautogen_html.txt",
+  "Transcending_Barriers_Jun_2005_Part_1_enxautogen_html.txt",
+  "Transcending_Barriers_Jun_2005_Part_3_enxautogen_html.txt",
+  "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt",
+  "Transcending_Obstacles_Sep_2005_Part_3.txt",
+  "Vision_Feb_2005_Part_1_enxautogen_html.txt",
+  "Vision_Feb_2005_Part_2_enxautogen_html.txt",
+  "Vision_Feb_2005_Part_3_enxautogen_html.txt",
+  "What_is_Real_Jun_2007_Part_1.txt",
+  "What_is_Real_Jun_2007_Part_2_enxautogen_html.txt",
+  "What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html.txt",
+  "What_is_Truth_The_Absolute_Jul_2007_Part_3_enxautogen_html.txt",
+  "What_is_the_World_Feb_2009_Part_1_enxautogen_html.txt",
+  "What_is_the_World_Feb_2009_Part_2_enxautogen_html.txt",
+  "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.txt",
+  "Witnessing_and_Observing_Oct_2004_Part_3.txt"
+ ],
+ "v1_holdout_forced_tuning": [
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.txt",
+  "Belief,_Trust_and_Credibility_Jun_2008_Part_1_enxautogen_html.txt",
+  "Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.txt",
+  "Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.txt",
+  "God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.txt",
+  "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt",
+  "Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.txt",
+  "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt",
+  "Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_1_enxautogen_html.txt",
+  "Love_is_a_Way_of_Being_Part_1_enxautogen_html.txt",
+  "Peace_Aug_2009_Part_3_enxautogen_html.txt",
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt",
+  "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.txt",
+  "Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.txt",
+  "Question_Answer_Session_Jan_2011_enxautogen_html.txt",
+  "Question_Answer_Session_Jul_2011_enxautogen_html.txt",
+  "Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_2_enxautogen_html.txt",
+  "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_3_enxautogen_html.txt",
+  "Satsang_Series_Volume_III_Part_5_enxautogen_html.txt",
+  "Satsang_Series_Volume_II_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_IV_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_IX_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "Satsang_Series_Volume_VIII_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt",
+  "Satsang_Series_Volume_V_Part_1_enxautogen_html.txt",
+  "Satsang_Series_Volume_V_Part_2_enxautogen_html.txt",
+  "Satsang_Series_Volume_V_Part_4_enxautogen_html.txt",
+  "Serenity_Aug_2005_Part_2.txt",
+  "Spiritual_First_Aid_enxautogen_html.txt",
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.txt",
+  "Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt",
+  "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt",
+  "The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.txt",
+  "What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt"
+ ],
+ "version": 2
+}
