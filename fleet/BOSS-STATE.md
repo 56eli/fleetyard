@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T21:04Z
+updated: 2026-09-25T21:07Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -22,19 +22,19 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 - M4 self-improvement loop — **IN PROGRESS** on worker lane:
   - q1 catalog + split: GATED INCOMPLETE by ORCH-2 @ `88009d2` (repaired by WORKER-2 at `33b6f36` via item 0b; consolidated repair TASK-020 items 1-8 cut).
   - q2 C1-drop: GATED INCOMPLETE by ORCH-2 @ `91cf112` (substance reproduced 93/122 byte-identical; clean-set probe 3/59 cross-book self-parallels; 9/122 shape-defective; unpromoted, no pause; repair in TASK-020). Leg-(d) individual adjudication DELIVERED at `1fb524e` (TASK-018: 57 CERTAIN-leg-d, 65 CANDIDATE; fixtures D2-001/003 confirmed, D2-002/004 discarded).
-  - q3 C2-format: GATED INCOMPLETE by ORCH-2 @ `6495a8b` (reproduction exact; clean set 1/59 misfire "power.When"; unpromoted, no pause; repair in TASK-020).
+  - q3 C2-format: GATED INCOMPLETE by ORCH-2 @ `6495a8b`. Rebuilt shipping evidence DELIVERED at `1cd5d44` (fixture recall 0/16, clean set 1/59 traced to book store, LAW §8 bindings, suite 183 OK).
   - q4-q5 delivered provisional-ungated at `1beadd9`.
   - Toolchain foundation: TASK-017 DELIVERED at `b2e0761` (inherited v1 toolchain byte-exact: 266 files, 154 tests OK / 1 skip, 16 fixtures verified, fresh sweep 10/10 identical).
   - Fresh split v2: TASK-019a DELIVERED at `79eb401` (fresh sealed split v2: 197 tuning / 33 holdout, 43 forced tuning, 0 contamination; suite 164 OK / 1 skip; awaiting ORCH-2 gate).
-  - Actionable queue: ORCH-2 gating of TASK-018, TASK-017, TASK-019a → WORKER-2 addresses TASK-020 repair → TASK-019b (one-shot holdout evaluation).
+  - Actionable queue: ORCH-2 cycle D gating (q4/q5) and gates of TASK-018, TASK-017, TASK-019a → WORKER-2 addresses TASK-020 repair → TASK-019b (one-shot holdout evaluation).
 - M6 final audit report — **BLOCKED on fresh sealed holdout split v2 + M4 completion**
   (holdout evaluated at q4; fresh split with new salt sealed in TASK-019a @ `79eb401`; TASK-017 delivered).
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T21:03Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T21:06Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
-- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `2bbb9f61ad44c36c3348e72f972569d5ea0535b2` (ALIVE; delivered TASK-018, TASK-017, TASK-019a; cadence active)
-- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `91cf112b0a3fad69c81248ce39b044df5e15c394` (ALIVE; q2 gated INCOMPLETE, TASK-020 cut)
+- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `1cd5d444fb3ae05ad3ff74aa61323e67422eebf7` (ALIVE; delivered q3 shipping evidence, suite 183 OK)
+- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `76f0203368c23005682b43f98ca8b40eb426737f` (ALIVE; cycle D q4/q5 in progress)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
   - worker v1: `arena/01a0d581-fleetyard` @ `bf97d85` (HALT ack)
@@ -53,8 +53,8 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 - `fleet/ORDERS/REDIRECT-008.md`: **ACKNOWLEDGED & COMPLETED** by ORCH-2 (`fleet/ORDERS/ACK-REDIRECT-008.md` @ `5f6d698`).
 
 ## stall watch (re-armed per ERRATA-25f §2: signals only)
-- Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `2bbb9f6`).
-- Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `91cf112`).
+- Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `1cd5d44`).
+- Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `76f0203`).
 - Class 3 (starvation): NOT FIRED (actionable queue: ORCH-2 gates of TASK-018, TASK-017, TASK-019a; TASK-020 repair).
 - Class 4 (post-handoff): NOT FIRED (all v1 archives verified frozen).
 - Class 5 (LOUD ZOMBIE): ARMED.
