@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T23:03Z
+updated: 2026-09-25T23:08Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
