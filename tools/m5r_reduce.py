@@ -397,7 +397,7 @@ def token_ops(transcript_text, book_text):
     return ops
 
 
-def adjudicate(finding, transcripts, books, fixtures):
+def adjudicate(finding, transcripts, books, fixtures, meta):
     text = transcripts[finding["transcript"]]
     span_text = text[finding["start"]:finding["end"]]
     out = {
@@ -472,6 +472,16 @@ def adjudicate(finding, transcripts, books, fixtures):
     out["claims_all_corroborated"] = all(c["claim_ok"] is not False
                                          for c in out["claim_checks"])
     out["seeded"] = bool(out["fixture_overlap"])
+    # --- STANDARDS finding-record shape (TASK-016 R1) ---
+    proposed = [s["asserted_intended"] for s in out["signals"] if s["asserted_intended"]]
+    out["suspected_intended"] = proposed[0] if proposed else None
+    out["suspected_intended_status"] = (
+        "from runner signal (%s); not gate-verified — human read required"
+        % "+".join(out["detectors"]) if proposed
+        else "not proposable mechanically; human read required")
+    out["status"] = "open"
+    out["status_by"] = ("machine-adjudicated by tools/m5r_reduce.py@%s; "
+                        "human confirmation required" % meta["tool_commit"])
     return out
 
 
@@ -592,6 +602,11 @@ def render_summary(findings, stats, prov):
     A = L.append
     A("# M5-R — reviewed findings ledger (SUMMARY)")
     A("")
+    A("> **Titles qualified (TASK-016 R2):** \"reviewed\" here means "
+      "**machine-adjudicated against cited bytes** — this is a machine-adjudicated "
+      "reduction of the raw census, not a human finding pass. Read every count below with the "
+      "coverage row immediately following.")
+    A("")
     A("**Reduction of the inherited M5 raw census (TASK-011, lane "
       "`arena/01a0d581-fleetyard` @ `bf97d85`) into findings with evidence.**")
     A("")
@@ -603,6 +618,15 @@ def render_summary(findings, stats, prov):
       "tool. There is **no corpus-wide error rate** in this document (LAW §9: "
       "precision/recall need held-out data; only the ledger is delivered). "
       "CANDIDATE is never blended into anything.")
+    A("")
+    cov = stats["coverage"]
+    A("**Coverage truth (STANDARDS honesty rule; the campaign's row since v1):**")
+    A("")
+    A("`transcripts %d | detector-run %d | machine-adjudicated %d | human finding-pass "
+      "audited %d | pending human review %d | zero-finding transcripts %d (not shown "
+      "clean)`" % (cov["transcripts"], cov["detector_run"], cov["machine_adjudicated"],
+                   cov["human_finding_pass_audited"], cov["pending_human_review"],
+                   cov["zero_finding_transcripts"]))
     A("")
     A("## 1. Reduction funnel")
     A("")
@@ -710,11 +734,9 @@ def render_summary(findings, stats, prov):
     A("")
     A("Each raw signal's evidence string was re-derived from the bytes where a "
       "mechanical check exists (LAW §7: identical output alone is not suspicion — "
-      "missing fresh evidence is; this is that fresh evidence). 'not corroborated' "
-      "means this tool's re-derivation did not reproduce the runner's claim string: "
-      "it is a **review flag**, not a verdict — it can reflect the claim's shape or "
-      "this tool's simpler tokenizer/percent handling. Those findings score +1 in "
-      "the review queue.")
+      "missing fresh evidence is; this is that fresh evidence). After errata #2 "
+      "(M4-q5: Unicode tokenizer + unit bound 16) every checkable claim corroborates; "
+      "a 'not corroborated' row would be a **review flag**, not a verdict.")
     A("")
     A("| detector | signals | corroborated | failed | not machine-checkable |")
     A("|---|---|---|---|---|")
@@ -750,6 +772,12 @@ def main(argv=None):
     ap.add_argument("--out", default="findings")
     ap.add_argument("--utc", default=None)
     ap.add_argument("--archive-ref", default="origin/arena/01a0d581-fleetyard")
+    ap.add_argument("--tool-commit", default=None,
+                    help="reachable lane commit carrying this exact tool file")
+    ap.add_argument("--main-head", default=None)
+    ap.add_argument("--policy-sha", default=None)
+    ap.add_argument("--book-store-sha", default=None)
+    ap.add_argument("--detector-tool-commit", default=None)
     args = ap.parse_args(argv)
 
     utc = args.utc or datetime.datetime.now(datetime.timezone.utc).strftime(
@@ -779,7 +807,12 @@ def main(argv=None):
     findings = merge_signals(signals)
     n_raw = len(signals)
     deduped = sum(len(f["signals"]) for f in findings)
-    adj = [adjudicate(f, transcripts, books, fixtures) for f in findings]
+    meta = {"tool_commit": args.tool_commit or "UNPINNED",
+            "main_head": args.main_head,
+            "policy_sha256": args.policy_sha,
+            "book_store_sha256": args.book_store_sha,
+            "detector_tool_commit": args.detector_tool_commit}
+    adj = [adjudicate(f, transcripts, books, fixtures, meta) for f in findings]
     for i, f in enumerate(adj, 1):
         f["id"] = "M5R-%04d" % i
         f["class"], f["rationale"] = classify(f)
@@ -799,6 +832,7 @@ def main(argv=None):
                 row["checked"] += 1
                 row["failed"] += 1
 
+    zero_finding = len(transcripts) - len({f["transcript"] for f in adj})
     stats = {
         "raw_signals": n_raw,
         "record_files": len(sources),
@@ -817,6 +851,15 @@ def main(argv=None):
                                     if b.get("hawkins_own") is False),
         "fixtures_active": len(fixtures),
         "claims": claims,
+        "coverage": {
+            "transcripts": len(transcripts),
+            "detector_run": len(transcripts),
+            "with_findings": len({f["transcript"] for f in adj}),
+            "machine_adjudicated": len(transcripts),
+            "human_finding_pass_audited": 0,
+            "pending_human_review": len(transcripts),
+            "zero_finding_transcripts": zero_finding,
+        },
     }
 
     os.makedirs(args.out, exist_ok=True)
@@ -853,6 +896,34 @@ def main(argv=None):
                                       "for all 230 corpus/docdocgo/overlays/*.txt",
             "overlays_digest": sha256_text("".join(ov_lines)),
             "book_store": "corpus/docdocgo/html/merged-book-texts_json_1.js",
+        },
+        "tool_commit": meta["tool_commit"],
+        "policy_sha256": meta["policy_sha256"] or "UNPINNED",
+        "main_head": meta["main_head"] or "UNPINNED",
+        "book_store": {"path": "corpus/docdocgo/html/merged-book-texts_json_1.js",
+                       "sha256": meta["book_store_sha256"] or "UNPINNED"},
+        "inherited_census": {
+            "detector_tool_commit": meta["detector_tool_commit"] or "UNPINNED",
+            "detectors": list(DETECTORS),
+            "excluded": ["A4-confusion (no independent FP rate)",
+                         "drop-word (not built at census time)",
+                         "speaker/format (not built at census time)"],
+        },
+        "derivations": {
+            "corpus_zip_sha256": "sha256 of docdocgo-fixes.zip bytes as published",
+            "records_digest_sha256": "sha256 over sorted lines '<sha256(file bytes)>  "
+                                     "<path relative to records dir>' for every .json under "
+                                     "--records (sort key: the line, i.e. by path)",
+            "fixtures_digest_sha256": "same construction over the fixtures dir",
+            "overlays_digest": "sha256(concat over basenames sorted of "
+                               "'<sha256(text)>  <basename>\\n'), text decoded "
+                               "utf-8/errors=replace; note: sorting the resulting lines "
+                               "instead gives 58274f46… (do not)",
+            "by_transcript_digest": "same construction as records_digest over "
+                                    "findings/by-transcript/",
+            "tool_sha256": "sha256 of tools/m5r_reduce.py bytes; tool_commit is the "
+                           "reachable lane commit carrying that exact file",
+            "outputs.ledger.jsonl": "sha256 of the file bytes",
         },
         "stats": stats,
         "outputs": {},

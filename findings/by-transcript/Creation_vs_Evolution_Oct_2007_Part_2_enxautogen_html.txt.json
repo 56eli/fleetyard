@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Uh-huh.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -153,6 +157,10 @@
    "replacement_chars": 0
   },
   "span_text": "you get to the word. You get to the word. You get to the word. You get to the word. You get to the word. You get to the word. You get to the word. You get to the word.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you get to the word.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -231,6 +239,10 @@
    "replacement_chars": 0
   },
   "span_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I don't know.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -309,6 +321,10 @@
    "replacement_chars": 0
   },
   "span_text": "I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I'm sorry.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -385,6 +401,10 @@
    "replacement_chars": 0
   },
   "span_text": "that's a point of that's a point of that's a point of",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "that's a point of",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt"
  }
 ]

@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different. Different.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Different.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_2_enxautogen_html.txt"
  },
  {
@@ -143,6 +147,10 @@
    "replacement_chars": 0
   },
   "span_text": "theông",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_2_enxautogen_html.txt"
  },
  {
@@ -213,6 +221,10 @@
    "replacement_chars": 0
   },
   "span_text": "ゴ",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_2_enxautogen_html.txt"
  },
  {
@@ -283,6 +295,10 @@
    "replacement_chars": 0
   },
   "span_text": "확실히",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_2_enxautogen_html.txt"
  },
  {
@@ -353,6 +369,10 @@
    "replacement_chars": 0
   },
   "span_text": "dQuérx還是",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_2_enxautogen_html.txt"
  },
  {
@@ -431,6 +451,10 @@
    "replacement_chars": 0
   },
   "span_text": "Ha, ha, ha, ha, ha, ha, ha, ha.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Ha,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_2_enxautogen_html.txt"
  }
 ]

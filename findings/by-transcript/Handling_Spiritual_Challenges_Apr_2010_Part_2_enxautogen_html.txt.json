@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "the world that's the world that's the world that's the world that's the world that's",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "the world that's",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "politician I know how I feel about that politician I know how I feel about that politician I know how I feel about that",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "politician I know how I feel about that",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt"
  },
  {
@@ -227,6 +235,10 @@
    "replacement_chars": 0
   },
   "span_text": "two shots and a beer, two shots and a beer, two shots and a beer.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "two shots and a beer,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt"
  },
  {
@@ -303,6 +315,10 @@
    "replacement_chars": 0
   },
   "span_text": "is, it's the way it is. It's the way it is. It's the way it is. It's the way it",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "is, it's the way it",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt"
  },
  {
@@ -379,6 +395,10 @@
    "replacement_chars": 0
   },
   "span_text": "to the next slide. Now we go to the next slide. Now we go to the next slide. Now we go",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "to the next slide. Now we go",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt"
  },
  {
@@ -457,6 +477,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt"
  },
  {
@@ -527,6 +551,10 @@
    "replacement_chars": 0
   },
   "span_text": "hand은",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt"
  },
  {
@@ -605,6 +633,10 @@
    "replacement_chars": 0
   },
   "span_text": "I found that I found that I found that I found that I found that I found that I found that I found that",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I found that",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt"
  },
  {
@@ -683,6 +715,10 @@
    "replacement_chars": 0
   },
   "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Okay.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt"
  },
  {
@@ -761,6 +797,10 @@
    "replacement_chars": 0
   },
   "span_text": "thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.txt"
  }
 ]

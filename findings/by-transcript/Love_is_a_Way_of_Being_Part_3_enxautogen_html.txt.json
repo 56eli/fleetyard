@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Love_is_a_Way_of_Being_Part_3_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "You've been in the world a long time. You've been in the world a long time. You've been in the world a long time. You've been in the world a long time.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "You've been in the world a long time.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Love_is_a_Way_of_Being_Part_3_enxautogen_html.txt"
  },
  {
@@ -227,6 +235,10 @@
    "replacement_chars": 0
   },
   "span_text": "you're in the world, you're in the world, you're in the world.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you're in the world,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Love_is_a_Way_of_Being_Part_3_enxautogen_html.txt"
  },
  {
@@ -303,6 +315,10 @@
    "replacement_chars": 0
   },
   "span_text": "the group senses it. The group senses it. The group senses it.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "the group senses it.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Love_is_a_Way_of_Being_Part_3_enxautogen_html.txt"
  },
  {
@@ -373,6 +389,10 @@
    "replacement_chars": 0
   },
   "span_text": "was再us",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Love_is_a_Way_of_Being_Part_3_enxautogen_html.txt"
  },
  {
@@ -451,6 +471,10 @@
    "replacement_chars": 0
   },
   "span_text": "I've got to go. I've got to go. I've got to go. I've got to go. I've got to go. I've got to go. I've got to go. I've got to go. I've got to go. I've got to go. I've got to go.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I've got to go.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Love_is_a_Way_of_Being_Part_3_enxautogen_html.txt"
  },
  {
@@ -527,6 +551,10 @@
    "replacement_chars": 0
   },
   "span_text": "it's a very good question. It's a very good question. It's a very good question. It's a very good question.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "it's a very good question.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Love_is_a_Way_of_Being_Part_3_enxautogen_html.txt"
  }
 ]

@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "to mean the opposite. To mean the opposite. To mean the opposite.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "to mean the opposite.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt"
  },
  {
@@ -149,6 +153,10 @@
    "replacement_chars": 0
   },
   "span_text": "it's a great thing. It's a great thing. It's a great thing.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "it's a great thing.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt"
  },
  {
@@ -225,6 +233,10 @@
    "replacement_chars": 0
   },
   "span_text": "That which is of God brings peace. That which is of God brings peace. That which is of God brings peace. That which is of God brings peace",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "That which is of God brings peace.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt"
  },
  {
@@ -301,6 +313,10 @@
    "replacement_chars": 0
   },
   "span_text": "was then. That's where the learning curve was then. That's where the learning curve was then. That's where the learning curve",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "was then. That's where the learning curve",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.txt"
  }
 ]

@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "you see the beauty of all that exists. You see the beauty of all that exists. You see the beauty of all that exists.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you see the beauty of all that exists.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -149,6 +153,10 @@
    "replacement_chars": 0
   },
   "span_text": "I think there shouldn't be too much time ahead. I think there shouldn't be too much time ahead. I think there shouldn't be too much time ahead.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I think there shouldn't be too much time ahead.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -228,6 +236,10 @@
    "replacement_chars": 0
   },
   "span_text": "인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "인간으로 태어난 것입니다 부처님은",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -298,6 +310,10 @@
    "replacement_chars": 1
   },
   "span_text": "�",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -368,6 +384,10 @@
    "replacement_chars": 2
   },
   "span_text": "��",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -438,6 +458,10 @@
    "replacement_chars": 0
   },
   "span_text": "신이 일어났습니다",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -508,6 +532,10 @@
    "replacement_chars": 0
   },
   "span_text": "신격으로부터 의식으로서의",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -578,6 +606,10 @@
    "replacement_chars": 0
   },
   "span_text": "일자리 필요로",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -656,6 +688,10 @@
    "replacement_chars": 0
   },
   "span_text": "yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -734,6 +770,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -812,6 +852,10 @@
    "replacement_chars": 0
   },
   "span_text": "Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Uh.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -888,6 +932,10 @@
    "replacement_chars": 0
   },
   "span_text": "I want to leave a trace in that life, and I want to leave a trace in that life, and I want to leave a trace in that life, and",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I want to leave a trace in that life, and",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -966,6 +1014,10 @@
    "replacement_chars": 0
   },
   "span_text": "la la la la la la la la la la la.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "la",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -1044,6 +1096,10 @@
    "replacement_chars": 0
   },
   "span_text": "La la la la la la la la la la.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "La",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -1122,6 +1178,10 @@
    "replacement_chars": 0
   },
   "span_text": "La la la la la la la la la la.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "La",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -1200,6 +1260,10 @@
    "replacement_chars": 0
   },
   "span_text": "Good. Good. Good. Good. Good. Good. Good. Good. Good.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Good.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -1278,6 +1342,10 @@
    "replacement_chars": 0
   },
   "span_text": "if you can learn karma... If you can learn karma... If you can learn karma... If you can learn karma... If you can learn karma...",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "if you can learn karma...",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -1356,6 +1424,10 @@
    "replacement_chars": 0
   },
   "span_text": "Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha!",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Ha!",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -1434,6 +1506,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -1512,6 +1588,10 @@
    "replacement_chars": 0
   },
   "span_text": "They really do. They really do. They really do. They really do. They really do. They really do. They really do.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "They really do.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -1590,6 +1670,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -1668,6 +1752,10 @@
    "replacement_chars": 0
   },
   "span_text": "you. Thank you. Thank you. Thank you. Thank you. Thank",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you. Thank",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  },
  {
@@ -1746,6 +1834,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt"
  }
 ]

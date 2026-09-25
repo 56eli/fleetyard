@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "The end of the story. The end of the story. The end of the story. The end of the story. The end of the story. The end of the story. The end of the story.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "The end of the story.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "other side",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "downside",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -227,6 +235,10 @@
    "replacement_chars": 0
   },
   "span_text": "ruins",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "runes",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -303,6 +315,10 @@
    "replacement_chars": 0
   },
   "span_text": "reeling",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "reading",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -379,6 +395,10 @@
    "replacement_chars": 0
   },
   "span_text": "forgot",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "forget—the",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -455,6 +475,10 @@
    "replacement_chars": 0
   },
   "span_text": "integrative",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "integrous",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -531,6 +555,10 @@
    "replacement_chars": 0
   },
   "span_text": "drowning",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "dying",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -617,6 +645,10 @@
    "replacement_chars": 0
   },
   "span_text": "to everyone, almost",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "to almost",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -698,6 +730,10 @@
    "replacement_chars": 0
   },
   "span_text": "of delight. Delight",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "of delight",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -779,6 +815,10 @@
    "replacement_chars": 0
   },
   "span_text": "calibrate higher, higher",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "calibrate higher",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -855,6 +895,10 @@
    "replacement_chars": 0
   },
   "span_text": "itself",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "as Self",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -942,6 +986,10 @@
    "replacement_chars": 0
   },
   "span_text": "the great, great spirit",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "the Great",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1018,6 +1066,10 @@
    "replacement_chars": 0
   },
   "span_text": "play",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "pull you",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1104,6 +1156,10 @@
    "replacement_chars": 0
   },
   "span_text": "to really keep",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "to keep",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1180,6 +1236,10 @@
    "replacement_chars": 0
   },
   "span_text": "more powerful than the snake. And the snake is more powerful than the snake. And the snake is more powerful than the snake. And the snake is",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "more powerful than the snake. And the snake is",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1256,6 +1316,10 @@
    "replacement_chars": 0
   },
   "span_text": "wailed",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "walked",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1337,6 +1401,10 @@
    "replacement_chars": 0
   },
   "span_text": "spiritual",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "serious",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1413,6 +1481,10 @@
    "replacement_chars": 0
   },
   "span_text": "read",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "reach",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1489,6 +1561,10 @@
    "replacement_chars": 0
   },
   "span_text": "and I have a lot of knowledge and I have a lot of knowledge and I have a lot of knowledge",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "and I have a lot of knowledge",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1559,6 +1635,10 @@
    "replacement_chars": 0
   },
   "span_text": "맞아요",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1637,6 +1717,10 @@
    "replacement_chars": 0
   },
   "span_text": "this person here. This person here. This person here. This person here. This person here. This person here. This person here. This person here. This person here. This person here. This person here.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "this person here.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1718,6 +1802,10 @@
    "replacement_chars": 0
   },
   "span_text": "of divinity. Divinity",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "of Divinity",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1794,6 +1882,10 @@
    "replacement_chars": 0
   },
   "span_text": "imminent",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "immanent",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1870,6 +1962,10 @@
    "replacement_chars": 0
   },
   "span_text": "imminent",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "immanent",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1946,6 +2042,10 @@
    "replacement_chars": 0
   },
   "span_text": "imminent",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "immanent",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -2022,6 +2122,10 @@
    "replacement_chars": 0
   },
   "span_text": "imminent",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "immanent",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.txt"
  }
 ]

@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "I love pets. I love pets. I love pets. I love pets. I love pets. I love pets.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I love pets.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_IX_Part_5_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you for coming. Thank you for coming. Thank you for coming.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you for coming.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_IX_Part_5_enxautogen_html.txt"
  },
  {
@@ -229,6 +237,10 @@
    "replacement_chars": 0
   },
   "span_text": "It's on. It's on. It's on. It's on. It's on. It's on. It's on. It's on. It's on. It's on. It's on. It's on. It's on.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "It's on.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_IX_Part_5_enxautogen_html.txt"
  },
  {
@@ -307,6 +319,10 @@
    "replacement_chars": 0
   },
   "span_text": "Mung? Mung? Mung? Mung? Mung? Mung? Mung? Mung? Mung? Mung? Mung? Mung? Mung? Mung?",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Mung?",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_IX_Part_5_enxautogen_html.txt"
  },
  {
@@ -385,6 +401,10 @@
    "replacement_chars": 0
   },
   "span_text": "Purely spiritual groups. Purely spiritual groups. Purely spiritual groups. Purely spiritual groups. Purely spiritual groups. Purely spiritual groups. Purely spiritual groups.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Purely spiritual groups.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_IX_Part_5_enxautogen_html.txt"
  },
  {
@@ -463,6 +483,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_IX_Part_5_enxautogen_html.txt"
  },
  {
@@ -541,6 +565,10 @@
    "replacement_chars": 0
   },
   "span_text": "Go ahead. Go ahead. Go ahead. Go ahead. Go ahead. Go ahead. Go ahead. Go ahead. Go ahead.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Go ahead.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_IX_Part_5_enxautogen_html.txt"
  },
  {
@@ -619,6 +647,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yes.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_IX_Part_5_enxautogen_html.txt"
  },
  {
@@ -697,6 +729,10 @@
    "replacement_chars": 0
   },
   "span_text": "And I've seen that in your book, and I've seen that in your book, and I've seen that in your book, and I've seen that in your book, and I've seen that in your book,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "And I've seen that in your book,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_IX_Part_5_enxautogen_html.txt"
  }
 ]

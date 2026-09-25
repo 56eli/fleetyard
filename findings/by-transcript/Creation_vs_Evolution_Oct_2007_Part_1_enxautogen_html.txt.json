@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "We don't want anybody. We don't want anybody. We don't want anybody.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "We don't want anybody.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I don't know.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -227,6 +235,10 @@
    "replacement_chars": 0
   },
   "span_text": "Stay off of the sun. Stay off of the sun. Stay off of the sun. Stay off of the sun.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Stay off of the sun.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -297,6 +309,10 @@
    "replacement_chars": 0
   },
   "span_text": "라",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -367,6 +383,10 @@
    "replacement_chars": 1
   },
   "span_text": "�",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -437,6 +457,10 @@
    "replacement_chars": 0
   },
   "span_text": "practice喝",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -507,6 +531,10 @@
    "replacement_chars": 0
   },
   "span_text": "hateakerениеci",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.txt"
  }
 ]

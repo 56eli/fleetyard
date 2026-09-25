@@ -79,6 +79,10 @@
    "replacement_chars": 0
   },
   "span_text": "101%",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  },
  {
@@ -160,6 +164,10 @@
    "replacement_chars": 0
   },
   "span_text": "The mamba, black",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "The black",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  },
  {
@@ -236,6 +244,10 @@
    "replacement_chars": 0
   },
   "span_text": "Cheney",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Chaney",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  },
  {
@@ -322,6 +334,10 @@
    "replacement_chars": 0
   },
   "span_text": "there's people, red",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "there’s Red",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  },
  {
@@ -392,6 +408,10 @@
    "replacement_chars": 0
   },
   "span_text": "הע",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  },
  {
@@ -468,6 +488,10 @@
    "replacement_chars": 0
   },
   "span_text": "brief",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "brave",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  },
  {
@@ -554,6 +578,10 @@
    "replacement_chars": 0
   },
   "span_text": "the whole concept",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "the concept",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  },
  {
@@ -635,6 +663,10 @@
    "replacement_chars": 0
   },
   "span_text": "appearing",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "praying",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  },
  {
@@ -717,6 +749,10 @@
    "replacement_chars": 0
   },
   "span_text": "101%",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  },
  {
@@ -793,6 +829,10 @@
    "replacement_chars": 0
   },
   "span_text": "going",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "running",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  },
  {
@@ -869,6 +909,10 @@
    "replacement_chars": 0
   },
   "span_text": "farther",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "further",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.txt"
  }
 ]

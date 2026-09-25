@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -153,6 +157,10 @@
    "replacement_chars": 0
   },
   "span_text": "I knew Bill Wilson and he wasn't a Pope. I knew Bill Wilson and he wasn't a Pope. I knew Bill Wilson and he wasn't a Pope. I knew Bill Wilson and he wasn't a Pope. I knew Bill Wilson and he wasn't a Pope. I knew Bill Wilson and he wasn't a Pope. I knew Bill Wilson and he wasn't a Pope.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I knew Bill Wilson and he wasn't a Pope.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -231,6 +239,10 @@
    "replacement_chars": 0
   },
   "span_text": "ha, ha, ha, ha, ha, ha, ha, ha, ha,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "ha,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -309,6 +321,10 @@
    "replacement_chars": 0
   },
   "span_text": "Ha, ha, ha. Ha, ha, ha. Ha, ha, ha. Ha, ha, ha.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Ha,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -387,6 +403,10 @@
    "replacement_chars": 0
   },
   "span_text": "Ha, ha, ha. Ha, ha, ha. Ha, ha, ha. Ha, ha, ha. Ha, ha, ha. Ha, ha, ha, ha, ha. Ha, ha, ha.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Ha,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -465,6 +485,10 @@
    "replacement_chars": 0
   },
   "span_text": "It's the same thing. It's the same thing. It's the same thing. It's the same thing. It's the same thing. It's the same thing. It's the same thing. It's the same thing",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "It's the same thing.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -543,6 +567,10 @@
    "replacement_chars": 0
   },
   "span_text": "Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Mm-hmm.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -629,6 +657,10 @@
    "replacement_chars": 0
   },
   "span_text": "great classic musician",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "great musician",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -707,6 +739,10 @@
    "replacement_chars": 0
   },
   "span_text": "Hi, Dr. Harkins. Hi, Dr. Harkins. Hi, Dr. Harkins. Hi, Dr. Harkins. Hi, Dr. Harkins. Hi, Dr. Harkins. Hi, Dr. Harkins.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Hi, Dr. Harkins.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -785,6 +821,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -863,6 +903,10 @@
    "replacement_chars": 0
   },
   "span_text": "Oh. Oh. Oh. Oh. Oh. Oh. Oh. Oh. Oh. Oh. Oh. Oh. Oh. Oh.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Oh.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -941,6 +985,10 @@
    "replacement_chars": 0
   },
   "span_text": "his blessing. And seeking his blessing. And seeking his blessing. And seeking his blessing. And seeking his blessing. And seeking his blessing. And seeking his blessing. And seeking his blessing. And seeking",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "his blessing. And seeking",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -1011,6 +1059,10 @@
    "replacement_chars": 0
   },
   "span_text": "spirit持",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.txt"
  }
 ]

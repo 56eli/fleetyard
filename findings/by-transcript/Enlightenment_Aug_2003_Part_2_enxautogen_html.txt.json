@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "this tree is like this this tree is like this this tree is like this",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "this tree is like this",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Enlightenment_Aug_2003_Part_2_enxautogen_html.txt"
  }
 ]

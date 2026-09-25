@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did. And we did.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "And we did.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Barriers_Jun_2005_Part_1_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "Truth is comparable, then, to electricity running down a wire. Truth is comparable, then, to electricity running down a wire. Truth is comparable, then, to electricity running down a wire.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Truth is comparable, then, to electricity running down a wire.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Barriers_Jun_2005_Part_1_enxautogen_html.txt"
  }
 ]

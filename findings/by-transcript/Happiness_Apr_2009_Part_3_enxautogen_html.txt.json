@@ -67,6 +67,10 @@
    "replacement_chars": 0
   },
   "span_text": "얘ีなんか 在我聽你聽",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -137,6 +141,10 @@
    "replacement_chars": 0
   },
   "span_text": "свои",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -215,6 +223,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -293,6 +305,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -371,6 +387,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -447,6 +467,10 @@
    "replacement_chars": 0
   },
   "span_text": "If you're a Christian, then Jesus Christ is your Savior. If you're a Christian, then Jesus Christ is your Savior. If you're a Christian, then Jesus Christ is your Savior.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "If you're a Christian, then Jesus Christ is your Savior.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -525,6 +549,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -601,6 +629,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yes. To read your book. Yes. To read your book. Yes. To read your book. Yes. To read your book.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yes. To read your book.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -679,6 +711,10 @@
    "replacement_chars": 0
   },
   "span_text": "was born. He was born. He was born. He was born. He was born. He was born. He was born. He was born. He was born. He was born. He was born. He was born. He was born. He was born. He",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "was born. He",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -757,6 +793,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -835,6 +875,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -905,6 +949,10 @@
    "replacement_chars": 0
   },
   "span_text": "了",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -975,6 +1023,10 @@
    "replacement_chars": 0
   },
   "span_text": "принимating",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -1053,6 +1105,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -1129,6 +1185,10 @@
    "replacement_chars": 0
   },
   "span_text": "God bless you, love. God bless you, love. God bless you, love. God bless you, love.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "God bless you, love.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -1207,6 +1267,10 @@
    "replacement_chars": 0
   },
   "span_text": "God bless you. God bless you. God bless you. God bless you. God bless you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "God bless you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -1285,6 +1349,10 @@
    "replacement_chars": 0
   },
   "span_text": "God bless you. God bless you. God bless you. God bless you. God bless you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "God bless you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  },
  {
@@ -1361,6 +1429,10 @@
    "replacement_chars": 0
   },
   "span_text": "And God bless you and God bless you and God bless you and God bless you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "And God bless you",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Happiness_Apr_2009_Part_3_enxautogen_html.txt"
  }
 ]

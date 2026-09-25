@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "that's not the way. That's not the way. That's not the way.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "that's not the way.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -149,6 +153,10 @@
    "replacement_chars": 0
   },
   "span_text": "says",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "said",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -236,6 +244,10 @@
    "replacement_chars": 0
   },
   "span_text": "be desired, desired and",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "be desired",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -312,6 +324,10 @@
    "replacement_chars": 0
   },
   "span_text": "coin",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "koan",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -393,6 +409,10 @@
    "replacement_chars": 0
   },
   "span_text": "witnessing, witnessing and",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "witnessing and",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -469,6 +489,10 @@
    "replacement_chars": 0
   },
   "span_text": "provenance",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "providence",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -545,6 +569,10 @@
    "replacement_chars": 0
   },
   "span_text": "always",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "also",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -626,6 +654,10 @@
    "replacement_chars": 0
   },
   "span_text": "John, John calibrates",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "John calibrates",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt"
  }
 ]

@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "you're lost. You're lost. You're lost. You're lost. You're lost. You're lost. You're lost. You're lost. You're lost. You're lost.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you're lost.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Positionality_Jun_2004_Part_3_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "Help our brothers, our brothers. Help our brothers, our brothers. Help our brothers, our brothers. Help our brothers, our brothers.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Help our brothers, our brothers.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Positionality_Jun_2004_Part_3_enxautogen_html.txt"
  }
 ]

@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -153,6 +157,10 @@
    "replacement_chars": 0
   },
   "span_text": "Oh me, oh me, oh me, oh me, oh me.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Oh me,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -223,6 +231,10 @@
    "replacement_chars": 0
   },
   "span_text": "is良",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -293,6 +305,10 @@
    "replacement_chars": 0
   },
   "span_text": "тр",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -363,6 +379,10 @@
    "replacement_chars": 0
   },
   "span_text": "is日本",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -441,6 +461,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -519,6 +543,10 @@
    "replacement_chars": 0
   },
   "span_text": "and then falls, and then falls, and then falls, and then falls, and then falls, and then falls, and then falls, and then falls, and then falls, and then falls?",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "and then falls,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -595,6 +623,10 @@
    "replacement_chars": 0
   },
   "span_text": "It's a hypothetical proposition. It's a hypothetical proposition. It's a hypothetical proposition.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "It's a hypothetical proposition.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -673,6 +705,10 @@
    "replacement_chars": 0
   },
   "span_text": "Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Hi, Doctor.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -751,6 +787,10 @@
    "replacement_chars": 0
   },
   "span_text": "Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor. Hi, Doctor.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Hi, Doctor.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -829,6 +869,10 @@
    "replacement_chars": 0
   },
   "span_text": "Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Mm-hmm.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -905,6 +949,10 @@
    "replacement_chars": 0
   },
   "span_text": "just don't be who you are. Just don't be who you are. Just don't be who you are. Just don't be who you are.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "just don't be who you are.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  },
  {
@@ -983,6 +1031,10 @@
    "replacement_chars": 0
   },
   "span_text": "like, you know, like, you know, like, you know, like, you know, like, you know, like, you know, like, you know.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "like, you know,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.txt"
  }
 ]

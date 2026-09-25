@@ -1,8 +1,14 @@
 # M5-R — reviewed findings ledger (SUMMARY)
 
+> **Titles qualified (TASK-016 R2):** "reviewed" here means **machine-adjudicated against cited bytes** — this is a machine reduction of the raw census, not a human finding pass. Read every count below with the coverage row immediately following.
+
 **Reduction of the inherited M5 raw census (TASK-011, lane `arena/01a0d581-fleetyard` @ `bf97d85`) into findings with evidence.**
 
 > Honesty scope: every finding here is *machine-adjudicated* — citations and book offsets were re-verified byte-exact, repetition/anomaly structure was re-derived from the frozen bytes, and fixture-tuned hits are separated. **No audio was heard; no human read every transcript.** CERTAIN is assigned only by inheritance from the v1 hand-confirmed fixture set, never by this tool. There is **no corpus-wide error rate** in this document (LAW §9: precision/recall need held-out data; only the ledger is delivered). CANDIDATE is never blended into anything.
+
+**Coverage truth (STANDARDS honesty rule; the campaign's row since v1):**
+
+`transcripts 230 | detector-run 230 | machine-adjudicated 230 | human finding-pass audited 0 | pending human review 230 | zero-finding transcripts 24 (not shown clean)`
 
 ## 1. Reduction funnel
 
@@ -117,4 +123,4 @@ Review queue: `REVIEW-QUEUE.md` (top 100 by mechanical score; the score is an or
 - Detectors that produced the raw census: A1-repetition, A2-nonsense, B1-contradiction, B2-misquote. A4-confusion, drop-word and speaker/format were not run (unmeasured, not zero).
 - Provenance: see `PROVENANCE.json` (inputs pinned by sha256; corpus digest method defined explicitly, unlike the inherited run's).
 
-_Generated 2026-09-25T19:15:19Z by `tools/m5r_reduce.py` (46875c6972cd3c5f)._
+_Generated 2026-09-25T19:16:57Z by `tools/m5r_reduce.py` (2f59fbeb1c936745)._

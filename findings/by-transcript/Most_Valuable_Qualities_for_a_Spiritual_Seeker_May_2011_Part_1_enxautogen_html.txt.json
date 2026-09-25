@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "You see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "You see,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
  },
  {
@@ -153,6 +157,10 @@
    "replacement_chars": 0
   },
   "span_text": "see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you see, you",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "see, you",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
  },
  {
@@ -229,6 +237,10 @@
    "replacement_chars": 0
   },
   "span_text": "200 above consciousness level 200 above consciousness level 200 above consciousness level 200 above consciousness level",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "200 above consciousness level",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
  },
  {
@@ -305,6 +317,10 @@
    "replacement_chars": 0
   },
   "span_text": "joy at 400",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Joy 540/570",
+  "suspected_intended_status": "from runner signal (B1-contradiction); not gate-verified — human read required",
   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
  },
  {
@@ -381,6 +397,10 @@
    "replacement_chars": 0
   },
   "span_text": "I have trouble reading without my glasses on. I have trouble reading without my glasses on. I have trouble reading without my glasses on. I have trouble reading without my glasses on.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I have trouble reading without my glasses on.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
  },
  {
@@ -457,6 +477,10 @@
    "replacement_chars": 0
   },
   "span_text": "Except",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Accept",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
  },
  {
@@ -533,6 +557,10 @@
    "replacement_chars": 0
   },
   "span_text": "a lot",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "lots",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
  },
  {
@@ -609,6 +637,10 @@
    "replacement_chars": 0
   },
   "span_text": "feelings",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "failings",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
  },
  {
@@ -695,6 +727,10 @@
    "replacement_chars": 0
   },
   "span_text": "power available in",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "power in",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.txt"
  }
 ]

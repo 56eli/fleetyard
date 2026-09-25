@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "okay.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_1_enxautogen_html.txt"
  },
  {
@@ -153,6 +157,10 @@
    "replacement_chars": 0
   },
   "span_text": "It's about old folks. It's about old folks. It's about old folks. It's about old folks. It's about old folks. It's about old folks. It's about old folks. It's about old folks. It's about old folks.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "It's about old folks.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_1_enxautogen_html.txt"
  },
  {
@@ -231,6 +239,10 @@
    "replacement_chars": 0
   },
   "span_text": "Male dumbbells don't calibrate very high. Male dumbbells don't calibrate very high. Male dumbbells don't calibrate very high. Male dumbbells don't calibrate very high. Male dumbbells don't calibrate very high. Male dumbbells don't calibrate very high. Male dumbbells don't calibrate very high. Male dumbbells don't calibrate very high. Male dumbbells don't calibrate very high. Male dumbbells don't calibrate very high. Male dumbbells don't calibrate very high.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Male dumbbells don't calibrate very high.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_1_enxautogen_html.txt"
  },
  {
@@ -309,6 +321,10 @@
    "replacement_chars": 0
   },
   "span_text": "O God. To thee, O God. To thee, O God. To thee, O God. To thee, O God. To thee,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "O God. To thee,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_1_enxautogen_html.txt"
  },
  {
@@ -385,6 +401,10 @@
    "replacement_chars": 0
   },
   "span_text": "It leads to the discipline. It leads to the discipline. It leads to the discipline. It leads to the discipline.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "It leads to the discipline.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_1_enxautogen_html.txt"
  }
 ]

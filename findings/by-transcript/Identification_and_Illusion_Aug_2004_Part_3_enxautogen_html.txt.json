@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast. Fancy Feast.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Fancy Feast.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
  },
  {
@@ -153,6 +157,10 @@
    "replacement_chars": 0
   },
   "span_text": "ha, ha, ha, ha, ha, ha, ha, ha, ha.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "ha,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
  },
  {
@@ -231,6 +239,10 @@
    "replacement_chars": 0
   },
   "span_text": "I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian. I'm a Christian.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I'm a Christian.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
  },
  {
@@ -309,6 +321,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
  },
  {
@@ -387,6 +403,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
  },
  {
@@ -465,6 +485,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
  },
  {
@@ -541,6 +565,10 @@
    "replacement_chars": 0
   },
   "span_text": "He's got to like that. He's got to like that. He's got to like that.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "He's got to like that.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
  },
  {
@@ -617,6 +645,10 @@
    "replacement_chars": 0
   },
   "span_text": "for the blessing of our existence. For the blessing of our existence. For the blessing of our existence.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "for the blessing of our existence.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.txt"
  }
 ]

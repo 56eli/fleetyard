@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "It's a process that's going on and it's a process that's going on and it's a process that's going on and it's a process that's going on and",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "It's a process that's going on and",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -149,6 +153,10 @@
    "replacement_chars": 0
   },
   "span_text": "It's not that it's impossible, but it's... It's not that it's impossible, but it's... It's not that it's impossible, but it's...",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "It's not that it's impossible, but it's...",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -225,6 +233,10 @@
    "replacement_chars": 0
   },
   "span_text": "Wow! See we find out things all the time. Wow! See we find out things all the time. Wow! See we find out things all the time.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Wow! See we find out things all the time.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_2_enxautogen_html.txt"
  }
 ]

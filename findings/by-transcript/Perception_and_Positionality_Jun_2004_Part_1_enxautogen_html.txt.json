@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Positionality_Jun_2004_Part_1_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "they'll cut your throat. They'll cut your throat. They'll cut your throat. They'll cut your throat.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "they'll cut your throat.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Positionality_Jun_2004_Part_1_enxautogen_html.txt"
  },
  {
@@ -229,6 +237,10 @@
    "replacement_chars": 0
   },
   "span_text": "you've got something. You've got something. You've got something. You've got something. You've got something",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you've got something.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Positionality_Jun_2004_Part_1_enxautogen_html.txt"
  },
  {
@@ -307,6 +319,10 @@
    "replacement_chars": 0
   },
   "span_text": "wisdom, you see wisdom, you see wisdom, you see wisdom. You see wisdom. You see wisdom. You see wisdom. You see",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "wisdom, you see",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Positionality_Jun_2004_Part_1_enxautogen_html.txt"
  },
  {
@@ -383,6 +399,10 @@
    "replacement_chars": 0
   },
   "span_text": "is a gift. Potentiality is a gift. Potentiality is a gift. Potentiality",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "is a gift. Potentiality",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Positionality_Jun_2004_Part_1_enxautogen_html.txt"
  },
  {
@@ -461,6 +481,10 @@
    "replacement_chars": 0
   },
   "span_text": "and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore and ignore",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "and ignore",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Perception_and_Positionality_Jun_2004_Part_1_enxautogen_html.txt"
  }
 ]

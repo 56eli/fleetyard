@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "grrr, grrr, grrr, grrr, grrr, grrr, grrr, grrr.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "grrr,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -153,6 +157,10 @@
    "replacement_chars": 0
   },
   "span_text": "Here's my feelings. Here's my feelings. Here's my feelings. Here's my feelings. Here's my feelings.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Here's my feelings.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -231,6 +239,10 @@
    "replacement_chars": 0
   },
   "span_text": "You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know. You know.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "You know.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.txt"
  }
 ]

@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "a deep love of astrology a deep love of astrology a deep love of astrology",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "a deep love of astrology",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_3.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "it's not it's not it's not it's not it's not it's not it's not it's not it's not",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "it's not",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Witnessing_and_Observing_Oct_2004_Part_3.txt"
  }
 ]

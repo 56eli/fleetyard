@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "It's the opening of the third eye. It's the opening of the third eye. It's the opening of the third eye.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "It's the opening of the third eye.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_3_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_3_enxautogen_html.txt"
  },
  {
@@ -229,6 +237,10 @@
    "replacement_chars": 0
   },
   "span_text": "I don't want to go there. I don't want to go there. I don't want to go there. I don't want to go there. I don't want to go there. I don't want to go there.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I don't want to go there.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_3_enxautogen_html.txt"
  },
  {
@@ -307,6 +319,10 @@
    "replacement_chars": 0
   },
   "span_text": "I love it. I love it. I love it. I love it. I love it. I love it. I love it. I love it. I love it.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I love it.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_3_enxautogen_html.txt"
  },
  {
@@ -385,6 +401,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_3_enxautogen_html.txt"
  },
  {
@@ -463,6 +483,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_3_enxautogen_html.txt"
  },
  {
@@ -541,6 +565,10 @@
    "replacement_chars": 0
   },
   "span_text": "know, I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "know, I don't",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_3_enxautogen_html.txt"
  },
  {
@@ -619,6 +647,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_3_enxautogen_html.txt"
  },
  {
@@ -697,6 +729,10 @@
    "replacement_chars": 0
   },
   "span_text": "I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know I don't know",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I don't know",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Alignment_Apr_2005_Part_3_enxautogen_html.txt"
  }
 ]

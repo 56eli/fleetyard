@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "everything",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "any thing",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Intention_May_2005_Part_1_enxautogen_html.txt"
  },
  {
@@ -149,6 +153,10 @@
    "replacement_chars": 0
   },
   "span_text": "that how you see the world is the way it is. that how you see the world is the way it is. that how you see the world is the way it is.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "that how you see the world is the way it is.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Intention_May_2005_Part_1_enxautogen_html.txt"
  },
  {
@@ -227,6 +235,10 @@
    "replacement_chars": 0
   },
   "span_text": "I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me. I'm me.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I'm me.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Intention_May_2005_Part_1_enxautogen_html.txt"
  }
 ]

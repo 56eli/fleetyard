@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "theater of the spiritual teacher, theater of the spiritual teacher, theater of the spiritual teacher, theater of the spiritual teacher,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "theater of the spiritual teacher,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Serenity_Aug_2005_Part_1.txt"
  },
  {
@@ -149,6 +153,10 @@
    "replacement_chars": 0
   },
   "span_text": "What it is is its meaning complete and total. What it is is its meaning complete and total. What it is is its meaning complete and total.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "What it is is its meaning complete and total.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Serenity_Aug_2005_Part_1.txt"
  }
 ]

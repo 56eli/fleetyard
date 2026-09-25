@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "That's a good thing.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "transferable from books and tapes and or is it only transferable from books and tapes and or is it only transferable from books and tapes and or is it only transferable from books and tapes and or is it only",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "transferable from books and tapes and or is it only",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
  },
  {
@@ -227,6 +235,10 @@
    "replacement_chars": 0
   },
   "span_text": "through the presence of the through the presence of the through the presence of the",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "through the presence of the",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
  },
  {
@@ -303,6 +315,10 @@
    "replacement_chars": 0
   },
   "span_text": "teacher it comes about in several ways teacher it comes about in several ways teacher it comes about in several ways",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "teacher it comes about in several ways",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
  },
  {
@@ -379,6 +395,10 @@
    "replacement_chars": 0
   },
   "span_text": "conceptually and the writings visually conceptually and the writings visually conceptually and the writings visually",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "conceptually and the writings visually",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
  },
  {
@@ -455,6 +475,10 @@
    "replacement_chars": 0
   },
   "span_text": "holding the image of the teacher the holding the image of the teacher the holding the image of the teacher the",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "holding the image of the teacher the",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
  },
  {
@@ -531,6 +555,10 @@
    "replacement_chars": 0
   },
   "span_text": "sound of the voice and the the presence sound of the voice and the the presence sound of the voice and the the presence",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "sound of the voice and the the presence",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
  },
  {
@@ -607,6 +635,10 @@
    "replacement_chars": 0
   },
   "span_text": "of the presence yes and then we found of the presence yes and then we found of the presence yes and then we found",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "of the presence yes and then we found",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
  },
  {
@@ -683,6 +715,10 @@
    "replacement_chars": 0
   },
   "span_text": "that it's even more of touching which that it's even more of touching which that it's even more of touching which",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "that it's even more of touching which",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
  },
  {
@@ -759,6 +795,10 @@
    "replacement_chars": 0
   },
   "span_text": "You're a very handsome man. You're a very handsome man. You're a very handsome man.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "You're a very handsome man.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_I_Part_6_enxautogen_html.txt"
  }
 ]

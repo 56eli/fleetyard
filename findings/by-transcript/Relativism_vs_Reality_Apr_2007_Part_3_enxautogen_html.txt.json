@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "we got permission to do Sedona. We got permission to do Sedona. We got permission to do Sedona,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "we got permission to do Sedona.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -229,6 +237,10 @@
    "replacement_chars": 0
   },
   "span_text": "I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I'm sorry.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -307,6 +319,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yes.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -385,6 +401,10 @@
    "replacement_chars": 0
   },
   "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Okay.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -463,6 +483,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -541,6 +565,10 @@
    "replacement_chars": 0
   },
   "span_text": "i'm not i'm not i'm not i'm not i'm not i'm not i'm not i'm not i'm not i'm not",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "i'm not",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -617,6 +645,10 @@
    "replacement_chars": 0
   },
   "span_text": "the people on the planet she's more in touch with the people on the planet she's more in touch with the people on the planet she's more in touch with",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "the people on the planet she's more in touch with",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -695,6 +727,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -773,6 +809,10 @@
    "replacement_chars": 0
   },
   "span_text": "I love the seven inches of snow. I love the seven inches of snow. I love the seven inches of snow. I love the seven inches of snow. I love the seven inches of snow.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I love the seven inches of snow.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  },
  {
@@ -851,6 +891,10 @@
    "replacement_chars": 0
   },
   "span_text": "laughter laughter laughter laughter laughter laughter laughter laughter laughter laughter laughter",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "laughter",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.txt"
  }
 ]

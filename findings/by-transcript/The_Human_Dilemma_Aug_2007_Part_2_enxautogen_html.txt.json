@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "spell it out for them. Spell it out for them. Spell it out for them.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "spell it out for them.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -149,6 +153,10 @@
    "replacement_chars": 0
   },
   "span_text": "Krauss",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Cross",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -235,6 +243,10 @@
    "replacement_chars": 0
   },
   "span_text": "I myself was",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I was",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -313,6 +325,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah man. Yeah man. Yeah man. Yeah man. Yeah man.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah man.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -399,6 +415,10 @@
    "replacement_chars": 0
   },
   "span_text": "life throat flows",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Life flows",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -475,6 +495,10 @@
    "replacement_chars": 0
   },
   "span_text": "in, and your family, in, and your family, in, and your family,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "in, and your family,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.txt"
  }
 ]

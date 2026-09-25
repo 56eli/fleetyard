@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "because of the infinite power of the field, Because of the infinite power of the field, Because of the infinite power of the field,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "because of the infinite power of the field,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Presence_of_Spiritual_Awareness_Part_1_enxautogen_html.txt"
  },
  {
@@ -149,6 +153,10 @@
    "replacement_chars": 0
   },
   "span_text": "the divinity is all that exists and that is the truth the divinity is all that exists and that is the truth the divinity is all that exists and that is the truth",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "the divinity is all that exists and that is the truth",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Presence_of_Spiritual_Awareness_Part_1_enxautogen_html.txt"
  },
  {
@@ -227,6 +235,10 @@
    "replacement_chars": 0
   },
   "span_text": "i loved it i loved it i loved it i loved it i loved it i loved it",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "i loved it",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Presence_of_Spiritual_Awareness_Part_1_enxautogen_html.txt"
  },
  {
@@ -303,6 +315,10 @@
    "replacement_chars": 0
   },
   "span_text": "you don't have to verbalize it you don't have to verbalize it you don't have to verbalize it",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you don't have to verbalize it",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Presence_of_Spiritual_Awareness_Part_1_enxautogen_html.txt"
  },
  {
@@ -379,6 +395,10 @@
    "replacement_chars": 0
   },
   "span_text": "you're going to keep on advancing in consciousness and you're going to keep on advancing in consciousness and you're going to keep on advancing in consciousness. And",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you're going to keep on advancing in consciousness and",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Presence_of_Spiritual_Awareness_Part_1_enxautogen_html.txt"
  }
 ]

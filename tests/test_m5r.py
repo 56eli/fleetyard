@@ -175,6 +175,53 @@ class M5RCase(unittest.TestCase):
         self.assertTrue(f["seeded"])
         self.assertTrue(f["class"].startswith("CERTAIN"))
 
+    def test_standards_finding_record_shape_is_complete(self):
+        """TASK-016 R1: every finding carries suspected_intended(+status) and status."""
+        out = os.path.join(self.root, "out-shape")
+        _prov, findings = self.run_reducer(out)
+        self.assertTrue(findings)
+        for f in findings:
+            for key in ("suspected_intended", "suspected_intended_status",
+                        "status", "status_by"):
+                self.assertIn(key, f, (f["id"], key))
+            self.assertIn(f["status"], ("open", "confirmed", "discarded"), f["id"])
+            self.assertTrue(f["suspected_intended_status"], f["id"])
+            self.assertIn("machine-adjudicated", f["status_by"], f["id"])
+            if f["suspected_intended"] is None:
+                self.assertIn("not proposable mechanically",
+                              f["suspected_intended_status"], f["id"])
+        with_intended = [f for f in findings if f["suspected_intended"]]
+        self.assertTrue(with_intended, "no finding carried a proposed intended text")
+
+    def test_coverage_truth_row_is_emitted(self):
+        """TASK-016 R2: audited/pending row present in provenance and SUMMARY."""
+        out = os.path.join(self.root, "out-coverage")
+        prov, findings = self.run_reducer(out)
+        cov = prov["stats"]["coverage"]
+        n = len(TR)
+        self.assertEqual(cov["transcripts"], n)
+        self.assertEqual(cov["detector_run"], n)
+        self.assertEqual(cov["machine_adjudicated"], n)
+        self.assertEqual(cov["human_finding_pass_audited"], 0)
+        self.assertEqual(cov["pending_human_review"], n)
+        self.assertGreaterEqual(cov["zero_finding_transcripts"], 0)
+        summary = open(os.path.join(out, "SUMMARY.md"), encoding="utf-8").read()
+        self.assertIn("human finding-pass audited 0", summary)
+        self.assertIn("machine-adjudicated reduction of the raw census", summary)
+
+    def test_law8_manifest_bindings_and_derivations(self):
+        """TASK-016 R3: manifest binds tool commit, policy, book store, derivations."""
+        out = os.path.join(self.root, "out-manifest")
+        prov, _findings = self.run_reducer(out)
+        for key in ("tool_commit", "policy_sha256", "main_head", "book_store",
+                    "inherited_census", "derivations"):
+            self.assertIn(key, prov, key)
+        for key in ("overlays_digest", "by_transcript_digest", "records_digest_sha256",
+                    "tool_sha256", "outputs.ledger.jsonl"):
+            self.assertIn(key, prov["derivations"], key)
+        self.assertIn("58274f46", prov["derivations"]["overlays_digest"])
+        self.assertIn("sha256", prov["book_store"])
+
     def test_repetition_rederive_handles_non_latin_and_long_units(self):
         """M4-q5 regression: Unicode tokens and units longer than 8 tokens."""
         hangul = "\uac00\ub098\ub2e4 \ub77c\ub9c8\ubc14 \uc0ac\uc544\uc790 " * 3

@@ -78,6 +78,10 @@
    "replacement_chars": 0
   },
   "span_text": "of nowhere nowhere",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "of nowhere",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -159,6 +163,10 @@
    "replacement_chars": 0
   },
   "span_text": "timeless timeless and",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "timeless and",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -229,6 +237,10 @@
    "replacement_chars": 0
   },
   "span_text": "τη",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -307,6 +319,10 @@
    "replacement_chars": 0
   },
   "span_text": "you know you know you know you know you know you know you know you know you know you know you know",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you know",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -385,6 +401,10 @@
    "replacement_chars": 0
   },
   "span_text": "you know you know you know you know you know you know you know you know you know you know you know you know you know you know you know",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you know",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -461,6 +481,10 @@
    "replacement_chars": 0
   },
   "span_text": "So, enlightenment, the enlightened state, then, is the state. So, enlightenment, the enlightened state, then, is the state. So, enlightenment, the enlightened state, then, is the state.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "So, enlightenment, the enlightened state, then, is the state.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -537,6 +561,10 @@
    "replacement_chars": 0
   },
   "span_text": "state",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "stage",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -613,6 +641,10 @@
    "replacement_chars": 0
   },
   "span_text": "then ends",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "can end",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -689,6 +721,10 @@
    "replacement_chars": 0
   },
   "span_text": "We solved all the international problems. We solved all the international problems. We solved all the international problems. We solved all the international problems.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "We solved all the international problems.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
  },
  {
@@ -765,6 +801,10 @@
    "replacement_chars": 0
   },
   "span_text": "look to your heart, look to your heart, look to your heart.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "look to your heart,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.txt"
  }
 ]

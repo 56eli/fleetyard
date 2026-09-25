@@ -67,6 +67,10 @@
    "replacement_chars": 0
   },
   "span_text": "애icking",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Intention_May_2005_Part_2_enxautogen_html.txt"
  },
  {
@@ -137,6 +141,10 @@
    "replacement_chars": 0
   },
   "span_text": "거",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Intention_May_2005_Part_2_enxautogen_html.txt"
  },
  {
@@ -207,6 +215,10 @@
    "replacement_chars": 1
   },
   "span_text": "�",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Intention_May_2005_Part_2_enxautogen_html.txt"
  },
  {
@@ -277,6 +289,10 @@
    "replacement_chars": 0
   },
   "span_text": "너mo",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Intention_May_2005_Part_2_enxautogen_html.txt"
  },
  {
@@ -353,6 +369,10 @@
    "replacement_chars": 0
   },
   "span_text": "context. Because if they included context, because if they included context, because if they included",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "context. Because if they included",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Intention_May_2005_Part_2_enxautogen_html.txt"
  }
 ]

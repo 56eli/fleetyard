@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "what I'm doing. I'm answerable to God for what I'm doing. I'm answerable to God for what I'm doing. I'm answerable to God for what I'm doing. I'm answerable to God for what I'm doing. I'm answerable to God for",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "what I'm doing. I'm answerable to God for",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -153,6 +157,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt"
  },
  {
@@ -229,6 +237,10 @@
    "replacement_chars": 0
   },
   "span_text": "you see it here, then you see it here, then you see it here. Then",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you see it here, then",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.txt"
  }
 ]

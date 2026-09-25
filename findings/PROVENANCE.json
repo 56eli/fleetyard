@@ -1,4 +1,31 @@
 {
+ "book_store": {
+  "path": "corpus/docdocgo/html/merged-book-texts_json_1.js",
+  "sha256": "c0892fcd20502d49b99fffe87a4ec4b3b5ecc94a1f98606aab7909127934a4a8"
+ },
+ "derivations": {
+  "by_transcript_digest": "same construction as records_digest over findings/by-transcript/",
+  "corpus_zip_sha256": "sha256 of docdocgo-fixes.zip bytes as published",
+  "fixtures_digest_sha256": "same construction over the fixtures dir",
+  "outputs.ledger.jsonl": "sha256 of the file bytes",
+  "overlays_digest": "sha256(concat over basenames sorted of '<sha256(text)>  <basename>\\n'), text decoded utf-8/errors=replace; note: sorting the resulting lines instead gives 58274f46\u2026 (do not)",
+  "records_digest_sha256": "sha256 over sorted lines '<sha256(file bytes)>  <path relative to records dir>' for every .json under --records (sort key: the line, i.e. by path)",
+  "tool_sha256": "sha256 of tools/m5r_reduce.py bytes; tool_commit is the reachable lane commit carrying that exact file"
+ },
+ "inherited_census": {
+  "detector_tool_commit": "7b8863d",
+  "detectors": [
+   "A1-repetition",
+   "A2-nonsense",
+   "B1-contradiction",
+   "B2-misquote"
+  ],
+  "excluded": [
+   "A4-confusion (no independent FP rate)",
+   "drop-word (not built at census time)",
+   "speaker/format (not built at census time)"
+  ]
+ },
  "inputs": {
   "archive_ref": "origin/arena/01a0d581-fleetyard",
   "book_store": "corpus/docdocgo/html/merged-book-texts_json_1.js",
@@ -11,13 +38,15 @@
   "records_dir": "evidence/runs/m5-raw/records",
   "records_files": 230
  },
+ "main_head": "25bdab98200074ea89c22944188e948d8b748be2",
  "outputs": {
-  "by_transcript_digest": "1740a848c621ffce50ac0b06b55b0321c9faa9b16d284b93dfd9143fb611ea93",
+  "by_transcript_digest": "a5eed6155a2d0552e4eaa102136d5eb31a78ebb405881ef8e1de8ef6944d28ac",
   "by_transcript_files": 230,
   "findings": 1334,
-  "ledger.jsonl": "64977c2fed5be3f5814cf0bf6099d5565d51497572ed6cd559d0554fb72e5e04"
+  "ledger.jsonl": "10f5a99867a3d2763fd9a9fe8baf250b52e2786d6624a318da7a49933f49ffd0"
  },
- "run_utc": "2026-09-25T19:15:19Z",
+ "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
+ "run_utc": "2026-09-25T19:16:57Z",
  "stats": {
   "book_refs": 242,
   "book_refs_bad": 0,
@@ -50,6 +79,14 @@
     "not_checked": 0
    }
   },
+  "coverage": {
+   "detector_run": 206,
+   "human_finding_pass_audited": 0,
+   "machine_adjudicated": 230,
+   "pending_human_review": 230,
+   "transcripts": 230,
+   "zero_finding_transcripts": 24
+  },
   "duplicates_removed": 0,
   "fixtures_active": 16,
   "per_detector": {
@@ -65,5 +102,6 @@
   "transcripts_with_findings": 206
  },
  "tool": "tools/m5r_reduce.py",
- "tool_sha256": "46875c6972cd3c5f684841f3e08c4fc6b630cfaed7b7d59d3d28ebc999cc1b5d"
+ "tool_commit": "2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1",
+ "tool_sha256": "2f59fbeb1c93674596b44223f740c945c05302c7dba16185f73669ec85991961"
 }

@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "moving",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "movement",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
  },
  {
@@ -149,6 +153,10 @@
    "replacement_chars": 0
   },
   "span_text": "may say",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "says",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
  },
  {
@@ -235,6 +243,10 @@
    "replacement_chars": 0
   },
   "span_text": "remark, something heard",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "remark heard",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
  },
  {
@@ -311,6 +323,10 @@
    "replacement_chars": 0
   },
   "span_text": "Trying",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "to try",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
  },
  {
@@ -397,6 +413,10 @@
    "replacement_chars": 0
   },
   "span_text": "inhalants things in",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "inhalants in",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
  },
  {
@@ -483,6 +503,10 @@
    "replacement_chars": 0
   },
   "span_text": "this perfectionistic tendency",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "this tendency",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
  },
  {
@@ -569,6 +593,10 @@
    "replacement_chars": 0
   },
   "span_text": "about automatically with",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "about with",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
  },
  {
@@ -655,6 +683,10 @@
    "replacement_chars": 0
   },
   "span_text": "i myself was",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I was",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
  },
  {
@@ -731,6 +763,10 @@
    "replacement_chars": 0
   },
   "span_text": "I am the source, I am the source. I am the source.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I am the source,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
  },
  {
@@ -807,6 +843,10 @@
    "replacement_chars": 0
   },
   "span_text": "you get",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I got",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Illness_and_SelfHealing_enxautogen_html.txt"
  }
 ]

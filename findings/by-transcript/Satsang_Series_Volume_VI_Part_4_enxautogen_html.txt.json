@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on? What's going on?",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "What's going on?",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "you're in a good space you're in a good space you're in a good space you're in a good space",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "you're in a good space",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt"
  },
  {
@@ -229,6 +237,10 @@
    "replacement_chars": 0
   },
   "span_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Okay.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt"
  },
  {
@@ -307,6 +319,10 @@
    "replacement_chars": 0
   },
   "span_text": "Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye. Bye.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Bye.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Satsang_Series_Volume_VI_Part_4_enxautogen_html.txt"
  }
 ]

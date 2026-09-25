@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "If you want to know the answer to a question, if you want to know the answer to a question, If you want to know the answer to a question, If you want to know the answer to a question, If you want to know the answer to a question, If you want to know the answer to a question,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "If you want to know the answer to a question,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
  },
  {
@@ -145,6 +149,10 @@
    "replacement_chars": 0
   },
   "span_text": "ofGA到",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
  },
  {
@@ -223,6 +231,10 @@
    "replacement_chars": 0
   },
   "span_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I don't know.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
  },
  {
@@ -299,6 +311,10 @@
    "replacement_chars": 0
   },
   "span_text": "it's a good thing. It's a good thing. It's a good thing.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "it's a good thing.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
  },
  {
@@ -369,6 +385,10 @@
    "replacement_chars": 0
   },
   "span_text": "aлись",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
  },
  {
@@ -439,6 +459,10 @@
    "replacement_chars": 0
   },
   "span_text": "רה",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
  },
  {
@@ -509,6 +533,10 @@
    "replacement_chars": 0
   },
   "span_text": "def逝게",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": null,
+  "suspected_intended_status": "not proposable mechanically; human read required",
   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
  },
  {
@@ -587,6 +615,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.txt"
  }
 ]

@@ -73,6 +73,10 @@
    "replacement_chars": 0
   },
   "span_text": "chewing it all over, chewing it all over, chewing it all over.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "chewing it all over,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Presence_of_Spiritual_Awareness_Part_2_enxautogen_html.txt"
  },
  {
@@ -149,6 +153,10 @@
    "replacement_chars": 0
   },
   "span_text": "a fish come up here, a fish come up here, a fish come up here,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "a fish come up here,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Presence_of_Spiritual_Awareness_Part_2_enxautogen_html.txt"
  },
  {
@@ -225,6 +233,10 @@
    "replacement_chars": 0
   },
   "span_text": "Anything could happen anytime. Anything could happen anytime. Anything could happen anytime. Anything could happen anytime.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Anything could happen anytime.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "The_Presence_of_Spiritual_Awareness_Part_2_enxautogen_html.txt"
  }
 ]

@@ -83,6 +83,10 @@
    "replacement_chars": 0
   },
   "span_text": "with ignorance. Ignoring",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "with ignoring",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -159,6 +163,10 @@
    "replacement_chars": 0
   },
   "span_text": "saith",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "sayeth",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -245,6 +253,10 @@
    "replacement_chars": 0
   },
   "span_text": "the ultimate freedom",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "the freedom",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -326,6 +338,10 @@
    "replacement_chars": 0
   },
   "span_text": "hate fourth step",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "hate Step",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -402,6 +418,10 @@
    "replacement_chars": 0
   },
   "span_text": "Somebody",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Someone",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -478,6 +498,10 @@
    "replacement_chars": 0
   },
   "span_text": "because",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "cause",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -564,6 +588,10 @@
    "replacement_chars": 0
   },
   "span_text": "most common commonly",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "most commonly",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -640,6 +668,10 @@
    "replacement_chars": 0
   },
   "span_text": "divas",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "devas",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -721,6 +753,10 @@
    "replacement_chars": 0
   },
   "span_text": "your bank bank",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "your bank",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -797,6 +833,10 @@
    "replacement_chars": 0
   },
   "span_text": "chandlers",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "channelers",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -873,6 +913,10 @@
    "replacement_chars": 0
   },
   "span_text": "greeting",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "reading",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -949,6 +993,10 @@
    "replacement_chars": 0
   },
   "span_text": "trance medium",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "trans-medium",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1025,6 +1073,10 @@
    "replacement_chars": 0
   },
   "span_text": "disbelief",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "this belief",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1101,6 +1153,10 @@
    "replacement_chars": 0
   },
   "span_text": "lower estuary",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "lower-astral",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1177,6 +1233,10 @@
    "replacement_chars": 0
   },
   "span_text": "follows",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "befalls",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1258,6 +1318,10 @@
    "replacement_chars": 0
   },
   "span_text": "dinner and",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "deader than",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1334,6 +1398,10 @@
    "replacement_chars": 0
   },
   "span_text": "imetrex",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Imitrex",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1410,6 +1478,10 @@
    "replacement_chars": 0
   },
   "span_text": "till",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "until",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1496,6 +1568,10 @@
    "replacement_chars": 0
   },
   "span_text": "study laughter how",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "study how",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1572,6 +1648,10 @@
    "replacement_chars": 0
   },
   "span_text": "mitre",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "miter",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1648,6 +1728,10 @@
    "replacement_chars": 0
   },
   "span_text": "incapacitate",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "get incapacitated",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1724,6 +1808,10 @@
    "replacement_chars": 0
   },
   "span_text": "doggies",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "druggies",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1800,6 +1888,10 @@
    "replacement_chars": 0
   },
   "span_text": "context",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "contacts",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1876,6 +1968,10 @@
    "replacement_chars": 0
   },
   "span_text": "reality",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "temporality",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -1962,6 +2058,10 @@
    "replacement_chars": 0
   },
   "span_text": "the thing same",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "the same",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -2038,6 +2138,10 @@
    "replacement_chars": 0
   },
   "span_text": "early",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "really",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -2114,6 +2218,10 @@
    "replacement_chars": 0
   },
   "span_text": "personality",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "partiality",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  },
  {
@@ -2190,6 +2298,10 @@
    "replacement_chars": 0
   },
   "span_text": "around",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "about",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
  }
 ]

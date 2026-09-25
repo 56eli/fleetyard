@@ -78,6 +78,10 @@
    "replacement_chars": 0
   },
   "span_text": "processes enormous, enormous",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "processes enormous",
+  "suspected_intended_status": "from runner signal (B2-misquote); not gate-verified — human read required",
   "transcript": "Transcending_Barriers_Jun_2005_Part_2.txt"
  },
  {
@@ -154,6 +158,10 @@
    "replacement_chars": 0
   },
   "span_text": "whatever it takes is whatever it takes. Whatever it takes is whatever it takes. Whatever it takes is whatever it takes.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "whatever it takes is whatever it takes.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Barriers_Jun_2005_Part_2.txt"
  },
  {
@@ -232,6 +240,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yeah.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Barriers_Jun_2005_Part_2.txt"
  },
  {
@@ -310,6 +322,10 @@
    "replacement_chars": 0
   },
   "span_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Yes.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Barriers_Jun_2005_Part_2.txt"
  },
  {
@@ -388,6 +404,10 @@
    "replacement_chars": 0
   },
   "span_text": "it's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "it's at 12 o'clock.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Barriers_Jun_2005_Part_2.txt"
  },
  {
@@ -466,6 +486,10 @@
    "replacement_chars": 0
   },
   "span_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Thank you.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Barriers_Jun_2005_Part_2.txt"
  },
  {
@@ -542,6 +566,10 @@
    "replacement_chars": 0
   },
   "span_text": "wear it and he would wear it and he would wear it and he would wear it and he would",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "wear it and he would",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Barriers_Jun_2005_Part_2.txt"
  }
 ]

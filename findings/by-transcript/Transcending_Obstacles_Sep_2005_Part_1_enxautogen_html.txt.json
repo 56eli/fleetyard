@@ -75,6 +75,10 @@
    "replacement_chars": 0
   },
   "span_text": "ha, ha, ha, ha, ha, ha, ha, ha, ha, ha,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "ha,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
  },
  {
@@ -151,6 +155,10 @@
    "replacement_chars": 0
   },
   "span_text": "they ask a question, they ask a question, they ask a question,",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "they ask a question,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
  },
  {
@@ -227,6 +235,10 @@
    "replacement_chars": 0
   },
   "span_text": "I spent many years. I hitchhiked to school every day for years. I spent many years. I hitchhiked to school every day for years. I spent many years. I hitchhiked to school every day for years. I spent many years. I hitchhiked to school every day for years.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "I spent many years. I hitchhiked to school every day for years.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
  },
  {
@@ -305,6 +317,10 @@
    "replacement_chars": 0
   },
   "span_text": "It's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a, it's like a.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "It's like a,",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
  },
  {
@@ -383,6 +399,10 @@
    "replacement_chars": 0
   },
   "span_text": "You become the witness. You become the witness. You become the witness. You become the witness. You become the witness. You become the witness. You become the witness. You become the witness.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "You become the witness.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
  },
  {
@@ -461,6 +481,10 @@
    "replacement_chars": 0
   },
   "span_text": "Have it. Have it. Have it. Have it. Have it. Have it.",
+  "status": "open",
+  "status_by": "machine-adjudicated by tools/m5r_reduce.py@2f55b0cf95c16c2eaa9e45e01306bd44acb5b0c1; human confirmation required",
+  "suspected_intended": "Have it.",
+  "suspected_intended_status": "from runner signal (A1-repetition); not gate-verified — human read required",
   "transcript": "Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.txt"
  }
 ]

@@ -59,3 +59,11 @@ A1 938/938, A2 158/158, B1 12/12, B2 228/228, 0 flagged (1,336/1,336 signal clai
 classes unchanged (CERTAIN-inherited 3 / HIGH 0 / CANDIDATE 1331; seeded 3). Errata #2
 appended to the M5-R delivery record; analysis in
 findings/M4-q5-A1-CLAIM-RECONCILIATION.md. No detector change required.
+2026-09-25T19:2xZ WORKER-2: ORCH-2 queue observed (ORCH-2 booted; TASK-013 gated FAIL/
+INCOMPLETE on C6/C7/C8 at aed9df6; PAUSE-WORKER-A-2026-09-25-001 in force — only
+TASK-016 actionable; M4 paused by control). TASK-016 repair implemented: R1 STANDARDS
+record shape (suspected_intended + status/status_by on every finding), R2 coverage row
+(230/230/230/0/230/24) in SUMMARY + README with qualified titles, R3 LAW §8 manifest
+(tool_commit, policy sha, main head, book-store sha, inherited detector commit,
+derivations for all digests); +3 tests (26 green); no classes/ledger substance changed.
+M4 q3/q4/q5 deliveries (already pushed) stay PROVISIONAL-UNGATED and are not gated.
