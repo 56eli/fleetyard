@@ -46,3 +46,21 @@ ORCH-2 gate per LAW §9 (per-criterion verdicts; no certification without
 held-out/provenance evidence) — **ORCH-2 lane does not exist yet** as of this
 delivery. Next in PLAN-v2 order after M5-R: **M4** (self-improvement loop), then the
 FINAL **M6** report which this ledger feeds.
+
+## Errata (append-only) — 2026-09-25T18:5xZ · fixture-overlap criterion corrected
+
+M5-R v1 (commit `8011439`) matched fixture overlap by *containment of the fixture's
+start offset inside the finding span*. That missed the CF-015 case, where the
+detector's span begins **after** the fixture's offset but inside the fixture's quoted
+text. Corrected to **span-vs-span overlap** in `tools/m5r_reduce.py` (new test
+`test_fixture_overlap_uses_the_fixture_quoted_span`).
+
+Corrected numbers (supersede the block above):
+
+- Classes: **CERTAIN (inherited fixture) 3** — CF-003 (M5R-0461), CF-006 (M5R-0460),
+  **CF-015 (M5R-0078, B2-misquote @5854)** — **HIGH 0**, **CANDIDATE 1,331**.
+- Seeded 3 / independent 1,331 (LAW §9). This now matches the v1 audit's "detectors
+  overlap 3 of the 16 hand-found CERTAIN errors" claim, re-derived from the ledger.
+- Everything else (1,334 findings, 0 citation failures, 242/242 book quotes
+  byte-exact, determinism) is unchanged. New ledger digest is in
+  `findings/PROVENANCE.json`.

@@ -21,11 +21,11 @@ Reading of the funnel: the inherited census is **1,334 records**; two of them ca
 
 | class | findings | seeded | note |
 |---|---|---|---|
-| CERTAIN (inherited fixture) | 2 | 2 | prior v1 hand-confirmed fixtures; in-sample |
+| CERTAIN (inherited fixture) | 3 | 3 | prior v1 hand-confirmed fixtures; in-sample |
 | HIGH (convergence, proposed) | 0 | 0 | >=2 independent families + written rationale; gate review |
-| CANDIDATE | 1332 | 0 | single signal; human read required |
+| CANDIDATE | 1331 | 0 | single signal; human read required |
 
-Seeded / independent split (LAW §9): **seeded (fixture-overlap, in-sample) = 2**; **independent = 1332**. Seeded findings are excluded from any precision/recall claim by construction.
+Seeded / independent split (LAW §9): **seeded (fixture-overlap, in-sample) = 3**; **independent = 1331**. Seeded findings are excluded from any precision/recall claim by construction.
 
 ## 3. By detector (merged findings carrying it)
 
@@ -46,7 +46,7 @@ Seeded / independent split (LAW §9): **seeded (fixture-overlap, in-sample) = 2*
 | 2005 | 90 | 90 | 0 | 0 |
 | 2006 | 57 | 57 | 0 | 0 |
 | 2007 | 199 | 199 | 0 | 0 |
-| 2008 | 175 | 175 | 0 | 0 |
+| 2008 | 175 | 174 | 0 | 1 |
 | 2009 | 76 | 76 | 0 | 0 |
 | 2010 | 52 | 52 | 0 | 0 |
 | 2011 | 60 | 58 | 0 | 2 |
@@ -69,7 +69,7 @@ Seeded / independent split (LAW §9): **seeded (fixture-overlap, in-sample) = 2*
 | God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_3_enxautogen_html.txt | 17 | CANDIDATE |
 | Question_Answer_Session_Mar_2011_enxautogen_html.txt | 16 | CANDIDATE |
 | Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_2_enxautogen_html.txt | 16 | CANDIDATE |
-| A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 15 | CANDIDATE |
+| A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 15 | CANDIDATE, CERTAIN |
 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 15 | CANDIDATE |
 | Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt | 15 | CANDIDATE |
 | Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt | 14 | CANDIDATE |
@@ -83,6 +83,7 @@ Seeded / independent split (LAW §9): **seeded (fixture-overlap, in-sample) = 2*
 
 ## 7. CERTAIN (inherited fixture) findings
 
+- **M5R-0078** ↔ CF-015 @5833 — `Spiritual purity has no influence. Interest in the personal lives of s` → `Spiritual purity has no interest in the personal lives of students.` (leg b; WORKER hand-read (TASK-002); re-audited TASK-006: retained C)
 - **M5R-0460** ↔ CF-006 @2355 — `And above which all the energies are negative. And above which all the` → `And above which all the energies are positive.` (leg b; WORKER hand-read (TASK-002); re-audited TASK-006: retained C)
 - **M5R-0461** ↔ CF-003 @4543 — `255% of people are happy` → `55% of people are happy` (leg b; WORKER hand-read (TASK-002); re-audited TASK-006: retained C)
 
@@ -116,4 +117,4 @@ Review queue: `REVIEW-QUEUE.md` (top 100 by mechanical score; the score is an or
 - Detectors that produced the raw census: A1-repetition, A2-nonsense, B1-contradiction, B2-misquote. A4-confusion, drop-word and speaker/format were not run (unmeasured, not zero).
 - Provenance: see `PROVENANCE.json` (inputs pinned by sha256; corpus digest method defined explicitly, unlike the inherited run's).
 
-_Generated 2026-09-25T18:39:30Z by `tools/m5r_reduce.py` (a3db2f9618fd1747)._
+_Generated 2026-09-25T18:45:45Z by `tools/m5r_reduce.py` (c2237ec4792ae8da)._

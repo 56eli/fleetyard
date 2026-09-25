@@ -117,25 +117,37 @@
    }
   ],
   "claims_all_corroborated": true,
-  "class": "CANDIDATE",
+  "class": "CERTAIN (inherited fixture)",
   "detectors": [
    "B2-misquote"
   ],
   "families": [
    "content/doctrine"
   ],
-  "fixture_overlap": [],
+  "fixture_overlap": [
+   {
+    "confidence": "CERTAIN",
+    "evidence_class": "b",
+    "id": "CF-015",
+    "offset": 5833,
+    "quoted": "Spiritual purity has no influence. Interest in the personal lives of students.",
+    "status": "confirmed",
+    "status_by": "WORKER hand-read (TASK-002); re-audited TASK-006: retained CERTAIN",
+    "suspected": "Spiritual purity has no interest in the personal lives of students."
+   }
+  ],
   "id": "M5R-0078",
   "paragraph": 0,
-  "rationale": "Single-family or single-signal evidence; no independent second signal and/or no verified book leg. Needs a human read (STANDARDS leg a/b/c) before any upgrade.",
+  "rationale": "Covers hand-confirmed fixture(s) CF-015 — CERTAIN per STANDARDS, inherited (v1 hand-read, gate-reviewed); in-sample for detector metrics (seeded=true), not admissible as precision evidence (LAW §9).",
   "review_score": [
-   2,
+   1,
    [
-    "book quote diverges word-level"
+    "book quote diverges word-level",
+    "in-sample (fixture overlap)"
    ]
   ],
   "review_status": "machine-adjudicated (mechanical bytes only); human confirmation required",
-  "seeded": false,
+  "seeded": true,
   "signals": [
    {
     "asserted_intended": "no interest",

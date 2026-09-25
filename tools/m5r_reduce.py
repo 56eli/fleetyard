@@ -449,8 +449,12 @@ def adjudicate(finding, transcripts, books, fixtures):
             out["book_checks"].append(bc)
     # fixture cross-reference (in-sample labelling, LAW §9)
     for fx in fixtures:
+        fx_start = fx["char_offset"]
+        fx_end = fx_start + len(fx.get("quoted", "")) or fx_start + 1
+        if fx_end <= fx_start:
+            fx_end = fx_start + 1
         if fx["transcript"] == finding["transcript"] and \
-                finding["start"] <= fx["char_offset"] < max(finding["end"], finding["start"] + 1):
+                finding["start"] < fx_end and fx_start < finding["end"]:
             out["fixture_overlap"].append({
                 "id": fx["id"], "confidence": fx["confidence"],
                 "offset": fx["char_offset"], "quoted": fx["quoted"],

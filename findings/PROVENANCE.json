@@ -12,12 +12,12 @@
   "records_files": 230
  },
  "outputs": {
-  "by_transcript_digest": "107b6d346a79fdce3f96704f2b1ae743e9f899fc02cc8ceb97b1e91a7b33acb9",
+  "by_transcript_digest": "76af4637e1ee20bc4c2c70017ee02d4fa3393b3fabc4b1d47ff9bd8a327f4640",
   "by_transcript_files": 230,
   "findings": 1334,
-  "ledger.jsonl": "c05429f941ed2444ed48017748f3cfda2e35b7f313e5fdf018b06eff56c79740"
+  "ledger.jsonl": "62b33da5fda712c27c5044dbd9dea2acb4c1f02959506eff91b0c22587a67138"
  },
- "run_utc": "2026-09-25T18:39:30Z",
+ "run_utc": "2026-09-25T18:45:45Z",
  "stats": {
   "book_refs": 242,
   "book_refs_bad": 0,
@@ -60,10 +60,10 @@
   },
   "raw_signals": 1336,
   "record_files": 230,
-  "seeded": 2,
+  "seeded": 3,
   "transcripts_total": 230,
   "transcripts_with_findings": 206
  },
  "tool": "tools/m5r_reduce.py",
- "tool_sha256": "a3db2f9618fd174718491875b1360b6bfd61f8aa18321788a7015e4305f010ec"
+ "tool_sha256": "c2237ec4792ae8da3f1ad7ddf8b54b2cdc7db42676f2508d5145f3989d190162"
 }

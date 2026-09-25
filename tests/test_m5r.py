@@ -152,6 +152,29 @@ class M5RCase(unittest.TestCase):
         self.assertTrue(amen["rederived_repetition"]["span_fully_periodic"])
         self.assertEqual(len(by), len(findings))
 
+    def test_fixture_overlap_uses_the_fixture_quoted_span(self):
+        """A finding that starts after the fixture offset but inside its quoted
+        text must still be labelled seeded (CF-015 case in the real corpus)."""
+        phrase = "255%"
+        recs = [rec("T2_enxautogen_html.txt", self.off_255 + 1, "55%",
+                    "B2-misquote", "55%")]
+        # widen the fixture's quoted text to cover the later finding
+        fx = json.load(open(os.path.join(self.fixtures, "confirmed.json"), encoding="utf-8"))
+        fx[0]["quoted"] = "says 255%"
+        fx[0]["char_offset"] = self.off_255 - 5
+        with open(os.path.join(self.fixtures, "confirmed.json"), "w", encoding="utf-8") as fh:
+            json.dump(fx, fh)
+        with open(os.path.join(self.records, "rz.json"), "w", encoding="utf-8") as fh:
+            json.dump(recs, fh)
+        out = os.path.join(self.root, "outz")
+        _, findings = self.run_reducer(out)
+        hits = [x for x in findings if x["transcript"].startswith("T2")
+                and x["char_offset"] <= self.off_255 + 1 < x["span_end"]]
+        self.assertEqual(len(hits), 1)
+        f = hits[0]
+        self.assertTrue(f["seeded"])
+        self.assertTrue(f["class"].startswith("CERTAIN"))
+
     def test_never_assigns_certain_without_inherited_fixture(self):
         out = os.path.join(self.root, "out2")
         _, findings = self.run_reducer(out)

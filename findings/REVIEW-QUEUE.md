@@ -59,50 +59,50 @@ Priority is a **mechanical** score over verified facts (verified book leg, numbe
 | 53 | 2 | M5R-0073 | A_Unique_Sedona_Seminar_Dec_2008_Part_1_enxautogen_html.txt | 59730 | A2-nonsense | script-mix | `정치적으로도 그러하고요` |
 | 54 | 2 | M5R-0074 | A_Unique_Sedona_Seminar_Dec_2008_Part_1_enxautogen_html.txt | 62132 | A2-nonsense | script-mix | `그 순간은 945였습니다` |
 | 55 | 2 | M5R-0075 | A_Unique_Sedona_Seminar_Dec_2008_Part_1_enxautogen_html.txt | 62224 | A2-nonsense | script-mix | `농담이신 것 같아요` |
-| 56 | 2 | M5R-0078 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 5854 | B2-misquote | book quote diverges word-level | `no influence. Interest` |
-| 57 | 2 | M5R-0079 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 8628 | A2-nonsense | script-mix | `열두 살 때였는데요` |
-| 58 | 2 | M5R-0080 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 8764 | A2-nonsense | script-mix | `이것에 대해서` |
-| 59 | 2 | M5R-0083 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 10840 | A2-nonsense | script-mix | `그것은` |
-| 60 | 2 | M5R-0084 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 13273 | A2-nonsense | script-mix | `돈 좀 보내주세요` |
-| 61 | 2 | M5R-0085 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 13310 | A2-nonsense | script-mix | `좀 보내주시고` |
-| 62 | 2 | M5R-0086 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 13402 | A2-nonsense | script-mix | `블로그도 좀 보내주시고` |
-| 63 | 2 | M5R-0102 | A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt | 15362 | A2-nonsense | undecodable byte(s) | `�` |
-| 64 | 2 | M5R-0103 | A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt | 15376 | A2-nonsense | undecodable byte(s) | `��` |
-| 65 | 2 | M5R-0104 | A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt | 21223 | A2-nonsense | script-mix | `신이 일어났습니다` |
-| 66 | 2 | M5R-0105 | A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt | 21434 | A2-nonsense | script-mix | `신격으로부터 의식으로서의` |
-| 67 | 2 | M5R-0106 | A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt | 22510 | A2-nonsense | script-mix | `일자리 필요로` |
-| 68 | 2 | M5R-0126 | Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html.txt | 50627 | A2-nonsense | script-mix | `a같y` |
-| 69 | 2 | M5R-0155 | Belief,_Trust_and_Credibility_Jun_2008_Part_3_enxautogen_html.txt | 55723 | A1-repetition | periodic run x15; runner claim not re-derived | `Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-h` |
-| 70 | 2 | M5R-0159 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 4189 | B2-misquote | book quote diverges word-level | `life is` |
-| 71 | 2 | M5R-0161 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 9221 | B2-misquote | book quote diverges word-level | `Energy. Gets. Is` |
-| 72 | 2 | M5R-0162 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 9800 | B2-misquote | book quote diverges word-level | `Long` |
-| 73 | 2 | M5R-0163 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 12486 | B2-misquote | book quote diverges word-level | `Wrapped` |
-| 74 | 2 | M5R-0165 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 19004 | B2-misquote | book quote diverges word-level | `help us. A` |
-| 75 | 2 | M5R-0167 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 23059 | B2-misquote | book quote diverges word-level | `which life, the` |
-| 76 | 2 | M5R-0168 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 24412 | B2-misquote | book quote diverges word-level | `found` |
-| 77 | 2 | M5R-0169 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 25339 | A1-repetition | periodic run x6; runner claim not re-derived | `Why the overdone-ness of the web spider? Why the overdone-ne` |
-| 78 | 2 | M5R-0170 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 28353 | B2-misquote | book quote diverges word-level | `in Tigris` |
-| 79 | 2 | M5R-0174 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 49007 | B2-misquote | book quote diverges word-level | `minuscule` |
-| 80 | 2 | M5R-0175 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 51386 | A1-repetition | periodic run x5; runner claim not re-derived | `there is no such thing as non-life. There is no such thing a` |
-| 81 | 2 | M5R-0179 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 10327 | B2-misquote | book quote diverges word-level | `which comes, is` |
-| 82 | 2 | M5R-0180 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 11431 | B2-misquote | book quote diverges word-level | `challenged` |
-| 83 | 2 | M5R-0181 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 17775 | B2-misquote | book quote diverges word-level | `And therefore... Then` |
-| 84 | 2 | M5R-0182 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 18744 | B2-misquote | book quote diverges word-level | `is it` |
-| 85 | 2 | M5R-0183 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 25113 | B2-misquote | book quote diverges word-level | `meaning` |
-| 86 | 2 | M5R-0184 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 42507 | B2-misquote | book quote diverges word-level | `then maybe` |
-| 87 | 2 | M5R-0185 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 42832 | B2-misquote | book quote diverges word-level | `who seems` |
-| 88 | 2 | M5R-0186 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 45172 | B2-misquote | book quote diverges word-level | `much bones` |
-| 89 | 2 | M5R-0187 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 53965 | B2-misquote | book quote diverges word-level | `incredible organism, mechanism` |
-| 90 | 2 | M5R-0188 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 58247 | B2-misquote | book quote diverges word-level | `speaking` |
-| 91 | 2 | M5R-0190 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 63855 | B2-misquote | book quote diverges word-level | `himself` |
-| 92 | 2 | M5R-0191 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 65345 | B2-misquote | book quote diverges word-level | `question` |
-| 93 | 2 | M5R-0192 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 5729 | B2-misquote | book quote diverges word-level | `knew` |
-| 94 | 2 | M5R-0193 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 5829 | B2-misquote | book quote diverges word-level | `earned karma, good` |
-| 95 | 2 | M5R-0194 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 15629 | B2-misquote | book quote diverges word-level | `were never... Never suspected` |
-| 96 | 2 | M5R-0195 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 20755 | B2-misquote | book quote diverges word-level | `path` |
-| 97 | 2 | M5R-0196 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 22257 | B2-misquote | book quote diverges word-level | `personal state, spiritual` |
-| 98 | 2 | M5R-0198 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 37007 | B2-misquote | book quote diverges word-level | `questions really refer` |
-| 99 | 2 | M5R-0199 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 37329 | B2-misquote | book quote diverges word-level | `Beyond` |
-| 100 | 2 | M5R-0200 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 41737 | B2-misquote | book quote diverges word-level | `can go take` |
+| 56 | 2 | M5R-0079 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 8628 | A2-nonsense | script-mix | `열두 살 때였는데요` |
+| 57 | 2 | M5R-0080 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 8764 | A2-nonsense | script-mix | `이것에 대해서` |
+| 58 | 2 | M5R-0083 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 10840 | A2-nonsense | script-mix | `그것은` |
+| 59 | 2 | M5R-0084 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 13273 | A2-nonsense | script-mix | `돈 좀 보내주세요` |
+| 60 | 2 | M5R-0085 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 13310 | A2-nonsense | script-mix | `좀 보내주시고` |
+| 61 | 2 | M5R-0086 | A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt | 13402 | A2-nonsense | script-mix | `블로그도 좀 보내주시고` |
+| 62 | 2 | M5R-0102 | A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt | 15362 | A2-nonsense | undecodable byte(s) | `�` |
+| 63 | 2 | M5R-0103 | A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt | 15376 | A2-nonsense | undecodable byte(s) | `��` |
+| 64 | 2 | M5R-0104 | A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt | 21223 | A2-nonsense | script-mix | `신이 일어났습니다` |
+| 65 | 2 | M5R-0105 | A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt | 21434 | A2-nonsense | script-mix | `신격으로부터 의식으로서의` |
+| 66 | 2 | M5R-0106 | A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt | 22510 | A2-nonsense | script-mix | `일자리 필요로` |
+| 67 | 2 | M5R-0126 | Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html.txt | 50627 | A2-nonsense | script-mix | `a같y` |
+| 68 | 2 | M5R-0155 | Belief,_Trust_and_Credibility_Jun_2008_Part_3_enxautogen_html.txt | 55723 | A1-repetition | periodic run x15; runner claim not re-derived | `Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-h` |
+| 69 | 2 | M5R-0159 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 4189 | B2-misquote | book quote diverges word-level | `life is` |
+| 70 | 2 | M5R-0161 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 9221 | B2-misquote | book quote diverges word-level | `Energy. Gets. Is` |
+| 71 | 2 | M5R-0162 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 9800 | B2-misquote | book quote diverges word-level | `Long` |
+| 72 | 2 | M5R-0163 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 12486 | B2-misquote | book quote diverges word-level | `Wrapped` |
+| 73 | 2 | M5R-0165 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 19004 | B2-misquote | book quote diverges word-level | `help us. A` |
+| 74 | 2 | M5R-0167 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 23059 | B2-misquote | book quote diverges word-level | `which life, the` |
+| 75 | 2 | M5R-0168 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 24412 | B2-misquote | book quote diverges word-level | `found` |
+| 76 | 2 | M5R-0169 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 25339 | A1-repetition | periodic run x6; runner claim not re-derived | `Why the overdone-ness of the web spider? Why the overdone-ne` |
+| 77 | 2 | M5R-0170 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 28353 | B2-misquote | book quote diverges word-level | `in Tigris` |
+| 78 | 2 | M5R-0174 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 49007 | B2-misquote | book quote diverges word-level | `minuscule` |
+| 79 | 2 | M5R-0175 | Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt | 51386 | A1-repetition | periodic run x5; runner claim not re-derived | `there is no such thing as non-life. There is no such thing a` |
+| 80 | 2 | M5R-0179 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 10327 | B2-misquote | book quote diverges word-level | `which comes, is` |
+| 81 | 2 | M5R-0180 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 11431 | B2-misquote | book quote diverges word-level | `challenged` |
+| 82 | 2 | M5R-0181 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 17775 | B2-misquote | book quote diverges word-level | `And therefore... Then` |
+| 83 | 2 | M5R-0182 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 18744 | B2-misquote | book quote diverges word-level | `is it` |
+| 84 | 2 | M5R-0183 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 25113 | B2-misquote | book quote diverges word-level | `meaning` |
+| 85 | 2 | M5R-0184 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 42507 | B2-misquote | book quote diverges word-level | `then maybe` |
+| 86 | 2 | M5R-0185 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 42832 | B2-misquote | book quote diverges word-level | `who seems` |
+| 87 | 2 | M5R-0186 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 45172 | B2-misquote | book quote diverges word-level | `much bones` |
+| 88 | 2 | M5R-0187 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 53965 | B2-misquote | book quote diverges word-level | `incredible organism, mechanism` |
+| 89 | 2 | M5R-0188 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 58247 | B2-misquote | book quote diverges word-level | `speaking` |
+| 90 | 2 | M5R-0190 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 63855 | B2-misquote | book quote diverges word-level | `himself` |
+| 91 | 2 | M5R-0191 | Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.txt | 65345 | B2-misquote | book quote diverges word-level | `question` |
+| 92 | 2 | M5R-0192 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 5729 | B2-misquote | book quote diverges word-level | `knew` |
+| 93 | 2 | M5R-0193 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 5829 | B2-misquote | book quote diverges word-level | `earned karma, good` |
+| 94 | 2 | M5R-0194 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 15629 | B2-misquote | book quote diverges word-level | `were never... Never suspected` |
+| 95 | 2 | M5R-0195 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 20755 | B2-misquote | book quote diverges word-level | `path` |
+| 96 | 2 | M5R-0196 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 22257 | B2-misquote | book quote diverges word-level | `personal state, spiritual` |
+| 97 | 2 | M5R-0198 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 37007 | B2-misquote | book quote diverges word-level | `questions really refer` |
+| 98 | 2 | M5R-0199 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 37329 | B2-misquote | book quote diverges word-level | `Beyond` |
+| 99 | 2 | M5R-0200 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 41737 | B2-misquote | book quote diverges word-level | `can go take` |
+| 100 | 2 | M5R-0201 | Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.txt | 46082 | B2-misquote | book quote diverges word-level | `it gets` |
 
 Full ranked order: sort `ledger.jsonl` by `review_score[0]` descending. Queue length 1334 findings.
