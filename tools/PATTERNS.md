@@ -41,7 +41,7 @@ words, numbers, citations. That gap is the honest headline of this page.
 | B1-contradiction | 12 | 12/12 (book quotes byte-exact) | 2/16 (CF-003, CF-006) | **unmeasured** | no |
 | B2-misquote | 228 | 228/228 (book quotes byte-exact) | 1/16 (CF-015) | **unmeasured** | no |
 | A4-confusion | — | excluded since v1 (no independent FP rate) | — | unmeasured | no |
-| drop-word | 122 (tuning, C1-drop) | built in M4-q2; 57/122 adjudicated CERTAIN, 65 CANDIDATE (`runs/m4-q2-adjudication/`, tool commit `9cd905d`) | 2/4 provisional fixtures confirmed (D2-001, D2-003; D2-002/D2-004 refused — two-word) | **unmeasured** | no |
+| drop-word | 122 (tuning, C1-drop) | built in M4-q2; 57/122 adjudicated CERTAIN under leg (d)(i), 65 CANDIDATE (`runs/m4-q2-adjudication/`, tool commit `9cd905d`) — **57 is a floor-5 number: never quote it without its sensitivity row (floors 3/5/8/10 → 71/57/33/22)** | 2/4 provisional fixtures confirmed (D2-001, D2-003; D2-002/D2-004 refused — two-word) | **unmeasured** | no |
 | speaker/format | 49 (v1 tuning, `signals.json` sha `86c8f57d…`) · 48 (v2 tuning, `signals-v2tuning.json`) | format half built in M4-q3 (speaker half out of mechanical scope — corpus census); **q3 gate INCOMPLETE**: shipping evidence was missing and has been rebuilt by WORKER-2 (fixture recall **0/16**, clean set **1/59**, §8 bindings) — ORCH-2 re-gate outstanding | 0/16 | **unmeasured** | no (restriction stands) |
 
 Fixtures are **in-sample** by construction (LAW §9: seeded hits are never
@@ -130,6 +130,31 @@ with the book citation that supplies them (inverse of B2's replace/insert cases)
 > adjudication under (d) before any CERTAIN/HIGH claim. No adjudication is performed
 > here: M4 is parked under `PAUSE-WORKER-A-2026-09-25-001` (ERRATA-25e §1) until M5-R
 > re-gates PASS. Recorded, not acted on.
+
+### 5b-bis. TASK-018 delivered — leg (d) adjudication outcome (appended 2026-09-25T21:5xZ)
+
+The 122 C1-drop signals were adjudicated **individually** under the enacted leg (d)
+(`runs/m4-q2-adjudication/`, tool `tools/m4_q2_adjudicate.py` at `9cd905d`, 13 tests):
+
+| outcome | signals |
+|---|---|
+| **CERTAIN leg (d)(i)** — book ground truth, one word absent, restoration completes the match | **57** |
+| leg (d)(ii) — adjacent repetition | 0 |
+| CANDIDATE (unclassified) | 65 |
+
+CANDIDATE reasons: `restoration-not-minimal` 48 (two or more words absent — the narrow leg does
+not reach them), `flank-too-short` 15, `region-not-realignable` 2. Four of the 57 are
+`seeded: true` (they overlap v1 hand-confirmed fixture spans) and are excluded from any metric
+by construction.
+
+**The 57 is a floor-5 number and must never be quoted bare.** Clause 1's "closely tracks" is
+defined as ≥5 exactly-matched tokens on each side of the omission, fixed before counting; the
+sensitivity is published: floors 3/5/8/10 → **71 / 57 / 33 / 22**. Quote the row, not the number.
+
+Fixtures under the same clauses: D2-001 (`things`) and D2-003 (`high`) confirmed (clause d-i);
+D2-002 and D2-004 stay CANDIDATE because restoring two words is a larger edit than clause d-i
+allows. All four remain IN-SAMPLE / detector-derived — never precision evidence (LAW §9). No
+threshold, rule or detector was changed by the adjudication.
 
 ## 5c. M4-q3 — speaker/format: format half measured, speaker half out of scope
 
