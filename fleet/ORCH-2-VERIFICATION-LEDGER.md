@@ -409,3 +409,46 @@ yields known verdicts. Owed by me: a `--selftest` mode over a small fixture tree
 refactor that breaks a section fails loudly instead of silently changing a gate result. Until it exists, every
 instrument change must be diffed against the previous committed output — which is why
 `fleet/gate-tools/orch2_verify_output_4fc40c8.txt` is committed beside the tool.
+
+---
+
+## 12. QUANTUM-B READINESS — ANNEX amendment §F and instrument §12 (CONTROL seq 36)
+
+Instrument v3.2: **231 rows · PASS 192 · FAIL 17 · INFO 20 · PROXY 2**. The 17 FAIL rows cover **16 distinct open
+items** — item v2.a appears twice, once as the criterion-v2.5 row and once as the §12 blocker row, deliberately, so
+that the thing standing between the fleet and TASK-015 is visible in the readiness section and not only inside the
+split criteria.
+
+**§12 rows (all new).** Frozen-input drift against ANNEX B1/B4: **6/6 match at the worker head** (`det_dropword.py
+a0236325…`, `det_format.py ef9ff4f2…`, `m5r_reduce.py 6d4bb9ce…`, ledger `d42136c6…`, policy manifest `0fe20a60…`,
+corpus zip `3f36c520…`) plus the book store `c0892fcd…` at its manifest path
+(`corpus/docdocgo/html/merged-book-texts_json_1.js`). Holdout 33 as the pre-registration will bind it. The four
+label-tainted transcripts **4/4 present by name**; denominators primary 33 / sensitivity 29 pre-declared. Split-v2
+file digest at this head `73d86f0d…` (expected to change exactly once, when item v2.a lands). No pre-registration
+artefact exists — **the correct state** while v2.a/v2.b are open. No receipt consumes the v2 holdout.
+
+**ANNEX amendment §F (append-only, in `fleet/queue/pending/TASK-019.md`).** Deriving the taint instead of restating
+it corrected the ANNEX's own wording: A4 called the four excluded transcripts "fixture-adjacent", but the holdout
+contains **zero** fixture transcripts (verified in §10) — what those four carry is **prior hand labels** from the
+pre-seal TASK-018 adjudication. §F therefore: names the four and their seven prior verdicts (F1); fixes **primary 33
+/ sensitivity 29** from a single run with no third denominator permitted (F2); requires the seven signals to be
+**re-adjudicated blind** and a prior-vs-new comparison published, disagreements reported and never silently
+reconciled — which turns a disclosure into a measurement (F3, new requirement D3-bis); forbids presenting the seven
+as discoveries (F4); restates ERRATA-25e §2 for holdout rows — no auto-promotion, individual reasons and citations,
+CANDIDATE never blended, the restricted 57 not a floor (F5); binds the **two caveat sentences** that must ride with
+every quantum-b figure, the seal's "estimate under this split, not a pristine out-of-sample number" and the
+drop-consistency token rule from self-item O-1 (F6); and makes frozen-input drift machine-checked, with a drift
+voiding the pre-registration (F7).
+
+**Instrument defect #25 (cumulative 25), a false FAIL in the dangerous direction.** My first readiness row reported
+that two receipts already declared the holdout spent and therefore that the quantum-b run had happened. Both receipts
+bind `split_file: tools/HELD-OUT-SPLIT.json` and `split_salt: fleetyard-m4-holdout-2026-09-25` — the **v1** split.
+The row now classifies a receipt by the split it actually consumes (v2 split file or v2 salt) and reports the two v1
+receipts as expected. Rule: **a consumption claim is only about the artefact it names**; testing "did anyone consume
+a holdout" when the criterion is "did anyone consume *this* holdout" produces exactly the false alarm that would have
+blocked a legitimate run.
+
+**State after this cycle.** Quantum b remains **HELD** and correctly so: no pre-registration commit exists, item v2.a
+is open (so v2.7's frozen inputs are not yet frozen), and item v2.b's note is unpublished. Nothing in §12 indicates
+drift or a premature run. TASK-015 M6-FINAL stays blocked behind quantum b; no detector is promotable; no rate, no
+precision, no M6 figure; M6-P owner-accepted and not re-certified.

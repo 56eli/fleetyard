@@ -340,7 +340,25 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   unmodified declared [n=1]
   PASS   archive lane cited read-only, never re-stamped [n=1]
 
-== summary: 222 rows · FAIL 16 · INFO 18 · PASS 186 · PROXY 2
+== 12. quantum b readiness (TASK-019 ANNEX) ==
+  PASS   ANNEX B1/B4 frozen inputs have NOT drifted from the worker head [n=6]
+         a drift on any frozen input voids the pre-registration and forces a new one (ANNEX §F7)
+  PASS   book store frozen digest (corpus/docdocgo/html/merged-book-texts_json_1.js)
+  PASS   the holdout the pre-registration will bind [n=33]
+  PASS   ANNEX §F1 — the four label-tainted holdout transcripts are fixed BY NAME [n=4]
+         they carry prior TASK-018 labels (3 CERTAIN-leg-d + 4 CANDIDATE), NOT fixtures - the holdout has zero fixture transcripts
+  PASS   ANNEX §F2 — both denominators pre-declared from ONE run [n=33]
+  FAIL   BLOCKER — quantum b may not run until item v2.a lands (v2.7 needs frozen inputs) [n=1]  <<< FAIL
+         expected the seal binds the actual fixture digest c40d272f | observed the seal binds c8e96319
+         the pre-registration must bind the POST-NOTE split-v2 digest (criterion v2.10)
+  INFO   split-v2 file digest at this head (the pre-registration binds the post-note value) [n=1]
+         expected recorded, expected to change exactly once when v2.a lands | observed 73d86f0d
+  INFO   a committed pre-registration artefact exists (criterion v2.12 needs it BEFORE the run commit) [n=0]
+         expected ABSENT is the correct state while v2.a/v2.b are open | observed 0 file(s): []
+  PASS   no receipt already declares the V2 holdout SPENT (the quantum-b run has not happened) [n=0]
+         a receipt only consumes v2 if it binds the v2 split file or the v2 salt; 2 receipt(s) consume the V1 holdout, which is correct and expected: ['runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json (split HELD-OUT-SPLIT.json, salt out-2026-09-25)', 'runs/m4-q4-holdout/v1-holdout.PROVENANCE.json (split HELD-OUT-SPLIT.json, salt out-2026-09-25)']
+
+== summary: 231 rows · FAIL 17 · INFO 20 · PASS 192 · PROXY 2
 
 rows not passing (each is an owed item or a known restriction, not necessarily a defect):
   FAIL   criterion 20.10: tool_commit contains the generator: expected present | observed ABSENT at ffb881158b88
@@ -373,3 +391,5 @@ rows not passing (each is an owed item or a known restriction, not necessarily a
   FAIL   criterion v2.5 — seal binds the ACTUAL fixtures/v2/dropword.json: expected c40d272f30d0bbd5… | observed c8e963199a1ec5ee…
          ITEM v2.a: the seal binds a stale digest; append a dated seal note binding the actual digest and disclosing the taint, leaving this line readable
   FAIL   criterion v2.b — the seal's own note states the taint (item v2.b landing check): expected a dated append-only note naming the four transcripts, the se | observed ABSENT — item v2.b still owed
+  FAIL   BLOCKER — quantum b may not run until item v2.a lands (v2.7 needs frozen inputs): expected the seal binds the actual fixture digest c40d272f | observed the seal binds c8e96319
+         the pre-registration must bind the POST-NOTE split-v2 digest (criterion v2.10)

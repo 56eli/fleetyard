@@ -237,3 +237,58 @@ run (its keys are the v1 tuning 193, which contains the whole v2 holdout). This 
 is not a v2.6 violation, but the seal's sentence — *"a first figure under v2 is an estimate under this split, not a
 pristine out-of-sample number"* — must be printed beside the number, exactly as the token rule must be printed
 beside `8/122` (self-item O-1).
+
+---
+
+## ANNEX AMENDMENT §F — the four tainted holdout transcripts are LABEL-tainted, not fixture-adjacent (ORCH-2, 2026-09-25T23:58:12Z, append-only)
+
+Gate cycle H derived the taint from the data instead of restating it, and the derivation **corrects the ANNEX's own
+wording**. A4 called the four excluded transcripts "fixture-adjacent". They are not: the seal forces every
+fixture-bearing transcript into TUNING, and §10 verifies the v2 holdout contains **zero** fixture transcripts. What
+the four actually carry is **prior hand labels from the pre-seal TASK-018 adjudication**, which is a different and
+stronger kind of prior knowledge. The correction is append-only; A4's numbers stand.
+
+**F1 — the four are named and fixed NOW** (so the sensitivity denominator cannot be chosen after results exist):
+
+| transcript | pre-seal q2 signals | prior TASK-018 verdicts |
+|---|---|---|
+| `Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt` | 4 | `D-092` `D-093` `D-094` **CERTAIN-leg-d**, `D-095` CANDIDATE |
+| `Realization_of_the_Self_as_the_I_Nov_2003_Part_1_enxautogen_html.txt` | 1 | `D-107` CANDIDATE |
+| `Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.txt` | 1 | `D-108` CANDIDATE |
+| `Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt` | 1 | `D-122` CANDIDATE |
+
+**F2 — denominators, both pre-declared:** primary **33** (all holdout transcripts, with the per-file disposition of
+these four visible), sensitivity **29 = 33 − 4** (the four above excluded). Both come from the **same single run**;
+neither may be recomputed by a second execution, and no third denominator may appear. Every quoted figure carries its
+denominator.
+
+**F3 — the prior labels must be re-adjudicated BLIND, and the comparison published (new requirement, D3-bis).** For
+those 7 signals the quantum-b adjudication is performed from the span bytes and the book quote under the frozen
+leg-d rule **without reference to the prior verdicts**; the run then publishes a prior-vs-new table, one row per
+signal, stating agree / disagree and the reason for any disagreement. Disagreements are **reported, never silently
+reconciled**, and a disagreement is not evidence that either verdict is wrong — it is the measurement of what the
+taint was worth. This converts a disclosure into a number.
+
+**F4 — the seven are not discoveries.** They were signal-bearing before the seal, so they count in the denominator
+but may not be presented as found by the quantum-b run; D4's per-file disposition states this in terms.
+
+**F5 — no auto-promotion, per ERRATA-25e §2.** A detector hit never classifies itself: every holdout row adjudicated
+CERTAIN-leg-d needs its own individual reason and citation, re-derivable byte-exact by the gate, and CANDIDATE rows
+are never blended into a CERTAIN count. The 57 CERTAIN-leg-d rows from TASK-018 remain **restricted** and are not a
+floor for the holdout figure.
+
+**F6 — the two caveat sentences that must be printed beside every quantum-b figure:** (i) the seal's own —
+*"v1 detectors were shaped with corpus-wide knowledge … a first figure under v2 is an estimate under this split, not
+a pristine out-of-sample number"* — because all 33 holdout transcripts were read by the pre-seal v1-era run; and
+(ii) the token rule for any drop-consistency number (apostrophes normalised, hyphens inside tokens), per self-item
+O-1, since `8/122` and `114/8` and `67/55` are different rules over the same data.
+
+**F7 — frozen-input drift is now machine-checked.** §12 of the gate instrument compares the ANNEX B1/B4 digests
+against the worker head every run: `det_dropword.py a0236325…`, `det_format.py ef9ff4f2…`, `m5r_reduce.py
+6d4bb9ce…`, ledger `d42136c6…`, policy manifest `0fe20a60…`, corpus zip `3f36c520…`, book store `c0892fcd…`. A
+drift on any of them voids the pre-registration and forces a new one; the split-v2 file digest is expected to change
+**once**, when item v2.a lands, and the pre-registration must bind the post-note value (criterion v2.10).
+
+**Unchanged:** quantum b may not run until v2.a lands (v2.7 requires frozen inputs); the pre-registration commit must
+exist before the run commit (v2.12); exactly one execution, no re-run for any reason (C2); nothing added to the eval
+directory afterwards except the receipt and an errata (v2.14).

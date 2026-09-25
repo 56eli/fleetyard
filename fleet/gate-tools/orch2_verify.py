@@ -1284,6 +1284,107 @@ def section_inherited(wt, rep):
 
 
 
+
+
+# ANNEX B1/B4 frozen inputs (fleet/queue/pending/TASK-019.md) — a drift on any of these voids the
+# pre-registration, so the instrument checks them at every run (ANNEX amendment §F7).
+FROZEN = (("tools/det_dropword.py", "a0236325"), ("tools/det_format.py", "ef9ff4f2"),
+          ("tools/m5r_reduce.py", "6d4bb9ce"), ("findings/ledger.jsonl", "d42136c6"),
+          ("fleet2/POLICY-MANIFEST.sha256", "0fe20a60"), ("docdocgo-fixes.zip", "3f36c520"))
+TAINTED4 = ("Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt",
+            "Realization_of_the_Self_as_the_I_Nov_2003_Part_1_enxautogen_html.txt",
+            "Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.txt",
+            "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt")
+
+
+def section_quantum_b(wt, rep):
+    """§12 — quantum-b readiness: frozen-input drift, the blocker, and the pre-declared denominators."""
+    print("\n== 12. quantum b readiness (TASK-019 ANNEX) ==")
+    drift = []
+    for rel, pre in FROZEN:
+        fp = os.path.join(wt, rel)
+        act = sha_file(fp)[:8] if os.path.exists(fp) else "ABSENT"
+        if act != pre:
+            drift.append(f"{rel}: ANNEX {pre} vs head {act}")
+    rep.add("12", "ANNEX B1/B4 frozen inputs have NOT drifted from the worker head", f"{len(FROZEN)}/{len(FROZEN)} match",
+            f"{len(FROZEN) - len(drift)}/{len(FROZEN)} match" + (f"; drift: {drift[:3]}" if drift else ""),
+            PASS if not drift else FAIL, n=len(FROZEN),
+            note="a drift on any frozen input voids the pre-registration and forces a new one (ANNEX §F7)")
+    man = {}
+    pp = os.path.join(wt, "findings/PROVENANCE.json")
+    if os.path.exists(pp):
+        man = json.load(open(pp, encoding="utf-8"))
+    bs = man.get("book_store") or {}
+    if bs.get("path"):
+        bp = os.path.join(wt, bs["path"])
+        rep.check("12", f"book store frozen digest ({bs['path']})", str(bs.get("sha256"))[:8],
+                  sha_file(bp)[:8] if os.path.exists(bp) else "ABSENT")
+
+    sp = os.path.join(wt, "tools/HELD-OUT-SPLIT-V2.json")
+    j = json.load(open(sp, encoding="utf-8")) if os.path.exists(sp) else {}
+    seal_h = {os.path.basename(x) for x in j.get("holdout", [])}
+    rep.check("12", "the holdout the pre-registration will bind", 33, len(seal_h), n=len(seal_h))
+    inside = [t for t in TAINTED4 if t in seal_h]
+    rep.add("12", "ANNEX §F1 — the four label-tainted holdout transcripts are fixed BY NAME", "4 of 4 in the holdout",
+            f"{len(inside)}/4 in the holdout" + ("" if len(inside) == 4 else f"; missing {set(TAINTED4) - set(inside)}"),
+            PASS if len(inside) == 4 else FAIL, n=4,
+            note="they carry prior TASK-018 labels (3 CERTAIN-leg-d + 4 CANDIDATE), NOT fixtures - the holdout has "
+                 "zero fixture transcripts")
+    rep.add("12", "ANNEX §F2 — both denominators pre-declared from ONE run", "primary 33, sensitivity 29",
+            f"primary {len(seal_h)}, sensitivity {len(seal_h) - len(inside)}", PASS if len(seal_h) == 33 and
+            len(inside) == 4 else FAIL, n=len(seal_h))
+
+    act = sha_file(os.path.join(wt, "fixtures/v2/dropword.json"))[:8]
+    bound = str((j.get("fixture_sources") or {}).get("fixtures/v2/dropword.json", ""))[:8]
+    rep.add("12", "BLOCKER — quantum b may not run until item v2.a lands (v2.7 needs frozen inputs)",
+            f"the seal binds the actual fixture digest {act}", f"the seal binds {bound}",
+            PASS if act == bound else FAIL, n=1,
+            note="the pre-registration must bind the POST-NOTE split-v2 digest (criterion v2.10)")
+    sd = sha_file(sp)[:8]
+    rep.add("12", "split-v2 file digest at this head (the pre-registration binds the post-note value)",
+            "recorded, expected to change exactly once when v2.a lands", sd, INFO, n=1)
+
+    prereg = []
+    for root, dirs, files in os.walk(os.path.join(wt, "runs")):
+        dirs[:] = [d for d in dirs if not d.startswith(".")]
+        for fn in sorted(files):
+            t = fn.lower()
+            if "prereg" in t or "pre-reg" in t or "quantum-b" in t or "quantumb" in t:
+                prereg.append(os.path.relpath(os.path.join(root, fn), wt))
+    rep.add("12", "a committed pre-registration artefact exists (criterion v2.12 needs it BEFORE the run commit)",
+            "ABSENT is the correct state while v2.a/v2.b are open", f"{len(prereg)} file(s): {sorted(prereg)[:4]}",
+            INFO if not prereg else PASS, n=len(prereg))
+    v2salt = j.get("salt")
+    spent, spent_v1 = [], []
+    for root, dirs, files in os.walk(os.path.join(wt, "runs")):
+        dirs[:] = [d for d in dirs if not d.startswith(".")]
+        for fn in sorted(files):
+            if fn.endswith(".json"):
+                rel = os.path.relpath(os.path.join(root, fn), wt)
+                try:
+                    txt = open(os.path.join(root, fn), encoding="utf-8").read()
+                    d = json.loads(txt)
+                except (OSError, ValueError):
+                    continue
+                if not isinstance(d, dict):
+                    continue
+                consumed = d.get("holdout_consumed") is True or "holdout is now spent" in txt.lower()
+                if not consumed:
+                    continue
+                ref = str(d.get("split_file") or d.get("split") or "")
+                salt = str(d.get("split_salt") or "")
+                if "V2" in ref.upper() or (v2salt and salt == v2salt):
+                    spent.append(f"{rel} (split {ref or 'v2 salt'})")
+                else:
+                    spent_v1.append(f"{rel} (split {os.path.basename(ref) or '?'}, salt {salt[-14:]})")
+    rep.add("12", "no receipt already declares the V2 holdout SPENT (the quantum-b run has not happened)", "0",
+            f"{len(spent)}: {sorted(spent)[:3]}", PASS if not spent else FAIL, n=len(spent),
+            note=f"a receipt only consumes v2 if it binds the v2 split file or the v2 salt; "
+                 f"{len(spent_v1)} receipt(s) consume the V1 holdout, which is correct and expected: "
+                 f"{sorted(spent_v1)[:3]}")
+
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("worktree")
@@ -1308,6 +1409,7 @@ def main() -> int:
     section_manifest_completeness(wt, rep)
     section_split_v2(wt, rep, sup)
     section_inherited(wt, rep)
+    section_quantum_b(wt, rep)
     tally = collections.Counter(r["verdict"] for r in rep.rows)
     print(f"\n== summary: {len(rep.rows)} rows · " +
           " · ".join(f"{k} {v}" for k, v in sorted(tally.items())))
