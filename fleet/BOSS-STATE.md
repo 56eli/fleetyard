@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T20:45Z
+updated: 2026-09-25T20:48Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -11,7 +11,7 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 
 ## milestone state (the campaign scoreboard — PLAN-v2)
 - M0 corpus inventory — **CERTIFIED ✓** @ 863c97d (preserved from v1)
-- M1 tooling foundation — **CERTIFIED ✓** @ 9f56f3e (repaired set; preserved from v1)
+- M1 tooling foundation — **CERTIFIED ✓** @ 9f56f3e (repaired set; preserved from v1; full v1 toolchain inherited @ `b2e0761`)
 - M2 detector family A — **ACCEPTED INCOMPLETE ✓** (owner §3; drop-word + speaker/format deferred to M4)
 - M6-P provisional report — **ACCEPTED PROVISIONAL ✓** @ 90077b4 (`reports/CORPUS-AUDIT.md`, 187 lines, worker v1 lane `bf97d85`, verified by v1 boss; accepted as v1 deliverable per HALT notice)
 - M5-R reviewed findings ledger — **GATED PASS on all 13 criteria** by ORCH-2 at `5f6d698` / `9989249`,
@@ -21,17 +21,18 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
   deterministic; 26 tests green. Scoreboard: **3 / 0 / 1,331**. Milestone **CLEARED**.
 - M4 self-improvement loop — **IN PROGRESS** on worker lane:
   - q1 catalog + split: GATED INCOMPLETE by ORCH-2 @ `88009d2` (repaired by WORKER-2 at `33b6f36` via item 0b).
-  - q2 C1-drop delivered at `012914d`; leg-(d) individual adjudication DELIVERED at `1fb524e` (TASK-018: 57 CERTAIN-leg-d, 65 CANDIDATE; fixtures D2-001/003 confirmed, D2-002/004 discarded; 39 tests green WITH corpus; awaiting ORCH-2 gate).
+  - q2 C1-drop delivered at `012914d`; leg-(d) individual adjudication DELIVERED at `1fb524e` (TASK-018: 57 CERTAIN-leg-d, 65 CANDIDATE; fixtures D2-001/003 confirmed, D2-002/004 discarded; awaiting ORCH-2 gate).
   - q3 C2-format delivered at `4425763`; GATED INCOMPLETE by ORCH-2 @ `6495a8b` (reproduction/citations exact; no fixture recall, no clean-set run, detector digest commit mismatch; unpromoted, no pause).
   - q4-q5 delivered provisional-ungated at `1beadd9`.
-  - Actionable queue: WORKER-2 assigned TASK-019a (seal split v2) → TASK-017 (inherit v1 toolchain) → (ORCH-2 gates q2/q3) → TASK-019b (one-shot holdout evaluation).
-- M6 final audit report — **BLOCKED on fresh sealed holdout split v2 + TASK-017 + M4 completion**
-  (holdout evaluated at q4; fresh split with new salt authorized per ERRATA-25g §5 / TASK-019).
+  - Toolchain foundation: TASK-017 DELIVERED at `b2e0761` (inherited v1 toolchain byte-exact: 266 files, 154 tests OK / 1 skip, 16 fixtures verified, fresh sweep 10/10 identical).
+  - Actionable queue: WORKER-2 assigned TASK-019a (seal split v2) → ORCH-2 gates of TASK-018 and TASK-017 → TASK-019b (one-shot holdout evaluation).
+- M6 final audit report — **BLOCKED on fresh sealed holdout split v2 + M4 completion**
+  (holdout evaluated at q4; fresh split with new salt authorized per ERRATA-25g §5 / TASK-019; TASK-017 delivered).
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T20:45Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T20:48Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
-- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `1fb524e07ca63ba5bc010b701757c30a4330d02e` (ALIVE; delivered TASK-018, 39 tests green)
+- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `b2e076124f9b1d5452cc739a7065773674d7bcd5` (ALIVE; delivered TASK-017, suite 154 OK/1 skip)
 - orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `6495a8bbe0c9500cf608803745afbb7375543a59` (ALIVE; q3 gated INCOMPLETE, cut TASK-019)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
@@ -51,9 +52,9 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 - `fleet/ORDERS/REDIRECT-008.md`: **ACKNOWLEDGED & COMPLETED** by ORCH-2 (`fleet/ORDERS/ACK-REDIRECT-008.md` @ `5f6d698`).
 
 ## stall watch (re-armed per ERRATA-25f §2: signals only)
-- Class 1 (worker stalled): NOT FIRED (WORKER-2 active, delivered TASK-018 @ `1fb524e`).
+- Class 1 (worker stalled): NOT FIRED (WORKER-2 delivered TASK-017 @ `b2e0761`).
 - Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `6495a8b`).
-- Class 3 (starvation): NOT FIRED (actionable queue: TASK-019, TASK-017).
+- Class 3 (starvation): NOT FIRED (actionable queue: TASK-019, TASK-018/017 gating).
 - Class 4 (post-handoff): NOT FIRED (all v1 archives verified frozen).
 - Class 5 (LOUD ZOMBIE): ARMED.
 - Class 6 (context-rot support): ARMED.
