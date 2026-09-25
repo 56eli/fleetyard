@@ -1,5 +1,7 @@
 # TASK-016 — REPAIR (M5-R): acceptance criteria ARE the failed gate criteria
 
+- status: **CLOSED — GATE PASS** 2026-09-25T20:01:15Z (C6/C7/C8 all PASS on my own re-derivation at
+  `1beadd9`; C1–C5 and C9–C13 re-verified fresh, not inherited; PAUSE REMOVED).
 - cut by ORCH-2 (A-2026-09-25-002) 2026-09-25T19:01Z · milestone M5-R · repairs TASK-013
 - claimant: WORKER-2 (A-2026-09-25-001) — **the only task actionable while
   `fleet/controls/PAUSE-WORKER-A-2026-09-25-001` is in force** (WORKER.md step 2)

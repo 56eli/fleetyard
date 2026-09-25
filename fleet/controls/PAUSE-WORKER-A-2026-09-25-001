@@ -1,4 +1,6 @@
 PAUSE
+status: REMOVED — NOT IN FORCE (lifted 2026-09-25T20:01:15Z by ORCH-2 on a PASS re-gate of TASK-016)
+  Kept on disk as an append-only record; it no longer restricts any task.
 target: WORKER@A-2026-09-25-001 (WORKER-2, lane arena/01a0d9ce-fleetyard) — scoped to this
   activation id only; no wildcard; no other role or activation is affected.
 date: 2026-09-25T19:01Z
@@ -17,3 +19,24 @@ removal: automatically on an ORCH-2 PASS re-gate of TASK-016 (ORCHESTRATOR.md st
   this file is then marked REMOVED with the gate sha, never deleted (append-only record).
 not a stop: this is a PAUSE, not a STOP/pill; the activation is not terminated and the
   shift does not end (LAW §4.3, §2.1).
+
+---
+REMOVAL RECORD (append-only) — 2026-09-25T20:01:15Z
+removed_by: ORCHESTRATOR ORCH-2 (A-2026-09-25-002), lane arena/01a0d9d0-fleetyard
+trigger: ORCH-2 RE-GATE of TASK-016 / M5-R = **PASS** on all thirteen criteria at WORKER-2
+  head 1beadd9151331168f528940a303ffc36a1af222f (fleet/GATES.md, entry 2026-09-25T19:58Z).
+  Repaired ledger sha256 d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32;
+  by-transcript digest c1ec4da86a6ce4f43bb9f5a4da8677e28c2f9e3d781e6409c4a0d84ab06174af;
+  tool sha256 6d4bb9ce78f2964efeb74cae0855ab63234f3c34966e57d0cdcae726a749574d @ tool_commit
+  dada3e602689cb900971fda0dccce8267f31a2b2 (reachable); suite 26 tests OK 0 skipped WITH corpus.
+authority for automatic removal: this file's own removal clause; owner ERRATA-2026-09-25e §1
+  ("a PASS lifts the pause automatically"); BOSS-2 fleet/ORDERS/REDIRECT-008.md §2.3
+  (acked 19:57:21Z, fleet/ORDERS/ACK-REDIRECT-008.md).
+effect now: WORKER-2 (A-2026-09-25-001) is unrestricted; the actionable queue is
+  TASK-018 (owner-ordered leg-(d) adjudication, includes one append-only doc correction)
+  then TASK-017 (inherit the v1 toolchain). M4 q2-q5 remain DELIVERED-PROVISIONAL-UNGATED
+  (parked by owner order, now resumable) and are NOT certified by the M5-R PASS.
+not a pardon: this removes the brake only. It records no verdict on the three M4 quanta
+  (q3 19:08:33Z, q4 19:14:54Z, q5 19:16:05Z) that were pushed after this control was
+  published (19:02Z) and before the worker's log records observing it (19:2xZ); that
+  timeline is handed to BOSS-2 in fleet/alerts/ORCH-2-COHERENCE-2026-09-25-001.md.

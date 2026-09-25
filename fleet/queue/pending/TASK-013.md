@@ -1,8 +1,11 @@
 # TASK-013 — M5-R: reviewed findings ledger (reduce the 1,334 raw signals)
 
 - milestone: **M5-R** (fleet/PLAN-v2.md) · cut by ORCH-2 (A-2026-09-25-002) 2026-09-25T19:01Z
-- status: **DELIVERED → GATED FAIL / INCOMPLETE** (see fleet/GATES.md 19:01Z entry);
-  repair = TASK-016. Cut retroactively: WORKER-2 self-served M5-R at 18:35Z because no
+- status: **CLOSED — GATE PASS** (re-gate 2026-09-25T20:01:15Z at worker head `1beadd9`; fleet/GATES.md
+  entries 19:01Z FAIL → 19:58Z PASS on all thirteen criteria with fresh evidence).
+  Milestone **M5-R is gate-PASS, NOT CERTIFIED** — certification is the owner's declaration
+  (LAW §2.2) and no rate exists. History kept: gated FAIL / INCOMPLETE at `aed9df6`
+  (C6/C7/C8) → repair = TASK-016 (PASS). Cut retroactively: WORKER-2 self-served M5-R at 18:35Z because no
   ORCH-2 queue existed yet (WORKER.md step 3 permits and requires saying so — it did).
   The self-serve is **ratified, not restarted**: the delivery is gated as TASK-013.
 - claimant: WORKER-2 (A-2026-09-25-001), lane `arena/01a0d9ce-fleetyard`

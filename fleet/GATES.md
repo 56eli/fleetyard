@@ -134,3 +134,171 @@ provenance-binding instruments — small, precise, and the reason the fleet has 
   repair plus a PASS re-gate, not by an order. `PAUSE-WORKER-A-2026-09-25-001` stands until
   then unless the owner lifts it (S-tier is the owner's), which I have escalated rather than
   assumed.
+
+---
+
+## 2026-09-25T19:58Z — RE-GATE: TASK-016 (repair of C6/C7/C8) → M5-R — VERDICT: **PASS**
+
+- Re-ground instruments read this cycle (owner, on main): `fleet/ERRATA-2026-09-25e.md`
+  @ main `8e9e179` (blob `33ed84b9`, bytes sha256 `b051d4e4f7caef5b9152cb5d57ae3f69dcba8ef07fde97ca0850b6f0722af54e`)
+  — OPTION A repair-first, M4 parked, STANDARDS gains narrow CERTAIN **leg (d)**; and
+  `fleet/ERRATA-2026-09-25f.md` @ main `77f1d6d` (blob `7a77597e`, bytes sha256
+  `c8a1634d55af3eb8bd6476a2d7356332a1fedd492979879855f096495232ddc2`) — liveness doctrine
+  (signals, not output), worker steady state, orchestrator queue discipline, boss CONCERN
+  scope, owner-pump minimisation, turn-end rule.
+- Order served and acknowledged: BOSS-2 `fleet/ORDERS/REDIRECT-008.md` (issued 19:43:00Z,
+  ack due 19:58:00Z) → acked 19:57:21Z @ `5f6d698` (fleet/ORDERS/ACK-REDIRECT-008.md).
+- Gated head: WORKER-2 `arena/01a0d9ce-fleetyard` @ `1beadd9151331168f528940a303ffc36a1af222f`
+  (19:40:07Z). Repair chain: `dada3e6` (19:17:57Z, R1/R2/R3 + 3 tests) → `a4c6655`
+  (19:18:25Z, provenance rerun pinned to `dada3e60`) → `1beadd9` (19:40:05Z, per-criterion
+  evidence + manifest re-bound to main `8e9e179`).
+- Artefacts gated: `findings/ledger.jsonl` sha256 `d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32`,
+  `findings/by-transcript/*.json` (230) digest `c1ec4da86a6ce4f43bb9f5a4da8677e28c2f9e3d781e6409c4a0d84ab06174af`,
+  `findings/PROVENANCE.json`, `findings/SUMMARY.md`, `findings/README.md`,
+  `findings/REVIEW-QUEUE.md`, `findings/M4-q5-A1-CLAIM-RECONCILIATION.md`;
+  `tools/m5r_reduce.py` sha256 `6d4bb9ce78f2964efeb74cae0855ab63234f3c34966e57d0cdcae726a749574d`.
+- Gate scratch: fresh detached worktree `/home/user/gate-scratch/worker-1beadd9`; inputs
+  materialised read-only by the worker's own `tools/m5r_inputs.sh` (archive ref
+  `origin/arena/01a0d581-fleetyard`, corpus zip sha `3f36c520…` verified by the script and
+  by me). All verification code below is mine, written for this gate, and does not import
+  the worker's modules.
+- **Evidence is fresh for every criterion.** Nothing is inherited from the 19:01Z gate: the
+  ledger digest changed (`62b33da5…` → `d42136c6…`) because the repair added four fields and
+  because the worker's errata #2 (M4-q5) fixed two reducer defects, so every criterion was
+  re-run against `1beadd9` (LAW §7: missing fresh evidence is the suspicion).
+
+### Criterion table (all thirteen re-verified at `1beadd9`)
+
+| # | criterion | verdict | independent evidence (my own runs at `1beadd9`) |
+|---|---|---|---|
+| C1 | reduction completeness (every inherited raw record → exactly one finding) | **PASS** | recounted the archive census myself: 230 record files, **1334 records / 1336 detector instances**; ledger key set `(transcript, char_offset, span_end, span_text)` == raw key set exactly (1334 == 1334, 0 either way); per-file record counts == per-file finding counts for all 230 files; per-detector A1 938 / A2 158 / B1 12 / B2 228 and combos A1 937, A2 157, B2 228, B1 10, A1+B1 1, A2+B1 1 — unchanged from the census |
+| C2 | dedupe + cross-detector merge | **PASS** | `duplicates_removed: 0`; exactly 2 findings carry 2 detectors — `M5R-0460` (A1+B1 @2318) and `M5R-0461` (A2+B1 @4543), both `Love_Sep_2011_Part_1`, both v1 fixture spans CF-006/CF-003 |
+| C3 | adjudication against cited bytes | **PASS** | all **1334/1334** spans: `overlays[transcript][char_offset:span_end] == span_text`, 0 failures; all **1336/1336** per-signal `asserted_quote` at `offset`/`quote_len`, 0 failures, `quote_verified` true on all; **242/242** book quotes byte-exact at cited slug+offset under my own 24-slug store parser (`book_chars` agrees), **0 non-Hawkins** citations |
+| C4 | classification per the STANDARDS ladder | **PASS** | recomputed from the ledger: `CERTAIN (inherited fixture)` **3** (M5R-0078/CF-015, M5R-0460/CF-006, M5R-0461/CF-003 — all leg `b` in `evidence/fixtures/confirmed/confirmed.json`), `HIGH` **0**, `CANDIDATE` **1331**. Tool cannot self-assign CERTAIN (`test_never_assigns_certain_without_inherited_fixture`); `classify()` untouched by the repair (I read the full tool diff `aed9df6`→`dada3e6`: only TOKEN_RE, kmax, `adjudicate(...,meta)`, R1 fields, SUMMARY/coverage rendering, CLI pins, stats.coverage). **Leg (d) applied nowhere** — correct: ERRATA-25e §3 requires individual adjudication first (TASK-018); no detector hit auto-classifies |
+| C5 | seeded vs independent separated (LAW §9) | **PASS** | seeded **3** / independent **1331**; all three seeded carry `fixture_overlap: true` and rationales stating in-sample/not admissible as precision evidence; SUMMARY states the split and excludes seeded from any metric by construction |
+| C6 | STANDARDS finding-record shape (was **FAIL**) | **PASS** | my own read of all 1334 records: `suspected_intended` present on **1334/1334** (157 explicit `null` — exactly the A2-nonsense-only spans — each with `suspected_intended_status: "not proposable mechanically; human read required"`); `status` present 1334/1334 with vocabulary `{open: 1334}` (STANDARDS' open/confirmed/discarded); `status_by` present 1334/1334 = "machine-adjudicated by tools/m5r_reduce.py@dada3e60…; human confirmation required" (who + why); non-null intents are labelled "from runner signal (…); **not gate-verified** — human read required" — no self-certification. Regression test `test_standards_finding_record_shape_is_complete` is substantive (asserts the fields, the vocabulary and the null-marker) |
+| C7 | coverage truth (was **FAIL**) | **PASS** | row printed verbatim in `findings/SUMMARY.md` §0 and `findings/README.md`: `transcripts 230 | detector-run 230 | machine-adjudicated 230 | human finding-pass audited 0 | pending human review 230 | zero-finding transcripts 24 (not shown clean)`; titles qualified ("reviewed" = machine-adjudicated). I recomputed every number myself: 230 overlay texts, 230 record files (one per transcript → detector-run is evidenced by record-file presence, including the 24 files with zero signals), 206 transcripts with findings, 24 with none, and those 24 carry **zero** raw signals in the census (so the zeros are real, not missing runs). `stats.coverage` in the manifest matches my recount exactly. Test `test_coverage_truth_row_is_emitted` asserts the row and the counts |
+| C8 | LAW §8 provenance manifest (was **FAIL**) | **PASS** | every binding recomputed by me and **MATCH**: overlays `027f82a0…` (230, sort-by-basename text-mode as documented), records `d8c93536…` (230), fixtures `c5d8f6f3…` (2), tool `6d4bb9ce…` == sha256 of `tools/m5r_reduce.py` **and** == the blob at `tool_commit dada3e602689cb900971fda0dccce8267f31a2b2` (verified `git cat-file`; `git merge-base --is-ancestor dada3e6 1beadd9` → reachable), `policy_sha256 0fe20a60…` == sha256 of `fleet2/POLICY-MANIFEST.sha256` (re-verified at main `77f1d6d`, unchanged), `main_head 8e9e179…` == main at run time, `book_store.sha256 c0892fcd…` == my recomputation of the frozen store, `corpus_zip_sha256 3f36c520…`, outputs `ledger.jsonl d42136c6…` + `by_transcript_digest c1ec4da8…` == my recomputations, `inherited_census.detector_tool_commit 7b8863d` **reachable** (`merge-base --is-ancestor` on `origin/arena/01a0d581-fleetyard`) with detector set + exclusions named, and a written derivation for **all seven** digest fields — including the trap I raised at 19:01Z (sorting the digest *lines* gives `58274f46…`; the implemented sort-by-basename gives `027f82a0…`). Pins are explicit CLI args whose defaults fail closed to the literal `UNPINNED`: my deliberately unpinned replay emitted `"sha256": "UNPINNED"` and `status_by …@UNPINNED` — provenance is never silently inherited or stamped. Test `test_law8_manifest_bindings_and_derivations` asserts the bindings and the trap string |
+| C9 | determinism + fresh independent replay | **PASS** | my own run `python3 tools/m5r_reduce.py --records evidence/runs/m5-raw/records --fixtures evidence/fixtures/confirmed --corpus corpus --out <scratch> --utc 2026-09-25T19:39:48Z --archive-ref origin/arena/01a0d581-fleetyard --tool-commit dada3e60… --main-head 8e9e179… --policy-sha 0fe20a60… --book-store-sha c0892fcd… --detector-tool-commit 7b8863d` → `1336 raw signals -> 1334 findings (0 dup removed); seeded=3; book refs ok=242 bad=0; citation failures=0`; `diff -r` vs committed `findings/` → **byte-identical** for every common file (ledger `d42136c6…`, by-transcript aggregate `c1ec4da8…`); the only extra committed file is the hand-written `findings/M4-q5-A1-CLAIM-RECONCILIATION.md` (disclosed, not tool-generated), as `README.md` was at the previous head |
+| C10 | suite green WITH corpus, skip counts, count never drops | **PASS** | in the scratch worktree with the corpus materialised: `python3 -m unittest discover -s tests` → **Ran 26 tests … OK**, **0 skipped, 0 errors**. Count rose 7 → 26 (M5-R 12 + drop-word 8 + format 6); no test dropped. Note for the record: 14 of the 26 belong to the **parked** M4 q2/q3 detectors — running them proves the lane is green, it does **not** gate that work |
+| C11 | read/write scope, stdlib only, no network | **PASS** | imports at `1beadd9`: argparse, datetime, difflib, hashlib, io, json, os, re, sys, unicodedata — stdlib only; no urllib/socket/subprocess/requests; writes only under `--out` (ledger, by-transcript/, SUMMARY.md, REVIEW-QUEUE.md, PROVENANCE.json, optional CITATION-FAILURES.json); reads `corpus/**` + the read-only inherited `evidence/**` + fixtures. Input materialisation stays a separate `sh` script that fetches a read-only archive ref and aborts on zip-sha mismatch |
+| C12 | no rates, no precision/recall claims, no completion language | **PASS** | SUMMARY: "no corpus-wide error rate in this document"; corroboration table is counts only (938/938, 158/158, 12/12, 228/228); seeded excluded from metrics by construction; delivery record says DELIVERY not certification; the repair section claims no rate. (The parked q4 holdout artefacts also claim counts only — "precision unmeasured" — and are **not** certified by this gate.) |
+| C13 | limits disclosed honestly | **PASS** | no audio heard; no human read of the 1331 CANDIDATEs; 24 zero-finding transcripts explicitly "not shown clean" (I verified the zeros are real); drop-word / speaker-format / A4 unmeasured ≠ zero; errata #1 and #2 both disclose that the *instrument* was wrong, with regression tests and append-only records; the withdrawn 98 flags are disclosed with their cause. `REVIEW-QUEUE.md` regenerated with **0** stale "not re-derived" rows (I grepped) |
+
+### Errata #2 (M4-q5 reducer fix) — independently re-verified, because it changed the ledger
+
+The ledger I gated at 19:01Z (`62b33da5…`) is superseded by `d42136c6…`. My own
+field-by-field diff of the two (1334 keys identical, 0 removed):
+
+- **Added** on all 1334: `suspected_intended`, `suspected_intended_status`, `status`,
+  `status_by` (the R1 repair) — as claimed.
+- **Values changed** on: `signals` 98, `claim_checks` 98, `claims_all_corroborated` 98
+  (false→true), `rederived_repetition` 98, `review_score` 99, `book_checks` 144 findings
+  (**146 entries, and only their `divergence` sub-field** — `book_quote`, `offset`,
+  `quote_ok`, `offset_ok`, `book_chars`, `slug` all unchanged).
+- Cause (disclosed, errata #2): `TOKEN_RE` `[A-Za-z']+` → Unicode `[^\W_]+(?:['’\-][^\W_]+)*`,
+  and `repetition_rederive` `kmax` 8 → 16. Both changes are in the M5-R reducer itself, so
+  they are inside this gate's scope, and I verified them myself rather than trusting the
+  errata: I wrote my own implementation of the documented rule (lowercase + Unicode tokens,
+  full-period search, then longest-run ≥3 over all start offsets) and re-derived all **938**
+  A1 spans — my structure equals the ledger's `rederived` on **938/938**, and the runner's
+  claimed `N-token unit × M repeats` holds under my derivation on **938/938** (the one
+  apparent exception, M5R-1084, was my own test comparing only `longest_run`; the span is
+  fully periodic 8×3 exactly as the ledger's note says "claim 8-token x3 vs re-derived 8 x3").
+  So the withdrawal of the 98 flags is **correct**, not convenient: those flags were my
+  instrument's defect class, exactly as LAW §7 warns.
+- The `divergence` changes on 146 book-check entries are the same tokenizer's downstream
+  effect on word-level alignment (e.g. `it s` → `it's`); they alter no quote, no offset, no
+  ok-flag, no class. **Observation (non-blocking):** errata #2 names the tokenizer fix but
+  does not enumerate this downstream field, and the repair record's "substance stability
+  (no quiet edit)" paragraph lists only the four added fields. Recorded here so the change
+  is on the gate record; no count, class or citation is affected.
+
+### Verdict
+
+**TASK-016 = PASS. TASK-013 / M5-R = PASS — milestone COMPLETE (gated), not certified.**
+All thirteen criteria pass on fresh independent evidence at `1beadd9`. Consequences, stated
+plainly:
+
+- `fleet/controls/PAUSE-WORKER-A-2026-09-25-001` is **REMOVED** (marked, never deleted) —
+  automatically, per its own removal clause, owner ERRATA-25e §1 and REDIRECT-008 §2.3.
+- **M5-R is gate-PASS, NOT CERTIFIED.** Certification of a milestone is the owner's
+  declaration (LAW §2.2) and M6 FINAL still owes held-out/precision evidence; no rate of any
+  kind exists or is implied by this PASS. M6-P stays owner-accepted PROVISIONAL and is not
+  re-certified.
+- The ledger at `d42136c6…` is the verified input to M6 FINAL.
+
+### Observations carried forward (non-blocking, each with an owner or a task)
+
+1. **Doc contradicts artefact (correction owed).** `findings/M4-q5-A1-CLAIM-RECONCILIATION.md`
+   row 3 says M5R-0036 re-derived as "period 2 (`Mm-hmm` = 2 tokens in the Unicode rule),
+   8 repeats — claim reads the unit as 1 token … a labelling nuance". The artefact says
+   otherwise: under the actual rule `Mm-hmm` is **one** token, the span is 8 tokens, and the
+   ledger records `unit_tokens 1, repeats 8` with the note "claim 1-token x8 vs re-derived
+   1 x8" — claim and derivation agree exactly, and the nuance the doc invents does not exist
+   (I tokenised the span myself: `['mm-hmm'] * 8`). No number or class is wrong; the narrative
+   is. Correction owed as an append-only line — folded into TASK-018 item 0.
+2. **STANDARDS.md on main does not carry leg (d).** At main `77f1d6d` the deployed
+   `STANDARDS.md` (sha256 `1e38a345ef72dba44a01051a854f46daff350f7719635f59a737b1cdf80882e7`)
+   still lists CERTAIN legs (a)/(b)/(c) only; leg (d) exists solely in `ERRATA-2026-09-25e`
+   §2, which §4 declares to be the recorded errata + BOSS CONCERN the taxonomy change
+   requires. That is a valid instrument and I gate by it, but any lane reading STANDARDS.md
+   alone will not know leg (d) exists. I never write main; **owner item**: fold (d) into
+   STANDARDS.md at the next owner edit (2.0.1 window). Until then my standing guidance below
+   is the gate-side restatement.
+3. **§8 literalism, two residuals.** (a) "detector+config digest" is satisfied by a
+   *reachable commit pin* (`7b8863d`) plus the named detector set and exclusions — at least
+   as strong as a digest, but not literally one; a `git ls-tree` digest of that commit's
+   `tools/` would close the wording. (b) §8's "resume rejects missing/mismatched provenance"
+   has no resume path to act on: the reducer always recomputes fresh and unpinned bindings
+   fail closed to `UNPINNED` (verified by my unpinned replay). A `--verify-manifest` mode is
+   the clean 2.0.1 fix. Neither blocks this PASS; both are recorded as owner items.
+4. **Bracket convention.** STANDARDS asks for the quoted transcript text "verbatim,
+   bracketed"; the ledger carries it verbatim in `span_text` and the rendered queue delimits
+   it with backticks. Met in substance; no action.
+
+---
+
+## Standing classification guidance — CERTAIN leg (d) (re-cut per owner ERRATA-2026-09-25e §2, in force)
+
+Authority: `fleet/ERRATA-2026-09-25e.md` §2–§4 @ main `8e9e179` (owner instrument; §4 is the
+recorded errata + BOSS CONCERN that STANDARDS requires for a taxonomy change). This restates
+it for gate use; it does not extend it.
+
+**Leg (d) — OMISSION WITHIN A MATCHED SPAN (narrow).** A finding may be classified CERTAIN
+under leg (d) only when **all** of the following hold, each cited to bytes:
+
+1. The transcript contains a span that **purports to quote, cite or closely track**
+   identifiable ground truth — either (i) a Hawkins book passage, or (ii) the transcript's
+   **own immediately adjacent repetition** of the same phrasing.
+2. A word **clearly present in that ground-truth span** is **absent** from the transcript
+   span.
+3. **Restoring the word completes the match** (the restored transcript span then agrees with
+   the ground truth under the campaign's byte/quote conventions).
+
+**Never leg (d):** omissions outside such matched spans — a lecture's free paraphrase of a
+book, disfluency, compression, or any span with no identified ground truth — remain
+**CANDIDATE** unless they independently satisfy leg (a) (ungrammatical/senseless AND an
+acoustically near-form replacement restoring grammar and doctrinal sense). A detector hit is
+**evidence of a span, never a classification**: the 122 drop-word signals and the 4
+provisional fixtures are SIGNALS and PROVISIONAL respectively (ERRATA-25e §3) and each needs
+**individual adjudication** under LAW §9 before any CERTAIN/HIGH assignment.
+
+**Gate criteria I will apply to any leg-(d) claim (TASK-018, and M4 q2 re-gate):**
+
+- L1 per-finding record: transcript + offsets + verbatim span; the **ground-truth span**
+  cited to bytes (book slug + offset + verbatim passage, or the adjacent-repetition offsets
+  in the same transcript); the **omitted word**; the **restored span**; and which leg clause
+  (d)(i) or (d)(ii) is claimed.
+- L2 my own re-derivation of every citation (book bytes from the frozen store with my own
+  parser; adjacency from the frozen overlay) — byte-exact or the claim fails.
+- L3 restoration check: the restored span must match the ground truth under the campaign
+  conventions, and the restoration must be the **minimal** edit (one word); anything larger
+  is a paraphrase, not leg (d).
+- L4 no blanket promotion: a rule, threshold or detector name is never accepted as a
+  classification reason; adjudications are per finding, and counts are reported per clause.
+- L5 seeded/in-sample findings stay separated (LAW §9) and are never precision evidence;
+  the 4 provisional fixtures are in-sample by construction.
+- L6 class vocabulary unchanged elsewhere: HIGH still needs ≥2 independent signals **plus a
+  written signal-independence rationale**; CANDIDATE is never blended into any figure; no
+  rate without held-out evidence fixed before tuning.
