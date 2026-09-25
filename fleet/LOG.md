@@ -86,3 +86,10 @@ untracked corpus/ + evidence/ trees missing. Recovered: branch reset to the remo
 1beadd9, inputs re-materialised via tools/m5r_inputs.sh (zip 3f36c520… verified; archive ref
 bf97d85), all digests re-verified. Cadence watcher started (tools/cadence_watch.py, 300 s
 control checks: heartbeat + CONTROL lines; watches pause/queue/main for work orders).
+2026-09-25T20:4xZ WORKER-2: TASK-018 in progress (claimed; items 0/0b pushed at 33b6f36). Adjudicator
+tools/m4_q2_adjudicate.py built: per-signal leg-(d) test on re-derived bytes — maximal exactly-equal
+flanks around the omission (floor 5 tokens/side; sensitivity published), single-word restoration must
+complete the match; two-word omissions never promoted. Result: 57 of 122 signals CERTAIN-leg-d (all
+clause (d)(i)), 65 CANDIDATE (48 restoration-not-minimal, 15 flank-too-short, 2 region-not-realignable);
+fixtures: D2-001 + D2-003 confirmed, D2-002 + D2-004 discarded from any CERTAIN claim (two-word
+omissions — narrowness is the point). 39 tests green (13 new). Artifacts under runs/m4-q2-adjudication/.
