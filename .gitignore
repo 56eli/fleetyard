@@ -1,0 +1,5 @@
+# WORKER-2 lane hygiene: working evidence and build artefacts are never committed.
+corpus/
+evidence/
+__pycache__/
+*.pyc
