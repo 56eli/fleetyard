@@ -1,0 +1,36 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Karma_and_the_Afterlife_Oct_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 22906
+  },
+  "quoted_text": "You have to stay out of that state. You have to stay out of that state. You have to stay out of that state.",
+  "suspected_intended_text": "You have to stay out of that state.",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Karma_and_the_Afterlife_Oct_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 43118
+  },
+  "quoted_text": "I need to see I need to see I need to see",
+  "suspected_intended_text": "I need to see",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

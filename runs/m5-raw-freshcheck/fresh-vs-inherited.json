@@ -1,0 +1,52 @@
+{
+ "census_ref": "origin/arena/01a0d581-fleetyard @ bf97d85962d5e4950fc75374da6b700744b220b5",
+ "different_files": 0,
+ "files": 10,
+ "identical_files": 10,
+ "per_file": {
+  "A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.json": {
+   "sha256_fresh": "5748a525a71301beb1b8d80fb6a4bf787ccf231bae307b94c524c958ccd3a753",
+   "sha256_inherited": "5748a525a71301beb1b8d80fb6a4bf787ccf231bae307b94c524c958ccd3a753"
+  },
+  "A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.json": {
+   "sha256_fresh": "70e4370420f5e5360c694546ba94c284f18f7b76a5f0fc677f026fd8a84d3d36",
+   "sha256_inherited": "70e4370420f5e5360c694546ba94c284f18f7b76a5f0fc677f026fd8a84d3d36"
+  },
+  "A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.json": {
+   "sha256_fresh": "43aadf43a314c232f39c36d503ecad4c73bac7ad2a2addb21f5b58a0af2ab86d",
+   "sha256_inherited": "43aadf43a314c232f39c36d503ecad4c73bac7ad2a2addb21f5b58a0af2ab86d"
+  },
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_1_enxautogen_html.json": {
+   "sha256_fresh": "e848a8d2e9c1835ac6ede58c2ff6fbc9bcb82ce819053f3c44c300fd3b688006",
+   "sha256_inherited": "e848a8d2e9c1835ac6ede58c2ff6fbc9bcb82ce819053f3c44c300fd3b688006"
+  },
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.json": {
+   "sha256_fresh": "c6bf0a744f62959d2203329210e00749c6d5227b21059c441fdf37d2e3f53ec1",
+   "sha256_inherited": "c6bf0a744f62959d2203329210e00749c6d5227b21059c441fdf37d2e3f53ec1"
+  },
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.json": {
+   "sha256_fresh": "5f45bda30405276227882cec647aaf7c35c7a4f0514f856f1a9f34644fbefc4b",
+   "sha256_inherited": "5f45bda30405276227882cec647aaf7c35c7a4f0514f856f1a9f34644fbefc4b"
+  },
+  "A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.json": {
+   "sha256_fresh": "41102c9e5057fe4871015ad3ed33be9f89be510eca317787b6341800baf55d29",
+   "sha256_inherited": "41102c9e5057fe4871015ad3ed33be9f89be510eca317787b6341800baf55d29"
+  },
+  "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_1_enxautogen_html.json": {
+   "sha256_fresh": "ba9b378c4f3a091f3bd27d7c3e545715056b8a8a0aa337f28f8e4a10cd9208f4",
+   "sha256_inherited": "ba9b378c4f3a091f3bd27d7c3e545715056b8a8a0aa337f28f8e4a10cd9208f4"
+  },
+  "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html.json": {
+   "sha256_fresh": "d2637e004e1ca0c13cb8cc2bb96aa0a42d807580b52bce3242e9b7ae6fb087d7",
+   "sha256_inherited": "d2637e004e1ca0c13cb8cc2bb96aa0a42d807580b52bce3242e9b7ae6fb087d7"
+  },
+  "Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_3_enxautogen_html.json": {
+   "sha256_fresh": "e224039a3d476afe9b2c83d7b9777c1a3d13b439d6a16f384755e822e98beeeb",
+   "sha256_inherited": "e224039a3d476afe9b2c83d7b9777c1a3d13b439d6a16f384755e822e98beeeb"
+  }
+ },
+ "records_total": 132,
+ "task": "TASK-017 criterion 5 \u2014 fresh v1 baseline reproduction",
+ "tool": "tools/sweep_m5.py --limit 10 --fresh (inherited, unmodified)",
+ "verdict": "identical signals for all 10 sampled transcripts (byte-identical records)"
+}

@@ -1,0 +1,125 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Barriers_Jun_2005_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4389
+  },
+  "quoted_text": "processes enormous, enormous",
+  "suspected_intended_text": "processes enormous",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'enormous' vs book '' inside a 20/21-word near-verbatim match (tf-idf 0.56))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 340874,
+   "quote": "In one ten-thousandth of a second, it processes enormous banks of information. No combination of computers could possibly do it"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Barriers_Jun_2005_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 50469
+  },
+  "quoted_text": "whatever it takes is whatever it takes. Whatever it takes is whatever it takes. Whatever it takes is whatever it takes.",
+  "suspected_intended_text": "whatever it takes is whatever it takes.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Barriers_Jun_2005_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 64235
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Barriers_Jun_2005_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 65121
+  },
+  "quoted_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "suspected_intended_text": "Yes.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 12 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Barriers_Jun_2005_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 66163
+  },
+  "quoted_text": "it's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock. It's at 12 o'clock.",
+  "suspected_intended_text": "it's at 12 o'clock.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 15 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Barriers_Jun_2005_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 67347
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 11 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Barriers_Jun_2005_Part_2.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 69902
+  },
+  "quoted_text": "wear it and he would wear it and he would wear it and he would wear it and he would",
+  "suspected_intended_text": "wear it and he would",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

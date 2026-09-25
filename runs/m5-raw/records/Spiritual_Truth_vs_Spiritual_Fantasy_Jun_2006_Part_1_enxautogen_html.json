@@ -1,0 +1,91 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1458
+  },
+  "quoted_text": "is spontaneously happening",
+  "suspected_intended_text": "is happening",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'spontaneously' vs book '' inside a 12/13-word near-verbatim match (tf-idf 0.31))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 289396,
+   "quote": "that everything is happening of its own. We mentioned it before. As you concentrate more and more on the peripheral, on the space in which everything is happening instead of the specifics of what’s happening, you become detached from the yin and yang, the pull and the push of solar-plexus interaction of the world in which everybody is trying to manipulate a response out of you. And as you identify more with the space and as you get into the habit of that, it’s like a walking meditation, and then all of sudden, you notice everything is happening of its own. Nothing is causing anything else. All is happening of its own. Everything’s happening spontaneously. And everything is merely being that which it is. Nothing is causing anything. Each thing is fulfilling its potential to be what it is. That’s why the bird flies. It’s not caused"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1740
+  },
+  "quoted_text": "and creation, and creation. and creation, and creation, and creation, and creation, and creation, and creation.",
+  "suspected_intended_text": "and creation,",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25980
+  },
+  "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "suspected_intended_text": "I don't know.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 43188
+  },
+  "quoted_text": "憩",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 44416
+  },
+  "quoted_text": "cake. He did want a blue cake. He did want a blue cake. He did want a blue",
+  "suspected_intended_text": "cake. He did want a blue",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

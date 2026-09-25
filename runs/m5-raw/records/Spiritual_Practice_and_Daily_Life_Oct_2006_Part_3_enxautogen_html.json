@@ -1,0 +1,70 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 5009
+  },
+  "quoted_text": "oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no oh no",
+  "suspected_intended_text": "oh no",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 21 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 27802
+  },
+  "quoted_text": "alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and alas, and",
+  "suspected_intended_text": "alas, and",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 18 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 46451
+  },
+  "quoted_text": "No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No.",
+  "suspected_intended_text": "No.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 17 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 46821
+  },
+  "quoted_text": "throughrareчеaseṇ",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

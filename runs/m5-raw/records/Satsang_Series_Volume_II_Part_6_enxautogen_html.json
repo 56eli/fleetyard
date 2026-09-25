@@ -1,0 +1,155 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18102
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 22 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18461
+  },
+  "quoted_text": "were昁unk",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18470
+  },
+  "quoted_text": "những",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18506
+  },
+  "quoted_text": "KY-Bа",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 23078
+  },
+  "quoted_text": "I've been in the hospital for a long time. I've been in the hospital for a long time. I've been in the hospital for a long time. I've been in the hospital for a long time.",
+  "suspected_intended_text": "I've been in the hospital for a long time.",
+  "evidence_class": "signals: A1-repetition (9-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25013
+  },
+  "quoted_text": "Yeah. You were the oldest of five? Yeah. You were the oldest of five? Yeah. You were the oldest of five? Yeah. You were the oldest of five?",
+  "suspected_intended_text": "Yeah. You were the oldest of five?",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 26732
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 12 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 29709
+  },
+  "quoted_text": "way? In a practical way. In a practical way? In a practical",
+  "suspected_intended_text": "way? In a practical",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 34298
+  },
+  "quoted_text": "feel like. I don't feel like. I don't feel like. I don't",
+  "suspected_intended_text": "feel like. I don't",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

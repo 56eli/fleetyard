@@ -1,0 +1,70 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_III_Part_5_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 544
+  },
+  "quoted_text": "Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart. Sweetheart.",
+  "suspected_intended_text": "Sweetheart.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 44 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_III_Part_5_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19093
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 27 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_III_Part_5_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 30571
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_III_Part_5_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 30640
+  },
+  "quoted_text": "greatкрiterian",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

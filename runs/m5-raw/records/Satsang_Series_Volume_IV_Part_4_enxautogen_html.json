@@ -1,0 +1,87 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IV_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18448
+  },
+  "quoted_text": "why don't you let go of it? Why don't you let go of it? Why don't you let go of it? Why don't you let go of it? Why don't you let go of it? Why don't you let go of it?",
+  "suspected_intended_text": "why don't you let go of it?",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IV_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 24220
+  },
+  "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know",
+  "suspected_intended_text": "I don't know.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IV_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 27031
+  },
+  "quoted_text": "it's not. It's not. It's not. It's not. It's not. It's not. It's not. It's not. It's not. It's not. It's not. It's not. It's not. It's not. It's not. It's not.",
+  "suspected_intended_text": "it's not.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 16 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IV_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 31971
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_IV_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 35967
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 19 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

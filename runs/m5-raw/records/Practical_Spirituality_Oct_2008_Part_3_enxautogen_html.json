@@ -1,0 +1,223 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4762
+  },
+  "quoted_text": "can부터",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25510
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 16 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 26152
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32670
+  },
+  "quoted_text": "thank you thank you thank you thank you thank you thank you",
+  "suspected_intended_text": "thank you",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 36231
+  },
+  "quoted_text": "Herbivore. Herbivore. Herbivore. Herbivore. Herbivore. Herbivore. Herbivore. Herbivore. Herbivore. Herbivore.",
+  "suspected_intended_text": "Herbivore.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37171
+  },
+  "quoted_text": "Oh, yeah. Oh, yeah. Oh, yeah. Oh, yeah. Oh, yeah. Oh, yeah.",
+  "suspected_intended_text": "Oh, yeah.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45437
+  },
+  "quoted_text": "Stamina? Stamina. Stamina. Stamina. Stamina. Stamina. Stamina. Stamina. Stamina. Stamina. Stamina. Stamina.",
+  "suspected_intended_text": "Stamina?",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 12 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 47401
+  },
+  "quoted_text": "who was who was who was who was who was who was who was who was who was who was who was who was who was",
+  "suspected_intended_text": "who was",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 53868
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 54125
+  },
+  "quoted_text": "you. Thank you. Thank you. Thank you. Thank you. Thank",
+  "suspected_intended_text": "you. Thank",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 54877
+  },
+  "quoted_text": "Is it a different phase? Is it a different phase? Is it a different phase",
+  "suspected_intended_text": "Is it a different phase?",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 64710
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 71392
+  },
+  "quoted_text": "Da, da, da, da, da, da. Da, da, da, da, da, da, da.",
+  "suspected_intended_text": "Da,",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

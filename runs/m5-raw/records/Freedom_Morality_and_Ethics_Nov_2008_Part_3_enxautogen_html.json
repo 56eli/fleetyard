@@ -1,0 +1,172 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 7974
+  },
+  "quoted_text": "Do not intubate. Do not intubate. Do not intubate. Do not intubate. Do not intubate.",
+  "suspected_intended_text": "Do not intubate.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 26728
+  },
+  "quoted_text": "I need your arm. I need your arm. I need your arm.",
+  "suspected_intended_text": "I need your arm.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32624
+  },
+  "quoted_text": "It's not the millions. It's not the millions. It's not the millions,",
+  "suspected_intended_text": "It's not the millions.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32808
+  },
+  "quoted_text": "She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300. She's over 300.",
+  "suspected_intended_text": "She's over 300.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 14 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 35530
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37625
+  },
+  "quoted_text": "Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva. Amadeva.",
+  "suspected_intended_text": "Amadeva.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37769
+  },
+  "quoted_text": "Amadeva祂",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 42926
+  },
+  "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "suspected_intended_text": "I don't know.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 44982
+  },
+  "quoted_text": "Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi. Hi.",
+  "suspected_intended_text": "Hi.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 15 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51255
+  },
+  "quoted_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "suspected_intended_text": "Yes.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

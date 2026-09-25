@@ -1,0 +1,189 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 737
+  },
+  "quoted_text": "Is this a, like an old? Is this a, like an old? Is this a, like an old? Is this a, like an old?",
+  "suspected_intended_text": "Is this a, like an old?",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 8287
+  },
+  "quoted_text": "You pray for God. You pray for God. You pray for God. You pray for God. You pray for God. You pray for God. You pray for God. You pray for God. You pray for God. You pray for God.",
+  "suspected_intended_text": "You pray for God.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 11179
+  },
+  "quoted_text": "oh, I'm going to pray. Oh, I'm going to pray. Oh, I'm going to pray.",
+  "suspected_intended_text": "oh, I'm going to pray.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 12692
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 28 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 14903
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 31513
+  },
+  "quoted_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "suspected_intended_text": "Yes.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 12 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32053
+  },
+  "quoted_text": "He's asking. He's asking. He's asking. He's asking. He's asking,",
+  "suspected_intended_text": "He's asking.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 41457
+  },
+  "quoted_text": "I get a little bit of a shock. And I get a little bit of a shock. And I get a little bit of a shock. And I get a little bit of a shock. And I get a little bit of a shock. And I get a little bit of a shock. And",
+  "suspected_intended_text": "I get a little bit of a shock. And",
+  "evidence_class": "signals: A1-repetition (9-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 57279
+  },
+  "quoted_text": "Her name is Anastasia. Her name is Anastasia. Her name is Anastasia.",
+  "suspected_intended_text": "Her name is Anastasia.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 62472
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 12 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 63181
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 25 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

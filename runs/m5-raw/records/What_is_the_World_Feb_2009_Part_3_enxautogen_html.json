@@ -1,0 +1,240 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 6665
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 18 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 12898
+  },
+  "quoted_text": "They weren't so crazy they wouldn't be doing yoga around the clock. They weren't so crazy they wouldn't be doing yoga around the clock. They weren't so crazy they wouldn't be doing yoga around the clock.",
+  "suspected_intended_text": "They weren't so crazy they wouldn't be doing yoga around the clock.",
+  "evidence_class": "signals: A1-repetition (12-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19096
+  },
+  "quoted_text": "Perfection? Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection. Perfection.",
+  "suspected_intended_text": "Perfection?",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 26 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 24228
+  },
+  "quoted_text": "the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth, the moment of her birth,",
+  "suspected_intended_text": "the moment of her birth,",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 31441
+  },
+  "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "suspected_intended_text": "Okay.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 31927
+  },
+  "quoted_text": "yourذ",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 33410
+  },
+  "quoted_text": "love goes to love. Love goes to love. Love goes to love. Love goes to love.",
+  "suspected_intended_text": "love goes to love.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 34959
+  },
+  "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "suspected_intended_text": "I don't know.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 14 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 35411
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 11 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 40644
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 17 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 58062
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 15 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 65533
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 20 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 70846
+  },
+  "quoted_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "suspected_intended_text": "Yes.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 33 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_the_World_Feb_2009_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 78891
+  },
+  "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "suspected_intended_text": "Okay.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

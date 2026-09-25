@@ -1,0 +1,53 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VIII_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4986
+  },
+  "quoted_text": "I know that God will help me. I know that God will help me. I know that God will help me. I know that God will help me. I know that God will help me. I know that God will help me. I know that God will help me. I know that God will help me.",
+  "suspected_intended_text": "I know that God will help me.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VIII_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 11211
+  },
+  "quoted_text": "The modicum of happiness that you allot to yourself. The modicum of happiness that you allot to yourself. The modicum of happiness that you allot to yourself. The modicum of happiness that you allot to yourself",
+  "suspected_intended_text": "The modicum of happiness that you allot to yourself.",
+  "evidence_class": "signals: A1-repetition (9-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VIII_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 23543
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 20 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

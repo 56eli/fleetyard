@@ -1,0 +1,70 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 39540
+  },
+  "quoted_text": "watch my fingers, watch my fingers, watch my fingers, watch my fingers, watch my fingers.",
+  "suspected_intended_text": "watch my fingers,",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 39665
+  },
+  "quoted_text": "Wake up, wake up, wake up. Wake up, wake up, wake up.",
+  "suspected_intended_text": "Wake up,",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 41980
+  },
+  "quoted_text": "핑",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 111036
+  },
+  "quoted_text": "hell, he was destined for hell. He was destined for hell. He was destined for",
+  "suspected_intended_text": "hell, he was destined for",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

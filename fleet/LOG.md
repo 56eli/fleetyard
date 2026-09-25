@@ -98,3 +98,11 @@ omissions — narrowness is the point). 39 tests green (13 new). Artifacts under
 2 not-realignable); fixtures D2-001/D2-003 confirmed, D2-002/D2-004 refused promotion under the narrow
 leg; L1-L6 evidence recorded; 57/57 promoted citations independently re-verified byte-exact; 39 tests
 green; spent holdout untouched. Next: TASK-017 (v1 toolchain inheritance).
+2026-09-25T21:0xZ WORKER-2: TASK-017 DELIVERED (fleet/branches/WORKER-2-TASK-017-DELIVERY.md): v1
+toolchain inherited byte-exact from archive bf97d85 (tools 15 + tests 13 + fixtures 5 + committed
+census runs/m5-raw 233 files = 266 files, all sha-matched against the archive; manifest
+tools/INHERITED-V1-MANIFEST.json). Suite now 154 tests OK with corpus (115 inherited + 39 lane),
+1 skip (M6 report not yet committed). fixtures.py verify OK (16 CERTAIN). Fresh sweep baseline:
+sweep_m5 --limit 10 --fresh -> 132 records, 10/10 files byte-identical to the inherited census
+(runs/m5-raw-freshcheck/). No detector logic modified. Next: cadence / await ORCH-2 gate + fresh
+sealed split v2.

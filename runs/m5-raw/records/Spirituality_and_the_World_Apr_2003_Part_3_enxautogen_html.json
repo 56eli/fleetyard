@@ -1,0 +1,19 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spirituality_and_the_World_Apr_2003_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 35718
+  },
+  "quoted_text": "조사",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

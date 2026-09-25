@@ -1,0 +1,155 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3079
+  },
+  "quoted_text": "Ha, ha, ha. Ha, ha, ha. Ha, ha, ha. Ha, ha, ha.",
+  "suspected_intended_text": "Ha,",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 12 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 6488
+  },
+  "quoted_text": "101%",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (impossible-percent: 101 > 100)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 7660
+  },
+  "quoted_text": "Nothing remains the same. Nothing remains the same. Nothing remains the same.",
+  "suspected_intended_text": "Nothing remains the same.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 11961
+  },
+  "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "suspected_intended_text": "I don't know.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13631
+  },
+  "quoted_text": "I was a lawyer. I was a lawyer. I was a lawyer. I was a lawyer. I was a lawyer. I was a lawyer. I was a lawyer. I was a lawyer. I was a lawyer. I was a lawyer. I was a lawyer. I was a lawyer. I was a lawyer.",
+  "suspected_intended_text": "I was a lawyer.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 21108
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 16 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 21563
+  },
+  "quoted_text": "там",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 21665
+  },
+  "quoted_text": "Быlocaowo",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 22621
+  },
+  "quoted_text": "문",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

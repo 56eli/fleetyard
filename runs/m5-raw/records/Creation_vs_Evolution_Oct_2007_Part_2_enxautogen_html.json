@@ -1,0 +1,87 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19177
+  },
+  "quoted_text": "Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh. Uh-huh.",
+  "suspected_intended_text": "Uh-huh.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 12 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 40819
+  },
+  "quoted_text": "you get to the word. You get to the word. You get to the word. You get to the word. You get to the word. You get to the word. You get to the word. You get to the word.",
+  "suspected_intended_text": "you get to the word.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 61081
+  },
+  "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "suspected_intended_text": "I don't know.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 14 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 63259
+  },
+  "quoted_text": "I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry.",
+  "suspected_intended_text": "I'm sorry.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 17 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 64657
+  },
+  "quoted_text": "that's a point of that's a point of that's a point of",
+  "suspected_intended_text": "that's a point of",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

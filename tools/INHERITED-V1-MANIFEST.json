@@ -1,0 +1,1085 @@
+{
+ "archive_commit": "bf97d85962d5e4950fc75374da6b700744b220b5",
+ "archive_commit_note": "read-only archive lane (HALT-2026-09-25.md); cited, never re-stamped",
+ "archive_ref": "origin/arena/01a0d581-fleetyard",
+ "file_count": 33,
+ "file_count_total": 266,
+ "files": {
+  "fixtures/README.md": {
+   "in_archive_sha256": "5785027d22925e53b2d0ffccdbc50db4eee2ff1962b78698923da1e4a3cb4804",
+   "sha256": "5785027d22925e53b2d0ffccdbc50db4eee2ff1962b78698923da1e4a3cb4804"
+  },
+  "fixtures/clean/clean.json": {
+   "in_archive_sha256": "393112e3f7ae04c48a4a37ddaa46cb1f0688fc804554d995302ad44658d9f44f",
+   "sha256": "393112e3f7ae04c48a4a37ddaa46cb1f0688fc804554d995302ad44658d9f44f"
+  },
+  "fixtures/confirmed/confirmed.json": {
+   "in_archive_sha256": "f2c15869d6cfc3529246a114bbc72a7c86a6c5d4b6d70968af22412b5ac61582",
+   "sha256": "f2c15869d6cfc3529246a114bbc72a7c86a6c5d4b6d70968af22412b5ac61582"
+  },
+  "fixtures/confirmed/corrections.json": {
+   "in_archive_sha256": "394b130cd87ad3750ad1c2d837da910007656b139eb332393979c2592df62175",
+   "sha256": "394b130cd87ad3750ad1c2d837da910007656b139eb332393979c2592df62175"
+  },
+  "fixtures/negative/negative.json": {
+   "in_archive_sha256": "1a93b09787163b111672d6b12a023d04016eb4c01f2c115ee09e79fbac2a38d2",
+   "sha256": "1a93b09787163b111672d6b12a023d04016eb4c01f2c115ee09e79fbac2a38d2"
+  },
+  "tests/test_census.py": {
+   "in_archive_sha256": "44fcdc3632e9b739bb1a69ef0fbd4b8adcba296a3b6b0c347e8378324a2282be",
+   "sha256": "44fcdc3632e9b739bb1a69ef0fbd4b8adcba296a3b6b0c347e8378324a2282be"
+  },
+  "tests/test_det_confusion.py": {
+   "in_archive_sha256": "810a5b6e8556ac602e7fd31c92d79b55c26886a6106fdb75eb76debd819ef6e1",
+   "sha256": "810a5b6e8556ac602e7fd31c92d79b55c26886a6106fdb75eb76debd819ef6e1"
+  },
+  "tests/test_det_contradiction.py": {
+   "in_archive_sha256": "8b7a46dfde0cb04bad18030d35f989c5f2a564672d01ec34028e528a9e054dad",
+   "sha256": "8b7a46dfde0cb04bad18030d35f989c5f2a564672d01ec34028e528a9e054dad"
+  },
+  "tests/test_det_misquote.py": {
+   "in_archive_sha256": "e2e441d337102b7897a3f89791c2a9e3065e9f9c762d9051becd9337c268aafe",
+   "sha256": "e2e441d337102b7897a3f89791c2a9e3065e9f9c762d9051becd9337c268aafe"
+  },
+  "tests/test_det_nonsense.py": {
+   "in_archive_sha256": "2239e3dd443bbecdfb2449a69e2442de1c1bee7817742d649afc13533bfe71e6",
+   "sha256": "2239e3dd443bbecdfb2449a69e2442de1c1bee7817742d649afc13533bfe71e6"
+  },
+  "tests/test_det_repetition.py": {
+   "in_archive_sha256": "3ce3eb12f8cce4809bfacdcbb13d392f55b12f3a988956ec03509bf597edd298",
+   "sha256": "3ce3eb12f8cce4809bfacdcbb13d392f55b12f3a988956ec03509bf597edd298"
+  },
+  "tests/test_fixtures.py": {
+   "in_archive_sha256": "ef8691fc7f1e7b5680630659c24bd0494ae8488750f378558749b60291ef37c3",
+   "sha256": "ef8691fc7f1e7b5680630659c24bd0494ae8488750f378558749b60291ef37c3"
+  },
+  "tests/test_loaders.py": {
+   "in_archive_sha256": "03244c86d61adf101cff2138028a9e33dfaa38fddc05c994444611fb94600bc3",
+   "sha256": "03244c86d61adf101cff2138028a9e33dfaa38fddc05c994444611fb94600bc3"
+  },
+  "tests/test_report_m6.py": {
+   "in_archive_sha256": "28235569d9df85fac7aeeb92ea1516b5215092641bfed4dd7430019accd228b5",
+   "sha256": "28235569d9df85fac7aeeb92ea1516b5215092641bfed4dd7430019accd228b5"
+  },
+  "tests/test_retrieval.py": {
+   "in_archive_sha256": "d388eb0e170a7aded27c2646e404332ce07d9d0661eb3f64d282fe3921d241a2",
+   "sha256": "d388eb0e170a7aded27c2646e404332ce07d9d0661eb3f64d282fe3921d241a2"
+  },
+  "tests/test_run_detectors.py": {
+   "in_archive_sha256": "25120e90185015fafdb8d39d820a7316c036bba632572a90ae8aef1c50e73c8c",
+   "sha256": "25120e90185015fafdb8d39d820a7316c036bba632572a90ae8aef1c50e73c8c"
+  },
+  "tests/test_sweep_m5.py": {
+   "in_archive_sha256": "656933d440bd0c692929e1732ee9e3f962b7b01d76a89bef047c336d04d6c79f",
+   "sha256": "656933d440bd0c692929e1732ee9e3f962b7b01d76a89bef047c336d04d6c79f"
+  },
+  "tests/test_tokenizer.py": {
+   "in_archive_sha256": "b1f8c2186d36703050758fc0714a2474637ce6a7e34f5895ea29f7437cf39039",
+   "sha256": "b1f8c2186d36703050758fc0714a2474637ce6a7e34f5895ea29f7437cf39039"
+  },
+  "tools/CORPUS.md": {
+   "in_archive_sha256": "7285bb4cd6fc64e166030c23a303d8afc625867d7e6318db8001761469089c71",
+   "sha256": "7285bb4cd6fc64e166030c23a303d8afc625867d7e6318db8001761469089c71"
+  },
+  "tools/DETECTORS.md": {
+   "in_archive_sha256": "41d6418eec70ad0cfc541727833a83bca5130b8fb45522071a9f3d43212d2158",
+   "sha256": "41d6418eec70ad0cfc541727833a83bca5130b8fb45522071a9f3d43212d2158"
+  },
+  "tools/census.py": {
+   "in_archive_sha256": "74afce41c1068e3629c8b1bc0bfe7627670d67b7f8c79aaf7d38d62dc0e0f566",
+   "sha256": "74afce41c1068e3629c8b1bc0bfe7627670d67b7f8c79aaf7d38d62dc0e0f566"
+  },
+  "tools/det_confusion.py": {
+   "in_archive_sha256": "8fec0338ac8da99cbb276c9a64e010943b84cf6ca48a2c24bf3194783563088f",
+   "sha256": "8fec0338ac8da99cbb276c9a64e010943b84cf6ca48a2c24bf3194783563088f"
+  },
+  "tools/det_contradiction.py": {
+   "in_archive_sha256": "641c8719006fcac9ee0eb2f26bbd363dde8f7a08ea4671e2328461b191c86be7",
+   "sha256": "641c8719006fcac9ee0eb2f26bbd363dde8f7a08ea4671e2328461b191c86be7"
+  },
+  "tools/det_misquote.py": {
+   "in_archive_sha256": "3b8d1cd494c3699d5907a5a4927e67454b7ab43e1e9a7dac65dcab2b62ce9dd9",
+   "sha256": "3b8d1cd494c3699d5907a5a4927e67454b7ab43e1e9a7dac65dcab2b62ce9dd9"
+  },
+  "tools/det_nonsense.py": {
+   "in_archive_sha256": "63028d77a13e6e922f9cc61b60921790888c5dacc54e22667f4db8eefeea8a2f",
+   "sha256": "63028d77a13e6e922f9cc61b60921790888c5dacc54e22667f4db8eefeea8a2f"
+  },
+  "tools/det_repetition.py": {
+   "in_archive_sha256": "f1af20a9866355f2ce70fabe677e5698169562794c7c8869d1833a66849d1f04",
+   "sha256": "f1af20a9866355f2ce70fabe677e5698169562794c7c8869d1833a66849d1f04"
+  },
+  "tools/fixtures.py": {
+   "in_archive_sha256": "efaf85f618a7b02cdd98445b924028c41011b456855530ff43d357395e71316b",
+   "sha256": "efaf85f618a7b02cdd98445b924028c41011b456855530ff43d357395e71316b"
+  },
+  "tools/loaders.py": {
+   "in_archive_sha256": "3452c95d93a5785d44594fcb8dedc1b6a243974f455f4a061b5975f7c63051e0",
+   "sha256": "3452c95d93a5785d44594fcb8dedc1b6a243974f455f4a061b5975f7c63051e0"
+  },
+  "tools/report_m6.py": {
+   "in_archive_sha256": "c7c4288cf40a2bddee46d368bb019bc15384328abaa93a6a71d3e15413026e0d",
+   "sha256": "c7c4288cf40a2bddee46d368bb019bc15384328abaa93a6a71d3e15413026e0d"
+  },
+  "tools/retrieval.py": {
+   "in_archive_sha256": "f36f3a6b1bd851945ff388f384b14a5b2d881f8af493da267f88e547e627554d",
+   "sha256": "f36f3a6b1bd851945ff388f384b14a5b2d881f8af493da267f88e547e627554d"
+  },
+  "tools/run_detectors.py": {
+   "in_archive_sha256": "d7d109c5b00d7793e7fbe063656bf8a84522e0f6425b0cfc2bea975822d2db18",
+   "sha256": "d7d109c5b00d7793e7fbe063656bf8a84522e0f6425b0cfc2bea975822d2db18"
+  },
+  "tools/sweep_m5.py": {
+   "in_archive_sha256": "9df1816ef2e72f42816816ff54c4eb06c9482986e4074466e300f73dbf2b9004",
+   "sha256": "9df1816ef2e72f42816816ff54c4eb06c9482986e4074466e300f73dbf2b9004"
+  },
+  "tools/tokenizer.py": {
+   "in_archive_sha256": "3f9ce9f7a94c863d87d927e2333f16d0c8ad0d196cb330eb71db2dfe325f1c96",
+   "sha256": "3f9ce9f7a94c863d87d927e2333f16d0c8ad0d196cb330eb71db2dfe325f1c96"
+  }
+ },
+ "inherited_census_and_runs": {
+  "file_count": 233,
+  "files": {
+   "runs/m5-raw/INDEX.md": {
+    "in_archive_sha256": "db0d0d9dd2e51e1b26f50c8f7f3f0c1d4ec4530b3bb74562153528c879c35e78",
+    "sha256": "db0d0d9dd2e51e1b26f50c8f7f3f0c1d4ec4530b3bb74562153528c879c35e78"
+   },
+   "runs/m5-raw/PROVENANCE.md": {
+    "in_archive_sha256": "e4a6b8f93b147dc67dc11a4d8e9a0757c6ed9bbae876d0585eb6da4682cfd5b2",
+    "sha256": "e4a6b8f93b147dc67dc11a4d8e9a0757c6ed9bbae876d0585eb6da4682cfd5b2"
+   },
+   "runs/m5-raw/index.json": {
+    "in_archive_sha256": "2b78edca3c8812dd5c0ee69d14919943b7bbead1e80d88ab9bf672fecfb21446",
+    "sha256": "2b78edca3c8812dd5c0ee69d14919943b7bbead1e80d88ab9bf672fecfb21446"
+   },
+   "runs/m5-raw/records/A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "5748a525a71301beb1b8d80fb6a4bf787ccf231bae307b94c524c958ccd3a753",
+    "sha256": "5748a525a71301beb1b8d80fb6a4bf787ccf231bae307b94c524c958ccd3a753"
+   },
+   "runs/m5-raw/records/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "70e4370420f5e5360c694546ba94c284f18f7b76a5f0fc677f026fd8a84d3d36",
+    "sha256": "70e4370420f5e5360c694546ba94c284f18f7b76a5f0fc677f026fd8a84d3d36"
+   },
+   "runs/m5-raw/records/A_Review_of_the_Work_Sep_2007_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "43aadf43a314c232f39c36d503ecad4c73bac7ad2a2addb21f5b58a0af2ab86d",
+    "sha256": "43aadf43a314c232f39c36d503ecad4c73bac7ad2a2addb21f5b58a0af2ab86d"
+   },
+   "runs/m5-raw/records/A_Unique_Sedona_Seminar_Dec_2008_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "e848a8d2e9c1835ac6ede58c2ff6fbc9bcb82ce819053f3c44c300fd3b688006",
+    "sha256": "e848a8d2e9c1835ac6ede58c2ff6fbc9bcb82ce819053f3c44c300fd3b688006"
+   },
+   "runs/m5-raw/records/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "c6bf0a744f62959d2203329210e00749c6d5227b21059c441fdf37d2e3f53ec1",
+    "sha256": "c6bf0a744f62959d2203329210e00749c6d5227b21059c441fdf37d2e3f53ec1"
+   },
+   "runs/m5-raw/records/A_Unique_Sedona_Seminar_Dec_2008_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "5f45bda30405276227882cec647aaf7c35c7a4f0514f856f1a9f34644fbefc4b",
+    "sha256": "5f45bda30405276227882cec647aaf7c35c7a4f0514f856f1a9f34644fbefc4b"
+   },
+   "runs/m5-raw/records/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.json": {
+    "in_archive_sha256": "41102c9e5057fe4871015ad3ed33be9f89be510eca317787b6341800baf55d29",
+    "sha256": "41102c9e5057fe4871015ad3ed33be9f89be510eca317787b6341800baf55d29"
+   },
+   "runs/m5-raw/records/Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "ba9b378c4f3a091f3bd27d7c3e545715056b8a8a0aa337f28f8e4a10cd9208f4",
+    "sha256": "ba9b378c4f3a091f3bd27d7c3e545715056b8a8a0aa337f28f8e4a10cd9208f4"
+   },
+   "runs/m5-raw/records/Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "d2637e004e1ca0c13cb8cc2bb96aa0a42d807580b52bce3242e9b7ae6fb087d7",
+    "sha256": "d2637e004e1ca0c13cb8cc2bb96aa0a42d807580b52bce3242e9b7ae6fb087d7"
+   },
+   "runs/m5-raw/records/Advaita_The_Way_to_God_Through_Mind_Aug_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "e224039a3d476afe9b2c83d7b9777c1a3d13b439d6a16f384755e822e98beeeb",
+    "sha256": "e224039a3d476afe9b2c83d7b9777c1a3d13b439d6a16f384755e822e98beeeb"
+   },
+   "runs/m5-raw/records/Alignment_Apr_2005_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "fac4c9fbf22a9973ddc3445262e94a835400d98db8826f078c6810cac69cf6ba",
+    "sha256": "fac4c9fbf22a9973ddc3445262e94a835400d98db8826f078c6810cac69cf6ba"
+   },
+   "runs/m5-raw/records/Alignment_Apr_2005_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "810182788e4bef5c4ff13157b38cac564b002ffa1a1203bdbb20e232ca39ff33",
+    "sha256": "810182788e4bef5c4ff13157b38cac564b002ffa1a1203bdbb20e232ca39ff33"
+   },
+   "runs/m5-raw/records/Alignment_Apr_2005_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "d2ef52c1d3d0e1ab6af51bee1f944d0f135cdba2bf056f02fbb176a43c84d730",
+    "sha256": "d2ef52c1d3d0e1ab6af51bee1f944d0f135cdba2bf056f02fbb176a43c84d730"
+   },
+   "runs/m5-raw/records/Belief,_Trust_and_Credibility_Jun_2008_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Belief,_Trust_and_Credibility_Jun_2008_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Belief,_Trust_and_Credibility_Jun_2008_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "46c9be26ce5f120beafbdddecbd67f1ee9603ff7356bde1f408a7b0a8e0c89ff",
+    "sha256": "46c9be26ce5f120beafbdddecbd67f1ee9603ff7356bde1f408a7b0a8e0c89ff"
+   },
+   "runs/m5-raw/records/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "ed26351b0f7b832e00b1627e8a86edf454f1ee9adf9fa5eca015f3692a546d57",
+    "sha256": "ed26351b0f7b832e00b1627e8a86edf454f1ee9adf9fa5eca015f3692a546d57"
+   },
+   "runs/m5-raw/records/Causality_The_Ego_s_Foundation_Jan_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "2c93a5cba20ca8e8a1f53d94a5577234201c0486c4156a5d7349eabead51b737",
+    "sha256": "2c93a5cba20ca8e8a1f53d94a5577234201c0486c4156a5d7349eabead51b737"
+   },
+   "runs/m5-raw/records/Causality_The_Ego_s_Foundation_Jan_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "26e616e0528ba13d7f6023dfb37ecc5abca6c8bdf2312a5b2ad94acbad58f81b",
+    "sha256": "26e616e0528ba13d7f6023dfb37ecc5abca6c8bdf2312a5b2ad94acbad58f81b"
+   },
+   "runs/m5-raw/records/Creation_vs_Evolution_Oct_2007_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "4499c3546a1901eb8b22d30603de39a0b408d5fa74b938708caeca9ea9f31400",
+    "sha256": "4499c3546a1901eb8b22d30603de39a0b408d5fa74b938708caeca9ea9f31400"
+   },
+   "runs/m5-raw/records/Creation_vs_Evolution_Oct_2007_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "e9a0404211f701c42d1a9392247158bad989a8ea9113ef0192873d6b164eb838",
+    "sha256": "e9a0404211f701c42d1a9392247158bad989a8ea9113ef0192873d6b164eb838"
+   },
+   "runs/m5-raw/records/Creation_vs_Evolution_Oct_2007_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "8940a03aacea342949b695a06a16c4a48e0004a26fae32daea13cc4329d91c86",
+    "sha256": "8940a03aacea342949b695a06a16c4a48e0004a26fae32daea13cc4329d91c86"
+   },
+   "runs/m5-raw/records/Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_1.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "82c69f53856204ccfc39c2ebd5dbef4483a431bd59ff81167e85158dc017b665",
+    "sha256": "82c69f53856204ccfc39c2ebd5dbef4483a431bd59ff81167e85158dc017b665"
+   },
+   "runs/m5-raw/records/Devotion_The_Way_to_God_Through_the_Heart_Sep_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Dialogue,_Questions,_and_Answers_Dec_2003_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "0b0210c5608df74bf66b112bcee2f675f1e0d10118f106e70ecd33ddfca932b3",
+    "sha256": "0b0210c5608df74bf66b112bcee2f675f1e0d10118f106e70ecd33ddfca932b3"
+   },
+   "runs/m5-raw/records/Dialogue,_Questions,_and_Answers_Dec_2003_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Dialogue_Questions_and_Answers_Dec_2003_Part_3.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Emotions_and_Sensations_Apr_2004_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "ce90cfad0962f01d0bae8c41d02c26f919d1ccbc994745c52ae04a23994a2f43",
+    "sha256": "ce90cfad0962f01d0bae8c41d02c26f919d1ccbc994745c52ae04a23994a2f43"
+   },
+   "runs/m5-raw/records/Emotions_and_Sensations_Apr_2004_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "3cc4e803a4c52bc169c4603fbbd614dbcecc15e1c62ae78bde3a79f3c7251422",
+    "sha256": "3cc4e803a4c52bc169c4603fbbd614dbcecc15e1c62ae78bde3a79f3c7251422"
+   },
+   "runs/m5-raw/records/Emotions_and_Sensations_Apr_2004_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "b59d2b715a6fec619f8ac35b42bf628c68802605d0f508504110beda745668cd",
+    "sha256": "b59d2b715a6fec619f8ac35b42bf628c68802605d0f508504110beda745668cd"
+   },
+   "runs/m5-raw/records/Enlightenment_Aug_2003_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Enlightenment_Aug_2003_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "020bb2051905c5b70836fc8cb0dc30e051227c0b6aa0448ba2d7a03bbc6bd7fc",
+    "sha256": "020bb2051905c5b70836fc8cb0dc30e051227c0b6aa0448ba2d7a03bbc6bd7fc"
+   },
+   "runs/m5-raw/records/Enlightenment_Aug_2003_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Experiential_Reality_Feb_2006_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "4f555c7fe1a58bbea92c4fc37ca5ab40b51d970e6da623836c226ffb31db3e13",
+    "sha256": "4f555c7fe1a58bbea92c4fc37ca5ab40b51d970e6da623836c226ffb31db3e13"
+   },
+   "runs/m5-raw/records/Experiential_Reality_Feb_2006_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "87ff6d131385bd68081e740a6c38f4d79bae047c234695254cbe0c2a6e356ac7",
+    "sha256": "87ff6d131385bd68081e740a6c38f4d79bae047c234695254cbe0c2a6e356ac7"
+   },
+   "runs/m5-raw/records/Experiential_Reality_Feb_2006_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "85c5c363f7603b0eb837c35e3ff917779df50f6560920f7b5109ca9f5be8d4eb",
+    "sha256": "85c5c363f7603b0eb837c35e3ff917779df50f6560920f7b5109ca9f5be8d4eb"
+   },
+   "runs/m5-raw/records/Experiential_Reality_The_Mystic_Dec_2007_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "c3b39e180986542e90a5bcaaa150a2e646d802eb4fcb8c89d3fe76140443063f",
+    "sha256": "c3b39e180986542e90a5bcaaa150a2e646d802eb4fcb8c89d3fe76140443063f"
+   },
+   "runs/m5-raw/records/Experiential_Reality_The_Mystic_Dec_2007_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "e9c2a8d0b7fc25fbcf90a0ddfd47a4e81ac2bf89feffc3f3ee013ec1b771718f",
+    "sha256": "e9c2a8d0b7fc25fbcf90a0ddfd47a4e81ac2bf89feffc3f3ee013ec1b771718f"
+   },
+   "runs/m5-raw/records/Experiential_Reality_The_Mystic_Dec_2007_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "c81e40dec770601f514ece45de41e5c368b65ded2bf667f1fe179c3ec8f16c8d",
+    "sha256": "c81e40dec770601f514ece45de41e5c368b65ded2bf667f1fe179c3ec8f16c8d"
+   },
+   "runs/m5-raw/records/Freedom_Morality_and_Ethics_Nov_2008_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "9832717c8dac9c3b6d5a8e0ff5e811b747c3a19c6318d09af49d32160763d86a",
+    "sha256": "9832717c8dac9c3b6d5a8e0ff5e811b747c3a19c6318d09af49d32160763d86a"
+   },
+   "runs/m5-raw/records/Freedom_Morality_and_Ethics_Nov_2008_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "5fb06f7c07c4d0bc8765b68cf07cae8d9acb9065bf8b1ac3e12822e755db5c1d",
+    "sha256": "5fb06f7c07c4d0bc8765b68cf07cae8d9acb9065bf8b1ac3e12822e755db5c1d"
+   },
+   "runs/m5-raw/records/Freedom_Morality_and_Ethics_Nov_2008_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "d9d3a8b8af2829776e07ca7c9ad0c9492e25b9b14ca35b1a8c58a720378cc948",
+    "sha256": "d9d3a8b8af2829776e07ca7c9ad0c9492e25b9b14ca35b1a8c58a720378cc948"
+   },
+   "runs/m5-raw/records/God_Transcendent_and_Immanent_Nov_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "f7077f90daa3a5b62ebe23dec3533998580e883d4f294970cc5fe67f86cce81e",
+    "sha256": "f7077f90daa3a5b62ebe23dec3533998580e883d4f294970cc5fe67f86cce81e"
+   },
+   "runs/m5-raw/records/God_Transcendent_and_Immanent_Nov_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "9fb862c3c5561c43666f0f7b8f56ebc23565d79270a0225e77a6fc6dc78ea16d",
+    "sha256": "9fb862c3c5561c43666f0f7b8f56ebc23565d79270a0225e77a6fc6dc78ea16d"
+   },
+   "runs/m5-raw/records/God_Transcendent_and_Immanent_Nov_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "2c35b4a12b79c70dbe1e1b558b16542b72ef7cba56a4a215e51bc802b754ed41",
+    "sha256": "2c35b4a12b79c70dbe1e1b558b16542b72ef7cba56a4a215e51bc802b754ed41"
+   },
+   "runs/m5-raw/records/God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "2b4d14859963ad49779b0a64a24a3e24cced618ce42ce78a6c4a8f3a44a32a33",
+    "sha256": "2b4d14859963ad49779b0a64a24a3e24cced618ce42ce78a6c4a8f3a44a32a33"
+   },
+   "runs/m5-raw/records/God_vs_Science_Limits_of_the_Mind_Feb_2007_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "49a178da938c81d27caa0971444516af8fee83b17895782f42a72795080212a0",
+    "sha256": "49a178da938c81d27caa0971444516af8fee83b17895782f42a72795080212a0"
+   },
+   "runs/m5-raw/records/Handling_Spiritual_Challenges_Apr_2010_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "b1bcbc7ea8e8df84ff6b41153c2100d7aee68de7d76a0df7c8a12d682baa616e",
+    "sha256": "b1bcbc7ea8e8df84ff6b41153c2100d7aee68de7d76a0df7c8a12d682baa616e"
+   },
+   "runs/m5-raw/records/Handling_Spiritual_Challenges_Apr_2010_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "b21c827df2328a1158c713985a54acda42096a857bdc85169db7f17d27d2b2ec",
+    "sha256": "b21c827df2328a1158c713985a54acda42096a857bdc85169db7f17d27d2b2ec"
+   },
+   "runs/m5-raw/records/Handling_Spiritual_Challenges_Apr_2010_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "037582a4ea8a4467e15de381fe00c9759392e459d91f296b3fa2211b83ca3935",
+    "sha256": "037582a4ea8a4467e15de381fe00c9759392e459d91f296b3fa2211b83ca3935"
+   },
+   "runs/m5-raw/records/Happiness_Apr_2009_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "8629e182f23bd3a99c3849dd0d13a385fc28a61e66433166f55966587d8cb59b",
+    "sha256": "8629e182f23bd3a99c3849dd0d13a385fc28a61e66433166f55966587d8cb59b"
+   },
+   "runs/m5-raw/records/Happiness_Apr_2009_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "40a4ec12c2ce099b3dda4b72a9706e3e94d8b0ba93a4f259c082c19bb8751bb8",
+    "sha256": "40a4ec12c2ce099b3dda4b72a9706e3e94d8b0ba93a4f259c082c19bb8751bb8"
+   },
+   "runs/m5-raw/records/Happiness_Apr_2009_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "ae8b6b7669beb6658ed5f6e746d48325e817b18adbd288aa4f20784e4affcbc4",
+    "sha256": "ae8b6b7669beb6658ed5f6e746d48325e817b18adbd288aa4f20784e4affcbc4"
+   },
+   "runs/m5-raw/records/Identification_and_Illusion_Aug_2004_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "bae7715063e78c5178fd50a189796fef951f91ae55bdbc3138a5f7c03e3483b9",
+    "sha256": "bae7715063e78c5178fd50a189796fef951f91ae55bdbc3138a5f7c03e3483b9"
+   },
+   "runs/m5-raw/records/Identification_and_Illusion_Aug_2004_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "759e95850f6bd98ad8cc248ff2e1fa318f08d93fa6e8e5576dbfa4f4bdfc7307",
+    "sha256": "759e95850f6bd98ad8cc248ff2e1fa318f08d93fa6e8e5576dbfa4f4bdfc7307"
+   },
+   "runs/m5-raw/records/Identification_and_Illusion_Aug_2004_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "601844252ab975a42644842da9f2935a981ebcde2861b853b6729d461a582cb8",
+    "sha256": "601844252ab975a42644842da9f2935a981ebcde2861b853b6729d461a582cb8"
+   },
+   "runs/m5-raw/records/Illness_and_SelfHealing_enxautogen_html.json": {
+    "in_archive_sha256": "a4f4f5e2a65202454b6480edfbcc828378068e27d172456acdaa9534e2a53e39",
+    "sha256": "a4f4f5e2a65202454b6480edfbcc828378068e27d172456acdaa9534e2a53e39"
+   },
+   "runs/m5-raw/records/Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "752763edd95ad941cf69315e1f9a96c7278d80535156afa1d5b2e34eb11aa804",
+    "sha256": "752763edd95ad941cf69315e1f9a96c7278d80535156afa1d5b2e34eb11aa804"
+   },
+   "runs/m5-raw/records/Integration_of_Spirituality_and_Personal_Life_Feb_2003_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Intention_May_2005_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "41153cf37542e64dd4102aac0386dbd6128ea785fdd14c9d5ec3291843b345e6",
+    "sha256": "41153cf37542e64dd4102aac0386dbd6128ea785fdd14c9d5ec3291843b345e6"
+   },
+   "runs/m5-raw/records/Intention_May_2005_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "359bdc74099777adab2dc64526c674d346543017609a9fdc58a46cae03798876",
+    "sha256": "359bdc74099777adab2dc64526c674d346543017609a9fdc58a46cae03798876"
+   },
+   "runs/m5-raw/records/Intention_May_2005_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "b067a0f48a708018c80b7991aad60ee3fef87358234c46ce842a93ac2d8508aa",
+    "sha256": "b067a0f48a708018c80b7991aad60ee3fef87358234c46ce842a93ac2d8508aa"
+   },
+   "runs/m5-raw/records/Karma_and_the_Afterlife_Oct_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "cba4a00ac2a56bd8586ea9fc95b368f6ac6c9d45fb563e6f4c77d4fa63a2ba01",
+    "sha256": "cba4a00ac2a56bd8586ea9fc95b368f6ac6c9d45fb563e6f4c77d4fa63a2ba01"
+   },
+   "runs/m5-raw/records/Karma_and_the_Afterlife_Oct_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "599496ff82b45938b8da2f4882cd02610c46bc4f31db947ce47edf036cfdb35c",
+    "sha256": "599496ff82b45938b8da2f4882cd02610c46bc4f31db947ce47edf036cfdb35c"
+   },
+   "runs/m5-raw/records/Karma_and_the_Afterlife_Oct_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "c00acd270ae8e87dd0223bd5af596ddcf0c9ca4c95fee97cdc66605d70ef18dd",
+    "sha256": "c00acd270ae8e87dd0223bd5af596ddcf0c9ca4c95fee97cdc66605d70ef18dd"
+   },
+   "runs/m5-raw/records/Love_Sep_2011_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "709f6f3e16896b2fbc39ec3e063afd1edad605d4dbfed69228740fd725a8b615",
+    "sha256": "709f6f3e16896b2fbc39ec3e063afd1edad605d4dbfed69228740fd725a8b615"
+   },
+   "runs/m5-raw/records/Love_Sep_2011_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "8707feabea993bc407894a1357b483c3119f4240cdc6888e670613a5c0812887",
+    "sha256": "8707feabea993bc407894a1357b483c3119f4240cdc6888e670613a5c0812887"
+   },
+   "runs/m5-raw/records/Love_is_a_Way_of_Being_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "71bf850e187f48e0a43d2eb2f80217ddc2f015610868e5916fa4d6eedd4428b0",
+    "sha256": "71bf850e187f48e0a43d2eb2f80217ddc2f015610868e5916fa4d6eedd4428b0"
+   },
+   "runs/m5-raw/records/Love_is_a_Way_of_Being_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "f25c71be58cc23a135224f753d42792ae7865f144e3a760cbaeba3b94e5ee6f9",
+    "sha256": "f25c71be58cc23a135224f753d42792ae7865f144e3a760cbaeba3b94e5ee6f9"
+   },
+   "runs/m5-raw/records/Love_is_a_Way_of_Being_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "eae8bd3933319e9c91ce6b50602b0c4120a8b2295ca2502e8e69b7a0e7f6eacd",
+    "sha256": "eae8bd3933319e9c91ce6b50602b0c4120a8b2295ca2502e8e69b7a0e7f6eacd"
+   },
+   "runs/m5-raw/records/Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "6fdd806d9cc82585df57d9601c86547731130801b47be2cbc462864502c98ce6",
+    "sha256": "6fdd806d9cc82585df57d9601c86547731130801b47be2cbc462864502c98ce6"
+   },
+   "runs/m5-raw/records/Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "2a8d818c9cb636c0400a57efaa947f16305ddfd8202b2dc94c35e6e76f0dcb3b",
+    "sha256": "2a8d818c9cb636c0400a57efaa947f16305ddfd8202b2dc94c35e6e76f0dcb3b"
+   },
+   "runs/m5-raw/records/Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "39ae00b3a6e59b79a11242b5a7cdca9394802344b7197bc64ae3802b378f6237",
+    "sha256": "39ae00b3a6e59b79a11242b5a7cdca9394802344b7197bc64ae3802b378f6237"
+   },
+   "runs/m5-raw/records/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "0afe0eea6f436d8a486275baaf4472faf43785db0ac05cfc67f364514a872985",
+    "sha256": "0afe0eea6f436d8a486275baaf4472faf43785db0ac05cfc67f364514a872985"
+   },
+   "runs/m5-raw/records/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "6dac94d982f833a73297128a3cfb3d6af1c0eaf86b1d3158a8c89b2735a4d1f6",
+    "sha256": "6dac94d982f833a73297128a3cfb3d6af1c0eaf86b1d3158a8c89b2735a4d1f6"
+   },
+   "runs/m5-raw/records/Overcoming_Doubt,_Skepticism_&_Disbelief_Aug_2008_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "a73c354a22382bdb330c4eece00563398f555c3f08140a3b8f07459e7c0b0ba4",
+    "sha256": "a73c354a22382bdb330c4eece00563398f555c3f08140a3b8f07459e7c0b0ba4"
+   },
+   "runs/m5-raw/records/Peace_Aug_2009_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "fca8ee55c36842a8b58e0dd0fd4544ad5caa9cdf463ebb5c2206935a4c19f5f8",
+    "sha256": "fca8ee55c36842a8b58e0dd0fd4544ad5caa9cdf463ebb5c2206935a4c19f5f8"
+   },
+   "runs/m5-raw/records/Peace_Aug_2009_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "d14dab2098615a9fdcf0b56ed971e02cdb9ebd17d2f8f231ed496cf1d67aa643",
+    "sha256": "d14dab2098615a9fdcf0b56ed971e02cdb9ebd17d2f8f231ed496cf1d67aa643"
+   },
+   "runs/m5-raw/records/Peace_Aug_2009_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "6f8bda9e2f81a73f8835f0125320655addce8f36e675bad33ea608bd1e903c4d",
+    "sha256": "6f8bda9e2f81a73f8835f0125320655addce8f36e675bad33ea608bd1e903c4d"
+   },
+   "runs/m5-raw/records/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "991e4886e70a15c2cb477166a515854d5170cceec8a6c1adde1c2f5118d7f795",
+    "sha256": "991e4886e70a15c2cb477166a515854d5170cceec8a6c1adde1c2f5118d7f795"
+   },
+   "runs/m5-raw/records/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "673bb18f697f2615380bd09f857bfc1e08e58cdafe2c4fb3756901f1ac949b6b",
+    "sha256": "673bb18f697f2615380bd09f857bfc1e08e58cdafe2c4fb3756901f1ac949b6b"
+   },
+   "runs/m5-raw/records/Perception_and_Illusion_Distortions_of_Reality_May_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "8a6893375dfafcb58f4a15871703ac392991ade27b1cdc2933452c69cd217e5e",
+    "sha256": "8a6893375dfafcb58f4a15871703ac392991ade27b1cdc2933452c69cd217e5e"
+   },
+   "runs/m5-raw/records/Perception_and_Positionality_Jun_2004_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "239bd63d9e876c09a47cff3c571818b9f0cf3a77cf381615233357c844dd9632",
+    "sha256": "239bd63d9e876c09a47cff3c571818b9f0cf3a77cf381615233357c844dd9632"
+   },
+   "runs/m5-raw/records/Perception_and_Positionality_Jun_2004_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "3f2d58e14814cf07304fc681a8bbc0a877e5459872d13044b632466b6b301669",
+    "sha256": "3f2d58e14814cf07304fc681a8bbc0a877e5459872d13044b632466b6b301669"
+   },
+   "runs/m5-raw/records/Perception_and_Positionality_Jun_2004_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "8236e032f568fc0e03a445fe09303b46688ce89454ec102b999064f2f2dbad0a",
+    "sha256": "8236e032f568fc0e03a445fe09303b46688ce89454ec102b999064f2f2dbad0a"
+   },
+   "runs/m5-raw/records/Perception_vs_Essence_Apr_2006_Part_1.json": {
+    "in_archive_sha256": "b28358cacfdf25ec64e562095b4a22ac1474e3ae34461e3675f4bf4ece786ad6",
+    "sha256": "b28358cacfdf25ec64e562095b4a22ac1474e3ae34461e3675f4bf4ece786ad6"
+   },
+   "runs/m5-raw/records/Perception_vs_Essence_Apr_2006_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Perception_vs_Essence_Apr_2006_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "e45a84709e0357f9017b557bc7e1632c8020cfcdb1083a3eb23a50da55c3cbed",
+    "sha256": "e45a84709e0357f9017b557bc7e1632c8020cfcdb1083a3eb23a50da55c3cbed"
+   },
+   "runs/m5-raw/records/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "263549f93396328e5f757463c109631702162bf268c8f6bf4bc6b072ab04c91e",
+    "sha256": "263549f93396328e5f757463c109631702162bf268c8f6bf4bc6b072ab04c91e"
+   },
+   "runs/m5-raw/records/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "1481ea74bd2eaacf4bde42a223162dc5c671367f7638878a86155ce5714a7b93",
+    "sha256": "1481ea74bd2eaacf4bde42a223162dc5c671367f7638878a86155ce5714a7b93"
+   },
+   "runs/m5-raw/records/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "23019f99210fae76b6eeae135cab99d45e01418e7b479c074169eaaebb355c69",
+    "sha256": "23019f99210fae76b6eeae135cab99d45e01418e7b479c074169eaaebb355c69"
+   },
+   "runs/m5-raw/records/Practical_Spirituality_Oct_2008_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "dab1b1bddd0abe5242e1f5309c7d5c2d09f2371f20b906ee11d07814443cffd8",
+    "sha256": "dab1b1bddd0abe5242e1f5309c7d5c2d09f2371f20b906ee11d07814443cffd8"
+   },
+   "runs/m5-raw/records/Practical_Spirituality_Oct_2008_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "db4ab95cafeab7c597f80b708a46d464dbf79e190953ab8b516fd48e13e57115",
+    "sha256": "db4ab95cafeab7c597f80b708a46d464dbf79e190953ab8b516fd48e13e57115"
+   },
+   "runs/m5-raw/records/Practical_Spirituality_Oct_2008_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "8e250e5198cb265db914d9cc08b346a89780a52191b04a8632c05ecc03ac0696",
+    "sha256": "8e250e5198cb265db914d9cc08b346a89780a52191b04a8632c05ecc03ac0696"
+   },
+   "runs/m5-raw/records/Question_Answer_Session_Jan_2011_enxautogen_html.json": {
+    "in_archive_sha256": "f018184e56dabda0a05cc17349c73797fe837a0753087dd64f8475e73aa7c55f",
+    "sha256": "f018184e56dabda0a05cc17349c73797fe837a0753087dd64f8475e73aa7c55f"
+   },
+   "runs/m5-raw/records/Question_Answer_Session_Jul_2011_enxautogen_html.json": {
+    "in_archive_sha256": "d7eb6fedebc26134d3a5ff60a4a3093909a522d8ddb7452698fcd503a84edcb1",
+    "sha256": "d7eb6fedebc26134d3a5ff60a4a3093909a522d8ddb7452698fcd503a84edcb1"
+   },
+   "runs/m5-raw/records/Question_Answer_Session_Mar_2011_enxautogen_html.json": {
+    "in_archive_sha256": "243ecd11a1b72440f840c8f3dd80bf4e6dadf17986fb6e9383806751278017d3",
+    "sha256": "243ecd11a1b72440f840c8f3dd80bf4e6dadf17986fb6e9383806751278017d3"
+   },
+   "runs/m5-raw/records/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "097a2954fa09916b75ded18fe0b521530cd439429a0455349bf8127684dbfaf7",
+    "sha256": "097a2954fa09916b75ded18fe0b521530cd439429a0455349bf8127684dbfaf7"
+   },
+   "runs/m5-raw/records/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "5883340c4c14820f861794af029a070f0aa2d0d9556ba5391ca982f922737a4f",
+    "sha256": "5883340c4c14820f861794af029a070f0aa2d0d9556ba5391ca982f922737a4f"
+   },
+   "runs/m5-raw/records/Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "7a0911f12ec950e31c136af856f1ce7f439859fc63f2769ea2e30886d9d75bdf",
+    "sha256": "7a0911f12ec950e31c136af856f1ce7f439859fc63f2769ea2e30886d9d75bdf"
+   },
+   "runs/m5-raw/records/Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "1928f1d460899598b61a28e5a88d8303eee7d498a70d8dbae58dd4eb7ebe5ab5",
+    "sha256": "1928f1d460899598b61a28e5a88d8303eee7d498a70d8dbae58dd4eb7ebe5ab5"
+   },
+   "runs/m5-raw/records/Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Realization_of_the_Self_The_Final_Moments_Dec_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "73d3b71040647f8a87755529cdfb69506a928cf16c8c728df5a9f5b86fa5a20d",
+    "sha256": "73d3b71040647f8a87755529cdfb69506a928cf16c8c728df5a9f5b86fa5a20d"
+   },
+   "runs/m5-raw/records/Realization_of_the_Self_as_the_I_Nov_2003_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "2eb1f6ebdbf05aabec1e05436338ead8611ed58173e27a2027efeb468b49339a",
+    "sha256": "2eb1f6ebdbf05aabec1e05436338ead8611ed58173e27a2027efeb468b49339a"
+   },
+   "runs/m5-raw/records/Realization_of_the_Self_as_the_I_Nov_2003_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Realization_of_the_Self_as_the_I_Nov_2003_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "fd66ed0b2f8f22db1848242acd8b621a9c3b07b487cf00e1eea51b807bdde46a",
+    "sha256": "fd66ed0b2f8f22db1848242acd8b621a9c3b07b487cf00e1eea51b807bdde46a"
+   },
+   "runs/m5-raw/records/Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "7ea9184c7fc9eed8c5c57ec19792eb35da415021210c27b234922b43a2a75529",
+    "sha256": "7ea9184c7fc9eed8c5c57ec19792eb35da415021210c27b234922b43a2a75529"
+   },
+   "runs/m5-raw/records/Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "e56dbd70a005415d0365afbd750f9a367ea00de72c2a989169400328872bdb7e",
+    "sha256": "e56dbd70a005415d0365afbd750f9a367ea00de72c2a989169400328872bdb7e"
+   },
+   "runs/m5-raw/records/Realizing_the_Root_of_Consciousness_Meditative_and_Contemplative_Techniques_Jun_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Relativism_vs_Reality_Apr_2007_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "0f0dbdd20598a6be3bd794cb3c38cbc3a5c0387601a32a37c5c69e3a38a4f3be",
+    "sha256": "0f0dbdd20598a6be3bd794cb3c38cbc3a5c0387601a32a37c5c69e3a38a4f3be"
+   },
+   "runs/m5-raw/records/Relativism_vs_Reality_Apr_2007_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "c70b946cbaabb9f429dfa399967ddc8366533b44113be9ddd5877f0c08233fdc",
+    "sha256": "c70b946cbaabb9f429dfa399967ddc8366533b44113be9ddd5877f0c08233fdc"
+   },
+   "runs/m5-raw/records/Relativism_vs_Reality_Apr_2007_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "b81da1e450b507a45874f6174929abaf49b3acf7042fca70f32303c3440490bb",
+    "sha256": "b81da1e450b507a45874f6174929abaf49b3acf7042fca70f32303c3440490bb"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_III_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "f6d2ab9252e91765870a07c0a9c60d87b8d6a912ec975a278c78a4e9325e9665",
+    "sha256": "f6d2ab9252e91765870a07c0a9c60d87b8d6a912ec975a278c78a4e9325e9665"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_III_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "3da2ba184a22e01dc673d3d9ac0e4e70eaed630dd2f584b6b8f2d193255e30c9",
+    "sha256": "3da2ba184a22e01dc673d3d9ac0e4e70eaed630dd2f584b6b8f2d193255e30c9"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_III_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "35425dd2d6f0b9894448c983c521b3cb6255e6971e09880d183ec80ce22c8077",
+    "sha256": "35425dd2d6f0b9894448c983c521b3cb6255e6971e09880d183ec80ce22c8077"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_III_Part_4_enxautogen_html.json": {
+    "in_archive_sha256": "1487497eb9bb70ba850bad45a87f97dade681e3900204630cf7ac3752b9e84f1",
+    "sha256": "1487497eb9bb70ba850bad45a87f97dade681e3900204630cf7ac3752b9e84f1"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_III_Part_5_enxautogen_html.json": {
+    "in_archive_sha256": "62bc6f5888393e497a42baef1e33d74da2c95746eda2b6c3c7d5c994026accab",
+    "sha256": "62bc6f5888393e497a42baef1e33d74da2c95746eda2b6c3c7d5c994026accab"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_III_Part_6_enxautogen_html.json": {
+    "in_archive_sha256": "6248e35b7999b631ccfa812508aea108da6d2fca92add89e07fab8f34cf59d62",
+    "sha256": "6248e35b7999b631ccfa812508aea108da6d2fca92add89e07fab8f34cf59d62"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_II_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_II_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "ba82b8deeb3aa6f40427250cb118e8f85c9b323f83187a9cc7ff25a5fbd1fb5f",
+    "sha256": "ba82b8deeb3aa6f40427250cb118e8f85c9b323f83187a9cc7ff25a5fbd1fb5f"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_II_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "cccaf685370f6a89699eee121678b0e37a355a554bd47db339c751a17713688d",
+    "sha256": "cccaf685370f6a89699eee121678b0e37a355a554bd47db339c751a17713688d"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_II_Part_4_enxautogen_html.json": {
+    "in_archive_sha256": "82665b8a0d62d1f150498d016caf66ea84535363c7e9101bc2c4d6fa7ea11428",
+    "sha256": "82665b8a0d62d1f150498d016caf66ea84535363c7e9101bc2c4d6fa7ea11428"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_II_Part_5_enxautogen_html.json": {
+    "in_archive_sha256": "7f59cb7e4186ac3deab415f62acba350e840da1352d7c3221d2af3910ab62654",
+    "sha256": "7f59cb7e4186ac3deab415f62acba350e840da1352d7c3221d2af3910ab62654"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_II_Part_6_enxautogen_html.json": {
+    "in_archive_sha256": "c0bf8927fc87a6ae5473456279e24f31b85e91d31b6c7aebb61c130bf9a9eda4",
+    "sha256": "c0bf8927fc87a6ae5473456279e24f31b85e91d31b6c7aebb61c130bf9a9eda4"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_IV_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "6056fcdebb92b3a4c86f98f4f67b14eff07ccc095085d0ea5b78f7c213d44723",
+    "sha256": "6056fcdebb92b3a4c86f98f4f67b14eff07ccc095085d0ea5b78f7c213d44723"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_IV_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "3280f3a8d7223113e70b637e00155cf85b84b2463a5a78801dc44b0a2af857ab",
+    "sha256": "3280f3a8d7223113e70b637e00155cf85b84b2463a5a78801dc44b0a2af857ab"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_IV_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "ee4faae91e9f2c06e1a30e737ba4a5d8255cc883e0f36aa87f605d6d734948d3",
+    "sha256": "ee4faae91e9f2c06e1a30e737ba4a5d8255cc883e0f36aa87f605d6d734948d3"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_IV_Part_4_enxautogen_html.json": {
+    "in_archive_sha256": "c518b65b5ecd3c9e5aabcaccc082fe149fc32636a6415ff0df4e5c97acf5c776",
+    "sha256": "c518b65b5ecd3c9e5aabcaccc082fe149fc32636a6415ff0df4e5c97acf5c776"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_IX_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "69c1df661ac53d8a5570df0985ddce9efc5f978dfa9800d8ac1582b3122621dd",
+    "sha256": "69c1df661ac53d8a5570df0985ddce9efc5f978dfa9800d8ac1582b3122621dd"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_IX_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "188a3427c73784d3fbf284bb6aff567c8b1996bf79fe3732d6a6440b855037b9",
+    "sha256": "188a3427c73784d3fbf284bb6aff567c8b1996bf79fe3732d6a6440b855037b9"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_IX_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "deab27ebfd3c599dd80b1ab83ce295acdf37ec15df3a2c3ede5616ccbe7421da",
+    "sha256": "deab27ebfd3c599dd80b1ab83ce295acdf37ec15df3a2c3ede5616ccbe7421da"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_IX_Part_4_enxautogen_html.json": {
+    "in_archive_sha256": "3bd888f8aeb849afd5a22a9a8799fdaf71541d1f2e06cd88ea251bdf7c34a9b7",
+    "sha256": "3bd888f8aeb849afd5a22a9a8799fdaf71541d1f2e06cd88ea251bdf7c34a9b7"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_IX_Part_5_enxautogen_html.json": {
+    "in_archive_sha256": "822a3bda77454011953860e194f4f6bba14c0674f44870f783d5a409ae7ff68a",
+    "sha256": "822a3bda77454011953860e194f4f6bba14c0674f44870f783d5a409ae7ff68a"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_IX_Part_6_enxautogen_html.json": {
+    "in_archive_sha256": "14f5f336284d059d4443ddcd7a11e228219fe23c35dabccf4e93acef04bebb75",
+    "sha256": "14f5f336284d059d4443ddcd7a11e228219fe23c35dabccf4e93acef04bebb75"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_I_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "fe8760ec4db43d4fa1536e022d35e5a97563b1b26caae476ac322c533d318fa9",
+    "sha256": "fe8760ec4db43d4fa1536e022d35e5a97563b1b26caae476ac322c533d318fa9"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_I_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "00af3e0c2f51fd0433200568dbd9871d43ac2ddd39993eea70e7a896d4754735",
+    "sha256": "00af3e0c2f51fd0433200568dbd9871d43ac2ddd39993eea70e7a896d4754735"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_I_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "4aa9bdadf11410ad8c67d40460ea953ab2627b3287a6b775cc7eb47abc60823d",
+    "sha256": "4aa9bdadf11410ad8c67d40460ea953ab2627b3287a6b775cc7eb47abc60823d"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_I_Part_4_enxautogen_html.json": {
+    "in_archive_sha256": "907c61806cb8a2c5c08bab47a21f8c6e8e11a96cad8a723e704d80490866beb3",
+    "sha256": "907c61806cb8a2c5c08bab47a21f8c6e8e11a96cad8a723e704d80490866beb3"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_I_Part_5_enxautogen_html.json": {
+    "in_archive_sha256": "604a963d2d5a97cc6179984051fbad1104d9be133639fa2d57dd69ecf25da035",
+    "sha256": "604a963d2d5a97cc6179984051fbad1104d9be133639fa2d57dd69ecf25da035"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_I_Part_6_enxautogen_html.json": {
+    "in_archive_sha256": "67b893fa1dbca142274a5779859fd3d8b49fd050f2a18e25afa99e3ebb3ab795",
+    "sha256": "67b893fa1dbca142274a5779859fd3d8b49fd050f2a18e25afa99e3ebb3ab795"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VIII_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "dfb825e7638ac4224bb535f6c7b3ae755275d266fda4dad86300da03128e3567",
+    "sha256": "dfb825e7638ac4224bb535f6c7b3ae755275d266fda4dad86300da03128e3567"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VIII_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "4752a79d85f7bdfaf1d8f07fd2ced8bf6295df04d5c69eb11a04bcaf99dde5fb",
+    "sha256": "4752a79d85f7bdfaf1d8f07fd2ced8bf6295df04d5c69eb11a04bcaf99dde5fb"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VIII_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "8d6ba74e6c09d04f34b32df4004bb2dc4d6d3d7c8260da31bacf4f7116c66625",
+    "sha256": "8d6ba74e6c09d04f34b32df4004bb2dc4d6d3d7c8260da31bacf4f7116c66625"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VIII_Part_4_enxautogen_html.json": {
+    "in_archive_sha256": "543071597ef2fc1633cc25cd97a6701c46335724501d9bdf18f1a0b2cf89bc94",
+    "sha256": "543071597ef2fc1633cc25cd97a6701c46335724501d9bdf18f1a0b2cf89bc94"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VII_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "6f4499138e223b615215efcabd6dc8d31a0745dd9f396ce9228ad8a3c1f72ca4",
+    "sha256": "6f4499138e223b615215efcabd6dc8d31a0745dd9f396ce9228ad8a3c1f72ca4"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VII_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "18aedf4637bf5ae6e98a2faa29a875a6c2c6aabfdf8b814bf321fa124703a387",
+    "sha256": "18aedf4637bf5ae6e98a2faa29a875a6c2c6aabfdf8b814bf321fa124703a387"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VII_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "7a6bca7aa18658daf7dbd629e18a7787394f661d6a101c1a4006c434ee038668",
+    "sha256": "7a6bca7aa18658daf7dbd629e18a7787394f661d6a101c1a4006c434ee038668"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VII_Part_4_enxautogen_html.json": {
+    "in_archive_sha256": "ef340c99533156a483e33be84b7bfda6ae1dbaa62801ee4caca24253bbb729ea",
+    "sha256": "ef340c99533156a483e33be84b7bfda6ae1dbaa62801ee4caca24253bbb729ea"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VI_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "68167cbc5031be2ac6a25af332ae97aed0de1abde52ad70f47bf2cd63bf1e935",
+    "sha256": "68167cbc5031be2ac6a25af332ae97aed0de1abde52ad70f47bf2cd63bf1e935"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VI_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "b054a0472ba719fd22805a1bfcac4a9f0302930778d12ea153260b988616e402",
+    "sha256": "b054a0472ba719fd22805a1bfcac4a9f0302930778d12ea153260b988616e402"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VI_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "8bdb81ef27740323f5292c5f06ff64b9e7e2ce2c490e2591eeccbe0283a808d9",
+    "sha256": "8bdb81ef27740323f5292c5f06ff64b9e7e2ce2c490e2591eeccbe0283a808d9"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_VI_Part_4_enxautogen_html.json": {
+    "in_archive_sha256": "8b8e80e213b8662540aff14e78d5358d767e15663e7e12ffc73df39bd46c153f",
+    "sha256": "8b8e80e213b8662540aff14e78d5358d767e15663e7e12ffc73df39bd46c153f"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_V_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "cefc0b9e29a6f77a4503420d27aa1f858aeff3922b6178d29e36026e40022d97",
+    "sha256": "cefc0b9e29a6f77a4503420d27aa1f858aeff3922b6178d29e36026e40022d97"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_V_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "a9db8b658dcb1f2fa5609b7cc2013b82f9652ba543bf6ef88f32b30b3b24031f",
+    "sha256": "a9db8b658dcb1f2fa5609b7cc2013b82f9652ba543bf6ef88f32b30b3b24031f"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_V_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "4a76d7da06331a6fd2dc6a1c2aaece5dbfcf4d57ceae150be06788263053c013",
+    "sha256": "4a76d7da06331a6fd2dc6a1c2aaece5dbfcf4d57ceae150be06788263053c013"
+   },
+   "runs/m5-raw/records/Satsang_Series_Volume_V_Part_4_enxautogen_html.json": {
+    "in_archive_sha256": "947bb0415f2c3eafb3258834ae6c59bc8462df59289c49c325ab06b14711963a",
+    "sha256": "947bb0415f2c3eafb3258834ae6c59bc8462df59289c49c325ab06b14711963a"
+   },
+   "runs/m5-raw/records/Serenity_Aug_2005_Part_1.json": {
+    "in_archive_sha256": "cb8b23ee9ffba4532525c9404d633530b4142c916548a17130e797e426c18171",
+    "sha256": "cb8b23ee9ffba4532525c9404d633530b4142c916548a17130e797e426c18171"
+   },
+   "runs/m5-raw/records/Serenity_Aug_2005_Part_2.json": {
+    "in_archive_sha256": "10c7108735eb1556cb83ab5f8e223be64140fb1555f113f50224d119d644e508",
+    "sha256": "10c7108735eb1556cb83ab5f8e223be64140fb1555f113f50224d119d644e508"
+   },
+   "runs/m5-raw/records/Serenity_Aug_2005_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "1f1909da21f2ce08f49021c8597d5a6a51bbcd8b9a4c33d9e9741ca85383bfb5",
+    "sha256": "1f1909da21f2ce08f49021c8597d5a6a51bbcd8b9a4c33d9e9741ca85383bfb5"
+   },
+   "runs/m5-raw/records/Spiritual_Community_Jun_2003_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Spiritual_Community_Jun_2003_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Spiritual_Community_Jun_2003_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Spiritual_First_Aid_enxautogen_html.json": {
+    "in_archive_sha256": "d2b365f7891d8b5d30e3bcb5482f6f96761a60fd38920998f55d13da81a36546",
+    "sha256": "d2b365f7891d8b5d30e3bcb5482f6f96761a60fd38920998f55d13da81a36546"
+   },
+   "runs/m5-raw/records/Spiritual_Life_In_Today_s_World_Oct_2010_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "2fd915b09f0c5f83236b44448d624fe39501f29feb13e662c4978af34c8ee680",
+    "sha256": "2fd915b09f0c5f83236b44448d624fe39501f29feb13e662c4978af34c8ee680"
+   },
+   "runs/m5-raw/records/Spiritual_Life_In_Today_s_World_Oct_2010_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "569ed03ecd5e1df446837154ea96822ea54bfc43c0d8351cfff3392d56255716",
+    "sha256": "569ed03ecd5e1df446837154ea96822ea54bfc43c0d8351cfff3392d56255716"
+   },
+   "runs/m5-raw/records/Spiritual_Life_In_Today_s_World_Oct_2010_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "24019954f1dc7c2cb589ff59353941674dad3496eb2d29569f93f9a7f8eec51c",
+    "sha256": "24019954f1dc7c2cb589ff59353941674dad3496eb2d29569f93f9a7f8eec51c"
+   },
+   "runs/m5-raw/records/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "f637102cb4b1f347bb9f95beb756d8cdc41c01def2dd88766473dc6e7f3a5005",
+    "sha256": "f637102cb4b1f347bb9f95beb756d8cdc41c01def2dd88766473dc6e7f3a5005"
+   },
+   "runs/m5-raw/records/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "bc54c2f23ecb34355485a59a343b1b58ee946353b597654710a9a9e3d8d06f35",
+    "sha256": "bc54c2f23ecb34355485a59a343b1b58ee946353b597654710a9a9e3d8d06f35"
+   },
+   "runs/m5-raw/records/Spiritual_Practice_and_Daily_Life_Oct_2006_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "5bffef74a2ce3ba192c75a6b709f5e9d0bc1fa2239755021feca46080b0d7c71",
+    "sha256": "5bffef74a2ce3ba192c75a6b709f5e9d0bc1fa2239755021feca46080b0d7c71"
+   },
+   "runs/m5-raw/records/Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "09cf62d144e1aea2b67a1f4bcfc0f3d0567ebaa1a67b6f3646de735f12a4561f",
+    "sha256": "09cf62d144e1aea2b67a1f4bcfc0f3d0567ebaa1a67b6f3646de735f12a4561f"
+   },
+   "runs/m5-raw/records/Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "189bc008c8c2d54fc6e1c2bf8cd8b97e54b893e86456ebb46c1ec19da3abc1f4",
+    "sha256": "189bc008c8c2d54fc6e1c2bf8cd8b97e54b893e86456ebb46c1ec19da3abc1f4"
+   },
+   "runs/m5-raw/records/Spiritual_Traps_Oct_2005_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "361cd230361ec7e39c486ced11db13394d7c0a11d5dad986f85190ab237e7903",
+    "sha256": "361cd230361ec7e39c486ced11db13394d7c0a11d5dad986f85190ab237e7903"
+   },
+   "runs/m5-raw/records/Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "749d74c0845917774b17cebc120b318eb3a19ca59b949db2f48d7d4a445b1105",
+    "sha256": "749d74c0845917774b17cebc120b318eb3a19ca59b949db2f48d7d4a445b1105"
+   },
+   "runs/m5-raw/records/Spiritual_Traps_Oct_2005_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "38eb2487324ae5e1bd3b8f0a5d53511e5e46042c3be8f81f5d84f0419453a6d5",
+    "sha256": "38eb2487324ae5e1bd3b8f0a5d53511e5e46042c3be8f81f5d84f0419453a6d5"
+   },
+   "runs/m5-raw/records/Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "6bcf66dae2b4996f853981db8240097d26efa24f06cc97a952f9d4bd4c12b366",
+    "sha256": "6bcf66dae2b4996f853981db8240097d26efa24f06cc97a952f9d4bd4c12b366"
+   },
+   "runs/m5-raw/records/Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "43009b231bfa25e48bfe4b99a3892793bfb83c135ce0ad00e2ddf4665e485c63",
+    "sha256": "43009b231bfa25e48bfe4b99a3892793bfb83c135ce0ad00e2ddf4665e485c63"
+   },
+   "runs/m5-raw/records/Spiritual_Truth_vs_Spiritual_Fantasy_Jun_2006_Part_3.json": {
+    "in_archive_sha256": "f02569285fc6fb6878774d1f399663af9d7521a1e33a6f7aff85f0e74be567c5",
+    "sha256": "f02569285fc6fb6878774d1f399663af9d7521a1e33a6f7aff85f0e74be567c5"
+   },
+   "runs/m5-raw/records/Spirituality_Reason_and_Faith_Jan_2008_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "d0b5f8cfeec3e0d561543b0352564956cc156696c40ede31af8a5c6e51e4c8dd",
+    "sha256": "d0b5f8cfeec3e0d561543b0352564956cc156696c40ede31af8a5c6e51e4c8dd"
+   },
+   "runs/m5-raw/records/Spirituality_Reason_and_Faith_Jan_2008_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "9e02fd3f4cc1a60166d60e54a74dd406163212ab6901899580ac6020069d700c",
+    "sha256": "9e02fd3f4cc1a60166d60e54a74dd406163212ab6901899580ac6020069d700c"
+   },
+   "runs/m5-raw/records/Spirituality_Reason_and_Faith_Jan_2008_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "a5ed02fcff10c493cb3c2522ad0b9f3130fc225e3e713a1fe475909fb72109de",
+    "sha256": "a5ed02fcff10c493cb3c2522ad0b9f3130fc225e3e713a1fe475909fb72109de"
+   },
+   "runs/m5-raw/records/Spirituality_and_the_World_Apr_2003_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "53fd4b2925ea9accf2788adc3083dd4e15c94acaf9ca2623f75b8f91d7cc584f",
+    "sha256": "53fd4b2925ea9accf2788adc3083dd4e15c94acaf9ca2623f75b8f91d7cc584f"
+   },
+   "runs/m5-raw/records/Spirituality_and_the_World_Apr_2003_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "826d3fa589aa6e5d3011f05deedf5fb837ffffb2f272169526bb0cf690f428d0",
+    "sha256": "826d3fa589aa6e5d3011f05deedf5fb837ffffb2f272169526bb0cf690f428d0"
+   },
+   "runs/m5-raw/records/Spirituality_and_the_World_Apr_2003_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "b46061340f02e7c7494e6fd666b70d02cec4b505a54cbf190523f44847bb55a9",
+    "sha256": "b46061340f02e7c7494e6fd666b70d02cec4b505a54cbf190523f44847bb55a9"
+   },
+   "runs/m5-raw/records/Success_Oct_2009_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "ae835a380acbbeb963cd3cad8f8ec39d27b4eba401b1e87d3c3ac37355375c1f",
+    "sha256": "ae835a380acbbeb963cd3cad8f8ec39d27b4eba401b1e87d3c3ac37355375c1f"
+   },
+   "runs/m5-raw/records/Success_Oct_2009_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "59fa3363eed76ae43bc39e1c4b1fdad2b48f99615240acda8acdf530c148794b",
+    "sha256": "59fa3363eed76ae43bc39e1c4b1fdad2b48f99615240acda8acdf530c148794b"
+   },
+   "runs/m5-raw/records/Success_Oct_2009_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "12079650e5355ac970730d6107efd656fe8b54aa3a14c2c326951b0d894b693f",
+    "sha256": "12079650e5355ac970730d6107efd656fe8b54aa3a14c2c326951b0d894b693f"
+   },
+   "runs/m5-raw/records/The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "f712e858eb8b839221ca248cdb7c687cb23433a661d74cc09eacdd560351c86f",
+    "sha256": "f712e858eb8b839221ca248cdb7c687cb23433a661d74cc09eacdd560351c86f"
+   },
+   "runs/m5-raw/records/The_Clear_Pathway_to_Enlightenment_Mar_2008_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "b18b96fb96c6d16453faa151b39c183e80ba3a84222bd0b91d1b5ce816cbf330",
+    "sha256": "b18b96fb96c6d16453faa151b39c183e80ba3a84222bd0b91d1b5ce816cbf330"
+   },
+   "runs/m5-raw/records/The_Ego_and_The_Self_Dec_2004_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "517a647e76543bee6bf4d9f2a01b3f4d3b624b52eb9190dd5026b4e870b9bb5e",
+    "sha256": "517a647e76543bee6bf4d9f2a01b3f4d3b624b52eb9190dd5026b4e870b9bb5e"
+   },
+   "runs/m5-raw/records/The_Ego_and_The_Self_Dec_2004_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "8f47a83227a55a73c6757cc150bbecca679bb7344758583f588fcab8bf0c1c0d",
+    "sha256": "8f47a83227a55a73c6757cc150bbecca679bb7344758583f588fcab8bf0c1c0d"
+   },
+   "runs/m5-raw/records/The_Human_Dilemma_Aug_2007_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "7e4c0fdb8340d882f02c8528b1bae3ac63b2c8d2207b48e9bb68b1ad6d0d3b33",
+    "sha256": "7e4c0fdb8340d882f02c8528b1bae3ac63b2c8d2207b48e9bb68b1ad6d0d3b33"
+   },
+   "runs/m5-raw/records/The_Human_Dilemma_Aug_2007_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "fbe7c113c7cd818903c745527f9b6c09e1f23b5927900b78cc56e071dc1d0dd7",
+    "sha256": "fbe7c113c7cd818903c745527f9b6c09e1f23b5927900b78cc56e071dc1d0dd7"
+   },
+   "runs/m5-raw/records/The_Human_Dilemma_Aug_2007_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "8f48b5445bd29d37902d15b258d21d4c6d813f75f679e0ac7e89e71361ff486f",
+    "sha256": "8f48b5445bd29d37902d15b258d21d4c6d813f75f679e0ac7e89e71361ff486f"
+   },
+   "runs/m5-raw/records/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "4f35bc753ff0c51c94f88ca44ff6cdeaaf293931aed57c2888bbb66cac095bc6",
+    "sha256": "4f35bc753ff0c51c94f88ca44ff6cdeaaf293931aed57c2888bbb66cac095bc6"
+   },
+   "runs/m5-raw/records/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "d93be603a260208035ec71d115d40e6154c506a79827d978e05b1623b400777c",
+    "sha256": "d93be603a260208035ec71d115d40e6154c506a79827d978e05b1623b400777c"
+   },
+   "runs/m5-raw/records/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "4df347401bc721dacf212b2f6b5b14b64e58438d21aeaa6cc4081c1834028842",
+    "sha256": "4df347401bc721dacf212b2f6b5b14b64e58438d21aeaa6cc4081c1834028842"
+   },
+   "runs/m5-raw/records/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "4e85f3df5f20db0adb4a67486abcc057697c61a57c00a091628ef61c9c5b4b00",
+    "sha256": "4e85f3df5f20db0adb4a67486abcc057697c61a57c00a091628ef61c9c5b4b00"
+   },
+   "runs/m5-raw/records/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_2.json": {
+    "in_archive_sha256": "cd73b72b690420f7743e9e0390c7dfa2a9905544f318444edb260bd998e2af80",
+    "sha256": "cd73b72b690420f7743e9e0390c7dfa2a9905544f318444edb260bd998e2af80"
+   },
+   "runs/m5-raw/records/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "6632ef6e68f9dc78982c3d78f601569e0e416ee10c39963547c20fc2cfd48daf",
+    "sha256": "6632ef6e68f9dc78982c3d78f601569e0e416ee10c39963547c20fc2cfd48daf"
+   },
+   "runs/m5-raw/records/The_Presence_of_Spiritual_Awareness_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "a554ac9d85db193078cfd640d6fb6457ea693da366dcf226b56c0e46b5f8ecae",
+    "sha256": "a554ac9d85db193078cfd640d6fb6457ea693da366dcf226b56c0e46b5f8ecae"
+   },
+   "runs/m5-raw/records/The_Presence_of_Spiritual_Awareness_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "83cac6720dd0e34de9a108e4037db8e9815a1c655351914f8c930c0d5e108607",
+    "sha256": "83cac6720dd0e34de9a108e4037db8e9815a1c655351914f8c930c0d5e108607"
+   },
+   "runs/m5-raw/records/The_Presence_of_Spiritual_Awareness_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "7e333b0e9b97607e4825692b40d0a4600078e652280c31bcf6fc72c393659599",
+    "sha256": "7e333b0e9b97607e4825692b40d0a4600078e652280c31bcf6fc72c393659599"
+   },
+   "runs/m5-raw/records/Thought_and_Ideation_Feb_2004_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "58bd2d090bcf0ef0d7d995339564798d9829640a53ef15f1dfc1bfe7a086147d",
+    "sha256": "58bd2d090bcf0ef0d7d995339564798d9829640a53ef15f1dfc1bfe7a086147d"
+   },
+   "runs/m5-raw/records/Thought_and_Ideation_Feb_2004_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "3e2bc7e2051cbe1e8294a1e6166ad58e55bba2c600d44a49f84a3f3c70b3dae5",
+    "sha256": "3e2bc7e2051cbe1e8294a1e6166ad58e55bba2c600d44a49f84a3f3c70b3dae5"
+   },
+   "runs/m5-raw/records/Transcending_Barriers_Jun_2005_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "cbc16d33ba8c2128d177a421ebc3ceca87ac3533108fc03360b8e1c207841890",
+    "sha256": "cbc16d33ba8c2128d177a421ebc3ceca87ac3533108fc03360b8e1c207841890"
+   },
+   "runs/m5-raw/records/Transcending_Barriers_Jun_2005_Part_2.json": {
+    "in_archive_sha256": "8f481ec85163388caff3f6fc6c1e49cb69883a14eb4e1ec6955da6824c0f615e",
+    "sha256": "8f481ec85163388caff3f6fc6c1e49cb69883a14eb4e1ec6955da6824c0f615e"
+   },
+   "runs/m5-raw/records/Transcending_Barriers_Jun_2005_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "6eab8a70823ae85dfbe398661fbaf22beee6b84f906093ccdc360612b60ec7d0",
+    "sha256": "6eab8a70823ae85dfbe398661fbaf22beee6b84f906093ccdc360612b60ec7d0"
+   },
+   "runs/m5-raw/records/Transcending_Obstacles_Sep_2005_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "beaa70969b6300c8e9b4bf7b5ea5a9c61a5d67f0cb8719445f8b80f674a82f11",
+    "sha256": "beaa70969b6300c8e9b4bf7b5ea5a9c61a5d67f0cb8719445f8b80f674a82f11"
+   },
+   "runs/m5-raw/records/Transcending_Obstacles_Sep_2005_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "2c9af5ee26bb7d615144f47917c6b48f8c1826ca3bd802f1a3914c5ea5837e0c",
+    "sha256": "2c9af5ee26bb7d615144f47917c6b48f8c1826ca3bd802f1a3914c5ea5837e0c"
+   },
+   "runs/m5-raw/records/Transcending_Obstacles_Sep_2005_Part_3.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/Vision_Feb_2005_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "17f14cb04ef4f8d0d13c7246082640b25249257539ef465806b8ececfbb827b8",
+    "sha256": "17f14cb04ef4f8d0d13c7246082640b25249257539ef465806b8ececfbb827b8"
+   },
+   "runs/m5-raw/records/Vision_Feb_2005_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "52bbf36a3d2108ca58dcde4e2c1ced050060ee474e54a611d68bafbfe62dc9d4",
+    "sha256": "52bbf36a3d2108ca58dcde4e2c1ced050060ee474e54a611d68bafbfe62dc9d4"
+   },
+   "runs/m5-raw/records/Vision_Feb_2005_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "95f31cc19c448b3504be8524a9b076aa1cc580ae1e79d73de139694eec75e66e",
+    "sha256": "95f31cc19c448b3504be8524a9b076aa1cc580ae1e79d73de139694eec75e66e"
+   },
+   "runs/m5-raw/records/What_is_Real_Jun_2007_Part_1.json": {
+    "in_archive_sha256": "f4cf6a12a13f4554b91c6d6b843ac69bee1b97d5068770dd7dd1deb6c194c139",
+    "sha256": "f4cf6a12a13f4554b91c6d6b843ac69bee1b97d5068770dd7dd1deb6c194c139"
+   },
+   "runs/m5-raw/records/What_is_Real_Jun_2007_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/What_is_Real_Jun_2007_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "43c5be129138f51e1e17e8b6e7d706a825fcd1672b3960bb975cdc862637fa14",
+    "sha256": "43c5be129138f51e1e17e8b6e7d706a825fcd1672b3960bb975cdc862637fa14"
+   },
+   "runs/m5-raw/records/What_is_Truth_The_Absolute_Jul_2007_Part_1.json": {
+    "in_archive_sha256": "c1cd8e733393389789e17705a6b6478fd1ff9cc457d7964ae3794e66d51148b6",
+    "sha256": "c1cd8e733393389789e17705a6b6478fd1ff9cc457d7964ae3794e66d51148b6"
+   },
+   "runs/m5-raw/records/What_is_Truth_The_Absolute_Jul_2007_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "ca115b122c9ff69087adc6447598bad374157284d0c2f93bc046ad9d6499d8da",
+    "sha256": "ca115b122c9ff69087adc6447598bad374157284d0c2f93bc046ad9d6499d8da"
+   },
+   "runs/m5-raw/records/What_is_Truth_The_Absolute_Jul_2007_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "24b345fb431ea5f18d39b07f510669db216aa1f0a4e72d0b2aba6f7504bde5ae",
+    "sha256": "24b345fb431ea5f18d39b07f510669db216aa1f0a4e72d0b2aba6f7504bde5ae"
+   },
+   "runs/m5-raw/records/What_is_the_World_Feb_2009_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+   },
+   "runs/m5-raw/records/What_is_the_World_Feb_2009_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "77bcc0f783819f413b5f71f4e9b32d5cf289342bab0fa63f0cb710bc19ce0f1a",
+    "sha256": "77bcc0f783819f413b5f71f4e9b32d5cf289342bab0fa63f0cb710bc19ce0f1a"
+   },
+   "runs/m5-raw/records/What_is_the_World_Feb_2009_Part_3_enxautogen_html.json": {
+    "in_archive_sha256": "96a5911929bab49c1267b760e1142aaec5a393217531345652a791dadd498d7e",
+    "sha256": "96a5911929bab49c1267b760e1142aaec5a393217531345652a791dadd498d7e"
+   },
+   "runs/m5-raw/records/Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.json": {
+    "in_archive_sha256": "14bdfe64c97cd2a3b23b493ec875cb730507d32f3a7d1a4da31b68c046c1779e",
+    "sha256": "14bdfe64c97cd2a3b23b493ec875cb730507d32f3a7d1a4da31b68c046c1779e"
+   },
+   "runs/m5-raw/records/Witnessing_and_Observing_Oct_2004_Part_2_enxautogen_html.json": {
+    "in_archive_sha256": "2f98a088329e151bc5b502e3b9cd545152740b4ca91835383daa61759a4e3d16",
+    "sha256": "2f98a088329e151bc5b502e3b9cd545152740b4ca91835383daa61759a4e3d16"
+   },
+   "runs/m5-raw/records/Witnessing_and_Observing_Oct_2004_Part_3.json": {
+    "in_archive_sha256": "375708ba58b86790ddd53b2ce3c1bb91ef4a4710a8b5807569cbfe560b9fccc2",
+    "sha256": "375708ba58b86790ddd53b2ce3c1bb91ef4a4710a8b5807569cbfe560b9fccc2"
+   }
+  },
+  "note": "the committed v1 raw census (runs/m5-raw) materialised so the inherited tests run against it (TASK-017 criterion 2) and the fresh-run comparison has its baseline; same archive commit as above"
+ },
+ "materialised_by": "WORKER-2 A-2026-09-25-001, lane arena/01a0d9ce-fleetyard",
+ "materialised_utc": "2026-09-25T20:5xZ",
+ "method": "git archive <ref> tools tests fixtures | tar -x -C . ; every file then re-hashed and compared to git show <ref>:<path>",
+ "note": "byte-identical to the archive (0 mismatches re-verified at materialisation); no inherited detector logic changed",
+ "task": "TASK-017 (inherit the v1 detector toolchain onto the WORKER-2 lane)",
+ "unmodified": true
+}

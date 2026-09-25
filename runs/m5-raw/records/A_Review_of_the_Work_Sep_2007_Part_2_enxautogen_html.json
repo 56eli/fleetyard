@@ -1,0 +1,206 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 414
+  },
+  "quoted_text": "what's in it for me? What's in it for me? What's in it for me?",
+  "suspected_intended_text": "what's in it for me?",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13274
+  },
+  "quoted_text": "what's the matter? What's the matter? What's the matter? What's the matter? What's the matter? What's the matter? What's the matter? What's the matter? What's the matter? What's the matter? What's the matter?",
+  "suspected_intended_text": "what's the matter?",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 11 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13910
+  },
+  "quoted_text": "All right. All right. All right. All right. All right. All right. All right. All right. All right.",
+  "suspected_intended_text": "All right.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 16412
+  },
+  "quoted_text": "I want to go to you. I want to go to you. I want to go to you. I want to go to you. I want to go to you. I want to go to you. I want to go to you. I want to go to you. I want to go to you.",
+  "suspected_intended_text": "I want to go to you.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 48068
+  },
+  "quoted_text": "can give you a direction. Can give you a direction. Can give you a direction.",
+  "suspected_intended_text": "can give you a direction.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 52679
+  },
+  "quoted_text": "And, of course, Monroe. And, of course, Monroe. And, of course, Monroe. And, of course, Monroe. And, of course, Monroe.",
+  "suspected_intended_text": "And, of course, Monroe.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 60896
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 14 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 64512
+  },
+  "quoted_text": "married. You're married. You're married. You're married. You're married. You're married. You're married. You're married. You're married. You're",
+  "suspected_intended_text": "married. You're",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 67191
+  },
+  "quoted_text": "By... By... By... By... By... By... By... By... By... By...",
+  "suspected_intended_text": "By...",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 74148
+  },
+  "quoted_text": "You know what I mean? You know what I mean? You know what I mean? You know what I mean? You know what I mean? You know what I mean? You know what I mean? You know what I mean? You know what I mean? You know what I mean? You know what I mean? You know what I mean?",
+  "suspected_intended_text": "You know what I mean?",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 12 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 76398
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Review_of_the_Work_Sep_2007_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 80393
+  },
+  "quoted_text": "it's not just me. It's not just me. It's not just me.",
+  "suspected_intended_text": "it's not just me.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

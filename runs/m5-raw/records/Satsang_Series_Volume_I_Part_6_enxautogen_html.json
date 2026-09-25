@@ -1,0 +1,172 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1046
+  },
+  "quoted_text": "That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing. That's a good thing.",
+  "suspected_intended_text": "That's a good thing.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3269
+  },
+  "quoted_text": "transferable from books and tapes and or is it only transferable from books and tapes and or is it only transferable from books and tapes and or is it only transferable from books and tapes and or is it only",
+  "suspected_intended_text": "transferable from books and tapes and or is it only",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3477
+  },
+  "quoted_text": "through the presence of the through the presence of the through the presence of the",
+  "suspected_intended_text": "through the presence of the",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3561
+  },
+  "quoted_text": "teacher it comes about in several ways teacher it comes about in several ways teacher it comes about in several ways",
+  "suspected_intended_text": "teacher it comes about in several ways",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3678
+  },
+  "quoted_text": "conceptually and the writings visually conceptually and the writings visually conceptually and the writings visually",
+  "suspected_intended_text": "conceptually and the writings visually",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3795
+  },
+  "quoted_text": "holding the image of the teacher the holding the image of the teacher the holding the image of the teacher the",
+  "suspected_intended_text": "holding the image of the teacher the",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3906
+  },
+  "quoted_text": "sound of the voice and the the presence sound of the voice and the the presence sound of the voice and the the presence",
+  "suspected_intended_text": "sound of the voice and the the presence",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4026
+  },
+  "quoted_text": "of the presence yes and then we found of the presence yes and then we found of the presence yes and then we found",
+  "suspected_intended_text": "of the presence yes and then we found",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4140
+  },
+  "quoted_text": "that it's even more of touching which that it's even more of touching which that it's even more of touching which",
+  "suspected_intended_text": "that it's even more of touching which",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_6_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15013
+  },
+  "quoted_text": "You're a very handsome man. You're a very handsome man. You're a very handsome man.",
+  "suspected_intended_text": "You're a very handsome man.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

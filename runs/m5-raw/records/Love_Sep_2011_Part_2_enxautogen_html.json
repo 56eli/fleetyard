@@ -1,0 +1,87 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 29887
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 19 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37412
+  },
+  "quoted_text": "Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm. Mm-hmm.",
+  "suspected_intended_text": "Mm-hmm.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 25 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 44315
+  },
+  "quoted_text": "God bless you. God bless you. God bless you. God bless you. God bless you. God bless you. God bless you. God bless you.",
+  "suspected_intended_text": "God bless you.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 50968
+  },
+  "quoted_text": "That's what he said. That's what he said. That's what he said. That's what he said. That's what he said. That's what he said.",
+  "suspected_intended_text": "That's what he said.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 59385
+  },
+  "quoted_text": "you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank you thank",
+  "suspected_intended_text": "you thank",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 35 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

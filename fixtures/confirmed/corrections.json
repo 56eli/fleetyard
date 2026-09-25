@@ -1,0 +1,538 @@
+[
+ {
+  "seq": 1,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-005",
+  "action": "downgrade-withdraw",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "HIGH CONFIDENCE",
+   "evidence_class": "signals",
+   "status": "withdrawn from confirmed fixture denominator"
+  },
+  "reason": "Leg a needs an ACOUSTIC NEAR-FORM replacement; 'to be loved' -> 'to be loving is also to be lovable' is a truncation/drop, not a near-form. Leg b needs the transcript to STATE something the book contradicts; a truncated fragment states no claim. Leg c needs a self-contradiction; there is none (the next sentence is the full, correct one). Remaining evidence = converging signals: repetition-loop pattern (x5), ungrammatical fragment, and the verbatim book sentence it truncates -> HIGH CONFIDENCE, not CERTAIN.",
+  "record_before": {
+   "id": "CF-005",
+   "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 28028,
+   "quoted": "It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved.",
+   "suspected": "It is discovered that to be loving is also to be lovable.",
+   "evidence_class": "b",
+   "evidence": "Truncated sentence repeated five times (ASR repetition loop) immediately before the complete sentence 'It is discovered that to be loving is also to be lovable.', which is verbatim book text.",
+   "detector": "hand-read (TASK-002)",
+   "book_ref": {
+    "slug": "transcending_the_levels_of_con",
+    "char_offset": 323292,
+    "quote": "it is discovered that to be loving is also to be lovable"
+   },
+   "confidence": "CERTAIN",
+   "status": "confirmed",
+   "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  }
+ },
+ {
+  "seq": 2,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-009",
+  "action": "downgrade-withdraw",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CANDIDATE",
+   "evidence_class": "signals",
+   "status": "withdrawn from confirmed fixture denominator"
+  },
+  "reason": "Successor gate finding upheld: the passage is a non-doctrinal bookstore announcement; 'so' repairs grammar only. Leg a requires restoring grammar AND doctrinal sense; no book leg (b) or lecture self-contradiction (c) exists. One weak signal (grammar) -> CANDIDATE; never counted in rates.",
+  "record_before": {
+   "id": "CF-009",
+   "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 315,
+   "quoted": "it's some wonderful",
+   "suspected": "it's so wonderful",
+   "evidence_class": "a",
+   "evidence": "'it's some wonderful' is ungrammatical; the near-form 'so' restores grammar (non-doctrinal announcement).",
+   "detector": "hand-read (TASK-002)",
+   "book_ref": null,
+   "confidence": "CERTAIN",
+   "status": "confirmed",
+   "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  }
+ },
+ {
+  "seq": 3,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-013",
+  "action": "downgrade-withdraw",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "HIGH CONFIDENCE",
+   "evidence_class": "signals",
+   "status": "withdrawn from confirmed fixture denominator"
+  },
+  "reason": "Non-doctrinal Q&A (custody case). Leg a fails its doctrinal-sense half. Leg c read strictly requires the lecture to CONTRADICT itself; the exchange merely uses 'custody battle' earlier, and 'custody bills are nasty' does not contradict it. Two converging signals (senseless near-form 'bills'; the lecture's own repeated 'custody battle') -> HIGH CONFIDENCE.",
+  "record_before": {
+   "id": "CF-013",
+   "transcript": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 26352,
+   "quoted": "Custody bills are always too, very nasty.",
+   "suspected": "Custody battles are always, too, very nasty.",
+   "evidence_class": "a",
+   "evidence": "The exchange is about a 'custody battle' (said repeatedly just before, leg c); 'custody bills' is a near-form that is senseless here.",
+   "detector": "hand-read (TASK-002)",
+   "book_ref": null,
+   "confidence": "CERTAIN",
+   "status": "confirmed",
+   "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  }
+ },
+ {
+  "seq": 4,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-014",
+  "action": "downgrade-withdraw",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "HIGH CONFIDENCE",
+   "evidence_class": "signals",
+   "status": "withdrawn from confirmed fixture denominator"
+  },
+  "reason": "Non-doctrinal Q&A (a partner's media habits). Leg a fails its doctrinal-sense half; the questioner's restatement 'He's drawn?' is corroboration, not a self-contradiction (leg c). Two converging signals (ungrammatical 'has drawn'; in-lecture restatement) -> HIGH CONFIDENCE.",
+  "record_before": {
+   "id": "CF-014",
+   "transcript": "corpus/docdocgo/overlays/Satsang_Series_Volume_IX_Part_6_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 4906,
+   "quoted": "He has drawn to it in addictive ways.",
+   "suspected": "He is drawn to it in addictive ways.",
+   "evidence_class": "a",
+   "evidence": "'He has drawn to it' is ungrammatical; the questioner immediately restates 'He's drawn? To addictive' (leg c); 'He's'/'He is' is the near-form.",
+   "detector": "hand-read (TASK-002)",
+   "book_ref": null,
+   "confidence": "CERTAIN",
+   "status": "confirmed",
+   "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  }
+ },
+ {
+  "seq": 5,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-016",
+  "action": "downgrade-withdraw",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "HIGH CONFIDENCE",
+   "evidence_class": "signals",
+   "status": "withdrawn from confirmed fixture denominator"
+  },
+  "reason": "Anecdote (wanting to be an eagle), not doctrine: restoring 'eagle' restores sense but not doctrinal sense (leg a half fails). The earlier 'be an eagle ... spot a mouse' sentence corroborates but is not a contradiction (leg c). Two converging signals (senseless 'the ego ... can spot a mouse'; the lecture's own eagle sentence seconds earlier) -> HIGH CONFIDENCE.",
+  "record_before": {
+   "id": "CF-016",
+   "transcript": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 20139,
+   "quoted": "the ego, miles away, can spot a mouse",
+   "suspected": "the eagle, miles away, can spot a mouse",
+   "evidence_class": "a",
+   "evidence": "Seconds earlier: 'I thought it would be great to be an eagle. Go up a mile in the sky and ten miles away you can spot a mouse.' (leg c). 'the ego ... can spot a mouse' is senseless; 'eagle' is the near-form.",
+   "detector": "hand-read (TASK-002)",
+   "book_ref": null,
+   "confidence": "CERTAIN",
+   "status": "confirmed",
+   "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  }
+ },
+ {
+  "seq": 6,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-018",
+  "action": "downgrade-withdraw",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "HIGH CONFIDENCE",
+   "evidence_class": "signals",
+   "status": "withdrawn from confirmed fixture denominator"
+  },
+  "reason": "Non-doctrinal (a teacher who left Sedona): 'has' restores grammar only (leg a half fails); no book or self-contradiction leg. Two converging signals (ungrammatical 'is now left'; the interpreter's Korean rendering of the same sentence) -> HIGH CONFIDENCE.",
+  "record_before": {
+   "id": "CF-018",
+   "transcript": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 6029,
+   "quoted": "who is now left",
+   "suspected": "who has now left",
+   "evidence_class": "a",
+   "evidence": "'a spiritual teacher who is now left' is ungrammatical; near-form 'has' restores it (the teacher left Sedona; the Korean rendering says the teacher 'no longer exists [there]').",
+   "detector": "hand-read (TASK-002)",
+   "book_ref": null,
+   "confidence": "CERTAIN",
+   "status": "confirmed",
+   "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  }
+ },
+ {
+  "seq": 7,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-002",
+  "action": "reclassify-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "reason": "Successor asked for an independent verdict. The error is real and mechanically demonstrable in the TEXT: the book (letting_go__the_pathway_of_sur @176547) names the author of 'Love is Letting Go of Fear' as Jerry Jampolsky; the transcript names 'Jerry Jempolski'. That is a verbatim book contradiction on the same citation (leg b), which is a stronger leg than a (the misspelling is not 'senseless' in the usual sense). Retained CERTAIN with class b.",
+  "record_before": {
+   "id": "CF-002",
+   "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 15635,
+   "quoted": "Jerry Jempolski's book",
+   "suspected": "Jerry Jampolsky's book",
+   "evidence_class": "a",
+   "evidence": "Slide attributes 'Love is letting go of fear' to its author; the book names the same author and title as Jerry Jampolsky. 'Jempolski' is a phonetic near-form misspelling of the proper name.",
+   "detector": "hand-read (TASK-002)",
+   "book_ref": {
+    "slug": "letting_go__the_pathway_of_sur",
+    "char_offset": 176547,
+    "quote": "psychiatrist Jerry Jampolsky (e.g., Love is Letting Go of Fear)"
+   },
+   "confidence": "CERTAIN",
+   "status": "confirmed",
+   "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  }
+ },
+ {
+  "seq": 8,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-007",
+  "action": "add-proof-leg-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "reason": "Leg a's doctrinal-sense half made explicit with a verbatim book passage on the same teaching (infatuation 145 vs love 500).",
+  "record_before": {
+   "id": "CF-007",
+   "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 32832,
+   "quoted": "Pathology and infatuation is suicide",
+   "suspected": "Pathology in infatuation is suicide",
+   "evidence_class": "a",
+   "evidence": "Slide table 'infatuation versus love' uses the frame '<attribute> in infatuation is X, whereas with love ...' ('Stability in infatuation is desperate'); 'and' is the acoustic near-form of 'in' and breaks the grammar.",
+   "detector": "hand-read (TASK-002)",
+   "book_ref": null,
+   "confidence": "CERTAIN",
+   "status": "confirmed",
+   "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  }
+ },
+ {
+  "seq": 9,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-008",
+  "action": "add-proof-leg-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "reason": "Leg a's doctrinal-sense half made explicit with a verbatim book passage on the same teaching (infatuation 145 vs love 500).",
+  "record_before": {
+   "id": "CF-008",
+   "transcript": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+   "paragraph": 0,
+   "char_offset": 32927,
+   "quoted": "Judgment and infatuation is impaired",
+   "suspected": "Judgment in infatuation is impaired",
+   "evidence_class": "a",
+   "evidence": "Same table and frame as the 'Pathology' row: 'Judgment and infatuation is impaired, whereas with love it's improved' is ungrammatical; 'in' restores it.",
+   "detector": "hand-read (TASK-002)",
+   "book_ref": null,
+   "confidence": "CERTAIN",
+   "status": "confirmed",
+   "status_by": "WORKER (hand-read, full transcript); orchestrator gate pending"
+  }
+ },
+ {
+  "seq": 10,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-001",
+  "action": "review-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "reason": "Calibrated-teacher list (doctrine); book list names Dilgo Khyentse Rinpoche 575; 'Quince' senseless; near-form restores the doctrinal list item.",
+  "record_before": null
+ },
+ {
+  "seq": 11,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-003",
+  "action": "review-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "reason": "Leg b: book happiness table Courage 200 = 55; neighbouring slide values match the same table.",
+  "record_before": null
+ },
+ {
+  "seq": 12,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-004",
+  "action": "review-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "reason": "Leg b: slide read from the book passage on Christ's teaching; book 'Unconditional Love', transcript 'unquestionable love, there was no love'.",
+  "record_before": null
+ },
+ {
+  "seq": 13,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-006",
+  "action": "review-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "reason": "Leg b (+c): book 'Above level 200 ... energy field is now positive'; the lecture's next sentence says positive.",
+  "record_before": null
+ },
+ {
+  "seq": 14,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-010",
+  "action": "review-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "reason": "Scripture saying Hawkins cites (book: 'Render unto Caesar'); 'Given to' leaves no verb; near-form restores grammar and the cited teaching.",
+  "record_before": null
+ },
+ {
+  "seq": 15,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-011",
+  "action": "review-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "reason": "Doctrinal content (God's love); homophone except/accept; the speaker has just said 'God loves you. Accept that.'",
+  "record_before": null
+ },
+ {
+  "seq": 16,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-012",
+  "action": "review-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "reason": "Hawkins' closing prayer printed in the books ('Gloria in Excelsis Deo!'); 'We are in' is senseless; near-form restores the prayer.",
+  "record_before": null
+ },
+ {
+  "seq": 17,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-015",
+  "action": "review-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "reason": "Leg b: slide read from the book's 'Characteristics of Spiritual Truth' item 9; book 'has no interest'.",
+  "record_before": null
+ },
+ {
+  "seq": 18,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-017",
+  "action": "review-retain",
+  "former": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "reason": "'integrus' is a non-word; 'integrous' is Hawkins' doctrinal term (verbatim in books).",
+  "record_before": null
+ },
+ {
+  "seq": 19,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-019",
+  "action": "add",
+  "former": null,
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "reason": "New hand-found CERTAIN fixture (TASK-006 re-read of an already fully read transcript).",
+  "record_before": null
+ },
+ {
+  "seq": 20,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-020",
+  "action": "add",
+  "former": null,
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "b",
+   "status": "confirmed"
+  },
+  "reason": "New hand-found CERTAIN fixture (TASK-006 re-read of an already fully read transcript).",
+  "record_before": null
+ },
+ {
+  "seq": 21,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-021",
+  "action": "add",
+  "former": null,
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "reason": "New hand-found CERTAIN fixture (TASK-006 re-read of an already fully read transcript).",
+  "record_before": null
+ },
+ {
+  "seq": 22,
+  "date": "2026-09-24T23:44Z",
+  "reviewer": "WORKER arena/01a0d581-fleetyard (TASK-006 re-audit, hand-read)",
+  "id": "CF-022",
+  "action": "add",
+  "former": null,
+  "new": {
+   "confidence": "CERTAIN",
+   "evidence_class": "a",
+   "status": "confirmed"
+  },
+  "reason": "New hand-found CERTAIN fixture (TASK-006 re-read of an already fully read transcript).",
+  "record_before": null
+ }
+]

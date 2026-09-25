@@ -1,0 +1,36 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Serenity_Aug_2005_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 74943
+  },
+  "quoted_text": "theater of the spiritual teacher, theater of the spiritual teacher, theater of the spiritual teacher, theater of the spiritual teacher,",
+  "suspected_intended_text": "theater of the spiritual teacher,",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Serenity_Aug_2005_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 76276
+  },
+  "quoted_text": "What it is is its meaning complete and total. What it is is its meaning complete and total. What it is is its meaning complete and total.",
+  "suspected_intended_text": "What it is is its meaning complete and total.",
+  "evidence_class": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

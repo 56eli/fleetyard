@@ -1,0 +1,53 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/God_Transcendent_and_Immanent_Nov_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 12579
+  },
+  "quoted_text": "кварти",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/God_Transcendent_and_Immanent_Nov_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15214
+  },
+  "quoted_text": "It allows it to be. It allows it to be. It allows it to be",
+  "suspected_intended_text": "It allows it to be.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/God_Transcendent_and_Immanent_Nov_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 16012
+  },
+  "quoted_text": "One ten-thousandth of a second. One ten-thousandth of a second. One ten-thousandth of a second",
+  "suspected_intended_text": "One ten-thousandth of a second.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

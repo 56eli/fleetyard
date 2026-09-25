@@ -1,0 +1,95 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1883
+  },
+  "quoted_text": "is still available",
+  "suspected_intended_text": "is available",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'still' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.64))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_wisdom_of_dr_david_r_haw",
+   "char_offset": 402408,
+   "quote": "of the consciousness of every great teacher or avatar who has ever lived still remains and is available. To focus on a teacher or their"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1914
+  },
+  "quoted_text": "a particular teacher",
+  "suspected_intended_text": "a teacher",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'particular' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.64))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_wisdom_of_dr_david_r_haw",
+   "char_offset": 402408,
+   "quote": "of the consciousness of every great teacher or avatar who has ever lived still remains and is available. To focus on a teacher or their"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15645
+  },
+  "quoted_text": "sleeves. I don't have any buttons on my sleeves. I don't have any buttons on my sleeves. I don't have any buttons on my",
+  "suspected_intended_text": "sleeves. I don't have any buttons on my",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 16896
+  },
+  "quoted_text": "Anybody not satisfied with who you are? Anybody not satisfied with who you are? Anybody not satisfied with who you are? Anybody not satisfied with who you are?",
+  "suspected_intended_text": "Anybody not satisfied with who you are?",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 30806
+  },
+  "quoted_text": "Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo. Photo.",
+  "suspected_intended_text": "Photo.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

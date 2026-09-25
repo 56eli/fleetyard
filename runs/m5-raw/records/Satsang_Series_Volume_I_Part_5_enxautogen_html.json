@@ -1,0 +1,36 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_5_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 34275
+  },
+  "quoted_text": "And I started to walk up the staircase, and I started to walk up the staircase, and I started to walk up the staircase,",
+  "suspected_intended_text": "And I started to walk up the staircase,",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_I_Part_5_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 44597
+  },
+  "quoted_text": "Money, money, money, money. Money, money, money, money.",
+  "suspected_intended_text": "Money,",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

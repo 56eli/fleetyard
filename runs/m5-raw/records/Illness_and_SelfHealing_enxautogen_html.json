@@ -1,0 +1,208 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Illness_and_SelfHealing_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 3481
+  },
+  "quoted_text": "moving",
+  "suspected_intended_text": "movement",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'moving' vs book 'movement' inside a 21/24-word near-verbatim match (tf-idf 0.39))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 53344,
+   "quote": "infinite, and analogous to a movie screen upon which we experience the movement of the movie. It is because of consciousness that we experience what is"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Illness_and_SelfHealing_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 6313
+  },
+  "quoted_text": "may say",
+  "suspected_intended_text": "says",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'may say' vs book 'says' inside a 19/22-word near-verbatim match (tf-idf 0.48))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 55810,
+   "quote": "none of those illnesses whatsoever. That personality says, “I don’t believe in any of those things. I am not subject to them"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Illness_and_SelfHealing_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 10047
+  },
+  "quoted_text": "remark, something heard",
+  "suspected_intended_text": "remark heard",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'something' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.48))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 58783,
+   "quote": "picked up very early in life from a chance remark heard on television, or something misunderstood in a book, or a remark that a teacher"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Illness_and_SelfHealing_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 23410
+  },
+  "quoted_text": "Trying",
+  "suspected_intended_text": "to try",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'trying' vs book 'to try' inside a 13/15-word near-verbatim match (tf-idf 0.33))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 70133,
+   "quote": "are going on in the cells, resulting in pathological changes within the anatomy and dysfunction that results in a coronary attack, heart disease, or heart failure. The heart failure comes about partly as a result of years of negative mental attitudes. The mind would like to blame it on cholesterol, stress, one’s lifestyle, genetics, what goes on in the family, and so on. These are all merely explanations, excuses, and rationalizations to try to make intelligible that which is not clearly defined"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Illness_and_SelfHealing_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 26340
+  },
+  "quoted_text": "inhalants things in",
+  "suspected_intended_text": "inhalants in",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'things' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.46))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 73244,
+   "quote": "allergies. I was also sensitive to inhalants in the atmosphere. I could not walk into a place that had been exterminated within the previous couple"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Illness_and_SelfHealing_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 28955
+  },
+  "quoted_text": "this perfectionistic tendency",
+  "suspected_intended_text": "this tendency",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'perfectionistic' vs book '' inside a 21/23-word near-verbatim match (tf-idf 0.52))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 76900,
+   "quote": "with so many illnesses could hardly be said to be free of conflict. I began to study my perfectionism and see how this tendency, which allowed me to forgive others but did not allow me to forgive"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Illness_and_SelfHealing_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 38574
+  },
+  "quoted_text": "about automatically with",
+  "suspected_intended_text": "about with",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'automatically' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.43))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_ego_is_not_the_real_you__w",
+   "char_offset": 52571,
+   "quote": "it can be healed. The healing of the body comes about with the healing of the mind. All the physical illnesses, which I eventually let"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Illness_and_SelfHealing_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 42967
+  },
+  "quoted_text": "i myself was",
+  "suspected_intended_text": "I was",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'myself' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 89514,
+   "quote": "and to alcoholism in particular. It was a very important issue. I was a firm believer in it when I came to the"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Illness_and_SelfHealing_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 53332
+  },
+  "quoted_text": "I am the source, I am the source. I am the source.",
+  "suspected_intended_text": "I am the source,",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Illness_and_SelfHealing_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 56099
+  },
+  "quoted_text": "you get",
+  "suspected_intended_text": "I got",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'you get' vs book 'i got' inside a 21/24-word near-verbatim match (tf-idf 0.55))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 99010,
+   "quote": "all because the minute I got the pesticide story, goodbye, fruit. Then I went to vegetables. Oh, oh! Vegetables are full of it, too. They"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

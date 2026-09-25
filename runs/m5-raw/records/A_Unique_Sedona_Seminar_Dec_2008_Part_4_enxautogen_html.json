@@ -1,0 +1,393 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4305
+  },
+  "quoted_text": "you see the beauty of all that exists. You see the beauty of all that exists. You see the beauty of all that exists.",
+  "suspected_intended_text": "you see the beauty of all that exists.",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 12384
+  },
+  "quoted_text": "I think there shouldn't be too much time ahead. I think there shouldn't be too much time ahead. I think there shouldn't be too much time ahead.",
+  "suspected_intended_text": "I think there shouldn't be too much time ahead.",
+  "evidence_class": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15219
+  },
+  "quoted_text": "인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은 인간으로 태어난 것입니다 부처님은",
+  "suspected_intended_text": "인간으로 태어난 것입니다 부처님은",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 7 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15362
+  },
+  "quoted_text": "�",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (replacement-char: undecodable source bytes)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15376
+  },
+  "quoted_text": "��",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (replacement-char: undecodable source bytes)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 21223
+  },
+  "quoted_text": "신이 일어났습니다",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (2 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 21434
+  },
+  "quoted_text": "신격으로부터 의식으로서의",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (2 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 22510
+  },
+  "quoted_text": "일자리 필요로",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (2 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 24686
+  },
+  "quoted_text": "yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 26514
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 29343
+  },
+  "quoted_text": "Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh. Uh.",
+  "suspected_intended_text": "Uh.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 17 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 39205
+  },
+  "quoted_text": "I want to leave a trace in that life, and I want to leave a trace in that life, and I want to leave a trace in that life, and",
+  "suspected_intended_text": "I want to leave a trace in that life, and",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 40484
+  },
+  "quoted_text": "la la la la la la la la la la la.",
+  "suspected_intended_text": "la",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 11 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 40823
+  },
+  "quoted_text": "La la la la la la la la la la.",
+  "suspected_intended_text": "La",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 40906
+  },
+  "quoted_text": "La la la la la la la la la la.",
+  "suspected_intended_text": "La",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 41013
+  },
+  "quoted_text": "Good. Good. Good. Good. Good. Good. Good. Good. Good.",
+  "suspected_intended_text": "Good.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 47417
+  },
+  "quoted_text": "if you can learn karma... If you can learn karma... If you can learn karma... If you can learn karma... If you can learn karma...",
+  "suspected_intended_text": "if you can learn karma...",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 48161
+  },
+  "quoted_text": "Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha! Ha!",
+  "suspected_intended_text": "Ha!",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 90 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 54112
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 42 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 57809
+  },
+  "quoted_text": "They really do. They really do. They really do. They really do. They really do. They really do. They really do.",
+  "suspected_intended_text": "They really do.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 7 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 58290
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 58796
+  },
+  "quoted_text": "you. Thank you. Thank you. Thank you. Thank you. Thank",
+  "suspected_intended_text": "you. Thank",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 59667
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you,",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 7 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

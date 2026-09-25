@@ -1,0 +1,70 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 5702
+  },
+  "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "suspected_intended_text": "Okay.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 23807
+  },
+  "quoted_text": "1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000, 1,000,",
+  "suspected_intended_text": "1,000,",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 14 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 29735
+  },
+  "quoted_text": "you don't want to sweep the place. You don't want to sweep the place. You don't want to sweep the place. You don't want to sweep the place.",
+  "suspected_intended_text": "you don't want to sweep the place.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_VI_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 41125
+  },
+  "quoted_text": "Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs. Cultural mercs.",
+  "suspected_intended_text": "Cultural mercs.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 44 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

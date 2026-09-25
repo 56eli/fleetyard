@@ -1,0 +1,19 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Experiential_Reality_Feb_2006_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 6256
+  },
+  "quoted_text": "all fear is illusion. All fear is illusion. All fear is illusion.",
+  "suspected_intended_text": "all fear is illusion.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

@@ -1,0 +1,274 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13238
+  },
+  "quoted_text": "Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay.",
+  "suspected_intended_text": "Okay.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 22 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19299
+  },
+  "quoted_text": "Kруш",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19363
+  },
+  "quoted_text": "стороны",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19383
+  },
+  "quoted_text": "peut-être",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19792
+  },
+  "quoted_text": "is张",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 22666
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 31052
+  },
+  "quoted_text": "Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes. Yes.",
+  "suspected_intended_text": "Yes.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 29 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32669
+  },
+  "quoted_text": "I'm not sure if that's the right word but I'm not sure if that's the right word but I'm not sure if that's the right word but I'm not sure if that's the right word but",
+  "suspected_intended_text": "I'm not sure if that's the right word but",
+  "evidence_class": "signals: A1-repetition (9-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 44740
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 22 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 49108
+  },
+  "quoted_text": "I'm not a dumb guy. I'm not a dumb guy. I'm not a dumb guy.",
+  "suspected_intended_text": "I'm not a dumb guy.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 50759
+  },
+  "quoted_text": "In order to get your... In order to get your... In order to get your... In order to get your... In order to get your... In order to get your... In order to get your... In order to get your... In order to get your... In order to get your... In order to get your... In order to get your",
+  "suspected_intended_text": "In order to get your...",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 12 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 53815
+  },
+  "quoted_text": "I'd like a picture of you I'd like a picture of you I'd like a picture of you I'd like a picture of you",
+  "suspected_intended_text": "I'd like a picture of you",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 59112
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 13 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 69214
+  },
+  "quoted_text": "I don't know how to know which way to proceed. I don't know how to know which way to proceed. I don't know how to know which way to proceed. I don't know how to know which way to proceed.",
+  "suspected_intended_text": "I don't know how to know which way to proceed.",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 71043
+  },
+  "quoted_text": "you can do whatever you want. You can do whatever you want. You can do whatever you want. You can do whatever you want.",
+  "suspected_intended_text": "you can do whatever you want.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Question_Answer_Session_Mar_2011_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 74289
+  },
+  "quoted_text": "Wow, wow, wow, wow, wow, wow, wow, wow.",
+  "suspected_intended_text": "Wow,",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

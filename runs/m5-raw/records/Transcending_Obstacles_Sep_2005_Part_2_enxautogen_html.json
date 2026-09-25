@@ -1,0 +1,70 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Obstacles_Sep_2005_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 6809
+  },
+  "quoted_text": "This is, this is, this is, this is, this is, this is, this is, this is, this is, this is, this is, this is, this is, this is, this is, this is",
+  "suspected_intended_text": "This is,",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 16 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Obstacles_Sep_2005_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 8486
+  },
+  "quoted_text": "And then you have the kundalini energy. And then you have the kundalini energy. And then you have the kundalini energy.",
+  "suspected_intended_text": "And then you have the kundalini energy.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Obstacles_Sep_2005_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 9987
+  },
+  "quoted_text": "Ha, ha, ha, ha, ha, ha, ha, ha.",
+  "suspected_intended_text": "Ha,",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Transcending_Obstacles_Sep_2005_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 38856
+  },
+  "quoted_text": "Wants to be in the in-group. Wants to be in the in-group. Wants to be in the in-group. Wants to be in the in-group. Wants to be in the in-group.",
+  "suspected_intended_text": "Wants to be in the in-group.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

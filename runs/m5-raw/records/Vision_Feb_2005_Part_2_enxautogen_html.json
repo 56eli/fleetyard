@@ -1,0 +1,104 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Vision_Feb_2005_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1100
+  },
+  "quoted_text": "And to which the French reacted strongly, And to which the French reacted strongly, And to which the French reacted strongly,",
+  "suspected_intended_text": "And to which the French reacted strongly,",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Vision_Feb_2005_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 1745
+  },
+  "quoted_text": "you can count it. You can count it. You can count it. You can count it. You can count it. You can count it.",
+  "suspected_intended_text": "you can count it.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Vision_Feb_2005_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 6650
+  },
+  "quoted_text": "I practiced 50 times a day. I practiced 50 times a day. I practiced 50 times a day. I practiced 50 times a day. I practiced 50 times a day. I practiced 50 times a day. I practiced 50 times a day. I practiced 50 times a day. I practiced 50 times a day. I practiced 50 times a day.",
+  "suspected_intended_text": "I practiced 50 times a day.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Vision_Feb_2005_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 9824
+  },
+  "quoted_text": "прив",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Vision_Feb_2005_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 12043
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 23 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Vision_Feb_2005_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 28971
+  },
+  "quoted_text": "Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful. Prisoners can screw up really awful.",
+  "suspected_intended_text": "Prisoners can screw up really awful.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 27 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

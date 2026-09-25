@@ -1,0 +1,344 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4189
+  },
+  "quoted_text": "life is",
+  "suspected_intended_text": "lives are",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'life is' vs book 'lives are' inside a 14/16-word near-verbatim match (tf-idf 0.33))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 10231,
+   "quote": "And there are some people whose lives are devoted to knocking anything beyond the ordinary paradigm"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 8621
+  },
+  "quoted_text": "That's the world. That's the world. That's the world. That's the world. That's the world.",
+  "suspected_intended_text": "That's the world.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 9221
+  },
+  "quoted_text": "Energy. Gets. Is",
+  "suspected_intended_text": "energy is",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'gets' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.30))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 14930,
+   "quote": "its own volition, you might say. It’s like the spiritual energy is so strong that it now takes over the whole process, and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 9800
+  },
+  "quoted_text": "Long",
+  "suspected_intended_text": "along",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'long' vs book 'along' inside a 22/23-word near-verbatim match (tf-idf 0.36))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 15580,
+   "quote": "reason to continue. However, there’s probably a karmic propensity, a momentum that carries one along. In each instant that that happened, it was Love that"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 12486
+  },
+  "quoted_text": "Wrapped",
+  "suspected_intended_text": "wracked",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'wrapped' vs book 'wracked' inside a 21/24-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 20667,
+   "quote": "the Buddha was wracked with pain, as though his bones were broken, and he was attacked by demons. She read that to me"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18411
+  },
+  "quoted_text": "1,000, the water turns into steam. When you get down to 1,000, the water turns into steam. When you get down to 1,000, the water turns into steam. When you get down to 1,000, the water turns into steam. When you get down to",
+  "suspected_intended_text": "1,000, the water turns into steam. When you get down to",
+  "evidence_class": "signals: A1-repetition (12-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19004
+  },
+  "quoted_text": "help us. A",
+  "suspected_intended_text": "help a",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'us' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.55))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 29032,
+   "quote": "It’s still just water. It is not a duality of water versus non-water. Okay? That will help a lot of people. You see, when"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19826
+  },
+  "quoted_text": "Laughter Laughter Laughter Laughter Laughter Laughter Laughter Laughter",
+  "suspected_intended_text": "Laughter",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 23059
+  },
+  "quoted_text": "which life, the",
+  "suspected_intended_text": "which the",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'life' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.51))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 32141,
+   "quote": "perfection in the age of the dinosaurs, in which the life of the individual is at the price, at the cost of the"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 24412
+  },
+  "quoted_text": "found",
+  "suspected_intended_text": "find",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'found' vs book 'find' inside a 21/24-word near-verbatim match (tf-idf 0.43))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 33185,
+   "quote": "35, also has all these neurotoxins. However, I find that the ultimate culprit is a little mollusk that lives at the bottom"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25339
+  },
+  "quoted_text": "Why the overdone-ness of the web spider? Why the overdone-ness of the web spider? Why the overdone-ness of the web spider? Why the overdone-ness of the web spider? Why the overdone-ness of the web spider? Why the overdone-ness of the web spider?",
+  "suspected_intended_text": "Why the overdone-ness of the web spider?",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 28353
+  },
+  "quoted_text": "in Tigris",
+  "suspected_intended_text": "integrous",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'in tigris' vs book 'integrous' inside a 21/24-word near-verbatim match (tf-idf 0.50))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 36127,
+   "quote": "a spiritual teacher is whether they are over 200. That’s all I care about. If they’re over 200, they’re integrous. If they’re under 200"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32977
+  },
+  "quoted_text": "fall, and then I'm going to fall. And then I'm going to fall. And then I'm going to fall. And then I'm going to fall. And then I'm going to fall. And then I'm going to fall. And then I'm going to fall. And then I'm going to",
+  "suspected_intended_text": "fall, and then I'm going to",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45077
+  },
+  "quoted_text": "It's not of the person. It's not of the person. It's not of the person.",
+  "suspected_intended_text": "It's not of the person.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 48410
+  },
+  "quoted_text": "And the light shone forth. And the light shone forth. And the light shone forth. And the light shone forth. And the light shone forth. And the light shone forth.",
+  "suspected_intended_text": "And the light shone forth.",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 49007
+  },
+  "quoted_text": "minuscule",
+  "suspected_intended_text": "miniscule",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'minuscule' vs book 'miniscule' inside a 22/24-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_path_to_spiritual_advancem",
+   "char_offset": 53457,
+   "quote": "total weight of the entire universe. That’s even within advanced theoretical physics. In the nonlinear domain, even that is miniscule. There is no limit"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51386
+  },
+  "quoted_text": "there is no such thing as non-life. There is no such thing as non-life. There is no such thing as non-life. There is no such thing as non-life. There is no such thing as non-life.",
+  "suspected_intended_text": "there is no such thing as non-life.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Causality_The_Ego_s_Foundation_Jan_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 61463
+  },
+  "quoted_text": "of an infinite series of an infinite series of an infinite series",
+  "suspected_intended_text": "of an infinite series",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

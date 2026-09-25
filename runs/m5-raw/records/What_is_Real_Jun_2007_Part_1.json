@@ -1,0 +1,70 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_Real_Jun_2007_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32915
+  },
+  "quoted_text": "I know that. And I know that. And I know that. And",
+  "suspected_intended_text": "I know that. And",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_Real_Jun_2007_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 53129
+  },
+  "quoted_text": "I like and I don't like. I like and I don't like. I like and I don't like. I like and I don't like.",
+  "suspected_intended_text": "I like and I don't like.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_Real_Jun_2007_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 55042
+  },
+  "quoted_text": "Ha, ha, ha, ha. Ha, ha, ha, ha. Ha, ha, ha. Ha, ha, ha.",
+  "suspected_intended_text": "Ha,",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 14 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/What_is_Real_Jun_2007_Part_1.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 55419
+  },
+  "quoted_text": "this is not a celestial realm. This is not a celestial realm. This is not a celestial realm.",
+  "suspected_intended_text": "this is not a celestial realm.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

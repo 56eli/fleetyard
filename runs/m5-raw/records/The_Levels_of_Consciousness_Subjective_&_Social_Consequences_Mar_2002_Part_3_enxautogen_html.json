@@ -1,0 +1,389 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 10041
+  },
+  "quoted_text": "Eons prevail",
+  "suspected_intended_text": "prevails",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'eons prevail' vs book 'prevails' inside a 22/24-word near-verbatim match (tf-idf 0.44))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 164664,
+   "quote": "In the experiences I’ve described to you today, there was never any other entity there. On the way to hell, I passed no devils. Dante was correct. Dante’s description of hell is literally correct, exactly the way it is. The upper levels are torture and torment and agony and suffering and dismemberment, et cetera. But those are just jacks for openers. Then you get to the real hell. All that stops, and a nameless dread, which goes on for eons, prevails. In the higher realms, there are celestial beings, and many of them have"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 12016
+  },
+  "quoted_text": "imminent",
+  "suspected_intended_text": "immanent",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'imminent' vs book 'immanent' inside a 21/23-word near-verbatim match (tf-idf 0.41))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 166771,
+   "quote": "because it’s God as present both transcendent and immanent—in other words, the divinity of all living things. The Native American sees"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13218
+  },
+  "quoted_text": "Who says",
+  "suspected_intended_text": "We say",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'who says' vs book 'we say' inside a 22/24-word near-verbatim match (tf-idf 0.42))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 167851,
+   "quote": "that’s about 740. But that’s not the reality of the reader. We say, “What about the starving children? What about the cat that just"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 14558
+  },
+  "quoted_text": "Wang",
+  "suspected_intended_text": "Huang",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'wang' vs book 'huang' inside a 22/24-word near-verbatim match (tf-idf 0.63))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 168463,
+   "quote": "life and not at other times. The Transmission of Mind—even the title, people say, “Huh?” Huang Po, The Transmission of Mind. That’s about, what, 740? “Huang Po, Transmission of No Mind"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 14621
+  },
+  "quoted_text": "Wang",
+  "suspected_intended_text": "Huang",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'wang' vs book 'huang' inside a 18/20-word near-verbatim match (tf-idf 0.42))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 168588,
+   "quote": "That’s about, what, 740? “Huang Po, Transmission of No Mind, is over 700.” (True.) “720.” (True.) “730.”\n\n(True.) “740.” (True.) “750.” (True.) “760.” (Not true.) About 750"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 14905
+  },
+  "quoted_text": "Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you. Thank you.",
+  "suspected_intended_text": "Thank you.",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 8 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 15489
+  },
+  "quoted_text": "Farms",
+  "suspected_intended_text": "Firearms",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'farms' vs book 'firearms' inside a 23/24-word near-verbatim match (tf-idf 0.51))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 169290,
+   "quote": "CIA, and the Alcohol, Tobacco and Firearms—ATF. At the time, the ATF, CIA, and FBI all made you go weak. And I think it’s"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 20938
+  },
+  "quoted_text": "the largest, the largest, the largest, the largest, the largest,",
+  "suspected_intended_text": "the largest,",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 23998
+  },
+  "quoted_text": "They're not going to do that. They're not going to do that. They're not going to do that.",
+  "suspected_intended_text": "They're not going to do that.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25617
+  },
+  "quoted_text": "its structure, formal",
+  "suspected_intended_text": "its formal",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'structure' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.70))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 173842,
+   "quote": "then you get a disappointment.\n\nAlthough the FAA may calibrate as an agency in its formal structure, bureaucracy at 200, what does it"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37385
+  },
+  "quoted_text": "choose power, power",
+  "suspected_intended_text": "choose power",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'power' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.63))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 182354,
+   "quote": "contrary” choice. So, to choose power for its own sake, then, is the temptation of the Luciferic when you get to a very"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 39052
+  },
+  "quoted_text": "megalomaniac",
+  "suspected_intended_text": "egomaniac",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'megalomaniac' vs book 'egomaniac' inside a 23/24-word near-verbatim match (tf-idf 0.49))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 183968,
+   "quote": "the small “i” is to become the egomaniac. So, when Milosevic feels not the slightest contrition, feels it’s his perfect right to destroy millions"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 39180
+  },
+  "quoted_text": "merely",
+  "suspected_intended_text": "mainly",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'merely' vs book 'mainly' inside a 23/24-word near-verbatim match (tf-idf 0.48))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 184035,
+   "quote": "not the slightest contrition, feels it’s his perfect right to destroy millions of people mainly because they disagree with him or represent something he"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 49002
+  },
+  "quoted_text": "experienceable",
+  "suspected_intended_text": "experiential",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'experienceable' vs book 'experiential' inside a 22/24-word near-verbatim match (tf-idf 0.34))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 192665,
+   "quote": "spiritual will hears that enlightenment is possible, it clicks onto it and now it begins to reorganize the intention of all the intricacies of the ego.\n\nAnd somehow, you just find yourself in the right place and moving in a certain direction. That’s a result of spiritual will.\n\nSo, integrity, then, is a decision. The reason I used Sam Walton as an example was because he seemed to represent in a widely experiential way the value"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 49585
+  },
+  "quoted_text": "an integrist",
+  "suspected_intended_text": "integrous",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'an integrist' vs book 'integrous' inside a 17/19-word near-verbatim match (tf-idf 0.28))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 193576,
+   "quote": "How are you going to get reelected if you’re going to be integrous, you know what I mean"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 54443
+  },
+  "quoted_text": "1000, say, level",
+  "suspected_intended_text": "1000 level",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'say' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 197501,
+   "quote": "and Krishna and Buddha have physical functions, then, when they were at 1000 level of consciousness?\n\nWell, Buddha had a great deal"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 64041
+  },
+  "quoted_text": "Luciferic uses and",
+  "suspected_intended_text": "Luciferic and",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'uses' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.39))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 203357,
+   "quote": "via the sheep’s clothing. It is the one that the Luciferic and the satanic both use. It’s because of man’s not knowing truth"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 64715
+  },
+  "quoted_text": "of running",
+  "suspected_intended_text": "to run",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'of running' vs book 'to run' inside a 22/24-word near-verbatim match (tf-idf 0.41))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 204005,
+   "quote": "karmic setup for it; you have to have had the good fortune to run into good teachers. You have to have fallen into the"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 65800
+  },
+  "quoted_text": "giant",
+  "suspected_intended_text": "gigantic",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'giant' vs book 'gigantic' inside a 23/24-word near-verbatim match (tf-idf 0.32))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 204923,
+   "quote": "We said that that which is Infinite and manifests itself as all the universes is like a gigantic electromagnetic field, in which through spiritual"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

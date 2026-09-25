@@ -1,0 +1,561 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 2523
+  },
+  "quoted_text": "to make... make",
+  "suspected_intended_text": "to make",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'make' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.51))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 7905,
+   "quote": "became an expert—how to\n\ndefine, how to make it possible to go from the known to the unknown. The radical subjectivity of"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 8121
+  },
+  "quoted_text": "just say, put",
+  "suspected_intended_text": "just put",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'say' vs book '' inside a 22/23-word near-verbatim match (tf-idf 0.47))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 12860,
+   "quote": "to give up a positionality. And we use a thermometer as an example. You can’t just put your finger here and say"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 11776
+  },
+  "quoted_text": "prefix",
+  "suspected_intended_text": "preface",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'prefix' vs book 'preface' inside a 23/24-word near-verbatim match (tf-idf 0.32))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 16234,
+   "quote": "to do calibrations and try to arrive at numbers to compare to this Map, you have to sort of preface it with: “As compared"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 17939
+  },
+  "quoted_text": "ring",
+  "suspected_intended_text": "O-ring",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ring' vs book 'o-ring' inside a 23/24-word near-verbatim match (tf-idf 0.30))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 21373,
+   "quote": "day, every day, and they’re very, very adept at it. They know various techniques. There’s the O-ring technique, where you can pull and see"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 23928
+  },
+  "quoted_text": "intensity",
+  "suspected_intended_text": "intense light",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'intensity' vs book 'intense light' inside a 18/19-word near-verbatim match (tf-idf 0.43))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 26866,
+   "quote": "not two different things—light and dark. There is intense light; as the light gets lower and lower and lower"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 27446
+  },
+  "quoted_text": "to seek progressively",
+  "suspected_intended_text": "to progressively",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'seek' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 30275,
+   "quote": "God do so out of the evolution of their own consciousness, because the quality of consciousness is to progressively seek to know its"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 30602
+  },
+  "quoted_text": "the real true",
+  "suspected_intended_text": "the true",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'real' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.30))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 33272,
+   "quote": "the process is different. Here, at the level of integrity, you have the true beginning of empowerment at 200. Below that, you get"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 30701
+  },
+  "quoted_text": "politically correct",
+  "suspected_intended_text": "political correctness",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'politically correct' vs book 'political correctness' inside a 21/24-word near-verbatim match (tf-idf 0.32))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 32949,
+   "quote": "the scale become increasingly agreeable. These are low on the Map; everybody comes to see the doctor in these states. This is my office down here: despair, anxiety, depression, angriness. People don’t see me out of arrogance, but—yeah, they do.\n\nAnyway, as we go up, we see the levels are far more . . . and that’s because the process is different. Here, at the level of integrity, you have the true beginning of empowerment at 200. Below that, you get inflation. The reason I don’t like political correctness is because it calibrates"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32812
+  },
+  "quoted_text": "a big very",
+  "suspected_intended_text": "a very",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'big' vs book '' inside a 17/18-word near-verbatim match (tf-idf 0.47))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 35425,
+   "quote": "autonomous. So, these people under 200 are not autonomous. What people think about them makes a very big difference"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 34932
+  },
+  "quoted_text": "become becomes enslaved",
+  "suspected_intended_text": "become enslaved",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'becomes' vs book '' inside a 11/12-word near-verbatim match (tf-idf 0.25))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 37569,
+   "quote": "the people become enslaved, they become addicted.\n\nThis is the level"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 36458
+  },
+  "quoted_text": "make everybody all",
+  "suspected_intended_text": "make all",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'everybody' vs book '' inside a 16/18-word near-verbatim match (tf-idf 0.34))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 39004,
+   "quote": "Then they rip off their business for $300 million and make all the stock owners probably say, “He’s got three hundred million. Why does he need more?” I don’t know what you"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37713
+  },
+  "quoted_text": "conquer fear a",
+  "suspected_intended_text": "conquer a",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'fear' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.42))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 40103,
+   "quote": "the world, most of the time. Fear.\n\nThe number of fears—to say to conquer a fear doesn’t really solve it, because"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 38340
+  },
+  "quoted_text": "here",
+  "suspected_intended_text": "higher",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'here' vs book 'higher' inside a 22/24-word near-verbatim match (tf-idf 0.53))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 40706,
+   "quote": "is what’s important. It’s not where you’re at. It isn’t bad that you’re low on the Map and good that you’re higher. Maybe subjectively, experientially, it is"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51446
+  },
+  "quoted_text": "Everybody",
+  "suspected_intended_text": "Anybody",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'everybody' vs book 'anybody' inside a 23/24-word near-verbatim match (tf-idf 0.44))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 52737,
+   "quote": "brain, you have the old dinosaur brain. The reptilian brain is still at the back of the brain, right. Anybody knows anything about anatomy"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51887
+  },
+  "quoted_text": "figulataurus",
+  "suspected_intended_text": "phigalatorus",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'figulataurus' vs book 'phigalatorus' inside a 22/24-word near-verbatim match (tf-idf 0.35))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 53118,
+   "quote": "as it evolved is represented in some nucleus in your hypothalamus or your “phigalatorus”—take that! This is in your phigalatorus right here, and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51928
+  },
+  "quoted_text": "figulataurus",
+  "suspected_intended_text": "phigalatorus",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'figulataurus' vs book 'phigalatorus' inside a 22/24-word near-verbatim match (tf-idf 0.35))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 53118,
+   "quote": "as it evolved is represented in some nucleus in your hypothalamus or your “phigalatorus”—take that! This is in your phigalatorus right here, and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 52794
+  },
+  "quoted_text": "Coco",
+  "suspected_intended_text": "Koko",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'coco' vs book 'koko' inside a 22/24-word near-verbatim match (tf-idf 0.65))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 53897,
+   "quote": "four red round.” Oh, four red round. The parrot knows how to think already. And of course, you all know Koko, the gorilla who has quite a big"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 53063
+  },
+  "quoted_text": "birds. Present and",
+  "suspected_intended_text": "birds and",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'present' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.50))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 54178,
+   "quote": "talking about now is the emergence of the forebrain, the forebrain. The capacity to think. Present even in birds and becomes more and more complex"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 60112
+  },
+  "quoted_text": "everybody, everybody to",
+  "suspected_intended_text": "everybody to",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'everybody' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.45))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 60262,
+   "quote": "here is here because we’ve all made choices, and I want everybody to become friendly with their ego—to accept their id, give"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 69153
+  },
+  "quoted_text": "the victim of, the victim of, the victim of, the victim of, the victim of,",
+  "suspected_intended_text": "the victim of,",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 69250
+  },
+  "quoted_text": "ablution",
+  "suspected_intended_text": "evolution",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'ablution' vs book 'evolution' inside a 20/23-word near-verbatim match (tf-idf 0.52))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 66547,
+   "quote": "the gang that runs that block, or you get eliminated. You don’t have the choices. To see that, then you see that each person is, to some degree, the victim of where they are in the evolution of consciousness. To some degree, if you like victimology—victimology is"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 71893
+  },
+  "quoted_text": "becomes belligerent, belligerent",
+  "suspected_intended_text": "becomes belligerent",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'belligerent' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.45))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 68760,
+   "quote": "life, evil, tragic, frightening, disappointing, weak. Now, as we get up toward anger, one’s self-view becomes belligerent. So, the kids we get off"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 72557
+  },
+  "quoted_text": "These are all levels of egomania in a way. These are all levels of egomania in a way. These are all levels of egomania in a way.",
+  "suspected_intended_text": "These are all levels of egomania in a way.",
+  "evidence_class": "signals: A1-repetition (9-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 72744
+  },
+  "quoted_text": "of egocentrism. Egocentricity",
+  "suspected_intended_text": "of egocentricity",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'egocentrism' vs book '' inside a 22/24-word near-verbatim match (tf-idf 0.38))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 69330,
+   "quote": "These are all levels of egomania, in a way. These are all levels of egocentricity. At the bottom of the box, God despises you. God hates"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 77096
+  },
+  "quoted_text": "Hardt",
+  "suspected_intended_text": "Erhard",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'hardt' vs book 'erhard' inside a 23/24-word near-verbatim match (tf-idf 0.51))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 73392,
+   "quote": "of Empowerment\n\nNow we get to Courage. Our view of God begins to change. God is perhaps a possibility and of a different nature now, because now 200 is a level of empowerment. You remember EST back in the ’70s, Werner Erhard Seminars Training. The purpose of EST was to get you off"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 77445
+  },
+  "quoted_text": "and wait wait",
+  "suspected_intended_text": "and wait",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'wait' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.47))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 73915,
+   "quote": "Well, I missed the bus.” You would have to stand there and wait some more. “And the elevator was slow.” Uh-huh. “And the alarm"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 82877
+  },
+  "quoted_text": "after maybe 12",
+  "suspected_intended_text": "after 12",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'maybe' vs book '' inside a 20/22-word near-verbatim match (tf-idf 0.31))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 78839,
+   "quote": "more box. Not one more. I was never a heavyweight to begin with.\n\nAnyway, after 12 or 14 hours in this heat and no water"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

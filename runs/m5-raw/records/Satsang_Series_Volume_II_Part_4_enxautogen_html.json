@@ -1,0 +1,87 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25573
+  },
+  "quoted_text": "that's sort of a clinical question. That's sort of a clinical question. That's sort of a clinical question.",
+  "suspected_intended_text": "that's sort of a clinical question.",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 34614
+  },
+  "quoted_text": "you should be able to do it you should be able to do it you should be able to do it",
+  "suspected_intended_text": "you should be able to do it",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 39593
+  },
+  "quoted_text": "goals? Success and goals, and having dreams, slash goals. Success and goals, and having dreams, slash goals. Success and goals, and having dreams, slash",
+  "suspected_intended_text": "goals? Success and goals, and having dreams, slash",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 43268
+  },
+  "quoted_text": "You know, there's a lot of, you know, there's a lot of, you know, there's a lot of, you know, there's a lot of, you know, there's a lot of, you know, there's a lot of,",
+  "suspected_intended_text": "You know, there's a lot of,",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Satsang_Series_Volume_II_Part_4_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 45819
+  },
+  "quoted_text": "Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.",
+  "suspected_intended_text": "Yeah.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 11 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

@@ -1,0 +1,53 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 65794
+  },
+  "quoted_text": "God bless you God bless you God bless you God bless you God bless you God bless you",
+  "suspected_intended_text": "God bless you",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 65940
+  },
+  "quoted_text": "ha ha ha ha ha ha ha ha ha",
+  "suspected_intended_text": "ha",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 9 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Spiritual_Survival_Realization_of_Reality_Nov_2007_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 66128
+  },
+  "quoted_text": "God bless you now and forever God bless you now and forever God bless you now and forever",
+  "suspected_intended_text": "God bless you now and forever",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

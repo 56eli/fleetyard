@@ -1,0 +1,133 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 2318
+  },
+  "quoted_text": "which all the energies are negative. And above which all the energies are negative. And above which all the energies are negative. And above which all the energies are negative. And above",
+  "suspected_intended_text": "which all the energies are negative. And above",
+  "evidence_class": "signals: A1-repetition (8-token unit repeated 4 times back-to-back); B1-contradiction (polarity: the side above the 200 line stated as negative; books: energy goes positive at 200)",
+  "detector_id": "A1-repetition+B1-contradiction",
+  "book_reference": {
+   "slug": "healing_and_recovery",
+   "char_offset": 22947,
+   "quote": "At level 200, energy goes positive"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "HIGH CONFIDENCE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 4543
+  },
+  "quoted_text": "255%",
+  "suspected_intended_text": "55%",
+  "evidence_class": "signals: A2-nonsense (impossible-percent: 255 > 100); B1-contradiction (happiness-percent: book table gives Courage = 55%, transcript says 255%)",
+  "detector_id": "A2-nonsense+B1-contradiction",
+  "book_reference": {
+   "slug": "reality_spirituality_and_mode",
+   "char_offset": 276008,
+   "quote": "Courage 200 55"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "HIGH CONFIDENCE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 27565
+  },
+  "quoted_text": "90%",
+  "suspected_intended_text": "89%",
+  "evidence_class": "signals: B1-contradiction (happiness-percent: book table gives Love = 89%, transcript says 90%)",
+  "detector_id": "B1-contradiction",
+  "book_reference": {
+   "slug": "reality_spirituality_and_mode",
+   "char_offset": 275922,
+   "quote": "Love 500 89"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 28028
+  },
+  "quoted_text": "It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved. It is discovered that to be loved.",
+  "suspected_intended_text": "It is discovered that to be loved.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 31214
+  },
+  "quoted_text": "No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No. No.",
+  "suspected_intended_text": "No.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 26 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32639
+  },
+  "quoted_text": "động",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: mixed/foreign letters in token)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Love_Sep_2011_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 32667
+  },
+  "quoted_text": "杛",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

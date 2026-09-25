@@ -1,0 +1,297 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 712
+  },
+  "quoted_text": "older",
+  "suspected_intended_text": "altered",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'older' vs book 'altered' inside a 21/24-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 348685,
+   "quote": "for 10\n\ndays. You spend all day lying on a mattress, learning how to take off in various altered states. I remember one time"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 7453
+  },
+  "quoted_text": "because",
+  "suspected_intended_text": "cause",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'because' vs book 'cause' inside a 22/24-word near-verbatim match (tf-idf 0.35))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 354925,
+   "quote": "you were born. And they’re going to be that way after you’re dead, so there’s no point in taking it personally! They’re not doing it for your entertainment. They’re doing it because that’s the way they are. They’re mean and gruff and nasty or self-centered, or whatever you wanna think they are, but they’re not doing that ’cause of you; they’re just doing that because that’s the way they are"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 9553
+  },
+  "quoted_text": "how can children be backed out of the video world how can children be backed out of the video world how can children be backed out of the video world",
+  "suspected_intended_text": "how can children be backed out of the video world",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 10917
+  },
+  "quoted_text": "Mr. Gadatta",
+  "suspected_intended_text": "Nisargadatta",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'mr gadatta' vs book 'nisargadatta' inside a 21/24-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 358502,
+   "quote": "any spiritual teacher or teaching that you read, you are picking up a frequency and a vibration. And if you like Nisargadatta\n\nMaharaj, then you’re probably going"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18464
+  },
+  "quoted_text": "instilled",
+  "suspected_intended_text": "increased",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'instilled' vs book 'increased' inside a 22/23-word near-verbatim match (tf-idf 0.50))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 366459,
+   "quote": "to merely observe it, to merely think it already has changed the probability. You haven’t caused it, but you’ve increased the probability.\n\nWhat"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 18491
+  },
+  "quoted_text": "What level would",
+  "suspected_intended_text": "What would",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'level' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.74))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 366524,
+   "quote": "probability. You haven’t caused it, but you’ve increased the probability.\n\nWhat would Albert Einstein, Deepak Chopra calibrate on the Map of Consciousness®, and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 24869
+  },
+  "quoted_text": "I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know. I don't know.",
+  "suspected_intended_text": "I don't know.",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 20 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 25313
+  },
+  "quoted_text": "the person",
+  "suspected_intended_text": "depression",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'the person' vs book 'depression' inside a 22/24-word near-verbatim match (tf-idf 0.40))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 372502,
+   "quote": "who don’t want to take medication, I’d say: why don’t you try, you know, whatever was ostensibly helping depression at the time. I never saw"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 27740
+  },
+  "quoted_text": "to see it's going to be different from what you're going to see it's going to be different from what you're going to see it's going to be different from what you're going to see it's going to be different from what you're going",
+  "suspected_intended_text": "to see it's going to be different from what you're going",
+  "evidence_class": "signals: A1-repetition (11-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 28276
+  },
+  "quoted_text": "you see all we've done is is just you know you see all we've done is is just you know you see all we've done is is just you know",
+  "suspected_intended_text": "you see all we've done is is just you know",
+  "evidence_class": "signals: A1-repetition (10-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 35330
+  },
+  "quoted_text": "when",
+  "suspected_intended_text": "want",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'when' vs book 'want' inside a 23/24-word near-verbatim match (tf-idf 0.58))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 381617,
+   "quote": "of which come the dualities, which finesse the negativities which block love, want all the decks cleared before we even talk about love. So"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 47673
+  },
+  "quoted_text": "this psychoanalyst, psychotic",
+  "suspected_intended_text": "this psychotic",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'psychoanalyst' vs book '' inside a 21/22-word near-verbatim match (tf-idf 0.36))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 393849,
+   "quote": "through the eyes, seeing the Self—seeing the Self of the entity within this psychotic mess. Instantly, there was like a"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 49936
+  },
+  "quoted_text": "bodiness",
+  "suspected_intended_text": "bodyness",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'bodiness' vs book 'bodyness' inside a 23/24-word near-verbatim match (tf-idf 0.38))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 395599,
+   "quote": "persist, yeah? So, there is a certain necessity then that befalls anyone who has a human body, just emanating from their bodyness itself, right? And"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 50697
+  },
+  "quoted_text": "bodiness",
+  "suspected_intended_text": "bodyness",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'bodiness' vs book 'bodyness' inside a 22/23-word near-verbatim match (tf-idf 0.42))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 396365,
+   "quote": "I mean, there was no identification with the body. So, the bodyness does not hold you back; it’s only your identification with the"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51573
+  },
+  "quoted_text": "10. $10. $10. $10. $10. $10. $10. $10. $10. $10. $10. $10. $10. $10. $10.",
+  "suspected_intended_text": "10.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 15 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

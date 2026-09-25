@@ -1,0 +1,284 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 2952
+  },
+  "quoted_text": "existent",
+  "suspected_intended_text": "existing",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'existent' vs book 'existing' inside a 20/21-word near-verbatim match (tf-idf 0.41))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 209751,
+   "quote": "When electricity is there, it’s on. When the electricity is off, it’s not on. But there is no independent existing thing such as “offness.” That’s an important point"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 5219
+  },
+  "quoted_text": "God creates this, God creates this, God creates this, God creates this, God creates this,",
+  "suspected_intended_text": "God creates this,",
+  "evidence_class": "signals: A1-repetition (3-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 36448
+  },
+  "quoted_text": "attention",
+  "suspected_intended_text": "intention",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'attention' vs book 'intention' inside a 22/24-word near-verbatim match (tf-idf 0.37))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 237052,
+   "quote": "is intention, not results. Let’s see if that’s true or not: “We’re responsible for intention, resist.” (True.) “It’s the spiritual intention, the spiritual will"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 39187
+  },
+  "quoted_text": "the elephants. Elephants",
+  "suspected_intended_text": "the elephants",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'elephants' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.46))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 238753,
+   "quote": "We wanted to ask about the elephants: “A group of elephants calibrates over 180.” (True.) “185.” (True.) “190.” (True.) “192.” (Not true.) Elephants are about 192. Very interesting"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 41740
+  },
+  "quoted_text": "various self, apparently",
+  "suspected_intended_text": "various apparently",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'self' vs book '' inside a 21/24-word near-verbatim match (tf-idf 0.49))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 240403,
+   "quote": "expresses itself. You see the absurdity of life in its various apparently self-destructive expressions.\n\nMoving Beyond Positionality\n\nNow we wanna get beyond positionality. This is"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 49578
+  },
+  "quoted_text": "That's because, that's because, that's because, that's because, that's because, that's because, that's because, that's because, that's because, that's because,",
+  "suspected_intended_text": "That's because,",
+  "evidence_class": "signals: A1-repetition (2-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51227
+  },
+  "quoted_text": "can't present pretend",
+  "suspected_intended_text": "can’t pretend",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'present' vs book '' inside a 23/24-word near-verbatim match (tf-idf 0.62))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 249390,
+   "quote": "can’t pretend H2O at minus 30 degrees is the same as H2O at 32 degrees, and you can’t pretend it’s the same at"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 51756
+  },
+  "quoted_text": "we can't say the dinosaur is evil we can't say the dinosaur is evil we can't say the dinosaur is evil we can't say the dinosaur is evil",
+  "suspected_intended_text": "we can't say the dinosaur is evil",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 61741
+  },
+  "quoted_text": "Everything. Everything within",
+  "suspected_intended_text": "Everything within",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'everything' vs book '' inside a 13/14-word near-verbatim match (tf-idf 0.73))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 256117,
+   "quote": "The entire universe is one karmic unity. Everything within this universe is related"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 65454
+  },
+  "quoted_text": "tends inevitably... In",
+  "suspected_intended_text": "tends in",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'inevitably' vs book '' inside a 19/20-word near-verbatim match (tf-idf 0.27))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 259634,
+   "quote": "Healing Effect of Letting Go\n\nThe letting go of negativity in all the forms in which you can, tends in and of itself"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 66239
+  },
+  "quoted_text": "Jempolski",
+  "suspected_intended_text": "Jampolsky",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'jempolski' vs book 'jampolsky' inside a 19/21-word near-verbatim match (tf-idf 0.40))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 260282,
+   "quote": "We had the second one. Jerry Jampolsky started the first one in Tiburon.\n\nAnd he and his crew came out and"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 71185
+  },
+  "quoted_text": "integrative",
+  "suspected_intended_text": "integrous",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'integrative' vs book 'integrous' inside a 23/24-word near-verbatim match (tf-idf 0.28))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 264781,
+   "quote": "the entire world. So, 350 or 360 is a lot different than Enron. To be helpful, to be integrous, to give you a good"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 78469
+  },
+  "quoted_text": "cannot",
+  "suspected_intended_text": "could not",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'cannot' vs book 'could not' inside a 18/19-word near-verbatim match (tf-idf 0.55))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 270783,
+   "quote": "can’t hear any sound, for the same reason that without the emptiness of space, you could not discern an object"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 84949
+  },
+  "quoted_text": "train",
+  "suspected_intended_text": "trying",
+  "evidence_class": "signals: B2-misquote (near-form substitution inside a book quote: transcript 'train' vs book 'trying' inside a 23/24-word near-verbatim match (tf-idf 0.38))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_evolution_of_consciousness",
+   "char_offset": 272951,
+   "quote": "and wrong and judgmentalism is, you see that it’s just a “So what?” I mean, “So what?”\n\nYou know what I mean? The guy was wrong when he did so-and-so. Well, so what? So, he was wrong. So? So, big deal. In other words, one gives up the trying to juice it"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

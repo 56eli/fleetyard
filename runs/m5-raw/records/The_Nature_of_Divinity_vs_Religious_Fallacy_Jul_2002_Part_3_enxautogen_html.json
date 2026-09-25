@@ -1,0 +1,36 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 14527
+  },
+  "quoted_text": "You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center. You're in the center.",
+  "suspected_intended_text": "You're in the center.",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 10 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Nature_of_Divinity_vs_Religious_Fallacy_Jul_2002_Part_3_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 33424
+  },
+  "quoted_text": "They do it in the United States. They do it in the United States. They do it in the United States. They do it in the United States. They do it in the United States. They do it in the United States.",
+  "suspected_intended_text": "They do it in the United States.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 6 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

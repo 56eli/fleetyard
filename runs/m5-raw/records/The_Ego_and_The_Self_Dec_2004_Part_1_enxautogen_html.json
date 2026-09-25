@@ -1,0 +1,36 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Ego_and_The_Self_Dec_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 34726
+  },
+  "quoted_text": "And the Quran says, and the Quran says, and the Quran says, and the Quran says, and the Quran says,",
+  "suspected_intended_text": "And the Quran says,",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 5 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/The_Ego_and_The_Self_Dec_2004_Part_1_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 37478
+  },
+  "quoted_text": "through the archeologic ages, through the archeologic ages, through the archeologic ages.",
+  "suspected_intended_text": "through the archeologic ages,",
+  "evidence_class": "signals: A1-repetition (4-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]

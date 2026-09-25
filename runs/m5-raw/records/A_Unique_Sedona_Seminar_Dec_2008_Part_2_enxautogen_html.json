@@ -1,0 +1,261 @@
+[
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 999
+  },
+  "quoted_text": "a better place for you. It's a better place for you. It's a better place for you. It's a better place for you. It's",
+  "suspected_intended_text": "a better place for you. It's",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 5854
+  },
+  "quoted_text": "no influence. Interest",
+  "suspected_intended_text": "no interest",
+  "evidence_class": "signals: B2-misquote (extra transcript word(s) inside a book quote: transcript 'influence' vs book '' inside a 10/11-word near-verbatim match (tf-idf 0.24))",
+  "detector_id": "B2-misquote",
+  "book_reference": {
+   "slug": "the_map_of_consciousness_expla",
+   "char_offset": 386963,
+   "quote": "Spiritual purity has no interest in the personal lives of"
+  },
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 8628
+  },
+  "quoted_text": "열두 살 때였는데요",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (3 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 8764
+  },
+  "quoted_text": "이것에 대해서",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (2 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 9671
+  },
+  "quoted_text": "그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고, 그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고, 그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고, 그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고,",
+  "suspected_intended_text": "그래서 진정한 스승은 자유를 허락하고, 그에게 yes나 no를 선택할 기회를 주고,",
+  "evidence_class": "signals: A1-repetition (11-token unit repeated 4 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 10023
+  },
+  "quoted_text": "어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에 어떤 유혹하는 것이나, 그 다음에",
+  "suspected_intended_text": "어떤 유혹하는 것이나, 그 다음에",
+  "evidence_class": "signals: A1-repetition (5-token unit repeated 7 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 10840
+  },
+  "quoted_text": "그것은",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (1 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13273
+  },
+  "quoted_text": "돈 좀 보내주세요",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (3 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13310
+  },
+  "quoted_text": "좀 보내주시고",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (2 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13402
+  },
+  "quoted_text": "블로그도 좀 보내주시고",
+  "suspected_intended_text": null,
+  "evidence_class": "signals: A2-nonsense (script-mix: short non-Latin run (3 tokens) inside English)",
+  "detector_id": "A2-nonsense",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13593
+  },
+  "quoted_text": "블로그? 블로그? 블로그? 블로그? 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그.",
+  "suspected_intended_text": "블로그?",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 11 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 13799
+  },
+  "quoted_text": "블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그. 블로그.",
+  "suspected_intended_text": "블로그.",
+  "evidence_class": "signals: A1-repetition (1-token unit repeated 12 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 19990
+  },
+  "quoted_text": "I thought, wow, that must be something. I thought, wow, that must be something. I thought, wow, that must be something.",
+  "suspected_intended_text": "I thought, wow, that must be something.",
+  "evidence_class": "signals: A1-repetition (7-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 20828
+  },
+  "quoted_text": "Truth is sought, is found through freedom, rather than rules and restrictions. Truth is sought, is found through freedom, rather than rules and restrictions. Truth is sought, is found through freedom, rather than rules and restrictions.",
+  "suspected_intended_text": "Truth is sought, is found through freedom, rather than rules and restrictions.",
+  "evidence_class": "signals: A1-repetition (12-token unit repeated 3 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ },
+ {
+  "transcript_path": "corpus/docdocgo/overlays/A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html.txt",
+  "location": {
+   "paragraph": 0,
+   "char_offset": 26695
+  },
+  "quoted_text": "you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself you take it back upon yourself",
+  "suspected_intended_text": "you take it back upon yourself",
+  "evidence_class": "signals: A1-repetition (6-token unit repeated 22 times back-to-back)",
+  "detector_id": "A1-repetition",
+  "book_reference": null,
+  "status": "open",
+  "status_by": "run_detectors (automatic, unreviewed)",
+  "raw_runner_confidence": "CANDIDATE",
+  "reporting_class": "CANDIDATE-class raw signal, unreviewed",
+  "review_status": "unreviewed"
+ }
+]
