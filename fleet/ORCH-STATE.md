@@ -384,3 +384,9 @@ the reconnect runbook is at the end of that summary.
   cut (manifest derivation notes not literally reproducible; config digest publishing a subset) — hygiene, queue
   position 4. Comparability of the tuning and holdout configurations **established from the pinned source**, so the §5d
   exposure comparison stands.
+
+- **2026-09-25T23:15:45Z: gate instrument committed** — `fleet/gate-tools/orch2_verify.py` (107 rows; PASS 97 · FAIL 7 · INFO 2 ·
+  PROXY 1 at `4fc40c8`; output committed). **FAIL set == open-item set** (8a, 11a, 14, 11b ×2, 12, TASK-018 0d).
+  Rules R1/R2 encoded. **§7.1 publishes four defects the instrument found in itself on its first run, two of them
+  false PASSes.** Standing rule: an instrument is validated against a head whose answer ORCH-2 already knows before
+  its output is trusted. Re-gates are now one run plus an invariance check.

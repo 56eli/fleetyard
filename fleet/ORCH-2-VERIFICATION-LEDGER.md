@@ -115,3 +115,74 @@ report the denominator of rows for which the comparison was defined.*
 - **B1-contradiction receives no validation** from the spent-holdout receipt (0 rows on the holdout side); v1's B1
   headline hold (TASK-005 FAIL / REDIRECT-005) stands.
 - **M6-P** remains owner-accepted and is **not** re-certified here.
+
+---
+
+## 7. The instrument that produces this ledger — `fleet/gate-tools/orch2_verify.py`
+
+Sections 1–5 are now **mechanical**, not prose. `python3 fleet/gate-tools/orch2_verify.py <worktree> --head <sha>`
+re-runs every row read-only over a gate-side worktree (corpus materialized by `sh tools/m5r_inputs.sh`) and prints, per
+row: expected with its source, observed, verdict, and **`n` = the number of comparisons actually performed**. Run at
+WORKER-2 head `4fc40c8` on 2026-09-25T23:15:45Z:
+
+```
+== summary: 107 rows · FAIL 7 · INFO 2 · PASS 97 · PROXY 1
+```
+
+Full output committed at `fleet/gate-tools/orch2_verify_output_4fc40c8.txt`.
+
+**Rules built in (both were broken by ORCH-2 once — see §5):**
+- **R1** — every set-level or interval check reports `n`; a zero produced by zero comparisons is reported as
+  **VACUOUS**, never as PASS. The fixture-overlap row demonstrates it: `n=0` interval comparisons were *possible*
+  (no adjudicated row shares a transcript with any fixture), so the row is INFO/VACUOUS-by-data and points at the
+  decisive membership test (`0 of 122`, `n=122`).
+- **R2** — every byte-exactness count reports the denominator over which the comparison was **defined**. Rows lacking
+  `span_start`/`span_end_matched` are counted separately and verified by a *different* key
+  (`char_offset` + `detector_span`); `None == None` is never a match.
+
+**The invariant that makes this useful: the instrument's FAIL set is exactly the open-item set — no more, no less.**
+
+| FAIL row | Open item |
+|---|---|
+| `criterion 20.10: tool_commit contains the generator` — ABSENT at `ffb8811` | **TASK-020 item 8a** (extended to all six supplement artefacts) |
+| `worker's published v1 row vs the census` — census gives 187.5548 / 0.4451, not 187.9 / 0.44 | **TASK-020 item 11a** |
+| `q4 format config digest covers a SUBSET` — `8e7e35a2…` vs `805241dd…` | **TASK-020 item 14 / criterion 20.16** |
+| `PATTERNS §5e carries '98'` (unannotated) | **TASK-020 item 11b** |
+| `PATTERNS §5e carries 'up to 11'` (unannotated) | **TASK-020 item 11b** |
+| `PATTERNS §5b-bis fuzzy timestamp` — `21:5xZ` | **TASK-020 item 12 / criterion 20.14** |
+| `PATTERNS §5b-bis repeats the false seeded sentence` | **TASK-018 item 0d** |
+
+INFO rows: split v2's fixtures-adjacent binding (**item v2.a** owed, criterion v2.5) and the vacuous-by-data interval
+row. PROXY row: the manifest's `book_refs 242`, which is not re-derivable from the ledger by substring proxy (mine gives
+240) and is therefore never reported as a mismatch. **Item 13** produces no FAIL because both derivations *do*
+reproduce once the exact construction is known — the instrument records them as PASS **with the note** that the manifest
+does not state the join (`"\n".join(sorted(lines_without_trailing_newline))` → `58274f46…`) or the key convention
+(basename over `fixtures/confirmed/`), which is precisely what criterion 20.15 asks to be fixed.
+
+**Consequence for the re-gates.** When WORKER-2 lands item 8a the instrument's first FAIL clears and the **q3 re-gate**
+is a single run plus invariance check; when items 0d–0g land, the last FAIL clears and the **q2 re-gate** follows the
+same way. Any **new** FAIL on a later head is by construction a new finding, not a re-litigation.
+
+### 7.1 Four defects the instrument found **in itself** on its first run (recorded, not quietly fixed)
+
+Two of the four produced **false PASSes** — the dangerous direction, and the reason R1/R2 exist.
+
+1. **Wrong artefact path** → false FAIL: `signals-v2tuning.json` is under `runs/m4-q3-format/`, not
+   `runs/m4-q2-dropword/`; the instrument reported ABSENT for a file that is present and unchanged (`b25651e4…`).
+2. **Sloppy section slice** → **false PASS**: §5e was sliced as "from the first occurrence of the label to end of
+   file", so wording from *later* sections (which do carry supersession language) satisfied §5e's check. Fixed by
+   `slice_section()`, which cuts from the heading to the next heading of the same or higher level and reports the slice
+   length so an empty slice is VACUOUS, not PASS.
+3. **Word-count heuristic** → three false FAILs: comparing the count of `supersed*` mentions to the count of stale
+   digest occurrences is meaningless — a correction block quotes the stale digest itself. Replaced by a
+   document-level test (every stale line either sits inside a SUPERSESSION block or has one later in the same
+   document; the current digest appears; the manifest is named as the binding of record), with the distance reported
+   rather than required, because under append-only discipline an inline marker would rewrite history.
+4. **Case-insensitive marker matching** → mis-classification that happened to yield the right verdict: lower-case
+   "supersedes" from an *older errata about a different subject* sits three lines above an original stale line in
+   `WORKER-2-M5R-DELIVERY.md`, so that line was classified as "quoted by the correction". Fixed by requiring the
+   uppercase `SUPERSESSION` token for block detection.
+
+**Standing rule adopted from this:** a gate instrument is run against a head whose answer ORCH-2 already knows before
+its output is trusted. This one was — every row reproduced the figures in §1–§5, and the four defects above surfaced as
+disagreements with results ORCH-2 had already derived by hand.
