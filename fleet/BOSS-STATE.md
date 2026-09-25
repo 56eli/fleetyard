@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-25T21:21Z
+updated: 2026-09-25T21:26Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -27,16 +27,16 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
   - q5 residuals: GATED INCOMPLETE by ORCH-2 @ `33964d6` (substance ACCEPTED on independent re-derivation: 938/938 A1 claims corroborated, span_fully_periodic agrees 938/938, ledger and classes unmoved; fails on stale superseded ledger digest references in prose and unquantified 255/938 tokenizer sensitivity; repair folded to TASK-020 item 11).
   - Toolchain foundation: TASK-017 DELIVERED at `b2e0761` (inherited v1 toolchain byte-exact: 266 files, 154 tests OK / 1 skip, 16 fixtures verified, fresh sweep 10/10 identical).
   - Fresh split v2: TASK-019a DELIVERED at `79eb401` (fresh sealed split v2: 197 tuning / 33 holdout, 43 forced tuning, 0 contamination; suite 164 OK / 1 skip; awaiting ORCH-2 gate).
-  - Consolidated repair: TASK-020 CLAIMED by WORKER-2 @ `71c37cf` (items 1-11; q3 evidence already shipped @ `1cd5d44`; C1-drop side next).
-  - Actionable queue: WORKER-2 repairs TASK-020 → ORCH-2 re-gates q1/q2/q3/q4/q5 + gates TASK-018, TASK-017, TASK-019a → TASK-019b (one-shot holdout evaluation) → TASK-015.
+  - Consolidated repair: TASK-020 DELIVERED by WORKER-2 @ `a5dec38` (items 1-8: LAW §8 supplements for q2+q3, fixture recall 0/16 with CF-015 diagnosed, clean set 3/59 + 1/59 reproduced, additive filters, 9 shape defects adjudicated to bound 113, threshold provenance, dropword fixtures re-adjudicated under enacted leg (d); suite 217 OK / 1 skip; awaiting ORCH-2 gate).
+  - Actionable queue: ORCH-2 gating pipeline active (order: TASK-018 -> TASK-019a -> TASK-020 -> TASK-017) → TASK-019b (one-shot holdout evaluation) → TASK-015.
 - M6 final audit report — **BLOCKED on fresh sealed holdout split v2 + M4 completion**
   (holdout evaluated at q4; fresh split with new salt sealed in TASK-019a @ `79eb401`; TASK-017 delivered).
 - **Completion:** DECLARED BY THE OWNER ONLY on main against the completion manifest (LAW §2.2). BOSS tracks and advises.
 
-## lanes (verified by explicit-refspec fetch 2026-09-25T21:20Z)
+## lanes (verified by explicit-refspec fetch 2026-09-25T21:25Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
-- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `71c37cf219285b4f54344b80c977df96f56de0c8` (ALIVE; claimed TASK-020, q3 evidence shipped @ `1cd5d44`, suite 183 OK)
-- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `33964d657169e1e7fbb56f5f3ff5f4a4eb6b740e` (ALIVE; M4 sweep complete, q1-q5 gated INCOMPLETE, TASK-020 extended to items 1-11)
+- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `ffb881158b883a81b4d52db3cdc87d6ac705a909` (ALIVE; delivered TASK-020 @ `a5dec38`, suite 217 OK)
+- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `31ce8dd87eb5a6c0cac787ace3a5dae4fae85309` (ALIVE; gating pipeline active, order: 018 -> 019a -> 020 -> 017)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
   - worker v1: `arena/01a0d581-fleetyard` @ `bf97d85` (HALT ack)
@@ -55,9 +55,9 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 - `fleet/ORDERS/REDIRECT-008.md`: **ACKNOWLEDGED & COMPLETED** by ORCH-2 (`fleet/ORDERS/ACK-REDIRECT-008.md` @ `5f6d698`).
 
 ## stall watch (re-armed per ERRATA-25f §2: signals only)
-- Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `71c37cf`).
-- Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `33964d6`).
-- Class 3 (starvation): NOT FIRED (actionable queue: WORKER-2 on TASK-020; ORCH-2 gating pipeline).
+- Class 1 (worker stalled): NOT FIRED (WORKER-2 active @ `ffb8811`).
+- Class 2 (orchestrator silent): NOT FIRED (ORCH-2 active @ `31ce8dd`).
+- Class 3 (starvation): NOT FIRED (ORCH-2 executing gating pipeline on 4 deliveries).
 - Class 4 (post-handoff): NOT FIRED (all v1 archives verified frozen).
 - Class 5 (LOUD ZOMBIE): ARMED.
 - Class 6 (context-rot support): ARMED.
