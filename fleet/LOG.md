@@ -37,3 +37,10 @@ self-test + 8 tests green; holdout-refusal enforced). Tuning run: 193 transcript
 recorded. Hand-read sample: 4 confirmed omissions kept as provisional fixtures
 fixtures/v2/dropword.json (D2-001..004, byte-bound), 5 parked/discarded. Classification
 BLOCKED on proposed STANDARDS leg (d) (needs errata + BOSS CONCERN). No rates.
+2026-09-25T19:2xZ WORKER-2: M4-q3 — C2-format detector built (7 mechanical rules,
+self-test + 6 tests green). Tuning run: 193 transcripts -> 49 CANDIDATE-class format
+signals (R1 22/R2 3/R3 5/R4 1/R5 15/R6 2/R7 1); holdout untouched. Scope census over
+all 230 transcripts: 0 speaker labels / 0 stage directions / 0 parser residue, so
+speaker attribution is NOT mechanically detectable here — recorded as an M6 limitation
+(instrument finding). Two candidate rules measured and rejected as noise (camel-glue,
+double-word). Next: q4 holdout runs (rates only; precision needs review), q5 A1 claims.

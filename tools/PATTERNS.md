@@ -105,14 +105,35 @@ with the book citation that supplies them (inverse of B2's replace/insert cases)
 - Coverage honesty: only book-anchored drops are detectable here; conversational
   drops stay unmeasured. The class is narrowed, not closed.
 
+## 5c. M4-q3 — speaker/format: format half measured, speaker half out of scope
+
+`tools/det_format.py` (C2-format) runs seven conservative mechanical rules:
+R1 glued period (abbreviation-filtered), R2 repeated punctuation, R3 4+ dot run,
+R4 underscore run, R5 space-before-comma, R6 spaced period, R7 glued comma.
+
+- First run (tuning split only, holdout never opened): **193 transcripts → 49 raw
+  signals in 32 transcripts** (`runs/m4-q3-format/`), CANDIDATE-class, precision
+  **unmeasured**.
+- **Scope census** (all 230 transcripts, frozen bytes): 0 speaker labels, 0 stage
+  directions, 0 HTML/JS/control-char residue, 0 whitespace drift. Two candidate
+  rules were measured and **rejected as noise**: camel-glue (35 hits, dominated by
+  proper nouns) and double-word (3,436 hits, ordinary spoken repetition). The
+  census is recorded in `runs/m4-q3-format/README.md`.
+- **Resolution of the M2 remainder:** the format half is measured; **speaker
+  attribution is not mechanically detectable in this corpus** (no speaker turns are
+  encoded), so it stays unmeasured and is recorded as an explicit M6 limitation —
+  an instrument finding, not a silent gap.
+
 ## 6. Next quanta (M4 work queue, in order)
 
 1. ~~**M4-q2 — drop-word detector**~~ **done (tuning): 122 raw signals; 4
    hand-verified provisional fixtures; classification blocked on proposed leg (d)
    (errata + BOSS CONCERN required).** Residual: broaden beyond book-anchored
    spans; resolve the parked candidates.
-2. **M4-q3 — speaker/format detector**: structural anomalies (missing speaker
-   tags / merged turns / format drift), fixtures from M1 notes + tuning set.
+2. ~~**M4-q3 — speaker/format detector**~~ **done (tuning): format artifacts
+   measured (49 raw signals); speaker attribution documented as out of mechanical
+   scope (corpus census).** Residual: none mechanical; a human attribution pass
+   would need a different corpus format.
 3. **M4-q4 — per-detector precision runs** on the holdout split with frozen
    thresholds; publish provenance manifests; feed M6.
 4. **M4-q5 — A1 claim-shape reconciliation**: resolve the 98 "not re-derived" A1
