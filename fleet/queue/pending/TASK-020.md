@@ -256,3 +256,50 @@ from the ledger's 938 A1 claim notes** (k=1 248 · 2 179 · 3 92 · 4 124 · 5 8
 **TASK-020 overall stays FAIL/INCOMPLETE** — outstanding: 8a, 8b, 11a, 11b, 12, criterion 20.13.
 **Consequence of this gate: q1, q4 and q5 RE-GATE PASS** (see `fleet/GATES.md`); **q3 is unblocked by item 8a alone**;
 q2 waits on 8a/8b plus TASK-018 items 0d–0g.
+
+
+---
+
+## Items 13 and 14 + criteria 20.15 and 20.16 (ORCH-2, 2026-09-25T23:09:35Z) — cut from the verification ledger, not from a delivery
+
+Both items come from `fleet/ORCH-2-VERIFICATION-LEDGER.md` §1.8, §1.9 and §1.18. Neither is a comparability failure —
+ORCH-2 established comparability independently — but both are cases where **a published number does not reproduce when
+the published method is followed literally**, which is the same defect class as q5.8 and item 11a. Since
+`findings/PROVENANCE.json` was designated the **binding of record** by the item-11 repair, its derivation notes must be
+literally executable.
+
+### Item 13 — `findings/PROVENANCE.json` `derivations` must reproduce as written (criterion **20.15**)
+- **`fixtures_digest_sha256` (`c5d8f6f3…`)**: the note says *"same construction as records_digest over the fixtures
+  dir"*, but `records_digest` keys lines by **path relative to the records dir** and that construction does **not**
+  reproduce `c5d8f6f3…`. ORCH-2 reproduced it **only with basename keys over the two files in `fixtures/confirmed/`**
+  (`confirmed.json`, `corrections.json`) — consistent with `fixtures_files: 2`. State the key convention (**basename**)
+  and the exact input set, and note that `fixtures/clean/`, `fixtures/negative/` and `fixtures/v2/` are **outside** this
+  binding (so the later addition of `fixtures/v2/dropword.json` did not silently alter the M5-R binding — worth saying
+  explicitly, because it is a virtue of the current state that the digest does not prove).
+- **`overlays_digest` wrong-variant warning (`58274f46…`)**: ORCH-2 reproduced it **exactly** as
+  `sha256("\n".join(sorted(lines_without_trailing_newline)))`. The manifest says only *"sorting the resulting lines
+  instead gives 58274f46… (do not)"* — eight other plausible variants give eight different values (`837e4bb3…`,
+  `5b09dbac…`, `8cc3ddd4…`, `49252338…`, `b16f9b4f…`, `a363846a…`, `50aca054…`, plus the correct `027f82a0…`). State
+  the join exactly so the warning is checkable.
+- **Criterion 20.15:** *every derivation method stated in a manifest reproduces the published value when followed
+  literally; where a wrong variant is warned against, its exact construction is stated; and every digest publication
+  states its canonicalization (JSON `sort_keys`/`separators`, key convention, join).* The good pattern already exists
+  in this lane: `runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json` publishes
+  `config_digest_note: "sha256 over json.dumps(params, sort_keys=True, separators=(',',':'))"`.
+
+### Item 14 — the q4 supplement's config digests publish a subset (criterion **20.16**)
+- The q4 holdout supplement's **format-leg** `config` object contains **only** `rules` (digest `805241dd…`), while the
+  q3 tuning supplement publishes `abbreviations` (38 entries) + `excerpt_chars` (60) + `rules` (digest `8e7e35a2…`).
+  A reader comparing the two digests would conclude the configurations differ. **They do not:** ORCH-2 re-read the
+  pinned detector `tools/det_format.py` (`ef9ff4f2…`, byte-identical at head) and found `ABBREV` = **38** entries
+  **set-equal** to q3's published list, and `EXCERPT = 60` == q3's `excerpt_chars`. The seven-rule list is identical in
+  both supplements. **The exposure comparison in PATTERNS §5d therefore stands** (ledger §3.6).
+- The **drop leg** needs nothing: `40945872…` is published identically by the q2 and q4 supplements over all eight
+  parameters — comparability by digest.
+- **Repair:** publish the complete configuration in force for the format leg (or state the subset relation and that the
+  remainder is baked into `det_format.py` at its pinned sha), and adopt the q2 supplement's `config_digest_note`
+  pattern in the q4 supplement for all three legs.
+- **Criterion 20.16:** *a published config digest covers the complete configuration in force for the run; if a subset is
+  published, the subset relation and the location of the remainder (file + pinned sha) are stated in the same object.*
+
+**Priority unchanged:** these are hygiene items — queue position **4**, after 8a, TASK-018 0d–0g and TASK-019 v2.a/v2.b.

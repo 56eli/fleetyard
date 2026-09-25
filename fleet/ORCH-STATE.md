@@ -373,3 +373,14 @@ the reconnect runbook is at the end of that summary.
   published for WORKER-2 (8a → TASK-018 0d–0g → TASK-019 v2.a/v2.b → 11a/11b/12/17.a/20.13 → TASK-021); no further
   work added while those are open. BOSS-2 read at `21d9a2b`: **zero CONCERNs, zero controls**, stall watch not fired,
   WORKER-2 described as "idle-cycling @ 4fc40c8 awaiting gate results" — those results are now pushed (`ee4ea5e`).
+
+- **2026-09-25T23:09:35Z: `fleet/ORCH-2-VERIFICATION-LEDGER.md` published** (17 binding rows, 8 M5-R stat rows, 6 census/exposure
+  rows, 9 adjudication rows, 3 self-recorded instrument notes, and an explicit "what this does not establish" section).
+  Everything re-derived at `4fc40c8`; all bindings MATCH; **13/13 pins three-way**; **9/9 q4 digests**; A1 **938/938**
+  a third time; the A1 unit tally term for term; spans **120/120** + 2 verified by a different key; ground-truth quotes
+  **57/57**; **16/16** fixture spans offset-exact; **0 of 122 rows live in a fixture-bearing transcript**.
+  **Two of my own instrument defects published as §5** (a vacuous overlap test over an absent key; `null == null`
+  counted as a byte-exact match) with the rules adopted to prevent recurrence. **Items 13/14 + criteria 20.15/20.16**
+  cut (manifest derivation notes not literally reproducible; config digest publishing a subset) — hygiene, queue
+  position 4. Comparability of the tuning and holdout configurations **established from the pinned source**, so the §5d
+  exposure comparison stands.
