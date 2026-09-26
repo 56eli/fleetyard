@@ -466,3 +466,16 @@ the reconnect runbook is at the end of that summary.
   since 21:27:50Z (~2 h 52 m) — observation only, no ORCH-2 action per ERRATA-25f; main `7d033ab`.
 - **Next**: hold cadence; re-run the instrument the moment WORKER-2 moves (every open item now has a row that flips);
   no new work cut while items 8a, v2.a/v2.b and 0d–0g are open.
+
+## Cycle I close 2 (2026-09-26T00:25:11Z) — the instrument audits its own coverage
+- **§16 added**: per-task criterion citation counts (reported **PROXY**, because an uncited id does not prove a
+  criterion is ungated), a **ghost check** (0 — no row cites a criterion that exists in no queue file; sub-letters
+  traced to their parent; **defect #29**, an id extractor must require an id *shape*, since mine matched the word
+  `closure` in my own comment), and the operational row: **all 16 open items are cited by a row that flips when
+  repaired** — reached by naming `item 17.a` in the 20.14b row and `item 8b` in the §13 disposition row.
+- **Authoritative criterion-to-section map** published in ledger §16, with its honest gaps: TASK-021's 21.1–21.8 are
+  unmechanized (task not started, queued last, owed by me when it lands); the C-series of TASK-013/016 and L1–L9 of
+  TASK-018 were gated PASS by hand and recorded in `GATES.md`, with no re-gate pending; TASK-014's q-ids are uncited
+  because q1/q4/q5 are closed and q2/q3 are open only through items that ARE mechanized.
+- Instrument v3.5 = **271 rows** (PASS 210 / FAIL 27 / INFO 25 / PROXY 9), `--selftest` 18/18, golden refreshed. No
+  verdict moves; the FAIL set still maps one-to-one onto the open items.

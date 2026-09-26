@@ -807,7 +807,9 @@ def section_read_scope(wt, rep, sup):
     rep.add("6", "criterion 20.14b: an artefact's OWN time field exact to the second", "0 offenders",
             f"{len(own_bad)} offenders: {sorted(set(own_bad))}", PASS if not own_bad else FAIL, n=nfiles,
             note="minute precision cannot order an artefact against a commit - the q2 parts ran 18:57:11Z-19:05:21Z "
-                 "before their delivery commit at 19:06:53Z, a sequencing question only seconds can settle")
+                 "before their delivery commit at 19:06:53Z, a sequencing question only seconds can settle. When the "
+                 "offender is `tools/INHERITED-V1-MANIFEST.json` `materialised_utc` it is TASK-017 item 17.a, the "
+                 "sole genuine own-time offender in the worker tree, repaired by the same rule as item 12")
     rep.add("6", "criterion 20.14b-compliant: fuzzy own-time field superseded in-file by an exact sibling",
             "reported", f"{len(own_superseded)} sites: {sorted(set(own_superseded))}", INFO, n=nfiles,
             note="this is the repair pattern the lane already owns - fuzzy left readable, exact sibling added; "
@@ -1612,7 +1614,7 @@ def section_coherence(wt, rep):
                   "describes", rowname, mname.group(1) if mname else "no transcript named",
             PASS if mname and mname.group(1) == rowname else FAIL, n=1,
             note="" if (mname and mname.group(1) == rowname) else
-                 "NEW ITEM 15 (criterion 20.13): the note cites a transcript that carries ZERO q2 signals while the "
+                 "NEW ITEM 15a (criterion 20.13): the note cites a transcript that carries ZERO q2 signals while the "
                  "gate-boundary row sits in another file at the same offset; correct the note append-only, or state "
                  "why two files are in play")
 
@@ -1691,7 +1693,8 @@ def section_coherence(wt, rep):
     rep.add("13", "item 0g — adjudication.jsonl carries an append-only disposition field", "present for D-002/D-039",
             f"{sorted(set(disp))[:4] if disp else 'NO disposition/ruling/note key in the schema'}",
             PASS if disp else FAIL, n=len(adj),
-            note="D-002 ('evidence') is CERTAIN-leg-d while EVAL.json shape_adjudication excludes that very site as "
+            note="item 8b (criterion 20.5) is gated jointly with item 0g by this row: D-002 ('evidence') is "
+                 "CERTAIN-leg-d while EVAL.json shape_adjudication excludes that very site as "
                  "dropped-token-not-missing; D-039 ('quite') is CERTAIN-leg-d while the source-inheritance filter "
                  "suppresses that same signal as its own published example")
     supf = json.load(open(os.path.join(wt, "runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json"),
@@ -1866,6 +1869,98 @@ def section_quantum_b_criteria(wt, rep):
 
 
 
+
+
+TASK_PATTERNS = {
+    "TASK-013": (r"(?<![A-Za-z0-9])C(?:1[0-3]|[1-9])(?![A-Za-z0-9])", "M5-R criteria C1-C13"),
+    "TASK-014": (r"(?<![A-Za-z0-9])q[1-5]\.[0-9]{1,2}(?![0-9])", "M4 scoreboard criteria q1.1-q5.8"),
+    "TASK-016": (r"(?<![A-Za-z0-9])C(?:1[0-3]|[1-9])(?![A-Za-z0-9])", "M5-R repair criteria"),
+    "TASK-017": (r"(?<![A-Za-z0-9])17\.[a-z](?![A-Za-z])", "inherited-toolchain items (the six criteria are prose)"),
+    "TASK-018": (r"(?<![A-Za-z0-9])0[a-h](?![A-Za-z0-9])|(?<![A-Za-z0-9])L[0-9]{1,2}(?![A-Za-z0-9])",
+                 "leg-(d) items 0a-0h and criteria L1-L10"),
+    "TASK-019": (r"(?<![A-Za-z0-9])v2\.[0-9]{1,2}(?![0-9])", "split v2 + quantum-b criteria v2.1-v2.16"),
+    "TASK-020": (r"(?<![A-Za-z0-9])20\.[0-9]{1,2}(?![0-9])", "consolidated-repair criteria 20.1-20.16"),
+    "TASK-021": (r"(?<![A-Za-z0-9])21\.[0-9]{1,2}(?![0-9])", "C1-drop sensitivity criteria 21.1-21.8"),
+}
+
+
+def section_coverage(rep):
+    """§16 — criterion coverage: which criteria of each queued task does this instrument actually
+    mechanize, and does the instrument cite any criterion that does not exist in the ruleset?
+    Reads the queue files BESIDE this instrument, i.e. the gate authority's own copies, so these
+    rows are a function of the ORCH-2 lane commit and not of the worker head."""
+    print("\n== 16. criterion coverage of this instrument (lane-side) ==")
+    lane = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    qdir = os.path.join(lane, "fleet/queue/pending")
+    src = open(os.path.abspath(__file__), encoding="utf-8").read()
+    if not os.path.isdir(qdir):
+        rep.add("16", "the queue directory beside this instrument", "present", f"ABSENT at {qdir}", FAIL)
+        return
+
+    def mentions(txt, cid):
+        hits = 0
+        for m in re.finditer(r"(?<![A-Za-z0-9])" + re.escape(cid) + r"(?![A-Za-z0-9])", txt):
+            tail = txt[m.end():m.end() + 9]
+            if cid in ("C1", "C2") and re.match(r"[-\s](drop|format)", tail):
+                continue          # 'C1-drop' is a detector name, not criterion C1
+            hits += 1
+        return hits
+
+    union = set()
+    for task, (pat, label) in sorted(TASK_PATTERNS.items()):
+        fp = os.path.join(qdir, task + ".md")
+        if not os.path.exists(fp):
+            rep.add("16", f"{task} queue file", "present", "ABSENT", FAIL)
+            continue
+        txt = open(fp, encoding="utf-8").read()
+        ids = sorted(set(re.findall(pat, txt)))
+        union |= set(ids)
+        cov = [c for c in ids if mentions(src, c)]
+        unc = [c for c in ids if c not in cov]
+        rep.add("16", f"{task} — {label}: criteria mechanized by this instrument",
+                f"{len(ids)}/{len(ids)} covered, or the gap listed",
+                f"{len(cov)}/{len(ids)} CITED" + (f"; not cited by id {unc}" if unc else ""),
+                PASS if not unc else PROXY, n=len(ids),
+                note="PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several "
+                     "sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries "
+                     "20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map "
+                     "is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, "
+                     "but the gap must be visible because an uncited criterion is one whose re-gate is not a single "
+                     "instrument run")
+    # the other direction: does the instrument cite a criterion that exists in no queue file?
+    allq = " ".join(open(os.path.join(qdir, f), encoding="utf-8").read() for f in sorted(os.listdir(qdir)))
+    SHAPE = re.compile(r"^(C\d{1,2}|L\d{1,2}|q[1-5]\.\d{1,2}|v2\.\d{1,2}[a-b]?|\d{2}\.\d{1,2}[a-d]?|"
+                       r"1?7\.[a-h]|0[a-h]|\d{1,2}[a-b])$")
+    cited = sorted(set(re.findall(r"criterion\s+([A-Za-z0-9.]{2,8})", src)) |
+                   set(re.findall(r"item\s+([0-9]{1,2}[a-h]?|v2\.[a-b]|17\.[a-z])\b", src)))
+    ghosts = []
+    for c in cited:
+        base = c.strip(".,;")
+        if not SHAPE.match(base):
+            continue                      # not a criterion id at all (e.g. the word 'closure')
+        # a sub-letter (20.14a) traces to its parent criterion (20.14), which IS in the ruleset
+        cands = [base] + ([re.sub(r"[a-d]$", "", base)] if re.search(r"\d[a-d]$", base) else [])
+        if not any(mentions(allq, x) for x in cands):
+            ghosts.append(base)
+    rep.add("16", "this instrument cites no criterion or item that exists in no queue file",
+            "0 ghosts", f"{len(ghosts)}: {sorted(set(ghosts))[:8]}", PASS if not ghosts else FAIL,
+            n=len(cited),
+            note="a row that cites a criterion outside the ruleset invents authority (defect #10's class: the needle "
+                 "must be the actual wording). Sub-letters such as 20.14a are ORCH-2's own sub-rows and are traced to "
+                 "their parent criterion, which must exist in the queue files")
+    # the load-bearing coverage claim: every OPEN item must have a row that flips when it is repaired
+    OPEN = ("8a", "8b", "11a", "11b", "12", "13", "14", "15a", "15b", "0d", "0e", "0f", "0g", "17.a", "v2.a", "v2.b")
+    def cites_item(txt, iid):
+        return bool(re.search(r"(?i)\b(item|criterion)\s+" + re.escape(iid) + r"\b", txt))
+    missing = [i for i in OPEN if not cites_item(src, i)]
+    rep.add("16", "every OPEN item in the queue has a row in this instrument that flips when it is repaired",
+            f"{len(OPEN)}/{len(OPEN)} cited", f"{len(OPEN) - len(missing)}/{len(OPEN)}"
+            + (f"; NOT CITED {missing}" if missing else ""), PASS if not missing else FAIL, n=len(OPEN),
+            note="the open-item list is taken from fleet/queue/status.md and TASK-MAP.md's published priority; this "
+                 "row is the coverage claim that matters, because these are the items whose re-gate must be a single "
+                 "run")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("worktree", nargs="?")
@@ -1903,6 +1998,7 @@ def main() -> int:
     section_coherence(wt, rep)
     section_derivations(wt, rep)
     section_quantum_b_criteria(wt, rep)
+    section_coverage(rep)
     tally = collections.Counter(r["verdict"] for r in rep.rows)
     print(f"\n== summary: {len(rep.rows)} rows · " +
           " · ".join(f"{k} {v}" for k, v in sorted(tally.items())))

@@ -645,3 +645,50 @@ defect as a wrong one — and this is the row TASK-018 item 0d's false sentence 
 `tools/m4_q4_supplement.py` carries **0** references to the tuning-side readers (`overlays`, `parse_book_store`,
 `run_tuning`), which is the source read v2.16 demands of the quantum-b tool: it must not be *able* to reach the tuning
 path, and `HoldoutGuard` must be instantiated rather than merely importable.
+
+
+---
+
+## 16. CRITERION-TO-SECTION MAP — the authoritative coverage claim (CONTROL seq 40, 2026-09-26T00:25:11Z)
+
+Instrument v3.5: **271 rows · PASS 210 · FAIL 27 · INFO 25 · PROXY 9**; `--selftest` 18/18. §16 of the instrument now
+asks two questions the gate had never asked of itself: which criteria does it actually mechanize, and does it cite any
+criterion that exists in no queue file. Because counting ids in the source is a **proxy** — a section can mechanize a
+criterion without printing its id — this map is the coverage claim of record, and the PROXY rows point at it.
+
+| section | what it mechanizes | criteria / items served |
+|---|---|---|
+| §1 bindings & digests | corpus zip, book store, policy, ledger + line count, by-transcript, inherited census records, overlays (stated method **and** the warned-against variant), fixtures binding, q4 artefact + config digests | TASK-013 C1/C2 lineage · 20.2 / 20.3 / 20.4 · q4.4 / q4.5 · item 14 and criterion 20.16 (config canonicalization) |
+| §2 pins | the 13 tool pins to the archive lane; generator attributability | 20.1 · **20.10 = item 8a** |
+| §3 manifest stats | corroboration classes 938 / 158 / 228 / 12, k-tally, census rows | q5.1 / q5.2 · q3 census claims |
+| §4 census & exposure | exposure-normalized expectation and Poisson tail | q5.3 / q5.4 · **item 11a** (`187.9 / 0.44` vs the census's `187.5548 / 0.4451`) |
+| §5 adjudication | the 57 CERTAIN-leg-d rows re-derived byte-exact; the floor sensitivity band 71 / 57 / 33 / 22 | TASK-018 substance · q2.5 |
+| §6 read scope + timestamp census | `holdout_reads`, one-shot declarations, part-level read sets; fuzzy / exact / minute census with asserting-vs-quoting classification | q2.7 · q3.8 · **20.14a–d = item 12 and item 17.a** |
+| §7 signal evidence | 122/122 transcript spans and book citations byte-exact, dropped words contained; the five-rule sensitivity, the stated rule-A criterion, and the O-3 reconciliation | **q2.6** (substance, though the id is not printed in the row names) |
+| §8 LAW §8 completeness | the six required keys, exact run stamps, book-store binding or stated N/A, promotion-forbidding status, the pin-defect disclosure, `detector_sha256_at_head` | q2.8 · q3.9 · q4.6 / q4.8 · **20.16** · **item 8a** |
+| §9 self-audit | the same timestamp criteria over ORCH-2's own lane, plus the forward-stamp detector | 20.14 applied to me · **self-item O-4** |
+| §10 split v2 | re-draw, contamination, forcing, commit order by pickaxe, guard-is-code, the derived v2.b enumeration and its landing check | **v2.1–v2.6, v2.9** · **items v2.a / v2.b** |
+| §11 inherited toolchain | three-way equality over all 266 files, counts, `unmodified`, archive lane read-only | **TASK-017's six criteria** · **item 17.a** |
+| §12 quantum-b readiness | frozen-input drift against ANNEX B1/B4, the four tainted transcripts by name, denominators, blocker state, no v2 receipt | ANNEX A/B · **v2.10** |
+| §13 coherence | the shape adjudication tally and reconciliation, rule-A set-identity, the two 114s, site dedupe, strata, dispositions | **20.13 / L10** · **items 0e / 0f / 0g / 8b / 15a / 15b** · the O-3 restoration |
+| §14 derivations | each of the seven stated derivations, literally, and their canonicalization | **20.15 = item 13** |
+| §15 quantum-b criteria | v2.12–v2.14 as HELD rows stating the exact future test; v2.15 / v2.16 precedents that PASS today | **v2.12–v2.16** |
+| §16 coverage | per-task id citations (PROXY), the ghost check, and the open-item coverage row | LAW §9's per-criterion requirement, applied to the gate itself |
+
+**The row that matters operationally** is §16's last: **every open item in the queue — 8a, 8b, 11a, 11b, 12, 13, 14,
+15a, 15b, 0d, 0e, 0f, 0g, 17.a, v2.a, v2.b — is cited by a row that flips when it is repaired: 16/16.** Two ids had
+to be added to reach it: `item 17.a` is now named in the 20.14b row that reports it, and `item 8b` is named in the §13
+disposition row it shares with item 0g. So every re-gate the fleet is waiting on is now one instrument run.
+
+**Ghost check: 0.** A row that cites a criterion outside the ruleset invents authority, so every id the instrument
+names was checked against the queue files. Two corrections were needed to make the check itself sound: the sub-letters
+I coined (`20.14a`–`d`, `20.15a`/`b`) are traced to their **parent** criterion, which must exist; and **defect #29** —
+my first id extractor matched the word `closure` inside my own comment, so an extractor must require an id *shape*, not
+just a preceding keyword.
+
+**Honest gaps this map names.** (i) **TASK-021's criteria 21.1–21.8 are not mechanized** — the task has not started and
+is queued last; mechanization is owed by me when it lands, and until then its gate is by hand. (ii) The `C`-series ids
+of TASK-013 / TASK-016 and `L1`–`L9` of TASK-018 are cited only where a row needed them: those tasks are **gated PASS
+by hand and recorded in `GATES.md`**, with no re-gate pending, so mechanizing them now would buy nothing. (iii) The
+`q`-ids of TASK-014 are mostly uncited because q1 / q4 / q5 are closed and q2 / q3 are open **only** through items that
+are mechanized — the scoreboard verdicts live in `GATES.md`, the item rows live here.

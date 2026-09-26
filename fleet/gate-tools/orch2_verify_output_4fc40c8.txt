@@ -202,7 +202,7 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
          plus 4 sites that QUOTE a fuzzy value in order to report or supersede it (not instances): [('fixtures/v2/dropword.json', '19:1xZ'), ('fleet/LOG.md', '18:5xZ'), ('fleet/branches/WORKER-2-TASK-020-DELIVERY.md', '19:1xZ'), ('tools/PATTERNS.md', '20:1xZ')]
   FAIL   criterion 20.14b: an artefact's OWN time field exact to the second [n=554]  <<< FAIL
          expected 0 offenders | observed 1 offenders: [('tools/INHERITED-V1-MANIFEST.json', 'materialised_utc', '2026-09-25T20:5xZ')]
-         minute precision cannot order an artefact against a commit - the q2 parts ran 18:57:11Z-19:05:21Z before their delivery commit at 19:06:53Z, a sequencing question only seconds can settle
+         minute precision cannot order an artefact against a commit - the q2 parts ran 18:57:11Z-19:05:21Z before their delivery commit at 19:06:53Z, a sequencing question only seconds can settle. When the offender is `tools/INHERITED-V1-MANIFEST.json` `materialised_utc` it is TASK-017 item 17.a, the sole genuine own-time offender in the worker tree, repaired by the same rule as item 12
   INFO   criterion 20.14b-compliant: fuzzy own-time field superseded in-file by an exact sibling [n=554]
          expected reported | observed 1 sites: [('fixtures/v2/dropword.json', 'generated_utc', '2026-09-25T19:1xZ')]
          this is the repair pattern the lane already owns - fuzzy left readable, exact sibling added; flagging it would punish the correct fix
@@ -372,7 +372,7 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
          row: ('Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt', 40831, 40841, ('one-third', 'of'))
   FAIL   criterion 20.13 / L10 — the reconciliation note names the SAME transcript as the row it describes [n=1]  <<< FAIL
          expected Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt | observed A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt
-         NEW ITEM 15 (criterion 20.13): the note cites a transcript that carries ZERO q2 signals while the gate-boundary row sits in another file at the same offset; correct the note append-only, or state why two files are in play
+         NEW ITEM 15a (criterion 20.13): the note cites a transcript that carries ZERO q2 signals while the gate-boundary row sits in another file at the same offset; correct the note append-only, or state why two files are in play
   INFO   criterion 20.13 — the two published 114s are DIFFERENT SETS (filter-side vs shape-side) [n=122]
          expected wherever either is quoted, the other is distinguished | observed filter-side 114 (122 - 1 source-inherited - 7 deferred) vs shape-side 114 (122 - 8); intersection 106, 8 differ each way, the two exclusion sets overlap in 0 rows
          ITEM 15b: `filtered: 114` (supplement + EVAL) and 'this instrument finds 114 deletion-closing signals' (EVAL's shape note) are equal in size but share only 106 signals; the README explains 113 vs 114 on the shape side, and nothing states that the filter-side 114 is a different set
@@ -392,7 +392,7 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
          expected stated | observed ABSENT
   FAIL   item 0g — adjudication.jsonl carries an append-only disposition field [n=122]  <<< FAIL
          expected present for D-002/D-039 | observed NO disposition/ruling/note key in the schema
-         D-002 ('evidence') is CERTAIN-leg-d while EVAL.json shape_adjudication excludes that very site as dropped-token-not-missing; D-039 ('quite') is CERTAIN-leg-d while the source-inheritance filter suppresses that same signal as its own published example
+         item 8b (criterion 20.5) is gated jointly with item 0g by this row: D-002 ('evidence') is CERTAIN-leg-d while EVAL.json shape_adjudication excludes that very site as dropped-token-not-missing; D-039 ('quite') is CERTAIN-leg-d while the source-inheritance filter suppresses that same signal as its own published example
   PASS   item 0g — the filter's own example IS the D-039 site (the contradiction is real at this head) [n=1]
   FAIL   item 0g — the v2-holdout rows are marked as such IN the adjudication record [n=7]  <<< FAIL
          expected 7 rows noted | observed 0 of 7 noted (['D-092', 'D-093', 'D-094', 'D-095', 'D-107', 'D-108', 'D-122'])
@@ -428,7 +428,36 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
   PASS   criterion v2.16 PRECEDENT — one-shot discipline read from the TOOL'S SOURCE, not its manifest [n=0]
          the same source read will be applied to the quantum-b tool: it must not be able to reach the tuning path, and the HoldoutGuard must be instantiated rather than merely importable
 
-== summary: 261 rows · FAIL 27 · INFO 25 · PASS 207 · PROXY 2
+== 16. criterion coverage of this instrument (lane-side) ==
+  PROXY  TASK-013 — M5-R criteria C1-C13: criteria mechanized by this instrument [n=13]  <<< PROXY
+         expected 13/13 covered, or the gap listed | observed 3/13 CITED; not cited by id ['C10', 'C11', 'C12', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-014 — M4 scoreboard criteria q1.1-q5.8: criteria mechanized by this instrument [n=37]  <<< PROXY
+         expected 37/37 covered, or the gap listed | observed 3/37 CITED; not cited by id ['q1.2', 'q1.3', 'q1.4', 'q2.1', 'q2.2', 'q2.3', 'q2.4', 'q2.5', 'q2.7', 'q3.1', 'q3.2', 'q3.3', 'q3.4', 'q3.5', 'q3.6', 'q3.7', 'q3.8', 'q3.9', 'q4.1', 'q4.2', 'q4.3', 'q4.4', 'q4.5', 'q4.6', 'q4.7', 'q4.8', 'q4.9', 'q5.1', 'q5.2', 'q5.3', 'q5.4', 'q5.5', 'q5.6', 'q5.7']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-016 — M5-R repair criteria: criteria mechanized by this instrument [n=7]  <<< PROXY
+         expected 7/7 covered, or the gap listed | observed 2/7 CITED; not cited by id ['C5', 'C6', 'C7', 'C8', 'C9']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PASS   TASK-017 — inherited-toolchain items (the six criteria are prose): criteria mechanized by this instrument [n=1]
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-018 — leg-(d) items 0a-0h and criteria L1-L10: criteria mechanized by this instrument [n=16]  <<< PROXY
+         expected 16/16 covered, or the gap listed | observed 6/16 CITED; not cited by id ['0b', '0c', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7', 'L8', 'L9']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-019 — split v2 + quantum-b criteria v2.1-v2.16: criteria mechanized by this instrument [n=16]  <<< PROXY
+         expected 16/16 covered, or the gap listed | observed 12/16 CITED; not cited by id ['v2.11', 'v2.2', 'v2.3', 'v2.8']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-020 — consolidated-repair criteria 20.1-20.16: criteria mechanized by this instrument [n=16]  <<< PROXY
+         expected 16/16 covered, or the gap listed | observed 9/16 CITED; not cited by id ['20.11', '20.12', '20.3', '20.6', '20.7', '20.8', '20.9']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-021 — C1-drop sensitivity criteria 21.1-21.8: criteria mechanized by this instrument [n=8]  <<< PROXY
+         expected 8/8 covered, or the gap listed | observed 2/8 CITED; not cited by id ['21.2', '21.3', '21.4', '21.5', '21.6', '21.7']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PASS   this instrument cites no criterion or item that exists in no queue file [n=50]
+         a row that cites a criterion outside the ruleset invents authority (defect #10's class: the needle must be the actual wording). Sub-letters such as 20.14a are ORCH-2's own sub-rows and are traced to their parent criterion, which must exist in the queue files
+  PASS   every OPEN item in the queue has a row in this instrument that flips when it is repaired [n=16]
+         the open-item list is taken from fleet/queue/status.md and TASK-MAP.md's published priority; this row is the coverage claim that matters, because these are the items whose re-gate must be a single run
+
+== summary: 271 rows · FAIL 27 · INFO 25 · PASS 210 · PROXY 9
 
 rows not passing (each is an owed item or a known restriction, not necessarily a defect):
   FAIL   criterion 20.10: tool_commit contains the generator: expected present | observed ABSENT at ffb881158b88
@@ -447,7 +476,7 @@ rows not passing (each is an owed item or a known restriction, not necessarily a
   FAIL   criterion 20.14a: FUZZY timestamps ASSERTED in committed docs (item 12): expected 0 instances | observed 26 instances: [('findings/M4-q5-A1-CLAIM-RECONCILIATION.md',
          plus 4 sites that QUOTE a fuzzy value in order to report or supersede it (not instances): [('fixtures/v2/dropword.json', '19:1xZ'), ('fleet/LOG.md', '18:5xZ'), ('fleet/branches/WORKER-2-TASK-020-DELIV
   FAIL   criterion 20.14b: an artefact's OWN time field exact to the second: expected 0 offenders | observed 1 offenders: [('tools/INHERITED-V1-MANIFEST.json', 'material
-         minute precision cannot order an artefact against a commit - the q2 parts ran 18:57:11Z-19:05:21Z before their delivery commit at 19:06:53Z, a sequencing question only seconds can settle
+         minute precision cannot order an artefact against a commit - the q2 parts ran 18:57:11Z-19:05:21Z before their delivery commit at 19:06:53Z, a sequencing question only seconds can settle. When the off
   FAIL   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: tool_commit 71c37cf21928 contains its generator tools/m4_t20_supplement.py: expected present | observed ABSENT
          item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256
   FAIL   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.16): expected config_digest_note present | observed ABSENT
@@ -464,14 +493,14 @@ rows not passing (each is an owed item or a known restriction, not necessarily a
   FAIL   BLOCKER — quantum b may not run until item v2.a lands (v2.7 needs frozen inputs): expected the seal binds the actual fixture digest c40d272f | observed the seal binds c8e96319
          the pre-registration must bind the POST-NOTE split-v2 digest (criterion v2.10)
   FAIL   criterion 20.13 / L10 — the reconciliation note names the SAME transcript as the row it describes: expected Positionality_and_Duality_Transcending_the_Opposites_Apr_200 | observed A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt
-         NEW ITEM 15 (criterion 20.13): the note cites a transcript that carries ZERO q2 signals while the gate-boundary row sits in another file at the same offset; correct the note append-only, or state why 
+         NEW ITEM 15a (criterion 20.13): the note cites a transcript that carries ZERO q2 signals while the gate-boundary row sits in another file at the same offset; correct the note append-only, or state why
   FAIL   criterion 20.13 — the distinction between the two 114s is written down: expected stated in a committed doc | observed ABSENT — item 15b owed
   FAIL   item 0f — WORKER-2's own per-word class list published (the binding requirement): expected a list assigning each of the 32 distinct omitted words to a  | observed ABSENT
          32 distinct omitted words: ['already', 'bonaparte', 'earphones', 'evidence', 'go', 'haha', "he'd", 'heh', 'high', 'however', 'huh', 'including', "it's", 'lincoln', 'man', 'may', 'osama', 'otherwise', 
   FAIL   item 0f — the notation-class ruling recorded (ERRATA-25e §2 / BOSS guidance: notation variants are transcriber formatting conventions): expected a ruling on the 6 'percent' rows | observed ABSENT
   FAIL   item 0f — speaker-side filler presence stated as unknowable without audio: expected stated | observed ABSENT
   FAIL   item 0g — adjudication.jsonl carries an append-only disposition field: expected present for D-002/D-039 | observed NO disposition/ruling/note key in the schema
-         D-002 ('evidence') is CERTAIN-leg-d while EVAL.json shape_adjudication excludes that very site as dropped-token-not-missing; D-039 ('quite') is CERTAIN-leg-d while the source-inheritance filter suppre
+         item 8b (criterion 20.5) is gated jointly with item 0g by this row: D-002 ('evidence') is CERTAIN-leg-d while EVAL.json shape_adjudication excludes that very site as dropped-token-not-missing; D-039 (
   FAIL   item 0g — the v2-holdout rows are marked as such IN the adjudication record: expected 7 rows noted | observed 0 of 7 noted (['D-092', 'D-093', 'D-094', 'D-095', 'D-107', 
          no holdout-tainted row may be quoted as tuning-side evidence
   FAIL   criterion 20.13 — a count quoted in PATTERNS states the exclusions behind it: expected '57/122' quoted with the 3 + 6 shape exclusions and the 7 de | observed UNQUALIFIED
