@@ -255,16 +255,25 @@ def seal_history(repo, seal_path):
 
 
 def audit(repo, seal_path, utc=None):
-    seal_blob = open(os.path.join(repo, seal_path), "rb").read()
+    with open(os.path.join(repo, seal_path), "rb") as fh:
+        seal_blob = fh.read()
     seal = json.loads(seal_blob)
     seal_commit, seal_utc = last_commit(repo, seal_path)
     tool_path = "tools/m4_seal_audit.py"
     t_commit, t_utc, t_origin = tool_commit_of(repo, tool_path)
-    tool_blob_now = open(os.path.abspath(__file__), "rb").read()
+    # the tool's bytes AT THE AUDITED REPO'S HEAD: the report is about committed state, so a
+    # dirty working tree must not be able to change the attribution it states
+    tool_blob_now = head_blob(repo, tool_path)
+    tool_sha_source = "blob at HEAD of the audited repo"
+    if tool_blob_now is None:
+        with open(os.path.abspath(__file__), "rb") as fh:
+            tool_blob_now = fh.read()
+        tool_sha_source = "the running file (no committed blob at HEAD)"
     tool_blob_then = blob_at(repo, t_commit, tool_path) if t_commit else None
     report = {
         "tool": tool_path,
         "tool_sha256": sha256_bytes(tool_blob_now),
+        "tool_sha256_source": tool_sha_source,
         "tool_commit": t_commit,
         "tool_commit_utc": t_utc,
         "tool_origin_commit": t_origin,
@@ -397,6 +406,7 @@ def audit(repo, seal_path, utc=None):
                 "cited_sha256": cited_sha,
                 "digest_source": "paired artifact_sha256" if cited_sha
                                  else "resolved from the file at HEAD (unpaired mention)",
+                "digest_asserted": bool(cited_sha),
                 "digest_matches_head": ok, "commit": artefact_commit,
                 "commit_utc": artefact_utc, "relation_to_seal": relation,
                 "commit_note": ("`commit`/`commit_utc` are the commit that last TOUCHED the "
