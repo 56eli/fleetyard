@@ -72,6 +72,17 @@ SIGNALS_NAME = "signals.json"
 CORPUS_ZIP_SHA = "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db"
 BOOK_STORE_REL = os.path.join("docdocgo", "html", "merged-book-texts_json_1.js")
 CONTEXT = 30            # chars each side, the gate's own filter shape
+# item 15a/15b correction notes: exact time of writing + where it comes from (criterion 20.14).
+NOTE_15_UTC = "2026-09-26T00:46:46Z"
+NOTE_15_UTC_SOURCE = ("literal in tools/m4_q2_evidence.py added by WORKER-2 for TASK-020 "
+                      "items 15a/15b; the commit carrying it and the file digest are "
+                      "recorded in runs/m4-q2-dropword/NOTE-2026-09-26.md")
+
+# item 15a/15b: the artefact this rebuild supersedes, recorded inside the artefact so the
+# chain (8a pin addition -> 15 rebuild) is readable without archaeology.
+EVAL_PRIOR_SHA256 = "2baefc0903848f4e600152e78f7aa3577b64f9b91db7362b97aa504df198a09b"
+GENERATOR_PINS_BEFORE = ("tools/m4_q2_evidence.py", "a5dec38865babe312b38046a4c5500f234ce94bd")
+
 GATE_BOUNDARY_ITEMS = (
     ("Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_"
      "enxautogen_html.txt", 40831,
@@ -377,6 +388,15 @@ def build(args):
     filter_counts["filtered_if_deferred_were_kept"] = (
         filter_counts["filtered"] + filter_counts["deferred"])
 
+    boundary_name, boundary_start, _boundary_reason = GATE_BOUNDARY_ITEMS[0]
+    boundary_transcript = os.path.basename(boundary_name)
+    _brow = next((sig for sig in signals.get(boundary_transcript, [])
+                  if sig.get("start") == boundary_start), {})
+    _bref = _brow.get("book_ref") or {}
+    boundary = {"start": boundary_start, "end": _brow.get("end"),
+                "quoted": _brow.get("quoted"), "suspected": _brow.get("suspected"),
+                "dropped_words": _brow.get("dropped_words"),
+                "book_slug": _bref.get("slug"), "book_offset": _bref.get("char_offset")}
     excluded = shape_counts.get("dropped-token-not-missing", 0)
     relabelled = (shape_counts.get("partial-overlap", 0)
                   + shape_counts.get("hyphen-tokenization", 0)
@@ -472,7 +492,39 @@ def build(args):
                          "partial-overlap items and the gate's own hyphen-tokenization "
                          "item (`one-third`, transcript %r @40831) are excluded "
                          "pending a human read, which lands the published bound on the "
-                         "gate's 113 independently" % sorted(signals)[0]),
+                         "gate's 113 independently" % boundary_transcript),
+                "note_correction_2026_09_26": {
+                    "defect": ("the note above previously named the alphabetically first "
+                               "transcript (%s, which carries ZERO q2 signals) instead of "
+                               "the row's own transcript — a note that misnames its own "
+                               "row is the same class as a seal binding a stale digest "
+                               "(TASK-020 item v2.a)" % sorted(signals)[0]),
+                    "note_text_was": ("...the gate's own hyphen-tokenization item "
+                                      "(`one-third`, transcript %r @40831)..."
+                                      % sorted(signals)[0]),
+                    "true_row": dict(boundary, transcript=boundary_transcript,
+                                     reading="the transcript writes %r where the book "
+                                             "writes %r" % (boundary["quoted"],
+                                                            boundary["suspected"])),
+                    "by": "WORKER-2", "task": "TASK-020 item 15a",
+                    "utc": NOTE_15_UTC, "utc_source": NOTE_15_UTC_SOURCE},
+                "two_distinct_114s": {
+                    "problem": ("two different sets of 114 signals are published under one "
+                                "number; each quotation must name its set"),
+                    "filter_side": {"count": 114,
+                                    "construction": "122 − 1 source-inherited − 7 deferred "
+                                                    "holdout signals",
+                                    "excluded": 8},
+                    "shape_side": {"count": 114,
+                                   "construction": "122 − 3 dropped-token-not-missing − 5 "
+                                                   "partial-overlap",
+                                   "excluded": 8},
+                    "intersection": 106,
+                    "differ_each_direction": 8,
+                    "exclusion_sets_disjoint": 0,
+                    "published_bound": 113,
+                    "by": "WORKER-2", "task": "TASK-020 item 15b",
+                    "utc": NOTE_15_UTC, "utc_source": NOTE_15_UTC_SOURCE},
                 "gate_list_overlap": ("the gate's three named cases (`evidence` @2574, "
                                       "`staggering` @54983, `sovereign` @55220) are "
                                       "reproduced as dropped-token-not-missing"),
@@ -486,6 +538,24 @@ def build(args):
         },
         "detector_sha256_at_head": detector_sha,
         "tool_commit": args.tool_commit,
+        "rebuild_history": [{
+            "task": "TASK-020 items 15a/15b",
+            "utc": NOTE_15_UTC, "utc_source": NOTE_15_UTC_SOURCE,
+            "what": ("count_reconciliation's note named the alphabetically first transcript "
+                     "instead of the row it explains, and two different 114-signal sets "
+                     "were published under one number; both repaired in this generator "
+                     "and the artefact rebuilt from the recorded args"),
+            "artefact_sha256_before": EVAL_PRIOR_SHA256,
+            "artefact_sha256_before_source": ("sha256 of this file as committed at 4fc40c8 "
+                                              "(the item-8a pin addition)"),
+            "generator_pins_before": m4_pin_repair.generator_pins(*GENERATOR_PINS_BEFORE),
+            "generator_pins_before_source": ("the block this artefact carried before the "
+                                             "rebuild; checkable with `git show "
+                                             "a5dec388:tools/m4_q2_evidence.py`"),
+            "run_args": {"utc": args.utc, "tool_commit": args.tool_commit,
+                         "main_head": args.main_head, "policy_sha256": args.policy_sha,
+                         "corpus_zip_sha256": CORPUS_ZIP_SHA},
+        }],
         "generator_pins": m4_pin_repair.generator_pins("tools/m4_q2_evidence.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
