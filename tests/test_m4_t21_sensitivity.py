@@ -217,5 +217,39 @@ class ToySensitivity(unittest.TestCase):
         self.assertIn("197", text)
 
 
+    def test_both_shape_columns_are_published_and_reconciled(self):
+        """TASK-021 item 2 names `dropped-token-not-missing`; the shipped README applies the same
+        one (122 − 3). So the headline column subtracts that class alone and the stricter reading
+        (also subtracting `partial-overlap`) travels beside it — never instead of it."""
+        parts = os.path.join(self.out, "parts")
+        os.makedirs(parts)
+        for name, _o in t21.GRID:
+            t21.build(args_for(self.root, self.corpus, self.split_path, self.out, self.scratch,
+                               setting=name))
+        args = type("A", (), {"out": self.out, "split": self.split_path, "corpus": self.corpus,
+                              "utc": "2026-09-26T03:00:00Z", "tool_commit": "toyc0mm",
+                              "main_head": "toymain", "policy_sha": "toypolicy",
+                              "generator_pins": None, "part_generator_pins": None})()
+        self.assertEqual(t21.merge(args), 0)
+        ev = json.load(open(os.path.join(self.out, "EVAL.json"), encoding="utf-8"))
+        for name, row in ev["table"].items():
+            self.assertEqual(row["shape_excluded"],
+                             row["shape_counts"].get("dropped-token-not-missing", 0), name)
+            self.assertEqual(row["after_shape_exclusions"],
+                             row["raw_signals"] - row["shape_excluded"], name)
+            self.assertEqual(
+                row["shape_excluded_strict"],
+                row["shape_excluded"] + row["shape_counts"].get("partial-overlap", 0), name)
+            self.assertEqual(row["after_shape_exclusions_strict"],
+                             row["raw_signals"] - row["shape_excluded_strict"], name)
+            self.assertEqual(row["shape_excluded"], row["shape_counts"].get("dropped-token-not-missing", 0), name)
+        self.assertEqual(ev["shape_legend"]["excluded_from_the_primary_count"],
+                         ["dropped-token-not-missing"])
+        self.assertIn("122 - 3", ev["shape_legend"]["which_column_uses_which"])
+        readme = open(os.path.join(self.out, "README.md"), encoding="utf-8").read()
+        self.assertIn("after shape (primary)", readme)
+        self.assertIn("after shape (strict)", readme)
+        self.assertEqual(t21.verify(type("A", (), {"out": self.out})()), 0)
+
 if __name__ == "__main__":
     unittest.main()

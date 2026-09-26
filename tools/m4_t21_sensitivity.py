@@ -63,6 +63,7 @@ GRID = (
     ("matched-14", {"min_matched": 14}),
 )
 SHAPE_EXCLUDED = ("dropped-token-not-missing", "partial-overlap")
+SHAPE_EXCLUDED_PRIMARY = "dropped-token-not-missing"   # the exclusion TASK-021 item 2 names
 SITE_KEY_NOTE = ("(transcript basename, start, end, tuple(dropped_words)) — identical spans inside "
                  "one transcript are one site; TASK-018 item 0e's dedupe lesson applied at grid "
                  "level")
@@ -282,9 +283,24 @@ def build(args):
                                      "rule: the signal's own span±60 chars verbatim in the book "
                                      "store; the raw count travels beside it"),
         "shape_counts": dict(sorted(shapes.items())),
-        "shape_excluded": excluded,
-        "shape_excluded_classes": list(SHAPE_EXCLUDED),
-        "after_shape_exclusions": total - excluded,
+        # PRIMARY = the exclusion TASK-021 item 2 names and the shipped run's README uses
+        # (raw 122 - 3 dropped-token-not-missing), so the two runs' tables are comparable;
+        # STRICT adds `partial-overlap`, which the coherence check re-labels as excluded until a
+        # human read — published beside it rather than folded into the headline number.
+        "shape_excluded": shapes.get(SHAPE_EXCLUDED_PRIMARY, 0),
+        "shape_excluded_classes": [SHAPE_EXCLUDED_PRIMARY],
+        "after_shape_exclusions": total - shapes.get(SHAPE_EXCLUDED_PRIMARY, 0),
+        "shape_excluded_strict": excluded,
+        "shape_excluded_classes_strict": list(SHAPE_EXCLUDED),
+        "after_shape_exclusions_strict": total - excluded,
+        "shape_exclusion_note": ("`after_shape_exclusions` subtracts `%s` only — the exclusion "
+                                 "TASK-021 names and the one the shipped run's README applies "
+                                 "(122 - 3). `after_shape_exclusions_strict` additionally "
+                                 "subtracts `partial-overlap`, which the coherence check "
+                                 "re-labels as excluded until a human read; both are published, "
+                                 "and `shape_counts` carries every class so a reader can rebuild "
+                                 "either from the raw count"
+                                 % SHAPE_EXCLUDED_PRIMARY),
         "site_key": SITE_KEY_NOTE,
         "sites": distinct,
         "distinct_sites": len(distinct),
@@ -336,6 +352,7 @@ def merge(args):
                                          "transcripts_with_signals", "source_inherited",
                                          "after_source_filter", "shape_counts",
                                          "shape_excluded", "after_shape_exclusions",
+                                         "shape_excluded_strict", "after_shape_exclusions_strict",
                                          "distinct_sites", "duplicate_sites",
                                          "transcripts_read", "wall_seconds")}
     ev = {
@@ -417,10 +434,16 @@ def merge(args):
         },
         "shape_legend": {
             "countable": ["consistent"],
-            "excluded_from_counts": list(SHAPE_EXCLUDED),
+            "excluded_from_the_primary_count": [SHAPE_EXCLUDED_PRIMARY],
+            "excluded_from_the_strict_count": list(SHAPE_EXCLUDED),
+            "which_column_uses_which": ("`after_shape_exclusions` (the README's 'after shape "
+                                        "(primary)') subtracts the primary class only, matching "
+                                        "the shipped run's README convention (122 - 3); "
+                                        "`after_shape_exclusions_strict` subtracts both classes"),
             "excluded_why": ("`dropped-token-not-missing`: the book span repeats the token, so "
                              "nothing is missing (TASK-018 item 0e); `partial-overlap`: "
-                             "re-labelled, excluded until a human read"),
+                             "re-labelled, excluded until a human read (its exclusion is the "
+                             "extra one in the strict column)"),
             "recorded_not_counted": ["hyphen-tokenization"],
         },
         "restrictions": {
@@ -474,23 +497,27 @@ def readme_text(ev, parts):
         "",
         "## The grid — one parameter at a time from the shipped point",
         "",
-        "| setting | change vs shipped | raw | after source filter | after shape exclusions | distinct sites | duplicate sites |",
+        "| setting | change vs shipped | raw | after source filter | after shape (primary) | after shape (strict) | distinct sites | duplicate sites |",
         "|---|---|---|---|---|---|---|",
     ]
     for name in sorted(parts):
         p = parts[name]
         over = ", ".join("%s=%s" % (k, v) for k, v in sorted(p["overrides_vs_shipped"].items()))
-        lines.append("| `%s` | %s | %d | %d | %d | %d | %d |"
+        lines.append("| `%s` | %s | %d | %d | %d | %d | %d | %d |"
                      % (name, over or "— (anchor)", p["raw_signals"], p["after_source_filter"],
-                        p["after_shape_exclusions"], p["distinct_sites"], p["duplicate_sites"]))
+                        p["after_shape_exclusions"], p["after_shape_exclusions_strict"],
+                        p["distinct_sites"], p["duplicate_sites"]))
     st = ev["stability"]
     lines += [
         "",
         "`after source filter` subtracts signals whose own span±60 chars sit verbatim in the book",
-        "store (a cross-book self-parallel cannot be a drop by the speaker). `after shape",
-        "exclusions` subtracts `dropped-token-not-missing` and `partial-overlap` (TASK-018 items",
-        "0e/0f). `hyphen-tokenization` is recorded but is a checker artifact, not a defect, and is",
-        "**not** subtracted.",
+        "store (a cross-book self-parallel cannot be a drop by the speaker). `after shape (primary)`",
+        "subtracts `dropped-token-not-missing` — the exclusion TASK-021 names and the one the",
+        "shipped run's README applies (122 − 3), so the two tables are comparable. `after shape",
+        "(strict)` additionally subtracts `partial-overlap`, which the coherence check re-labels as",
+        "excluded until a human read (TASK-018 items 0e/0f). `hyphen-tokenization` is recorded but",
+        "is a checker artifact, not a defect, and is **not** subtracted. `shape_counts` carries",
+        "every class, so a reader can rebuild either column from the raw count.",
         "",
         "## Stability — the point of the map",
         "",
@@ -542,6 +569,15 @@ def verify(args):
             problems.append("%s: holdout was read" % name)
         if p["raw_signals"] != p["after_source_filter"] + p["source_inherited"]:
             problems.append("%s: raw != after-source + inherited" % name)
+        if p["shape_excluded"] != p["shape_counts"].get(SHAPE_EXCLUDED_PRIMARY, 0):
+            problems.append("%s: shape_excluded is not the primary class count" % name)
+        if p["raw_signals"] != p["shape_excluded_strict"] + p["after_shape_exclusions_strict"]:
+            problems.append("%s: raw != shape_excluded_strict + after_shape_exclusions_strict" % name)
+        if p["shape_excluded_strict"] != p["shape_excluded"] + p["shape_counts"].get(
+                "partial-overlap", 0):
+            problems.append("%s: strict exclusion is not primary + partial-overlap" % name)
+        if p["shape_excluded_classes"] != [SHAPE_EXCLUDED_PRIMARY]:
+            problems.append("%s: shape_excluded_classes must name the primary class alone" % name)
         if p["raw_signals"] != p["shape_excluded"] + p["after_shape_exclusions"]:
             problems.append("%s: raw != shape-excluded + after-shape" % name)
         if p["distinct_sites"] + p["duplicate_sites"] != p["raw_signals"]:
