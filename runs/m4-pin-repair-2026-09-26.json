@@ -59,10 +59,10 @@
    "changed": false,
    "file": "runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json",
    "generator_tool": "tools/m4_q4_supplement.py",
-   "generator_tool_commit": "d7fee6e142ebbeecbd0e605395aa3d848499bf8a",
-   "generator_tool_sha256": "fc0065ef3e5fe5047a52a8b5c7cd505d64bf6960147ada9407fb51cbb896c072",
-   "sha256_after": "af6af1b803281634fe19ddb03e354afd8137db3c91a69d1cab924056f2b9e90a",
-   "sha256_before": "af6af1b803281634fe19ddb03e354afd8137db3c91a69d1cab924056f2b9e90a",
+   "generator_tool_commit": "d85038c8383755d42f3cc5fba7962bf335811910",
+   "generator_tool_sha256": "d9ddb98d4344aa4f2da38d701bdeb475e57a4492eb49001eb3c8044e289ffaa2",
+   "sha256_after": "9cfd82fa504b9067b067f8661ebc95847d32cba9122e57188e2e0b535c763e7d",
+   "sha256_before": "9cfd82fa504b9067b067f8661ebc95847d32cba9122e57188e2e0b535c763e7d",
    "status": "already-present",
    "tool_commit": "ffb881158b883a81b4d52db3cdc87d6ac705a909"
   }
