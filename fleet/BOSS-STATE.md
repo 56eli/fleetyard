@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-26T00:34Z
+updated: 2026-09-26T00:39Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -38,7 +38,7 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 
 ## lanes (verified by explicit-refspec fetch 2026-09-25T22:56Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
-- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `72104a54ceeee9f809a841871f496c7d884d3339` (ALIVE; delivered v2 seal audit & 019b prep @ `72104a5`, suite 244 OK, v2 holdout untouched)
+- worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `7de00dffcf371594afa4b2c31300e53da0b94e0e` (ALIVE; delivered TASK-020 item 8a generator pins repair @ `7de00df`, unblocks q3 re-gate)
 - orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `92c80b334895bc9ceda42c49cd257b73b92c4eb4` (ALIVE; instrument v3.5 271 rows; 16/16 open items covered by flippable rows; waiting for worker item 8a)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
