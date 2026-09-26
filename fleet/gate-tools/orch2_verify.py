@@ -1815,6 +1815,57 @@ def section_derivations(wt, rep):
 
 
 
+
+
+def section_quantum_b_criteria(wt, rep):
+    """§15 — criteria v2.12–v2.16 (quantum b). They cannot PASS before the run exists, so each row
+    states the exact shape it will check and reports HELD; two precedent rows verify the analogous
+    property on artefacts that DO exist, so the eventual gate is one run rather than an argument."""
+    print("\n== 15. quantum-b criteria v2.12-v2.16 (HELD until the run exists) ==")
+    runs = os.path.join(wt, "runs")
+    cand = sorted(d for d in os.listdir(runs) if "quantum" in d.lower() or "holdout-v2" in d.lower()) \
+        if os.path.isdir(runs) else []
+    rep.add("15", "criterion v2.12 — the pre-registration commit exists BEFORE the run commit",
+            "commit order plus exact timestamps carrying their source (criterion 20.14)",
+            f"HELD — no quantum-b run directory exists yet ({cand or 'none under runs/'})", INFO, n=len(cand),
+            note="when it lands this row checks: add-time of the pre-registration artefact < add-time of every "
+                 "artefact in the eval directory, by `git log -S` where a reference is concerned (defect #22), and "
+                 "that both stamps are exact to the second with a stated source")
+    rep.add("15", "criterion v2.13 — the receipt exists, declares the v2 holdout SPENT, and `holdout_reads` EQUALS "
+                  "the pre-registered eval set", "receipt present, holdout_consumed true, holdout_reads == eval set",
+            "HELD — no receipt binds the v2 split (§12 verifies the two spent receipts bind v1)", INFO, n=1,
+            note="the eval set is the 33 v2-holdout transcripts, or the 29 sensitivity set if the pre-registration "
+                 "excludes the four label-tainted files under ANNEX §F2 - whichever it names, `holdout_reads` must "
+                 "equal it exactly: no more, no less")
+    rep.add("15", "criterion v2.14 — nothing was added to the eval directory after the run except the receipt and an "
+                  "errata", "commit history of that path shows only those two additions",
+            "HELD — the eval directory does not exist", INFO, n=1,
+            note="verified from the path's own commit history, not from a manifest claim")
+    # precedent rows: the analogous property on artefacts that DO exist
+    ap = os.path.join(wt, "runs/m4-q2-adjudication/adjudication.jsonl")
+    if os.path.exists(ap):
+        adj = [json.loads(l) for l in open(ap, encoding="utf-8") if l.strip()]
+        present = sum(1 for r in adj if "seeded" in r and "in_sample" in r)
+        true_rows = [r.get("id") for r in adj if r.get("seeded") is True]
+        rep.add("15", "criterion v2.15 PRECEDENT — on the existing adjudication set the `seeded`/`in_sample` flags are "
+                      "PRESENT on every row and `seeded: true` on none", f"{len(adj)}/{len(adj)} present, 0 true",
+                f"{present}/{len(adj)} present, {len(true_rows)} true {true_rows[:4]}",
+                PASS if present == len(adj) and not true_rows else FAIL, n=len(adj),
+                note="an ABSENT flag is as much a defect as a wrong one; this is the row TASK-018 item 0d's false "
+                     "`seeded` sentence contradicts, and it is why the same test is pre-registered for the holdout "
+                     "rows under v2.15")
+    src = os.path.join(wt, "tools/m4_q4_supplement.py")
+    if os.path.exists(src):
+        t = open(src, encoding="utf-8").read()
+        hits = sum(t.count(x) for x in ("overlays", "parse_book_store", "run_tuning"))
+        rep.add("15", "criterion v2.16 PRECEDENT — one-shot discipline read from the TOOL'S SOURCE, not its manifest",
+                "0 references to the tuning-side readers in the one-shot tool", f"{hits} reference(s)",
+                PASS if hits == 0 else FAIL, n=hits,
+                note="the same source read will be applied to the quantum-b tool: it must not be able to reach the "
+                     "tuning path, and the HoldoutGuard must be instantiated rather than merely importable")
+
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("worktree", nargs="?")
@@ -1851,6 +1902,7 @@ def main() -> int:
     section_quantum_b(wt, rep)
     section_coherence(wt, rep)
     section_derivations(wt, rep)
+    section_quantum_b_criteria(wt, rep)
     tally = collections.Counter(r["verdict"] for r in rep.rows)
     print(f"\n== summary: {len(rep.rows)} rows · " +
           " · ".join(f"{k} {v}" for k, v in sorted(tally.items())))
@@ -1895,6 +1947,40 @@ def main() -> int:
             print(f"  own-time offenders: {sorted(set(mb))[:12]}")
         byfile = collections.Counter(rp for rp, _v in mp)
         print(f"  minute-precision by file (top 8): {byfile.most_common(8)}")
+
+        # SELF-ITEM O-4: a header stamped AHEAD of the clock is a forward-stamped record - it can
+        # make a document appear to post-date something it precedes. The newest CONTROL.log entry is
+        # the lane's authoritative clock, because that line is produced by `date -u`.
+        ctl = os.path.join(a.self_audit, "fleet/CONTROL.log")
+        ctl_max = ""
+        if os.path.exists(ctl):
+            st = [m.group(0) for m in TS_EXACT.finditer(open(ctl, encoding="utf-8").read())]
+            ctl_max = max(st) if st else ""
+        fwd = []
+        for root, dirs, files in os.walk(a.self_audit):
+            dirs[:] = [d for d in dirs if d not in (".git", "corpus", "evidence", "__pycache__", "gate-scratch")]
+            for fn in files:
+                if not fn.endswith(".md"):
+                    continue
+                fp = os.path.join(root, fn)
+                for m in TS_EXACT.finditer(open(fp, encoding="utf-8", errors="replace").read()):
+                    if ctl_max and m.group(0) > ctl_max:
+                        fwd.append((os.path.relpath(fp, a.self_audit), m.group(0)))
+        gp = os.path.join(a.self_audit, "fleet/GATES.md")
+        gates = open(gp, encoding="utf-8").read() if os.path.exists(gp) else ""
+        # disclosure counts only if it is INSIDE the O-4 correction section - a forward stamp that
+        # merely appears in GATES.md as its own header is the defect, not its disclosure (defect #28)
+        o4 = slice_section(gates, "ORCH-2 SELF-CORRECTION #4")
+        undisc = sorted({(rp, t) for rp, t in fwd if t not in o4})
+        rep.add("9", "self-item O-4 — no header in this lane is stamped AHEAD of its own CONTROL.log, unless an "
+                     "append-only correction discloses it", f"0 undisclosed forward stamps (lane clock {ctl_max})",
+                f"{len(set(fwd))} forward stamp(s), {len(undisc)} undisclosed: {undisc[:6]}",
+                PASS if not undisc else FAIL, n=len(set(fwd)),
+                note="standing rule adopted: write the CONTROL.log line FIRST (it calls `date -u`) and copy that "
+                     "stamp into every header of the cycle; a timestamp with no source is the defect criterion "
+                     "20.14 names, and ORCH-2 is not exempt from its own criterion")
+        if set(fwd):
+            print(f"  forward-stamped headers: {sorted(set(fwd))[:8]}")
     if a.json:
         print(json.dumps(rep.rows, indent=1))
     return 0

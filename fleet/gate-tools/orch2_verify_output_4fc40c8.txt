@@ -413,7 +413,22 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-4fc · head 4fc40c8
          expected 7/7 | observed 5/7 (unstated: ['fixtures_digest_sha256', 'overlays_digest'])
          the warned-against overlays variant 58274f46… is reproducible exactly as sha256("\n".join(sorted(lines_without_trailing_newline))) but the manifest does not state that construction, so the warning is not checkable as written; the good pattern already exists in this lane (the q2 supplement's config_digest_note names sort_keys and separators)
 
-== summary: 256 rows · FAIL 27 · INFO 22 · PASS 205 · PROXY 2
+== 15. quantum-b criteria v2.12-v2.16 (HELD until the run exists) ==
+  INFO   criterion v2.12 — the pre-registration commit exists BEFORE the run commit [n=0]
+         expected commit order plus exact timestamps carrying their source (criterion 20.14) | observed HELD — no quantum-b run directory exists yet (none under runs/)
+         when it lands this row checks: add-time of the pre-registration artefact < add-time of every artefact in the eval directory, by `git log -S` where a reference is concerned (defect #22), and that both stamps are exact to the second with a stated source
+  INFO   criterion v2.13 — the receipt exists, declares the v2 holdout SPENT, and `holdout_reads` EQUALS the pre-registered eval set [n=1]
+         expected receipt present, holdout_consumed true, holdout_reads == eval set | observed HELD — no receipt binds the v2 split (§12 verifies the two spent receipts bind v1)
+         the eval set is the 33 v2-holdout transcripts, or the 29 sensitivity set if the pre-registration excludes the four label-tainted files under ANNEX §F2 - whichever it names, `holdout_reads` must equal it exactly: no more, no less
+  INFO   criterion v2.14 — nothing was added to the eval directory after the run except the receipt and an errata [n=1]
+         expected commit history of that path shows only those two additions | observed HELD — the eval directory does not exist
+         verified from the path's own commit history, not from a manifest claim
+  PASS   criterion v2.15 PRECEDENT — on the existing adjudication set the `seeded`/`in_sample` flags are PRESENT on every row and `seeded: true` on none [n=122]
+         an ABSENT flag is as much a defect as a wrong one; this is the row TASK-018 item 0d's false `seeded` sentence contradicts, and it is why the same test is pre-registered for the holdout rows under v2.15
+  PASS   criterion v2.16 PRECEDENT — one-shot discipline read from the TOOL'S SOURCE, not its manifest [n=0]
+         the same source read will be applied to the quantum-b tool: it must not be able to reach the tuning path, and the HoldoutGuard must be instantiated rather than merely importable
+
+== summary: 261 rows · FAIL 27 · INFO 25 · PASS 207 · PROXY 2
 
 rows not passing (each is an owed item or a known restriction, not necessarily a defect):
   FAIL   criterion 20.10: tool_commit contains the generator: expected present | observed ABSENT at ffb881158b88

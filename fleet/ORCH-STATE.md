@@ -450,3 +450,19 @@ the reconnect runbook is at the end of that summary.
   precision, no M6 figure; M6-P owner-accepted and not re-certified; TASK-015 blocked behind quantum b. Fleet:
   BOSS-2 `67a4f0e` (cycle 45, zero controls, zero concerns, no orders), WORKER-2 `4fc40c8` static since 21:27:50Z —
   no ORCH-2 action per ERRATA-25f, main `7d033ab`.
+
+## Cycle I close (2026-09-26T00:20:51Z) — self-item O-4, and quantum b's criteria pre-registered as rows
+- **O-4**: ten of my own header stamps were estimates, eight forward-stamped by up to nine minutes against the lane
+  clock (CONTROL seq 38 = `2026-09-26T00:16:59Z`). Disclosed verbatim in `fleet/GATES.md` self-correction #4, left in
+  place, authoritative CONTROL stamps published. Standing rule adopted: the CONTROL.log line is written first and its
+  stamp copied into every header of the cycle — this entry carries that stamp.
+- **Instrument §15**: criteria v2.12–v2.16 pre-registered as HELD rows stating the exact shape each will check
+  (pickaxe commit order for v2.12; `holdout_reads` EQUAL to the pre-registered eval set, 33 or the §F2 sensitivity 29,
+  for v2.13; eval-dir purity from that path's history for v2.14), plus two precedent rows that PASS today:
+  `seeded`/`in_sample` present on 122/122 rows with 0 true, and 0 tuning-side references in
+  `tools/m4_q4_supplement.py`'s source. Instrument v3.4 = 261 rows (PASS 207 / FAIL 27 / INFO 25 / PROXY 2),
+  `--selftest` 18/18. Defect #28 published (a disclosure check must look inside the disclosure).
+- **Fleet**: BOSS-2 `12a0947` (cycle 47, seq 50, zero controls, zero concerns, no orders); WORKER-2 `4fc40c8` static
+  since 21:27:50Z (~2 h 52 m) — observation only, no ORCH-2 action per ERRATA-25f; main `7d033ab`.
+- **Next**: hold cadence; re-run the instrument the moment WORKER-2 moves (every open item now has a row that flips);
+  no new work cut while items 8a, v2.a/v2.b and 0d–0g are open.

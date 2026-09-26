@@ -606,3 +606,42 @@ TASK-018 item 0d · item 17.a · v2.a ×2 (criterion row + §12 blocker) · v2.b
 criterion 20.13 ×3 (items 15a, 15b, the unqualified `57/122` in PATTERNS §3) · criterion 20.15 ×2 (item 13).
 No verdict moves: q1 PASS · q2 FAIL · q3 FAIL on item 8a alone · q4 PASS · q5 PASS; TASK-017 PASS with 17.a;
 TASK-018 FAIL/INCOMPLETE; TASK-019a FAIL on v2.5 + the v2.b note with quantum b HELD; TASK-020 FAIL/INCOMPLETE.
+
+
+---
+
+## 15. SELF-ITEM O-4 (forward-stamped headers) and §15 of the instrument (quantum-b criteria v2.12–v2.16)
+
+Instrument v3.4: **261 rows without `--self-audit` · PASS 207 · FAIL 27 · INFO 25 · PROXY 2**; `--selftest` 18/18
+before and after. Narrative in `fleet/GATES.md` self-correction #4, stamped 2026-09-26T00:20:51Z.
+
+### 15.1 O-4 — ORCH-2 inside its own criterion again
+
+Ten header stamps were written from an estimate rather than from `date -u`; **eight are forward-stamped** relative to
+the lane clock (`2026-09-26T00:22:41Z` in five places and `2026-09-26T00:26:04Z` in three, against CONTROL seq 38's
+real `2026-09-26T00:16:59Z`), and `2026-09-25T23:58:12Z` in two places was 9 s behind seq 36's real
+`2026-09-25T23:58:21Z`. Not cosmetic: commit-order criteria v2.4 and v2.12 are decided on timestamps, and a gate
+authority whose headers claim times that had not happened cannot require sourced timestamps of a worker. Disclosed
+verbatim and left in place (append-only), with the authoritative CONTROL stamps published beside them. Standing rule:
+**the CONTROL.log line is written first and its stamp copied into every header of the cycle.**
+
+Mechanized in `--self-audit`: every exact stamp in the lane's `.md` files is compared against the newest CONTROL.log
+entry, and a forward stamp FAILs unless it is disclosed inside the correction section. **Defect #28**: the first
+version tested whether the stamp appears anywhere in `GATES.md`, which the offending header itself satisfied — a
+disclosure check must look inside the disclosure, not inside the file containing it.
+
+### 15.2 §15 — the quantum-b criteria are pre-registered as rows, so the eventual gate is one run
+
+Three HELD rows state exactly what will be checked when the artefacts exist: **v2.12** pre-registration commit before
+the run commit, by add-time and — where a *reference* is concerned — by `git log -S` introduction time (defect #22's
+lesson), with both stamps exact and sourced; **v2.13** a receipt that declares the v2 holdout spent with
+`holdout_reads` **equal** to the pre-registered eval set, which is the 33 holdout transcripts or the 29 sensitivity
+set if ANNEX §F2's exclusion is chosen — whichever is named, no more and no less; **v2.14** eval-directory purity from
+that path's own commit history, not from a manifest claim.
+
+Two **precedent** rows PASS today and pin the tests v2.15/v2.16 will apply: on the existing adjudication set the
+`seeded` / `in_sample` flags are present on **122/122** rows and `seeded: true` on **0** (an absent flag is as much a
+defect as a wrong one — and this is the row TASK-018 item 0d's false sentence contradicts), and
+`tools/m4_q4_supplement.py` carries **0** references to the tuning-side readers (`overlays`, `parse_book_store`,
+`run_tuning`), which is the source read v2.16 demands of the quantum-b tool: it must not be *able* to reach the tuning
+path, and `HoldoutGuard` must be instantiated rather than merely importable.

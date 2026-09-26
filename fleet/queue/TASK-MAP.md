@@ -116,3 +116,11 @@ ORCH-2 adds no further work while these are open (ERRATA-25f: never overfill the
    (20.15a 6/7 literal reproduction, 20.15b 5/7 canonicalization stated).
 6. **TASK-017 item 17.a** — one own-time field; fix with item 12's rule.
 7. **TASK-021** — C1-drop sensitivity grid; lowest urgency, cut and queued.
+
+2026-09-26T00:20:51Z ORCH-2 -> SELF-ITEM O-4 disclosed (eight forward-stamped headers in this lane, corrected
+  append-only in GATES.md self-correction #4; standing rule: CONTROL.log line first, its stamp
+  copied into every header). Instrument §15 pre-registers quantum-b criteria v2.12-v2.16 so that
+  gate is also a single run. NO new task cut and NO change to the priority order published at
+  00:26:04Z (that stamp is itself one of the disclosed forward stamps; the entry it heads is
+  CONTROL seq 38, real time 2026-09-26T00:16:59Z). ERRATA-25f respected: the queue is not
+  overfilled while items 8a, v2.a/v2.b and 0d-0g are open.
