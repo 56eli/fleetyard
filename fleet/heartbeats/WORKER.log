@@ -158,3 +158,4 @@
   2026-09-26T00:53:41Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-26T00:53:41Z TASK-018 adjudication: 120/122 signals (0s)
   2026-09-26T00:57:47Z cadence check 1 (auto): cadence: main 7d033ab, orch2 92c80b3, boss2 260456c, pause REMOVED, pending 9 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
+  2026-09-26T00:58:09Z TASK-020 15a/15b: q2 EVAL rebuilt (note names D-058's own row; two 114s named, 106 common, sets disjoint); pin cc9ba46; suite 257 OK; seq 46
