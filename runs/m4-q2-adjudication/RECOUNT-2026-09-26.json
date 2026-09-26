@@ -1,0 +1,220 @@
+{
+ "amended_file_sha256": "531406d25e4a43a9282ea0a4c67d8e45b6bd8843658e12e99e9946f4814e5c07",
+ "base_122_lines_sha256_before_append": "82863ab9bfb38059e4cab1ddc504c786e7f305bda8e95570b9281c9c071f7bee",
+ "base_file": "adjudication.jsonl",
+ "base_lines_reconstructed_digest": "82863ab9bfb38059e4cab1ddc504c786e7f305bda8e95570b9281c9c071f7bee",
+ "base_lines_rule": "the tool's 122 signal lines are never edited; a fresh build of tools/m4_q2_adjudicate.py reproduces them (its determinism test)",
+ "base_signal_rows": 122,
+ "counts_after_exclusions": {
+  "arithmetic": "57 rows − 6 notation refusals = 51; 51 − 2 contradicted demotions = 49 rows. Sites: 55 − 5 notation sites − 2 = 48.",
+  "rows": 49,
+  "sites": 48
+ },
+ "dedupe": {
+  "collisions": {
+   "percent": [
+    "D-097",
+    "D-098"
+   ],
+   "see": [
+    "D-120",
+    "D-121"
+   ]
+  },
+  "key": "(transcript, restored_span text)",
+  "rows": 57,
+  "sites": 55
+ },
+ "disposition_lines_appended": 15,
+ "dispositions": {
+  "D-002": {
+   "new_verdict": "CANDIDATE",
+   "ruling": "demoted"
+  },
+  "D-039": {
+   "new_verdict": "CANDIDATE",
+   "ruling": "demoted"
+  },
+  "D-041": {
+   "new_verdict": "CANDIDATE",
+   "ruling": "refused-notation"
+  },
+  "D-042": {
+   "new_verdict": "CANDIDATE",
+   "ruling": "refused-notation"
+  },
+  "D-087": {
+   "new_verdict": "CANDIDATE",
+   "ruling": "refused-notation"
+  },
+  "D-092": {
+   "new_verdict": null,
+   "ruling": "holdout-member-note"
+  },
+  "D-093": {
+   "new_verdict": null,
+   "ruling": "holdout-member-note"
+  },
+  "D-094": {
+   "new_verdict": null,
+   "ruling": "holdout-member-note"
+  },
+  "D-095": {
+   "new_verdict": null,
+   "ruling": "holdout-member-note"
+  },
+  "D-097": {
+   "new_verdict": "CANDIDATE",
+   "ruling": "refused-notation"
+  },
+  "D-098": {
+   "new_verdict": "CANDIDATE",
+   "ruling": "refused-notation"
+  },
+  "D-107": {
+   "new_verdict": null,
+   "ruling": "holdout-member-note"
+  },
+  "D-108": {
+   "new_verdict": null,
+   "ruling": "holdout-member-note"
+  },
+  "D-122": {
+   "new_verdict": null,
+   "ruling": "holdout-member-note"
+  }
+ },
+ "facts": {
+  "certain_rows": 57,
+  "fixture_span_overlaps": 0,
+  "omitted_word_counts": {
+   "already": 1,
+   "bonaparte": 1,
+   "earphones": 1,
+   "evidence": 1,
+   "go": 1,
+   "haha": 1,
+   "he'd": 1,
+   "heh": 1,
+   "high": 1,
+   "however": 1,
+   "huh": 7,
+   "including": 1,
+   "it's": 3,
+   "lincoln": 1,
+   "man": 1,
+   "may": 1,
+   "osama": 1,
+   "otherwise": 1,
+   "percent": 6,
+   "quite": 1,
+   "really": 1,
+   "realms": 1,
+   "right": 3,
+   "see": 6,
+   "since": 1,
+   "that's": 1,
+   "there's": 1,
+   "things": 1,
+   "um": 1,
+   "undoubtedly": 1,
+   "well": 1,
+   "yeah": 6
+  },
+  "seeded_true_rows": 0
+ },
+ "no_rate": "no rate, precision or M6 figure is stated; LAW §9 (in-sample / seeded)",
+ "seeded_sentence_correction": {
+  "claim_corrected": "four of the 57 promoted rows carry seeded: true",
+  "data": {
+   "fixture_span_overlaps": 0,
+   "rows_with_seeded_key": 122,
+   "rows_with_seeded_true": 0,
+   "seeded_rows_location": "fixtures-adjudication.json FIX-D2-001…004 (2 CERTAIN, 2 CANDIDATE)"
+  }
+ },
+ "standing_statements": {
+  "audio": "whether the speaker uttered a filler is unknowable from text — no audio was heard by anyone in this campaign",
+  "band": {
+   "floors": {
+    "10": 22,
+    "3": 71,
+    "5": 57,
+    "8": 33
+   },
+   "note": "the 57 (now 49 after the stated exclusions) is a floor-5 number: quote the row, not the number"
+  },
+  "restriction": "the promoted set is not usable in any M6 document until ORCH-2 accepts these repairs"
+ },
+ "stratification": {
+  "after_exclusions": {
+   "content": 11,
+   "function words": 11,
+   "interjections/fillers": 27,
+   "notation (percent)": 0,
+   "sum": 49
+  },
+  "before_exclusions": {
+   "content": 13,
+   "function words": 11,
+   "interjections/fillers": 27,
+   "notation (percent)": 6,
+   "sum": 57
+  },
+  "by_word": {
+   "content": [
+    "bonaparte",
+    "earphones",
+    "evidence",
+    "go",
+    "high",
+    "lincoln",
+    "man",
+    "osama",
+    "otherwise",
+    "quite",
+    "realms",
+    "things",
+    "undoubtedly"
+   ],
+   "function words": [
+    "it's",
+    "that's",
+    "there's",
+    "he'd",
+    "may",
+    "since",
+    "however",
+    "including",
+    "already"
+   ],
+   "interjections/fillers": [
+    "huh",
+    "yeah",
+    "see",
+    "right",
+    "really",
+    "heh",
+    "haha",
+    "um",
+    "well"
+   ],
+   "notation (percent)": [
+    "percent"
+   ]
+  },
+  "notation_refused": [
+   "D-041",
+   "D-042",
+   "D-087",
+   "D-092",
+   "D-097",
+   "D-098"
+  ],
+  "notation_sites": 5
+ },
+ "task": "TASK-018 items 0d–0g (recount, dispositions, stratification)",
+ "tool": "tools/m4_t18_dispositions.py",
+ "utc_source": "argument/--utc (the lane clock at write time)",
+ "written_utc": "2026-09-26T01:12:00Z"
+}

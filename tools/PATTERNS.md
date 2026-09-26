@@ -44,6 +44,15 @@ words, numbers, citations. That gap is the honest headline of this page.
 | drop-word | 122 (tuning, C1-drop) | built in M4-q2; 57/122 adjudicated CERTAIN under leg (d)(i), 65 CANDIDATE (`runs/m4-q2-adjudication/`, tool commit `9cd905d`) — **57 is a floor-5 number: never quote it without its sensitivity row (floors 3/5/8/10 → 71/57/33/22)** | 2/4 provisional fixtures confirmed (D2-001, D2-003; D2-002/D2-004 refused — two-word) | **unmeasured** | no |
 | speaker/format | 49 (v1 tuning, `signals.json` sha `86c8f57d…`) · 48 (v2 tuning, `signals-v2tuning.json`) | format half built in M4-q3 (speaker half out of mechanical scope — corpus census); **q3 gate INCOMPLETE**: shipping evidence was missing and has been rebuilt by WORKER-2 (fixture recall **0/16**, clean set **1/59**, §8 bindings) — ORCH-2 re-gate outstanding | 0/16 | **unmeasured** | no (restriction stands) |
 
+> **Row qualifier (appended 2026-09-26, TASK-018 items 0d–0g).** The drop-word row's
+> **57/122** is quoted only with its exclusions behind it: **49 promoted rows / 48 distinct
+> sites** after the six notation refusals (`%` where the book writes "percent" — no *word* is
+> absent) and the two demotions contradicted by sibling instruments (`D-002`, `D-039`); the
+> same construction at floor 5 was 57, and the band floors 3/5/8/10 → 71/57/**33**/22 still
+> travels with every quotation. Strata: 27 interjections/fillers · 0 notation · 11 function
+> words · 11 content. The 122-signal base and the 65 CANDIDATE rows are unchanged. Details and
+> the ruling reasons: `runs/m4-q2-adjudication/RECOUNT-2026-09-26.json` and §5b-ter below.
+
 Fixtures are **in-sample** by construction (LAW §9: seeded hits are never
 precision/recall evidence). Clean-set figures from v1 (0/59) were tuned on those
 passages — invalid as an independent false-positive estimate.
@@ -314,3 +323,23 @@ and nothing was edited in place.
 saying M4 is "parked under PAUSE" is superseded for control state only — the task order
 it cites (ERRATA-25e §1) also put TASK-016 first, which is delivered. M4 q3–q5 resume
 per TASK-018 (leg-(d) adjudication) then TASK-017.
+
+### 5b-ter. TASK-018 items 0d–0g — corrections (appended 2026-09-26, append-only)
+
+* **0d:** §5b-bis's sentence "Four of the 57 are `seeded: true`" is wrong. The data has
+  **0 of 122 rows seeded** (`seeded: false` throughout) and **0 overlaps with the 16 v1 CF
+  fixture spans**; the four seeded rows are `FIX-D2-001…004` in `fixtures-adjudication.json`.
+  Corrected by append; the sentence above stays readable.
+* **0e:** 57 promoted **rows** = **55 distinct sites** (dedupe key `(transcript,
+  restored_span text)`; collisions `D-097`/`D-098`, `D-120`/`D-121`).
+* **0f:** strata — 27 interjections/fillers · 6 notation · 11 function words · 13 content.
+  **The notation class is refused** (no word is absent when the transcript writes `%`);
+  the classification is reversible only by an owner ruling. Speaker-side filler presence is
+  **unknowable from text** (no audio heard).
+* **0g:** `D-002` and `D-039` are demoted (each contradicted by a sibling instrument:
+  `EVAL.json` shape adjudication; the source-inheritance filter) and the seven rows on
+  v2-holdout transcripts are marked holdout members. Recount: **49 promoted rows / 48 distinct
+  sites** (57 − 6 notation − 2 demoted; 55 − 5 − 2).
+* **Every quotation of the number carries the band: floors 3/5/8/10 → 71/57/33/22**, the
+  stratification, the deduped site count and the notation status. The set is not usable in any
+  M6 document until the gate accepts these repairs.

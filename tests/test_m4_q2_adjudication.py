@@ -101,14 +101,14 @@ class ArtifactCase(unittest.TestCase):
             return [json.loads(l) for l in fh]
 
     def test_every_signal_has_a_record(self):
-        rows = self.rows()
+        rows = [r for r in self.rows() if r.get("record") != "disposition"]
         self.assertEqual(len(rows), 122)
         with open(self.SIGNALS, encoding="utf-8") as fh:
             n = sum(len(v) for v in json.load(fh).values())
         self.assertEqual(len(rows), n)
 
     def test_records_carry_the_l1_fields(self):
-        for r in self.rows():
+        for r in [x for x in self.rows() if x.get("record") != "disposition"]:
             for key in ("id", "transcript", "char_offset", "detector_dropped_words",
                         "verdict", "clause", "reason"):
                 self.assertIn(key, r, key)
@@ -123,7 +123,7 @@ class ArtifactCase(unittest.TestCase):
                 self.assertGreaterEqual(min(r["flank_tokens"].values()), 5)
 
     def test_no_blanket_promotion_and_counts_match_summary(self):
-        rows = self.rows()
+        rows = [r for r in self.rows() if r.get("record") != "disposition"]
         promoted = [r for r in rows if r["verdict"] == "CERTAIN-leg-d"]
         self.assertTrue(all(r.get("reason") for r in rows))
         self.assertTrue(all(r.get("omitted_word") for r in promoted))
@@ -156,13 +156,16 @@ class ArtifactCase(unittest.TestCase):
             self.assertTrue(f["suspected"] and f["quoted"])   # original claim intact
 
     def test_determinism_two_runs_byte_identical(self):
-        rows = self.rows()
+        # the committed file = the tool's 122 signal lines + appended dispositions (0d–0g);
+        # determinism is asserted over the signal lines, which are never edited
+        with open(self.ADJ, encoding="utf-8") as fh:
+            committed = [l for l in fh if l.strip()
+                         and json.loads(l).get("record") != "disposition"]
         with tempfile.TemporaryDirectory() as d:
             rc = adj.main(["--out", d, "--flank-min", "5", "--tool-commit", "X",
                            "--main-head", "X", "--policy-sha", "X", "--book-store-sha", "X"])
             self.assertEqual(rc, 0)
-            with open(self.ADJ, encoding="utf-8") as fh:
-                a = fh.read()
+            a = "".join(committed)
             with open(os.path.join(d, "adjudication.jsonl"), encoding="utf-8") as fh:
                 b = fh.read()
             # provenance carries run_utc/mains; the rows must be identical

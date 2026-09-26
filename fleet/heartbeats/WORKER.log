@@ -135,3 +135,16 @@
   2026-09-26T00:28:05Z TASK-018 adjudication: 120/122 signals (0s)
   2026-09-26T00:46:30Z seal audit STANDING + 019b harness built (not run); inputs re-materialised; suite 244 OK 1 skip
   2026-09-26T00:58:50Z item 8a: six supplement artefacts pinned to their generators; byte-identical rebuilds; seq 42
+  2026-09-26T00:39:24Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-26T00:39:24Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-26T00:39:24Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-26T00:39:24Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-26T00:39:28Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-26T00:39:28Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-26T00:39:28Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-26T00:39:28Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-26T00:39:36Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-26T00:39:36Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-26T00:39:36Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-26T00:39:36Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-26T01:14:30Z TASK-018 0d-0g: 15 dispositions appended; recount 49 rows / 48 sites; notation refused; seq 43
