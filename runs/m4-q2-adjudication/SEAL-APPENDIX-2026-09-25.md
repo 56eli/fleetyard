@@ -2,7 +2,7 @@
 
 This is the appendix the seal rule owes. It is a **new file**: no committed artefact was
 edited to produce it, and `tools/HELD-OUT-SPLIT-V2.json` remains byte-identical at
-sha256 `637a6dd8026e5c30c952cfcf4d364fd062e198dc1715f8721aa86ae6d7bb342c`
+sha256 `5d996151c14ee7b8ed6a7948a74855280dea4a53a9772c677acd4ce20364646d`
 (commit `79eb401`, sealed 2026-09-25T20:51:54+00:00).
 
 ## The finding
@@ -75,7 +75,7 @@ a crisp answer to "was the split touched after the seal?".
 | artefact | sha256 / ref |
 |---|---|
 | `tools/m4_seal_audit.py` | tool digest stamped in the report (`tool_sha256`) |
-| `runs/m4-q2-adjudication/SEAL-AUDIT.json` | see the file — **audit utc 2026-09-26T02:07:06Z**, sha256 `45aff7f471553295f0732a104160135fc4363b80c0c92a6890e5b78524bd74df`, tool commit `a0904395` (this supersedes the earlier citations `2026-09-25T21:44:00Z`, a `:00`-rounded value that ordered nothing to the second, and `2026-09-26T02:01:53Z`, the dry-run stamp of the same audit before this appendix was aligned; item v2.c) |
+| `runs/m4-q2-adjudication/SEAL-AUDIT.json` | see the file — **audit utc 2026-09-26T09:16:19Z**, sha256 `f60230a423c290b70ace1e4f155598dd4a0a9fc0abd188e207a01573d8085f57`, tool commit `a0904395` (this supersedes the earlier citations `2026-09-25T21:44:00Z`, a `:00`-rounded value that ordered nothing to the second, and `2026-09-26T02:01:53Z`, the dry-run stamp of the same audit before this appendix was aligned; item v2.c) |
 | seal file (unchanged) | `73d86f0d…`, commit `79eb401` |
 | re-seal rule | quoted in this file from `tools/HELD-OUT-SPLIT-V2.json:re_seal_rule` |
 
@@ -119,9 +119,9 @@ transcripts, the signal ids or the 29/33 denominator.
 This appendix's provenance row and `SEAL-AUDIT.json` now carry the same stamp, taken from
 `date -u` at run time and never rounded:
 
-**audit utc 2026-09-26T02:07:06Z** — cited above in the provenance row, and carried identically by
-`SEAL-AUDIT.json` (sha256 `637a6dd8026e5c30c952cfcf4d364fd062e198dc1715f8721aa86ae6d7bb342c`), which was generated from the tool at commit `a0904395` (the commit whose blob equals the tool at head; its origin is `b991f29`). The
-superseded earlier values `2026-09-25T21:44:00Z` and `2026-09-26T02:01:53Z` stay readable above
+**audit utc 2026-09-26T09:16:19Z** — cited above in the provenance row, and carried identically by
+`SEAL-AUDIT.json` (sha256 `5d996151c14ee7b8ed6a7948a74855280dea4a53a9772c677acd4ce20364646d`), which was generated from the tool at commit `a0904395` (the commit whose blob equals the tool at head; its origin is `b991f29`). The
+superseded earlier values `2026-09-25T21:44:00Z`, `2026-09-26T02:01:53Z` and `2026-09-26T02:07:06Z` stay readable above
 and here marked as superseded (the first was `:00`-rounded and named a different day and
 time from the report's own field — ORCH-2's O-4 class, in this artefact; item v2.c). The audit
 tool now reads this file and **fails** if its live audit-stamp citation disagrees with the

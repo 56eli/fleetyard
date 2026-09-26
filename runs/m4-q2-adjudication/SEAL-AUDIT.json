@@ -2,13 +2,13 @@
  "appendix_audit_utc_check": {
   "cited_identically": true,
   "live_citations": [
-   "2026-09-26T02:07:06Z"
+   "2026-09-26T09:16:19Z"
   ],
   "marked_superseded_or_quoted": [
    "2026-09-25T21:44:00Z",
    "2026-09-26T02:01:53Z"
   ],
-  "report_stamp": "2026-09-26T02:07:06Z",
+  "report_stamp": "2026-09-26T09:16:19Z",
   "unmarked_conflicting_citations": []
  },
  "artifact_mention_census": {
@@ -157,7 +157,7 @@
    "relation_to_seal": "pre-seal"
   }
  ],
- "audit_utc": "2026-09-26T02:07:06Z",
+ "audit_utc": "2026-09-26T09:16:19Z",
  "audit_utc_source": "date -u at run time when --utc is not passed; passed through verbatim, never rounded, and the same string is cited in the companion appendix (checked below)",
  "confirmation_artifacts": [
   {
@@ -220,7 +220,7 @@
    "status": "APPEND-ONLY-AFTER-SEAL (dated note on file)"
   }
  ],
- "head_commit_at_audit": "a0904395afd56bebd31375ffb1b23f17d21986e9",
+ "head_commit_at_audit": "c22a13f5e7259222737fbce0b7ba9e49b6a28b3d",
  "head_commit_note": "the lane head the audit ran against; this report is committed as its own commit after it",
  "membership": {
   "forced_intersect_holdout": [],
@@ -230,6 +230,16 @@
   "fixtures/v2/dropword.json: digest moved c8e963199a1e\u2026 -> c40d272f30d0\u2026 by an append-only edit; the dated note tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md names both digests \u2014 the seal STANDS, nothing further is owed"
  ],
  "outstanding": [],
+ "reproduction": {
+  "audited_head": "c22a13f5e7259222737fbce0b7ba9e49b6a28b3d",
+  "byte_identical_when": "re-run at the audited head with the report's own --utc: `python3 tools/m4_seal_audit.py --seal <seal> --out <path> --utc <this report's audit_utc>`",
+  "volatile_because": "this is an AUDIT RECORD, not a digest of the repository: `head_commit_at_audit` names the head the audit was taken at, and `tool_commit`/`tool_sha256` follow the tool's committed bytes, so a re-run at a LATER head reproduces every seal finding and every classification byte-for-byte while those three fields legitimately move. The appendix cites this report's digest; a re-derivation should compare fields, not the file digest, unless it is run at the audited head.",
+  "volatile_fields": [
+   "head_commit_at_audit",
+   "tool_commit",
+   "tool_sha256"
+  ]
+ },
  "seal_commit": "79eb401b4328d254a5cee9be0a07f17a5a5e610b",
  "seal_commit_utc": "2026-09-25T20:51:54+00:00",
  "seal_file": "tools/HELD-OUT-SPLIT-V2.json",

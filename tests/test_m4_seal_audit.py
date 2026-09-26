@@ -359,6 +359,47 @@ class SealAudit(ToyRepo):
         self.assertEqual([o for o in rep2["outstanding"] if "taint" in o], [])
 
 
+    def test_report_states_which_fields_move_with_the_head(self):
+        """An audit record is reproducible at its audited head; say which fields legitimately move."""
+        self.write("fixtures/toy.json", self.FIXTURES)
+        self.commit("2026-09-25T20:05:00+00:00", "fixtures")
+        self.seal()
+        rep = self.report()
+        r = rep["reproduction"]
+        self.assertEqual(r["audited_head"], rep["head_commit_at_audit"])
+        self.assertIn("head_commit_at_audit", r["volatile_fields"])
+        self.assertIn("--utc", r["byte_identical_when"])
+        self.assertIn("AUDIT RECORD", r["volatile_because"])
+        # at a later head the seal findings are unchanged and only those fields move
+        self.write("unrelated.txt", "a later commit")
+        self.commit("2026-09-25T20:50:00+00:00", "a later head")
+        rep2 = self.report()
+        self.assertNotEqual(rep["head_commit_at_audit"], rep2["head_commit_at_audit"])
+        for key in ("void_reasons", "outstanding", "fixture_sources", "membership",
+                    "artifact_mention_census", "seal_history", "seal_sha256", "seal_commit"):
+            self.assertEqual(rep[key], rep2[key], key)
+        self.assertEqual(rep2["reproduction"]["audited_head"], rep2["head_commit_at_audit"])
+
+
+    def test_report_says_whether_the_running_tool_is_the_committed_one(self):
+        """Attribution honesty (item v2.d's class): say which bytes produced the report."""
+        self.write("fixtures/toy.json", self.FIXTURES)
+        self.commit("2026-09-25T20:05:00+00:00", "fixtures")
+        self.write("tools/m4_seal_audit.py", "# the tool, stub edition\n")
+        self.commit("2026-09-25T20:06:00+00:00", "the tool")
+        self.seal()
+        rep = self.report()
+        # the audit is run in-process by the REAL tool, which is not the toy stub at HEAD
+        self.assertIs(rep["tool_running_matches_committed"], False)
+        self.assertEqual(rep["tool_sha256"],
+                         __import__("hashlib").sha256(
+                             self.git("show", "HEAD:tools/m4_seal_audit.py").encode()
+                         ).hexdigest())
+        self.assertNotEqual(rep["tool_sha256_running"], rep["tool_sha256"])
+        self.assertIn("dirty tree cannot change the attribution",
+                      rep["tool_running_matches_note"])
+
+
 
 if __name__ == "__main__":
     unittest.main()
