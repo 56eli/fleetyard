@@ -986,3 +986,391 @@ Recorded in full in `fleet/GATES.md` (cycle J + O-7 + O-8). Summary of the effec
 FAIL to PASS on amendment** (34 → 16 across the cycle, of which 5 were landed repairs my rows mis-tested and 8 were genuine
 worker repairs), and **2 rows flipped the other way** on tightened tests (v2.a(iii) 2nd half, by defect #38). Every amendment
 is disclosed with its reason in the row text and in the golden, so a reader can see which PASSes are new and why.
+
+
+---
+
+## 23. GATE CYCLE K — TASK-013 RE-GATED because the reducer moved: **PASS HOLDS on a re-run, not on a byte-identity proxy** (CONTROL seq 47, 2026-09-26T02:17:07Z)
+
+Bound head **`34db0b0`** · worktree `/home/user/gate-scratch/w-34d` · zip `3f36c520391049a4…` ✓ · book store
+`corpus/docdocgo/html/merged-book-texts_json_1.js` `c0892fcd…` ✓ · range `1c8a287..34db0b0` = 6 files
+(`findings/PROVENANCE.json`, `tools/m5r_reduce.py` +46, `tools/m4_prov_check.py` new 149 ln, `tools/m4_q4_supplement.py`,
+`runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json`, + tests) · registry `a86115d2667e7d54…` == `origin/main` at last successful
+read · instrument **324 rows (PASS 271 · FAIL 13 · INFO 32 · PROXY 8)**, golden `orch2_verify_output_34db0b0.txt` (569 ln),
+`--selftest` 20/20 · suite **Ran 263 in 199.3s, OK (skipped=1)**.
+
+### 23.1 The re-gate: method, then bytes
+
+TASK-013's PASS had been quoted on *"the reducer's bytes are identical across `219075a`/`ffb8811`/`4fc40c8`/`72104a5`/
+`1c8a287`"*. Item 13 (a repair **this queue required**) moved those bytes, so the milestone was re-gated on the substance.
+
+| output | published at `34db0b0` | re-run of the tool AT HEAD, published pins | verdict |
+|---|---|---|---|
+| `ledger.jsonl` | `d42136c673188f9e…` | `d42136c673188f9e…` | **BYTE-IDENTICAL** |
+| `by_transcript_digest` | `c1ec4da86a6ce4f4…` | `c1ec4da86a6ce4f4…` | **IDENTICAL** (230 files) |
+| findings / files | 1334 / 230 | 1334 / 230 | identical |
+| book refs | 242 ok / 0 bad | 242 ok / 0 bad | identical |
+| citation failures | 0 | 0 | identical |
+| regenerated manifest | — | differs in **`tool_sha256` only**: `6d4bb9ce…` → `a89ff189…` | as the artefact's own `derivations_revision` states |
+
+Invocation that reproduces (from `tools/m5r_inputs.sh`'s recipe, in the gate worktree):
+
+```
+python3 tools/m5r_reduce.py --records evidence/runs/m5-raw/records --fixtures evidence/fixtures/confirmed \
+  --corpus corpus --utc 2026-09-25T19:55:24Z --tool-commit dada3e602689cb900971fda0dccce8267f31a2b2 \
+  --main-head 77f1d6de80ec0ae77d7ca06fdfd581671cea7cae --policy-sha 0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85 \
+  --book-store-sha c0892fcd20502d49b99fffe87a4ec4b3b5ecc94a1f98606aab7909127934a4a8 --detector-tool-commit 7b8863d
+```
+
+**Ruling: TASK-013 M5-R remains PASS.**
+
+### 23.2 The diagnosis that made the ruling safe (and produced item 13b)
+
+The first re-run passed only `--utc` and produced a **different** ledger digest. A field-by-field diff over all **1334 rows**
+localised the difference to exactly one field, `status_by`: `tools/m5r_reduce.py@dada3e6…` published vs
+`tools/m5r_reduce.py@UNPINNED` re-run. Every row embeds the `--tool-commit` pin, so:
+
+- with the full pin set the outputs are byte-identical (§23.1) — the tool's behaviour is unchanged;
+- **without** the original pin the content is identical and the digest is `c94cce40…`.
+
+Hence **item 13b**: the artefact's `reproducibility_note` ("a rebuild with this revision emits these exact derivations and a
+byte-identical ledger/by-transcript") must name the pin its claim depends on. One clause closes it. This is criterion 20.15a's
+discipline applied to a claim *about* reproduction: a stated derivation must reproduce when followed **literally**.
+
+### 23.3 Items closed, opened, and still owed at `34db0b0`
+
+| item | criterion | verdict at `34db0b0` | evidence |
+|---|---|---|---|
+| **13** | 20.15a / 20.15b | **CLOSED — 7/7** | `fixtures_digest_sha256` recomputed under the NEW stated construction (basename keys over the 2 `.json` in `fixtures/confirmed/`, lines carrying `\n`) = `c5d8f6f3db3b0d01…` == published; `overlays_digest` states the warned-against variant's construction → `58274f46…` reproducible as written; `tool_sha256` = `6d4bb9ce…` at the stated `tool_commit dada3e6`; `json_canonicalization` added |
+| **14** | 20.16 | **CLOSED** | q4's format leg publishes the COMPLETE config; digest **`8e7e35a2…` == q3's** (no subset remains); `config_digest_note` on all three run objects |
+| **13b** | 20.15a | **OPEN (new)** | the `reproducibility_note` does not name the `--tool-commit` dependency (§23.2) |
+| q3 note | 20.15b | **OPEN** | `runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json` publishes `8e7e35a2…` with no `config_digest_note` anywhere in the file, while q2 and all three q4 legs carry one |
+| 0h / v2.h / 12c | 20.14c | **OPEN, unchanged** | whole-tree census: **19 forward stamps of 61 own-time stamps**, all `:00`- or cadence-shaped; **none new** in `1c8a287..34db0b0` — the files carrying them were not touched |
+| quantum b | v2.7 | **BLOCKED** | §G2, the §H sentence, v2.a(iii)-2nd-half, v2.g's four untested refusals, v2.c/v2.d/v2.e/v2.h |
+
+### 23.4 ANNEX §F7 amended and §F8 recorded (self-correction O-10)
+
+§F7 as drafted voided a pre-registration on **any** post-freeze change to a bound input — which, applied literally at this
+head, would have voided quantum b's freeze over +46 lines of derivations prose that this queue required, the lane disclosed,
+and the gate verified neutral. Amended: drift voids **unless** (i) disclosed in the artefact with old/new digest and its
+effect on outputs, (ii) verified behaviour-neutral by re-running the changed tool with the published pins and comparing output
+bytes, (iii) re-pinned in the ANNEX **before the bound run starts**. §F8 records this instance: **B1/B4
+`tools/m5r_reduce.py` `6d4bb9ce…` → `a89ff189…`**, no other frozen value moved, quantum b's freeze **stands** on the amended
+pin. The instrument's §12 tuple was re-pinned in the same act, with the disclosure comment attached (§12: 6/6 match).
+
+### 23.5 Instrument defects #39–#41 and self-corrections O-9/O-10
+
+**#39** `tool_sha256` resolved at head instead of at the manifest's stated `tool_commit` — FAIL against a derivation that
+reproduces exactly. **#40** `fixtures_digest_sha256` recomputed with the OLD literal reading after item 13 rewrote the
+derivation — a row must re-read the published text each run, never a copy taken at cut time. **#41** (build discipline) a new
+row anchored on a string that also occurs in the **module docstring** landed inside the docstring and never executed (the run
+silently reported one row fewer), and the same slice deleted §19's control-block initialisation → `NameError: ctrl`. Amended
+rule: after any multi-anchor edit, run `--selftest` **and** a full run, and compare the **row count** to the previous golden
+before publishing a verdict — a missing row is a silent PASS.
+
+**O-9** (proxy vs substance): where a criterion is "figure X reproduces", the gate RE-RUNS the producing tool at head with
+the published pins and compares output bytes; a byte-identity row over the tool may survive as HISTORY, never as the verdict.
+Corollary: when a re-run disagrees with a published digest, **diff the rows before diffing the claim** — one field, one
+argument, two minutes. **O-10** (my own over-broad rule): every absolute pre-registration rule needs its escape hatch written
+at drafting time, with the evidence the hatch requires; an unwritten hatch gets improvised under pressure, which is how
+pre-registrations die. Full text in `fleet/GATES.md`.
+
+### 23.6 Platform
+
+GitHub auth died mid-cycle (`gh auth status` → *"the github.com token in GH_TOKEN is no longer valid"*; `git fetch` /
+`ls-remote` → *"could not read Username"*). Fleet heads could not be re-read after ~02:1xZ; last successful read: main
+`7d033ab`, BOSS-2 `1723564`, WORKER-2 `34db0b0`. Cycle K is committed locally at this head; the push is retried on cadence.
+CONTROL.log and the heartbeat continue at cadence **inside** the work loop, so the lane's signals stay live while its push
+channel is down — push-quiet here is an outage, not a dark lane (ERRATA-25f).
+
+### 23.7 The worker's own checker verified by RUNNING it — item 13 now rests on two independent implementations (2026-09-26T02:34:11Z)
+
+`tools/m4_prov_check.py` (149 ln, new at `fa71443`) claims to recompute every published derivation **by following the text
+now in the manifest**. ORCH-2 ran it in the gate worktree with its **default paths** (the corpus zip is materialised at the
+repo root, `fixtures/confirmed/` is tracked and byte-identical to the archived copy under `evidence/`):
+
+```
+$ python3 tools/m4_prov_check.py
+PASS inputs.corpus_zip_sha256 3f36c520391049a4 · PASS inputs.records_digest_sha256 d8c935367c8d0ab8
+PASS inputs.fixtures_digest_sha256 c5d8f6f3db3b0d01 · PASS inputs.overlays_digest 027f82a0d2522f3e
+PASS derivations.overlays_digest warned variant 58274f468fe2db53 · PASS outputs.ledger.jsonl d42136c673188f9e
+PASS outputs.by_transcript_digest c1ec4da86a6ce4f4 · PASS book_store.sha256 c0892fcd20502d49
+PASS tool_sha256 (blob at tool_commit) 6d4bb9ce78f2964e
+prov check: OK (manifest dce2eb3a0ff89ada)   [exit 0, 9/9]
+```
+
+Every value equals ORCH-2's own recomputation (§23.3), and the tool resolves `tool_sha256` **at the manifest's own
+`tool_commit`** — the same literal reading that corrected instrument defect #39. It is **independent**: its own
+`dir_digest`/`overlays_digest`, no import from `m5r_reduce.py`.
+
+**Mutation controls (a check that cannot fail is not a check):**
+
+| mutation | expected | observed |
+|---|---|---|
+| `inputs.fixtures_digest_sha256` → `0`×64 in a sibling temp manifest | exit 1, that field named | **exit 1**, `FAIL inputs.fixtures_digest_sha256` ✓ |
+| `inputs.overlays_digest` → the WARNED variant's value | exit 1 (the value row **and** the "must differ" row fire) | **exit 1**, `FAIL inputs.overlays_digest` ✓ |
+| `--manifest` pointing at a nonexistent file | exit 2, fail-closed | **exit 2**, `inputs missing:` ✓ |
+
+Two rows were added to the instrument so this is mechanical rather than a note: §14 *"item 13's own tool … run with its
+DEFAULT paths"* (exit 0 and 9/9) and §14 *"item 13's tool is NOT vacuous — mutation control"* (tamper a published digest in a
+temp manifest, require exit 1 with the field named, clean up the temp file). **Instrument now 326 rows.**
+
+**One latent coupling recorded, not charged as a defect:** the tool calls `dir_digest(--fixtures, "relpath")` while the
+manifest's derivation names **basename** keys. The derivation forecloses the divergence in its own text — *"the directory is
+flat, so the keys ARE basenames"* — and both copies of the directory are flat with 2 files, so the values agree. If a
+subdirectory is ever added under `fixtures/confirmed/`, the tool would silently follow a different convention from the text
+it claims to follow literally. Either `key="basename"` in the tool or one more sentence in the derivation closes it; it is
+recorded here so the next reader does not have to re-derive the equivalence.
+
+### 23.8 Instrument defect **#42** — an R1 sweep: nine rows reported `n=0`, and five of them were PASSes (2026-09-26T02:34:11Z)
+
+R1 (built into the instrument after ORCH-2 broke it once) says *every set-level check reports n = the number of comparisons
+performed, and a zero produced by zero comparisons is VACUOUS, not PASS*. Auditing the cycle-K golden for `\[n=0\]` found
+nine rows where `n` counted **defects found** or **matches** instead of comparisons — so a clean artefact reported
+`PASS [n=0]`, indistinguishable from a row that did no work at all:
+
+| row | n was | n is now |
+|---|---|---|
+| §4 interval overlaps with any fixture span | 0 (INFO) | **VACUOUS** — 0 interval comparisons were genuinely possible, and the label now says so |
+| §12 a committed pre-registration artefact exists | matches (0) | filenames compared under `runs/` (INFO/HELD retained) |
+| §12 no receipt declares the V2 holdout SPENT | offending receipts (0) → **PASS [n=0]** | JSON artefacts examined for a spend declaration |
+| §13 the rebuilt EVAL drops no field a derivation reads | dropped keys (0) → **PASS [n=0]** | 3 (two key-presence tests + the closure test) |
+| §15 v2.16 PRECEDENT — one-shot discipline in the tool's source | hits (0) → **PASS [n=0]** | source lines scanned |
+| §18 the audit tool opens no transcript content | matching lines (0) → **PASS [n=0]** | source lines scanned |
+| §18 item v2.a(iii) 2nd half — the STATEMENT | artefacts carrying it (0) → FAIL [n=0] | companion artefacts **searched** (the FAIL was real but looked like zero work) |
+| §18 v2.16 precedent — quantum-b tool/registry | matches (0) → **PASS [n=0]** | source lines scanned |
+| §15 criterion v2.12 — pre-registration commit before the run commit | candidate run dirs (0), INFO/HELD | **left as is** — reviewed: it claims no PASS, and its observed text says "HELD — no quantum-b run directory exists yet" |
+
+Post-sweep: **326 rows — PASS 273 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1**, `--selftest` 20/20, golden refreshed
+(`orch2_verify_output_34db0b0.txt`, 573 ln). The FAIL set is unchanged by the sweep — **an n fix must never move a verdict,
+and none did**; that is itself the check on the sweep.
+
+Rule added to the instrument's own discipline: *`n` counts comparisons performed. If the natural count is "how many defects
+did I find", the row is reporting the wrong number — report the population searched and put the defect count in the observed
+text.*
+
+### 23.9 Three rows judged wording instead of substance, the golden stopped clipping evidence, and the 13 FAILs got a repair map (2026-09-26T02:37:06Z)
+
+**Defect #44 (O-8's lineage, found by review — no verdict moved).** Three FAIL rows tested the shape ORCH-2 predicted rather
+than the criterion's substance, so a legitimate repair could have been failed:
+
+| row | was | now |
+|---|---|---|
+| §8 config canonicalization stated (20.15b) | demanded the literal key `config_digest_note` | **any key whose value states the construction** (`sort_keys` / `separators` / `canonical` / `sha256 of` / `json.dumps`), judged at every level where a `config_sha256` is published |
+| §18 v2.a(iii) 2nd half — the STATEMENT | 5 accepted phrasings | **13** (`one draw`, `same draw`, `single draw`, `re-manifest`, `manifest-only`, `not a second draw`, `no re-draw`, `not re-drawn`, `was not redrawn`, `without re-draw`, `identical partition`, `same partition`, `same salt`, `partition unchanged`, `only the manifest`) — defect #38's rule still holds: a bare citation is not a statement |
+| §18 ANNEX §H (A4 amended) | `sensitivit` anywhere + a `33` in the note (a hollow sentence could PASS) | the **conjunction** A4-as-amended actually requires: both denominators stated (29 and 33, with `sensitivity`/`primary`), a same-run / no-second-spend phrase, and the four named or bound by reference to `holdout_exclusions` |
+
+Post-amendment the FAIL set is unchanged (**13**), which is the check on the amendment: a substance fix must not move a
+verdict at a head where nothing was repaired. `n` on the §H row is now 4 (its four conditions), on the STATEMENT row 6
+(companion artefacts searched).
+
+**Defect #43 — the golden clipped its own evidence.** `Report.add` printed `observed[:400]`, so the 20.14c row's
+**19-offender list reached the published record unreadable**: a worker told "19 forward stamps in 5 files" cannot repair
+without re-deriving the list. Fixed by wrapping instead of clipping (`textwrap.fill`, 140 cols, continuations indented so
+§16's row-parser regex cannot mistake them for rows). The golden grows 573 → **668 lines** and now carries the full list:
+`adjudication.jsonl` **15** (the appended dispositions) + `RECOUNT-2026-09-26.json` 1 + `SEAL-AUDIT.json` 1 +
+`HELD-OUT-SPLIT-V2-EXCLUSIONS.json` 1 + `HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md` 1 = **19** over **4 distinct values**
+(`01:12:00Z` ×16, `01:14:30Z` ×2, `01:22:00Z` ×1) against commits at `00:39:44Z` / `00:41:22Z`. **The byte-frozen seal
+`tools/HELD-OUT-SPLIT-V2.json` carries no forward stamp**, so the repair never has to touch it.
+
+Rule added: *evidence a repair depends on must survive into the published record — wrap, never clip.* A row whose observed
+text is truncated is a row whose FAIL cannot be acted on.
+
+**`fleet/ORCH-2-REPAIR-MAP.md` published.** One entry per FAIL row at `34db0b0`: the row name, the criterion, the owning
+task/item, **the artefact change that flips it**, and the evidence the gate will re-derive. Ordered so the two one-sentence
+repairs (item 13b; q3's config note) come first, then the stamp family (3 rows, one root cause), then provenance completeness
+(v2.c/v2.d/v2.e), then quantum b's blockers (v2.a(iii)-statement, O-5's freeze binding, §H's sentence, v2.g's four untested
+refusals, v2.b), and finally the one entry ORCH-2 does **not** rule (the WORKER lane's `CONTROL.log` utc column — evidenced,
+REPORTED to BOSS-2). It also states what is already settled and not re-openable by repair: TASK-013 M5-R **PASS**, q1/q4/q5
+**PASS**, TASK-017 **PASS**, the v2 seal **STANDS**.
+
+### 23.10 Defect **#45** — the coverage claim was CURATED, and the curated list was three cycles stale; §20 now derives it (2026-09-26T02:41:41Z)
+
+§16's load-bearing row — *"every OPEN item in the queue has a row in this instrument that flips when it is repaired"* — read
+its open-item list from a **hardcoded tuple** frozen at cycle F/G:
+
+```python
+OPEN = ("8a", "8b", "11a", "11b", "12", "13", "14", "15a", "15b", "0d", "0e", "0f", "0g", "17.a", "v2.a", "v2.b")
+```
+
+Ten of those sixteen were **closed cycles ago** (8a, 11a/11b, 12, 13, 14, 15a/15b, 0d–0g), and every item opened since was
+**absent** (13b, 0h, 12c, v2.c, v2.d, v2.e, v2.g, v2.h, 20.14c, 20.15b). The row PASSed — on a list that no longer described
+the queue. This is the row the instrument's own note calls *"the coverage claim that matters, because these are the items
+whose re-gate must be a single run"*, so a stale list here is worse than a missing row: it asserts completeness that does not
+exist. Same family as O-9 (a proxy standing in for the substance) and #42 (a number that means something other than what the
+reader takes from it).
+
+**Fix, in two parts.** (i) The tuple is refreshed to the cycle-K open set
+`("0h", "12c", "13b", "v2.a", "v2.b", "v2.c", "v2.d", "v2.e", "v2.g", "v2.h", "20.14c", "20.15b")` and demoted to a
+cross-check; `criterion 20.14c`'s row now also names **TASK-020 item 12c**, which it enforces but did not cite. (ii) A new
+**§20 derives the claim** from the published repair map instead of curating it:
+
+| §20 row | test | at `34db0b0` |
+|---|---|---|
+| every FAIL row is mapped to a repair, quoted **VERBATIM** | each of the 13 FAIL row names appears in `fleet/ORCH-2-REPAIR-MAP.md` as `- **Row (verbatim):** \`…\`` | **PASS 13/13** |
+| the map carries no entry for a row that no longer FAILs | every quoted name is still a FAIL | **PASS**, 0 stale |
+| VACUOUS rows owe no repair | reported as vacuous-by-data, neither PASS nor FAIL (R1) | **PASS**, 1 row |
+
+Both directions matter: an unmapped FAIL is a FAIL nobody can act on, and a stale map entry is a promise a landed repair
+already kept — the map is append-only per cycle, so a repair forces a **new** map for the new head rather than an edit.
+
+**Defect #46 (found by §20's own first run).** The verbatim-quote regex was `` `([^`]+)` ``, which stops at the **first inner
+backtick** — and four row names contain one (`derivations_revision`, `audit_utc`, `tool_commit`, `utc_source`). The coverage
+row therefore reported 9/13 mapped and 4 "stale" entries that were its own truncated quotations. Fixed to match greedily to
+the closing backtick at end of line (a name may contain backticks; it may not end with one). The lesson is the mutation-test
+lesson again: **a new mechanical check must be run against the artefact it checks before its verdict is believed** — §20's
+first FAIL was §20's own bug, and it was only readable because the row printed the names it failed to match.
+
+**Instrument after §20: 329 rows — PASS 276 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1**, `--selftest` 20/20, golden refreshed
+(676 ln). The FAIL set is the same 13 the repair map lists — which is now a **mechanical** agreement, not an assertion.
+
+### 23.11 The cycle-K amendments are now mutation-tested, and §20 knows which head its map binds (2026-09-26T02:46:02Z)
+
+**(a) Four predicates lifted to module level so `--selftest` can attack them.** The §8/§18/§19 amendments (defect #44) and
+§20's quote parser (defect #46) were inline expressions — correct today, invisible to the selftest, and one refactor away from
+silently changing a gate result (self-item O-2's whole reason for existing). They are now `states_construction()`,
+`one_draw_statement()`, `h_denominator_commitment()` and `verbatim_row_quotes()`, each documented with the defect it guards,
+and **seven new selftest cases** pin both directions:
+
+| case | guard | positive | negative |
+|---|---|---|---|
+| T21 | #44 §8 | a key named `config_canonicalization` whose value states `sort_keys`/`separators` **counts** | the literal `config_digest_note` also counts; an unrelated `note` key does **not** |
+| T22/T23 | #44 §18 vs #38 §18 | *"the partition was not redrawn, same salt, manifest only"* with both commits **is** the statement | a bare `(src 293b29c)` timestamp citation is **not** |
+| T24/T25 | #44 §19 | 29 + 33 + `holdout_exclusions` + *"SAME run, no second spend"* satisfies amended A4 | *"a sensitivity figure over 33 transcripts"* alone does **not** (the hollow sentence the old row PASSed) |
+| T26/T27 | #46 §20 | a quoted row name **containing inner backticks** parses whole | a line that is not a `**Row (verbatim):**` quote yields nothing (no phantom coverage) |
+
+`--selftest` is now **27/27 ok**. The full run is **verdict-neutral**: 329 rows, FAIL 13, and the FAIL set is byte-for-byte
+the same 13 names as before the refactor (compared mechanically, not by eye). Golden refreshed (676 ln).
+
+**(b) §20 is bound to the head its map was published for.** Running the amended instrument at the *previous* gated head
+`1c8a287` exposed the flaw: that head has **17** FAILs, the `34db0b0` map quotes **13**, so §20 reported a FAIL — against the
+worker, for a mismatch that is the gate's own bookkeeping. A repair map is head-specific by design (append-only per cycle), so
+§20 now reads the head from the map's title and, when it differs from the head being gated, reports **INFO — "coverage NOT
+claimed for this head"** instead of failing anybody. Verified at both heads:
+
+| head | rows | FAIL | §20 |
+|---|---|---|---|
+| `34db0b0` (map's head) | 329 | **13** | mapped 13/13 PASS · 0 stale PASS · VACUOUS 1 PASS |
+| `1c8a287` (previous) | 327 | **17** | INFO — map binds `34db0b0`, coverage not claimed; VACUOUS 1 PASS |
+
+The row keeps its teeth where it matters: at the map's own head, an unmapped FAIL or a stale entry fails the run.
+
+### 23.12 Why the re-gate transfers **all thirteen** M5-R criteria, criterion by criterion (2026-09-26T02:48:44Z)
+
+Byte-identity of the outputs is not automatically byte-identity of the *verdict*: TASK-013's thirteen criteria are not all
+properties of the same thing. Some are properties of the artefact bytes, some of the tool's behaviour, some of the process
+around it. Classified and evidenced:
+
+| criterion | property of | cycle-K evidence at `34db0b0` | status |
+|---|---|---|---|
+| **C1** completeness (every record → exactly one finding) | artefact bytes | `ledger.jsonl` + `by-transcript` byte-identical; 1334 findings / 230 files | **transferred** |
+| **C2** dedupe + cross-detector merge performed and reported | artefact bytes | identical manifest `stats` (1336 detector instances → 1334 findings, seeded 3) | **transferred** |
+| **C3** adjudication against cited bytes (transcript + book quotes byte-exact) | artefact bytes, re-tested | the re-run itself reports **0 citation failures, 242 ok / 0 bad book refs** | **re-verified at head** |
+| **C4** classification per STANDARDS; the tool never invents CERTAIN | tool behaviour + bytes | identical class distribution inside identical bytes; the diff touches **no logic** (below) | **transferred** |
+| **C5** seeded vs independent reported separately | artefact bytes | identical; seeded = 3 reported apart | **transferred** |
+| **C6** finding-record shape complete | artefact bytes | field-level diff over all **1334 rows**: the only field that can differ is `status_by`, and only when the `--tool-commit` pin is omitted (§23.2) | **transferred** |
+| **C7** coverage truth in the ledger's own summary | artefact bytes | identical summary text | **transferred** |
+| **C8** provenance manifest binds all inputs, every derivation recomputable | artefact + tool | manifest identical **except `tool_sha256`**, which re-derives at its own stated `tool_commit`; derivations now **7/7** literal (§14) and independently confirmed by the worker's own checker **9/9** (§23.7) | **strengthened** |
+| **C9** determinism: a fresh independent replay at a pinned utc reproduces every output byte | process | **cycle K's re-run IS that replay** — different head, different worktree, corpus re-materialised from the zip, pins from the manifest | **re-verified at head** |
+| **C10** suite green WITH corpus, skip counts reported, count never drops | process | `Ran 263 tests in 199.3s — OK (skipped=1)`; floor 257 → **263**, no drop, no errata needed | **re-verified at head** |
+| **C11** stdlib only, no network, declared read/write scope, no evidence executed as instructions | tool source | imports at head: `argparse, datetime, difflib, hashlib, io, json, os, re, sys, unicodedata` — all stdlib; **no** `urllib`/`socket`/`requests`/`subprocess`/`os.system`; **one** write site (`ledger_path`); the diff changes **no import, I/O or network line** | **re-verified at head** |
+| **C12** no error rate, no precision/recall, no completion language | artefact bytes | identical text | **transferred** |
+| **C13** limits disclosed | artefact bytes | identical text | **transferred** |
+
+**8 transferred by byte-identity · 4 re-verified at head (C3, C9, C10, C11) · 1 strengthened (C8).** No criterion rests on the
+reducer's bytes being unchanged, which is why the PASS survives their change.
+
+**The diff, precisely (and a correction to this ledger's own earlier wording).** `git diff --numstat 1c8a287 34db0b0 --
+tools/m5r_reduce.py` = **+42 / −4** (46 changed lines, net +38) — earlier entries in this cycle said "+46 lines", which reads
+as 46 *added*; the correct figure is 46 *changed*. Every one of them is inside the manifest's `derivations` dict literal:
+three derivation strings rewritten (`fixtures_digest_sha256`, `overlays_digest`, plus a new `json_canonicalization`) and the
+new `derivations_revision` record. **No control flow, no import, no I/O, no constant that feeds a computation.** That is what
+makes "documentation-only" a verified statement rather than a characterisation — and it is why C4 and C11 transfer instead of
+needing a fresh adjudication.
+
+**One artefact sentence worth quoting, because it is honest and it is also why item 13b exists:**
+`derivations_revision.effect_on_run_outputs` names the run's untouched values (ledger `d42136c6…`, by-transcript `c1ec4da8…`,
+1334 findings, `tool_sha256 6d4bb9ce…` at `tool_commit dada3e6…`) and says *"only this manifest's derivations prose changed"*;
+`reproducibility_note` says *"a rebuild with this revision emits these exact derivations and a byte-identical
+ledger/by-transcript; tool_sha256 necessarily differs, because it hashes the running file."* The first half is exactly right
+and ORCH-2 reproduced it. The second half is the one that omits the `--tool-commit` dependency (§23.2) — item **13b**, one
+clause.
+
+### 23.13 Two more criteria mechanized — the field-level diff and C11's source scan — and defect **#47** (2026-09-26T02:52:34Z)
+
+**(a) The cycle-K diagnosis is now a row.** §1 *"criterion C6 / item 13b — the re-run's ledger rows are FIELD-IDENTICAL to the
+published ones, and any differing field is NAMED"* aligns the published and re-run ledgers by `id` and reports every field
+whose value differs: **1334/1334 aligned, differing fields: NONE** (PASS, n=1334). This is the analysis that settled the
+re-gate — run without `--tool-commit`, the only differing field is `status_by` — mechanized so the next cycle inherits the
+answer instead of re-deriving it, and so a future tool change that moves a **real** field is named rather than hidden behind a
+digest mismatch. A field name is worth more than a digest: it says *what* moved.
+
+**(b) C11 is now read from the tool's source every run.** §1 *"criterion C11 — the reducer is stdlib-only, opens no network or
+subprocess, and every write goes under `--out`"* (PASS, n=18 = 10 imports + 6 write sites + 2 derivation checks): imports are
+`argparse, datetime, difflib, hashlib, io, json, os, re, sys, unicodedata` — all in `sys.stdlib_module_names`; no
+`urllib`/`socket`/`requests`/`http`/`subprocess`; all six write-mode `open(` sites target `args.out`, `ledger_path` or `bt`,
+and both of those are assigned from `args.out`. So C11 stops being a cycle-K assertion and becomes a standing check: a future
+edit that adds a network import or writes outside `--out` flips the row.
+
+**(c) Defect #47 — a row that under-counted the population it polices.** The first version of (b) captured write sites with
+`open\(([^,]+),\s*["\']w`, which stops at the **first comma**: `open(os.path.join(args.out, "SUMMARY.md"), "w"` never
+matched, so the row reported **ONE** write site where the tool has **SIX** — and still PASSed. That is worse than no row: it
+reads as a clean bill of health over a population of one. The derivation regexes were also anchored `^ledger_path` and so
+missed both indented assignments inside `main()`, which is what made the row FAIL loudly enough to be caught. Fixed by
+scanning **lines** that contain both an `open(` and a write mode, then judging each line's target, and by anchoring `^\s*`.
+Rule: **when a row counts a population, verify the count against the source by hand at least once** — an under-count is
+invisible in the verdict and only visible in the number.
+
+**(d) §20 earned its keep in the same act.** Adding the C11 row made the run FAIL **15**: the new row was not in the repair
+map, and §20 reported *"13/14 mapped; UNMAPPED: criterion C11 — …"*. That is the coverage check doing exactly what defect #45
+said it must — no FAIL may exist that nobody has mapped to a repair — and it fired on the gate's own new row before it fired
+on anybody else's. Once C11's own regex was fixed the row PASSed and the FAIL set returned to the mapped 13.
+
+**Instrument: 331 rows — PASS 278 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1**, `--selftest` 27/27, golden refreshed (680 ln).
+
+### 23.14 The gate turned its timestamp census on its own lane and found two classifier defects — and confirmed it had NOT over-charged the worker (2026-09-26T03:00:26Z)
+
+`--self-audit` runs the same census over ORCH-2's own tree. Two defects fell out, both in the classifier that separates
+*a fuzzy stamp this lane asserts* from *a fuzzy stamp this lane quotes in order to report it* — the distinction the whole
+criterion 20.14a charge rests on.
+
+**Defect #48 — the self-audit reported the count and never verdicted it.** It printed `FUZZY asserted 26` beside two PASS
+rows (O-4, O-6) and drew no conclusion, so this lane could accumulate the exact defect it charges WORKER-2 with while its
+self-audit looked clean. A row now judges it: asserted-fuzzy stamps in **amendable** docs FAIL; those inside append-only
+records (`CONTROL.log`, the heartbeat log, the ledger, `GATES.md`, `LOG.md`, the cursor, and `status.md`'s log, which
+declares itself append-only) are reported as history, because repairing them means rewriting a record.
+
+**Defect #49 — the citation classifier tested the wrong character.** `FUZZY_TS` matches only the **time fragment**, so the
+"immediate wrapping" test inspected the character beside `21:5xZ` *inside* `` `2026-09-25T21:5xZ` `` — a digit, not a
+delimiter — and classified a fully backticked quotation as an **asserted instance**. Backticking the whole stamp is the
+normal way this lane quotes one. Two fixes: look outward across timestamp characters for the delimiter, and treat a
+delimited span that also carries a full ISO stamp or a `(src ` annotation as **quoted artefact content** (an author's own
+stamp is never written that way). Four selftest cases pin it (T28–T31), including the negative that keeps it honest: a
+nearby backticked **digest** does not pardon a fuzzy stamp in the author's own sentence. `--selftest` is now **31/31**.
+
+**The charge against WORKER-2 was NOT overstated — verified, not assumed.** The classifier bug inflated *instance* counts, so
+the first question was whether the published worker figures were wrong. Re-run at **both** gated heads:
+
+| head | 20.14a asserted instances | quoted sites | verdict |
+|---|---|---|---|
+| `1c8a287` (cycle J golden, pre-fix) | 0 | 29 | PASS |
+| `1c8a287` (post-fix) | **0** | **29** | PASS |
+| `34db0b0` (pre-fix) | 0 | 29 | PASS |
+| `34db0b0` (post-fix) | **0** | **29** | PASS |
+
+No worker-side figure moved, because the worker's own quotations were already caught by the 60-character context rule; the
+bug only bit on spans the context window could not reach. The historical "26 instances across 10 files" at `4fc40c8` (ledger
+§20.14a) was computed with the old classifier and is therefore an **upper bound** — but item 12 repaired those sites and the
+row has PASSed at every head since, so nothing owed to WORKER-2 changes. Recording it anyway: a figure computed with a
+buggy classifier stays in the record labelled with that fact.
+
+**ORCH-2's own lane, corrected.** Asserted-fuzzy stamps fell 26 → **17**, citations rose 24 → **27**, and the amendable count
+is **0**. Three of the repairs were substantive, not cosmetic: the GitHub-outage time this lane had written as `~02:1xZ` is
+now a **bounded window with its bounds and their sources** — *between 02:01:46Z (CONTROL seq 46) and 02:17:07Z (the first
+cycle-K document stamp); the exact second is not recoverable because the credential died between two calls in that window* —
+in `status.md`, `ORCH-2-HEARTBEAT.md` and `ORCH-STATE.md`. That is criterion 20.14's own discipline applied to an
+approximation: state the bound and its source instead of a fuzzy token. The remaining 17 sit in append-only records,
+including CONTROL seq 47's `~02:1xZ`, which is corrected here rather than edited there.
+
+Instrument **331 rows — PASS 278 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1** (unchanged), golden unchanged, `--selftest`
+**31/31**.

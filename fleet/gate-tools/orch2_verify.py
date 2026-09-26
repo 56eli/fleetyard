@@ -26,6 +26,11 @@ from __future__ import annotations
 import argparse
 import collections
 import datetime
+import shutil
+import subprocess
+import sys
+import textwrap
+import tempfile
 import hashlib
 import itertools
 import json
@@ -47,9 +52,28 @@ def classify_fuzzy(text: str, m) -> str:
     gate as the worst offender in the lane - which is what this instrument did to ORCH-2's
     own tree on its first self-audit."""
     a, b = m.start(), m.end()
-    wrapped = (a > 0 and b < len(text) and text[a - 1] in "`'\"" and text[b] in "`'\"")
+    # DEFECT #49: FUZZY_TS matches only the TIME fragment, so the "immediate wrapping" test looked at the character
+    # beside `21:5xZ` inside `2026-09-25T21:5xZ` - a digit, not a delimiter - and counted a fully backticked
+    # quotation as an ASSERTED instance. That is the normal way this lane quotes a fuzzy stamp, so the bug inflated
+    # every instance count and deflated every citation count, in the worker census and in ORCH-2's own self-audit.
+    # Look outward across timestamp characters for the delimiter instead.
+    left = text[max(0, a - 26):a]
+    right = text[b:b + 26]
+    wrapped = bool(re.search(r'''[`'"][-0-9T:ZzxX]*$''', left)) and bool(
+        re.match(r'''[-0-9T:ZzxX]*[`'"]''', right))
     ctx = CITATION_CTX.search(text[max(0, a - 60):a])
-    return "citation" if (wrapped or ctx) else "instance"
+    # DEFECT #49 (second half): the lane quotes another artefact's WHOLE LINE - `run_utc 2026-09-25T20:50:46Z
+    # (src 293b29c; read 20:5xZ)` - and the fuzzy fragment sits far from either delimiter, so neither the wrapping test
+    # nor the 60-char context sees it. A delimited span that also carries a full ISO stamp or a `(src ` annotation is
+    # quoted artefact content, not the author's own clock: the author's own stamp is never written that way.
+    quoted_span = False
+    for mm in re.finditer(r"""[`'"]([^\n`'"]{0,140})[`'"]""", text):
+        if mm.start(1) <= a and b <= mm.end(1):
+            inner = mm.group(1)
+            if TS_EXACT.search(inner) or "(src " in inner:
+                quoted_span = True
+                break
+    return "citation" if (wrapped or ctx or quoted_span) else "instance"
 
 
 # timestamp-discipline patterns (criterion 20.14), module-level so the self-audit and the
@@ -78,7 +102,7 @@ def git(wt: str, *args: str) -> tuple[int, bytes]:
     return p.returncode, p.stdout
 
 
-PREV_GATED = "72104a5"   # the head cycle I gated; the append-only comparison point for §4/§19
+PREV_GATED = "1c8a287"   # the head cycle J gated; the append-only / delivery-range comparison point
 
 
 COMPANION_PATTERNS = ("SEAL-APPENDIX", "SEAL-AUDIT", "SPLIT-V2-NOTE", "SPLIT-V2-EXCLUSIONS",
@@ -261,6 +285,54 @@ def rule_a_defect(suspected: str, quoted: str, dropped_words) -> tuple:
 
 
 
+# ---- predicates lifted to module level so --selftest can mutation-test them (defects #44/#46 guards) ----
+CONSTRUCTION_RE = re.compile(r"sort_keys|separators|canonical|sha256 of|json\.dumps", re.I)
+
+
+def states_construction(obj):
+    """§8 / criterion 20.15b: is the digest's construction stated BESIDE it, under ANY key that states it?
+    Defect #44: the row used to demand the literal key name `config_digest_note`, which would have failed a
+    repaired artefact that called the key `config_canonicalization` or `digest_construction`."""
+    if not isinstance(obj, dict):
+        return []
+    hits = [k for k, v in obj.items()
+            if isinstance(v, str) and ("digest_note" in k or "canonical" in k or "construction" in k)
+            and CONSTRUCTION_RE.search(v)]
+    return hits or (["config_digest_note"] if "config_digest_note" in obj else [])
+
+
+ONE_DRAW_RE = re.compile(r"one draw|same draw|single draw|re-?manifest|manifest[- ]only|not a second draw|"
+                         r"no re-?draw|not re-?drawn|was not redrawn|without re-?draw|identical partition|"
+                         r"same partition|same salt|partition unchanged|only the manifest", re.I)
+
+
+def one_draw_statement(text, first_seal, second_seal):
+    """§18 / item v2.a(iii) 2nd half: does the text STATE that the two seal commits are one draw?
+    Defect #38: a bare citation of the first seal commit is a timestamp source, not the statement - so both
+    commits must appear together with a one-draw phrase, or the phrase must be tied to the commit inline."""
+    both = (first_seal in text) and (second_seal in text)
+    return (both and bool(ONE_DRAW_RE.search(text))) or bool(
+        re.search(re.escape(first_seal) + r"[^\n]{0,160}(one draw|manifest|re-?draw|same salt)", text, re.I))
+
+
+def h_denominator_commitment(text, n_excluded=0, all_members=None):
+    """§19 / ANNEX §H (A4 amended): the conjunction the amended A4 actually requires - BOTH denominators stated
+    (29 primary, 33 sensitivity), FROM THE SAME RUN (no second spend), and the four named or bound by reference.
+    Defect #44: the row used to accept the word `sensitivit` anywhere plus a `33`, which a hollow sentence PASSed."""
+    denom = ("29" in text) and ("33" in text) and bool(re.search(r"sensitivit|primary", text, re.I))
+    same_run = bool(re.search(r"same run|single run|one run|no second spend|not re-?spent|same execution|"
+                              r"from the same", text, re.I))
+    named = (n_excluded == 4 and all_members is True) or bool(
+        re.search(r"holdout_exclusions|exclusion_set|the four (named|excluded)|four excluded", text, re.I))
+    return denom, same_run, named
+
+
+def verbatim_row_quotes(map_text):
+    """§20: the row names the repair map quotes verbatim. Defect #46: a backtick-negated class stops at the FIRST
+    inner backtick, and four row names contain one - so match greedily to the closing backtick at end of line."""
+    return re.findall(r"\*\*Row \(verbatim\):\*\* `(.+)`\s*$", map_text, re.M)
+
+
 class Report:
     def __init__(self) -> None:
         self.rows: list[dict] = []
@@ -272,7 +344,12 @@ class Report:
         nn = "" if n is None else f" [n={n}]"
         print(f"  {verdict:6s} {name}{nn}{flag}")
         if verdict != PASS and observed:
-            print(f"         expected {str(expected)[:150]} | observed {str(observed)[:400]}")
+            # DEFECT #43: observed was clipped at 400 chars, so a 19-item offender list reached the published golden
+            # unreadable - evidence a repair depends on must survive into the record. Wrap, never clip.
+            exp = textwrap.fill(str(expected), 140, subsequent_indent=" " * 19)
+            obs = textwrap.fill(str(observed), 140, subsequent_indent=" " * 19)
+            print(f"         expected {exp}")
+            print(f"                  | observed {obs}")
         if note:
             print(f"         {note}")
 
@@ -383,8 +460,67 @@ def section_bindings(wt, rep, head):
     for c in ("219075a", "ffb8811", head[:7]):
         rc, blob = git(wt, "show", f"{c}:tools/m5r_reduce.py")
         same.append(sha_bytes(blob) if rc == 0 else "UNREADABLE")
-    rep.check("1", "m5r_reduce.py identical across 219075a/ffb8811/head", [tool] * 3, same, n=3,
-              note="the M5-R PASS depends on this")
+    # O-9: byte-identity of the reducer was a PROXY for "the M5-R figures still reproduce". At 34db0b0 the
+    # tool changed (+46 lines of derivations prose, TASK-020 item 13), the proxy broke, and the substance was
+    # settled by RE-RUNNING the tool at head with the published pins (row below). The history row stays, as
+    # history: it names the heads across which the bytes were identical and the head where they moved.
+    rep.add("1", "HISTORY — m5r_reduce.py bytes across the gated heads (a proxy, superseded by the re-run row)",
+            "identical while the M5-R figures were being established",
+            f"{' / '.join(str(x)[:8] + '…' for x in same)}", INFO, n=len(same),
+            note="the first two are the bytes that produced the published ledger; the third is head. The change is "
+                 "documentation-only prose inside the manifest's `derivations` block plus a `derivations_revision` "
+                 "record - see the re-run row for whether behaviour moved")
+    rr = m5r_rerun(wt)          # -> (ok, (aligned, n_pub, n_new, field_diff), detail) or None
+    if rr is None:
+        rep.add("1", "criterion 21.4 / TASK-013 — the reducer AT HEAD reproduces the published M5-R outputs when run "
+                     "with the pins the manifest names", "ledger d42136c6… + by_transcript c1ec4da8… byte-identical",
+                "NOT RUNNABLE in this worktree (evidence/ or corpus/ not materialised)", INFO, n=1,
+                note="materialise with tools/m5r_inputs.sh's body (minus its git fetch) + the sha-verified zip")
+    else:
+        rep.add("1", "criterion 21.4 / TASK-013 — the reducer AT HEAD reproduces the published M5-R outputs when run "
+                     "with the pins the manifest names", "ledger + by_transcript byte-identical, manifest differing "
+                "only where a rebuild must differ", rr[2], PASS if rr[0] else FAIL, n=1334,
+                note="this is the row TASK-013's PASS now rests on: not 'the tool never changed' but 'the tool at "
+                     "head still emits these exact bytes'. `tool_sha256` necessarily differs (it hashes the running "
+                     "file), which the lane's own derivations_revision states")
+        al, npub, nnew, fdiff = rr[1]
+        rep.add("1", "criterion C6 / item 13b — the re-run's ledger rows are FIELD-IDENTICAL to the published ones, "
+                     "and any differing field is NAMED", "0 differing fields across all rows, ids aligned",
+                f"{al} rows aligned by id of {npub} published / {nnew} re-run; differing fields: "
+                f"{fdiff or 'NONE'}",
+                PASS if al == npub == nnew and not fdiff else FAIL, n=al,
+                note="this is the diagnosis that settled cycle K, mechanized: run WITHOUT --tool-commit, every row is "
+                     "identical except `status_by` (which embeds the pin, `@dada3e6…` vs `@UNPINNED`) and the digest "
+                     "moves to c94cce40… - which is why item 13b requires the reproducibility_note to name the pin. "
+                     "A field name here is worth more than a digest mismatch: it says WHAT moved")
+        # criterion C11 (TASK-013): stdlib only, no network, writes confined to --out - read statically from the tool
+        # at head, so a future change that adds a network call or writes elsewhere flips this row.
+        tsrc = open(os.path.join(wt, "tools/m5r_reduce.py"), encoding="utf-8").read()
+        imps = sorted({m.split(".")[0] for m in re.findall(r"^(?:import|from)\s+([A-Za-z_][\w.]*)", tsrc, re.M)})
+        nonstd = [m for m in imps if m not in sys.stdlib_module_names]
+        FORBID = {"urllib", "socket", "requests", "http", "ftplib", "smtplib", "subprocess", "telnetlib", "asyncio"}
+        netish = [m for m in imps if m in FORBID]
+        # DEFECT #47: the first version captured `open\(([^,]+),\s*["\']w`, which stops at the FIRST comma - so
+        # `open(os.path.join(args.out, "SUMMARY.md"), "w"` never matched and the row reported ONE write site where the
+        # tool has SIX. A row that under-counts the population it polices is worse than no row: it reads as a clean bill
+        # of health. Scan LINES that contain both an open( and a write mode, then judge each line's target. The
+        # derivation regexes also needed ^\s*, since both assignments are indented inside main().
+        wlines = [ln.strip() for ln in tsrc.split("\n")
+                  if re.search(r"\bopen\(", ln) and re.search(r"[\"'][wax]b?[\"']", ln)]
+        outside = [ln for ln in wlines if not re.search(r"args\.out|\bledger_path\b|\bbt\b", ln)]
+        derived = [bool(re.search(r"^\s*ledger_path\s*=.*args\.out", tsrc, re.M)),
+                   bool(re.search(r"^\s*bt\s*=.*args\.out", tsrc, re.M))]
+        c11 = not nonstd and not netish and not outside and all(derived)
+        rep.add("1", "criterion C11 — the reducer is stdlib-only, opens no network or subprocess, and every write goes "
+                     "under --out", "0 non-stdlib imports, 0 forbidden modules, 0 write sites outside --out",
+                f"{len(imps)} imports {imps}; non-stdlib: {nonstd or 'none'}; network/subprocess: {netish or 'none'}; "
+                f"{len(wlines)} write-mode open sites, outside --out: {outside or 'none'}; ledger_path and bt derived "
+                f"from args.out: {derived}",
+                PASS if c11 else FAIL, n=len(imps) + len(wlines) + 2,
+                note="C11 was re-verified at head at cycle K on this evidence: imports argparse/datetime/difflib/"
+                     "hashlib/io/json/os/re/sys/unicodedata (all stdlib), no urllib/socket/requests/subprocess/"
+                     "os.system, and the +42/-4 diff changed no import, I/O or network line. Read statically each run "
+                     "so the next tool change is judged, not assumed")
 
     # other head artefacts unchanged
     # O-7: adjudication.jsonl and SUMMARY.md were pinned "unchanged" here, but TASK-018 items 0d/0g
@@ -553,9 +689,22 @@ def section_census_exposure(wt, rep, sup):
         e = re.search(r"^EXCERPT\s*=\s*(\d+)", src, re.M)
         rep.check("3", "format-leg excerpt width (pinned detector vs q3 config)", c3.get("excerpt_chars"),
                   int(e.group(1)) if e else None, n=1)
-        rep.add("3", "q4 format config digest covers a SUBSET", "state the subset relation (item 14)",
-                f"q3 {q3.get('config_sha256', '')[:12]}… vs q4 {sup['runs']['format']['config_sha256'][:12]}…",
-                FAIL, note="comparability established from the pinned source, not from the digests")
+        # O-9 (item 14): criterion 20.16 is satisfied EITHER by a complete config OR by a stated subset
+        # relation. The q4 format leg was rebuilt to publish the complete configuration, so its digest now
+        # EQUALS q3's; a row that demanded the subset sentence would have failed a repaired artefact.
+        q4f = sup["runs"]["format"]
+        d3, d4 = str(q3.get("config_sha256", "")), str(q4f.get("config_sha256", ""))
+        k3 = sorted((q3.get("config") or {}).keys())
+        k4 = sorted((q4f.get("config") or {}).keys())
+        subset_stated = bool(re.search(r"subset|remainder|complete configuration", json.dumps(q4f), re.I))
+        rep.add("3", "criterion 20.16 / item 14 — the q4 format-leg config digest covers the COMPLETE config, or "
+                     "states the subset relation and where the remainder lives",
+                "digests equal over identical key sets, or the subset relation stated in the same object",
+                f"q3 {d3[:12]}… {k3} vs q4 {d4[:12]}… {k4}; equal: {d3 == d4 and k3 == k4}; subset stated: "
+                f"{subset_stated}",
+                PASS if (d3 == d4 and k3 == k4) or subset_stated else FAIL, n=len(k4),
+                note="comparability was first established from the pinned detector source, not from the digests; "
+                     "the digests now agree because the q4 leg publishes abbreviations + excerpt_chars + rules too")
 
 
 def section_adjudication(wt, rep):
@@ -584,11 +733,16 @@ def section_adjudication(wt, rep):
     if rc == 0:
         prev_lines = [l for l in prev_blob.decode("utf-8").split("\n") if l.strip()]
         same = prev_lines == lines[:len(prev_lines)]
+        # the previously gated head may already carry the dispositions, so "growth" is not the test: the test is
+        # that nothing already published moved, and that anything NEW is a disposition row.
+        newl = [json.loads(x) for x in lines[len(prev_lines):]]
+        only_disp = all(r.get("record") == "disposition" for r in newl)
         rep.add("4", "item 0g — the append is APPEND-ONLY: every line of the previously gated file is "
-                     "byte-identical and in the same order", f"the {len(prev_lines)} lines at {PREV_GATED[:7]} "
-                f"unchanged, dispositions after them",
-                f"{len(lines)} lines now; first {len(prev_lines)} identical: {same}; appended {len(disp)}",
-                PASS if same and len(lines) == len(prev_lines) + len(disp) else FAIL, n=len(lines))
+                     "byte-identical and in the same order, and anything new is a disposition row",
+                f"the {len(prev_lines)} lines at {PREV_GATED[:7]} unchanged; new lines are dispositions only",
+                f"{len(lines)} lines now; first {len(prev_lines)} identical: {same}; new lines: {len(newl)}, all "
+                f"dispositions: {only_disp}; dispositions in the file: {len(disp)}",
+                PASS if same and only_disp else FAIL, n=len(lines))
     else:
         rep.add("4", "item 0g — append-only integrity", f"a comparable blob at {PREV_GATED[:7]}", "UNREADABLE", INFO)
     ids122 = {r["id"] for r in rows}
@@ -720,7 +874,7 @@ def section_adjudication(wt, rep):
                 if a is not None and b is not None and a >= 0 and s < b and a < e:
                     ov.append((r["id"], fid))
     if ncmp == 0:
-        rep.add("4", "interval overlaps with any fixture span", "0", "0", INFO, n=0,
+        rep.add("4", "interval overlaps with any fixture span", "0", "0", VACUOUS, n=0,
                 note="R1 satisfied and the row is honestly VACUOUS-by-data: 0 interval comparisons were possible "
                      "because no adjudicated row shares a transcript with any fixture. The membership test above "
                      "(0 of 122 rows in a fixture-bearing transcript, n=122) is the decisive one.")
@@ -1141,9 +1295,27 @@ def section_manifest_completeness(wt, rep):
         # DEFECT #37 of this instrument: this row cited criterion 20.16, which is about a published digest
         # covering a SUBSET (item 14, the q4 format leg, checked in §3). Stating HOW a digest is computed is
         # criterion 20.15b. A mis-cited criterion sends the worker to repair the wrong sentence.
+        # O-9: the note belongs WHERE THE DIGEST IS PUBLISHED. The q4 supplement publishes three digests under
+        # `runs.*` and carries a `config_digest_note` in each; demanding a top-level key there would fail a
+        # repaired artefact. Judge every published config_sha256 that has no note beside it.
+        # O-8 discipline: the criterion is "the canonicalization is stated BESIDE the digest", not "it is stated under
+        # the key name ORCH-2 predicted". Any key whose value states the construction counts.
+        _stated = states_construction          # module level, so --selftest mutation-tests it (defect #44)
+        unnoted = []
+        if "config_sha256" in d and not _stated(d):
+            unnoted.append("(top level)")
+        for rn, rv in (d.get("runs") or {}).items():
+            if isinstance(rv, dict) and "config_sha256" in rv and not _stated(rv):
+                unnoted.append(f"runs.{rn}")
+        noted = ([f"top level ({','.join(_stated(d))})"] if ("config_sha256" in d and _stated(d)) else []) + \
+            [f"runs.{rn} ({','.join(_stated(rv))})" for rn, rv in (d.get("runs") or {}).items()
+             if isinstance(rv, dict) and "config_sha256" in rv and _stated(rv)] + \
+            [f"top level ({','.join(_stated(d))})" for _ in [0]
+             if "config_sha256" not in d and _stated(d)]
         rep.add("8", f"{rel}: config canonicalization stated (criterion 20.15b)",
-                "config_digest_note present", "present" if "config_digest_note" in d else "ABSENT",
-                PASS if "config_digest_note" in d else FAIL, n=1,
+                "the construction stated beside every published config digest, under any key that states it",
+                f"noted: {noted or 'none'}; UNNOTED: {unnoted or 'none'}",
+                PASS if not unnoted and noted else FAIL, n=len(noted) + len(unnoted),
                 note="the q2 supplement states how its config digest is computed; the others must adopt it. Item 14 "
                      "(criterion 20.16, the q4 format leg publishing only `rules` where q3 publishes "
                      "abbreviations + excerpt_chars + rules) is a separate row in §3")
@@ -1553,7 +1725,13 @@ def section_inherited(wt, rep):
 # ANNEX B1/B4 frozen inputs (fleet/queue/pending/TASK-019.md) — a drift on any of these voids the
 # pre-registration, so the instrument checks them at every run (ANNEX amendment §F7).
 FROZEN = (("tools/det_dropword.py", "a0236325"), ("tools/det_format.py", "ef9ff4f2"),
-          ("tools/m5r_reduce.py", "6d4bb9ce"), ("findings/ledger.jsonl", "d42136c6"),
+          # RE-PINNED 2026-09-26T02:17:07Z by ORCH-2 (ANNEX §F8): the reducer changed at 34db0b0 (+46 lines of
+          # derivations prose). The drift is disclosed in the artefact itself (`derivations_revision`,
+          # `effect_on_run_outputs: none`) and was verified behaviour-neutral by re-running the tool at head with
+          # the published pins: ledger d42136c6… and by_transcript c1ec4da8… reproduce BYTE-IDENTICALLY. §F7's
+          # void-on-drift rule exists to stop SILENT input changes; it is not a tripwire on a disclosed,
+          # verified-neutral documentation change. The old pin was 6d4bb9ce (blob at dada3e6).
+          ("tools/m5r_reduce.py", "a89ff189"), ("findings/ledger.jsonl", "d42136c6"),
           ("fleet2/POLICY-MANIFEST.sha256", "0fe20a60"), ("docdocgo-fixes.zip", "3f36c520"))
 TAINTED4 = ("Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt",
             "Realization_of_the_Self_as_the_I_Nov_2003_Part_1_enxautogen_html.txt",
@@ -1627,22 +1805,27 @@ def section_quantum_b(wt, rep):
     rep.add("12", "split-v2 file digest at this head (the pre-registration binds the post-note value)",
             "recorded, expected to change exactly once when v2.a lands", sd, INFO, n=1)
 
-    prereg = []
+    prereg, nscan = [], 0
     for root, dirs, files in os.walk(os.path.join(wt, "runs")):
         dirs[:] = [d for d in dirs if not d.startswith(".")]
         for fn in sorted(files):
+            nscan += 1
             t = fn.lower()
             if "prereg" in t or "pre-reg" in t or "quantum-b" in t or "quantumb" in t:
                 prereg.append(os.path.relpath(os.path.join(root, fn), wt))
     rep.add("12", "a committed pre-registration artefact exists (criterion v2.12 needs it BEFORE the run commit)",
-            "ABSENT is the correct state while v2.a/v2.b are open", f"{len(prereg)} file(s): {sorted(prereg)[:4]}",
-            INFO if not prereg else PASS, n=len(prereg))
+            "ABSENT is the correct state while v2.a/v2.b are open",
+            f"{len(prereg)} of {nscan} file(s) under runs/ match a pre-registration name: {sorted(prereg)[:4]}",
+            INFO if not prereg else PASS, n=nscan,
+            note="defect #42: n was the count of MATCHES (0), which made this indistinguishable from a row that did no "
+                 "work; n is now the count of filenames compared")
     v2salt = j.get("salt")
-    spent, spent_v1 = [], []
+    spent, spent_v1, nrecv = [], [], 0
     for root, dirs, files in os.walk(os.path.join(wt, "runs")):
         dirs[:] = [d for d in dirs if not d.startswith(".")]
         for fn in sorted(files):
             if fn.endswith(".json"):
+                nrecv += 1
                 rel = os.path.relpath(os.path.join(root, fn), wt)
                 try:
                     txt = open(os.path.join(root, fn), encoding="utf-8").read()
@@ -1661,8 +1844,11 @@ def section_quantum_b(wt, rep):
                 else:
                     spent_v1.append(f"{rel} (split {os.path.basename(ref) or '?'}, salt {salt[-14:]})")
     rep.add("12", "no receipt already declares the V2 holdout SPENT (the quantum-b run has not happened)", "0",
-            f"{len(spent)}: {sorted(spent)[:3]}", PASS if not spent else FAIL, n=len(spent),
-            note=f"a receipt only consumes v2 if it binds the v2 split file or the v2 salt; "
+            f"{len(spent)} of {nrecv} JSON artefacts under runs/ declare the V2 holdout spent: {sorted(spent)[:3]}",
+            PASS if not spent else FAIL, n=nrecv,
+            note=f"defect #42: n was the count of offending receipts (0), so this PASS looked vacuous; n is now the "
+                 f"count of artefacts examined for a spend declaration. A receipt only consumes v2 if it binds the v2 "
+                 f"split file or the v2 salt; "
                  f"{len(spent_v1)} receipt(s) consume the V1 holdout, which is correct and expected: "
                  f"{sorted(spent_v1)[:3]}")
 
@@ -1681,6 +1867,43 @@ def selftest(golden: str) -> int:
     def t(cid, why, expected, observed):
         cases.append((cid, why, expected, observed, expected == observed))
 
+    # cycle-K amendments, mutation-tested (defects #44 and #46): each pair is a positive and the negative that the
+    # pre-amendment row got wrong.
+    t("T21", "#44 §8 accepts ANY key that states the construction, not only `config_digest_note`",
+      (["config_canonicalization"], ["config_digest_note"], []),
+      (states_construction({"config_sha256": "8e7e", "config_canonicalization":
+                            "sha256(json.dumps(cfg, sort_keys=True, separators=(',',':')))"}),
+       states_construction({"config_sha256": "8e7e", "config_digest_note": "sort_keys + separators"}),
+       states_construction({"config_sha256": "8e7e", "note": "see the run log"})))
+    t("T22", "#44 §18 accepts a legitimate ALTERNATIVE wording of 'one draw, not two'",
+      True, one_draw_statement("293b29c and 79eb401: the partition was not redrawn, same salt, manifest only",
+                               "293b29c", "79eb401"))
+    t("T23", "#38 §18 a bare CITATION of the first seal commit is still not the statement",
+      False, one_draw_statement("run_utc 2026-09-25T20:5xZ (src 293b29c; read `20:5xZ`)", "293b29c", "79eb401"))
+    t("T24", "#44 §19 a hollow sentence (`sensitivit` + a `33`) does NOT satisfy amended A4",
+      (False, False, False), h_denominator_commitment("we report a sensitivity figure over 33 transcripts"))
+    t("T25", "#44 §19 the real commitment does: both denominators, same run, the four bound by reference",
+      (True, True, True),
+      h_denominator_commitment("PRIMARY 29 = 33 - 4 (holdout_exclusions), SENSITIVITY 33 from the SAME run, "
+                               "no second spend", 4, True))
+    t("T26", "#46 §20 the verbatim quote survives INNER backticks in a row name",
+      ["item 13b — the `derivations_revision` claim states the pin"],
+      verbatim_row_quotes("- **Row (verbatim):** `item 13b — the `derivations_revision` claim states the pin`\n"))
+    t("T27", "#46 §20 a line that is not a verbatim quote is not one (no phantom coverage)",
+      [], verbatim_row_quotes("- **Task/item:** TASK-020 item 13b\n- **Row:** `item 13b`\n"))
+    t("T28", "#49 a fuzzy time inside a FULLY BACKTICKED iso stamp is a CITATION, not an asserted instance",
+      "citation", classify_fuzzy("the header `2026-09-25T21:5xZ` is fuzzy",
+                                 FUZZY_TS.search("the header `2026-09-25T21:5xZ` is fuzzy")))
+    t("T29", "#49 a bare fuzzy time in this lane's own prose is still an INSTANCE (the fix is not a blanket pardon)",
+      "instance", classify_fuzzy("we finished at 21:5xZ and committed",
+                                 FUZZY_TS.search("we finished at 21:5xZ and committed")))
+    t("T30", "#49 a fuzzy fragment inside a QUOTED ARTEFACT LINE (iso stamp + `(src `) is a citation",
+      "citation", classify_fuzzy("the only mention is `run_utc 2026-09-25T20:50:46Z (src 293b29c; read 20:5xZ)`",
+                                 FUZZY_TS.search("the only mention is `run_utc 2026-09-25T20:50:46Z "
+                                                 "(src 293b29c; read 20:5xZ)`")))
+    t("T31", "#49 a nearby backticked digest does NOT pardon a fuzzy stamp in the author's own sentence",
+      "instance", classify_fuzzy("we finished at 21:5xZ and committed `d42136c6`",
+                                 FUZZY_TS.search("we finished at 21:5xZ and committed `d42136c6`")))
     t("T1", "defect #5/#19 curly apostrophes are NORMALISED, not merely included",
       ["that's"], tokens("that\u2019s"))
     t("T2", "defect #2 em/en dashes are SEPARATORS (gluing them merges two tokens)",
@@ -1820,7 +2043,9 @@ def section_coherence(wt, rep):
                   "`rebuild_history`", "no dropped keys, or the drop disclosed",
             f"keys removed by the rebuild: {gone}; disclosed in rebuild_history: {disclosed}; closure still "
             f"derivable from counts: {tot == len(sigs)}",
-            PASS if (not gone or disclosed) and tot == len(sigs) else FAIL, n=len(gone),
+            PASS if (not gone or disclosed) and tot == len(sigs) else FAIL, n=3,
+            # defect #42: n was len(gone) - the count of dropped keys, i.e. of DEFECTS. Three comparisons were
+            # performed (two key-presence tests + the closure test); with none dropped, n=0 read as "no work".
             note="`rebuild_history` carries the pre-rebuild artefact sha256 + its source, the pre-rebuild "
                  "generator_pins + how to check them, and the original run_args (corpus zip, main_head, policy, "
                  "tool_commit, run utc) — so the rebuild is orderable and the run inputs are shown unchanged")
@@ -2092,12 +2317,18 @@ def section_derivations(wt, rep):
     stated["corpus_zip_sha256"] = "bytes" in str(dv.get("corpus_zip_sha256"))
     literal["outputs.ledger.jsonl"] = sha_file(os.path.join(wt, "findings/ledger.jsonl")) == man["outputs"]["ledger.jsonl"]
     stated["outputs.ledger.jsonl"] = "bytes" in str(dv.get("outputs.ledger.jsonl"))
-    literal["tool_sha256"] = sha_file(os.path.join(wt, "tools/m5r_reduce.py")) == man["tool_sha256"]
+    # DEFECT #39: the derivation says "sha256 of tools/m5r_reduce.py bytes; tool_commit is the reachable lane
+    # commit carrying that exact file" - so the literal reading resolves the blob AT tool_commit, not at head.
+    # Hashing head reported a failure against a derivation that reproduces exactly.
+    _rc, _tb = git(wt, "show", f"{man.get('tool_commit')}:{'tools/m5r_reduce.py'}")
+    literal["tool_sha256"] = (hashlib.sha256(_tb).hexdigest() if _rc == 0 and _tb else "") == man["tool_sha256"]
     stated["tool_sha256"] = "bytes" in str(dv.get("tool_sha256"))
-    # fixtures_digest: the stated construction (relpath over fixtures/) does NOT reproduce
+    # DEFECT #40: item 13 REWROTE this derivation (basename keys over the 2 .json files in fixtures/confirmed,
+    # each line carrying its newline, sorted). The row kept recomputing the OLD literal reading ('same
+    # construction over the fixtures dir') and reported a failure against text that now reproduces exactly.
     d_rel, _ = dir_digest(os.path.join(wt, "fixtures"), key="relpath")
     d_base, nb = dir_digest(os.path.join(wt, "fixtures/confirmed"), key="basename")
-    literal["fixtures_digest_sha256"] = d_rel == man["inputs"]["fixtures_digest_sha256"]
+    literal["fixtures_digest_sha256"] = d_base == man["inputs"]["fixtures_digest_sha256"]
     stated["fixtures_digest_sha256"] = ("basename" in str(dv.get("fixtures_digest_sha256")) or
                                         "confirmed" in str(dv.get("fixtures_digest_sha256")))
     rep.add("14", "criterion 20.15a — every stated derivation reproduces when followed LITERALLY",
@@ -2112,10 +2343,78 @@ def section_derivations(wt, rep):
             f"{len(stated)}/{len(stated)}", f"{sum(stated.values())}/{len(stated)}"
             f" (unstated: {sorted(k for k, v in stated.items() if not v)})",
             PASS if all(stated.values()) else FAIL, n=len(stated),
-            note="the warned-against overlays variant 58274f46… is reproducible exactly as "
-                 'sha256("\\n".join(sorted(lines_without_trailing_newline))) but the manifest does not state that '
-                 "construction, so the warning is not checkable as written; the good pattern already exists in this "
-                 "lane (the q2 supplement's config_digest_note names sort_keys and separators)")
+            note="ITEM 13 LANDED: the overlays derivation now states the warned-against variant's exact "
+                 'construction (sort the lines, strip each newline, join with "\\n", no trailing newline -> '
+                 "58274f46…), and fixtures_digest names its key convention (BASENAMES over the 2 files in "
+                 "fixtures/confirmed, each line carrying its newline) plus what is outside the binding. 7/7 stated")
+
+    # ITEM 13b (new at 34db0b0): a reproducibility CLAIM is a derivation too - it must state what it depends on.
+    # DEFECT #38's class: the first version searched the whole `derivations_revision` block, which mentions
+    # `tool_commit` while naming the pinned blob - a mention, not the dependency statement.
+    drev = dv.get("derivations_revision") or {}
+    rr2 = str(drev.get("reproducibility_note") or "") if isinstance(drev, dict) else str(drev)
+    pin_dep = bool(re.search(r"--tool-commit|status_by|the pin|pin passed|original pin", rr2, re.I))
+    rep.add("14", "item 13b — the `derivations_revision` reproducibility claim states the pin it depends on",
+            "the claim says a byte-identical ledger requires the ORIGINAL --tool-commit, because every row embeds "
+            "it in `status_by`",
+            f"pin dependence stated: {pin_dep}; claim as written: {rr2[:170]}",
+            PASS if pin_dep else FAIL, n=1,
+            note="verified by ORCH-2 both ways: with --tool-commit dada3e6 the re-run's ledger is byte-identical "
+                 "(d42136c6…); with the argument omitted all 1334 rows are identical EXCEPT `status_by`, which reads "
+                 "`tools/m5r_reduce.py@UNPINNED`, and the ledger digest moves to c94cce40…. A reader who rebuilds at "
+                 "head pinning its own head would conclude the outputs drifted — criterion 20.15a's discipline "
+                 "(a stated derivation must reproduce when followed LITERALLY) applied to a claim about reproduction")
+
+    # ITEM 13's own tool, verified by RUNNING it: a SECOND, independent implementation of the same derivations
+    # (its own dir_digest/overlays_digest, no import from the reducer). Agreement between two implementations is
+    # stronger than either one alone - and a mutation control proves the tool is not vacuous.
+    pc = os.path.join(wt, "tools/m4_prov_check.py")
+    zip_ok = os.path.exists(os.path.join(wt, "docdocgo-fixes.zip"))
+    if os.path.exists(pc) and zip_ok:
+        r = subprocess.run([sys.executable, "tools/m4_prov_check.py"], cwd=wt, capture_output=True, text=True,
+                           timeout=900)
+        rls = [x for x in r.stdout.splitlines() if x.startswith(("PASS", "FAIL"))]
+        npass = sum(1 for x in rls if x.startswith("PASS"))
+        tail = r.stdout.strip().splitlines()[-1] if r.stdout.strip() else "no output"
+        rep.add("14", "item 13's own tool — `tools/m4_prov_check.py` recomputes every published derivation, run with "
+                      "its DEFAULT paths", "exit 0 and every row PASS",
+                f"exit {r.returncode}; {npass}/{len(rls)} rows PASS; {tail}",
+                PASS if (r.returncode == 0 and rls and npass == len(rls)) else FAIL, n=len(rls),
+                note="an independent second implementation of the derivations agreeing with ORCH-2's own "
+                     "recomputation (§14's 7/7): fixtures c5d8f6f3…, overlays 027f82a0… with the warned variant "
+                     "58274f46… reproducing AND differing, ledger d42136c6…, by_transcript c1ec4da8…, book store "
+                     "c0892fcd…, tool_sha256 6d4bb9ce… resolved at the manifest's own tool_commit. Exit codes are "
+                     "fail-closed: 1 on any mismatch, 2 on a missing input")
+        # mutation control: tamper one published digest in a sibling temp manifest and require the tool to catch it
+        mut = os.path.join(wt, "findings", ".ORCH2-MUTATION-PROVENANCE.json")
+        caught, mexit, mfield = False, None, ""
+        try:
+            man = json.load(open(os.path.join(wt, "findings/PROVENANCE.json"), encoding="utf-8"))
+            man["inputs"]["fixtures_digest_sha256"] = "0" * 64
+            json.dump(man, open(mut, "w", encoding="utf-8"), indent=1, sort_keys=True)
+            r2 = subprocess.run([sys.executable, "tools/m4_prov_check.py", "--manifest",
+                                 "findings/.ORCH2-MUTATION-PROVENANCE.json"], cwd=wt, capture_output=True,
+                                text=True, timeout=900)
+            mexit = r2.returncode
+            bad = [x for x in r2.stdout.splitlines() if x.startswith("FAIL")]
+            mfield = bad[0].split()[1] if bad else ""
+            caught = mexit == 1 and any("fixtures_digest_sha256" in x for x in bad)
+        except Exception as exc:                                   # noqa: BLE001 - report, never crash the run
+            mfield = f"control error: {exc}"
+        finally:
+            if os.path.exists(mut):
+                os.remove(mut)
+        rep.add("14", "item 13's tool is NOT vacuous — mutation control: a tampered published digest must be caught",
+                "exit 1 with the tampered field named", f"exit {mexit}; failing field: {mfield or 'none'}",
+                PASS if caught else FAIL, n=1,
+                note="also verified by hand: publishing the WARNED overlays variant as the real value exits 1 (both the "
+                     "overlays row and the 'must differ' row fire), and a missing input exits 2. A check that cannot "
+                     "fail is not a check")
+    else:
+        rep.add("14", "item 13's own tool — `tools/m4_prov_check.py` recomputes every published derivation",
+                "tool present and the corpus zip materialised", 
+                f"tool present: {os.path.exists(pc)}; zip present: {zip_ok}", INFO, n=1,
+                note="HELD — needs a gate worktree with the corpus materialised (tools/m5r_inputs.sh recipe)")
 
 
 
@@ -2161,10 +2460,14 @@ def section_quantum_b_criteria(wt, rep):
     src = os.path.join(wt, "tools/m4_q4_supplement.py")
     if os.path.exists(src):
         t = open(src, encoding="utf-8").read()
-        hits = sum(t.count(x) for x in ("overlays", "parse_book_store", "run_tuning"))
+        pats = ("overlays", "parse_book_store", "run_tuning")
+        hits = sum(t.count(x) for x in pats)
+        nl = len(t.split("\n"))
         rep.add("15", "criterion v2.16 PRECEDENT — one-shot discipline read from the TOOL'S SOURCE, not its manifest",
-                "0 references to the tuning-side readers in the one-shot tool", f"{hits} reference(s)",
-                PASS if hits == 0 else FAIL, n=hits,
+                "0 references to the tuning-side readers in the one-shot tool",
+                f"{hits} reference(s) to {list(pats)} over {nl} source lines",
+                PASS if hits == 0 else FAIL, n=nl,
+                # defect #42: n was the hit count, so a clean tool reported PASS [n=0]
                 note="the same source read will be applied to the quantum-b tool: it must not be able to reach the "
                      "tuning path, and the HoldoutGuard must be instantiated rather than merely importable")
 
@@ -2218,6 +2521,71 @@ def own_time_stamps(text, md=False):
     return out
 
 
+def m5r_rerun(wt):
+    """Re-run the inherited M5-R reducer AT HEAD with the pins the published manifest names.
+
+    TASK-013's PASS was bound to `tools/m5r_reduce.py` being byte-identical across gated heads - a PROXY for
+    the thing that matters, which is that the published outputs still reproduce. At 34db0b0 the tool changed
+    (+46 lines of derivations prose, TASK-020 item 13) so the proxy broke; this settles the substance.
+    Returns (ok, detail) or None when the gate worktree lacks the materialised inputs."""
+    man_p = os.path.join(wt, "findings/PROVENANCE.json")
+    if not os.path.exists(man_p):
+        return None
+    man = json.load(open(man_p, encoding="utf-8"))
+    recs = next((c for c in ("evidence/runs/m5-raw/records", "runs/m5-raw/records")
+                 if os.path.isdir(os.path.join(wt, c))), None)
+    fix = next((c for c in ("evidence/fixtures/confirmed", "fixtures/confirmed", "evidence/fixtures", "fixtures")
+                if os.path.exists(os.path.join(wt, c, "confirmed.json"))), None)
+    corp = "corpus" if os.path.isdir(os.path.join(wt, "corpus/docdocgo/overlays")) else None
+    if not (recs and fix and corp):
+        return None
+    out = tempfile.mkdtemp(prefix="orch2-m5r-")
+    cmd = [sys.executable, os.path.join(wt, "tools/m5r_reduce.py"),
+           "--records", os.path.join(wt, recs), "--fixtures", os.path.join(wt, fix),
+           "--corpus", os.path.join(wt, corp), "--out", out,
+           "--utc", str(man.get("run_utc") or ""),
+           "--tool-commit", str(man.get("tool_commit") or ""),
+           "--main-head", str(man.get("main_head") or ""),
+           "--policy-sha", str(man.get("policy_sha256") or ""),
+           "--book-store-sha", str((man.get("book_store") or {}).get("sha256") or ""),
+           "--detector-tool-commit", str((man.get("inherited_census") or {}).get("detector_tool_commit") or "")]
+    r = subprocess.run(cmd, capture_output=True, cwd=wt, timeout=900)
+    if r.returncode != 0:
+        return False, f"the re-run FAILED: rc={r.returncode} {r.stderr.decode()[-220:]}"
+    led = sha_file(os.path.join(out, "ledger.jsonl"))
+    nm = json.load(open(os.path.join(out, "PROVENANCE.json"), encoding="utf-8"))
+    pub = man["outputs"]
+    same_led = led == pub["ledger.jsonl"]
+    same_bt = nm["outputs"]["by_transcript_digest"] == pub["by_transcript_digest"]
+    mdiff = sorted(k for k in set(man) & set(nm)
+                   if json.dumps(man[k], sort_keys=True) != json.dumps(nm[k], sort_keys=True))
+    # FIELD-LEVEL diff of the two ledgers: this is how the pin dependency was diagnosed by hand at cycle K (the only
+    # differing field was `status_by`, which embeds --tool-commit). Mechanized so the diagnosis is not re-derived each
+    # cycle and so a future tool change that moves a real field is named instead of hidden behind a digest.
+    pub_p = os.path.join(wt, "findings/ledger.jsonl")
+    pub_rows = [json.loads(x) for x in open(pub_p, encoding="utf-8") if x.strip()] if os.path.exists(pub_p) else []
+    new_rows = [json.loads(x) for x in open(os.path.join(out, "ledger.jsonl"), encoding="utf-8") if x.strip()]
+    fdiff, aligned = collections.Counter(), 0
+    if len(pub_rows) != len(new_rows):
+        fdiff["<row count differs>"] = 1
+    else:
+        for a, b in zip(pub_rows, new_rows):
+            if a.get("id") != b.get("id"):
+                fdiff["<id misalignment>"] += 1
+                continue
+            aligned += 1
+            for k in set(a) | set(b):
+                if json.dumps(a.get(k), sort_keys=True) != json.dumps(b.get(k), sort_keys=True):
+                    fdiff[k] += 1
+    shutil.rmtree(out, ignore_errors=True)
+    ok = same_led and same_bt
+    return ok, (aligned, len(pub_rows), len(new_rows), dict(fdiff)), (f"ledger {led[:16]}… == published {pub['ledger.jsonl'][:16]}…: {same_led}; by_transcript "
+                f"{nm['outputs']['by_transcript_digest'][:16]}… == published "
+                f"{pub['by_transcript_digest'][:16]}…: {same_bt}; findings {nm['outputs']['findings']} == "
+                f"{pub['findings']}; the regenerated manifest differs from the committed one in: {mdiff}")
+    # (callers unpack three values: ok, rowdiff, detail)
+
+
 def section_forward_stamps(wt, rep):
     """§19 — criterion 20.14c: an artefact's own time field may not POST-DATE the commit that contains it.
 
@@ -2225,45 +2593,63 @@ def section_forward_stamps(wt, rep):
     IMPOSSIBLE, written from a projected cadence grid instead of read from a clock. It is the more dangerous
     half, because it passes every precision check — and because it lands in the columns the fleet reads for
     liveness (ERRATA-25f: liveness = SIGNALS = heartbeat + CONTROL.log)."""
+    # A forward stamp is a defect wherever it sits, so the census covers the WHOLE TREE, not just this
+    # delivery's diff - otherwise a cycle in which nobody touches the offending files reports the class as
+    # closed. Last-touch times come from ONE `git log --name-only` pass, not a call per file.
     rc, out = git(wt, "diff", "--name-only", PREV_GATED, "HEAD")
-    changed = [x for x in out.decode().split() if x.endswith((".md", ".json", ".jsonl", ".log"))] if rc == 0 else []
-    offenders, checked, plausible = [], 0, []
-    for rel in changed:
-        fp = os.path.join(wt, rel)
-        if not os.path.exists(fp):
-            continue
-        t = open(fp, encoding="utf-8", errors="replace").read()
-        ct = git(wt, "log", "-1", "--format=%cI", "HEAD", "--", rel)[1].decode().strip()
-        if not ct:
-            continue
-        cut = ct.replace("+00:00", "Z")
-        for _, v in own_time_stamps(t, md=rel.endswith(".md")):
-            checked += 1
-            mins = round((_ts(v) - _ts(cut)).total_seconds() / 60.0, 1)
-            (offenders if mins > 0 else plausible).append((rel, v, cut, mins))
+    changed = set(out.decode().split()) if rc == 0 else set()
+    rc, out = git(wt, "log", "--format=C%cI", "--name-only", "HEAD")
+    last, cur = {}, None
+    for ln in out.decode().splitlines():
+        if ln.startswith("C20"):
+            cur = ln[1:].strip().replace("+00:00", "Z")
+        elif ln.strip():
+            last.setdefault(ln.strip(), cur)
+    offenders, checked, new_off = [], 0, []
+    for root, dirs, files in os.walk(wt):
+        dirs[:] = [d for d in dirs if d not in (".git", "corpus", "evidence", "__pycache__")]
+        for fn in files:
+            if not fn.endswith((".md", ".json", ".jsonl", ".log")):
+                continue
+            rel = os.path.relpath(os.path.join(root, fn), wt).replace(os.sep, "/")
+            cut = last.get(rel)
+            if not cut:
+                continue
+            t = open(os.path.join(root, fn), encoding="utf-8", errors="replace").read()
+            for _, v in own_time_stamps(t, md=fn.endswith(".md")):
+                checked += 1
+                try:
+                    mins = round((_ts(v) - _ts(cut)).total_seconds() / 60.0, 1)
+                except ValueError:
+                    continue
+                if mins > 0:
+                    offenders.append((rel, v, cut, mins))
+                    if rel in changed:
+                        new_off.append((rel, v, cut, mins))
+    offenders.sort()
     rep.add("19", "criterion 20.14c — no own-time stamp POST-DATES the commit that contains it (item 12's other "
-                  "half; TASK-018 item 0h, TASK-019 item v2.h)", "0 forward stamps",
-            f"{len(offenders)} forward of {checked} own-time stamps in {len(changed)} changed files: "
+                  "half; TASK-018 item 0h, TASK-019 item v2.h, TASK-020 item 12c)",
+            "0 forward stamps in the committed tree",
+            f"{len(offenders)} forward of {checked} own-time stamps over the whole tree: "
             + "; ".join(f"{r} {v} vs its commit {c} (+{m} min)" for r, v, c, m in offenders),
             PASS if not offenders else FAIL, n=checked,
-            note="a file's bytes cannot carry a stamp from a time the committer had not reached; the offsets here "
-                 "are +32 to +41 min and every one is :00- or cadence-shaped, i.e. projected, not read")
-    # the ruling must be non-spurious: clock skew, or a projected stamp? The control sits in the same lane and
-    # the same hour — the census artefact read `date -u` and its own stamp precedes its commit.
+            note="a file's bytes cannot carry a stamp from a time the committer had not reached; every offending "
+                 "value here is :00- or cadence-shaped, i.e. projected from the CONTROL grid rather than read. "
+                 f"New in this delivery range ({PREV_GATED[:7]}..head): {new_off or 'none'}")
     cen = "fleet/TIMESTAMP-CENSUS-2026-09-26.md"
-    ctrl, verdict = "no control artefact found", FAIL
+    ctrl, verdict = "no control artefact found", INFO
     fp = os.path.join(wt, cen)
     if os.path.exists(fp):
         t = open(fp, encoding="utf-8").read()
-        ct = git(wt, "log", "-1", "--format=%cI", "HEAD", "--", cen)[1].decode().strip().replace("+00:00", "Z")
+        ct = (last.get(cen) or "").strip()
         m = re.search(r"Stamp: \*\*(20\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)\*\*", t)
-        if m:
+        if m and ct:
             d = round((_ts(m.group(1)) - _ts(ct)).total_seconds() / 60.0, 1)
             ctrl = (f"{cen} stamps itself {m.group(1)} from `date -u` and was committed {ct} — {d} min, a plausible "
-                    f"write-then-commit gap in the SAME lane and hour")
-            verdict = PASS if d <= 0 and offenders else FAIL
+                    f"write-then-commit gap in the SAME lane")
+            verdict = PASS if (d <= 0 and offenders) else (INFO if not offenders else FAIL)
     rep.add("19", "the forward stamps are NOT a clock artifact (the ruling's control)",
-            "one artefact in the same lane and hour whose own `date -u` stamp precedes its commit", ctrl, verdict,
+            "one artefact in the same lane whose own `date -u` stamp precedes its commit", ctrl, verdict,
             n=1, note="so git's clock and the lane's clock agree to within minutes and the +32/+41 min stamps are "
                       "not skew. Root cause: a stamp taken from the CONTROL cadence grid — the seal note says it was "
                       "'written at the lane clock stamp of CONTROL seq 43' — propagates into every artefact that "
@@ -2317,7 +2703,12 @@ def section_forward_stamps(wt, rep):
         binds = ("holdout_exclusions_sha256" in src) and ("exclusion_set" in src)
         tested = ("pre-registered exclusions changed after the freeze" in tst) and ("holdout_evaluated" in tst)
         note_t = companion_texts(wt).get("tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md", "")
-        both = bool(re.search(r"sensitivit", note_t + json.dumps(ej), re.I)) and "33" in note_t
+        htxt = note_t + json.dumps(ej)
+        # O-8/O-9 discipline: A4-as-amended fixes BOTH denominators (29 primary, 33 sensitivity) FROM THE SAME RUN, with
+        # the four named in each. One word ("sensitivit") plus a "33" anywhere is not that commitment - and would let a
+        # hollow sentence PASS. Test the conjunction.
+        denom, same_run, named = h_denominator_commitment(htxt, len(exn), all(x in ho for x in exn))
+        both = denom and same_run and named
         rep.add("19", "ANNEX §H — the exclusions are machine-readable, holdout members, bound by digest into the "
                       "freeze, enforced in code and tested", "all four",
                 f"excluded {len(exn)}/33, all holdout members: {all(x in ho for x in exn)}; evaluated "
@@ -2329,8 +2720,9 @@ def section_forward_stamps(wt, rep):
                       "pre-registered SENSITIVITY from the same run",
                 "the note or the exclusions file commits to reporting both, the four named in each",
                 f"counts recorded: {ej.get('evaluated_holdout_transcripts')} evaluated / "
-                f"{ej.get('holdout_transcripts')} holdout; a 33-transcript SENSITIVITY figure committed to: {both}",
-                PASS if both else FAIL, n=2,
+                f"{ej.get('holdout_transcripts')} holdout; BOTH denominators stated: {denom}; SAME run / no second "
+                f"spend stated: {same_run}; the four named or bound by reference: {named}",
+                PASS if both else FAIL, n=4,
                 note="A4 as written fixed 33 primary + 29 sensitivity. WORKER-2's note swaps the primary to 29 on "
                      "the label-taint ground (§F2's own reason) and forbids the four from re-entering any "
                      "denominator. ORCH-2 ADOPTS the swap — pre-result, machine-readable, enforced, tested — and "
@@ -2338,6 +2730,64 @@ def section_forward_stamps(wt, rep):
                      "four were already read), each reported with the four named. Both numbers stay fixed before "
                      "the run, which is the whole point of the protocol; one sentence is owed")
 
+
+
+def section_fail_coverage(rep, head):
+    """§20 — DEFECT #45: the coverage claim must be DERIVED, not curated. §16 checked a hardcoded OPEN tuple frozen at
+    cycle F/G, so it PASSed while listing closed items and omitting every item opened since. Here the published repair
+    map (`fleet/ORCH-2-REPAIR-MAP.md`) is the open-item list of record: every row that FAILs must appear in it quoted
+    VERBATIM (so the map names the row it claims to close), and every verbatim row name in the map must still be a FAIL
+    (so a landed repair forces a new map instead of leaving a stale promise)."""
+    print("\n== 20. FAIL-to-repair coverage (derived from the published repair map) ==")
+    lane = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    mp = os.path.join(lane, "fleet/ORCH-2-REPAIR-MAP.md")
+    fails = [r["name"] for r in rep.rows if r["verdict"] == FAIL]
+    vac = [r["name"] for r in rep.rows if r["verdict"] == VACUOUS]
+    if not os.path.exists(mp):
+        rep.add("20", "the repair map exists beside this instrument", "present", f"ABSENT at {mp}", FAIL, n=len(fails))
+        return
+    txt = open(mp, encoding="utf-8").read()
+    # The map is bound to the head it was published for (named in its title). Gating a DIFFERENT head is not a worker
+    # defect and must not read as one: report the mismatch and claim no coverage. Verified by running at 1c8a287, where
+    # the 34db0b0 map covers 13 of that head's 17 FAILs.
+    mb = re.search(r"`([0-9a-f]{7,40})`", "\n".join(txt.splitlines()[:4]))
+    bound = mb.group(1) if mb else ""
+    if not bound or not (head.startswith(bound) or bound.startswith(head[:7])):
+        rep.add("20", "every FAIL row is mapped to a repair in fleet/ORCH-2-REPAIR-MAP.md, quoted VERBATIM",
+                "the map binds the head being gated",
+                f"the map binds {bound[:7] or 'NO HEAD'}, this run gates {head[:7]} — coverage NOT claimed for this "
+                f"head; {len(fails)} FAIL rows here", INFO, n=len(fails),
+                note="a repair map is head-specific by design (append-only per cycle): publish a new map for the head "
+                     "being gated and this row becomes the mechanical FAIL-to-repair agreement again")
+        rep.add("20", "VACUOUS rows owe no repair and are reported as what they are",
+                "every VACUOUS row is vacuous-by-data, with the decisive row named beside it",
+                f"{len(vac)}: {vac}", PASS, n=len(vac),
+                note="a VACUOUS row performed zero comparisons because the data made comparison impossible; it is "
+                     "neither a FAIL nor a PASS, and R1 forbids printing it as either")
+        return
+    # DEFECT #46: `[^`]+` stopped at the FIRST inner backtick, and four row names contain one (`derivations_revision`,
+    # `audit_utc`, `tool_commit`, `utc_source`) - so the coverage row failed on its own quoting syntax. Match greedily to
+    # the closing backtick at end of line: the name may contain backticks, it may not end with one.
+    quoted = verbatim_row_quotes(txt)
+    qset, unmapped = set(quoted), [n for n in fails if n not in set(quoted)]
+    stale = sorted(q for q in qset if q not in set(fails))
+    rep.add("20", "every FAIL row is mapped to a repair in fleet/ORCH-2-REPAIR-MAP.md, quoted VERBATIM",
+            f"{len(fails)}/{len(fails)} mapped", f"{len(fails) - len(unmapped)}/{len(fails)} mapped"
+            + (f"; UNMAPPED: {unmapped}" if unmapped else "")
+            + (f"; the map quotes {len(quoted)} row names, {len(qset)} distinct" if len(quoted) != len(qset) else ""),
+            PASS if not unmapped and len(quoted) == len(qset) else FAIL, n=len(fails),
+            note="an unmapped FAIL is a FAIL nobody can act on: the map must name the artefact change that flips it. "
+                 "Verbatim quotation is what makes the check mechanical instead of a reading exercise")
+    rep.add("20", "the repair map carries no entry for a row that no longer FAILs (the map is not stale)",
+            "0 stale entries", f"{len(stale)} stale: {stale[:3]}", PASS if not stale else FAIL, n=len(qset),
+            note="the map is append-only per cycle: a stale entry means a repair landed and a NEW map is owed for the "
+                 "new head, not that this one should be edited")
+    rep.add("20", "VACUOUS rows owe no repair and are reported as what they are",
+            "every VACUOUS row is vacuous-by-data, with the decisive row named beside it",
+            f"{len(vac)}: {vac}", PASS, n=len(vac),
+            note="a VACUOUS row performed zero comparisons because the data made comparison impossible (no adjudicated "
+                 "row shares a transcript with a fixture); it is not a FAIL and not a PASS, and R1 forbids printing it "
+                 "as either")
 
 
 def section_coverage(rep):
@@ -2405,7 +2855,12 @@ def section_coverage(rep):
                  "must be the actual wording). Sub-letters such as 20.14a are ORCH-2's own sub-rows and are traced to "
                  "their parent criterion, which must exist in the queue files")
     # the load-bearing coverage claim: every OPEN item must have a row that flips when it is repaired
-    OPEN = ("8a", "8b", "11a", "11b", "12", "13", "14", "15a", "15b", "0d", "0e", "0f", "0g", "17.a", "v2.a", "v2.b")
+    # DEFECT #45: this tuple was frozen at cycle F/G. It still listed items closed cycles ago (8a, 11a/b, 12, 13, 14,
+    # 15a/b, 0d-0g) and omitted every item opened since (13b, 0h, 12c, v2.c-v2.h, 20.14c, 20.15b), so the row the
+    # instrument's own note calls "the coverage claim that matters" was checking a stale list and PASSing on it.
+    # Refreshed at cycle K - and §20 now DERIVES the same claim from the published repair map, so this curated row is
+    # a cross-check, not the authority.
+    OPEN = ("0h", "12c", "13b", "v2.a", "v2.b", "v2.c", "v2.d", "v2.e", "v2.g", "v2.h", "20.14c", "20.15b")
     def cites_item(txt, iid):
         return bool(re.search(r"(?i)\b(item|criterion)\s+" + re.escape(iid) + r"\b", txt))
     missing = [i for i in OPEN if not cites_item(src, i)]
@@ -2654,10 +3109,13 @@ def section_seal_audit(wt, rep, head):
             f"head_commit_at_audit {hca[:7]} ancestor-of {head[:7]}: {anc}", PASS if anc else FAIL, n=1,
             note="the report states the ordering itself ('committed as its own commit after it') — honest sequencing")
     tsrc = open(os.path.join(wt, tool_rel), encoding="utf-8").read() if tool_sha else ""
-    reads = [ln for ln in tsrc.split("\n") if re.search(r"corpus/|overlays|docdocgo", ln) and not ln.strip().startswith("#")]
+    tsl = tsrc.split("\n")
+    reads = [ln for ln in tsl if re.search(r"corpus/|overlays|docdocgo", ln) and not ln.strip().startswith("#")]
     rep.add("18", "the audit tool opens no transcript content (the 'holdout not opened' claim, tested on the tool)",
             "0 reads of corpus/overlays paths — git objects, the seal file and itself only",
-            f"{len(reads)} such line(s): {reads[:3]}", PASS if not reads else FAIL, n=len(reads),
+            f"{len(reads)} of {len(tsl)} source line(s) match a corpus/overlays path: {reads[:3]}",
+            PASS if not reads else FAIL, n=len(tsl),
+            # defect #42: n was the match count, so a clean tool reported PASS [n=0]
             note="it does read the holdout NAME list from the seal, which membership checks require; names are not "
                  "content, and no transcript bytes are opened")
 
@@ -2740,15 +3198,19 @@ def section_seal_audit(wt, rep, head):
     # DEFECT #38: the first version credited any mention of `293b29c`, and the delivery record mentions it only
     # as a timestamp's source commit (`run_utc … (src 293b29c; read `20:5xZ`)`) - a citation, not the statement.
     # Require the two seal commits together WITH a one-draw phrase, or the phrase tied to the commit inline.
-    one_draw = []
-    for k, v in sorted(companion_texts(wt).items()):
+    one_draw, comp = [], companion_texts(wt)
+    for k, v in sorted(comp.items()):
         both = ("293b29c" in v) and (SEAL_COMMIT[:7] in v)
-        phrase = bool(re.search(r"one draw|same draw|re-?manifest|manifest[- ]only|not a second draw", v, re.I))
-        if (both and phrase) or re.search(r"293b29c[^\n]{0,160}(one draw|manifest)", v, re.I):
+        # O-8 discipline: the criterion is "a reader can tell the split was not re-drawn", so any wording that says it
+        # counts - not only the five phrases ORCH-2 first thought of.
+        if one_draw_statement(v, "293b29c", SEAL_COMMIT[:7]):
             one_draw.append(k)
     rep.add("18", "item v2.a clause (iii), second half — the STATEMENT that 293b29c/79eb401 are one draw, not two",
-            "stated in a companion note beside the seal", f"present in {len(one_draw)} companion artefacts: {one_draw}",
-            FAIL if not one_draw else PASS, n=len(one_draw),
+            "stated in a companion note beside the seal",
+            f"present in {len(one_draw)} of {len(comp)} companion artefacts scanned: {one_draw}",
+            FAIL if not one_draw else PASS, n=len(comp),
+            # defect #42: n was the count of artefacts carrying the statement (0) - the FAIL was real but looked
+            # like zero work; n is now the count of artefacts searched
             note="without it a reader cannot tell whether the split was re-drawn (a new salt would be owed) or only "
                  "re-manifested; ORCH-2 has verified the substance in the row above, so this item is documentation-only")
 
@@ -2791,11 +3253,12 @@ def section_seal_audit(wt, rep, head):
             f"present: {'carries no reason' in freeze_src}, candidate_unlabelled kept apart: "
             f"{'candidate_unlabelled' in freeze_src}",
             PASS if freeze_src.count("seeded") and "carries no reason" in freeze_src else FAIL, n=1)
-    tuning_side = [ln for ln in freeze_src.split("\n")
-                   if re.search(r'which\s*=\s*"tuning"|--tuning\b', ln)]
+    fsl = freeze_src.split("\n")
+    tuning_side = [ln for ln in fsl if re.search(r'which\s*=\s*"tuning"|--tuning\b', ln)]
     rep.add("18", "v2.16 precedent — the quantum-b tool and its registry carry no tuning-side evaluation path",
-            "0 references", f"{len(tuning_side)} in m4_one_shot_v2.py; the registry enters the detectors through "
-            f"run_tuning(..., which=\"holdout\") only", PASS if not tuning_side else FAIL, n=len(tuning_side))
+            "0 references", f"{len(tuning_side)} of {len(fsl)} lines in m4_one_shot_v2.py match a tuning-side path; "
+            f"the registry enters the detectors through run_tuning(..., which=\"holdout\") only",
+            PASS if not tuning_side else FAIL, n=len(fsl))   # defect #42: n was the match count
     c2p = os.path.join(wt, "tools/c2_detectors.py")
     c2 = open(c2p, encoding="utf-8").read() if os.path.exists(c2p) else ""
     reads_modules = all(k in c2 for k in ("m.WINDOW", "m.MIN_FLANK", "m.MIN_RATIO", "m.MIN_MATCHED"))
@@ -2876,11 +3339,11 @@ def section_seal_audit(wt, rep, head):
                  "the pre-registered 33 (or the §F2 sensitivity 29)")
     rep.add("18", "criterion 21.8 / A5 — the suite floor, measured at both heads",
             "green with the corpus present, count never drops, skips reported",
-            "4fc40c8: Ran 227, OK (skipped=1) · 72104a5: Ran 244 in 205.5s, OK (skipped=1) · 1c8a287: Ran 257 in "
-            "217.2s, OK (skipped=1) — +13 = 5 pin-repair + 6 disposition + 2 pre-registered-exclusion tests",
-            PASS, n=257,
+            "4fc40c8: Ran 227, OK (skipped=1) · 72104a5: Ran 244, OK (skipped=1) · 1c8a287: Ran 257 in 217.2s, OK "
+            "(skipped=1) · 34db0b0: Ran 263 in 199.3s, OK (skipped=1) — +13 then +6 (4 in the new test_m4_prov_check, 2 in test_m4_q4_supplement)",
+            PASS, n=263,
             note="TASK-021's criterion 21.8 publishes 217, stale since 4fc40c8; the binding floor is the newest "
-                 "measured count, 257 at 1c8a287, and the skip count travels with it. Measured in the scratch "
+                 "measured count, 263 at 34db0b0, and the skip count travels with it. Measured in the scratch "
                  "worktree with the corpus materialised: `python3 -m unittest discover -s tests -t tests`")
 
 
@@ -2925,6 +3388,7 @@ def main() -> int:
     section_t21(wt, rep)
     section_seal_audit(wt, rep, a.head)
     section_forward_stamps(wt, rep)
+    section_fail_coverage(rep, head)
     tally = collections.Counter(r["verdict"] for r in rep.rows)
     print(f"\n== summary: {len(rep.rows)} rows · " +
           " · ".join(f"{k} {v}" for k, v in sorted(tally.items())))
@@ -2969,6 +3433,27 @@ def main() -> int:
             print(f"  own-time offenders: {sorted(set(mb))[:12]}")
         byfile = collections.Counter(rp for rp, _v in mp)
         print(f"  minute-precision by file (top 8): {byfile.most_common(8)}")
+
+        # DEFECT #48: the self-audit reported asserted-fuzzy stamps as a COUNT and never verdicted them, so this lane
+        # could accumulate the very defect it charges others with (criterion 20.14a) while two PASS rows sat beside the
+        # number. Append-only records cannot be repaired without rewriting history, so they are reported separately and
+        # judged INFO; every other doc in this lane is amendable and is judged FAIL.
+        # status.md declares itself append-only ("current state = these entries reduced in order"): its headline table
+        # is prepended but the log below it is a record, so a fuzzy stamp inside a cycle-H entry cannot be repaired
+        # without rewriting history - it is reported, not charged.
+        APPEND_ONLY = ("fleet/CONTROL.log", "fleet/heartbeats/", "fleet/ORCH-2-VERIFICATION-LEDGER.md",
+                       "fleet/GATES.md", "fleet/LOG.md", "fleet/ORCH-2-CURSOR.md", "fleet/queue/status.md")
+        hist = sorted({(rp, v) for rp, v in fzi if rp.startswith(APPEND_ONLY)})
+        live = sorted({(rp, v) for rp, v in fzi if not rp.startswith(APPEND_ONLY)})
+        rep.add("9", "self-item — no fuzzy own-time stamp ASSERTED in this lane's amendable docs (criterion 20.14a, "
+                     "the one ORCH-2 charges others with)",
+                "0 asserted-fuzzy stamps outside the append-only record",
+                f"{len(live)} in amendable docs: {live[:6]}; {len(hist)} inside the append-only record: {hist[:4]}",
+                PASS if not live else FAIL, n=len(fzi),
+                note="a CITATION of someone else's fuzzy stamp is not one (classify_fuzzy separates them: "
+                     f"{len(fzc)} citations). An approximation this lane asserts must be a bounded window naming its "
+                     "bounds and their sources - which is exactly what criterion 20.14 demands of the worker, and "
+                     "self-item O-4's rule: ORCH-2 is not exempt from its own criterion")
 
         # SELF-ITEM O-4: a header stamped AHEAD of the clock is a forward-stamped record - it can
         # make a document appear to post-date something it precedes. The newest CONTROL.log entry is

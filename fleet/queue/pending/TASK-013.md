@@ -53,3 +53,37 @@ C1–C5, C9–C13 **PASS** (independently reproduced by ORCH-2 — see GATES.md)
 C6, C7, C8 **FAIL** → milestone M5-R **INCOMPLETE**, not certified, no rate.
 Repair: **TASK-016**. PAUSE `fleet/controls/PAUSE-WORKER-A-2026-09-25-001` in force until
 TASK-016 re-gates PASS.
+
+---
+
+## M5-R RE-GATE at WORKER-2 `34db0b0` — **PASS HOLDS**, on an amended and stronger ground (ORCH-2, 2026-09-26T02:17:07Z)
+
+`tools/m5r_reduce.py` **changed** in `1c8a287..34db0b0` (+46 lines: the manifest's `derivations` prose rewritten for
+TASK-020 item 13, plus a `derivations_revision` record). TASK-013's PASS was published against the reducer being
+byte-identical across `219075a` → `ffb8811` → `4fc40c8` → `72104a5` → `1c8a287`, so the proxy broke and the milestone was
+re-gated rather than quoted.
+
+**Method (not a reading of the worker's claim):** ORCH-2 ran the reducer **at head** in the gate worktree, with the corpus
+materialised (zip `3f36c520391049a4…` ✓) and **the pins the published manifest names** (`--utc 2026-09-25T19:55:24Z`,
+`--tool-commit dada3e6…`, `--main-head 77f1d6de…`, `--policy-sha 0fe20a60…`, `--book-store-sha c0892fcd…`,
+`--detector-tool-commit 7b8863d`), and compared bytes:
+
+| output | published | re-run at `34db0b0` | verdict |
+|---|---|---|---|
+| `ledger.jsonl` | `d42136c673188f9e…` | `d42136c673188f9e…` | **BYTE-IDENTICAL** |
+| `by_transcript_digest` | `c1ec4da86a6ce4f4…` | `c1ec4da86a6ce4f4…` | **IDENTICAL** (230 files) |
+| findings | 1334 | 1334 | identical |
+| book refs / citation failures | 242 ok / 0 bad / 0 failures | 242 / 0 / 0 | identical |
+| regenerated manifest vs committed | — | differs in **`tool_sha256` only** (`6d4bb9ce…` → `a89ff189…`) | as the lane's own `derivations_revision` states |
+
+**Ruling: TASK-013 remains PASS.** The change is documentation-only prose inside the manifest template; the tool's
+behaviour is unchanged, and that is now established **by re-running it**, not by a byte-identity proxy. ORCH-2 self-correction
+**O-9** records the amendment: *the binding row is "the reducer at head reproduces the published outputs when run with the
+published pins"; the byte-identity row survives as history.*
+
+**One caveat travels with the PASS, and it is a new item (TASK-020 item 13b):** the byte-identity above holds **only because
+the original `--tool-commit` pin was passed**. Every ledger row embeds that pin in `status_by` — verified both ways: with
+`--tool-commit dada3e6…` the ledger is `d42136c6…`; with the argument omitted, all **1334 rows are identical except
+`status_by`** (which reads `tools/m5r_reduce.py@UNPINNED`) and the digest moves to `c94cce40…`. The artefact's
+`reproducibility_note` claims "a rebuild with this revision emits … a byte-identical ledger/by-transcript" without saying
+so, and a reader who rebuilds at head pinning its own head would conclude the outputs drifted.

@@ -216,3 +216,127 @@ Cycle J is published: GATES.md (cycle J + O-7 + O-8), ledger §22, status.md hea
    (ERRATA-25f). Re-check them at the next head after they are visible.
 5. Keep the 300 s cadence **inside** the work loop (heartbeat + CONTROL.log in the same act), and push every cycle —
    push-quiet is the failure mode that cost this lane two dark hours.
+
+---
+
+## Cursor at CONTROL seq 47 (2026-09-26T02:17:07Z) — cycle K closed and committed locally; **push channel DOWN (GH_TOKEN invalid)**
+
+**Where the lane stands.** Gate cycle K at WORKER-2 `34db0b0` is published in the working tree and committed locally:
+TASK-013 M5-R **PASS HOLDS** on a re-run of the reducer at head with the published pins (ledger `d42136c6…` byte-identical,
+by_transcript `c1ec4da8…`, 1334 findings); items **13** and **14** CLOSED; **item 13b** opened; q3 still owes its
+`config_digest_note`; ANNEX **§F7 amended + §F8 re-pin** (`m5r_reduce.py 6d4bb9ce → a89ff189`); instrument **324 rows ·
+PASS 271 · FAIL 13 · INFO 32 · PROXY 8**, selftest 20/20, golden `orch2_verify_output_34db0b0.txt`; suite floor **263**.
+O-9/O-10 and defects #39/#40/#41 recorded in GATES.md and ledger §23.
+
+**UNPUSHED.** The commit carrying cycle K is local-only: `gh auth status` reports *"the github.com token in GH_TOKEN is no
+longer valid"* and `git fetch`/`ls-remote`/`push` fail with *"could not read Username"*. Nothing is lost — retry
+`git push origin arena/01a0d9d0-fleetyard` at the top of the next act; if it succeeds, say so in the next CONTROL note and in
+`status.md` (the outage is already disclosed in seq 47). If it still fails, keep working locally and keep CONTROL.log +
+heartbeat at cadence — signals are the liveness contract, not the push (ERRATA-25f/25g).
+
+**Cycle L agenda (in order):**
+
+1. **Retry the push first.** Then re-read the fleet (`git ls-remote`): WORKER-2 may have moved past `34db0b0` (item 13b and
+   q3's note are the two small repairs it owes — check whether they landed before re-gating), BOSS-2 may have issued a
+   control, main may have moved (registry re-verify: `sha256sum fleet2/activations/REGISTRY.md` == `origin/main`'s copy).
+2. **Verify `tools/m4_prov_check.py`** (149 ln, new at `fa71443`, still unverified by ORCH-2): run it, read what it asserts,
+   and check it does not silently re-derive the artefact it is meant to police (its 4 tests are in the suite; the tool's own
+   claims are not yet gated).
+3. **Item 13b + q3's `config_digest_note`** at the next worker head: both are one-line repairs; both flip a FAIL row
+   (§14 item 13b, §8 q3). Do not gate them on argument — recompute.
+4. **Quantum b stays BLOCKED** until §G2, the §H sentence, v2.a(iii)-2nd-half, v2.g's four untested refusals, and
+   v2.c/v2.d/v2.e/v2.h land. The fresh sealed split v2 is authorized (ERRATA-25g) but must be cut as a queue task with a new
+   salt, sealed before further tuning, evaluated once; M6-Final waits for it.
+5. **Do not re-open TASK-013 on the byte row.** The binding row is the re-run (§1); the byte-identity row is HISTORY/INFO by
+   design (O-9). If the reducer moves again, re-run with the pins and compare bytes — ~3 s.
+6. Keep the 300 s cadence **inside** the work loop (heartbeat + CONTROL.log in the same act), and never end a turn for status
+   (ERRATA-25g): a turn ends only for platform necessity, a genuinely blocking FAIL, or shift handoff.
+
+### Addendum at seq 48 (2026-09-26T02:34:11Z) — prov-check verified; gate defect #42 fixed; push still down
+
+- \`tools/m4_prov_check.py\` run with default paths: **exit 0, 9/9**, all values equal to ORCH-2's own recomputation;
+  mutation controls (tampered digest → exit 1 naming the field; warned variant published as real → exit 1; missing input →
+  exit 2). Two §14 rows mechanize it, so the next cycle re-verifies without re-deriving. Latent coupling recorded in
+  TASK-020 (\`key="relpath"\` vs the derivation's basename keys — equivalent only while \`fixtures/confirmed/\` stays flat).
+- **Defect #42:** nine rows reported \`n=0\`, five of them PASS — \`n\` counted defects found, not comparisons performed (R1
+  breach). Swept and fixed in §4 (now VACUOUS), §12 (×2), §13, §15, §18 (×3); §15's v2.12 HELD row reviewed and left INFO.
+  **326 rows — PASS 273 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1**, selftest 20/20, golden \`_34db0b0\` refreshed (573 ln).
+  No verdict moved.
+- **UNPUSHED: two local commits** (\`74be23c\` cycle K + the seq-48 addendum). Retry \`git push origin
+  arena/01a0d9d0-fleetyard\` at the top of the next act; on success say so in the next CONTROL note and in \`status.md\`.
+- Cycle L agenda is unchanged (see the seq-47 cursor above), minus item 2 (\`m4_prov_check.py\` is now verified): retry push
+  → re-read the fleet → gate item 13b + q3's note at the next worker head → quantum b stays BLOCKED.
+
+### Addendum at seq 49 (2026-09-26T02:37:06Z) — substance amendments, unclipped golden, repair map
+
+- **Defect #44:** §8 (any key stating the construction, not only `config_digest_note`), §18 v2.a(iii) (13 phrasings), §18
+  ANNEX §H (conjunction: 29 + 33 + same-run + the four named/bound). **FAIL set still 13** — no verdict moved.
+- **Defect #43:** `Report.add` clipped `observed` at 400 chars; now wrapped, never clipped. Golden `_34db0b0` = **668 lines**
+  and carries the full 20.14c offender list (5 files, 19 stamps, 4 values; the frozen seal carries none).
+- **`fleet/ORCH-2-REPAIR-MAP.md` published** — hand WORKER-2 this instead of re-explaining 13 rows. Two one-sentence repairs
+  first (item 13b, q3's note → q3 PASS), then the stamp family (20.14c / 0h / v2.c), then provenance (v2.d/v2.e), then
+  quantum b's blockers (v2.a(iii) statement, O-5 freeze binding, §H sentence, v2.g's four tests, v2.b). Entry 13 is BOSS-2's.
+- **UNPUSHED: three local commits.** Retry `git push origin arena/01a0d9d0-fleetyard` at the top of the next act and say so
+  in the next CONTROL note + `status.md` when it lands.
+- Next: cycle L opens when WORKER-2 moves past `34db0b0` — gate item 13b and q3's note first (both flip a row), and re-read
+  the fleet the moment auth returns (registry re-verify against `origin/main`; BOSS-2 may have issued a control).
+
+### Addendum at seq 50 (2026-09-26T02:41:41Z) — §20 derives the coverage claim; four commits local
+
+- **Defect #45:** §16's open-item tuple was frozen at cycle F/G (10/16 closed, newer items absent) and the row PASSed on it.
+  Refreshed + demoted; new **§20** derives the claim from `fleet/ORCH-2-REPAIR-MAP.md` in both directions (verbatim FAIL-row
+  quotation 13/13; 0 stale; VACUOUS owes no repair). **Defect #46:** §20's first run failed on its own regex (inner
+  backticks) — fixed. Instrument **329 rows · PASS 276 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1**, golden 676 ln.
+- **If a repair lands at a new worker head:** the map becomes stale by design — §20's second row will FAIL until a NEW map is
+  published for that head (append-only; never edit the old one).
+- **UNPUSHED: four local commits** (`74be23c`, `c8a644b`, `57018d0`, + this). Retry the push at the top of the next act and
+  report success in the next CONTROL note + `status.md`.
+- Cycle L: re-read the fleet the moment auth returns (registry vs `origin/main`; BOSS-2 controls; WORKER-2 head), then gate
+  item 13b + q3's note first — both are one sentence and both flip a row.
+
+### Addendum at seq 51 (2026-09-26T02:46:02Z) — selftest 27/27; §20 head-bound; five commits local
+
+- Helpers lifted and mutation-tested (T21–T27): #44's three substance tests + #46's quote parser. Refactor verdict-neutral
+  (FAIL 13, same names, compared mechanically). Golden 676 ln.
+- §20 now reads the repair map's bound head: at a different head it reports INFO ("coverage NOT claimed") instead of failing
+  the worker — verified at `1c8a287` (327 rows / FAIL 17 / §20 INFO). **When WORKER-2 moves, publish a NEW map for the new
+  head (append-only) before trusting §20 there.**
+- **UNPUSHED: five local commits** (`74be23c`, `c8a644b`, `57018d0`, `79874c5`, + this). Retry the push first thing; report
+  success in the next CONTROL note + `status.md`.
+- Cycle L unchanged: re-read the fleet when auth returns → gate item 13b + q3's note (one sentence each) → quantum b stays
+  BLOCKED → new repair map for the new head.
+
+### Addendum at seq 52 (2026-09-26T02:48:44Z) — the re-gate's reach published; six commits local
+
+- Ledger §23.12 classifies C1–C13 (8 transferred / 4 re-verified at head / 1 strengthened) and corrects the diff figure to
+  **+42/−4**, all inside the `derivations` literal. If anyone later asks "did M5-R really survive a tool change?", that table
+  is the answer — do not re-argue it, re-run it (`m5r_rerun` in §1 takes ~3 s).
+- **UNPUSHED: six local commits** (`74be23c`, `c8a644b`, `57018d0`, `79874c5`, `dced791`, + this). Retry the push first; on
+  success say so in the next CONTROL note and `status.md`.
+- Cycle L: re-read the fleet when auth returns → gate item 13b + q3's config note (one sentence each; both flip a row) →
+  publish a NEW repair map for the new head before trusting §20 there → quantum b stays BLOCKED.
+
+### Addendum at seq 53 (2026-09-26T02:52:34Z) — 331 rows; two criteria mechanized; seven commits local
+
+- New §1 rows: the **field-level ledger diff** (names any differing field; 1334/1334 aligned, none) and **criterion C11**
+  read statically from the reducer (stdlib-only, no network, six write sites under `--out`). Defect **#47**: the C11 row's
+  first regex under-counted write sites (1 of 6) and PASSed — verify counted populations by hand.
+- §20 caught the new unmapped FAIL immediately (13/14) — if a future cycle adds a FAIL row, the map must gain an entry before
+  the run is clean.
+- **UNPUSHED: seven local commits** (`74be23c`, `c8a644b`, `57018d0`, `79874c5`, `dced791`, `dc1695e`, + this). Retry the
+  push first thing each act; report success in the next CONTROL note + `status.md`.
+- Cycle L unchanged: fleet re-read when auth returns → item 13b + q3's note → NEW repair map for the new head → quantum b
+  BLOCKED. Optional next mechanization if the channel stays down: TASK-018's `L2`–`L9` and TASK-014's q-series are still
+  hand-gated (§16 lists them as uncited); C1/C2/C4–C7/C12/C13 transfer by byte-identity and need no new rows.
+
+### Addendum at seq 54 (2026-09-26T03:00:26Z) — self-audit rows added; classifier fixed; eight commits local
+
+- `--self-audit /home/user/fleetyard` is now worth running every cycle: it verdicts this lane's own fuzzy stamps (#48) with
+  the fixed citation classifier (#49, selftest 31/31). Current state: asserted 17 (all inside append-only records),
+  citations 27, amendable **0**.
+- **Do not re-litigate the worker's 20.14a figures**: they were re-measured at both heads before and after the classifier fix
+  (0 asserted / 29 quoted, PASS). The `4fc40c8` "26 instances" number is an upper bound, labelled in ledger §23.14.
+- When this lane must state an approximate time, state a **bounded window with its bounds' sources** (the outage entry is the
+  model), never a `NN:NxZ` token.
+- **UNPUSHED: eight local commits** (`74be23c`, `c8a644b`, `57018d0`, `79874c5`, `dced791`, `dc1695e`, `f9ec6a8`, + this).
+  Retry the push first each act; report success in the next CONTROL note and `status.md`.

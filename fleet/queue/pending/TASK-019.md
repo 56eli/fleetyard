@@ -283,11 +283,33 @@ a pristine out-of-sample number"* — because all 33 holdout transcripts were re
 (ii) the token rule for any drop-consistency number (apostrophes normalised, hyphens inside tokens), per self-item
 O-1, since `8/122` and `114/8` and `67/55` are different rules over the same data.
 
-**F7 — frozen-input drift is now machine-checked.** §12 of the gate instrument compares the ANNEX B1/B4 digests
-against the worker head every run: `det_dropword.py a0236325…`, `det_format.py ef9ff4f2…`, `m5r_reduce.py
-6d4bb9ce…`, ledger `d42136c6…`, policy manifest `0fe20a60…`, corpus zip `3f36c520…`, book store `c0892fcd…`. A
-drift on any of them voids the pre-registration and forces a new one; the split-v2 file digest is expected to change
-**once**, when item v2.a lands, and the pre-registration must bind the post-note value (criterion v2.10).
+**F7 — frozen-input drift is now machine-checked (AMENDED 2026-09-26T02:17:07Z).** §12 of the gate instrument compares the ANNEX
+B1/B4 digests against the worker head every run: `det_dropword.py a0236325…`, `det_format.py ef9ff4f2…`,
+`m5r_reduce.py a89ff189…` (**re-pinned by F8**; was `6d4bb9ce…`), ledger `d42136c6…`, policy manifest `0fe20a60…`,
+corpus zip `3f36c520…`, book store `c0892fcd…`. **A drift on any of them voids the pre-registration and forces a new
+one UNLESS all three of these hold, in which case the freeze stands on the amended pin: (i) the lane DISCLOSES the drift
+in the artefact itself, naming the old and new digest and its effect on the outputs; (ii) the gate VERIFIES the drift is
+behaviour-neutral by re-running the changed tool with the published pins and comparing output bytes; (iii) the gate
+RE-PINS the value in this ANNEX before the bound run starts.** The rule exists to stop silent input changes; it is not a
+tripwire on a disclosed, verified-neutral documentation change — but an undisclosed drift still voids, and a disclosed
+drift that fails (ii) still voids. The split-v2 file digest is expected to change **once**, when item v2.a lands, and the
+pre-registration must bind the post-note value (criterion v2.10).
+
+**F8 — RE-PIN 2026-09-26T02:17:07Z, ORCH-2, at WORKER-2 `34db0b0`.** `tools/m5r_reduce.py` changed by +46 lines (TASK-020 item 13: the
+manifest's `derivations` prose rewritten, plus a `derivations_revision` record). F7's three conditions: **(i)** the lane
+discloses it inside the manifest — `derivations_revision` names the old blob `6d4bb9ce…` (at `tool_commit dada3e6…`), the
+new blob, and `effect_on_run_outputs: none`; **(ii)** ORCH-2 verified neutrality by re-running the tool **at head** in the
+gate worktree with the published pins (`--utc 2026-09-25T19:55:24Z`, `--tool-commit dada3e6…`, `--main-head 77f1d6de…`,
+`--policy-sha 0fe20a60…`, `--book-store-sha c0892fcd…`, `--detector-tool-commit 7b8863d`): `ledger.jsonl`
+`d42136c673188f9e…` **byte-identical**, `by_transcript_digest` `c1ec4da86a6ce4f4…` identical, 1334 findings, 242 ok / 0 bad
+book refs, 0 citation failures, and the regenerated manifest differs from the committed one in `tool_sha256` alone;
+**(iii)** the pin is re-pinned here and in the instrument's §12 tuple. **No other frozen value moved.** Two consequences
+travel with the re-pin: TASK-013's M5-R PASS holds on the stronger ground of a re-run (self-correction **O-9**: the
+byte-identity-of-the-tool row was a proxy), and **TASK-020 item 13b** is opened — the artefact's `reproducibility_note`
+must state that byte-identity of the ledger depends on passing the **original** `--tool-commit`, since every row embeds it
+in `status_by` (omitting it moves the digest to `c94cce40…` with all 1334 rows otherwise identical). Quantum b's freeze
+therefore STANDS on the amended pin; the blocker is unchanged (§G2, the §H sentence, v2.a(iii)-2nd-half, v2.g's four
+untested refusals, v2.c/v2.d/v2.e/v2.h).
 
 **Unchanged:** quantum b may not run until v2.a lands (v2.7 requires frozen inputs); the pre-registration commit must
 exist before the run commit (v2.12); exactly one execution, no re-run for any reason (C2); nothing added to the eval

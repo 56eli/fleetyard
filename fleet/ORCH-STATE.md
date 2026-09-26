@@ -602,3 +602,120 @@ the reconnect runbook is at the end of that summary.
   **14** (`d85038c`/`bfc0def`, q4 format config rebuilt so its digest equals q3's `8e7e35a2`) — **and `tools/m5r_reduce.py`
   changed by +46 lines**, so **TASK-013's M5-R PASS must be re-gated at cycle K** before it is quoted again. BOSS-2 unmoved
   at `1723564` (cycle 58, seq 61); main unmoved at `7d033ab`; registry `a86115d2…` verified.
+
+---
+
+## 2026-09-26T02:17:07Z — GATE CYCLE K CLOSED at WORKER-2 `34db0b0` (CONTROL seq 47)
+
+- **TASK-013 (M5-R) RE-GATED → PASS HOLDS.** The reducer moved +46 lines, so the byte-identity-of-the-tool row could no
+  longer carry the verdict (**self-correction O-9**: it was a proxy). ORCH-2 re-ran the tool **at head** with the published
+  pins: `ledger.jsonl` `d42136c6…` **byte-identical**, `by_transcript` `c1ec4da8…` identical, 1334 findings / 230 files,
+  242/0 book refs, 0 citation failures; the regenerated manifest differs in `tool_sha256` only (`6d4bb9ce…` → `a89ff189…`).
+- **Diagnosis worth keeping:** the first unpinned re-run's ledger differed; a field diff over all 1334 rows showed the only
+  difference was `status_by`, which embeds `--tool-commit`. Without that pin the digest is `c94cce40…` with identical
+  content → **item 13b opened** (the `reproducibility_note` must name the pin its byte-identity claim depends on).
+- **TASK-020 items 13 and 14 CLOSED**: criterion 20.15a recomputes **7/7** literally (`c5d8f6f3…` fixtures, `58274f46…`
+  overlays variant reproducible as written, `tool_sha256` at the stated `tool_commit`, `json_canonicalization` added);
+  20.16 satisfied by **completeness** — q4's format digest **`8e7e35a2…` == q3's**, notes on all three q4 legs.
+- **M4 scoreboard: q1 PASS · q2 FAIL/INCOMPLETE (item 0h alone) · q3 FAIL/INCOMPLETE (its `config_digest_note` alone) ·
+  q4 PASS · q5 PASS.** TASK-015/M6 FINAL stays BLOCKED behind quantum b (§G2, §H sentence, v2.a(iii)-2nd-half, v2.g's four
+  untested refusals, v2.c/v2.d/v2.e/v2.h).
+- **ANNEX §F7 amended + §F8 recorded** (**O-10**: my drift tripwire was over-broad — it would have voided a pre-registration
+  on a disclosed, verified-neutral documentation change). Drift now voids unless disclosed + verified neutral by re-run +
+  re-pinned before the bound run. No frozen value other than `m5r_reduce.py` moved; §12 6/6.
+- **Instrument 324 rows — PASS 271 · FAIL 13 · INFO 32 · PROXY 8**, `--selftest` 20/20, golden `_34db0b0` (569 ln).
+  Amended rows: §1 binding re-run (+ byte row demoted to HISTORY), §3 20.16 substance, §8 note-per-published-digest,
+  §12 re-pin, §14 `tool_sha256`@`tool_commit` + fixtures basename + item 13b, §4 append-only (the previously gated head may
+  already carry the dispositions, so "growth" is not the test), **§19 census now whole-tree** (a cycle that touches none of
+  the offending files must not report the class closed: 19 forward of 61 own-time stamps, none new in this range).
+  Defects **#39/#40/#41** published. **Suite floor 263** (`Ran 263 in 199.3s, OK (skipped=1)`).
+- **PLATFORM: GitHub auth dead** (`GH_TOKEN no longer valid`) since a bounded window — between 02:01:46Z (CONTROL seq 46) and 02:17:07Z (the first cycle-K document stamp) — the exact second is not recoverable, because the credential died between two calls in that window — cycle K committed locally, push retried on
+  cadence; CONTROL.log + heartbeat stay live inside the work loop. Fleet unreadable after the outage: last good read main
+  `7d033ab`, BOSS-2 `1723564`, WORKER-2 `34db0b0`.
+
+### 2026-09-26T02:34:11Z — cycle K addendum: the worker's checker run + mutation-tested; gate defect #42 (R1 sweep)
+
+- `tools/m4_prov_check.py` **exit 0, 9/9** with default paths; every value equals ORCH-2's own recomputation; independent
+  implementation (no import from the reducer); `tool_sha256` resolved at the manifest's own `tool_commit`. Mutation
+  controls: tampered digest → exit 1 naming the field; warned variant published as real → exit 1; missing input → exit 2.
+  Two new §14 rows mechanize both halves. Item 13 corroborated twice.
+- **Defect #42 (R1 sweep of my own output):** nine rows reported `n=0`, **five of them PASSes** — `n` counted defects found
+  instead of comparisons performed. Fixed across §4/§12/§13/§15/§18; §4 is now honestly VACUOUS; the §15 v2.12 HELD row was
+  reviewed and left INFO. **326 rows — PASS 273 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1**, selftest 20/20, golden
+  refreshed (573 ln). No verdict moved — that is the check on the sweep. New rule: if the natural `n` is "how many defects
+  did I find", report the population searched and put the defect count in the observed text.
+- Push channel still down (`GH_TOKEN no longer valid`): `74be23c` + the addendum commit are local; CONTROL.log and the
+  heartbeat continue at cadence inside the work loop.
+
+### 2026-09-26T02:37:06Z — cycle K addendum 2: substance amendments (#44), unclipped evidence (#43), repair map published
+
+- Three rows now judge substance, not wording: §8 accepts any key stating the construction; §18 v2.a(iii) accepts 13
+  phrasings; §18 ANNEX §H tests the conjunction (29 + 33, same run, the four named/bound) instead of one word. FAIL set
+  unchanged at 13 — an amendment that moves a verdict at an unrepaired head is a defect, not a fix.
+- The golden no longer clips `observed` (573 → 668 lines), so the 20.14c FAIL is actionable: 19 stamps over 5 files, 15 of
+  them the appended dispositions, 4 distinct values, and **the byte-frozen seal carries none**.
+- `fleet/ORCH-2-REPAIR-MAP.md` gives WORKER-2 one document instead of 13 scattered rows: what to change, which row flips,
+  what the gate will re-derive — and what repair cannot re-open (TASK-013 PASS, q1/q4/q5 PASS, TASK-017 PASS, seal STANDS).
+- Push still down: three local commits (`74be23c`, `c8a644b`, + this). Signals at cadence.
+
+### 2026-09-26T02:41:41Z — cycle K addendum 3: defect #45 (a curated completeness claim) and §20 (the derived one)
+
+- §16's "every OPEN item has a row that flips on repair" read a tuple frozen at cycle F/G: **10 of 16 items closed, all newer
+  items absent** — and it PASSed. Refreshed to the cycle-K open set and demoted to a cross-check; 20.14c's row now cites
+  TASK-020 item 12c as well.
+- New **§20** derives the claim from `fleet/ORCH-2-REPAIR-MAP.md`: FAIL rows must appear **verbatim** (13/13 PASS), quoted
+  names must still FAIL (0 stale), VACUOUS rows owe no repair (1). The FAIL set and the map now agree **mechanically**.
+- **Defect #46** was §20's own first-run bug: the verbatim regex truncated at inner backticks (4 row names contain one),
+  producing 9/13 mapped and 4 false "stale" entries. Fixed by matching greedily to the closing backtick at end of line.
+- Instrument **329 rows — PASS 276 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1**, selftest 20/20, golden 676 ln. Four commits
+  local; push still down (`GH_TOKEN no longer valid`); signals at cadence.
+
+### 2026-09-26T02:46:02Z — cycle K addendum 4: selftest 27/27, refactor verdict-neutral, §20 bound to its map's head
+
+- `states_construction` / `one_draw_statement` / `h_denominator_commitment` / `verbatim_row_quotes` are module level and
+  mutation-tested (T21–T27), each case naming the defect it guards (#44 ×3, #38, #46). **Selftest 27/27**; the refactor moved
+  no verdict (FAIL set compared mechanically, 13 == 13).
+- §20 read the map's head and found it was charging the worker for the gate's bookkeeping: at `1c8a287` (17 FAILs) the
+  `34db0b0` map (13 quotes) produced a FAIL. Now INFO — "coverage NOT claimed for this head" — and still a hard FAIL at the
+  map's own head on an unmapped or stale entry. Rule: **a check that compares two artefacts must state which head each was
+  made for.**
+- Instrument at `34db0b0`: **329 rows — PASS 276 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1**, golden 676 ln. Five commits
+  local; push still down (`GH_TOKEN no longer valid`); signals at cadence.
+
+### 2026-09-26T02:48:44Z — cycle K addendum 5: what the M5-R re-gate actually carries (C1–C13 classified)
+
+- Ledger §23.12: **8 criteria transferred** by byte-identity (C1, C2, C4, C5, C6, C7, C12, C13), **4 re-verified at head**
+  (C3 citations 0 failures / 242-0 book refs; C9 the re-run *is* the fresh replay at a pinned utc; C10 `Ran 263 OK
+  (skipped=1)`, floor 257 → 263; C11 stdlib-only, no network, one write site, diff touches no import/I-O line), **1
+  strengthened** (C8: manifest identical except `tool_sha256`, derivations 7/7, the worker's checker 9/9).
+- Correction to this lane's own record: the reducer diff is **+42/−4** (46 *changed*, net +38), all inside the manifest's
+  `derivations` literal — "documentation-only" is verified, not asserted.
+- Rule added: a re-gate that rests on identical outputs must publish **which criteria that identity carries**; process,
+  source and suite criteria need their own evidence in the same act.
+- Six commits local; push still down (`GH_TOKEN no longer valid`); signals at cadence.
+
+### 2026-09-26T02:52:34Z — cycle K addendum 6: the field-diff and C11 mechanized; defect #47 (an under-counting row)
+
+- §1 now aligns the published and re-run ledgers by `id` and **names every differing field** (1334/1334, none) — the cycle-K
+  diagnosis mechanized, and item 13b's evidence in one line. C11 is read from the reducer's source each run (stdlib-only
+  imports, no network/subprocess, six write sites all under `--out`; PASS n=18).
+- **Defect #47:** the C11 row's write-site pattern stopped at the first comma → reported **1 of 6** sites and still PASSed.
+  Under-counts are invisible in the verdict; check a counted population against the source by hand.
+- **§20 fired on the gate's own new row** ("13/14 mapped; UNMAPPED: criterion C11") — the derived coverage check works.
+- Instrument **331 rows — PASS 278 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1**, selftest 27/27, golden 680 ln. Seven commits
+  local; push still down; signals at cadence.
+
+### 2026-09-26T03:00:26Z — cycle K addendum 7: self-audit verdicts its own census (#48), the citation classifier fixed (#49), worker figures re-measured
+
+- `--self-audit` printed a count and drew no conclusion; a row now judges asserted-fuzzy stamps in this lane's amendable docs
+  (FAIL) separately from append-only records (history). Amendable count is **0**; the lane's total fell 26 → 17 with citations
+  24 → 27.
+- `classify_fuzzy` tested the character beside the time **fragment**, so a fully backticked ISO stamp — how this lane quotes
+  one — counted as an assertion. Fixed with an outward scan plus a quoted-artefact-span rule; T28–T31 guard it, including the
+  negative that keeps it honest. **Selftest 31/31.**
+- **The worker census was re-measured at both heads before and after the fix: 0 asserted / 29 quoted, PASS — no charge was
+  overstated.** The `4fc40c8` "26 instances" figure is an upper bound and stays labelled as one.
+- This lane's outage approximation `~02:1xZ` is now a bounded window with its bounds' sources (02:01:46Z CONTROL seq 46 →
+  02:17:07Z first cycle-K stamp) — criterion 20.14's discipline applied to an approximation.
+- Instrument **331 rows — PASS 278 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1** (unchanged). Eight commits local; push still
+  down (`GH_TOKEN no longer valid`); signals at cadence.

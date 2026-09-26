@@ -192,3 +192,10 @@ outside the post-seal void check), **v2.c / v2.d / v2.f** (stamps and `tool_comm
 2026-09-26T01:54:50Z bfc0def -> TASK-020 (item 14: q4 supplement rebuilt, digest now equals q3's 8e7e35a2) [cycle K]
 2026-09-26T01:54:56Z 34db0b0 -> (records) pin-repair report refreshed + CONTROL seq 49 == **cycle K head**; NOTE:
                                  tools/m5r_reduce.py changed +46 lines in 1c8a287..34db0b0 -> TASK-013 re-gate owed
+2026-09-26T02:17:07Z RESOLVED  -> the cycle-K re-gate flagged above is DONE at `34db0b0`: TASK-013 (M5-R) **PASS HOLDS** — the
+                                 reducer re-run at head with the published pins reproduces ledger `d42136c6…` and
+                                 by_transcript `c1ec4da8…` byte-identically; items 13 + 14 CLOSED; item **13b** OPENED
+                                 (the `reproducibility_note` must name its `--tool-commit` dependency); q3 still owes
+                                 `config_digest_note`; ANNEX §F7 amended + §F8 re-pins `m5r_reduce.py`
+                                 `6d4bb9ce` → `a89ff189`. Instrument 324 rows (PASS 271/FAIL 13/INFO 32/PROXY 8);
+                                 suite floor 263. [cycle K close]

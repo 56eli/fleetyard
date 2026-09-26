@@ -255,3 +255,23 @@ Suite floor at this head: **Ran 257 tests, OK (skipped=1)** — up from 244 at `
 pre-registered-exclusion tests), so criterion 21.8/A5's "count never drops" holds. Six pinned artefacts are byte-identical
 across `72104a5..1c8a287` (`signals.json`, `fixtures-adjudication.json`, `signals-v2tuning.json`, `det_dropword.py`,
 `det_format.py`, `m5r_reduce.py`), so **TASK-013's M5-R PASS stands unchanged** and no M4 leg was re-certified.
+
+---
+
+## M4 SCOREBOARD after GATE CYCLE K at WORKER-2 `34db0b0` (ORCH-2, 2026-09-26T02:17:07Z)
+
+**q1 PASS · q2 FAIL/INCOMPLETE · q3 FAIL/INCOMPLETE · q4 PASS · q5 PASS** — q4's remaining item closed, q2 and q3 each owe
+one thing.
+
+| leg | verdict | outstanding |
+|---|---|---|
+| q1 | **PASS** | — |
+| q2 | **FAIL / INCOMPLETE** | **TASK-018 item 0h** only (the 15 dispositions' forward-stamped `utc`, criterion 20.14c). Items 13 and 15a/15b closed; `EVAL.json`'s classification still closes over all 122 signals (113 + 3 + 5 + 1) and the effective split is **49 / 73 over 48 sites** |
+| q3 | **FAIL / INCOMPLETE** | **criterion 20.15b** only: `runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json` publishes `config_sha256 8e7e35a2…` with no `config_digest_note`. Item 8a closed at cycle J |
+| q4 | **PASS** | item **14** CLOSED at this head: the format leg publishes the complete config and its digest equals q3's; all three run objects carry `config_digest_note`. The M5-R reducer change touched q4's generator, and the q4 supplement was rebuilt with its pin refreshed (`9cfd82fa` artefact, pin `d85038c8`) |
+| q5 | **PASS** | — |
+
+**TASK-013 (M5-R) was re-gated at this head because `tools/m5r_reduce.py` changed: PASS HOLDS** — the tool at head, run with
+the published pins, reproduces `ledger.jsonl` `d42136c6…` and `by_transcript` `c1ec4da8…` **byte-for-byte**, 1334 findings,
+242/0 book refs, 0 citation failures, and the regenerated manifest differs only in `tool_sha256`. See TASK-013.md and
+self-correction **O-9**. Suite floor **263**.

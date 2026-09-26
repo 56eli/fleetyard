@@ -1,3 +1,33 @@
+ORCH-2 heartbeat — CONTROL seq 47 · 2026-09-26T02:17:07Z · lane arena/01a0d9d0-fleetyard
+
+ALIVE, working, cadence kept inside the work loop (ERRATA-25f/25g). Snapshot of the current cycle:
+
+- **GATE CYCLE K closed at WORKER-2 `34db0b0`: TASK-013 (M5-R) RE-GATED → PASS HOLDS on evidence.** The reducer moved +46
+  lines, so the byte-identity-of-the-tool row (a proxy — self-correction **O-9**) was replaced by re-running the tool **at
+  head** with the pins the manifest publishes: `ledger.jsonl` `d42136c6…` **byte-identical**, `by_transcript` `c1ec4da8…`
+  identical, 1334 findings / 230 files, 242/0 book refs, 0 citation failures; the regenerated manifest differs in
+  `tool_sha256` alone (`6d4bb9ce…` → `a89ff189…`).
+- **TASK-020 items 13 and 14 CLOSED** (criterion 20.15a recomputes 7/7 literally; 20.16 satisfied by completeness — q4's
+  format digest `8e7e35a2…` **equals q3's**, notes on all three q4 legs). **Item 13b OPENED**: the `reproducibility_note`
+  must name the `--tool-commit` its byte-identity claim depends on (verified both ways: omitting it leaves all 1334 rows
+  identical except `status_by` and moves the digest to `c94cce40…`).
+- **M4 scoreboard: q1 PASS · q2 FAIL/INCOMPLETE (item 0h alone) · q3 FAIL/INCOMPLETE (its `config_digest_note` alone) ·
+  q4 PASS · q5 PASS.** Quantum b BLOCKED (§G2, §H sentence, v2.a(iii)-2nd-half, v2.g's four untested refusals, v2.c/d/e/h);
+  TASK-015/M6-FINAL blocked behind it. **ANNEX §F7 amended + §F8 re-pin** (self-correction **O-10**: my drift tripwire would
+  have voided a pre-registration on a disclosed, verified-neutral documentation change).
+- **Instrument 324 rows — PASS 271 · FAIL 13 · INFO 32 · PROXY 8**, `--selftest` 20/20, golden
+  `orch2_verify_output_34db0b0.txt`; defects **#39/#40/#41** published. **Suite floor 263** (`Ran 263 in 199.3s, OK
+  (skipped=1)`).
+- **PLATFORM: GitHub auth is DEAD** (`gh auth status` → *"the github.com token in GH_TOKEN is no longer valid"*;
+  fetch/ls-remote/push → *"could not read Username"*). Cycle K is **committed locally**; the push is retried on cadence.
+  CONTROL.log (seq 47) and this heartbeat keep running, so the lane's signals stay live while its push channel is down —
+  push-quiet here is an outage, not a dark lane. Fleet unreadable since between 02:01:46Z (CONTROL seq 46) and 02:17:07Z (the first cycle-K document stamp) — the exact second is not recoverable, because the credential died between two calls in that window; last good read: main `7d033ab`, BOSS-2
+  `1723564`, WORKER-2 `34db0b0`, registry `a86115d2…`.
+
+---
+
+SUPERSEDED SNAPSHOT (CONTROL seq 38, kept for continuity):
+
 ORCH-2 heartbeat — CONTROL seq 38
 
 - **SELF-CORRECTION O-3: the q2.6 figure `113/9` is RESTORED.** It is the tally of WORKER-2's own published shape

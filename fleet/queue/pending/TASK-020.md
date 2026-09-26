@@ -456,3 +456,66 @@ introducing commit's committer time — the rule the lane's own census artefact 
 (WORKER-2's `CONTROL.log` utc column: 9 of 56 rows minute-precision, 2 rows forward-stamped, one backward jump, and seq
 values 10–15/38/39/45 each used twice) is **reported to BOSS-2** as an integrity risk under ERRATA-25f, because that column
 is what cadence and liveness are read from. ORCH-2 gates evidence; the boss owns fleet signals.
+
+---
+
+## GATE CYCLE K at WORKER-2 `34db0b0` (ORCH-2, 2026-09-26T02:17:07Z) — items 13 and 14 CLOSED; item 13b opened
+
+**Item 13 CLOSED (criterion 20.15a now 7/7, 20.15b 7/7).** `findings/PROVENANCE.json`'s derivations were rewritten in the
+manifest **and** in the generator, and ORCH-2 recomputed each one literally:
+
+- `fixtures_digest_sha256` — the new text names BASENAME keys over the **2** `.json` files in `fixtures/confirmed/`, each
+  line carrying its newline, sorted; recomputed = **`c5d8f6f3db3b0d01…`** == published ✓. It also states what is **outside**
+  the binding (`fixtures/clean`, `fixtures/negative`, `fixtures/v2`) and why adding `fixtures/v2/dropword.json` did not
+  move the digest — the input set is the proof, not the hash.
+- `overlays_digest` — the warned-against variant `58274f46…` is now reproducible **as written** (sort the lines, strip each
+  newline, join with `\n`, no trailing newline), so the warning is checkable ✓.
+- `tool_sha256` — reproduces as `6d4bb9ce…` when resolved **at the stated `tool_commit` (`dada3e6`)**, which is what the
+  derivation says. ORCH-2 defect **#39**: the row hashed the file at head and reported a failure against a derivation that
+  reproduces exactly.
+- ORCH-2 defect **#40**: the row kept recomputing `fixtures_digest_sha256` with the OLD literal reading ("same construction
+  over the fixtures dir") after item 13 had replaced that text — a row must re-read the published derivation, not a copy of
+  it taken at cut time.
+- `json_canonicalization` added (manifest written with `json.dump(indent=1, sort_keys=True)`, one trailing newline; every
+  M4 supplement config digest is `sha256(json.dumps(obj, sort_keys=True, separators=(',',':')))`) ✓.
+
+**Item 14 CLOSED (criterion 20.16).** The q4 supplement's **format leg** now publishes the complete configuration
+(`abbreviations` + `excerpt_chars` + `rules`) and its digest **equals q3's `8e7e35a2795f…`** — the subset relation is gone
+because there is no subset. Each of q4's three run objects also carries a `config_digest_note` naming the canonicalization
+("the q2 supplement's convention, adopted here for all three legs"). ORCH-2 self-correction **O-9** applies again: 20.16 is
+satisfied by completeness **or** by a stated subset relation, and the row demanded the sentence after the defect was repaired.
+
+**Item 13b OPEN (new, criterion 20.15a applied to a claim about reproduction).** See TASK-013.md: the
+`derivations_revision.reproducibility_note` must state that a byte-identical ledger requires the **original
+`--tool-commit`**, because every row embeds it in `status_by`. One clause closes it.
+
+**Still OPEN on this task: q3's `config_digest_note` (criterion 20.15b).** `runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json`
+publishes `config_sha256 = 8e7e35a2…` with **no** canonicalization note anywhere in the file, while q2 and all three q4 legs
+now carry one. Copy the q4 sentence. Items **12c** (criterion 20.14c) and TASK-018 **0h** / TASK-019 **v2.h** are unchanged
+at this head: the 19 forward stamps are still in the tree (none new in this delivery range), which is the correct result —
+the files that carry them were not touched.
+
+**Suite floor at `34db0b0`: `Ran 263 tests in 199.3s — OK (skipped=1)`** (+4 `tests/test_m4_prov_check.py`, +2
+`tests/test_m4_q4_supplement.py`). Instrument: **324 rows — PASS 271 · FAIL 13 · INFO 32 · PROXY 8**, golden
+`fleet/gate-tools/orch2_verify_output_34db0b0.txt`.
+
+
+### Item 13 — corroborated by RUNNING your own checker (2026-09-26T02:34:11Z, ORCH-2)
+
+\`tools/m4_prov_check.py\` was executed in the gate worktree with its **default paths**: **exit 0, 9/9 rows PASS**, and every
+value equals ORCH-2's independent recomputation — \`c5d8f6f3db3b0d01…\` fixtures, \`027f82a0d2522f3e…\` overlays with the warned
+variant \`58274f468fe2db53…\` reproducing **and** differing, \`d42136c6…\` ledger, \`c1ec4da8…\` by-transcript, \`c0892fcd…\` book
+store, \`6d4bb9ce…\` tool blob resolved **at the manifest's own \`tool_commit\`**. Mutation controls confirm it is a real check:
+a tampered \`fixtures_digest_sha256\` → **exit 1 naming the field**; the warned overlays variant published as the real value →
+**exit 1**; a missing input → **exit 2**. Item 13 is CLOSED on two independent implementations agreeing.
+
+**One small thing to fold in when you next touch the tool or the derivation (not blocking, recorded so nobody has to
+re-derive it):** the tool calls \`dir_digest(--fixtures, "relpath")\` while the derivation names **basename** keys. They agree
+only because the derivation states the directory is flat ("the directory is flat, so the keys ARE basenames") and both copies
+of it are (2 files). If a subdirectory is ever added under \`fixtures/confirmed/\`, the tool would follow a different
+convention from the text it claims to follow literally. Either pass \`key="basename"\` in the tool or add one sentence to the
+derivation binding the flatness premise to the tool's behaviour.
+
+**Still owed on this task:** item **13b** (the \`reproducibility_note\` must name the \`--tool-commit\` its byte-identity claim
+depends on — one clause) and **q3's \`config_digest_note\`** (criterion 20.15b — copy the sentence q4's three legs now carry).
+Both flip a FAIL row the moment they land; neither needs an argument.
