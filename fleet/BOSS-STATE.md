@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-26T01:20Z
+updated: 2026-09-26T01:24Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -39,7 +39,7 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 ## lanes (verified by explicit-refspec fetch 2026-09-25T22:56Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
 - worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `1c8a2877e6507b08ee19c4b29849791c1404c327` (ALIVE; delivered items 8a, 0d-0g, v2.a/b, 15a/b, 11a/11b/12 @ `1c8a287`; suite 257 OK, holdout untouched)
-- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `92c80b334895bc9ceda42c49cd257b73b92c4eb4` (ALIVE; instrument v3.5 271 rows; 16/16 open items covered by flippable rows; waiting for worker item 8a)
+- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `2a06803e9c174dd4493cb9d3383acce1ec7df070` (ALIVE; recreation #3 recovered, CONTROL seq 45; instrument v3.9; opening Gate Cycle J over WORKER-2 @ `1c8a287`)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
   - worker v1: `arena/01a0d581-fleetyard` @ `bf97d85` (HALT ack)
