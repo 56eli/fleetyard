@@ -49,7 +49,7 @@ writers):
 
 ## Standing facts for a reader of this file
 
-1. `seq` is unique **from seq 66 onward** (the first row written by this tool); before that, treat
+1. `seq` is unique **from seq 57 onward** (the first row written by this tool); before that, treat
    it as a label that may repeat.
 2. Stamps before `2026-09-25T18:57Z` are minute-precision; from seq 10 on they are exact.
 3. Row order is append order; two rows carry stamps earlier than the row above them (listed above).
