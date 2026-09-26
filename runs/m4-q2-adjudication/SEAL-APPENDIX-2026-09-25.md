@@ -137,14 +137,22 @@ to derive the attribution from history: it is stated, and the equality is assert
 ### v2.e — the citation census now covers every mention, and names the key
 
 The previous census saw only objects carrying **both** `artifact` and `artifact_sha256` (5
-pairs) while the fixture file cites the artefact at **6** paths; the sixth,
+pairs) while the fixture file mentions the artefact at **10** paths (ORCH-2's count). The report
+now publishes **two reconciled views of one population**, and the key is named in the census
+itself:
+
+| view | rows | what it counts |
+|---|---|---|
+| `artifact_mentions` | **6** | one row per **citation key** — a dict carrying `artifact` and/or `artifact_sha256`; each row names the key (`json_path`, `keys_citing`), the artefact, the digest and its `digest_source` (paired, or resolved from the file at HEAD) |
+| `artifact_occurrences` | **10** | one row per **string occurrence** of a cited path anywhere in the file: **6 value citations** (the citation keys above) + **4 prose citations** inside `fixtures[0..3]/adjudication_2026_09_25/cited_bytes` ("`…/fixtures-adjudication.json` (transcript span + book slug/offset/quote, re-derived)") |
+
+So 5 paired + 1 unpaired key citations = 6, and the four prose citations are the remainder of the
+ten ORCH-2 counted — the population is now enumerated rather than inferred. The unpaired mention,
 `/adjudication_summary_2026_09_25/artifact`, had **no paired digest** and so sat **outside** the
-post-seal void check. The audit report now keeps `artifact_mentions` — **one row per citation
-key**, naming the key (`json_path`, `keys_citing`), the artefact, the digest and its
-`digest_source` — and puts **every** mention through the post-seal check, resolving an unpaired
-mention's digest from the file at HEAD. `confirmation_artifacts` is now the artefact-level view
-with the citing paths listed. **Result: 1 unpaired mention found and resolved; every one of the
-six citations names the same pre-seal artefact — so the gap is closed by check, not by hand.**
+post-seal void check; it is now resolved from the file at HEAD and put **through** the check, and
+`confirmation_artifacts` is the artefact-level view with the citing paths listed. **Result: every
+occurrence names the same pre-seal artefact (`61568a9e…`, authored `1fb524e` 13m36s before the
+seal) — the gap is closed by check, not by hand.**
 
 ### v2.a (iii), 2nd half — "one draw, not two", stated and checkable
 

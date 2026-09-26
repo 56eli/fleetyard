@@ -186,6 +186,33 @@ def artifact_mentions(node, path="", found=None):
     return found
 
 
+def artifact_occurrences(node, candidates, path="", found=None):
+    """EVERY occurrence of a candidate artefact path anywhere in the document (item v2.e).
+
+    `artifact_mentions` walks citation KEYS; this walks string VALUES as well, because a fixture
+    file can cite an artefact inside a note ("<path> (transcript span + book slug/offset/quote,
+    re-derived)") — a mention a reader must be able to find, and a mention that must sit inside
+    the post-seal check. The two views together are the census's population: keys are one kind of
+    citation, prose is the other, and the report states both counts.
+    """
+    if found is None:
+        found = []
+    if isinstance(node, dict):
+        for k, v in node.items():
+            artifact_occurrences(v, candidates, path + "/" + str(k), found)
+    elif isinstance(node, list):
+        for i, v in enumerate(node):
+            artifact_occurrences(v, candidates, path + "[%d]" % i, found)
+    elif isinstance(node, str):
+        for cand in candidates:
+            if cand in node:
+                found.append({"json_path": path or "/", "artifact": cand,
+                              "kind": "value-citation" if node.strip() == cand
+                                      else "prose-citation",
+                              "text": node})
+    return found
+
+
 def tool_commit_of(repo, tool_path):
     """`tool_commit` = the reachable commit carrying this tool's CURRENT bytes (item v2.d).
 
@@ -475,14 +502,38 @@ def audit(repo, seal_path, utc=None):
         g["paired_mentions" if row["paired"] else "unpaired_mentions"] += 1
         g["digest_matches_head"] = g["digest_matches_head"] and row["digest_matches_head"]
     report["confirmation_artifacts"] = [grouped[k] for k in sorted(grouped)]
+    # the population, stated: citation KEYS plus PROSE citations inside string values
+    candidates = sorted({r["artifact"] for r in report["artifact_mentions"] if r["artifact"]})
+    occurrences = artifact_occurrences(live_doc, candidates) if candidates else []
+    for occ in occurrences:
+        artefact_utc = (last_commit(repo, occ["artifact"])[1] if occ["artifact"] else None)
+        occ["authored_relation_to_seal"] = (
+            None if not (artefact_utc and seal_utc)
+            else ("pre-seal" if artefact_utc < seal_utc else "post-seal"))
+        occ["post_seal_check"] = ("covered by the artefact-level check above; this occurrence "
+                                  "names the same artefact, whose authored commit decides the "
+                                  "re_seal_rule")
+    report["artifact_occurrences"] = occurrences
     report["artifact_mention_census"] = {
+        "key": ("one row per citation KEY (`artifact` / `artifact_sha256` inside a dict) in "
+                "artifact_mentions; one row per STRING OCCURRENCE of a cited path - value or "
+                "prose - in artifact_occurrences"),
         "mentions": len(report["artifact_mentions"]),
+        "occurrences": len(occurrences),
+        "value_citations": sum(1 for o in occurrences if o["kind"] == "value-citation"),
+        "prose_citations": sum(1 for o in occurrences if o["kind"] == "prose-citation"),
         "distinct_artifacts": len(grouped),
         "paired_mentions": sum(1 for r in report["artifact_mentions"] if r["paired"]),
         "unpaired_mentions": sum(1 for r in report["artifact_mentions"] if not r["paired"]),
-        "note": ("item v2.e: every mention is put through the post-seal check, including "
-                 "mentions with no paired digest (their digest is resolved from the file at "
-                 "HEAD); the previous census saw only artifact+artifact_sha256 pairs"),
+        "population_statement": ("the census covers the whole population it names: every key "
+                                 "citation is put through the post-seal check (an unpaired "
+                                 "mention's digest is resolved from the artefact at HEAD), and "
+                                 "every occurrence of a cited path - including prose citations "
+                                 "inside string values - is enumerated with the same artefact "
+                                 "attribution; a reader can reconcile value+prose against the "
+                                 "raw file"),
+        "note": ("item v2.e: the previous census saw only artifact+artifact_sha256 pairs, which "
+                 "is how an unpaired mention came to sit outside the post-seal check"),
     }
 
 

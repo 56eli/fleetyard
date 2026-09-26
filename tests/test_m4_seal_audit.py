@@ -400,6 +400,31 @@ class SealAudit(ToyRepo):
                       rep["tool_running_matches_note"])
 
 
+    def test_census_counts_keys_and_prose_occurrences_separately(self):
+        """v2.e: the population is every occurrence — a prose citation is a mention too."""
+        cited = dict(self.FIXTURES)
+        cited["fixtures"][0]["adjudication_2026_09_25"] = {
+            "cited_bytes": "notes/summary.json (transcript span + book slug/offset/quote, "
+                           "re-derived)"}
+        cited["adjudication_summary_2026_09_25"] = {"artifact": "notes/summary.json"}
+        self.write("notes/summary.json", {"note": "confirmation summary"})
+        self.write("fixtures/toy.json", cited)
+        self.commit("2026-09-25T20:05:00+00:00", "fixtures with a key citation and a prose one")
+        self.seal()
+        rep = self.report()
+        c = rep["artifact_mention_census"]
+        self.assertEqual(c["mentions"], 1)              # one citation key
+        self.assertEqual(c["occurrences"], 2)           # the key + the prose occurrence
+        self.assertEqual(c["value_citations"], 1)
+        self.assertEqual(c["prose_citations"], 1)
+        kinds = {o["json_path"]: o["kind"] for o in rep["artifact_occurrences"]}
+        self.assertEqual(kinds["/adjudication_summary_2026_09_25/artifact"], "value-citation")
+        self.assertEqual(kinds["/fixtures[0]/adjudication_2026_09_25/cited_bytes"],
+                         "prose-citation")
+        self.assertIn("covers the whole population", c["population_statement"])
+        self.assertIn("prose citations", c["population_statement"])
+
+
 
 if __name__ == "__main__":
     unittest.main()
