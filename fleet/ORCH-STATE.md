@@ -715,7 +715,25 @@ the reconnect runbook is at the end of that summary.
   negative that keeps it honest. **Selftest 31/31.**
 - **The worker census was re-measured at both heads before and after the fix: 0 asserted / 29 quoted, PASS — no charge was
   overstated.** The `4fc40c8` "26 instances" figure is an upper bound and stays labelled as one.
-- This lane's outage approximation `~02:1xZ` is now a bounded window with its bounds' sources (02:01:46Z CONTROL seq 46 →
+- This lane's fuzzy outage stamp `~02:1xZ` is now a bounded window with its bounds' sources (02:01:46Z CONTROL seq 46 →
   02:17:07Z first cycle-K stamp) — criterion 20.14's discipline applied to an approximation.
 - Instrument **331 rows — PASS 278 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1** (unchanged). Eight commits local; push still
   down (`GH_TOKEN no longer valid`); signals at cadence.
+
+### 2026-09-26T09:50:34Z — cycle L: WORKER-2 `f5e2cf5` gated, M4 scoreboard PASS on all five, two gate defects found by a fresh worktree
+
+- **Fleet:** main `7d033ab` (unchanged, registry `a86115d2…` re-verified) · WORKER-2 `f5e2cf5` · BOSS-2 `6e17567` (cycles
+  66–73, zero controls, its own signals stopping at 02:26Z — the fleet was dark during the outage, not stale).
+- **Closed 10 of 13** on evidence. **TASK-014 PASS (q1–q5)** · **TASK-018 PASS** · **TASK-013 M5-R PASS HOLDS** ·
+  **TASK-017 PASS** · **TASK-015 blocker LIFTED, PENDING THE RUN** (not gateable: no receipt declares the V2 holdout spent) ·
+  **TASK-019a** owes v2.e + v2.f · **TASK-020** owes item 12 + 13b.
+- **Defect #51:** item 0g demanded byte-identity for lines 20.14c ordered repaired — the gate FAILed its own repair. Amended
+  narrowly after hand-verification (15/137 lines, four stamp fields only, prior `utc` verbatim, reasons stated, no substance
+  field moved), mutation-tested T32–T34, regression-checked at `34db0b0` (same 13 FAILs).
+- **Defect #50:** a fresh worktree lacks the gitignored `corpus/`+`evidence/`; the run died with no summary, pins FAILed
+  `ABSENT-IN-ARCHIVE`, and the census digest compared against the sha256 of the empty string. §0 preflight + guarded sections
+  + VACUOUS-not-FAIL, mutation-tested T35–T36; its first version invented a false digest FAIL and its own row caught it.
+- **Instrument:** 336 rows · PASS 290 · FAIL 5 · INFO 32 · PROXY 8 · VACUOUS 1 · selftest **36/36** · suite floor **283**.
+- **Lane:** `af8444d` pushed (recreation #4 recovered: history lost, content restored, one superset commit, no force-push).
+  Next: the five open rows are the worker's; ORCH-2's own next acts are the quantum-b run authorization question to the owner
+  and re-gating whatever head arrives.

@@ -340,3 +340,23 @@ heartbeat at cadence — signals are the liveness contract, not the push (ERRATA
   model), never a `NN:NxZ` token.
 - **UNPUSHED: eight local commits** (`74be23c`, `c8a644b`, `57018d0`, `79874c5`, `dced791`, `dc1695e`, `f9ec6a8`, + this).
   Retry the push first each act; report success in the next CONTROL note and `status.md`.
+
+### Addendum at seq 56 (2026-09-26T09:50:34Z) — cycle L published; recreation #4 recovered; what the next act must do
+
+- **Lane head `af8444d` is PUSHED.** After recreation #4 the base was wrong (fresh shallow clone at `2ed0b9b`); recovery is
+  fetch → `git reset <published head>` → one superset commit → push. Never force, never re-write a cycle from memory while
+  the files are on disk. First act after any recreation: `ls-remote` + `cat-file` on the last commit you believe you made.
+- **Worktrees are ephemeral.** `/home/user/gate-scratch/*` did not survive; recreate with `git worktree add --detach` and run
+  **`sh tools/m5r_inputs.sh` inside the worktree** before the gate, or §0 will (correctly) report the inputs VACUOUS. The
+  archive lane must be fetched for the pins' third leg: `git fetch origin
+  refs/heads/arena/01a0d581-fleetyard:refs/remotes/origin/arena/01a0d581-fleetyard`.
+- **Current gate state:** WORKER-2 `f5e2cf5` — 336 rows, FAIL 5, selftest 36/36, suite floor **283**. Map bound to `f5e2cf5`;
+  cycle-K map archived at `fleet/ORCH-2-REPAIR-MAP-34db0b0.md`. At any other head §20 reports INFO by design — publish a new
+  map, do not edit the old one.
+- **Verdicts to carry forward:** TASK-013 PASS holds · TASK-014 PASS (all five) · TASK-017 PASS · TASK-018 PASS · TASK-019a
+  owes v2.e + v2.f · TASK-020 owes item 12 + 13b · **TASK-015 PENDING THE RUN** (blocker lifted, no certification).
+- **Owed to the owner, not to the worker:** whether the quantum-b run is authorized now that its preconditions have landed,
+  and on which split (the owner authorized a fresh sealed split v2; M6-Final waits for it). Do not run it unilaterally — it
+  spends the one-shot holdout.
+- **Do not re-litigate:** the 20.14a worker figures (re-measured at both heads, pre- and post-#49), the item-0g amendment
+  (evidence in ledger §24.4, regression-checked), or the M5-R byte-identity (same tool blob at both heads).

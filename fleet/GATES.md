@@ -1530,3 +1530,57 @@ the GitHub-outage time written as `~02:1xZ` is now a **bounded window naming its
 died between two calls — in `status.md`, `ORCH-2-HEARTBEAT.md` and `ORCH-STATE.md`. Criterion 20.14's discipline applied to
 an approximation: state the bound and its source, not a fuzzy token. CONTROL seq 47's `~02:1xZ` is corrected here rather than
 edited in an append-only log. Instrument unchanged at **331 rows — PASS 278 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1**.
+
+
+---
+
+## GATE CYCLE L (2026-09-26T09:46:31Z) — WORKER-2 `f5e2cf5`: ten items closed, M4 scoreboard PASS on all five, and two gate defects found by a fresh worktree
+
+**Fleet re-read first (the outage ended).** `main` is unchanged at `7d033ab`, so REGISTRY `a86115d2…` re-verifies and no new
+ERRATA exists. WORKER-2 moved `34db0b0 → f5e2cf5` (five commits, **27 files, +2283/−74**). BOSS-2 moved `1723564 → 6e17567`
+(cycles 66–73, **zero controls**, witnessing ORCH-2 at `0937097` all the while — it never saw cycle K, because cycle K sat
+unpushed for the entire outage). Boss orders first: there were none, so nothing pre-empts this gate.
+
+**Closed on evidence, ten of thirteen:** item **0h** · q3's **config_digest_note** (20.15b) · the **quantum-b BLOCKER** ·
+**v2.c** · **v2.d** · **v2.a(iii) second half** · **v2.g** · **v2.h / 20.14c** · **O-5 amended A1 (§G2)** · **ANNEX §H**. Not
+one was accepted from a commit message.
+
+**Verdicts.** **TASK-014 (M4 scoreboard) PASS on all five questions** — q1 · q2 · q3 · q4 · q5 — the owner's park on q2
+having expired when M5-R PASSed. **TASK-018 PASS** (0h was its sole outstanding item). **TASK-013 M5-R PASS HOLDS** at the new
+head: the reducer re-run with published pins reproduces `d42136c6…` / `c1ec4da8…` byte-identically with `--tool-commit
+dada3e6`, `tools/m5r_reduce.py` is the **same blob `6346049b…`** at both heads, and the field-diff row reports 1334/1334
+aligned with no differing field. **TASK-017 PASS.** **TASK-015: blocker LIFTED, task NOT gateable** — the quantum-b
+precondition row PASSes with n=0, but the run has not happened (no receipt declares the V2 holdout spent), and an uplifted
+blocker is not a certification; recorded **PENDING THE RUN** under the owner's sealed-split-v2 authorization. **TASK-019a**
+still FAILs on **v2.e** and **v2.f**; **TASK-020** on **item 12** and **13b**.
+
+**Defect #51 — the gate contradicted itself, and the worker's repair is what exposed it.** Item 0g demanded byte-identity for
+the 137 previously gated lines of `adjudication.jsonl`; criterion 20.14c demanded that the forward stamps *inside those lines*
+be repaired. Both cannot hold. Hand-verified before the row was touched: 15 lines differ, the only differing fields are `utc`,
+`utc_source`, `utc_superseded`, `utc_superseded_reason`, every prior `utc` survives verbatim, every reason is stated
+(*"projected from the CONTROL cadence grid, not read"*), and **no `id` / `ruling` / `new_verdict` / `reason` / `task` moved
+anywhere**. That is the pattern row 20.14b already refuses to punish in the mirror case. The amendment is narrow and
+mutation-tested (**T32** a disclosed supersession is not a breach; **T33** a changed ruling behind one still is; **T34** a
+supersession that drops the prior value or states no reason is). **Regression check run, not argued:** at `34db0b0` the amended
+instrument still reports the same **13** FAILs cycle K published.
+
+**Defect #50 — an environment gap was being charged to the worker.** A fresh worktree lacks the inputs the worker's own
+`.gitignore` keeps out of git (`corpus/`, `evidence/`). The run **died with a traceback and printed no summary** (silence that
+reads as "no failures"), **thirteen pin rows FAILed** `ABSENT-IN-ARCHIVE` because the read-only archive lane had not been
+fetched into this clone, and the inherited census digest FAILed against `e3b0c442…` — **the sha256 of the empty string**. Now
+§0 preflights every materialised input with the worker's own recipe (`sh tools/m5r_inputs.sh`), each section is guarded so the
+summary always prints, and an unreachable archive makes pins **VACUOUS**, never FAIL (**T35**/**T36**). The preflight's first
+version re-derived the records digest itself and reported `1e153aef…` against the published `d8c93536…` — a false FAIL invented
+by a second copy of a rule (defect #8's class), caught by its own row before publication; it now calls the same `dir_digest()`.
+
+**Open rows (5), each mapped verbatim in the new `fleet/ORCH-2-REPAIR-MAP.md` bound to `f5e2cf5`** (cycle-K map preserved
+unedited at `…-34db0b0.md`): item 12 / 20.14a — two asserted fuzzy stamps, both in files *this* delivery created, so the
+habit outlived the repair; item 13b — one clause; v2.e — 10 mentions / 5 pairs against a 1-row census, with the 5 unpaired
+mentions outside the post-seal void check; v2.f — the prep header's old `21:5xZ` repaired exactly as ordered and a new
+`02:2xZ` asserted beside it; and the worker lane's CONTROL.log utc column — 53 exact / 9 minute-precision, duplicate seqs
+`10–15, 38, 39, 45, 52`, and **new: utc going BACKWARDS** (`01:26:40Z` then `00:57:47Z`), reported to BOSS-2 because a
+29-minute backward step in the liveness column would place a later cycle earlier.
+
+**Instrument:** 336 rows · PASS 290 · FAIL 5 · INFO 32 · PROXY 8 · VACUOUS 1 · `--selftest` **36/36** · suite floor rises
+**263 → 283 OK (skipped=1)** · goldens refreshed for both heads. §20: **5/5 mapped** at `f5e2cf5`, INFO at `34db0b0` by
+design.

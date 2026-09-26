@@ -1374,3 +1374,173 @@ including CONTROL seq 47's `~02:1xZ`, which is corrected here rather than edited
 
 Instrument **331 rows — PASS 278 · FAIL 13 · INFO 31 · PROXY 8 · VACUOUS 1** (unchanged), golden unchanged, `--selftest`
 **31/31**.
+
+### 23.15 Recreation #4: the history was lost, the content was not, and the push rejection is what said so (2026-09-26T09:46:31Z)
+
+The sandbox was recreated a fourth time between turns. This lane came back as a fresh **shallow** clone checked out at the
+main base `2ed0b9b`, and the eight commits carrying CONTROL seq 47–54 stopped existing as objects — verified, not assumed:
+`git cat-file -t` answers *"not a valid object name"* for `f44d00e`, `f9ec6a8` and `74be23c`, and the reflog holds exactly two
+entries (the clone and the branch checkout).
+
+What survived was everything that mattered. The platform workspace snapshot restored the **files**: `fleet/CONTROL.log` still
+ended at seq 54, `fleet/gate-tools/orch2_verify.py` was still the 331-row instrument with `--selftest` 31/31, and all four
+goldens were present at their recorded sizes. So the loss was history, not work.
+
+**How it announced itself:** `git push` was rejected as a **non-fast-forward** against a remote that had *not* moved
+(`ls-remote` said `0937097`, exactly the commit pushed at 02:02:03Z). A rejection against an unmoved remote means the local
+base moved, not the remote — here, a re-clone onto `2ed0b9b`. Reading `ls-remote` before believing the rejection is what kept
+this from becoming a force-push over published work.
+
+**Recovery:** `git fetch origin arena/01a0d9d0-fleetyard`, `git reset 0937097` (branch pointer onto the true published head,
+working tree untouched), then one commit `af8444d` carrying the recovered tree. The delta against `0937097` is **15 files,
++1831/−90, with no deletions** — a strict superset of what was published, so nothing was overwritten. Pushed
+`0937097..af8444d`; the lane head is now `af8444d`. The eight lost commit *messages* are gone, but the per-cycle narrative
+they carried lives in the ledger, GATES and CONTROL entries themselves, which is where a reader would look.
+
+**Rule added to the cursor:** after any recreation, the first act is `ls-remote` + `cat-file` on the last commit you believe
+you made, and the second is `reset` onto the published head — never `push --force`, and never re-write a cycle from memory
+when the files are on disk.
+
+## 24. GATE CYCLE L at WORKER-2 `f5e2cf5` (2026-09-26T09:46:31Z)
+
+### 24.1 The fleet re-read after the outage
+
+| lane | last read before the outage | read now | movement |
+|---|---|---|---|
+| `main` | `7d033ab` | **`7d033ab`** | none — so REGISTRY `a86115d2…` is re-verified unchanged, and no new ERRATA exists |
+| WORKER-2 `arena/01a0d9ce-fleetyard` | `34db0b0` | **`f5e2cf5`** | five commits: `4dba6a9`, `8cf783a`, `f25cf7d`, `a090439`, `d9ae64c`, `01d0bc8`, `f5e2cf5` |
+| BOSS-2 `arena/01a0d9d1-fleetyard` | `1723564` | **`6e17567`** | cycles 66–73, each *"zero controls"*, witnessing ORCH-2 at `0937097` |
+
+BOSS-2 never saw cycle K, because cycle K was unpushed for the whole outage: its logs witness `0937097` throughout. That is
+the concrete cost of a dead credential — not lost work, but a fleet that kept reading a stale neighbour. Publishing `af8444d`
+ended it. **Boss orders first:** BOSS-2 issued none (zero controls across eight cycles), so nothing pre-empts this gate.
+
+### 24.2 The delivery being gated
+
+`34db0b0..f5e2cf5` is **27 files, +2283/−74**: a new tool `tools/m4_coherence_check.py` (224 lines), `m4_seal_audit.py`
+(+329), `m4_one_shot_v2.py` (+102), `m4_t18_dispositions.py` (+81), `m4_t20_supplement.py`, five test files (+467 between
+them, including a new `tests/test_m4_coherence_check.py`), `SEAL-AUDIT.json` (+714), `SEAL-APPENDIX`, `adjudication.jsonl`
+(30 lines touched), the q3 `PROVENANCE-SUPPLEMENT.json`, and two new lane records
+(`WORKER-2-TASK-019b-PREP.md`, `WORKER-2-TASK-020-DELIVERY.md`).
+
+### 24.3 What closed, and the verdicts that move
+
+**Ten of cycle K's thirteen FAILs closed on evidence:** item **0h**, q3's **config_digest_note** (criterion 20.15b), the
+**quantum-b BLOCKER**, **v2.c**, **v2.d**, **v2.a clause (iii) second half**, **v2.g**, **v2.h / criterion 20.14c**,
+**O-5 amended A1 (§G2)** and **ANNEX §H**. Each is a row that re-derives its own evidence; none was accepted from a commit
+message (defect #45's rule).
+
+- **TASK-014 (M4 scoreboard) → PASS on all five questions.** q1 PASS · **q2 PASS** (item 0h closed; see §24.4 for the one
+  amendment q2's cleanliness rests on) · **q3 PASS** (its `config_digest_note` is published and the row re-derives the
+  canonicalization) · q4 PASS · q5 PASS. The owner's park on q2 ("do NOT gate before M5-R PASS") expired when M5-R PASSed in
+  cycle K, so gating it now is within the standing order.
+- **TASK-018 → PASS.** Item 0h was its sole outstanding item and it closed; item 0g is addressed in §24.4.
+- **TASK-013 (M5-R) → PASS HOLDS at the new head.** The reducer re-run with the published pins reproduces ledger `d42136c6…`
+  and by-transcript `c1ec4da8…` byte-identically, with `--tool-commit dada3e6`; `tools/m5r_reduce.py` is the **same blob
+  `6346049b…` at both `34db0b0` and `f5e2cf5`**, so the pinned tool did not move under the claim. The field-level diff row
+  reports 1334/1334 aligned with **no differing field**. Item 13b stays open as a documentation clause (§24.6).
+- **TASK-015 (M6-FINAL): the blocker is LIFTED, the task is NOT gateable.** The quantum-b precondition row now PASSes with
+  n=0 open preconditions, and the v2.16 precedent row PASSes (n=521). But the quantum-b **run has not happened** — no receipt
+  declares the V2 holdout spent (row PASS, n=268). An uplifted blocker is not a certification, and the owner's standing
+  constraint is explicit: no certification without held-out/precision evidence, and M6-Final waits for the fresh sealed
+  split v2. Recorded as **PENDING THE RUN**, not as PASS.
+- **TASK-017 PASS** (unchanged). **TASK-019a** still FAILs, now on **v2.e** and **v2.f** only. **TASK-020** still
+  FAIL/INCOMPLETE on **item 12** and **item 13b** only (13/14/12c/20.14c/q3-note all closed).
+
+### 24.4 Defect #51 — item 0g contradicted criterion 20.14c, and the gate FAILed the repair it had ordered
+
+Item 0g demanded that the 137 previously gated lines of `runs/m4-q2-adjudication/adjudication.jsonl` stay **byte-identical**.
+Criterion 20.14c demanded that the **forward stamps inside those very lines** be repaired. Both cannot hold, and at
+`f5e2cf5` the collision landed: 0g FAILed with *"first 137 identical: False"*.
+
+Hand-verified **before** touching the row, because amending a row so a FAIL becomes a PASS is the most dangerous change a
+gate can make:
+
+- 15 of the 137 lines differ; 122 are byte-identical.
+- The **only** differing fields across all 15 are `utc`, `utc_source`, `utc_superseded`, `utc_superseded_reason`.
+- Every prior `utc` survives **verbatim** in `utc_superseded` (`2026-09-26T01:12:00Z`), with the new value the carrying
+  commit's committer time (`2026-09-26T00:39:44Z`) and its source named.
+- Every reason is stated: *"projected from the CONTROL cadence grid, not read."*
+- **No substance field moved** — no `id`, `ruling`, `new_verdict`, `reason` or `task` differs anywhere in the file
+  (checked field-by-field over the parsed rows, not by eye).
+
+That is the repair pattern this gate already refuses to punish in the mirror case: row 20.14b says *"fuzzy left readable,
+exact sibling added; flagging it would punish the correct fix."* So the row was amended narrowly — only the four stamp fields
+may differ, the prior `utc` must survive verbatim, a reason must be stated, and **any other difference is a violation** — and
+mutation-tested: **T32** a disclosed supersession is not a breach, **T33** a changed `ruling` hiding behind a supersession is
+still a violation, **T34** a supersession that does not keep the prior value, or states no reason, is a violation.
+
+**Regression check, run rather than argued:** the amended instrument at `34db0b0` still reports **the same 13 FAILs** cycle K
+published, and item 0g still PASSes there. The amendment moved one row at one head, and the evidence for that head is above.
+
+### 24.5 Defect #50 — an environment gap was being charged to the worker
+
+A fresh worktree has none of the inputs the worker's own lane hygiene keeps out of git (`.gitignore`: `corpus/`,
+`evidence/`). Three separate wrong answers followed, all of them the same class:
+
+1. **The run died with a traceback and printed no summary at all** — `FileNotFoundError` on the book store, then on
+   `evidence/runs/m5-raw/records`. Silence reads as "no failures" to anyone skimming the output.
+2. **Thirteen pin rows FAILed** with `ABSENT-IN-ARCHIVE`, because the read-only archive lane `bf97d85` had not been fetched
+   into this clone. The pins were fine; the *clone* was incomplete — and the row said the worker's pins were wrong.
+3. **The inherited census digest FAILed as a mismatch** against `e3b0c442…`, which is the sha256 **of the empty string**: an
+   absent directory digested as if it were an empty one.
+
+Now §0 preflights every materialised input — archive reachability, book store, transcripts, raw census, fixtures — and reports
+an absent one as **VACUOUS** with the worker's own recipe (`sh tools/m5r_inputs.sh`) beside it; every section runs through
+`run_section`, so an exception becomes a row and the summary always prints; and an unreachable archive makes the pin rows
+VACUOUS, never FAIL. Mutation-tested: **T35** a crash naming a materialised path is VACUOUS (never charged to the worker),
+**T36** any other crash is a FAIL **against the instrument**.
+
+**The preflight's own first version was wrong, and its own row caught it.** It re-derived the records digest by concatenating
+file contents and reported `1e153aef…` against the published `d8c93536…` — a false FAIL invented by keeping a second copy of
+a rule (defect #8's exact class). It now calls the same `dir_digest()` the census row calls. Recorded because the lesson is
+the one this lane keeps re-learning: **one implementation per rule, and a new row must be run against a known-good input
+before it is allowed to accuse anyone.**
+
+Instrument after both amendments: **336 rows · PASS 290 · FAIL 5 · INFO 32 · PROXY 8 · VACUOUS 1** at `f5e2cf5`, `--selftest`
+**36/36**, suite **283 tests OK (skipped=1)** — the floor binding rises from 263 to **283** on the worker's twenty new tests.
+
+### 24.6 The five rows still open, and the new map
+
+A new repair map is published bound to `f5e2cf5` (`fleet/ORCH-2-REPAIR-MAP.md`); the cycle-K map is preserved verbatim and
+unedited at `fleet/ORCH-2-REPAIR-MAP-34db0b0.md`, with a superseded note appended rather than a rewrite. §20 now reports
+**5/5 FAIL rows mapped, quoted verbatim, no stale entries** — and at `34db0b0` the same §20 correctly reports INFO
+(*"the map binds f5e2cf5, this run gates 34db0b0 — coverage NOT claimed"*), which is the head-binding fix from CONTROL 51
+doing its job in both directions.
+
+1. **item 12 / criterion 20.14a** — two asserted fuzzy stamps, both in files this delivery created
+   (`WORKER-2-TASK-019b-PREP.md` `02:2xZ`, `WORKER-2-TASK-020-DELIVERY.md` `02:4xZ`). The old 26 were repaired; the *habit*
+   was not, which is the finding worth more than the two instances.
+2. **item 13b** — the claim now settles `tool_sha256` but still not the pin: `pin dependence stated: False`. One clause owed.
+3. **item v2.e** — 10 mentions / 5 artifact+sha pairs against a report carrying 1 row, and the 5 unpaired mentions sit outside
+   the post-seal void check.
+4. **item v2.f** — the prep record's header: the old `21:5xZ` was repaired exactly as ordered, and a new `02:2xZ` was
+   asserted beside it.
+5. **the worker lane's CONTROL.log utc column** — 53 exact / 9 minute-precision, duplicate seqs `10–15, 38, 39, 45, 52`, and
+   **new since cycle K: utc going BACKWARDS** (`01:26:40Z` then `00:57:47Z`). Reported to BOSS-2, not ruled here: a 29-minute
+   backward step in the column BOSS-2 reads for liveness would place a later cycle earlier.
+
+### 24.7 The cycle-L documents were then put through this lane's own census, and three of them failed it (2026-09-26T09:51:52Z)
+
+Publishing a cycle that charges the worker with two asserted fuzzy stamps, in documents that themselves asserted fuzzy
+stamps, would be the exact hypocrisy self-item O-4 exists to prevent. `--self-audit` after the write reported **5 offenders in
+amendable docs**; each was a different kind of mistake and each was fixed in the document rather than in the classifier:
+
+1. **`fleet/ORCH-2-REPAIR-MAP.md` matched on a *placeholder*.** Entry 1 told the worker to "replace each asserted
+   `NN:NxZ`" — and `FUZZY_TS`'s third alternative (`[xX]Z` at a word boundary) matched the literal placeholder itself. The
+   census cannot tell a description of a shape from an instance of it, so the map now describes the shape in words ("an `x`
+   standing where a digit belongs"). **Rule: when documenting a pattern, do not print a token the pattern matches.** The
+   regex was *not* loosened: it feeds the published worker census, and changing it mid-cycle would move a charge already
+   measured at two heads.
+2. **`fleet/ORCH-STATE.md` quoted correctly but too far from its keyword.** "This lane's outage approximation `~02:1xZ`" is a
+   quotation, but `CITATION_CTX` looks back 60 characters for `fuzzy|imprecise|supersed|was |quoted|offender|defect`, and
+   "approximation" is not in that list. Reworded to "This lane's **fuzzy** outage stamp `~02:1xZ`" — the honest fix is to mark
+   the quotation, not to widen the keyword list to suit one sentence.
+3. **`fleet/CONTROL.md` carried three of them — and it is not a document.** `fleet2check control-render` generates it from
+   `CONTROL.log`, so its text *is* the append-only log's text; seq 56 quotes the worker's two stamps as evidence, which is
+   correct in a record. `CONTROL.md` is therefore classified with the append-only record. **Exempting a rendering of a record
+   is not exempting a claim** — and the classification is disclosed here rather than buried in a tuple.
+
+After the three fixes: asserted-fuzzy **28** (all inside append-only records), citations **36**, amendable **0**, and all
+three self-item rows PASS. The standard run is untouched by the classification (336 rows, golden byte-identical), because the
+row lives inside the `--self-audit` block. `--selftest` **36/36**.

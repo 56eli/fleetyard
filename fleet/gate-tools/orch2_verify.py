@@ -32,6 +32,7 @@ import sys
 import textwrap
 import tempfile
 import hashlib
+import io
 import itertools
 import json
 import math
@@ -82,6 +83,133 @@ FUZZY_TS = re.compile(r"\d{1,2}:\d[xX]Z|\d[xX]:\d{2}Z|[xX]Z\b")
 TS_ANY = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?Z")
 TS_EXACT = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 OWN_TIME_FIELD = re.compile(r'"(run_utc|generated_utc|materialised_utc|created_utc|appended_utc)"\s*:\s*"([^"]+)"')
+
+
+# ---------------------------------------------------------------- environment vs artefact (defect #50)
+# The gate reads MATERIALISED inputs the worker's own lane hygiene keeps out of git (.gitignore: corpus/, evidence/).
+# A fresh worktree does not have them, and the instrument used to (a) die with a traceback and print NO summary at all -
+# silence that reads as "no failures" - and (b) report the resulting gaps as WORKER defects: thirteen pin rows FAILed
+# with "ABSENT-IN-ARCHIVE" because the read-only archive lane had not been fetched into this clone, and the inherited
+# census digest compared against e3b0c442..., the sha256 of the empty string. An environment gap charged to the worker
+# is the worst kind of wrong answer this instrument can give, so the two are now separated explicitly.
+ARCHIVE_COMMIT = "bf97d85"
+ARCHIVE_REF = "refs/remotes/origin/arena/01a0d581-fleetyard"
+MATERIALISE_RECIPE = ("sh tools/m5r_inputs.sh  (the worker's own documented materialisation: fetches the read-only "
+                      "archive lane, git-archives runs/m5-raw + fixtures into evidence/, unzips the sha-verified corpus)")
+MATERIALISED: dict = {"archive": None, "missing": [], "broken_sections": 0}
+
+
+def run_section(rep, fn, *args):
+    """Run a section so that NO exception can silence the summary (defect #50).
+
+    A crash that names a materialised path - or any crash once a section has already come back empty - is an ENVIRONMENT
+    gap and is reported VACUOUS, never charged to the worker. Anything else is a FAIL against the instrument itself."""
+    try:
+        return fn(*args)
+    except Exception as e:  # noqa: BLE001 - the point is that nothing may escape and stop the summary printing
+        msg = f"{type(e).__name__}: {e}"
+        env = (any(t in msg for t in ("corpus/", "evidence/", "docdocgo", "ABSENT-IN-ARCHIVE"))
+               or MATERIALISED["broken_sections"] > 0)
+        MATERIALISED["broken_sections"] += 1
+        rep.add("0", f"section {getattr(fn, '__name__', '?')} could not be evaluated",
+                "the section to run to completion", msg[:200], VACUOUS if env else FAIL, n=0,
+                note="defect #50: an unguarded crash printed NO summary, and silence reads as 'no failures'. Every "
+                     "section is guarded now, so the summary always prints. "
+                     + ("This crash names a MATERIALISED input (corpus/, evidence/) or follows one, so it is an "
+                        "environment gap reported VACUOUS, not a worker defect. Recipe: " + MATERIALISE_RECIPE
+                        if env else
+                        "This crash does NOT name a materialised input, so it is charged to the INSTRUMENT: fix it "
+                        "before publishing any verdict from this run."))
+        return None
+
+
+STAMP_ONLY_FIELDS = ("utc", "utc_source", "utc_superseded", "utc_superseded_reason")
+
+
+def append_only_supersession(prev_lines, cur_lines):
+    """DEFECT #51: split the changed lines of a previously gated append-only file into DISCLOSED STAMP SUPERSESSIONS
+    and everything else. Returns (identical_count, superseded_line_numbers, violation_line_numbers).
+
+    Criterion 20.14c demanded that the forward stamps inside these very lines be repaired while item 0g demanded the
+    lines stay byte-identical: the gate contradicted itself and FAILed the repair it had ordered. Row 20.14b already
+    states the principle for the mirror case ("fuzzy left readable, exact sibling added; flagging it would punish the
+    correct fix"). The exemption is deliberately narrow and cannot hide a rewritten ruling - only the four stamp fields
+    may differ, the superseded field must carry the PREVIOUS line's utc VERBATIM, a reason must be stated, and every
+    other field is compared, any difference being a violation."""
+    ident = 0
+    sups, viol = [], []
+    for i, (pl, cl) in enumerate(zip(prev_lines, cur_lines)):
+        if pl == cl:
+            ident += 1
+            continue
+        try:
+            pj, cj = json.loads(pl), json.loads(cl)
+        except ValueError:
+            viol.append(i + 1)
+            continue
+        substance = [k for k in set(pj) | set(cj)
+                     if k not in STAMP_ONLY_FIELDS and pj.get(k) != cj.get(k)]
+        if (not substance and cj.get("utc_superseded") == pj.get("utc")
+                and str(cj.get("utc_superseded_reason", "")).strip()):
+            sups.append(i + 1)
+        else:
+            viol.append(i + 1)
+    return ident, sups, viol
+
+
+def section_materialised(wt, rep):
+    """Preflight: are the inputs the worker keeps OUT of git present in this worktree?
+
+    These rows judge the ENVIRONMENT, not the artefacts. An absent input is reported VACUOUS with the recipe, so a fresh
+    clone can never produce a FAIL that reads as a worker defect (defect #50)."""
+    print("\n== 0. materialised inputs (environment, never charged to the worker) ==")
+    man = json.load(open(os.path.join(wt, "findings/PROVENANCE.json"), encoding="utf-8"))
+    inp = man.get("inputs", {})
+    rc, _ = git(wt, "rev-parse", "--verify", ARCHIVE_COMMIT + "^{commit}")
+    MATERIALISED["archive"] = (rc == 0)
+    rep.add("0", f"read-only archive lane {ARCHIVE_COMMIT} reachable in this clone (the pins' third leg)",
+            "reachable", "reachable" if rc == 0 else f"UNREACHABLE - fetch it: git fetch origin "
+            f"refs/heads/arena/01a0d581-fleetyard:{ARCHIVE_REF}",
+            PASS if rc == 0 else VACUOUS, n=1,
+            note="" if rc == 0 else "defect #50: with the archive unreachable every pin row used to read "
+                                    "'ABSENT-IN-ARCHIVE' and FAIL, charging this clone's gap to the worker. Those rows "
+                                    "are VACUOUS until the archive is fetched.")
+    bs = man.get("book_store", {})
+    bsp = os.path.join(wt, bs.get("path", "corpus/docdocgo/html/merged-book-texts_json_1.js"))
+    have = os.path.exists(bsp)
+    rep.add("0", f"book store materialised ({bs.get('path', 'corpus/...')}, gitignored by the worker's lane hygiene)",
+            bs.get("sha256", "?")[:12] + "…", (sha_file(bsp)[:12] + "…") if have else "ABSENT",
+            PASS if have and sha_file(bsp) == bs.get("sha256") else (FAIL if have else VACUOUS), n=1,
+            note="" if have else "environment gap, not a worker defect. Recipe: " + MATERIALISE_RECIPE)
+    ov = os.path.join(wt, "corpus/docdocgo/overlays")
+    nov = len([f for f in os.listdir(ov) if f.endswith(".txt")]) if os.path.isdir(ov) else 0
+    nrec_exp = inp.get("records_files", 230)
+    rep.add("0", "corpus transcripts materialised (corpus/docdocgo/overlays/*.txt)", f"{nrec_exp}", f"{nov}",
+            PASS if nov == nrec_exp else (FAIL if nov else VACUOUS), n=1,
+            note="" if nov == nrec_exp else "environment gap, not a worker defect. Recipe: " + MATERIALISE_RECIPE)
+    rec = os.path.join(wt, "evidence/runs/m5-raw/records")
+    # ONE implementation: the first version of this preflight re-derived the digest by concatenating file contents and
+    # disagreed with the published construction (1e153aef... vs d8c93536...), i.e. it invented a false FAIL out of a
+    # second copy of a rule - defect #8's exact class. It now calls the same dir_digest() the census row calls, and the
+    # disagreement was caught by this row before anything was published.
+    drec, nrec = dir_digest(rec) if os.path.isdir(rec) else ("", 0)
+    files = [True] * nrec
+    dig_ok = bool(nrec) and drec == inp.get("records_digest_sha256")
+    rep.add("0", "inherited M5 raw census materialised (evidence/runs/m5-raw/records)",
+            f"{nrec_exp} files, digest {str(inp.get('records_digest_sha256'))[:12]}… (dir_digest, the census row's own construction)",
+            f"{nrec} files, digest {str(drec)[:12]}…" if nrec else "ABSENT",
+            PASS if dig_ok and nrec == nrec_exp else (FAIL if nrec else VACUOUS), n=1,
+            note="" if dig_ok else "environment gap, not a worker defect: with the directory absent the digest used to "
+                                   "compute as e3b0c442… (the sha256 of the empty string) and FAIL as a MISMATCH. "
+                                   "Recipe: " + MATERIALISE_RECIPE)
+    fx = os.path.join(wt, "evidence/fixtures")
+    miss = [d for d in ("confirmed", "clean", "negative") if not os.path.isdir(os.path.join(fx, d))]
+    rep.add("0", "M5-R fixtures materialised (evidence/fixtures/{confirmed,clean,negative})", "all three present",
+            "all three present" if not miss else "MISSING: " + ", ".join(miss),
+            PASS if not miss else VACUOUS, n=3,
+            note="" if not miss else "environment gap, not a worker defect. Recipe: " + MATERIALISE_RECIPE)
+    MATERIALISED["missing"] = [r["name"] for r in rep.rows if r["section"] == "0" and r["verdict"] == VACUOUS]
+    return man
 
 
 # ---------------------------------------------------------------- helpers
@@ -550,12 +678,19 @@ def section_pins(wt, rep, sup):
     pins = sup["runs"]["v1"]["toolchain"]["pins"]
     ok = 0
     for f, stored in sorted(pins.items()):
-        rc, blob = git(wt, "show", f"bf97d85:tools/{f}")
+        rc, blob = git(wt, "show", f"{ARCHIVE_COMMIT}:tools/{f}")
         arch = sha_bytes(blob) if rc == 0 else "ABSENT-IN-ARCHIVE"
         p = os.path.join(wt, "tools", f)
         head = sha_file(p) if os.path.exists(p) else "ABSENT-AT-HEAD"
         good = stored == arch == head
         ok += good
+        if rc != 0 and MATERIALISED["archive"] is not True:
+            # defect #50: the archive leg is unreadable in THIS CLONE, so nothing about the worker's pin is known yet.
+            rep.add("1b", f"pin {f}", stored[:12] + "…",
+                    f"archive UNREACHABLE-IN-THIS-CLONE head {head[:12]}…", VACUOUS, n=1,
+                    note="environment gap, not a pin mismatch: fetch the read-only archive lane "
+                         f"(git fetch origin refs/heads/arena/01a0d581-fleetyard:{ARCHIVE_REF}) and re-run.")
+            continue
         rep.add("1b", f"pin {f}", stored[:12] + "…", f"archive {arch[:12]}… head {head[:12]}…",
                 PASS if good else FAIL, n=3)
     rep.add("1b", "pins verified three-way", f"{len(pins)}/{len(pins)}", f"{ok}/{len(pins)}",
@@ -732,17 +867,33 @@ def section_adjudication(wt, rep):
     rc, prev_blob = git(wt, "show", f"{PREV_GATED}:{adj_path}")
     if rc == 0:
         prev_lines = [l for l in prev_blob.decode("utf-8").split("\n") if l.strip()]
-        same = prev_lines == lines[:len(prev_lines)]
+        # DEFECT #51: "byte-identical" carried no exemption for a disclosed, substance-preserving stamp supersession,
+        # so this row FAILed the exact repair criterion 20.14c ordered for these same lines. Hand-verified at f5e2cf5
+        # BEFORE the row was amended: 15 of the 137 lines differ, the only differing fields are utc / utc_source /
+        # utc_superseded / utc_superseded_reason, every prior utc is preserved VERBATIM in utc_superseded with a stated
+        # reason ("projected from the CONTROL cadence grid, not read"), and no id / ruling / new_verdict / reason / task
+        # moved anywhere in the file.
+        ident_n, sups, viol = append_only_supersession(prev_lines, lines)
         # the previously gated head may already carry the dispositions, so "growth" is not the test: the test is
-        # that nothing already published moved, and that anything NEW is a disposition row.
+        # that nothing already published moved (except a disclosed supersession), and anything NEW is a disposition row.
         newl = [json.loads(x) for x in lines[len(prev_lines):]]
         only_disp = all(r.get("record") == "disposition" for r in newl)
         rep.add("4", "item 0g — the append is APPEND-ONLY: every line of the previously gated file is "
-                     "byte-identical and in the same order, and anything new is a disposition row",
-                f"the {len(prev_lines)} lines at {PREV_GATED[:7]} unchanged; new lines are dispositions only",
-                f"{len(lines)} lines now; first {len(prev_lines)} identical: {same}; new lines: {len(newl)}, all "
-                f"dispositions: {only_disp}; dispositions in the file: {len(disp)}",
-                PASS if same and only_disp else FAIL, n=len(lines))
+                     "byte-identical and in the same order, and anything new is a disposition row (as amended by "
+                     "defect #51: a DISCLOSED STAMP SUPERSESSION — prior utc preserved verbatim, reason stated, no "
+                     "other field touched — is the repair criterion 20.14c ordered, not a breach)",
+                f"the {len(prev_lines)} lines at {PREV_GATED[:7]} unchanged except disclosed stamp supersessions; no "
+                f"substance field changed anywhere; new lines are dispositions only",
+                f"{len(lines)} lines now; {ident_n} byte-identical; {len(sups)} disclosed stamp supersessions "
+                f"(lines {sups[:8]}{'…' if len(sups) > 8 else ''}); {len(viol)} lines changing ANY other field "
+                f"(lines {viol[:8]}); new lines: {len(newl)}, all dispositions: {only_disp}; dispositions in the "
+                f"file: {len(disp)}",
+                PASS if not viol and only_disp else FAIL, n=len(lines),
+                note="the exemption is narrow by construction and mutation-tested (T32-T34): a changed ruling, a "
+                     "dropped prior value or a missing reason each put the line back on the violation list. Amending a "
+                     "row so that a FAIL becomes a PASS is the most dangerous change a gate can make, so the evidence "
+                     "is recorded here rather than asserted, and row 20.14b already refuses to punish this same "
+                     "pattern in the mirror case.")
     else:
         rep.add("4", "item 0g — append-only integrity", f"a comparable blob at {PREV_GATED[:7]}", "UNREADABLE", INFO)
     ids122 = {r["id"] for r in rows}
@@ -1904,6 +2055,40 @@ def selftest(golden: str) -> int:
     t("T31", "#49 a nearby backticked digest does NOT pardon a fuzzy stamp in the author's own sentence",
       "instance", classify_fuzzy("we finished at 21:5xZ and committed `d42136c6`",
                                  FUZZY_TS.search("we finished at 21:5xZ and committed `d42136c6`")))
+    # defect #51 (item 0g's self-contradiction) and defect #50 (environment gaps charged to the worker), mutation-tested.
+    _g = '{"record": "disposition", "id": "D-002", "ruling": "CANDIDATE", "utc": "2026-09-26T01:12:00Z"}'
+    _sup = ('{"record": "disposition", "id": "D-002", "ruling": "CANDIDATE", "utc": "2026-09-26T00:39:44Z", '
+            '"utc_source": "git committer time of 7d14685", "utc_superseded": "2026-09-26T01:12:00Z", '
+            '"utc_superseded_reason": "projected from the CONTROL cadence grid, not read"}')
+    _rewritten = ('{"record": "disposition", "id": "D-002", "ruling": "PROMOTE", "utc": "2026-09-26T00:39:44Z", '
+                  '"utc_superseded": "2026-09-26T01:12:00Z", "utc_superseded_reason": "re-ruled"}')
+    _nokeep = ('{"record": "disposition", "id": "D-002", "ruling": "CANDIDATE", "utc": "2026-09-26T00:39:44Z", '
+               '"utc_superseded": "2026-09-26T01:11:00Z", "utc_superseded_reason": "close enough"}')
+    _noreason = ('{"record": "disposition", "id": "D-002", "ruling": "CANDIDATE", "utc": "2026-09-26T00:39:44Z", '
+                 '"utc_superseded": "2026-09-26T01:12:00Z", "utc_superseded_reason": "  "}')
+    t("T32", "#51 a disclosed stamp supersession (prior utc kept VERBATIM + reason, no other field touched) is not a breach",
+      ([1], []), append_only_supersession([_g], [_sup])[1:])
+    t("T33", "#51 a changed RULING behind a supersession is still a violation - the exemption cannot hide a rewrite",
+      [1], append_only_supersession([_g], [_rewritten])[2])
+    t("T34", "#51 a supersession that does NOT keep the prior value, or states no reason, is a violation",
+      ([1], [1]), (append_only_supersession([_g], [_nokeep])[2], append_only_supersession([_g], [_noreason])[2]))
+    _r = Report()
+    _so, sys.stdout = sys.stdout, io.StringIO()
+
+    def _boom_env():
+        raise FileNotFoundError("/wt/corpus/docdocgo/html/merged-book-texts_json_1.js")
+
+    def _boom_code():
+        raise ValueError("bad literal inside the instrument")
+
+    run_section(_r, _boom_env)
+    MATERIALISED["broken_sections"] = 0
+    run_section(_r, _boom_code)
+    sys.stdout = _so
+    t("T35", "#50 a crash naming a MATERIALISED path is VACUOUS - an environment gap is never charged to the worker",
+      VACUOUS, _r.rows[0]["verdict"])
+    t("T36", "#50 any other crash is a FAIL against the INSTRUMENT, and the summary still prints",
+      FAIL, _r.rows[1]["verdict"])
     t("T1", "defect #5/#19 curly apostrophes are NORMALISED, not merely included",
       ["that's"], tokens("that\u2019s"))
     t("T2", "defect #2 em/en dashes are SEPARATORS (gluing them merges two tokens)",
@@ -3369,26 +3554,30 @@ def main() -> int:
     head = out.decode().strip() if rc == 0 else a.head
     print(f"ORCH-2 gate instrument · worktree {wt} · head {head[:12]}")
     rep = Report()
-    man, sup = section_bindings(wt, rep, head)
-    section_pins(wt, rep, sup)
-    section_manifest_stats(wt, rep, man)
-    section_census_exposure(wt, rep, sup)
-    section_adjudication(wt, rep)
-    section_stale_digests(wt, rep)
-    section_read_scope(wt, rep, sup)
-    section_signal_evidence(wt, rep)
-    section_manifest_completeness(wt, rep)
-    section_split_v2(wt, rep, sup)
-    section_inherited(wt, rep)
-    section_quantum_b(wt, rep)
-    section_coherence(wt, rep)
-    section_derivations(wt, rep)
-    section_quantum_b_criteria(wt, rep)
-    section_coverage(rep)
-    section_t21(wt, rep)
-    section_seal_audit(wt, rep, a.head)
-    section_forward_stamps(wt, rep)
-    section_fail_coverage(rep, head)
+    # DEFECT #50: preflight the materialised inputs first and guard every section, so an environment gap can never be
+    # published as a worker defect and no crash can ever silence the summary.
+    man0 = run_section(rep, section_materialised, wt, rep)
+    bind = run_section(rep, section_bindings, wt, rep, head)
+    man, sup = bind if bind else (man0, None)
+    run_section(rep, section_pins, wt, rep, sup)
+    run_section(rep, section_manifest_stats, wt, rep, man)
+    run_section(rep, section_census_exposure, wt, rep, sup)
+    run_section(rep, section_adjudication, wt, rep)
+    run_section(rep, section_stale_digests, wt, rep)
+    run_section(rep, section_read_scope, wt, rep, sup)
+    run_section(rep, section_signal_evidence, wt, rep)
+    run_section(rep, section_manifest_completeness, wt, rep)
+    run_section(rep, section_split_v2, wt, rep, sup)
+    run_section(rep, section_inherited, wt, rep)
+    run_section(rep, section_quantum_b, wt, rep)
+    run_section(rep, section_coherence, wt, rep)
+    run_section(rep, section_derivations, wt, rep)
+    run_section(rep, section_quantum_b_criteria, wt, rep)
+    run_section(rep, section_coverage, rep)
+    run_section(rep, section_t21, wt, rep)
+    run_section(rep, section_seal_audit, wt, rep, a.head)
+    run_section(rep, section_forward_stamps, wt, rep)
+    run_section(rep, section_fail_coverage, rep, head)
     tally = collections.Counter(r["verdict"] for r in rep.rows)
     print(f"\n== summary: {len(rep.rows)} rows · " +
           " · ".join(f"{k} {v}" for k, v in sorted(tally.items())))
@@ -3442,7 +3631,10 @@ def main() -> int:
         # is prepended but the log below it is a record, so a fuzzy stamp inside a cycle-H entry cannot be repaired
         # without rewriting history - it is reported, not charged.
         APPEND_ONLY = ("fleet/CONTROL.log", "fleet/heartbeats/", "fleet/ORCH-2-VERIFICATION-LEDGER.md",
-                       "fleet/GATES.md", "fleet/LOG.md", "fleet/ORCH-2-CURSOR.md", "fleet/queue/status.md")
+                       "fleet/GATES.md", "fleet/LOG.md", "fleet/ORCH-2-CURSOR.md", "fleet/queue/status.md",
+                       # CONTROL.md is not a document anyone may edit: fleet2check RENDERS it from CONTROL.log, so its
+                       # text is the append-only log's text. Exempting a rendering of a record is not exempting a claim.
+                       "fleet/CONTROL.md")
         hist = sorted({(rp, v) for rp, v in fzi if rp.startswith(APPEND_ONLY)})
         live = sorted({(rp, v) for rp, v in fzi if not rp.startswith(APPEND_ONLY)})
         rep.add("9", "self-item — no fuzzy own-time stamp ASSERTED in this lane's amendable docs (criterion 20.14a, "

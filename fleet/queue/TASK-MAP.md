@@ -199,3 +199,15 @@ outside the post-seal void check), **v2.c / v2.d / v2.f** (stamps and `tool_comm
                                  `config_digest_note`; ANNEX §F7 amended + §F8 re-pins `m5r_reduce.py`
                                  `6d4bb9ce` → `a89ff189`. Instrument 324 rows (PASS 271/FAIL 13/INFO 32/PROXY 8);
                                  suite floor 263. [cycle K close]
+
+### cycle L reads (2026-09-26T09:50:34Z) — shas acted on, newest first
+2026-09-26T09:50:34Z f5e2cf5 -> WORKER-2 TASK-014 q3 (criterion 20.15b config_digest_note) + generator pins; GATED (cycle L head)
+2026-09-26T09:50:34Z 01d0bc8 -> WORKER-2 TASK-020 supplement: q3 config_digest_note + generator pin
+2026-09-26T09:50:34Z d9ae64c -> WORKER-2 cycle-I/J repairs: v2.a(iii)/v2.b/v2.c/v2.d/v2.e/v2.g + §G2 companion-note binding + §H + 20.14c forward stamps
+2026-09-26T09:50:34Z a090439 -> WORKER-2 seal audit: v2.c/v2.d/v2.e/v2.a(iii)/v2.b repairs become checks (12 tests)
+2026-09-26T09:50:34Z f25cf7d -> WORKER-2 seal audit: tool_commit + origin, one live audit stamp
+2026-09-26T09:50:34Z 8cf783a -> WORKER-2 CONTROL seq 50 (commit column filled with 4dba6a9)
+2026-09-26T09:50:34Z 4dba6a9 -> WORKER-2 TASK-020 item 8b + criterion 20.13 (coherence computed, not asserted)
+2026-09-26T09:50:34Z 6e17567 -> BOSS-2 cycle 73 (zero controls; witnessed ORCH-2 at 0937097)
+2026-09-26T09:49:04Z af8444d -> ORCH-2 recreation-#4 recovery: CONTROL 47-54 republished as one superset commit on 0937097
+2026-09-26T09:50:34Z dada3e6 -> WORKER-2 tool commit naming tools/m5r_reduce.py for the M5-R re-run at f5e2cf5 (blob 6346049b, identical at 34db0b0)

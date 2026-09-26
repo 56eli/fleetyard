@@ -1,4 +1,4 @@
-ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-34d · head 34db0b070308
+ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-f5e · head f5e2cf53bab0
 
 == 0. materialised inputs (environment, never charged to the worker) ==
   PASS   read-only archive lane bf97d85 reachable in this clone (the pins' third leg) [n=1]
@@ -140,10 +140,7 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-34d · head 34db0b0
          2 demotions (D-002 contradicted by EVAL's dropped-token-not-missing, D-039 by the source-inheritance filter) + 6 notation refusals under the enacted narrow leg = 8, so the promoted count is 49 and every figure quoting 57 must carry the delta (item 11b's rule)
   PASS   item 0f — the published strata must reconcile with the EFFECTIVE count, not only with 57 [n=1]
   PASS   item 0g — the v2-holdout rows are marked as such IN the adjudication record [n=7]
-  FAIL   item 0h — a disposition's utc may not post-date the commit that contains it, and its `utc_source` must be true [n=15]  <<< FAIL
-         expected every utc ≤ its committing commit's time
-                  | observed committed 2026-09-26T00:39:44+00:00; stamps after it: ['2026-09-26T01:12:00Z']; source claimed: ['argument/--utc (the lane clock at write
-                   time)']
+  PASS   item 0h — a disposition's utc may not post-date the commit that contains it, and its `utc_source` must be true [n=15]
          `utc_source` says 'the lane clock at write time', which a forward stamp falsifies: the clock had not reached that time when the commit was made. Same class as item v2.c and ORCH-2's own O-4. The tool takes --utc as a free argument and never compares it to a clock, so nothing prevents it
   PASS   span re-read (rows where defined) [n=120]
          CERTAIN-leg-d 57/57; 2 rows carry no matched span and are checked separately (never as null == null)
@@ -227,18 +224,20 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-34d · head 34db0b0
   INFO   q4 part-holdout-format.PROVENANCE.json: holdout_reads declared [n=37]
          expected the 37 spent transcripts (or empty with the read set declared elsewhere)
                   | observed 37 entries
-  PASS   criterion 20.14a: FUZZY timestamps ASSERTED in committed docs (item 12) [n=563]
+  FAIL   criterion 20.14a: FUZZY timestamps ASSERTED in committed docs (item 12) [n=564]  <<< FAIL
+         expected 0 instances
+                  | observed 2 instances: [('fleet/branches/WORKER-2-TASK-019b-PREP.md', '02:2xZ'), ('fleet/branches/WORKER-2-TASK-020-DELIVERY.md', '02:4xZ')]
          plus 29 sites that QUOTE a fuzzy value in order to report or supersede it (not instances): [('findings/M4-q5-A1-CLAIM-RECONCILIATION.md', '20:1xZ'), ('findings/M4-q5-A1-CLAIM-RECONCILIATION.md', '21:4xZ'), ('findings/README.md', '21:4xZ'), ('fixtures/v2/dropword.json', '19:1xZ'), ('fleet/LOG.md', '20:5xZ'), ('fleet/TIMESTAMP-CENSUS-2026-09-26.md', '18:4xZ')]; plus 0 fuzzy values superseded IN-FILE by an exact sibling key + source (the compliant repair for a digest-bound file): []
-  PASS   criterion 20.14b: an artefact's OWN time field exact to the second [n=563]
+  PASS   criterion 20.14b: an artefact's OWN time field exact to the second [n=564]
          minute precision cannot order an artefact against a commit - the q2 parts ran 18:57:11Z-19:05:21Z before their delivery commit at 19:06:53Z, a sequencing question only seconds can settle. When the offender is `tools/INHERITED-V1-MANIFEST.json` `materialised_utc` it is TASK-017 item 17.a, the sole genuine own-time offender in the worker tree, repaired by the same rule as item 12
-  INFO   criterion 20.14b-compliant: fuzzy own-time field superseded in-file by an exact sibling [n=563]
+  INFO   criterion 20.14b-compliant: fuzzy own-time field superseded in-file by an exact sibling [n=564]
          expected reported
                   | observed 1 sites: [('fixtures/v2/dropword.json', 'generated_utc', '2026-09-25T19:1xZ')]
          this is the repair pattern the lane already owns - fuzzy left readable, exact sibling added; flagging it would punish the correct fix
-  INFO   criterion 20.14c: exact-to-the-second timestamps found [n=563]
+  INFO   criterion 20.14c: exact-to-the-second timestamps found [n=564]
          expected reported
-                  | observed 145 sites
-  INFO   criterion 20.14d: minute-precision timestamps anywhere else (citations, prose, headers) [n=563]
+                  | observed 175 sites
+  INFO   criterion 20.14d: minute-precision timestamps anywhere else (citations, prose, headers) [n=564]
          expected allowed when the source is named; ORCH-2 audits its own headers here
                   | observed 44 sites, first 8: [('fixtures/confirmed/corrections.json', '2026-09-24T23:44Z'), ('fleet/HALT-2026-09-25.md', '2026-09-25T13:22Z'),
                    ('fleet/LOG.md', '2026-09-25T18:26Z'), ('fleet/LOG.md', '2026-09-25T18:34Z'), ('fleet/LOG.md', '2026-09-25T18:43Z'),
@@ -278,19 +277,17 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-34d · head 34db0b0
   PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: original pin defect disclosed [n=3]
   PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: detector_sha256_at_head == tools/det_dropword.py
   PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: attributable to its generator bytes (criterion 20.10 as amended by O-8) [n=1]
-         the tool at head is 7249c24d5699… — DIFFERENT bytes: the tool moved after the run, which is why the pin exists (it names the bytes that produced the artefact)
+         the tool at head is 04db206b160f… — DIFFERENT bytes: the tool moved after the run, which is why the pin exists (it names the bytes that produced the artefact)
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: required keys [n=6]
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: run_utc exact to the second [n=1]
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: book store bound or N/A stated [n=1]
-  FAIL   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.15b) [n=1]  <<< FAIL
-         expected the construction stated beside every published config digest, under any key that states it
-                  | observed noted: none; UNNOTED: ['(top level)']
+  PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.15b) [n=1]
          the q2 supplement states how its config digest is computed; the others must adopt it. Item 14 (criterion 20.16, the q4 format leg publishing only `rules` where q3 publishes abbreviations + excerpt_chars + rules) is a separate row in §3
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: status forbids promotion/rate [n=1]
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: original pin defect disclosed [n=3]
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: detector_sha256_at_head == tools/det_format.py
   PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: attributable to its generator bytes (criterion 20.10 as amended by O-8) [n=1]
-         the tool at head is 7249c24d5699… — DIFFERENT bytes: the tool moved after the run, which is why the pin exists (it names the bytes that produced the artefact)
+         the tool at head is 04db206b160f… — the same bytes
   PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: required keys [n=6]
   PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: run_utc exact to the second [n=1]
   PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: book store bound or N/A stated [n=1]
@@ -384,19 +381,16 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-34d · head 34db0b0
   PASS   ANNEX §F1 — the four label-tainted holdout transcripts are fixed BY NAME [n=4]
          they carry prior TASK-018 labels (3 CERTAIN-leg-d + 4 CANDIDATE), NOT fixtures - the holdout has zero fixture transcripts
   PASS   ANNEX §F2 — both denominators pre-declared from ONE run [n=33]
-  FAIL   BLOCKER — quantum b may not run until its preconditions land (v2.7 needs frozen inputs) [n=3]  <<< FAIL
-         expected no open precondition
-                  | observed 3 open: ['item v2.b (taint disclosure) unlanded', "item v2.a clause (iii) 2nd half ('one draw, not two') unstated", "O-5: the freeze does
-                   not bind the companion note's digest"]
+  PASS   BLOCKER — quantum b may not run until its preconditions land (v2.7 needs frozen inputs) [n=0]
          item v2.a's SUBSTANCE is verified at this head — the seal stands, the fixture move is append-only (seal-time c8e96319… → live c40d272f…), 6 of 7 bound digests recompute MATCH — so the blocker no longer rests on the seal's validity; it rests on these conditions
   INFO   split-v2 file digest at this head (the pre-registration binds the post-note value) [n=1]
          expected recorded, expected to change exactly once when v2.a lands
                   | observed 73d86f0d
-  INFO   a committed pre-registration artefact exists (criterion v2.12 needs it BEFORE the run commit) [n=276]
+  INFO   a committed pre-registration artefact exists (criterion v2.12 needs it BEFORE the run commit) [n=277]
          expected ABSENT is the correct state while v2.a/v2.b are open
-                  | observed 0 of 276 file(s) under runs/ match a pre-registration name: []
+                  | observed 0 of 277 file(s) under runs/ match a pre-registration name: []
          defect #42: n was the count of MATCHES (0), which made this indistinguishable from a row that did no work; n is now the count of filenames compared
-  PASS   no receipt already declares the V2 holdout SPENT (the quantum-b run has not happened) [n=267]
+  PASS   no receipt already declares the V2 holdout SPENT (the quantum-b run has not happened) [n=268]
          defect #42: n was the count of offending receipts (0), so this PASS looked vacuous; n is now the count of artefacts examined for a spend declaration. A receipt only consumes v2 if it binds the v2 split file or the v2 salt; 2 receipt(s) consume the V1 holdout, which is correct and expected: ['runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json (split HELD-OUT-SPLIT.json, salt out-2026-09-25)', 'runs/m4-q4-holdout/v1-holdout.PROVENANCE.json (split HELD-OUT-SPLIT.json, salt out-2026-09-25)']
 
 == 13. cross-artefact coherence (20.13 / L10, items 0e-0g) ==
@@ -557,49 +551,37 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-34d · head 34db0b0
   PASS   the audit tool's digest equals the one stamped in its own report [n=1]
   PASS   the report names the head it audited, and that head is an ancestor of the report's own commit [n=1]
          the report states the ordering itself ('committed as its own commit after it') — honest sequencing
-  PASS   the audit tool opens no transcript content (the 'holdout not opened' claim, tested on the tool) [n=303]
+  PASS   the audit tool opens no transcript content (the 'holdout not opened' claim, tested on the tool) [n=602]
          it does read the holdout NAME list from the seal, which membership checks require; names are not content, and no transcript bytes are opened
-  FAIL   item v2.c — the report's own `audit_utc` must not post-date its commit, and every doc citing it must cite the SAME value [n=1]  <<< FAIL
-         expected one exact stamp from `date -u` at run time, cited identically
-                  | observed report 2026-09-26T01:22:00Z; the head it audited was committed 2026-09-26T00:39:44+00:00; the report itself 2026-09-26T01:54:56+00:00; the
-                   appendix cites ['2026-09-25T21:44:00Z']
+  PASS   item v2.c — the report's own `audit_utc` must not post-date its commit, and every doc citing it must cite the SAME value [n=1]
          FORWARD-STAMPED by ~13 min against its own committing head, and the appendix cites a different day and time (2026-09-25T21:44:00Z) for the same artefact; both are :00-rounded, so neither orders anything to the second. This is ORCH-2's own self-item O-4 class, in a worker artefact
-  FAIL   item v2.d — the report names a `tool_commit` that contains its generating tool (item 8a's class) [n=1]  <<< FAIL
-         expected tool_commit present, and the tool blob at that commit == the tool at head
-                  | observed keys present: ['tool', 'tool_sha256']
+  PASS   item v2.d — the report names a `tool_commit` that contains its generating tool (item 8a's class) [n=1]
          the containing commit is derivable (b991f29 added tools/m4_seal_audit.py and is an ancestor of the audited head) but derivable is not stated: criterion 20.10 and TASK-021's 21.6 both require the field, which is why item 8a is still open on the q2/q3/q4 supplements
   FAIL   item v2.e — the report's citation census must NAME ITS KEY and cover every citation (item 0e's lesson) [n=10]  <<< FAIL
          expected one row per citation of the confirmation artefact, attributable by path
-                  | observed the fixture file mentions it at 10 paths, of which 5 are artifact+sha pairs (the tool's unstated key); the report carries 5 rows, 1 distinct
+                  | observed the fixture file mentions it at 10 paths, of which 5 are artifact+sha pairs (the tool's unstated key); the report carries 1 rows, 1 distinct
          the appendix's sentence 'All five citations in the fixture file' does not reproduce: 10 mentions, 5 pairs. The load-bearing half is that the 5 UNPAIRED mentions — including /adjudication_summary_2026_09_25/artifact — sit OUTSIDE the tool's post-seal void check, so a post-seal confirmation cited without a paired sha would not fire it. ORCH-2 closed the gap by hand: all 10 mentions name the same artefact, whose whole history is pre-seal
-  PASS   item v2.f — the prep record's header stamp (item 12's class) [n=1]
+  FAIL   item v2.f — the prep record's header stamp (item 12's class) [n=2]  <<< FAIL
+         expected exact UTC to the second with its source; a fuzzy value only as a superseded citation
+                  | observed 1 asserted fuzzy: ['02:2xZ']; 1 superseded-in-place: ['21:5xZ']
          '2026-09-25T21:5xZ' was both fuzzy and ~2.6 h before its own commit; the census repaired it to 2026-09-26T00:32:03Z with `src 72104a5` beside it and left the old value readable
   PASS   item v2.a clause (iii), second half — the SUBSTANCE ('one draw, not two'), re-derived by ORCH-2 from the two seal blobs [n=1]
          so the claim is TRUE and the owed repair is documentation-only: the sentence, plus why it matters — 79eb401's own commit subject says 're-seal', 68 s after the draw, which reads as a second draw to anyone who has not compared the blobs
-  FAIL   item v2.a clause (iii), second half — the STATEMENT that 293b29c/79eb401 are one draw, not two [n=6]  <<< FAIL
-         expected stated in a companion note beside the seal
-                  | observed present in 0 of 6 companion artefacts scanned: []
+  PASS   item v2.a clause (iii), second half — the STATEMENT that 293b29c/79eb401 are one draw, not two [n=6]
          without it a reader cannot tell whether the split was re-drawn (a new salt would be owed) or only re-manifested; ORCH-2 has verified the substance in the row above, so this item is documentation-only
-  FAIL   O-5 amended A1 — the seal stays byte-identical, a dated companion note names both digests, and the quantum-b FREEZE binds the companion's digest alongside the seal's [n=3]  <<< FAIL
-         expected all three
-                  | observed seal untouched: True; companion artefacts naming both digests: ['fleet/branches/WORKER-2-TASK-019a-DELIVERY.md',
-                   'runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md', 'runs/m4-q2-adjudication/SEAL-AUDIT.json', 'tools/HELD-OUT-
-                   SPLIT-V2-NOTE-2026-09-26.md']; freeze binds the companion: False
+  PASS   O-5 amended A1 — the seal stays byte-identical, a dated companion note names both digests, and the quantum-b FREEZE binds the companion's digest alongside the seal's [n=3]
          A1 as originally written ('HELD-OUT-SPLIT-V2.json's own header binds c40d272f…, append-only') is unsatisfiable without moving 73d86f0d…, which the appendix and criterion v2.10 both bind — a collision in ORCH-2's own criterion, disclosed as self-correction O-5. The amended requirement puts the disclosure where the run reads it: the freeze record
-  PASS   item v2.b — the v2-holdout taint disclosure, looked for in ALL THREE new artefacts [n=1]
+  PASS   item v2.b — the v2-holdout taint disclosure, looked for in ALL THREE new artefacts [n=19]
          item v2.b is therefore UNCHANGED and remains, with A2, one of the two blockers on quantum b
-  PASS   v2.12/v2.13 precedent — the one-shot refusals are IN CODE, not in prose [n=10]
+  PASS   v2.12/v2.13 precedent — the one-shot refusals are IN CODE, not in prose [n=17]
          HELD for the run itself: §15's v2.12/v2.13 rows still need the actual receipt with holdout_reads equal to the pre-registered 33 (or the §F2 sensitivity 29) and an eval dir whose commit history is pure. What is proven today is that the discipline cannot be forgotten at run time
   PASS   v2.15 precedent — `score` separates seeded from independent and refuses an unreasoned label [n=1]
-  PASS   v2.16 precedent — the quantum-b tool and its registry carry no tuning-side evaluation path [n=419]
+  PASS   v2.16 precedent — the quantum-b tool and its registry carry no tuning-side evaluation path [n=521]
   PASS   §17 cross-check — the freeze cannot drift from the shipped operating point, because the registry reads the detector's own constants [n=8]
   PASS   the harness's label keys are detector-qualified (the prep record's claim, verified as a mechanism) [n=1]
          the literal 'C1-drop/' never appears because the detector name is a variable — a grep for the example string would have reported this claim ABSENT and been wrong
   PASS   first-attempt enforcement (the prep record's 'first attempt' claim) [n=1]
-  FAIL   item v2.g — how many of the harness's refusal paths are ASSERTED by a test (capability evidence is only as good as its tests) [n=8]  <<< FAIL
-         expected all 12
-                  | observed 8/12 asserted; UNTESTED: ['detector PARAMETERS changed after freeze', 'evaluated set != frozen holdout (PARTIAL READ)', 'pre-registered
-                   exclusions are NOT holdout members', 'score refuses a partial read']
+  PASS   item v2.g — how many of the harness's refusal paths are ASSERTED by a test (capability evidence is only as good as its tests) [n=8]
          the refusal surface grew from 9 to 12 with the pre-registered exclusions, and 4 of the 12 are unasserted: the PARAMETERS-changed branch, the evaluated-set refusal (a PARTIAL READ), the exclusions-not-holdout-members refusal, and the score-side partial-read refusal. The middle two protect quantum b's DENOMINATOR: a partial or wrongly-scoped holdout read must be refused, not scored, because the figure is one-shot and cannot be re-run. Code-present is not code-proven; one toy test each closes it (a frozen holdout of 2 with a detector that reads 1; a freeze whose params are edited without touching the module file; an exclusions file naming a tuning transcript; a labels file covering fewer rows than the receipt evaluated)
   PASS   the partial-read refusal is NON-SPURIOUS: both detectors emit an entry for every transcript they read, so a zero-signal transcript cannot look like a partial read [n=2]
          this is what makes refusal (g) usable at all: C1-drop may legitimately find nothing in some of the 33 holdout transcripts, and the run must still see 33 reads
@@ -607,82 +589,46 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-34d · head 34db0b0
          HELD for the run: §15's v2.12 row still needs the actual receipt whose holdout_reads is SET-EQUAL to the pre-registered 33 (or the §F2 sensitivity 29)
   PASS   criterion 21.8 / A5 — the suite floor, measured at both heads [n=263]
          TASK-021's criterion 21.8 publishes 217, stale since 4fc40c8; the binding floor is the newest measured count, 263 at 34db0b0, and the skip count travels with it. Measured in the scratch worktree with the corpus materialised: `python3 -m unittest discover -s tests -t tests`
-  FAIL   criterion 20.14c — no own-time stamp POST-DATES the commit that contains it (item 12's other half; TASK-018 item 0h, TASK-019 item v2.h, TASK-020 item 12c) [n=61]  <<< FAIL
-         expected 0 forward stamps in the committed tree
-                  | observed 19 forward of 61 own-time stamps over the whole tree: runs/m4-q2-adjudication/RECOUNT-2026-09-26.json 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/SEAL-AUDIT.json 2026-09-26T01:22:00Z vs its commit
-                   2026-09-26T00:41:22Z (+40.6 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit
-                   2026-09-26T00:39:44Z (+32.3 min); tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json 2026-09-26T01:14:30Z vs its commit
-                   2026-09-26T00:41:22Z (+33.1 min); tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md 2026-09-26T01:14:30Z vs its commit
-                   2026-09-26T00:41:22Z (+33.1 min)
+  PASS   criterion 20.14c — no own-time stamp POST-DATES the commit that contains it (item 12's other half; TASK-018 item 0h, TASK-019 item v2.h, TASK-020 item 12c) [n=80]
          a file's bytes cannot carry a stamp from a time the committer had not reached; every offending value here is :00- or cadence-shaped, i.e. projected from the CONTROL grid rather than read. New in this delivery range (1c8a287..head): none
-  PASS   the forward stamps are NOT a clock artifact (the ruling's control) [n=1]
+  INFO   the forward stamps are NOT a clock artifact (the ruling's control) [n=1]
+         expected one artefact in the same lane whose own `date -u` stamp precedes its commit
+                  | observed fleet/TIMESTAMP-CENSUS-2026-09-26.md stamps itself 2026-09-26T01:00:55Z from `date -u` and was committed 2026-09-26T02:16:20Z — -75.4 min, a
+                   plausible write-then-commit gap in the SAME lane
          so git's clock and the lane's clock agree to within minutes and the +32/+41 min stamps are not skew. Root cause: a stamp taken from the CONTROL cadence grid — the seal note says it was 'written at the lane clock stamp of CONTROL seq 43' — propagates into every artefact that cites it, and CONTROL seq 43/44 are themselves forward-stamped
-  FAIL   the WORKER lane's CONTROL.log utc column is exact, orderable and never ahead of the commit that carries it — it is the cadence input BOSS-2 reads (ERRATA-25f), so a bad column is a fleet-integrity risk [n=58]  <<< FAIL
+  FAIL   the WORKER lane's CONTROL.log utc column is exact, orderable and never ahead of the commit that carries it — it is the cadence input BOSS-2 reads (ERRATA-25f), so a bad column is a fleet-integrity risk [n=62]  <<< FAIL
          expected every utc exact to the second, non-decreasing down the file, none after the file's last commit
-                  | observed 58 rows: 49 exact / 9 minute-precision ['2026-09-25T18:26Z', '2026-09-25T18:27Z', '2026-09-25T18:34Z', '2026-09-25T18:41Z']; utc going
+                  | observed 62 rows: 53 exact / 9 minute-precision ['2026-09-25T18:26Z', '2026-09-25T18:27Z', '2026-09-25T18:34Z', '2026-09-25T18:41Z']; utc going
                    BACKWARDS: [('2026-09-26T01:26:40Z', '2026-09-26T00:57:47Z')]; rows stamped after the file's last commit
-                   (2026-09-26T01:54:56+00:00): []; seq values used more than once: ['10', '11', '12', '13', '14', '15', '38', '39', '45']
+                   (2026-09-26T02:19:35+00:00): []; seq values used more than once: ['10', '11', '12', '13', '14', '15', '38', '39', '45',
+                   '52']
          REPORTED to BOSS-2, not ruled here — ORCH-2 gates evidence, the boss owns fleet signals. Two findings travel with it: (1) seqs 10-15/38/39/45 each appear twice, so seq is not a unique key in this lane's log and a cadence reader must not treat it as one (ORCH-2's own log is rendered by fleet2check, which enforces uniqueness); (2) WORKER-2's seq-45 ERRATA corrected the COMMIT column for 42/43/44 while their UTC column is still forward-stamped
   PASS   ANNEX §H precondition — the denominator was decided BEFORE any result existed [n=1]
          this is what makes a denominator change legitimate rather than post-hoc: the swap is recorded while the outcome is still unknown
   PASS   ANNEX §H — the exclusions are machine-readable, holdout members, bound by digest into the freeze, enforced in code and tested [n=4]
-  FAIL   ANNEX §H (A4 amended) — BOTH denominators fixed before the run: 29 PRIMARY and 33 as a pre-registered SENSITIVITY from the same run [n=4]  <<< FAIL
-         expected the note or the exclusions file commits to reporting both, the four named in each
-                  | observed counts recorded: 29 evaluated / 33 holdout; BOTH denominators stated: False; SAME run / no second spend stated: False; the four named or
-                   bound by reference: True
+  PASS   ANNEX §H (A4 amended) — BOTH denominators fixed before the run: 29 PRIMARY and 33 as a pre-registered SENSITIVITY from the same run [n=4]
          A4 as written fixed 33 primary + 29 sensitivity. WORKER-2's note swaps the primary to 29 on the label-taint ground (§F2's own reason) and forbids the four from re-entering any denominator. ORCH-2 ADOPTS the swap — pre-result, machine-readable, enforced, tested — and amends A4 append-only: primary 29, sensitivity 33 from the SAME run (no second spend; the four were already read), each reported with the four named. Both numbers stay fixed before the run, which is the whole point of the protocol; one sentence is owed
 
 == 20. FAIL-to-repair coverage (derived from the published repair map) ==
-  INFO   every FAIL row is mapped to a repair in fleet/ORCH-2-REPAIR-MAP.md, quoted VERBATIM [n=13]
-         expected the map binds the head being gated
-                  | observed the map binds f5e2cf5, this run gates 34db0b0 — coverage NOT claimed for this head; 13 FAIL rows here
-         a repair map is head-specific by design (append-only per cycle): publish a new map for the head being gated and this row becomes the mechanical FAIL-to-repair agreement again
+  PASS   every FAIL row is mapped to a repair in fleet/ORCH-2-REPAIR-MAP.md, quoted VERBATIM [n=5]
+         an unmapped FAIL is a FAIL nobody can act on: the map must name the artefact change that flips it. Verbatim quotation is what makes the check mechanical instead of a reading exercise
+  PASS   the repair map carries no entry for a row that no longer FAILs (the map is not stale) [n=5]
+         the map is append-only per cycle: a stale entry means a repair landed and a NEW map is owed for the new head, not that this one should be edited
   PASS   VACUOUS rows owe no repair and are reported as what they are [n=1]
-         a VACUOUS row performed zero comparisons because the data made comparison impossible; it is neither a FAIL nor a PASS, and R1 forbids printing it as either
+         a VACUOUS row performed zero comparisons because the data made comparison impossible (no adjudicated row shares a transcript with a fixture); it is not a FAIL and not a PASS, and R1 forbids printing it as either
 
-== summary: 335 rows · FAIL 13 · INFO 32 · PASS 281 · PROXY 8 · VACUOUS 1
+== summary: 336 rows · FAIL 5 · INFO 32 · PASS 290 · PROXY 8 · VACUOUS 1
 
 rows not passing (each is an owed item or a known restriction, not necessarily a defect):
-  FAIL   item 0h — a disposition's utc may not post-date the commit that contains it, and its `utc_source` must be true: expected every utc ≤ its committing commit's time | observed committed 2026-09-26T00:39:44+00:00; stamps after it: ['2026
-         `utc_source` says 'the lane clock at write time', which a forward stamp falsifies: the clock had not reached that time when the commit was made. Same class as item v2.c and ORCH-2's own O-4. The tool 
   VACUOUS interval overlaps with any fixture span: expected 0 | observed 0
          R1 satisfied and the row is honestly VACUOUS-by-data: 0 interval comparisons were possible because no adjudicated row shares a transcript with any fixture. The membership test above (0 of 122 rows in 
-  FAIL   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.15b): expected the construction stated beside every published config digest | observed noted: none; UNNOTED: ['(top level)']
-         the q2 supplement states how its config digest is computed; the others must adopt it. Item 14 (criterion 20.16, the q4 format leg publishing only `rules` where q3 publishes abbreviations + excerpt_cha
-  FAIL   BLOCKER — quantum b may not run until its preconditions land (v2.7 needs frozen inputs): expected no open precondition | observed 3 open: ['item v2.b (taint disclosure) unlanded', "item v2.a
-         item v2.a's SUBSTANCE is verified at this head — the seal stands, the fixture move is append-only (seal-time c8e96319… → live c40d272f…), 6 of 7 bound digests recompute MATCH — so the blocker no longe
+  FAIL   criterion 20.14a: FUZZY timestamps ASSERTED in committed docs (item 12): expected 0 instances | observed 2 instances: [('fleet/branches/WORKER-2-TASK-019b-PREP.md', 
+         plus 29 sites that QUOTE a fuzzy value in order to report or supersede it (not instances): [('findings/M4-q5-A1-CLAIM-RECONCILIATION.md', '20:1xZ'), ('findings/M4-q5-A1-CLAIM-RECONCILIATION.md', '21:4
   FAIL   item 13b — the `derivations_revision` reproducibility claim states the pin it depends on: expected the claim says a byte-identical ledger requires the ORIGINAL | observed pin dependence stated: False; claim as written: a rebuild wi
          verified by ORCH-2 both ways: with --tool-commit dada3e6 the re-run's ledger is byte-identical (d42136c6…); with the argument omitted all 1334 rows are identical EXCEPT `status_by`, which reads `tools
-  FAIL   item v2.c — the report's own `audit_utc` must not post-date its commit, and every doc citing it must cite the SAME value: expected one exact stamp from `date -u` at run time, cited identicall | observed report 2026-09-26T01:22:00Z; the head it audited was committ
-         FORWARD-STAMPED by ~13 min against its own committing head, and the appendix cites a different day and time (2026-09-25T21:44:00Z) for the same artefact; both are :00-rounded, so neither orders anythi
-  FAIL   item v2.d — the report names a `tool_commit` that contains its generating tool (item 8a's class): expected tool_commit present, and the tool blob at that commit == the | observed keys present: ['tool', 'tool_sha256']
-         the containing commit is derivable (b991f29 added tools/m4_seal_audit.py and is an ancestor of the audited head) but derivable is not stated: criterion 20.10 and TASK-021's 21.6 both require the field
   FAIL   item v2.e — the report's citation census must NAME ITS KEY and cover every citation (item 0e's lesson): expected one row per citation of the confirmation artefact, attributa | observed the fixture file mentions it at 10 paths, of which 5 are art
          the appendix's sentence 'All five citations in the fixture file' does not reproduce: 10 mentions, 5 pairs. The load-bearing half is that the 5 UNPAIRED mentions — including /adjudication_summary_2026_
-  FAIL   item v2.a clause (iii), second half — the STATEMENT that 293b29c/79eb401 are one draw, not two: expected stated in a companion note beside the seal | observed present in 0 of 6 companion artefacts scanned: []
-         without it a reader cannot tell whether the split was re-drawn (a new salt would be owed) or only re-manifested; ORCH-2 has verified the substance in the row above, so this item is documentation-only
-  FAIL   O-5 amended A1 — the seal stays byte-identical, a dated companion note names both digests, and the quantum-b FREEZE binds the companion's digest alongside the seal's: expected all three | observed seal untouched: True; companion artefacts naming both digest
-         A1 as originally written ('HELD-OUT-SPLIT-V2.json's own header binds c40d272f…, append-only') is unsatisfiable without moving 73d86f0d…, which the appendix and criterion v2.10 both bind — a collision 
-  FAIL   item v2.g — how many of the harness's refusal paths are ASSERTED by a test (capability evidence is only as good as its tests): expected all 12 | observed 8/12 asserted; UNTESTED: ['detector PARAMETERS changed after
-         the refusal surface grew from 9 to 12 with the pre-registered exclusions, and 4 of the 12 are unasserted: the PARAMETERS-changed branch, the evaluated-set refusal (a PARTIAL READ), the exclusions-not-
-  FAIL   criterion 20.14c — no own-time stamp POST-DATES the commit that contains it (item 12's other half; TASK-018 item 0h, TASK-019 item v2.h, TASK-020 item 12c): expected 0 forward stamps in the committed tree | observed 19 forward of 61 own-time stamps over the whole tree: runs/m
-         a file's bytes cannot carry a stamp from a time the committer had not reached; every offending value here is :00- or cadence-shaped, i.e. projected from the CONTROL grid rather than read. New in this 
-  FAIL   the WORKER lane's CONTROL.log utc column is exact, orderable and never ahead of the commit that carries it — it is the cadence input BOSS-2 reads (ERRATA-25f), so a bad column is a fleet-integrity risk: expected every utc exact to the second, non-decreasing down the file, | observed 58 rows: 49 exact / 9 minute-precision ['2026-09-25T18:26Z',
+  FAIL   item v2.f — the prep record's header stamp (item 12's class): expected exact UTC to the second with its source; a fuzzy value only  | observed 1 asserted fuzzy: ['02:2xZ']; 1 superseded-in-place: ['21:5x
+         '2026-09-25T21:5xZ' was both fuzzy and ~2.6 h before its own commit; the census repaired it to 2026-09-26T00:32:03Z with `src 72104a5` beside it and left the old value readable
+  FAIL   the WORKER lane's CONTROL.log utc column is exact, orderable and never ahead of the commit that carries it — it is the cadence input BOSS-2 reads (ERRATA-25f), so a bad column is a fleet-integrity risk: expected every utc exact to the second, non-decreasing down the file, | observed 62 rows: 53 exact / 9 minute-precision ['2026-09-25T18:26Z',
          REPORTED to BOSS-2, not ruled here — ORCH-2 gates evidence, the boss owns fleet signals. Two findings travel with it: (1) seqs 10-15/38/39/45 each appear twice, so seq is not a unique key in this lane
-  FAIL   ANNEX §H (A4 amended) — BOTH denominators fixed before the run: 29 PRIMARY and 33 as a pre-registered SENSITIVITY from the same run: expected the note or the exclusions file commits to reporting both, t | observed counts recorded: 29 evaluated / 33 holdout; BOTH denominator
-         A4 as written fixed 33 primary + 29 sensitivity. WORKER-2's note swaps the primary to 29 on the label-taint ground (§F2's own reason) and forbids the four from re-entering any denominator. ORCH-2 ADOP
