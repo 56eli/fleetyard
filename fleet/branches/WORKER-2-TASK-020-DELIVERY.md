@@ -441,27 +441,28 @@ the blob at its own commit (a pin that names a commit not carrying the tool fail
 
 ---
 
-## ADDENDUM — item 13b closed (the reproducibility claim names its pin), 2026-09-26T2026-09-26T09:23:19Z-slice
+## ADDENDUM — item 13b closed (the reproducibility claim names its pin)
 
-Cycle K opened **13b**:  claimed that "a rebuild with
+Cycle K opened **13b**: `derivations_revision.reproducibility_note` claimed that "a rebuild with
 this revision emits … a byte-identical ledger/by-transcript" **without naming the pin the claim
-depends on** — and ORCH-2 proved the claim is pin-dependent (with  the
-ledger is ; without it, all 1334 rows are identical except  and the digest
-moves to ). A reader rebuilding at its own head would have concluded the outputs drifted.
+depends on** — and ORCH-2 proved the claim is pin-dependent (with `--tool-commit dada3e6…` the
+ledger is `d42136c6…`; without it, all 1334 rows are identical except `status_by` and the digest
+moves to `c94cce40…`). A reader rebuilding at its own head would have concluded the outputs drifted.
 
 **Repaired, generator-first.** The note now names the pin and states the counterfactual; a second
-revision block () records who/why/scope; and two fields that could *contradict the
+revision block (`revision_2`) records who/why/scope; and two fields that could *contradict the
 manifest they sit beside* were made generated rather than hardcoded:
 
 | field | before | after |
 |---|---|---|
-|  | hardcoded ledger/by-transcript/findings/ from the item-13 build | **computed from each build's own values** — a manifest can no longer disagree with its own outputs |
-|  | the running file's hash (so a repair rebuild silently rewrote the run's tool attribution) | **the tool blob at **  = , checkable in git; the file that wrote *this* manifest is named separately in , in the effect statement and in the SUMMARY footer |
-|  | "a rebuild with this revision emits … byte-identical …" | names , says what happens without it, and states that the pin is part of the reproduction procedure |
+| `derivations_revision.effect_on_run_outputs` | hardcoded ledger/by-transcript/findings/`tool_sha256` from the item-13 build | **computed from each build's own values** — a manifest can no longer disagree with its own outputs |
+| `tool_sha256` | the running file's hash (so a repair rebuild silently rewrote the run's tool attribution) | **the tool blob at `tool_commit`** `dada3e6` = `6d4bb9ce…`, checkable in git; the file that wrote *this* manifest is named separately in `tool_sha256_running`, in the effect statement and in the SUMMARY footer |
+| `reproducibility_note` | "a rebuild with this revision emits … byte-identical …" | names `--tool-commit dada3e602689cb900971fda0dccce8267f31a2b2`, says what happens without it, and states that the pin is part of the reproduction procedure |
 
-**Evidence.** Rebuilt with the manifest's own pins (, , , , ):
-the **ledger is byte-identical** (), the by-transcript digest is unchanged
-(, 230 files) and  compares equal — only the manifest's derivations prose and
-the two attribution fields moved.  is **OK (manifest 629b31cb00ad19ce)**
-with the tool row now PASSing at the pinned blob (), and the findings/provenance
+**Evidence.** Rebuilt with the manifest's own pins (`--tool-commit dada3e6…`, `--main-head
+77f1d6d…`, `--policy-sha 0fe20a6…`, `--book-store-sha c0892fc…`, `--detector-tool-commit 7b8863d`):
+the **ledger is byte-identical** (`d42136c673188f9e…`), the by-transcript digest is unchanged
+(`c1ec4da8…`, 230 files) and `outputs` compares equal — only the manifest's derivations prose and
+the two attribution fields moved. `tools/m4_prov_check.py` is **OK (manifest 629b31cb00ad19ce)**
+with the tool row now PASSing at the pinned blob (`6d4bb9ce78f2964e`), and the findings/provenance
 tests pass (33 tests in the run above). No rule, threshold, split, count or output changed.
