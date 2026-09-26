@@ -173,7 +173,7 @@ def build(args):
         "worker": "WORKER-2 (A-2026-09-25-001), lane arena/01a0d9ce-fleetyard",
         "run_utc": args.utc,
         "tool_commit": args.tool_commit,
-        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q4_supplement.py", "d7fee6e142ebbeecbd0e605395aa3d848499bf8a"),
+        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q4_supplement.py", "d85038c8383755d42f3cc5fba7962bf335811910"),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
         "corpus_zip_sha256": CORPUS_ZIP_SHA,

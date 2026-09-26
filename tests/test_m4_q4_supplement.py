@@ -77,6 +77,31 @@ class SupplementCase(unittest.TestCase):
         self.assertEqual(self.doc["runs"]["drop"]["config"], drop["params"])
         self.assertEqual(self.doc["runs"]["format"]["config"]["rules"], fmt["rules"])
 
+    def test_every_leg_publishes_a_complete_config_with_its_convention(self):
+        """item 14 / criterion 20.16: digest note + a note stating what the object covers."""
+        for part in PARTS:
+            row = self.doc["runs"][part]
+            self.assertIn("sort_keys=True", row["config_digest_note"])
+            self.assertIn("separators", row["config_digest_note"])
+            self.assertTrue(row["config_note"], part)
+
+    def test_format_config_is_the_complete_in_force_configuration(self):
+        """The defect: the format leg published `rules` alone (805241dd) while q3 published
+        abbreviations + excerpt_chars + rules (8e7e35a2). The object must now cover the module
+        constants AND the rules, and must equal q3's published object digest-for-digest."""
+        row = self.doc["runs"]["format"]
+        self.assertEqual(sorted(row["config"]), ["abbreviations", "excerpt_chars", "rules"])
+        self.assertEqual(len(row["config"]["abbreviations"]), 38)
+        self.assertEqual(row["config"]["excerpt_chars"], 60)
+        self.assertEqual(row["config"]["abbreviations"], sorted(q4.fmt_det.ABBREV))
+        self.assertEqual(row["config"]["excerpt_chars"], q4.fmt_det.EXCERPT)
+        self.assertNotIn("config_subset_matching_q3", row)
+        q3path = os.path.join(ROOT, "runs", "m4-q3-format", "PROVENANCE-SUPPLEMENT.json")
+        if os.path.exists(q3path):
+            q3 = load(q3path)
+            self.assertEqual(row["config"], q3["config"])
+            self.assertEqual(row["config_sha256"], q3["config_sha256"])
+
 
 class VerifyCase(unittest.TestCase):
     def setUp(self):

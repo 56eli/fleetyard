@@ -330,3 +330,36 @@ with `.git` at the base commit and no `corpus/` or `evidence/`. Recovery: explic
 the working inputs (zip sha `3f36c520…` verified by the script's own check; 230 overlays; 230
 record files). Nothing committed was lost; the item-13 generator edit that was **uncommitted** at
 recreation time was re-applied from the preserved working tree and is carried by this commit.
+
+### Item 14 — the q4 supplement's format-leg config is now the configuration in force (criterion 20.16)
+
+The defect: the q4 holdout supplement's **format** leg published `config = {"rules": [...]}`
+(digest `805241dd…`), while the q3 tuning supplement published
+`{"abbreviations" (38), "excerpt_chars" (60), "rules" (7)}` (digest `8e7e35a2…`). A reader
+comparing digests would conclude the two configurations differ. **They do not**, and now that is
+provable: the format config object is rebuilt from the detector module's own constants — read from
+`tools/det_format.py`, sha256 `ef9ff4f2…`, the same blob the run was made with — plus the seven
+rules in force, and it is **byte-identical to q3's published object, so the two digests are equal:
+`8e7e35a2795f58b97504af440d804e03beb3f66007db9b615bab731972e6f77f`**. PATTERNS §5d's exposure
+comparison therefore rests on a digest match, not on a reader's inference.
+
+Also, per the same criterion: every leg now carries a **`config_digest_note`** (the q2 supplement's
+convention — `sha256 over json.dumps(config, sort_keys=True, separators=(',',':'))`) and a
+**`config_note`** stating exactly what the object covers:
+
+| leg | config digest | note says |
+|---|---|---|
+| v1 | `193532701167…` (unchanged) | complete: detector set + split side; the run's other parameters are the detector defaults, pinned by the toolchain |
+| drop | `409458723e16…` (unchanged) | complete: all eight C1-drop parameters, identical to the q2 supplement's object **and digest** — comparability by digest |
+| format | **`805241dd…` → `8e7e35a2…`** | complete for this leg and identical to q3's object: same module constants, same rules |
+
+**Attribution:** generator commit **`d85038c8383755d42f3cc5fba7962bf335811910`**
+(`tools/m4_q4_supplement.py`, blob sha256 `d9ddb98d…` — the value in the artefact's own
+`generator_pins`); rebuilt with the recorded run arguments
+(`--utc 2026-09-25T21:22:29Z --tool-commit ffb881158… --main-head 7d033abd… --policy-sha 0fe20a60…`),
+**byte-identical on a second rebuild**. Supplement sha256: `af6af1b8…` → **`9cfd82fa504b9067b067f8661ebc95847d32cba9122e57188e2e0b535c763e7d`**
+(this supersedes the digest in the item-8a table above, which stays readable). `m4_pin_repair.py`
+ARTEFACTS now pins the q4 supplement to `d85038c8`; `verify` reports **6/6** pins matching their
+cited commits; `runs/m4-pin-repair-2026-09-26.json` refreshed. 2 new tests (12 in the module);
+suite **263 OK, skipped=1, WITH corpus**. No threshold changed, no detector edited, no rate, the
+spent holdout was not re-run (the tool cannot read the corpus — it reads committed artefacts).

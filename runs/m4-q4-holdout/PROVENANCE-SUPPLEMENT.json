@@ -5,9 +5,9 @@
  "generator_pins": {
   "generator_tool": "tools/m4_q4_supplement.py",
   "generator_tool_blob": "origin/arena/01a0d9ce-fleetyard:tools/m4_q4_supplement.py",
-  "generator_tool_commit": "d7fee6e142ebbeecbd0e605395aa3d848499bf8a",
+  "generator_tool_commit": "d85038c8383755d42f3cc5fba7962bf335811910",
   "generator_tool_note": "generator_tool_commit is the reachable commit carrying these exact script bytes; tool_commit above is the lane head at run time, which for these artefacts is an earlier or later commit and does not contain the generator — pinning both makes the manifest attributable without archaeology",
-  "generator_tool_sha256": "fc0065ef3e5fe5047a52a8b5c7cd505d64bf6960147ada9407fb51cbb896c072"
+  "generator_tool_sha256": "d9ddb98d4344aa4f2da38d701bdeb475e57a4492eb49001eb3c8044e289ffaa2"
  },
  "holdout_consumed": true,
  "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
@@ -26,6 +26,8 @@
     "top_k": 3,
     "window": 24
    },
+   "config_digest_note": "sha256 over json.dumps(config, sort_keys=True, separators=(',',':')) - the q2 supplement's convention, adopted here for all three legs",
+   "config_note": "complete: all eight C1-drop parameters in force, identical to the q2 supplement's object and digest (40945872) - comparability by digest",
    "config_sha256": "409458723e165e06264d733cf05f4e72f5e1d818bd1529a81f55eba623c8959a",
    "per_detector_signal_instances_supplement": {
     "C1-drop": 5,
@@ -39,6 +41,47 @@
   },
   "format": {
    "config": {
+    "abbreviations": [
+     "a.m",
+     "al",
+     "b.a",
+     "co",
+     "corp",
+     "d.d.s",
+     "d.o",
+     "dept",
+     "dr",
+     "e.g",
+     "ed",
+     "eds",
+     "est",
+     "etc",
+     "fig",
+     "i.e",
+     "inc",
+     "jr",
+     "l.p.n",
+     "ltd",
+     "m.a",
+     "m.d",
+     "mr",
+     "mrs",
+     "ms",
+     "n.j",
+     "n.y",
+     "no",
+     "p.m",
+     "ph.d",
+     "pp",
+     "r.n",
+     "sr",
+     "st",
+     "u.k",
+     "u.s",
+     "vol",
+     "vs"
+    ],
+    "excerpt_chars": 60,
     "rules": [
      "R1-glued-period",
      "R2-repeated-punct",
@@ -49,7 +92,9 @@
      "R7-glued-comma"
     ]
    },
-   "config_sha256": "805241dd09306c2eb70082500241cb9c5addc74fd69b8fbc1e6e18acdce2532d",
+   "config_digest_note": "sha256 over json.dumps(config, sort_keys=True, separators=(',',':')) - the q2 supplement's convention, adopted here for all three legs",
+   "config_note": "complete for this leg AND identical to the q3 tuning supplement's config object, so the two digests are equal (8e7e35a2): the same module constants (abbreviations, excerpt_chars - read here from tools/det_format.py at sha256 ef9ff4f257cd9b75edd1dc888abac17ace21ad65ec8ff78e8c088c5ea527b7b9) and the same seven rules were in force in both runs. The exposure comparison of PATTERNS 5d is therefore checkable by digest, not inferred. The previous object published only the rules (digest 805241dd), which is why the gate saw two different digests for one configuration",
+   "config_sha256": "8e7e35a2795f58b97504af440d804e03beb3f66007db9b615bab731972e6f77f",
    "per_detector_signal_instances_supplement": {
     "C2-format": 12,
     "note": "12 holdout signals; consistent with exposure (12 vs 8.0 expected, P(X<=12) = 0.94)",
@@ -70,6 +115,8 @@
     "detectors": "A1,A2,B1,B2",
     "set": "holdout"
    },
+   "config_digest_note": "sha256 over json.dumps(config, sort_keys=True, separators=(',',':')) - the q2 supplement's convention, adopted here for all three legs",
+   "config_note": "complete: the leg's detector set and the split side it was run on (the run's own parameters are the detector defaults, pinned by the toolchain above)",
    "config_sha256": "193532701167363bc2e4c87353d4642e34b2692f0375a0bdbcbdbb20b63ecd68",
    "per_detector_signal_instances_supplement": {
     "B1-contradiction": 0,

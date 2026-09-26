@@ -169,3 +169,8 @@
   2026-09-26T01:46:47Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-26T01:46:47Z TASK-018 adjudication: 120/122 signals (0s)
   2026-09-26T01:49:55Z TASK-020 item 13: manifest derivations reproduce literally (prov-check 9/9 PASS incl. warned variant); ledger/by-transcript invariance proved; sandbox recovery done (fetch+reset+inputs); suite 261 OK
+  2026-09-26T01:51:39Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-26T01:51:39Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-26T01:51:39Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-26T01:51:39Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-26T01:54:50Z TASK-020 item 14: q4 format-leg config complete and digest-equal to q3's (8e7e35a2); digest notes on all legs; pin re-attributed (d85038c8); suite 263 OK

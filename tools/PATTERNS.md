@@ -246,6 +246,14 @@ One-shot runs of the frozen detectors over the 37 holdout transcripts
 > The column header in the table above was renamed from "rate/tx" to
 > "signals/tx — density, not a rate" (same append): a density is not an error rate, and v1's
 > B1 headline hold (TASK-005 FAIL / REDIRECT-005) is untouched by any of this.
+>
+> **APPEND (2026-09-26, TASK-020 item 14): the format-leg configurations of q3 and q4 are now
+> identical by digest.** The q4 supplement previously published only the rules
+> (`805241dd…`), which made it look as though the two runs used different configurations;
+> rebuilt from the detector module's own constants it publishes the same object as q3, digest
+> **`8e7e35a2…` = q3's**. The exposure comparison in this §5d therefore rests on a digest
+> equality, and every leg of the q4 supplement now states its digest convention
+> (`config_digest_note`).
 
 > **CORRECTION-2 (appended 2026-09-26, TASK-020 item 11a; nothing above rewritten).** The
 > correction block above puts the v1 row at **187.9 expected / P = 0.44**; the gate's q4 result
