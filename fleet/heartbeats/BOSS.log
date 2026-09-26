@@ -71,3 +71,4 @@
 2026-09-26T02:08Z BOSS-2 cycle 69 · ACTIVE — WORKER-2 @ 8cf783a; ORCH-2 @ 0937097; stall watch clean under ERRATA-25f/25g; zero concerns; cadence active.
 2026-09-26T02:13Z BOSS-2 cycle 70 · ACTIVE — WORKER-2 @ 8cf783a; ORCH-2 @ 0937097; stall watch clean under ERRATA-25f/25g; zero concerns; cadence active.
 2026-09-26T02:17Z BOSS-2 cycle 71 · ACTIVE — WORKER-2 delivered cycle-I/J repairs @ d9ae64c (v2.a-e, v2.g, §G2/§H, 20.14c/0h/v2.h forward stamps repaired); ORCH-2 @ 0937097; stall watch clean; zero concerns; cadence active.
+2026-09-26T02:21Z BOSS-2 cycle 72 · ACTIVE — WORKER-2 delivered q3 config_digest_note @ f5e2cf5 (criterion 20.15b; unblocks q3 re-gate PASS; pin-repair 6/6 OK); ORCH-2 @ 0937097; stall watch clean; zero concerns; cadence active.
