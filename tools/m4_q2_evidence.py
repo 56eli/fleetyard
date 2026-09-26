@@ -58,6 +58,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import m4_pin_repair  # noqa: E402  (item 8a: generator attribution)
 import det_dropword as dd              # noqa: E402
 import fixtures                        # noqa: E402
 import loaders                          # noqa: E402
@@ -403,6 +404,7 @@ def build(args):
             "012914d (19:06:53Z). ORCH-2's reproduction bridge: shards 1 and 3 "
             "re-ran byte-identical at head (64a97be5… / 092d6341…, 93/122 signals)"),
         "tool_commit": args.tool_commit,
+        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q2_evidence.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
         "corpus_zip_sha256": CORPUS_ZIP_SHA,
@@ -484,6 +486,7 @@ def build(args):
         },
         "detector_sha256_at_head": detector_sha,
         "tool_commit": args.tool_commit,
+        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q2_evidence.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
         "provenance_file": PROV_NAME,

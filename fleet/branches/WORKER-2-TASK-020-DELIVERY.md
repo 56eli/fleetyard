@@ -205,3 +205,39 @@ instance). The rule-quality conclusion — no v1 A1 claim-shape change required 
 new tests cover the q4 supplement). All original files remain byte-identical: only appends and
 new files, `git diff` clean for `tools/det_dropword.py`, `tools/det_format.py` and every
 `runs/m4-q4-holdout/` artefact.
+
+## Addendum — item 8a: generator attribution for all six supplement artefacts (2026-09-26)
+
+**Owed by the gate:** `tool_commit` alone did not reach the code that produced the artefacts
+(q2 pins `71c37cf`, q3 EVAL `2bbb9f6`, q4 `ffb8811` — a cadence commit; none contains the
+generator). Repair, per the gate's convention: keep `tool_commit` as written (the lane head at
+run time) and add a `generator_pins` object next to it.
+
+| artefact | generator | generator commit | sha256 before → after |
+|---|---|---|---|
+| `runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json` | `tools/m4_t20_supplement.py` | `a5dec388…` | `70ec0da9…` → `6c0fcb20…` |
+| `runs/m4-q2-dropword/EVAL.json` | `tools/m4_q2_evidence.py` | `a5dec388…` | `b56f4bdb…` → `2baefc09…` |
+| `runs/m4-q2-dropword/EVIDENCE-PROVENANCE.json` | `tools/m4_q2_evidence.py` | `a5dec388…` | `605a6495…` → `c1285e01…` |
+| `runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json` | `tools/m4_t20_supplement.py` | `a5dec388…` | `c1ed8e9b…` → `cf68ee05…` |
+| `runs/m4-q3-format/EVAL.json` | `tools/m4_q3_evidence.py` | `1cd5d444…` | `513c2826…` → `eb6a0a22…` |
+| `runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json` | `tools/m4_q4_supplement.py` | `d7fee6e1…` | `0a1fd43c…` → `af6af1b8…` |
+
+Each block carries `generator_tool`, `generator_tool_commit` (full sha), `generator_tool_blob`
+(`origin/arena/01a0d9ce-fleetyard:tools/<file>` — the same citation style item 9 used for the
+v1 toolchain), `generator_tool_sha256` and a note distinguishing the two commits. Report:
+`runs/m4-pin-repair-2026-09-26.json`; tool `tools/m4_pin_repair.py` + `tests/test_m4_pin_repair.py`
+(5 tests); the four generators now emit the block at build time and two of them
+(`m4_t20_supplement`, `m4_q4_supplement`) refuse to overwrite a manifest that records a
+different generator, so a future collision fails loudly.
+
+**Rebuild proof:** every artefact was regenerated with its own generator and the recorded run
+args and is **byte-identical** to the committed file (q2 supplement, q3 supplement, q4
+supplement, q2 evidence pair, q3 EVAL), so the addition is reproducible rather than
+hand-applied. Two stale cross-references were corrected by that same rebuild: q2 `EVAL.json`
+`provenance_sha256` `605a6495…` → `c1285e01…` and q3 `EVAL.json` `provenance_sha256`
+`afeb5306…` → `b2bf6ad7…` (both pointed at their supplement's pre-repair digest — the same
+staleness class as item v2.a, caught by the rebuild rather than by a reader).
+
+**Disclosed consequence:** the six digests above are cited in `fleet/LOG.md` and earlier text
+of this file as the pre-repair values (append-only: left readable). The current values are the
+ones in this table.

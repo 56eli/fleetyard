@@ -641,10 +641,17 @@
   },
   "note": "evidence only; the restriction on C1-drop is unchanged by this file"
  },
+ "generator_pins": {
+  "generator_tool": "tools/m4_q2_evidence.py",
+  "generator_tool_blob": "origin/arena/01a0d9ce-fleetyard:tools/m4_q2_evidence.py",
+  "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+  "generator_tool_note": "generator_tool_commit is the reachable commit carrying these exact script bytes; tool_commit above is the lane head at run time, which for these artefacts is an earlier or later commit and does not contain the generator — pinning both makes the manifest attributable without archaeology",
+  "generator_tool_sha256": "7615095aebaa5e1a90370c8e85b621edb76a854d0123f3a67a96677489d9331e"
+ },
  "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
  "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
  "provenance_file": "EVIDENCE-PROVENANCE.json",
- "provenance_sha256": "605a64956ad54d0a1b45ff116394107c11a3e7cfdfa53c8d01de4376814b69c3",
+ "provenance_sha256": "c1285e0147f466a62d59b74b0267b708138dc8fa829379d1035bcc7bdc3788cd",
  "run_utc": "2026-09-25T21:10:13Z",
  "shape_adjudication": {
   "count_reconciliation": {

@@ -1,0 +1,73 @@
+{
+ "artefacts": [
+  {
+   "changed": false,
+   "file": "runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json",
+   "generator_tool": "tools/m4_t20_supplement.py",
+   "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+   "generator_tool_sha256": "f73f691487aa0f1b4507fe3557d2022c400abb11313380f454218b5e34545ec3",
+   "sha256_after": "6c0fcb20478a6ab9409af5347500fe62549ea0bd59acdbe5d4901be3405c7b77",
+   "sha256_before": "6c0fcb20478a6ab9409af5347500fe62549ea0bd59acdbe5d4901be3405c7b77",
+   "status": "already-present",
+   "tool_commit": "71c37cf219285b4f54344b80c977df96f56de0c8"
+  },
+  {
+   "changed": false,
+   "file": "runs/m4-q2-dropword/EVAL.json",
+   "generator_tool": "tools/m4_q2_evidence.py",
+   "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+   "generator_tool_sha256": "7615095aebaa5e1a90370c8e85b621edb76a854d0123f3a67a96677489d9331e",
+   "sha256_after": "2baefc0903848f4e600152e78f7aa3577b64f9b91db7362b97aa504df198a09b",
+   "sha256_before": "2baefc0903848f4e600152e78f7aa3577b64f9b91db7362b97aa504df198a09b",
+   "status": "already-present",
+   "tool_commit": "71c37cf219285b4f54344b80c977df96f56de0c8"
+  },
+  {
+   "changed": false,
+   "file": "runs/m4-q2-dropword/EVIDENCE-PROVENANCE.json",
+   "generator_tool": "tools/m4_q2_evidence.py",
+   "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+   "generator_tool_sha256": "7615095aebaa5e1a90370c8e85b621edb76a854d0123f3a67a96677489d9331e",
+   "sha256_after": "c1285e0147f466a62d59b74b0267b708138dc8fa829379d1035bcc7bdc3788cd",
+   "sha256_before": "c1285e0147f466a62d59b74b0267b708138dc8fa829379d1035bcc7bdc3788cd",
+   "status": "already-present",
+   "tool_commit": "71c37cf219285b4f54344b80c977df96f56de0c8"
+  },
+  {
+   "changed": false,
+   "file": "runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json",
+   "generator_tool": "tools/m4_t20_supplement.py",
+   "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+   "generator_tool_sha256": "f73f691487aa0f1b4507fe3557d2022c400abb11313380f454218b5e34545ec3",
+   "sha256_after": "cf68ee05b20c2ae36b9a0fb4a3c2431d34a585161bf0411750139c3b49f9b34f",
+   "sha256_before": "cf68ee05b20c2ae36b9a0fb4a3c2431d34a585161bf0411750139c3b49f9b34f",
+   "status": "already-present",
+   "tool_commit": "71c37cf219285b4f54344b80c977df96f56de0c8"
+  },
+  {
+   "changed": false,
+   "file": "runs/m4-q3-format/EVAL.json",
+   "generator_tool": "tools/m4_q3_evidence.py",
+   "generator_tool_commit": "1cd5d444fb3ae05ad3ff74aa61323e67422eebf7",
+   "generator_tool_sha256": "cde2f99c6ee7962f5b9b522bed63d9c468c58d8c983d5c686612bb7275f10059",
+   "sha256_after": "eb6a0a22e812f1ac073b6bed2adf6c72c4a22040deb90e10d95c9c5938e62f2e",
+   "sha256_before": "eb6a0a22e812f1ac073b6bed2adf6c72c4a22040deb90e10d95c9c5938e62f2e",
+   "status": "already-present",
+   "tool_commit": "2bbb9f61ad44c36c3348e72f972569d5ea0535b2"
+  },
+  {
+   "changed": false,
+   "file": "runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json",
+   "generator_tool": "tools/m4_q4_supplement.py",
+   "generator_tool_commit": "d7fee6e142ebbeecbd0e605395aa3d848499bf8a",
+   "generator_tool_sha256": "fc0065ef3e5fe5047a52a8b5c7cd505d64bf6960147ada9407fb51cbb896c072",
+   "sha256_after": "af6af1b803281634fe19ddb03e354afd8137db3c91a69d1cab924056f2b9e90a",
+   "sha256_before": "af6af1b803281634fe19ddb03e354afd8137db3c91a69d1cab924056f2b9e90a",
+   "status": "already-present",
+   "tool_commit": "ffb881158b883a81b4d52db3cdc87d6ac705a909"
+  }
+ ],
+ "note": "item 8a: every supplement artefact carries generator_pins so the manifest reaches the code that produced it; old->new file digests recorded here because the repair is an in-place addition the gate asked for",
+ "task": "TASK-020 item 8a — supplement generator attribution",
+ "tool": "tools/m4_pin_repair.py"
+}

@@ -52,6 +52,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import m4_pin_repair  # noqa: E402  (item 8a: generator attribution)
 import det_format                      # noqa: E402
 import fixtures                        # noqa: E402
 import loaders                          # noqa: E402
@@ -345,6 +346,7 @@ def build(args):
         "detector": DETECTOR_ID,
         "detector_sha256": detector_sha,
         "tool_commit": args.tool_commit,
+        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q3_evidence.py", "1cd5d444fb3ae05ad3ff74aa61323e67422eebf7"),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
         "split_file": args.split.replace(os.sep, "/"),
@@ -403,6 +405,7 @@ def build(args):
         },
         "detector_sha256": detector_sha,
         "tool_commit": args.tool_commit,
+        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q3_evidence.py", "1cd5d444fb3ae05ad3ff74aa61323e67422eebf7"),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
         "signals_file": SIGNALS_NAME,

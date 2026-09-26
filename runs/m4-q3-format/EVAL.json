@@ -727,6 +727,13 @@
   "gate": "ORCH-2 GATES.md 2026-09-25T20:44Z q3 INCOMPLETE",
   "note": "evidence only; the gate is ORCH-2's to re-run — the restriction on C2-format is unchanged by this file"
  },
+ "generator_pins": {
+  "generator_tool": "tools/m4_q3_evidence.py",
+  "generator_tool_blob": "origin/arena/01a0d9ce-fleetyard:tools/m4_q3_evidence.py",
+  "generator_tool_commit": "1cd5d444fb3ae05ad3ff74aa61323e67422eebf7",
+  "generator_tool_note": "generator_tool_commit is the reachable commit carrying these exact script bytes; tool_commit above is the lane head at run time, which for these artefacts is an earlier or later commit and does not contain the generator — pinning both makes the manifest attributable without archaeology",
+  "generator_tool_sha256": "cde2f99c6ee7962f5b9b522bed63d9c468c58d8c983d5c686612bb7275f10059"
+ },
  "historic_signals_sha256": "86c8f57dea9443f3b9758add19dbfe01e75b1369b144c74a58d1735b5a8c15ee",
  "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
  "per_rule": {
@@ -739,7 +746,7 @@
  },
  "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
  "provenance_file": "PROVENANCE-V2.json",
- "provenance_sha256": "afeb53066fdff00864c11092df904f40eb61c7beabeddabf499788f4deffef8a",
+ "provenance_sha256": "b2bf6ad732e1147998288d53989adc8f47b09c1e1fbf74e78292876e291e775b",
  "rejected_rule_probes": {
   "historic_note": "the pre-v2 census figure (camel-glue 35 / 18 files) was measured over all 230 before the v2 seal and its exact pattern was not recorded; this table replaces it — every probe below is reproducible verbatim",
   "probes": [

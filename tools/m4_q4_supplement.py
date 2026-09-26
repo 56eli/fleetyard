@@ -41,6 +41,7 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import m4_pin_repair  # noqa: E402  (item 8a: generator attribution)
 import m5r_reduce as m5r  # noqa: E402
 
 SUPPLEMENT = "PROVENANCE-SUPPLEMENT.json"
@@ -142,6 +143,7 @@ def build(args):
         "worker": "WORKER-2 (A-2026-09-25-001), lane arena/01a0d9ce-fleetyard",
         "run_utc": args.utc,
         "tool_commit": args.tool_commit,
+        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q4_supplement.py", "d7fee6e142ebbeecbd0e605395aa3d848499bf8a"),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
         "corpus_zip_sha256": CORPUS_ZIP_SHA,
@@ -165,6 +167,7 @@ def build(args):
                                  "path instead of lane+commit+blob"),
     }
     path = os.path.join(out, SUPPLEMENT)
+    m4_pin_repair.guard_overwrite(path, "tools/m4_q4_supplement.py")
     blob = json.dumps(doc, ensure_ascii=False, sort_keys=True, indent=1) + "\n"
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(blob)

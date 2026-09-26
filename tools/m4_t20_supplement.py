@@ -39,6 +39,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import m4_pin_repair  # noqa: E402  (item 8a: generator attribution)
 import det_dropword as dd              # noqa: E402
 import det_format as df                # noqa: E402
 import fixtures                        # noqa: E402
@@ -150,6 +151,7 @@ def supplement_common(args, split, books):
     return {
         "run_utc": args.utc,
         "tool_commit": args.tool_commit,
+        "generator_pins": m4_pin_repair.generator_pins("tools/m4_t20_supplement.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
         "corpus_zip_sha256": CORPUS_ZIP_SHA,
@@ -248,6 +250,8 @@ def build(args):
                    "on the TASK-020 repair"),
     })
 
+    m4_pin_repair.guard_overwrite(os.path.join(args.q2, SUPPLEMENT), "tools/m4_t20_supplement.py")
+    m4_pin_repair.guard_overwrite(os.path.join(args.q3, SUPPLEMENT), "tools/m4_t20_supplement.py")
     q2_sha = q3ev._dump(os.path.join(args.q2, SUPPLEMENT), q2)
     q3_sha = q3ev._dump(os.path.join(args.q3, SUPPLEMENT), q3)
     print("q2 supplement %s (parts %s; filter raw %d → %d, deferred %d)"

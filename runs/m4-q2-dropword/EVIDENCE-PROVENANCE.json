@@ -16,6 +16,13 @@
  "detector": "C1-drop",
  "detector_sha256_at_head": "a0236325c5f5be4a945bc125750fccfbe1669844775fa26bafaed20e309b0946",
  "detector_sha256_original_pin_defect": "the six part manifests pinned 84e5407f…, which resolves to NO committed blob: the parts ran 18:57:11Z–19:05:21Z, before the delivery commit 012914d (19:06:53Z). ORCH-2's reproduction bridge: shards 1 and 3 re-ran byte-identical at head (64a97be5… / 092d6341…, 93/122 signals)",
+ "generator_pins": {
+  "generator_tool": "tools/m4_q2_evidence.py",
+  "generator_tool_blob": "origin/arena/01a0d9ce-fleetyard:tools/m4_q2_evidence.py",
+  "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+  "generator_tool_note": "generator_tool_commit is the reachable commit carrying these exact script bytes; tool_commit above is the lane head at run time, which for these artefacts is an earlier or later commit and does not contain the generator — pinning both makes the manifest attributable without archaeology",
+  "generator_tool_sha256": "7615095aebaa5e1a90370c8e85b621edb76a854d0123f3a67a96677489d9331e"
+ },
  "holdout_enforced": true,
  "holdout_reads": [],
  "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",

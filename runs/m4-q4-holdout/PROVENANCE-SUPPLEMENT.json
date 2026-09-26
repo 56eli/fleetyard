@@ -2,6 +2,13 @@
  "book_store_sha256": "c0892fcd20502d49b99fffe87a4ec4b3b5ecc94a1f98606aab7909127934a4a8",
  "book_store_why": "load-bearing: the v1 leg's B2-misquote produced 8 book-referenced signals and C1-drop is book-anchored",
  "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
+ "generator_pins": {
+  "generator_tool": "tools/m4_q4_supplement.py",
+  "generator_tool_blob": "origin/arena/01a0d9ce-fleetyard:tools/m4_q4_supplement.py",
+  "generator_tool_commit": "d7fee6e142ebbeecbd0e605395aa3d848499bf8a",
+  "generator_tool_note": "generator_tool_commit is the reachable commit carrying these exact script bytes; tool_commit above is the lane head at run time, which for these artefacts is an earlier or later commit and does not contain the generator — pinning both makes the manifest attributable without archaeology",
+  "generator_tool_sha256": "fc0065ef3e5fe5047a52a8b5c7cd505d64bf6960147ada9407fb51cbb896c072"
+ },
  "holdout_consumed": true,
  "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
  "one_shot_discipline": "the spent v1 holdout was NOT re-run to build this supplement; only digests of the committed artefacts were recomputed. Never re-run the spent holdout",

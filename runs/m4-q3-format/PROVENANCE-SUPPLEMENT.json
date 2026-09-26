@@ -62,6 +62,13 @@
   "original_pin": "c322e053…"
  },
  "detector_sha256_at_head": "ef9ff4f257cd9b75edd1dc888abac17ace21ad65ec8ff78e8c088c5ea527b7b9",
+ "generator_pins": {
+  "generator_tool": "tools/m4_t20_supplement.py",
+  "generator_tool_blob": "origin/arena/01a0d9ce-fleetyard:tools/m4_t20_supplement.py",
+  "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+  "generator_tool_note": "generator_tool_commit is the reachable commit carrying these exact script bytes; tool_commit above is the lane head at run time, which for these artefacts is an earlier or later commit and does not contain the generator — pinning both makes the manifest attributable without archaeology",
+  "generator_tool_sha256": "f73f691487aa0f1b4507fe3557d2022c400abb11313380f454218b5e34545ec3"
+ },
  "holdout_enforced": true,
  "holdout_reads": [],
  "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
