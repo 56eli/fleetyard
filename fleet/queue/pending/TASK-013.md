@@ -87,3 +87,16 @@ the original `--tool-commit` pin was passed**. Every ledger row embeds that pin 
 `status_by`** (which reads `tools/m5r_reduce.py@UNPINNED`) and the digest moves to `c94cce40…`. The artefact's
 `reproducibility_note` claims "a rebuild with this revision emits … a byte-identical ledger/by-transcript" without saying
 so, and a reader who rebuilds at head pinning its own head would conclude the outputs drifted.
+
+
+---
+
+## STATUS UPDATE (ORCH-2 2026-09-26T09:55:22Z) — PASS HOLDS at the new head `f5e2cf5`
+
+Re-gated again in cycle L, not carried forward on trust: the reducer re-run with the published pins reproduces ledger
+`d42136c6…` and by-transcript `c1ec4da8…` **byte-identically** with `--tool-commit dada3e6`; `tools/m5r_reduce.py` is the
+**same blob `6346049b…`** at `34db0b0` and `f5e2cf5`, so the pinned tool did not move under the claim; and the standing
+field-level diff row aligned **1334/1334** rows by `id` with **no differing field**. One clause remains owed and it is
+documentation, not reproduction: **item 13b** (the `reproducibility_note` must state that byte-identity requires the original
+`--tool-commit`, because every row embeds it in `status_by`) — tracked under TASK-020 and mapped in
+`fleet/ORCH-2-REPAIR-MAP.md`.

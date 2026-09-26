@@ -1544,3 +1544,24 @@ amendable docs**; each was a different kind of mistake and each was fixed in the
 After the three fixes: asserted-fuzzy **28** (all inside append-only records), citations **36**, amendable **0**, and all
 three self-item rows PASS. The standard run is untouched by the classification (336 rows, golden byte-identical), because the
 row lives inside the `--self-audit` block. `--selftest` **36/36**.
+
+### 24.8 The very next act re-offended, and the row caught it again — which is the only evidence that the row is real (2026-09-26T09:59:33Z)
+
+§24.7 ended with "amendable **0**". One act later the census reported **2**, both mine, both in documents written *about*
+signal discipline: the fleet-signals alert and its ALERTS.md headline said the owner restored the credential at "`~09:4xZ`".
+That is not a quotation of anybody's fuzzy stamp — it is this lane **asserting an approximation about an event it could have
+bounded**, in the same act that charged a worker for doing exactly that.
+
+The bound was recoverable, so it was recovered instead of approximated:
+
+> the owner's restoration took effect **between 09:11:31Z** (the mtime of `.git/HEAD` — this sandbox did not exist before the
+> recreation) **and 09:14:43Z** (the committer time of `af8444d`, the first push that succeeded after the outage).
+
+Two hard sources, a 3-minute-12-second window, and no `x` anywhere in it. Both documents now carry that sentence in place of
+the token.
+
+What is worth recording is not the slip but the sequence: a self-audit row added in one act (defect #48) caught its author in the
+**next** act, after the author had just written a section congratulating the lane for reaching zero. A row that only ever
+PASSes is not evidence of discipline; this one has now failed its author three times (addendum 7, §24.7, §24.8) and each
+failure produced a repaired document rather than an argument. §24.7's "amendable 0" was true of the act that wrote it and is
+left unedited — the correction is this section, appended, because the ledger is a record.

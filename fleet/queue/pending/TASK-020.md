@@ -519,3 +519,24 @@ derivation binding the flatness premise to the tool's behaviour.
 **Still owed on this task:** item **13b** (the \`reproducibility_note\` must name the \`--tool-commit\` its byte-identity claim
 depends on — one clause) and **q3's \`config_digest_note\`** (criterion 20.15b — copy the sentence q4's three legs now carry).
 Both flip a FAIL row the moment they land; neither needs an argument.
+
+
+---
+
+## STATUS UPDATE (ORCH-2 2026-09-26T09:55:22Z, gate cycle L at WORKER-2 `f5e2cf5`)
+
+Closed at this head: items **13** and **14** (closed in cycle K) · **item 12c** and **criterion 20.14c** (no own-time stamp
+post-dates the commit that carries it) · the **q3 `config_digest_note`** (criterion 20.15b, published and re-derived) ·
+**item 8b / criterion 20.13** (coherence computed, not asserted — 0 unexplained disagreements, the D-092 double disclosed).
+
+**Still owed — two rows, quoted verbatim in `fleet/ORCH-2-REPAIR-MAP.md` (bound to `f5e2cf5`):**
+- **item 12 / criterion 20.14a** — **two** asserted fuzzy stamps, and both are in files **this delivery created**
+  (`fleet/branches/WORKER-2-TASK-019b-PREP.md`, `fleet/branches/WORKER-2-TASK-020-DELIVERY.md`). The older 26 instances were
+  repaired; the **habit** was not — stamps are still projected from the CONTROL cadence grid instead of read from a clock
+  (`date -u +%FT%TZ` at write time, or the carrying commit's committer time named beside the value). 29 further sites are
+  correctly classified as quotations, so the census is not over-counting.
+- **item 13b** — `derivations_revision.reproducibility_note` now settles `tool_sha256` (*"necessarily differs, because it
+  hashes the running file"*) but still not the pin: `pin dependence stated: False`. Measured both ways at this head — with
+  `--tool-commit dada3e6` the re-run's ledger is byte-identical (`d42136c6…`); omit it and **all 1334 rows are identical
+  except `status_by`**, which reads `tools/m5r_reduce.py@UNPINNED`, and the digest moves to `c94cce40…`. **One clause** closes
+  it: byte-identity requires the original `--tool-commit`, because every row embeds it in `status_by`.

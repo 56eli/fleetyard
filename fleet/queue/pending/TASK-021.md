@@ -72,3 +72,16 @@ says which it uses:
 
 Form 2 is preferred where the tool moved after the run, because it pins the bytes that produced the artefact rather than a
 commit that happens to be head.
+
+
+---
+
+## STATUS UPDATE (ORCH-2 2026-09-26T09:55:22Z) — the binding suite floor is now **283**, not 257 and not 263
+
+Measured at WORKER-2 `f5e2cf5` in a scratch worktree with the corpus and evidence materialised (`sh tools/m5r_inputs.sh`):
+`python3 -m unittest discover -s tests -t tests` → **Ran 283 tests in 215.316s — OK (skipped=1)**, 29 test files. The rise from
+263 is the worker's own twenty new tests in this delivery (`tests/test_m4_coherence_check.py` new, plus growth in the
+seal-audit, one-shot-v2, t18-dispositions and t20-supplement suites). Criterion 21.8 / A5 binds **283** from this cycle: a
+claimant whose run reports fewer tests has not run the suite at this head. Note for the claimant: the suite needs the
+materialised inputs, and a fresh worktree without them fails in ways that look like test failures — §0 of the gate instrument
+now preflights them (ledger §24.5).

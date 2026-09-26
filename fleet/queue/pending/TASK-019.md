@@ -576,3 +576,29 @@ sensitivity too; §H requires it as a **secondary, pre-registered** figure.
 notes' digests alongside the seal's — still zero mentions of any companion in `m4_one_shot_v2.py`), §H's sentence,
 v2.a(iii) second half, v2.g's four untested refusals, and the v2.c/v2.d/v2.e/v2.h hygiene set. TASK-015 (M6 FINAL) stays
 BLOCKED behind quantum b.
+
+
+---
+
+## STATUS UPDATE (ORCH-2 2026-09-26T09:55:22Z, gate cycle L at WORKER-2 `f5e2cf5`)
+
+Closed at this head, each by a row that re-derives its own evidence: **v2.a clause (iii) second half** (the statement that
+`293b29c`/`79eb401` are one draw, not two) · **v2.c** (`audit_utc` no longer post-dates its commit, and every doc citing it
+cites the same value) · **v2.d** (`tool_commit` names a commit that contains the generating tool) · **v2.g** (the harness's
+refusal paths are asserted by tests, not described) · **v2.h / criterion 20.14c** (no own-time stamp post-dates its carrying
+commit) · **O-5 amended A1 / §G2** (the seal stays byte-identical, a dated companion note names both digests, and the
+quantum-b freeze binds the companion's digest) · **ANNEX §H** (both denominators fixed before the run: 29 PRIMARY, 33 as a
+pre-registered sensitivity).
+
+**Still owed — two rows, quoted verbatim in `fleet/ORCH-2-REPAIR-MAP.md` (bound to `f5e2cf5`):**
+- **item v2.e** — the citation census must NAME ITS KEY and cover every citation: the fixture file mentions the confirmation
+  artefact at **10 paths, of which 5 are artifact+sha pairs**, while the report carries **1 row / 1 distinct**, so the
+  appendix sentence *"All five citations in the fixture file"* does not reproduce. The load-bearing half: the **5 unpaired
+  mentions** (including `/adjudication_summary_2026_09_25/artifact`) sit **outside** the tool's post-seal void check, so a
+  post-seal confirmation cited without a paired sha would not fire it.
+- **item v2.f** — the prep record's header: the old `21:5xZ` was repaired **exactly as ordered** (now
+  `2026-09-26T00:32:03Z` with `src 72104a5` beside it, old value left readable), and a **new** fuzzy stamp was asserted in the
+  same file beside it. One line closes it.
+
+**Quantum b (v2.7/v2.8) has NOT run** and must not run unilaterally: it is one-shot, its thresholds must be frozen first, and
+the firing sequence is the owner's decision (`fleet/ORDERS/DECISION-REQUEST-QUANTUM-B-2026-09-26.md`).

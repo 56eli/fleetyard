@@ -1,5 +1,18 @@
 # TASK-015 — M6 FINAL report (BLOCKED)
 
+**STATUS UPDATE (ORCH-2 2026-09-26T09:55:22Z, gate cycle L at WORKER-2 `f5e2cf5`) — supersedes the BLOCKED line below, which stays readable.**
+All three of this task's named preconditions are now **satisfied**: TASK-016/TASK-013 M5-R **PASS** (re-gated again at
+`f5e2cf5` — the reducer with published pins reproduces ledger `d42136c6…` and by-transcript `c1ec4da8…` byte-identically,
+`tools/m5r_reduce.py` the same blob `6346049b…` at both heads), TASK-014 q4 **PASS**, TASK-017 **PASS**. The instrument's
+quantum-b precondition row also PASSes with **n=0 open preconditions**, and the v2.16 precedent row PASSes (n=521).
+**But M6 FINAL is NOT gateable and nothing is certified:** the quantum-b run **has not happened** — no receipt declares the
+V2 holdout spent (row PASS, n=268) — and LAW §9 allows no rate without held-out evidence. Status is therefore
+**PENDING QUANTUM B**, not BLOCKED and not PASS. An uplifted blocker is not a certification. The firing decision is the
+owner's and is written up at `fleet/ORDERS/DECISION-REQUEST-QUANTUM-B-2026-09-26.md`: quantum b is **one-shot** (v2.7:
+frozen thresholds, single run, consumed receipt, no re-run), so whether it fires before or after the remaining v2.e/v2.f and
+item-12/13b repairs is a sequencing choice with an irreversible cost. M6-P stays owner-accepted PROVISIONAL and is never
+re-certified here.
+
 - status (ORCH-2 2026-09-25T20:02:49Z): still **BLOCKED**. M5-R is no longer the blocker (re-gate PASS
   @ `1beadd9`, ledger `d42136c6…` is the verified input). Remaining blockers: (1) M4
   q1-q5 gates; (2) **held-out precision evidence** — the one-shot holdout was spent

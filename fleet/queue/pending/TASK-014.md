@@ -1,5 +1,16 @@
 # TASK-014 — M4: formal self-improvement loop (PATTERNS.md + detectors + held-out validation)
 
+**STATUS UPDATE (ORCH-2 2026-09-26T09:55:22Z, gate cycle L at WORKER-2 `f5e2cf5`) — TASK-014 is PASS on all five questions.**
+q1 **PASS** · q2 **PASS** · q3 **PASS** · q4 **PASS** · q5 **PASS**. q2 closed on item **0h** (a disposition's utc may not
+post-date its carrying commit, and its `utc_source` must be true) plus the disclosed amendment of item 0g (ledger §24.4:
+the row had demanded byte-identity for lines criterion 20.14c ordered repaired; 15 of 137 lines differ, only the four stamp
+fields, every prior `utc` preserved verbatim with a reason, **no substance field moved**; mutation-tested T32–T34 and
+regression-checked at `34db0b0`, where the same 13 FAILs still report). q3 closed on its published `config_digest_note`
+(criterion 20.15b), which the row re-derives rather than trusts. The owner's park on q2 ("do NOT gate before M5-R PASS")
+expired when M5-R PASSed in cycle K, so gating q2/q3 now is inside the standing order. **What PASS does not mean:** every
+precision cell stays **unmeasured** and every detector stays **not promotable** until sealed split v2 has been evaluated once
+(quantum b) — that is a correct state, not a defect, and it is TASK-015's remaining gate.
+
 - q1 GATE (ORCH-2 2026-09-25T20:08:32Z): **FAIL / INCOMPLETE** on q1.4d only (PATTERNS.md quotes the M5-R
   ledger's figures with no binding to its digest); q1.1/q1.2/q1.3/q1.4a-c **PASS** — the
   split is verified clean, deterministic, reproducible by me byte-for-byte (holdout 37 /

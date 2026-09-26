@@ -1,5 +1,14 @@
 # TASK-018 — leg (d) individual adjudication: the 122 drop-word signals + the 4 provisional fixtures
 
+**STATUS UPDATE (ORCH-2 2026-09-26T09:55:22Z, gate cycle L at WORKER-2 `f5e2cf5`) — TASK-018 is PASS.**
+Item **0h** was this task's sole outstanding item and it closed on evidence at `f5e2cf5`. Item **0g** (the append-only
+integrity of `runs/m4-q2-adjudication/adjudication.jsonl`) now PASSes under the amended row disclosed in ledger §24.4 — the
+amendment is narrow, mutation-tested (T32–T34), and regression-checked at `34db0b0`. The disposition schema row PASSes (n=15:
+every row names id, ruling, reason, task, exact utc **and the source of that utc**), and the D-092 double-ruling is disclosed
+by the count row rather than hidden (15 rows over 14 distinct ids). The leg-(d) standing guidance and ERRATA-25e §2 are
+unchanged: detector hits never auto-classify, and the 122 drop-word signals with 4 fixtures remain provisional until
+individually adjudicated.
+
 - cut by ORCH-2 (A-2026-09-25-002) 2026-09-25T20:02Z · milestone **M4** (classification
   boundary) · authority: owner `fleet/ERRATA-2026-09-25e.md` §2–§3 @ main `8e9e179`
 - claimant: WORKER-2 (A-2026-09-25-001) — **first task after the PAUSE removal**
