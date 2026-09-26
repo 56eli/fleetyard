@@ -2,21 +2,26 @@
  "appendix_audit_utc_check": {
   "cited_identically": true,
   "live_citations": [
-   "2026-09-26T09:16:58Z"
+   "2026-09-26T09:24:30Z"
   ],
   "marked_superseded_or_quoted": [
    "2026-09-25T21:44:00Z",
    "2026-09-26T02:01:53Z"
   ],
-  "report_stamp": "2026-09-26T09:16:58Z",
+  "report_stamp": "2026-09-26T09:24:30Z",
   "unmarked_conflicting_citations": []
  },
  "artifact_mention_census": {
   "distinct_artifacts": 1,
+  "key": "one row per citation KEY (`artifact` / `artifact_sha256` inside a dict) in artifact_mentions; one row per STRING OCCURRENCE of a cited path - value or prose - in artifact_occurrences",
   "mentions": 6,
-  "note": "item v2.e: every mention is put through the post-seal check, including mentions with no paired digest (their digest is resolved from the file at HEAD); the previous census saw only artifact+artifact_sha256 pairs",
+  "note": "item v2.e: the previous census saw only artifact+artifact_sha256 pairs, which is how an unpaired mention came to sit outside the post-seal check",
+  "occurrences": 10,
   "paired_mentions": 5,
-  "unpaired_mentions": 1
+  "population_statement": "the census covers the whole population it names: every key citation is put through the post-seal check (an unpaired mention's digest is resolved from the artefact at HEAD), and every occurrence of a cited path - including prose citations inside string values - is enumerated with the same artefact attribution; a reader can reconcile value+prose against the raw file",
+  "prose_citations": 4,
+  "unpaired_mentions": 1,
+  "value_citations": 6
  },
  "artifact_mentions": [
   {
@@ -157,7 +162,89 @@
    "relation_to_seal": "pre-seal"
   }
  ],
- "audit_utc": "2026-09-26T09:16:58Z",
+ "artifact_occurrences": [
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "authored_relation_to_seal": "pre-seal",
+   "json_path": "/adjudication_summary_2026_09_25/artifact",
+   "kind": "value-citation",
+   "post_seal_check": "covered by the artefact-level check above; this occurrence names the same artefact, whose authored commit decides the re_seal_rule",
+   "text": "runs/m4-q2-adjudication/fixtures-adjudication.json"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "authored_relation_to_seal": "pre-seal",
+   "json_path": "/enacted_leg_d_note_2026_09_25/artifact",
+   "kind": "value-citation",
+   "post_seal_check": "covered by the artefact-level check above; this occurrence names the same artefact, whose authored commit decides the re_seal_rule",
+   "text": "runs/m4-q2-adjudication/fixtures-adjudication.json"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "authored_relation_to_seal": "pre-seal",
+   "json_path": "/fixtures[0]/adjudication_2026_09_25/cited_bytes",
+   "kind": "prose-citation",
+   "post_seal_check": "covered by the artefact-level check above; this occurrence names the same artefact, whose authored commit decides the re_seal_rule",
+   "text": "runs/m4-q2-adjudication/fixtures-adjudication.json (transcript span + book slug/offset/quote, re-derived)"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "authored_relation_to_seal": "pre-seal",
+   "json_path": "/fixtures[0]/enacted_leg_re_adjudication_2026_09_25/artifact",
+   "kind": "value-citation",
+   "post_seal_check": "covered by the artefact-level check above; this occurrence names the same artefact, whose authored commit decides the re_seal_rule",
+   "text": "runs/m4-q2-adjudication/fixtures-adjudication.json"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "authored_relation_to_seal": "pre-seal",
+   "json_path": "/fixtures[1]/adjudication_2026_09_25/cited_bytes",
+   "kind": "prose-citation",
+   "post_seal_check": "covered by the artefact-level check above; this occurrence names the same artefact, whose authored commit decides the re_seal_rule",
+   "text": "runs/m4-q2-adjudication/fixtures-adjudication.json (transcript span + book slug/offset/quote, re-derived)"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "authored_relation_to_seal": "pre-seal",
+   "json_path": "/fixtures[1]/enacted_leg_re_adjudication_2026_09_25/artifact",
+   "kind": "value-citation",
+   "post_seal_check": "covered by the artefact-level check above; this occurrence names the same artefact, whose authored commit decides the re_seal_rule",
+   "text": "runs/m4-q2-adjudication/fixtures-adjudication.json"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "authored_relation_to_seal": "pre-seal",
+   "json_path": "/fixtures[2]/adjudication_2026_09_25/cited_bytes",
+   "kind": "prose-citation",
+   "post_seal_check": "covered by the artefact-level check above; this occurrence names the same artefact, whose authored commit decides the re_seal_rule",
+   "text": "runs/m4-q2-adjudication/fixtures-adjudication.json (transcript span + book slug/offset/quote, re-derived)"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "authored_relation_to_seal": "pre-seal",
+   "json_path": "/fixtures[2]/enacted_leg_re_adjudication_2026_09_25/artifact",
+   "kind": "value-citation",
+   "post_seal_check": "covered by the artefact-level check above; this occurrence names the same artefact, whose authored commit decides the re_seal_rule",
+   "text": "runs/m4-q2-adjudication/fixtures-adjudication.json"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "authored_relation_to_seal": "pre-seal",
+   "json_path": "/fixtures[3]/adjudication_2026_09_25/cited_bytes",
+   "kind": "prose-citation",
+   "post_seal_check": "covered by the artefact-level check above; this occurrence names the same artefact, whose authored commit decides the re_seal_rule",
+   "text": "runs/m4-q2-adjudication/fixtures-adjudication.json (transcript span + book slug/offset/quote, re-derived)"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "authored_relation_to_seal": "pre-seal",
+   "json_path": "/fixtures[3]/enacted_leg_re_adjudication_2026_09_25/artifact",
+   "kind": "value-citation",
+   "post_seal_check": "covered by the artefact-level check above; this occurrence names the same artefact, whose authored commit decides the re_seal_rule",
+   "text": "runs/m4-q2-adjudication/fixtures-adjudication.json"
+  }
+ ],
+ "audit_utc": "2026-09-26T09:24:30Z",
  "audit_utc_source": "date -u at run time when --utc is not passed; passed through verbatim, never rounded, and the same string is cited in the companion appendix (checked below)",
  "confirmation_artifacts": [
   {
@@ -220,7 +307,7 @@
    "status": "APPEND-ONLY-AFTER-SEAL (dated note on file)"
   }
  ],
- "head_commit_at_audit": "68d48e7f04e8ae94b723c6feb64ca83c387c7560",
+ "head_commit_at_audit": "549d12b4bdb9027ce2ffc01e67c490af32b45ae3",
  "head_commit_note": "the lane head the audit ran against; this report is committed as its own commit after it",
  "membership": {
   "forced_intersect_holdout": [],
@@ -231,7 +318,7 @@
  ],
  "outstanding": [],
  "reproduction": {
-  "audited_head": "68d48e7f04e8ae94b723c6feb64ca83c387c7560",
+  "audited_head": "549d12b4bdb9027ce2ffc01e67c490af32b45ae3",
   "byte_identical_when": "re-run at the audited head with the report's own --utc: `python3 tools/m4_seal_audit.py --seal <seal> --out <path> --utc <this report's audit_utc>`",
   "volatile_because": "this is an AUDIT RECORD, not a digest of the repository: `head_commit_at_audit` names the head the audit was taken at, and `tool_commit`/`tool_sha256` follow the tool's committed bytes, so a re-run at a LATER head reproduces every seal finding and every classification byte-for-byte while those three fields legitimately move. The appendix cites this report's digest; a re-derivation should compare fields, not the file digest, unless it is run at the audited head.",
   "volatile_fields": [
@@ -810,15 +897,15 @@
   "why": "the four v2-holdout transcripts carry labels written before the seal by the TASK-018 adjudication; evaluating them would read holdout signal bytes with pre-seal labels in hand, so they are excluded from quantum b's denominator and the evaluated holdout is 29 of 33"
  },
  "tool": "tools/m4_seal_audit.py",
- "tool_commit": "68d48e7f04e8ae94b723c6feb64ca83c387c7560",
+ "tool_commit": "549d12b4bdb9027ce2ffc01e67c490af32b45ae3",
  "tool_commit_note": "item v2.d: the reachable commit carrying this tool's CURRENT bytes (a repair commit, if the tool was repaired); the blob at that commit must equal the tool at head - checked here as `tool_unchanged_since_tool_commit`. `tool_origin_commit` names the commit that first added the tool",
  "tool_commit_tip": "b991f294da84086dc6e8fa4ee4735d52097690cc",
- "tool_commit_utc": "2026-09-26T09:16:53+00:00",
+ "tool_commit_utc": "2026-09-26T09:24:30+00:00",
  "tool_origin_commit": "b991f294da84086dc6e8fa4ee4735d52097690cc",
  "tool_running_matches_committed": true,
  "tool_running_matches_note": "the report attributes itself to the COMMITTED blob (a dirty tree cannot change the attribution) and states separately whether the file that produced this report equals it; a report generated by uncommitted bytes says so here rather than hiding behind the commit",
- "tool_sha256": "a9d35d569bd8c8a82d3b03b5e1a6e06ac92071d506f5882e8bf6c614c25dee4e",
- "tool_sha256_running": "a9d35d569bd8c8a82d3b03b5e1a6e06ac92071d506f5882e8bf6c614c25dee4e",
+ "tool_sha256": "df3b0acb73696b7611035f3373d3fdd4365624b2df4ea5af48b45e9465ac454d",
+ "tool_sha256_running": "df3b0acb73696b7611035f3373d3fdd4365624b2df4ea5af48b45e9465ac454d",
  "tool_sha256_source": "blob at HEAD of the audited repo",
  "tool_unchanged_since_tool_commit": true,
  "verdict": {
