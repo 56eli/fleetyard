@@ -1,0 +1,81 @@
+# WORKER-2 — TASK-019b preparation: the one-shot harness (built, NOT run)
+
+lane `arena/01a0d9ce-fleetyard` · worker `A-2026-09-25-001` · 2026-09-25T21:5xZ
+task: TASK-019 quantum b (holdout evaluation), preparation only — **no holdout has been read**
+
+## Why this exists
+
+TASK-019b is one-shot by construction: thresholds frozen and recorded **before** the single
+run, the receipt stamped `holdout_consumed` with the full read list, the split salt/digest
+and the tool commit, and **never re-run** (a re-run needs a new split with a new salt). That
+discipline cannot be remembered into existence at the moment of the run — it has to be in the
+tooling, so this harness was built and tested now, while the run is still blocked.
+
+## What was built
+
+| artefact | what it is |
+|---|---|
+| `tools/m4_one_shot_v2.py` | `freeze` / `run` / `score` / `verify` for the holdout evaluation |
+| `tools/c2_detectors.py` | the registry bridging the harness to `tools/det_dropword.py` and `tools/det_format.py` — each detector's canonical `which="holdout"` path, its frozen parameters, and its file digest |
+| `tests/test_m4_one_shot_v2.py` | 10 tests, all on a toy corpus + toy split in a temp dir |
+| `tools/m4_seal_audit.py`, `tests/test_m4_seal_audit.py` | the post-seal integrity check (7 tests) with its report in `runs/m4-q2-adjudication/` — see that report and the seal appendix |
+
+## The refusals (the point of the harness)
+
+`run` refuses, with the rule named in the message, when:
+
+1. **no freeze exists** — "thresholds must be recorded before the run";
+2. **a receipt already exists** in the out dir — the holdout is spent for those detector
+   versions; "a second run needs a NEW SPLIT (new salt) in a new --out dir, plus a dated
+   record";
+3. **a detector file or its parameters changed after the freeze** — a post-freeze edit
+   invalidates the run rather than riding along;
+4. **the split file no longer matches the frozen split digest**;
+5. the detector's evaluated transcript set is not exactly the frozen holdout set (a partial
+   read is refused, not scored).
+
+`score` refuses any verdict other than `confirmed` / `discarded` and any label without a
+reason ("the cited bytes read"). It computes precision **only** over hand-labelled signals,
+publishes label coverage (`labelled/total`), separates `seeded` from `independent`
+(LAW §9 — seeded never counts toward the rate), keeps unlabelled signals as
+`candidate_unlabelled` (never blended into any figure) and carries the protocol text into
+the score file. Label keys are detector-qualified (`"C1-drop/<transcript>#<n>"`), because the
+same transcript index occurs under both detectors.
+
+`verify` re-checks the receipt without touching the corpus: thresholds digest, signals
+digest, `holdout_consumed`, first attempt, freeze-vs-receipt split agreement, the live split
+file, and that neither detector has changed since the run.
+
+## What the freeze will record (at run time, not now)
+
+`THRESHOLDS.json` binds: the split file + its sha256, the salt, the split counts and corpus
+digest, each detector's module sha256 and frozen parameters (C1-drop:
+window 24 / stride 12 / min_score 0.20 / top_k 3 / min_matched 10 / min_ratio 0.85 /
+max_drop 2 / min_flank 3; C2-format: the seven rule ids and excerpt 60), the adjudication
+protocol, and the statement that the freeze precedes any read of that split's holdout. The
+freeze command requires `--utc`, `--tool-commit`, `--main-head`, `--policy-sha`, so the
+record cannot be written without naming its provenance. The receipt then carries the
+thresholds digest, so a later freeze cannot be substituted for the one that was used.
+
+## State
+
+* The harness is **built and tested**; it has **not been run** against split v2.
+* The v2 holdout has **not** been opened by anything in this work — every test uses a toy
+  corpus, toy book and toy split in a temp dir; the audit reads git objects and committed
+  files only.
+* Still required before the single run: ORCH-2's re-gates (q1/q2/q3 + item 8) and the queue
+  turn for quantum b. Thresholds are frozen by `freeze` **at that point**, in one commit, so
+  the freeze cannot be stale or back-dated.
+* Probe results that are part of the record, not the run: `runs/m4-q2-adjudication/SEAL-AUDIT.json`
+  + `runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md` (split v2 stands; the fixture-file
+  digest moved by an append-only edit, no fixture was added, the confirmation artefact
+  predates the seal).
+
+## Suite
+
+`python3 -m unittest discover -s tests` → **244 tests, OK, 1 skipped** (227 before + 10
+harness tests + 7 audit tests), run **with** the corpus present, so the skip is unchanged and
+no test was dropped.
+
+No threshold was changed, no detector edited, no rate or precision stated, no M6 figure, and
+the holdout stays sealed.

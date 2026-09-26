@@ -78,3 +78,32 @@ with a new salt and a dated record. Never silently reused, never patched.
 **TASK-019b is blocked** until ORCH-2 gates q2/q3 and the thresholds are frozen. Meanwhile:
 cadence continues (heartbeat + CONTROL.log ≤300 s; controls and the orchestrator lane read
 every cycle); nothing else in the queue is claimable by me.
+
+## Addendum (2026-09-26, append-only) — post-seal fixture-digest audit
+
+A pass over the seal's own tripwire (`fixture_sources`) found that
+`fixtures/v2/dropword.json` no longer hashes to the digest recorded at seal time
+(`c8e963199a1e…` → `c40d272f30d0…`, last touched by `a5dec38`). That is exactly the class of
+event the re-seal rule above is about, so it was adjudicated from git bytes rather than
+assumed benign:
+
+* `tools/m4_seal_audit.py` (+7 tests) recovers the seal-time blob
+  (`git show 79eb401:fixtures/v2/dropword.json`) and diffs it against HEAD. Result: the change
+  is **append-only** — no `fixtures[]` entry was added, no key present at seal time changed
+  value (`mutations` empty). The added blocks are TASK-020 item 7's enacted-leg annotation and
+  the exact-utc keys.
+* The only confirmation artefact cited there, `runs/m4-q2-adjudication/fixtures-adjudication.json`
+  (`61568a9e…`), belongs to commit `1fb524e` at 2026-09-25T20:38:18Z — **13 minutes before** the
+  seal commit `79eb401`. No fixture was confirmed after the seal.
+* Membership still holds: the 43 forced-to-tuning names do not intersect the 33 holdout
+  names; `tools/m4_split_v2.py verify` passes.
+* Report: `runs/m4-q2-adjudication/SEAL-AUDIT.json` — verdict **STANDING (appendix owed)**,
+  written at head `14255bd`. Appendix (owed): `runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md`,
+  naming both digests.
+
+**Verdict: the v2 seal STANDS; no new salt is owed; the split-v2 holdout is not void.** The
+seal file itself is untouched (`73d86f0d…`, `79eb401`). The defect this exposes — a
+seal-time digest of a file that later appends will invalidate, producing a benign tripwire
+rather than a confirmation signal — is stated in the appendix, with the recommendation that a
+future seal bind either an append-only-free fixture source or the seal-time blob's own sha
+(the audit already compares those two numbers).

@@ -129,3 +129,8 @@
   2026-09-25T21:24:00Z TASK-018 adjudication: 120/122 signals (0s)
   2026-09-25T21:26:36Z cadence check 2 (auto): cadence: main 7d033ab, orch2 31ce8dd, boss2 2e012d5, pause REMOVED, pending 8 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
   2026-09-25T21:27:18Z TASK-020 items 9-11: q4 supplement + exposure correction + ledger-digest supersessions; suite 227 OK 1 skip
+  2026-09-26T00:28:05Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-26T00:28:05Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-26T00:28:05Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-26T00:28:05Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-26T00:46:30Z seal audit STANDING + 019b harness built (not run); inputs re-materialised; suite 244 OK 1 skip

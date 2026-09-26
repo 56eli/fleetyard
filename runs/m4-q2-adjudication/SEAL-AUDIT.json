@@ -1,0 +1,110 @@
+{
+ "audit_utc": "2026-09-26T00:45:00Z",
+ "confirmation_artifacts": [
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "artifact_sha256": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451",
+   "cited_by": "fixtures/v2/dropword.json",
+   "commit": "1fb524e07ca63ba5bc010b701757c30a4330d02e",
+   "commit_utc": "2026-09-25T20:38:18+00:00",
+   "digest_matches_head": true,
+   "relation_to_seal": "pre-seal"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "artifact_sha256": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451",
+   "cited_by": "fixtures/v2/dropword.json",
+   "commit": "1fb524e07ca63ba5bc010b701757c30a4330d02e",
+   "commit_utc": "2026-09-25T20:38:18+00:00",
+   "digest_matches_head": true,
+   "relation_to_seal": "pre-seal"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "artifact_sha256": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451",
+   "cited_by": "fixtures/v2/dropword.json",
+   "commit": "1fb524e07ca63ba5bc010b701757c30a4330d02e",
+   "commit_utc": "2026-09-25T20:38:18+00:00",
+   "digest_matches_head": true,
+   "relation_to_seal": "pre-seal"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "artifact_sha256": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451",
+   "cited_by": "fixtures/v2/dropword.json",
+   "commit": "1fb524e07ca63ba5bc010b701757c30a4330d02e",
+   "commit_utc": "2026-09-25T20:38:18+00:00",
+   "digest_matches_head": true,
+   "relation_to_seal": "pre-seal"
+  },
+  {
+   "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
+   "artifact_sha256": "61568a9ede89d700d00a40a47d79ca7ab50834cc3358ebfbaa1bccd339ba3451",
+   "cited_by": "fixtures/v2/dropword.json",
+   "commit": "1fb524e07ca63ba5bc010b701757c30a4330d02e",
+   "commit_utc": "2026-09-25T20:38:18+00:00",
+   "digest_matches_head": true,
+   "relation_to_seal": "pre-seal"
+  }
+ ],
+ "fixture_sources": [
+  {
+   "appendix_needed": false,
+   "file": "fixtures/confirmed/confirmed.json",
+   "last_commit": "b2e076124f9b1d5452cc739a7065773674d7bcd5",
+   "last_commit_utc": "2026-09-25T20:48:00+00:00",
+   "live_sha256": "f2c15869d6cfc3529246a114bbc72a7c86a6c5d4b6d70968af22412b5ac61582",
+   "mutations": [],
+   "new_fixture_ids": [],
+   "sealed_sha256": "f2c15869d6cfc3529246a114bbc72a7c86a6c5d4b6d70968af22412b5ac61582",
+   "sealed_shape": {},
+   "status": "OK"
+  },
+  {
+   "appendix_needed": true,
+   "file": "fixtures/v2/dropword.json",
+   "last_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+   "last_commit_utc": "2026-09-25T21:21:03+00:00",
+   "live_sha256": "c40d272f30d0bbd5955a9e6da20e7a4ede691a11f99b70005227a6ac75629b95",
+   "mutations": [],
+   "new_fixture_ids": [],
+   "sealed_sha256": "c8e963199a1ec5ee1b658c16bdc0dcab634a751199f6b3e00081efce4d97fd52",
+   "sealed_shape": {
+    "fixtures_at_head": 4,
+    "fixtures_at_seal": 4
+   },
+   "status": "APPEND-ONLY-AFTER-SEAL"
+  }
+ ],
+ "head_commit_at_audit": "14255bd0a5f8e7a6dbad9f32fc45b7ce3e39e643",
+ "head_commit_note": "the lane head the audit ran against; this report is committed as its own commit after it",
+ "membership": {
+  "forced_intersect_holdout": [],
+  "holdout_size": 33
+ },
+ "outstanding": [
+  "fixtures/v2/dropword.json: digest moved after the seal c8e963199a1e\u2026 -> c40d272f30d0\u2026 by an append-only edit (commit a5dec38, 2026-09-25T21:21:03+00:00); content at seal time is unmodified and no fixture was added \u2014 the seal STANDS, an appendix must name both digests"
+ ],
+ "seal_commit": "79eb401b4328d254a5cee9be0a07f17a5a5e610b",
+ "seal_commit_utc": "2026-09-25T20:51:54+00:00",
+ "seal_file": "tools/HELD-OUT-SPLIT-V2.json",
+ "seal_salt": "fleetyard-m4-holdout-v2-2026-09-25",
+ "seal_sha256": "73d86f0dafe5e51162723bd92121021a099a5c6b5b89fc5386421c496ced5d8a",
+ "seal_void": false,
+ "split": {
+  "forced_to_tuning": 43,
+  "holdout": 33,
+  "tuning": 197
+ },
+ "tool": "tools/m4_seal_audit.py",
+ "tool_sha256": "eb4e4ec75afb8ddc08902f1413f9d9205168edd5ac512e3d0cf00b333690a5bf",
+ "verdict": {
+  "one_line": "STANDING (appendix owed)",
+  "outstanding": [
+   "fixtures/v2/dropword.json: digest moved after the seal c8e963199a1e\u2026 -> c40d272f30d0\u2026 by an append-only edit (commit a5dec38, 2026-09-25T21:21:03+00:00); content at seal time is unmodified and no fixture was added \u2014 the seal STANDS, an appendix must name both digests"
+  ],
+  "reasons": [],
+  "seal_void": false
+ },
+ "void_reasons": []
+}
