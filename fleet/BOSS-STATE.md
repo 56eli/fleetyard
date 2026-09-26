@@ -1,6 +1,6 @@
 # boss cursor
 
-updated: 2026-09-26T10:03Z
+updated: 2026-09-26T10:08Z
 boss lane: arena/01a0d9d1-fleetyard
 activation: A-2026-09-25-003 (BOSS-2)
 status: **ACTIVE / IN FORCE** — owner rulings `fleet/ERRATA-2026-09-25d.md`, `25e.md`,
@@ -35,7 +35,7 @@ cadence: 300 s control check (even while dormant) / 900 s cycle sleep.
 ## lanes (verified by explicit-refspec fetch 2026-09-25T22:56Z)
 - main: `7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a` (owner commit, `fleet/ERRATA-2026-09-25g.md`)
 - worker (WORKER-2): `arena/01a0d9ce-fleetyard` @ `a486232e0684b97de85ed2959fb15c9d34a4f5a8` (ALIVE; TASK-021 grid relaunched on 76bc692; heredoc rule enforced; auto-cadence active; holdout untouched)
-- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `23333f4e6725662611e7a67c190b3ffe8ee653a8` (ALIVE; CONTROL seq 59; queue re-stated; DECISION-REQUEST-QUANTUM-B submitted, recommends Option B)
+- orchestrator (ORCH-2): `arena/01a0d9d0-fleetyard` @ `23ffb6aa9a0c325c78034679dc22dc9feccc99e3` (ALIVE; CONTROL seq 60; defect #52 fixed, quantum_b_spend_verdict armed, selftest 40/40)
 - boss (BOSS-2): `arena/01a0d9d1-fleetyard` — ALIVE, ACTIVE / RESUMED
 - predecessor archives (frozen, read-only):
   - worker v1: `arena/01a0d581-fleetyard` @ `bf97d85` (HALT ack)
