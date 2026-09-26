@@ -32,6 +32,7 @@ import io
 import json
 import os
 import re
+import subprocess
 import sys
 import unicodedata
 
@@ -49,6 +50,16 @@ REVIEW_STATUS = "machine-adjudicated (mechanical bytes only); human confirmation
 
 def sha256_text(text):
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def _tool_blob_sha(ref):
+    """sha256 of tools/m5r_reduce.py as committed at `ref` (None-safe: falls back to the file)."""
+    if ref:
+        p = subprocess.run(("git", "show", "%s:tools/m5r_reduce.py" % ref),
+                           capture_output=True)
+        if p.returncode == 0:
+            return hashlib.sha256(p.stdout).hexdigest()
+    return sha256_file(os.path.abspath(__file__))
 
 
 def sha256_file(path):
@@ -883,7 +894,13 @@ def main(argv=None):
     prov = {
         "run_utc": utc,
         "tool": "tools/m5r_reduce.py",
-        "tool_sha256": sha256_file(os.path.abspath(__file__)),
+        "tool_sha256": _tool_blob_sha(args.tool_commit),
+        "tool_sha256_source": ("blob of tools/m5r_reduce.py at tool_commit (%s) - the tool that "
+                               "produced these outputs, checkable in git; the file that wrote "
+                               "THIS manifest is named in derivations_revision and in the "
+                               "SUMMARY footer, because a repair rebuild is not the run"
+                               % (args.tool_commit or "UNPINNED")),
+        "tool_sha256_running": sha256_file(os.path.abspath(__file__)),
         "inputs": {
             "archive_ref": args.archive_ref,
             "records_dir": args.records,
@@ -951,16 +968,35 @@ def main(argv=None):
                        "said 'same construction over the fixtures dir' (which does not "
                        "reproduce c5d8f6f3…) and overlays_digest named a wrong variant without "
                        "its construction",
-                "effect_on_run_outputs": "none - the run's own values are untouched: ledger "
-                                         "d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32, "
-                                         "by-transcript c1ec4da86a6ce4f43bb9f5a4da8677e28c2f9e3d781e6409c4a0d84ab06174af, "
-                                         "findings 1334, tool_sha256 6d4bb9ce78f2964efeb74cae0855ab63234f3c34966e57d0cdcae726a749574d "
-                                         "(blob at tool_commit dada3e602689cb900971fda0dccce8267f31a2b2); only this "
-                                         "manifest's derivations prose changed",
+                "effect_on_run_outputs": None,   # filled in below from THIS build's own digests
+                "revision_2": {
+                    "corrected_by": "WORKER-2, TASK-019 item 13b (ORCH-2 gate cycle K)",
+                    "corrected_utc": "2026-09-26T09:26:00Z",
+                    "corrected_utc_source": "lane clock at write time; the commit carrying this "
+                                            "text is the source of record (git log -S "
+                                            "'WHEN RUN WITH THE PINS' -- tools/m5r_reduce.py)",
+                    "why": "the note claimed a byte-identical rebuild without naming the pin the "
+                           "claim depends on: ORCH-2 verified both ways - with --tool-commit "
+                           "dada3e602689cb900971fda0dccce8267f31a2b2 the ledger is "
+                           "d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32, "
+                           "without it all 1334 rows are identical except status_by and the "
+                           "digest moves to c94cce40…, so a rebuild at its own head would read "
+                           "as drift. It now names the pin, and says what happens without it",
+                    "scope": "this manifest's derivations prose only; the ledger and "
+                             "by-transcript bytes are unchanged",
+                },
                 "reproducibility_note": "a rebuild with this revision emits these exact "
-                                        "derivations and a byte-identical ledger/by-transcript; "
-                                        "tool_sha256 necessarily differs, because it hashes the "
-                                        "running file",
+                                        "derivations and a byte-identical ledger/by-transcript "
+                                        "WHEN RUN WITH THE PINS THIS MANIFEST PUBLISHES - in "
+                                        "particular --tool-commit "
+                                        "dada3e602689cb900971fda0dccce8267f31a2b2, the value "
+                                        "this run wrote into every row's status_by (ORCH-2 "
+                                        "verified both ways: with the pin the ledger is "
+                                        "d42136c6…, without it all 1334 rows are identical "
+                                        "except status_by and the digest moves to c94cce40…). "
+                                        "The pin is part of the reproduction procedure, not an "
+                                        "incidental flag; tool_sha256 necessarily differs, "
+                                        "because it hashes the running file",
             },
         },
         "stats": stats,
@@ -971,6 +1007,14 @@ def main(argv=None):
     prov["outputs"] = {"ledger.jsonl": ledger_digest,
                        "by_transcript_digest": bt_digest, "by_transcript_files": bt_n,
                        "findings": len(adj)}
+    # the revision's effect statement is GENERATED from this build's own values: a hardcoded
+    # digest here is how a manifest ends up contradicting the field it sits beside
+    prov["derivations"]["derivations_revision"]["effect_on_run_outputs"] = (
+        "none - the run's own values are untouched: ledger %s, by-transcript %s, findings %d; "
+        "`tool_sha256` %s is the tool blob at tool_commit %s (the tool that ran), and the file "
+        "that wrote this manifest is %s - only this manifest's derivations prose changed"
+        % (ledger_digest, bt_digest, len(adj), prov["tool_sha256"], args.tool_commit,
+           prov["tool_sha256_running"]))
     with open(os.path.join(args.out, "SUMMARY.md"), "w", encoding="utf-8") as fh:
         fh.write(render_summary(adj, stats, prov))
     with open(os.path.join(args.out, "REVIEW-QUEUE.md"), "w", encoding="utf-8") as fh:

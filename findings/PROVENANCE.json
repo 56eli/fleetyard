@@ -10,8 +10,15 @@
    "corrected_by": "WORKER-2, TASK-020 item 13 (criterion 20.15)",
    "corrected_utc": "2026-09-26T01:45:17Z",
    "corrected_utc_source": "lane clock at write time; the commit carrying this text is the source of record (git log -S 'KEY CONVENTION' -- tools/m5r_reduce.py)",
-   "effect_on_run_outputs": "none - the run's own values are untouched: ledger d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32, by-transcript c1ec4da86a6ce4f43bb9f5a4da8677e28c2f9e3d781e6409c4a0d84ab06174af, findings 1334, tool_sha256 6d4bb9ce78f2964efeb74cae0855ab63234f3c34966e57d0cdcae726a749574d (blob at tool_commit dada3e602689cb900971fda0dccce8267f31a2b2); only this manifest's derivations prose changed",
-   "reproducibility_note": "a rebuild with this revision emits these exact derivations and a byte-identical ledger/by-transcript; tool_sha256 necessarily differs, because it hashes the running file",
+   "effect_on_run_outputs": "none - the run's own values are untouched: ledger d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32, by-transcript c1ec4da86a6ce4f43bb9f5a4da8677e28c2f9e3d781e6409c4a0d84ab06174af, findings 1334; `tool_sha256` 6d4bb9ce78f2964efeb74cae0855ab63234f3c34966e57d0cdcae726a749574d is the tool blob at tool_commit dada3e602689cb900971fda0dccce8267f31a2b2 (the tool that ran), and the file that wrote this manifest is 125b27dc723e8131f30f3edbfdf39501a49ca54c7b10d81d760499a4ac6d5d32 - only this manifest's derivations prose changed",
+   "reproducibility_note": "a rebuild with this revision emits these exact derivations and a byte-identical ledger/by-transcript WHEN RUN WITH THE PINS THIS MANIFEST PUBLISHES - in particular --tool-commit dada3e602689cb900971fda0dccce8267f31a2b2, the value this run wrote into every row's status_by (ORCH-2 verified both ways: with the pin the ledger is d42136c6\u2026, without it all 1334 rows are identical except status_by and the digest moves to c94cce40\u2026). The pin is part of the reproduction procedure, not an incidental flag; tool_sha256 necessarily differs, because it hashes the running file",
+   "revision_2": {
+    "corrected_by": "WORKER-2, TASK-019 item 13b (ORCH-2 gate cycle K)",
+    "corrected_utc": "2026-09-26T09:26:00Z",
+    "corrected_utc_source": "lane clock at write time; the commit carrying this text is the source of record (git log -S 'WHEN RUN WITH THE PINS' -- tools/m5r_reduce.py)",
+    "scope": "this manifest's derivations prose only; the ledger and by-transcript bytes are unchanged",
+    "why": "the note claimed a byte-identical rebuild without naming the pin the claim depends on: ORCH-2 verified both ways - with --tool-commit dada3e602689cb900971fda0dccce8267f31a2b2 the ledger is d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32, without it all 1334 rows are identical except status_by and the digest moves to c94cce40\u2026, so a rebuild at its own head would read as drift. It now names the pin, and says what happens without it"
+   },
    "why": "the run-time text was not literally executable: fixtures_digest_sha256 said 'same construction over the fixtures dir' (which does not reproduce c5d8f6f3\u2026) and overlays_digest named a wrong variant without its construction"
   },
   "fixtures_digest_sha256": "sha256 over the joined SORTED lines '<sha256(file bytes)>  <path relative to --fixtures>\\n' for every .json file under --fixtures - i.e. fixtures/confirmed/confirmed.json and fixtures/confirmed/corrections.json (2 files; the directory is flat, so the keys ARE basenames). KEY CONVENTION: the records-dir-relative convention of records_digest_sha256 does NOT apply here. fixtures/clean/, fixtures/negative/ and fixtures/v2/ are OUTSIDE this binding, which is why adding fixtures/v2/dropword.json did not change c5d8f6f3... - the digest cannot prove that; the input set named here is the proof",
@@ -113,5 +120,7 @@
  },
  "tool": "tools/m5r_reduce.py",
  "tool_commit": "dada3e602689cb900971fda0dccce8267f31a2b2",
- "tool_sha256": "6d4bb9ce78f2964efeb74cae0855ab63234f3c34966e57d0cdcae726a749574d"
+ "tool_sha256": "6d4bb9ce78f2964efeb74cae0855ab63234f3c34966e57d0cdcae726a749574d",
+ "tool_sha256_running": "125b27dc723e8131f30f3edbfdf39501a49ca54c7b10d81d760499a4ac6d5d32",
+ "tool_sha256_source": "blob of tools/m5r_reduce.py at tool_commit (dada3e602689cb900971fda0dccce8267f31a2b2) - the tool that produced these outputs, checkable in git; the file that wrote THIS manifest is named in derivations_revision and in the SUMMARY footer, because a repair rebuild is not the run"
 }

@@ -438,3 +438,30 @@ refreshed; `verify` reports **6/6** artefacts with digests matching their cited 
 digest recomputes from `config` and equals `8e7e35a2…`, and equals the q4 format leg's), the
 published object's keys are exactly the three the note names, and the q3 pin is checked against
 the blob at its own commit (a pin that names a commit not carrying the tool fails).
+
+---
+
+## ADDENDUM — item 13b closed (the reproducibility claim names its pin), 2026-09-26T2026-09-26T09:23:19Z-slice
+
+Cycle K opened **13b**:  claimed that "a rebuild with
+this revision emits … a byte-identical ledger/by-transcript" **without naming the pin the claim
+depends on** — and ORCH-2 proved the claim is pin-dependent (with  the
+ledger is ; without it, all 1334 rows are identical except  and the digest
+moves to ). A reader rebuilding at its own head would have concluded the outputs drifted.
+
+**Repaired, generator-first.** The note now names the pin and states the counterfactual; a second
+revision block () records who/why/scope; and two fields that could *contradict the
+manifest they sit beside* were made generated rather than hardcoded:
+
+| field | before | after |
+|---|---|---|
+|  | hardcoded ledger/by-transcript/findings/ from the item-13 build | **computed from each build's own values** — a manifest can no longer disagree with its own outputs |
+|  | the running file's hash (so a repair rebuild silently rewrote the run's tool attribution) | **the tool blob at **  = , checkable in git; the file that wrote *this* manifest is named separately in , in the effect statement and in the SUMMARY footer |
+|  | "a rebuild with this revision emits … byte-identical …" | names , says what happens without it, and states that the pin is part of the reproduction procedure |
+
+**Evidence.** Rebuilt with the manifest's own pins (, , , , ):
+the **ledger is byte-identical** (), the by-transcript digest is unchanged
+(, 230 files) and  compares equal — only the manifest's derivations prose and
+the two attribution fields moved.  is **OK (manifest 629b31cb00ad19ce)**
+with the tool row now PASSing at the pinned blob (), and the findings/provenance
+tests pass (33 tests in the run above). No rule, threshold, split, count or output changed.
