@@ -90,6 +90,25 @@ def load(path):
         return json.load(fh)
 
 
+# Fields that describe THIS execution's environment rather than the measurement: a re-runner
+# gets different values for them, so they are excluded from `reproducible_content_sha256` and
+# named in the manifest. Everything else - counts, config, digests, site keys, the audit's
+# holdout evidence - must reproduce byte-for-byte.
+ENVIRONMENT_FIELDS = ("run_utc", "run_utc_source", "wall_seconds", "peak_rss_mb")
+
+
+def content_digest(obj):
+    """digest of the reproducible content: the object minus ENVIRONMENT_FIELDS (+ audit totals)."""
+    copy = dict(obj)
+    for key in ENVIRONMENT_FIELDS:
+        copy.pop(key, None)
+    copy.pop("reproducible_content_sha256", None)   # never digest the digest
+    if "files_opened" in copy:
+        copy["files_opened"] = {k: v for k, v in copy["files_opened"].items() if k != "total"}
+    blob = json.dumps(copy, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return sha_bytes(blob.encode("utf-8"))
+
+
 def dump(path, obj):
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     blob = json.dumps(obj, ensure_ascii=False, sort_keys=True, indent=1) + "\n"
@@ -278,6 +297,12 @@ def build(args):
                    "tuning half and the two denominators are not interchangeable"),
         "restrictions": RATE_RESTRICTION,
     }
+    part["environment_fields"] = list(ENVIRONMENT_FIELDS)
+    part["environment_note"] = ("these fields describe this execution's environment and are "
+                                "excluded from reproducible_content_sha256: the counts, config, "
+                                "digests, site keys and holdout evidence must reproduce "
+                                "byte-for-byte on a re-run of this setting")
+    part["reproducible_content_sha256"] = content_digest(part)   # computed last, over all else
     out = os.path.join(args.out, "parts", "%s.json" % args.setting)
     digest = dump(out, part)
     print("%-11s raw %3d | source-filtered %3d | after shape %3d | sites %3d (dups %d) | %d "
@@ -348,6 +373,23 @@ def merge(args):
         "scratch_overlay_listing_sha256": parts["shipped"]["scratch"]["overlay_listing_sha256"],
         "part_files_sha256": {n: sha(os.path.join(args.out, "parts", "%s.json" % n))
                               for n, _o in GRID},
+        "part_reproducible_content_sha256": {n: parts[n]["reproducible_content_sha256"]
+                                             for n, _o in GRID},
+        "part_generator_pins": args.part_generator_pins,
+        "reproducibility": {
+            "how": ("re-run one setting with the same --setting and the manifest's own "
+                    "parameters; `reproducible_content_sha256` in each part is the digest of "
+                    "everything except the environment fields, so equality of that digest is "
+                    "byte-identity of the measurement"),
+            "environment_fields": list(ENVIRONMENT_FIELDS),
+            "why": ("wall time, RSS and the wall-clock stamp differ between runs by nature; "
+                    "claims of reproducibility must not rest on them, and no claim of "
+                    "reproducibility rests on any field not covered by that digest"),
+            "parts_vs_merge": ("the parts were produced by the tool blob pinned in "
+                               "part_generator_pins; the merged EVAL/README by the blob pinned "
+                               "in generator_pins; both are recorded separately because they are "
+                               "not the same bytes"),
+        },
         "denominators": {
             "v1_193": ("the shipped 122-signal run covered the v1 tuning half: 193 files, of "
                        "which 33 are now v2-holdout members"),
@@ -513,6 +555,12 @@ def verify(args):
             problems.append("%s: scratch listing digest differs from the merged record" % name)
         if ev["part_files_sha256"].get(name) != sha(path):
             problems.append("%s: part digest does not match the merged record" % name)
+        if p.get("reproducible_content_sha256") != content_digest(p):
+            problems.append("%s: reproducible_content_sha256 does not recompute" % name)
+        if ev["part_reproducible_content_sha256"].get(name) != \
+                p.get("reproducible_content_sha256"):
+            problems.append("%s: reproducible-content digest differs from the merged record"
+                            % name)
     sites = {n: set(load(os.path.join(args.out, "parts", "%s.json" % n))["sites"])
              for n, _o in GRID}
     everywhere = set.intersection(*sites.values())
@@ -553,14 +601,22 @@ def main(argv=None):
     m.add_argument("--tool-commit", default=None)
     m.add_argument("--main-head", default=None)
     m.add_argument("--policy-sha", default=None)
-    m.add_argument("--generator-commit", default=None)
+    m.add_argument("--generator-commit", default=None,
+                   help="the commit whose blob produced the merged EVAL/README (this tool's "
+                        "committed bytes at merge time)")
+    m.add_argument("--parts-generator-commit", default=None,
+                   help="the commit whose blob produced the PART files (this tool's committed "
+                        "bytes when the settings were run)")
     a = ap.parse_args(argv)
     if a.cmd == "build":
         return build(a)
     if a.cmd == "merge":
+        pin = __import__("m4_pin_repair")
         a.generator_pins = (None if not a.generator_commit else
-                            __import__("m4_pin_repair").generator_pins(
-                                "tools/m4_t21_sensitivity.py", a.generator_commit))
+                            pin.generator_pins("tools/m4_t21_sensitivity.py", a.generator_commit))
+        a.part_generator_pins = (None if not a.parts_generator_commit else
+                                 pin.generator_pins("tools/m4_t21_sensitivity.py",
+                                                    a.parts_generator_commit))
         return merge(a)
     return verify(a)
 

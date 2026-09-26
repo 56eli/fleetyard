@@ -113,6 +113,8 @@ class ToySensitivity(unittest.TestCase):
         self.assertNotIn("hold.txt", part["per_transcript_counts"])
         self.assertRegex(part["run_utc"], r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
         self.assertIn("date -u", part["run_utc_source"])
+        self.assertEqual(part["reproducible_content_sha256"], t21.content_digest(part))
+        self.assertEqual(sorted(part["environment_fields"]), sorted(t21.ENVIRONMENT_FIELDS))
 
     def test_holdout_never_reaches_the_detector(self):
         """The audit hook must see holdout-transcript opens as zero, over a whole build."""
@@ -157,10 +159,11 @@ class ToySensitivity(unittest.TestCase):
         os.makedirs(os.path.join(self.out, "parts"))
         t21.build(args_for(self.root, self.corpus, self.split_path, self.out, self.scratch))
         with self.assertRaises(SystemExit) as ctx:
-            t21.merge(type("A", (), {"out": self.out, "split": self.split_path, "corpus": self.corpus,
+            t21.merge(type("A", (), {"out": self.out, "split": self.split_path,
+                                     "corpus": self.corpus,
                                      "utc": "2026-09-26T03:00:00Z", "tool_commit": "toyc0mm",
                                      "main_head": "toymain", "policy_sha": "toypolicy",
-                                     "generator_pins": None})())
+                                     "generator_pins": None, "part_generator_pins": None})())
         self.assertIn("the grid is not complete", str(ctx.exception))
 
     def test_verify_recomputes_or_fails(self):
@@ -173,13 +176,18 @@ class ToySensitivity(unittest.TestCase):
         args = type("A", (), {"out": self.out, "split": self.split_path, "corpus": self.corpus,
                               "utc": "2026-09-26T03:00:00Z", "tool_commit": "toyc0mm",
                               "main_head": "toymain", "policy_sha": "toypolicy",
-                              "generator_pins": None})()
+                              "generator_pins": None, "part_generator_pins": None})()
         self.assertEqual(t21.merge(args), 0)
         ev = json.load(open(os.path.join(self.out, "EVAL.json"), encoding="utf-8"))
         self.assertEqual(ev["holdout_reads"], [])
         self.assertEqual(ev["split"]["holdout_transcripts"], 1)
         self.assertIn("NOT interchangeable", ev["denominators"]["rule"])
         self.assertEqual(ev["restrictions"]["no_threshold_chosen"], True)
+        self.assertEqual(ev["part_reproducible_content_sha256"]["shipped"],
+                         json.load(open(os.path.join(parts, "shipped.json"), encoding="utf-8"))
+                         ["reproducible_content_sha256"])
+        self.assertIn("environment fields", ev["reproducibility"]["how"])
+        self.assertIn("wall time", ev["reproducibility"]["why"])
         self.assertIn("no precision, rate", ev["restrictions"]["no_rate"])
         self.assertEqual(t21.verify(type("A", (), {"out": self.out})()), 0)
         # tamper: the anchor's raw count no longer closes with its filters
@@ -199,7 +207,7 @@ class ToySensitivity(unittest.TestCase):
         t21.merge(type("A", (), {"out": self.out, "split": self.split_path, "corpus": self.corpus,
                                  "utc": "2026-09-26T03:00:00Z", "tool_commit": "toyc0mm",
                                  "main_head": "toymain", "policy_sha": "toypolicy",
-                                 "generator_pins": None})())
+                                 "generator_pins": None, "part_generator_pins": None})())
         text = open(os.path.join(self.out, "README.md"), encoding="utf-8").read()
         self.assertIn("v1 tuning half", text)
         self.assertIn("v2 tuning half", text)
