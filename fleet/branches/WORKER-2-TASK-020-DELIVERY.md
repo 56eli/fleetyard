@@ -404,3 +404,37 @@ demotes it, and a holdout-member note that does not change its verdict). Reading
 the same class of error as a stale digest, in a tally rather than a hash. The checker now
 **accumulates** dispositions per id, and the reason is written into PATTERNS §3 beside the row, so
 the next reader of the file cannot repeat it.
+
+---
+
+## ADDENDUM — q3's `config_digest_note` (criterion 20.15b), 2026-09-26T02:4xZ
+
+Cycle J left **q3 FAIL/INCOMPLETE on one field** and BOSS-2's cycle 51 cleared a q3 re-gate on the
+rest. The field is now present, and the reason it matters is the criterion: a reader must be able
+to **recompute** a published number from what the artefact says about it.
+
+| | before | after |
+|---|---|---|
+| `runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json` | `config_sha256` with **no** statement of the canonicalization | `config_digest_note` names the canonicalization (`json.dumps(config, sort_keys=True, separators=(',',':'))`) and the **complete in-force object** by its own keys — `config.rules` (the seven), `config.excerpt_chars`, `config.abbreviations` (sorted) |
+| artefact digest | `cf68ee05…` | **`5bec4d55…`** |
+| `generator_pins` | `a5dec388…` (the commit that carried the tool when the *first* supplement was written) | **`01d0bc86…`**, the commit carrying the generator bytes that produced **this** artefact — the pin is an attribution, not a copy of the sibling's |
+
+`config_sha256` itself is **unchanged** at `8e7e35a2…` — recomputed from the object the file
+publishes, following its own note literally — and it still equals the q4 supplement's format leg,
+so PATTERNS §5d's exposure comparison rests on a digest match rather than an inference (item 14's
+substance, now checkable at q3's end too).
+
+**Method.** The supplement is generator output, so the generator was repaired first and the
+artefact **rebuilt**, never hand-edited: `tools/m4_t20_supplement.py` now takes
+`--q2-generator-commit` / `--q3-generator-commit` (both defaulting to the recorded `a5dec388…`),
+and the rebuild was run with the recorded run arguments. Result: the **q2 supplement is
+byte-identical** (`6c0fcb20…`, its own pin unchanged) and the q3 supplement differs in exactly the
+two fields above — no rule, threshold, split, filter count or output digest moved.
+`tools/m4_pin_repair.py`'s q3 row was re-pointed at the new generator commit and the repair report
+refreshed; `verify` reports **6/6** artefacts with digests matching their cited commits, and
+`tools/m4_t20_supplement.py verify` still reproduces both filters with `holdout_reads` 0.
+
+**Tests.** `tests/test_m4_t20_supplement.py` grew to **15**: the note is followed literally (the
+digest recomputes from `config` and equals `8e7e35a2…`, and equals the q4 format leg's), the
+published object's keys are exactly the three the note names, and the q3 pin is checked against
+the blob at its own commit (a pin that names a commit not carrying the tool fails).

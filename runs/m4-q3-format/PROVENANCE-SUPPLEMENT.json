@@ -53,6 +53,7 @@
    "R7-glued-comma"
   ]
  },
+ "config_digest_note": "sha256 over json.dumps(config, sort_keys=True, separators=(',',':')) over the complete in-force object as published here: `config.rules` (the seven), `config.excerpt_chars`, `config.abbreviations` (sorted) — the q2 supplement's canonicalization, which is why the q4 holdout supplement's format leg publishes the same number (criterion 20.15b: a reader recomputes it from what is written here)",
  "config_sha256": "8e7e35a2795f58b97504af440d804e03beb3f66007db9b615bab731972e6f77f",
  "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
  "detector": "C2-format",
@@ -65,9 +66,9 @@
  "generator_pins": {
   "generator_tool": "tools/m4_t20_supplement.py",
   "generator_tool_blob": "origin/arena/01a0d9ce-fleetyard:tools/m4_t20_supplement.py",
-  "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+  "generator_tool_commit": "01d0bc8682f6cc3b470c23edcb2930cb40dce174",
   "generator_tool_note": "generator_tool_commit is the reachable commit carrying these exact script bytes; tool_commit above is the lane head at run time, which for these artefacts is an earlier or later commit and does not contain the generator — pinning both makes the manifest attributable without archaeology",
-  "generator_tool_sha256": "f73f691487aa0f1b4507fe3557d2022c400abb11313380f454218b5e34545ec3"
+  "generator_tool_sha256": "04db206b160fbd6ef2f330d32bba56a2da99358b31be580df4da4ff0479a784d"
  },
  "holdout_enforced": true,
  "holdout_reads": [],

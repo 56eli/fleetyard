@@ -49,7 +49,7 @@ ARTEFACTS = (
     ("runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json", "tools/m4_t20_supplement.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
     ("runs/m4-q2-dropword/EVAL.json", "tools/m4_q2_evidence.py", "cc9ba4617c3844146caa65a621aa738904429ec1"),
     ("runs/m4-q2-dropword/EVIDENCE-PROVENANCE.json", "tools/m4_q2_evidence.py", "cc9ba4617c3844146caa65a621aa738904429ec1"),
-    ("runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json", "tools/m4_t20_supplement.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
+    ("runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json", "tools/m4_t20_supplement.py", "01d0bc8682f6cc3b470c23edcb2930cb40dce174"),
     ("runs/m4-q3-format/EVAL.json", "tools/m4_q3_evidence.py", "1cd5d444fb3ae05ad3ff74aa61323e67422eebf7"),
     ("runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json", "tools/m4_q4_supplement.py", "d85038c8383755d42f3cc5fba7962bf335811910"),
 )

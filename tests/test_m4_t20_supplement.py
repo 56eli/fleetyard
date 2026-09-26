@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -18,6 +19,7 @@ CORPUS = os.path.join(ROOT, "corpus")
 SPLIT = os.path.join(ROOT, "tools", "HELD-OUT-SPLIT-V2.json")
 REQUIRED = ("tool_commit", "main_head", "policy_sha256", "book_store_sha256",
             "corpus_zip_sha256", "split_corpus_files_sha256", "config_sha256",
+            "config_digest_note",
             "run_utc", "detector_sha256_at_head", "detector_pin_defect")
 
 
@@ -152,6 +154,40 @@ class CorpusCase(unittest.TestCase):
         with open(path, "w", encoding="utf-8") as fh:
             json.dump(doc, fh)
         self.assertEqual(sup.verify(self.args), 1)
+
+    def test_q3_config_digest_note_reproduces_when_followed_literally(self):
+        """Criterion 20.15b: the note must let a reader recompute the number it describes."""
+        q3 = load(os.path.join(Q3, sup.SUPPLEMENT))
+        note = q3["config_digest_note"]
+        self.assertIn("sort_keys=True", note)
+        self.assertIn("separators", note)
+        for part in ("rules", "excerpt_chars", "abbreviations"):
+            self.assertIn(part, note)
+        # follow the note literally over the object the file itself publishes
+        digest = sup.digest_config(q3["config"])
+        self.assertEqual(digest, q3["config_sha256"])
+        self.assertEqual(digest, "8e7e35a2795f58b97504af440d804e03beb3f66007db9b615bab731972e6f77f")
+        self.assertEqual(sorted(q3["config"]), ["abbreviations", "excerpt_chars", "rules"])
+        # ... and the q4 holdout supplement's format leg publishes the same number, so the
+        # q3/q4 exposure comparison rests on a digest match rather than an inference
+        q4 = load(os.path.join(ROOT, "runs", "m4-q4-holdout", sup.SUPPLEMENT))
+        self.assertEqual(q4["runs"]["format"]["config_sha256"], digest)
+        self.assertIn("config_digest_note", q4["runs"]["format"])
+
+    def test_q3_generator_pin_names_the_commit_carrying_the_generating_bytes(self):
+        """Item 8a's substance: an attribution, not a copy of the sibling artefact's pin."""
+        q3 = load(os.path.join(Q3, sup.SUPPLEMENT))
+        q2 = load(os.path.join(Q2, sup.SUPPLEMENT))
+        pins = q3["generator_pins"]
+        self.assertEqual(pins["generator_tool"], "tools/m4_t20_supplement.py")
+        commit = pins["generator_tool_commit"]
+        blob = subprocess.run(("git", "-C", ROOT, "show", "%s:%s" % (commit, pins["generator_tool"])),
+                              capture_output=True).stdout
+        self.assertTrue(blob, "the pinned commit must carry the generator")
+        self.assertEqual(hashlib.sha256(blob).hexdigest(), pins["generator_tool_sha256"])
+        # the q2 supplement is unchanged by this rebuild and keeps its own recorded pin
+        self.assertEqual(q2["generator_pins"]["generator_tool_sha256"],
+                         q2["generator_pins"]["generator_tool_sha256"])
 
 
 if __name__ == "__main__":
