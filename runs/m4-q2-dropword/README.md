@@ -133,3 +133,12 @@ Results, as measured:
 
 **122 must never be quoted as an omission count**; the defensible upper bound is 113,
 in-sample and unreviewed.
+
+**Which 114? (appended 2026-09-26, TASK-020 item 15b.)** Two *different* sets of 114 signals
+are published under that one number, and each quotation must name its set. **Filter-side 114**
+(`PROVENANCE-SUPPLEMENT.json`, `EVAL.json`) = 122 − 1 source-inherited (`quite` @457, D-039) − 7
+deferred v2-holdout signals. **Shape-side 114** (`EVAL.json` → `shape_adjudication`) = 122 − 3
+`dropped-token-not-missing` − 5 `partial-overlap`. Their intersection is **106**; **8 differ in
+each direction**; the two exclusion sets are **disjoint (0 overlap)** — recomputed here, not
+restated. The published bound of 113 is the shape side minus the gate-listed hyphen-tokenization
+row (D-058, `Positionality_and_Duality_…_Apr_2002_Part_2` @40831, `one-third of`).

@@ -424,7 +424,7 @@ def build(args):
             "012914d (19:06:53Z). ORCH-2's reproduction bridge: shards 1 and 3 "
             "re-ran byte-identical at head (64a97be5… / 092d6341…, 93/122 signals)"),
         "tool_commit": args.tool_commit,
-        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q2_evidence.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
+        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q2_evidence.py", "cc9ba4617c3844146caa65a621aa738904429ec1"),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
         "corpus_zip_sha256": CORPUS_ZIP_SHA,
@@ -556,7 +556,7 @@ def build(args):
                          "main_head": args.main_head, "policy_sha256": args.policy_sha,
                          "corpus_zip_sha256": CORPUS_ZIP_SHA},
         }],
-        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q2_evidence.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
+        "generator_pins": m4_pin_repair.generator_pins("tools/m4_q2_evidence.py", "cc9ba4617c3844146caa65a621aa738904429ec1"),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
         "provenance_file": PROV_NAME,

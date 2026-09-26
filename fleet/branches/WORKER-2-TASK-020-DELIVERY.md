@@ -241,3 +241,43 @@ staleness class as item v2.a, caught by the rebuild rather than by a reader).
 **Disclosed consequence:** the six digests above are cited in `fleet/LOG.md` and earlier text
 of this file as the pre-repair values (append-only: left readable). The current values are the
 ones in this table.
+
+### Item 15a/15b — q2 `EVAL.json`: the note names its own row; the two 114s are named (2026-09-26T00:46:46Z)
+
+The gate's item 15a found `shape_adjudication.count_reconciliation.note` naming
+`A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt` for the hyphen-tokenization item
+(`one-third` @40831) — that name came from `sorted(signals)[0]` and that transcript carries **0**
+q2 signals. The row the note explains is **D-058** in
+`Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt`
+(**27** signals): offset 40831 (span 40801–41077), transcript `states the` where the book
+(`the_evolution_of_consciousness` @307559) writes `States. One-third of the`; dropped words
+`one-third`, `of`. The generator now derives the transcript **from the row**, and the artefact
+carries `note_correction_2026_09_26` (defect + `note_text_was` verbatim + `true_row`).
+
+Item 15b: two different 114-signal sets were published under one number. `two_distinct_114s`
+names both — filter side `122 − 1 source-inherited (D-039 `quite` @457) − 7 deferred holdout`
+vs shape side `122 − 3 dropped-token-not-missing − 5 partial-overlap` — and publishes the
+recomputation: **106** sites counted by both, **8** sites differing in each direction, the two
+exclusion sets **disjoint (intersection 0)**. Site lists are in `runs/m4-q2-dropword/NOTE-2026-09-26.md`.
+The published bound of **113** remains the shape side minus D-058.
+
+**Rebuild + attribution.** Generator commit **`cc9ba4617c3844146caa65a621aa738904429ec1`**
+(`tools/m4_q2_evidence.py`, blob sha256 `667409aa…`, full value in the artefact's own
+`generator_pins`); rebuild args recorded as in item 8a
+(`--utc 2026-09-25T21:10:13Z --tool-commit 71c37cf2… --main-head 7d033abd… --policy-sha 0fe20a60…`,
+corpus zip `3f36c520…`). Digest transitions — **these supersede the item-8a table rows above**
+(appended; the old values stay readable):
+
+| artefact | item-8a value | after item 15 | note |
+|---|---|---|---|
+| `runs/m4-q2-dropword/EVAL.json` | `2baefc09…` | **`d1e702afc3ddaf3f1b0bd57707869fea6d061377d94ed010ecf10f1ad63b4759`** | note corrected + two 114s + `rebuild_history` |
+| `runs/m4-q2-dropword/EVIDENCE-PROVENANCE.json` | `c1285e01…` | **`982f8d668f5d7d473e07d6ec7c4b0309252ac8d1d23411c7520ff1057b10ce45`** | pin block only |
+
+Both files are **byte-identical on a second rebuild** from the recorded args; `m4_q2_evidence.py
+verify` passes; `m4_pin_repair.py build` refreshed `runs/m4-pin-repair-2026-09-26.json` (all six
+artefacts `already-present`, digests current) and `verify` reports 6/6 pins matching their cited
+commits. The artefact's `generator_pins` now names `cc9ba46`, and it carries
+`rebuild_history` recording `2baefc09…` as its own prior digest and `a5dec388 / 7615095a…` as the
+prior generator pin, so the 8a → 15 chain is readable in-file. Suite after the change: **257 tests
+OK, skipped=1, WITH corpus** (the count rose from 244 by the 8a/0d–0g/v2 batches' own tests: +5 +6
++2). No threshold changed, no detector edited, no rate.

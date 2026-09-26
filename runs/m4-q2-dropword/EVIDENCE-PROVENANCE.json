@@ -19,9 +19,9 @@
  "generator_pins": {
   "generator_tool": "tools/m4_q2_evidence.py",
   "generator_tool_blob": "origin/arena/01a0d9ce-fleetyard:tools/m4_q2_evidence.py",
-  "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+  "generator_tool_commit": "cc9ba4617c3844146caa65a621aa738904429ec1",
   "generator_tool_note": "generator_tool_commit is the reachable commit carrying these exact script bytes; tool_commit above is the lane head at run time, which for these artefacts is an earlier or later commit and does not contain the generator — pinning both makes the manifest attributable without archaeology",
-  "generator_tool_sha256": "7615095aebaa5e1a90370c8e85b621edb76a854d0123f3a67a96677489d9331e"
+  "generator_tool_sha256": "667409aa87534fe32f2988d378ee43c30bf304a0db0e6a3b6f277dde31e3770a"
  },
  "holdout_enforced": true,
  "holdout_reads": [],

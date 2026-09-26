@@ -47,8 +47,8 @@ REPORT_NOTE = ("item 8a: every supplement artefact carries generator_pins so the
                "because the repair is an in-place addition the gate asked for")
 ARTEFACTS = (
     ("runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json", "tools/m4_t20_supplement.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
-    ("runs/m4-q2-dropword/EVAL.json", "tools/m4_q2_evidence.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
-    ("runs/m4-q2-dropword/EVIDENCE-PROVENANCE.json", "tools/m4_q2_evidence.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
+    ("runs/m4-q2-dropword/EVAL.json", "tools/m4_q2_evidence.py", "cc9ba4617c3844146caa65a621aa738904429ec1"),
+    ("runs/m4-q2-dropword/EVIDENCE-PROVENANCE.json", "tools/m4_q2_evidence.py", "cc9ba4617c3844146caa65a621aa738904429ec1"),
     ("runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json", "tools/m4_t20_supplement.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
     ("runs/m4-q3-format/EVAL.json", "tools/m4_q3_evidence.py", "1cd5d444fb3ae05ad3ff74aa61323e67422eebf7"),
     ("runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json", "tools/m4_q4_supplement.py", "d7fee6e142ebbeecbd0e605395aa3d848499bf8a"),

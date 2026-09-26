@@ -644,14 +644,39 @@
  "generator_pins": {
   "generator_tool": "tools/m4_q2_evidence.py",
   "generator_tool_blob": "origin/arena/01a0d9ce-fleetyard:tools/m4_q2_evidence.py",
-  "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+  "generator_tool_commit": "cc9ba4617c3844146caa65a621aa738904429ec1",
   "generator_tool_note": "generator_tool_commit is the reachable commit carrying these exact script bytes; tool_commit above is the lane head at run time, which for these artefacts is an earlier or later commit and does not contain the generator — pinning both makes the manifest attributable without archaeology",
-  "generator_tool_sha256": "7615095aebaa5e1a90370c8e85b621edb76a854d0123f3a67a96677489d9331e"
+  "generator_tool_sha256": "667409aa87534fe32f2988d378ee43c30bf304a0db0e6a3b6f277dde31e3770a"
  },
  "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
  "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
  "provenance_file": "EVIDENCE-PROVENANCE.json",
- "provenance_sha256": "c1285e0147f466a62d59b74b0267b708138dc8fa829379d1035bcc7bdc3788cd",
+ "provenance_sha256": "982f8d668f5d7d473e07d6ec7c4b0309252ac8d1d23411c7520ff1057b10ce45",
+ "rebuild_history": [
+  {
+   "artefact_sha256_before": "2baefc0903848f4e600152e78f7aa3577b64f9b91db7362b97aa504df198a09b",
+   "artefact_sha256_before_source": "sha256 of this file as committed at 4fc40c8 (the item-8a pin addition)",
+   "generator_pins_before": {
+    "generator_tool": "tools/m4_q2_evidence.py",
+    "generator_tool_blob": "origin/arena/01a0d9ce-fleetyard:tools/m4_q2_evidence.py",
+    "generator_tool_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
+    "generator_tool_note": "generator_tool_commit is the reachable commit carrying these exact script bytes; tool_commit above is the lane head at run time, which for these artefacts is an earlier or later commit and does not contain the generator — pinning both makes the manifest attributable without archaeology",
+    "generator_tool_sha256": "7615095aebaa5e1a90370c8e85b621edb76a854d0123f3a67a96677489d9331e"
+   },
+   "generator_pins_before_source": "the block this artefact carried before the rebuild; checkable with `git show a5dec388:tools/m4_q2_evidence.py`",
+   "run_args": {
+    "corpus_zip_sha256": "3f36c520391049a49876d90e32400d64dd7b721e52b9a1820a0b3b6dca8486db",
+    "main_head": "7d033abd3f52d0cb8a3a3b0c61881bdef5fad95a",
+    "policy_sha256": "0fe20a6057ec9fa26fdc2184f84352185f8278fb346bc9d9de14927819ffdc85",
+    "tool_commit": "71c37cf219285b4f54344b80c977df96f56de0c8",
+    "utc": "2026-09-25T21:10:13Z"
+   },
+   "task": "TASK-020 items 15a/15b",
+   "utc": "2026-09-26T00:46:46Z",
+   "utc_source": "literal in tools/m4_q2_evidence.py added by WORKER-2 for TASK-020 items 15a/15b; the commit carrying it and the file digest are recorded in runs/m4-q2-dropword/NOTE-2026-09-26.md",
+   "what": "count_reconciliation's note named the alphabetically first transcript instead of the row it explains, and two different 114-signal sets were published under one number; both repaired in this generator and the artefact rebuilt from the recorded args"
+  }
+ ],
  "run_utc": "2026-09-25T21:10:13Z",
  "shape_adjudication": {
   "count_reconciliation": {
@@ -659,9 +684,52 @@
    "excluded_dropped_token_not_missing": 3,
    "gate_figure": 113,
    "gate_list_overlap": "the gate's three named cases (`evidence` @2574, `staggering` @54983, `sovereign` @55220) are reproduced as dropped-token-not-missing",
-   "note": "this instrument finds 114 deletion-closing signals; the 5 partial-overlap items and the gate's own hyphen-tokenization item (`one-third`, transcript 'A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt' @40831) are excluded pending a human read, which lands the published bound on the gate's 113 independently",
+   "note": "this instrument finds 114 deletion-closing signals; the 5 partial-overlap items and the gate's own hyphen-tokenization item (`one-third`, transcript 'Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt' @40831) are excluded pending a human read, which lands the published bound on the gate's 113 independently",
+   "note_correction_2026_09_26": {
+    "by": "WORKER-2",
+    "defect": "the note above previously named the alphabetically first transcript (A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt, which carries ZERO q2 signals) instead of the row's own transcript — a note that misnames its own row is the same class as a seal binding a stale digest (TASK-020 item v2.a)",
+    "note_text_was": "...the gate's own hyphen-tokenization item (`one-third`, transcript 'A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt' @40831)...",
+    "task": "TASK-020 item 15a",
+    "true_row": {
+     "book_offset": 307559,
+     "book_slug": "the_evolution_of_consciousness",
+     "dropped_words": [
+      "one-third",
+      "of"
+     ],
+     "end": 40841,
+     "quoted": "states the",
+     "reading": "the transcript writes 'states the' where the book writes 'States. One-third of the'",
+     "start": 40831,
+     "suspected": "States. One-third of the",
+     "transcript": "Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt"
+    },
+    "utc": "2026-09-26T00:46:46Z",
+    "utc_source": "literal in tools/m4_q2_evidence.py added by WORKER-2 for TASK-020 items 15a/15b; the commit carrying it and the file digest are recorded in runs/m4-q2-dropword/NOTE-2026-09-26.md"
+   },
    "raw": 122,
-   "re_labelled_needs_human_read": 6
+   "re_labelled_needs_human_read": 6,
+   "two_distinct_114s": {
+    "by": "WORKER-2",
+    "differ_each_direction": 8,
+    "exclusion_sets_disjoint": 0,
+    "filter_side": {
+     "construction": "122 − 1 source-inherited − 7 deferred holdout signals",
+     "count": 114,
+     "excluded": 8
+    },
+    "intersection": 106,
+    "problem": "two different sets of 114 signals are published under one number; each quotation must name its set",
+    "published_bound": 113,
+    "shape_side": {
+     "construction": "122 − 3 dropped-token-not-missing − 5 partial-overlap",
+     "count": 114,
+     "excluded": 8
+    },
+    "task": "TASK-020 item 15b",
+    "utc": "2026-09-26T00:46:46Z",
+    "utc_source": "literal in tools/m4_q2_evidence.py added by WORKER-2 for TASK-020 items 15a/15b; the commit carrying it and the file digest are recorded in runs/m4-q2-dropword/NOTE-2026-09-26.md"
+   }
   },
   "countable_shape_consistent": 113,
   "counts": {
