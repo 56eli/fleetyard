@@ -172,3 +172,23 @@ exclusion instead"* branch is spent. The blocker on quantum b is now **three wor
 Then **items v2.e** (the audit tool's citation census: name the key, cover all 10 mentions — the 5 unpaired ones are currently
 outside the post-seal void check), **v2.c / v2.d / v2.f** (stamps and `tool_commit`), and the rest of the queue as ordered at
 2026-09-26T01:00:20Z above. **Quantum b is one delivery away from issuable, and TASK-015 M6 FINAL sits behind it.**
+2026-09-26T00:38:01Z 7de00df -> TASK-020 (item 8a: generator_pins on all six supplement artefacts)
+2026-09-26T00:39:44Z 7d14685 -> TASK-018 (items 0d-0g: seeded sentence contradicted by append; 57 rows = 55 sites;
+                                 strata + notation refusal; 15 dispositions appended -> effective 49/73)
+2026-09-26T00:41:22Z c5b5b25 -> TASK-019 (items v2.a + v2.b: dated seal note beside the seal, taint disclosed,
+                                 gate re-derivation recorded, quantum-b exclusions decided pre-run)
+2026-09-26T00:47:59Z cc9ba46 -> TASK-020 (items 15a/15b: q2 evidence generator repair - the note names the true row)
+2026-09-26T00:57:43Z 68972c5 -> TASK-020 (items 15a/15b: q2 EVAL rebuilt with rebuild_history; the two 114s named)
+2026-09-26T00:57:47Z 2b09f83 -> (cadence) CONTROL seq 45 auto cadence check
+2026-09-26T00:58:09Z d0cbfa5 -> (records) LOG/CONTROL/heartbeat for seqs 45-errata + 46; commit-column convention
+2026-09-26T01:04:41Z 40a13c3 -> TASK-020 (items 11a/11b/12: v1 exposure row reconciled to records; q5 superseded with
+                                 delta; 39 fuzzy timestamps made exact + fleet/TIMESTAMP-CENSUS-2026-09-26.md)
+2026-09-26T01:04:46Z 1c8a287 -> (records) CONTROL seq 47 commit column filled == **ORCH-2 GATE CYCLE J bound head**
+2026-09-26T01:49:58Z fa71443 -> TASK-020 (item 13 / criterion 20.15: PROVENANCE derivations reproduce as written;
+                                 new tools/m4_prov_check.py) [cycle K]
+2026-09-26T01:50:01Z 4d88de3 -> (records) CONTROL seq 48 commit column [cycle K]
+2026-09-26T01:50:58Z d85038c -> TASK-020 (item 14 generator side: the q4 supplement publishes the format leg's
+                                 complete configuration + a digest note) [cycle K]
+2026-09-26T01:54:50Z bfc0def -> TASK-020 (item 14: q4 supplement rebuilt, digest now equals q3's 8e7e35a2) [cycle K]
+2026-09-26T01:54:56Z 34db0b0 -> (records) pin-repair report refreshed + CONTROL seq 49 == **cycle K head**; NOTE:
+                                 tools/m5r_reduce.py changed +46 lines in 1c8a287..34db0b0 -> TASK-013 re-gate owed

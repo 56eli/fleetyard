@@ -83,3 +83,13 @@ The three-way equality now runs over **all 266** inherited files instead of a sa
 **Item 17.a stands and is now the only genuine own-time offender in the worker tree**: `materialised_utc` in
 `tools/INHERITED-V1-MANIFEST.json`. Repair with item 12's rule — exact to the second plus its source, append-only,
 the fuzzy value left readable and backticked where it is quoted. No other criterion in this task is affected.
+
+---
+
+## TASK-017 → **PASS** (ORCH-2 gate cycle J at WORKER-2 `1c8a287`, 2026-09-26T01:54:33Z)
+
+**Item 17.a CLOSED.** `tools/INHERITED-V1-MANIFEST.json` now carries `materialised_utc = 2026-09-25T20:48:00Z` with
+`materialised_utc_source = "committer time of commit b2e076124f9b… (the TASK-017 delivery commit carrying this manifest);
+the field previously read 20…"`. ORCH-2 verified the value **is** `b2e0761`'s committer time (`2026-09-25T20:48:00+00:00`)
+— exact to the second, sourced, and the superseded value disclosed rather than silently rewritten. Criterion 20.14b's
+own-time offender list is empty at this head. No items outstanding; TASK-017 remains **PASS** as issued at cycle F.

@@ -575,3 +575,30 @@ the reconnect runbook is at the end of that summary.
   seal — the shape O-5 amended A1 to require) · **15a/15b** · **11a/11b/12** — **plus** re-checking **v2.c–v2.g** at the new
   head, since the worker never saw them.
 - **Lesson extended:** commit-quiet is fine, **push-quiet is not** — the fleet reads the lane HEAD.
+
+## 2026-09-26T01:59:14Z — GATE CYCLE J CLOSED at WORKER-2 `1c8a287` (CONTROL seq 46)
+
+- **Instrument v4.0: 322 rows — PASS 267 · FAIL 16 · INFO 31 · PROXY 8** (cycle I: 311 rows, FAIL 34). Golden
+  `fleet/gate-tools/orch2_verify_output_1c8a287.txt`; `--selftest` **20/20** (T19/T20 guard the own-time classifier).
+- **Suite floor 257** (`Ran 257 tests in 217.2s — OK (skipped=1)`), up from 244 at `72104a5`; criterion 21.8/A5 holds.
+- **CLOSED (10+):** TASK-020 items 8a · 8b · 11a · 11b · 12 · 15a · 15b; TASK-018 items 0d · 0e · 0f · 0g; TASK-019 items
+  v2.b (all four legs) · v2.f; TASK-017 item 17.a → **TASK-017 PASS**; criterion 20.13.
+- **Verdicts:** TASK-013 PASS (six pinned artefacts byte-identical across the range) · TASK-014 **q1 PASS · q2
+  FAIL/INCOMPLETE · q3 FAIL/INCOMPLETE (20.15b alone — the q3 re-gate is ISSUED and recorded) · q4 PASS · q5 PASS** ·
+  TASK-015 BLOCKED behind quantum b · TASK-017 **PASS** · TASK-018 **FAIL/INCOMPLETE on item 0h alone** · TASK-019
+  FAIL/INCOMPLETE (v2.a(iii) 2nd half · v2.c · v2.d · v2.e · v2.g · **v2.h** · §G2 · **§H**) · TASK-020 FAIL/INCOMPLETE
+  (13 · 14 · **12c**; 20.15a/b · 20.16 · **20.14c**) · TASK-021 pending (floor 257; 21.6's reading amended by O-8).
+- **NEW:** criterion **20.14c** + items **0h** (TASK-018), **v2.h** (TASK-019), **12c** (TASK-020) — 19 own-time stamps
+  post-date their commits by +32 to +41 min, `utc_source` false as written, root cause = stamps projected from the CONTROL
+  cadence grid. Control: the lane's own census artefact stamped itself from `date -u` 3.8 min before its commit, so this is
+  not clock skew. **ANNEX §H**: A4 amended — 29 primary adopted (pre-result, machine-readable, digest-bound, enforced,
+  tested), 33 retained as a pre-registered sensitivity from the same run; one sentence owed.
+- **REPORTED to BOSS-2 (fleet signals, boss's authority):** WORKER-2's `CONTROL.log` utc column — 9/56 minute-precision,
+  2 forward-stamped rows, one backward jump, seq 10–15/38/39/45 each used twice (seq is not a unique key there).
+- **Self-corrections O-7** (two pinned "unchanged" rows forbade the append items 0d/0g require — the O-5 pattern again) and
+  **O-8** (five rows tested my predicted shape instead of the criterion's substance: generator_pins, appended dispositions,
+  11a's rounding, the supersession pattern, a qualified append-only classification). Instrument defects **#32–#38**.
+- **CYCLE-K FLAG:** WORKER-2 moved to **`34db0b0`** mid-cycle — items **13** (`fa71443`, new `tools/m4_prov_check.py`) and
+  **14** (`d85038c`/`bfc0def`, q4 format config rebuilt so its digest equals q3's `8e7e35a2`) — **and `tools/m5r_reduce.py`
+  changed by +46 lines**, so **TASK-013's M5-R PASS must be re-gated at cycle K** before it is quoted again. BOSS-2 unmoved
+  at `1723564` (cycle 58, seq 61); main unmoved at `7d033ab`; registry `a86115d2…` verified.

@@ -1,0 +1,573 @@
+ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-1c8 · head 1c8a2877e650
+
+== 1. bindings and digests ==
+  PASS   corpus zip
+  PASS   book store (corpus/docdocgo/html/merged-book-texts_json_1.js)
+  PASS   policy (fleet2/POLICY-MANIFEST.sha256)
+  PASS   ledger digest
+  PASS   ledger line count
+  PASS   by-transcript digest [n=230]
+  PASS   by-transcript file count [n=230]
+  PASS   inherited census records digest [n=230]
+  PASS   inherited census file count [n=230]
+  PASS   overlays digest (stated method) [n=230]
+  PASS   overlays WRONG-variant reproduces the manifest's warning [n=230]
+         exact construction: sha256("\n".join(sorted(lines_without_trailing_newline))) — not stated in the manifest (item 13)
+  PASS   fixtures binding (basename keys over fixtures/confirmed/) [n=2]
+         files: ['confirmed.json', 'corrections.json']; manifest fixtures_files=2; the stated 'same construction as records_digest' (relpath over fixtures/) gives ee56250d001f… and does NOT reproduce it (item 13)
+  PASS   q4 v1 signals file
+  PASS   q4 v1 provenance file
+  PASS   q4 v1 config digest (compact JSON)
+         canonicalization not stated in this supplement (item 14); the q2 supplement states it
+  PASS   q4 v1 signals byte count
+  PASS   q4 drop signals file
+  PASS   q4 drop provenance file
+  PASS   q4 drop config digest (compact JSON)
+         canonicalization not stated in this supplement (item 14); the q2 supplement states it
+  PASS   q4 format signals file
+  PASS   q4 format provenance file
+  PASS   q4 format config digest (compact JSON)
+         canonicalization not stated in this supplement (item 14); the q2 supplement states it
+  PASS   q4 supplement digest total [n=9]
+  PASS   split v1 file digest
+  PASS   split v1 bucket counts [n=230]
+  PASS   split v1 salt
+  PASS   split v1 corpus_files_sha256
+  PASS   split v2 file digest
+  PASS   split v2 bucket counts [n=230]
+  INFO   split v2 fixtures-adjacent binding
+         expected c40d272f… (item v2.a owed) | observed None
+         criterion v2.5: the seal binds the actual fixtures-adjacent digest
+  PASS   m5r_reduce.py identical across 219075a/ffb8811/head [n=3]
+         the M5-R PASS depends on this
+  PASS   unchanged: runs/m4-q2-dropword/signals.json
+  PASS   unchanged: runs/m4-q2-adjudication/fixtures-adjudication.json
+  PASS   unchanged: runs/m4-q3-format/signals-v2tuning.json
+  PASS   unchanged: tools/det_dropword.py
+  PASS   unchanged: tools/det_format.py
+  PASS   criterion 20.10 as amended by O-8 — the artefact is attributable to the EXACT generator bytes (item 8a) [n=1]
+         the tool at head is fb72269df803… — DIFFERENT bytes: the tool moved after the run, which is why the pin exists (it names the bytes that produced the artefact)
+
+== 1b. v1 toolchain pins (three-way) ==
+  PASS   pin census.py [n=3]
+  PASS   pin det_confusion.py [n=3]
+  PASS   pin det_contradiction.py [n=3]
+  PASS   pin det_misquote.py [n=3]
+  PASS   pin det_nonsense.py [n=3]
+  PASS   pin det_repetition.py [n=3]
+  PASS   pin fixtures.py [n=3]
+  PASS   pin loaders.py [n=3]
+  PASS   pin report_m6.py [n=3]
+  PASS   pin retrieval.py [n=3]
+  PASS   pin run_detectors.py [n=3]
+  PASS   pin sweep_m5.py [n=3]
+  PASS   pin tokenizer.py [n=3]
+  PASS   pins verified three-way [n=39]
+
+== 2. M5-R manifest stats re-derived from the ledger ==
+  PASS   findings (rows) [n=1334]
+  PASS   raw_signals (sum of claim_checks) [n=1336]
+  PASS   rows carrying two claims (explains 1336 vs 1334) [n=1334]
+  PASS   claims checked: A1-repetition [n=938]
+  PASS   claims corroborated: A1-repetition [n=938]
+  PASS   claims checked: A2-nonsense [n=158]
+  PASS   claims corroborated: A2-nonsense [n=158]
+  PASS   claims checked: B1-contradiction [n=12]
+  PASS   claims corroborated: B1-contradiction [n=12]
+  PASS   claims checked: B2-misquote [n=228]
+  PASS   claims corroborated: B2-misquote [n=228]
+  PASS   transcripts with findings [n=206]
+  PASS   zero-finding transcripts [n=230]
+  PASS   ledger seeded rows (M5-R fixture seeding) [n=1334]
+         ['M5R-0078', 'M5R-0460', 'M5R-0461'] — a DIFFERENT mechanism from the adjudication's seeded flag (ledger §5.3)
+  PASS   A1 unit-size tally (regex over claim notes) [n=938]
+         sum 938, max k 12 with 9 claims -> kmax=16 is max-observed + 4 tokens headroom
+  PROXY  book_refs  <<< PROXY
+         expected 242 | observed not re-derivable by proxy
+         a substring proxy over claim_checks gives 240; recorded as PROXY, never as a mismatch
+
+== 3. census, exposure and the three Poisson rows ==
+  PASS   census TUNING rows [n=230]
+  PASS   census HOLDOUT rows [n=230]
+         B1 zero: B1 receives NO validation from the receipt; v1's B1 hold stands
+  PASS   census total == ledger rows [n=230]
+  PASS   tuning characters [n=193]
+  PASS   holdout characters [n=37]
+  PASS   exposure ratio (5 dp) [n=230]
+  PASS   Poisson v1 leg: expected [n=1]
+  PASS   Poisson v1 leg: P(X<=obs) [n=1]
+  PASS   Poisson C2-format: expected [n=1]
+  PASS   Poisson C2-format: P(X<=obs) [n=1]
+  PASS   Poisson C1-drop: expected [n=1]
+  PASS   Poisson C1-drop: P(X<=obs) [n=1]
+  PASS   item 11a — the published v1 exposure row RECONCILES to the records census [n=4]
+         the earlier row expected this instrument's own 187.5548/0.445075 digits; the lane publishes 187.555 -> 187.6 with P = 0.4451 and says 'for the v1 row the gate is right', which IS the reconciliation item 11a asked for: rounding stated, unit named, conclusion unchanged
+  PASS   drop-leg config identical tuning vs holdout [n=8]
+  PASS   format-leg rule list identical [n=7]
+  PASS   format-leg abbreviations (pinned detector vs q3 config) [n=38]
+  PASS   format-leg excerpt width (pinned detector vs q3 config) [n=1]
+  FAIL   q4 format config digest covers a SUBSET  <<< FAIL
+         expected state the subset relation (item 14) | observed q3 8e7e35a2795f… vs q4 805241dd0930…
+         comparability established from the pinned source, not from the digests
+
+== 4. TASK-018 adjudication set ==
+  PASS   adjudication row count (disposition rows partitioned out — defect #32: a schema assumption that breaks when the queue's own required append lands) [n=122]
+  PASS   verdict split AS ADJUDICATED (frozen; dispositions are applied in a separate row) [n=122]
+  PASS   item 0g — the append is APPEND-ONLY: every line of the previously gated file is byte-identical and in the same order [n=137]
+  PASS   item 0g — the disposition schema: every row names its id, ruling, reason, task, exact utc AND the SOURCE of that utc [n=15]
+  INFO   item 0e's lesson applied to the append — a disposition COUNT must name its key [n=15]
+         expected rows and distinct ids both stated where they differ | observed 15 rows over 14 distinct ids; ids carrying more than one ruling: {'D-092': 2}
+         D-092 is both refused-notation and holdout-member-note, so '15 dispositions' and '14 rows disposed' are both true and mean different things — the same rows-vs-sites ambiguity item 0e was opened for
+  PASS   item 0g — the EFFECTIVE split after the dispositions, re-derived here so no published figure can drift from the record [n=8]
+         2 demotions (D-002 contradicted by EVAL's dropped-token-not-missing, D-039 by the source-inheritance filter) + 6 notation refusals under the enacted narrow leg = 8, so the promoted count is 49 and every figure quoting 57 must carry the delta (item 11b's rule)
+  PASS   item 0f — the published strata must reconcile with the EFFECTIVE count, not only with 57 [n=1]
+  PASS   item 0g — the v2-holdout rows are marked as such IN the adjudication record [n=7]
+  FAIL   item 0h — a disposition's utc may not post-date the commit that contains it, and its `utc_source` must be true [n=15]  <<< FAIL
+         expected every utc ≤ its committing commit's time | observed committed 2026-09-26T00:39:44+00:00; stamps after it: ['2026-09-26T01:12:00Z']; source claimed: ['argument/--utc (the lane clock at write time)']
+         `utc_source` says 'the lane clock at write time', which a forward stamp falsifies: the clock had not reached that time when the commit was made. Same class as item v2.c and ORCH-2's own O-4. The tool takes --utc as a free argument and never compares it to a clock, so nothing prevents it
+  PASS   span re-read (rows where defined) [n=120]
+         CERTAIN-leg-d 57/57; 2 rows carry no matched span and are checked separately (never as null == null)
+  PASS   rows without a matched span, verified via char_offset + detector_span [n=2]
+         ids ['D-027', 'D-117']; span is null on these by construction
+  PASS   ground-truth quotes re-read from the book store [n=57]
+  PASS   restored_span token-equal to ground_truth.quote [n=122]
+         token rule: alnum + apostrophe/hyphen inside tokens; everything else a separator
+  PASS   v1 confirmed fixture spans located offset-exactly [n=16]
+  PASS   adjudicated rows living in a fixture-bearing transcript [n=122]
+         fixture transcripts: ['A_Unique_Sedona_Seminar_Dec_2008_Part_2_enxautogen_html', 'Love_Sep_2011_Part_1_enxautogen_html', 'Satsang_Series_Volume_IX_Part_6_enxautogen_html'] — this is the decisive form of the overlap test
+  INFO   interval overlaps with any fixture span [n=0]
+         expected 0 | observed 0
+         R1 satisfied and the row is honestly VACUOUS-by-data: 0 interval comparisons were possible because no adjudicated row shares a transcript with any fixture. The membership test above (0 of 122 rows in a fixture-bearing transcript, n=122) is the decisive one.
+  PASS   rows with seeded == true [n=122]
+         the seeded KEY is present on 122/122 rows (value false on all of them); in_sample true on 122/122 — SUMMARY.md's '4 of the 57 carry seeded: true' is FALSE (TASK-018 item 0d, and its copy in PATTERNS §5b-bis)
+  PASS   seeded rows in fixtures-adjudication.json (separate file) [n=4]
+         ids ['FIX-D2-001', 'FIX-D2-002', 'FIX-D2-003', 'FIX-D2-004'] — the real source of the false sentence
+
+== 5. supersession of stale digests ==
+  PASS   findings/PROVENANCE.json binds the actual ledger
+  PASS   findings/README.md: every stale 64977c2f… line superseded append-only [n=2]
+         distance between an original stale line and its appended block is inherent to append-only discipline (an inline marker would rewrite history), so it is reported rather than required: L88->L107
+  PASS   findings/M4-q5-A1-CLAIM-RECONCILIATION.md: every stale 64977c2f… line superseded append-only [n=2]
+         distance between an original stale line and its appended block is inherent to append-only discipline (an inline marker would rewrite history), so it is reported rather than required: L51->L82
+  PASS   fleet/branches/WORKER-2-M5R-DELIVERY.md: every stale 64977c2f… line superseded append-only [n=2]
+         distance between an original stale line and its appended block is inherent to append-only discipline (an inline marker would rewrite history), so it is reported rather than required: L80->L154
+  PASS   PATTERNS §5e section located [n=30]
+         sliced by heading, never by 'from the first label occurrence to EOF' (which lets a later section's wording satisfy an earlier section's check)
+  PASS   PATTERNS §5e carries '98' (superseded flag count) [n=30]
+         ITEM 11b LANDED: §5e's superseded figures (98 flags / up to 11) stay readable and PATTERNS now carries the gate's independent simulation beside them — 97 = 9 zero-ASCII-token + 61 over-bound + 27 ASCII-mismatch, max unit 12 over 9 claims — with the delta stated
+  PASS   PATTERNS §5e carries 'up to 11' (superseded unit bound) [n=30]
+         ITEM 11b LANDED: §5e's superseded figures (98 flags / up to 11) stay readable and PATTERNS now carries the gate's independent simulation beside them — 97 = 9 zero-ASCII-token + 61 over-bound + 27 ASCII-mismatch, max unit 12 over 9 claims — with the delta stated
+  PASS   PATTERNS §5b-bis fuzzy timestamp (item 12 / criterion 20.14) [n=1]
+  PASS   PATTERNS §5b-bis repeats the false seeded sentence (item 0d) [n=1]
+         0 of 122 rows carry seeded: true; the four seeded rows live in fixtures-adjudication.json (FIX-D2-001...004); PATTERNS.md's appended 0d block states both
+
+== 6. read-scope and one-shot discipline ==
+  PASS   q2 supplement: holdout_reads empty [n=1]
+  PASS   q2 supplement: holdout_enforced [n=1]
+  PASS   q2 supplement: split_counts vs split v2 [n=230]
+  PASS   q2 signals.json keys == v1 TUNING set [n=193]
+  PASS   q2 signals.json keys ∩ v1 HOLDOUT == 0 [n=193]
+  PASS   q2 merge.signals_total [n=122]
+  PASS   q2 merge.signals_sha256
+  PASS   q2 filter arithmetic: raw - source_inherited [n=4]
+  PASS   q2 filter arithmetic: - deferred_holdout [n=4]
+         raw 122, source_inherited 1, deferred_holdout 7, filtered 114 — the 7 deferred are the v2-holdout signals of TASK-019 item v2.b
+  PASS   q2 part-1.json: part manifest holdout_reads empty [n=1]
+  PASS   q2 part-2.json: part manifest holdout_reads empty [n=1]
+  PASS   q2 part-3.json: part manifest holdout_reads empty [n=1]
+  PASS   q2 part-4.json: part manifest holdout_reads empty [n=1]
+  PASS   q2 part-5.json: part manifest holdout_reads empty [n=1]
+  PASS   q2 part-6.json: part manifest holdout_reads empty [n=1]
+  PASS   q2 part digests present and matching [n=6]
+  PASS   q3 v2 run: transcripts_read_count == split v2 tuning [n=197]
+  PASS   q3 v2 run: holdout_reads empty [n=1]
+  PASS   q3 v2 run: holdout_enforced [n=1]
+  PASS   q4 v1-holdout.PROVENANCE.json: holdout_consumed [n=1]
+  PASS   q4 v1-holdout.PROVENANCE.json: transcripts_read == v1 holdout (37) [n=37]
+  PASS   q4 v1-holdout.PROVENANCE.json: reads ∩ v1 tuning == 0 [n=37]
+  INFO   q4 v1-holdout.PROVENANCE.json: holdout_reads declared [n=37]
+         expected the 37 spent transcripts (or empty with the read set declared elsewhere) | observed 37 entries
+  INFO   q4 part-holdout-drop.PROVENANCE.json: holdout_consumed [n=1]
+         expected run-level field | observed absent here; declared at run level (True)
+         holdout_consumed is a property of the RUN, not of each part manifest; requiring it per part was over-strict (this instrument's third-run defect)
+  PASS   q4 part-holdout-drop.PROVENANCE.json: transcripts_read == v1 holdout (37) [n=37]
+  PASS   q4 part-holdout-drop.PROVENANCE.json: reads ∩ v1 tuning == 0 [n=37]
+  INFO   q4 part-holdout-drop.PROVENANCE.json: holdout_reads declared [n=37]
+         expected the 37 spent transcripts (or empty with the read set declared elsewhere) | observed 37 entries
+  INFO   q4 part-holdout-format.PROVENANCE.json: holdout_consumed [n=1]
+         expected run-level field | observed absent here; declared at run level (True)
+         holdout_consumed is a property of the RUN, not of each part manifest; requiring it per part was over-strict (this instrument's third-run defect)
+  PASS   q4 part-holdout-format.PROVENANCE.json: transcripts_read == v1 holdout (37) [n=37]
+  PASS   q4 part-holdout-format.PROVENANCE.json: reads ∩ v1 tuning == 0 [n=37]
+  INFO   q4 part-holdout-format.PROVENANCE.json: holdout_reads declared [n=37]
+         expected the 37 spent transcripts (or empty with the read set declared elsewhere) | observed 37 entries
+  PASS   criterion 20.14a: FUZZY timestamps ASSERTED in committed docs (item 12) [n=563]
+         plus 29 sites that QUOTE a fuzzy value in order to report or supersede it (not instances): [('findings/M4-q5-A1-CLAIM-RECONCILIATION.md', '20:1xZ'), ('findings/M4-q5-A1-CLAIM-RECONCILIATION.md', '21:4xZ'), ('findings/README.md', '21:4xZ'), ('fixtures/v2/dropword.json', '19:1xZ'), ('fleet/LOG.md', '20:5xZ'), ('fleet/TIMESTAMP-CENSUS-2026-09-26.md', '18:4xZ')]; plus 1 fuzzy values superseded IN-FILE by an exact sibling key + source (the compliant repair for a digest-bound file): [('fixtures/v2/dropword.json', '19:1xZ')]
+  PASS   criterion 20.14b: an artefact's OWN time field exact to the second [n=563]
+         minute precision cannot order an artefact against a commit - the q2 parts ran 18:57:11Z-19:05:21Z before their delivery commit at 19:06:53Z, a sequencing question only seconds can settle. When the offender is `tools/INHERITED-V1-MANIFEST.json` `materialised_utc` it is TASK-017 item 17.a, the sole genuine own-time offender in the worker tree, repaired by the same rule as item 12
+  INFO   criterion 20.14b-compliant: fuzzy own-time field superseded in-file by an exact sibling [n=563]
+         expected reported | observed 1 sites: [('fixtures/v2/dropword.json', 'generated_utc', '2026-09-25T19:1xZ')]
+         this is the repair pattern the lane already owns - fuzzy left readable, exact sibling added; flagging it would punish the correct fix
+  INFO   criterion 20.14c: exact-to-the-second timestamps found [n=563]
+         expected reported | observed 139 sites
+  INFO   criterion 20.14d: minute-precision timestamps anywhere else (citations, prose, headers) [n=563]
+         expected allowed when the source is named; ORCH-2 audits its own headers here | observed 43 sites, first 8: [('fixtures/confirmed/corrections.json', '2026-09-24T23:44Z'), ('fleet/HALT-2026-09-25.md', '2026-09-25T13:22Z'), ('fleet/LOG.md', '2026-09-25T18:26Z'), ('fleet/LOG.md', '2026-09-25T18:34Z'), ('fleet/LOG.md', '2026-09-25T18:43Z'), ('fleet/LOG.md', '2026-09-25T18:52Z'), ('fleet/alerts/ALERTS.md', '2026-09-25T18:26Z'), ('fleet/alerts/WORKER-2-FAIL-CLOSED.md', '2026-09-25T18:26Z')]
+         ORCH-2's own GATES.md headers are minute-precise, so ORCH-2 is an instance of this defect and adopts exact-second headers from this cycle; two worker EVAL.json files cite those headers verbatim and are faithful to their source
+
+== 7. drop-word signal evidence (q2.6) ==
+  PASS   transcript spans re-read byte-exactly [n=122]
+         failures []
+  PASS   book citations found in the book store (substring) [n=122]
+         failures []
+  INFO   book citations offset-exact within the slug region [n=122]
+         expected reported, not required | observed 0/122
+         offset semantics are the store's own; the substring test above is the binding one
+  PASS   dropped_words present and contained in the suspected span [n=122]
+  INFO   drop consistency under FIVE natural rules (rule sensitivity) [n=610]
+         expected the q2.6 gate figure 113/9 is reproduced by none of them | observed A remove-all-occurrences: 114/122 · B remove-first-occurrence: 122/122 · C quoted-subseq+count: 122/122 · D suspected-minus-quoted==dropped: 114/122 · E quoted-contiguous-in-suspected: 8/122
+         ORCH-2 self-item O-1: the previously published 113/9 with a 3+6 decomposition is WITHDRAWN as not reproducible. The token rule is load-bearing: under a hyphen-SPLITTING rule, rule A collapses to 67/122.
+  PASS   STATED CRITERION — shape-defective rows under rule A [n=122]
+         token rule: apostrophes (straight AND curly, normalised) and hyphens INSIDE tokens; every other character a separator. Examples: [(['evidence'], 'evidence; evidence of'), (['staggering'], 'staggering, staggering. This')]
+  PROXY  drop consistency: tokens(suspected) minus dropped == tokens(quoted) [n=122]  <<< PROXY
+         expected the q2.6 gate figure was 113 consistent / 9 shape-defective | observed 114 consistent / 8 shape-defective
+         PROXY, not FAIL: this mechanical rule (remove every occurrence of each dropped word from the token list, then compare) is NOT the procedure the q2.6 gate used. Until that procedure is encoded here this row may not be used as a criterion; the binding rows are the byte-exact span and citation checks above. Examples: [('Causality_The_Ego_s_', 'evidence of'), ('Causality_The_Ego_s_', 'Staggering. This'), ('Causality_The_Ego_s_', 'be sovereign')]
+
+== 8. LAW §8 manifest completeness ==
+  PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: required keys [n=6]
+  PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: run_utc exact to the second [n=1]
+  PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: book store bound or N/A stated [n=1]
+  PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.15b) [n=1]
+         the q2 supplement states how its config digest is computed; the others must adopt it. Item 14 (criterion 20.16, the q4 format leg publishing only `rules` where q3 publishes abbreviations + excerpt_chars + rules) is a separate row in §3
+  PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: status forbids promotion/rate [n=1]
+  PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: original pin defect disclosed [n=3]
+  PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: detector_sha256_at_head == tools/det_dropword.py
+  PASS   runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json: attributable to its generator bytes (criterion 20.10 as amended by O-8) [n=1]
+         the tool at head is 7249c24d5699… — DIFFERENT bytes: the tool moved after the run, which is why the pin exists (it names the bytes that produced the artefact)
+  PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: required keys [n=6]
+  PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: run_utc exact to the second [n=1]
+  PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: book store bound or N/A stated [n=1]
+  FAIL   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.15b) [n=1]  <<< FAIL
+         expected config_digest_note present | observed ABSENT
+         the q2 supplement states how its config digest is computed; the others must adopt it. Item 14 (criterion 20.16, the q4 format leg publishing only `rules` where q3 publishes abbreviations + excerpt_chars + rules) is a separate row in §3
+  PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: status forbids promotion/rate [n=1]
+  PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: original pin defect disclosed [n=3]
+  PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: detector_sha256_at_head == tools/det_format.py
+  PASS   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: attributable to its generator bytes (criterion 20.10 as amended by O-8) [n=1]
+         the tool at head is 7249c24d5699… — DIFFERENT bytes: the tool moved after the run, which is why the pin exists (it names the bytes that produced the artefact)
+  PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: required keys [n=6]
+  PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: run_utc exact to the second [n=1]
+  PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: book store bound or N/A stated [n=1]
+  FAIL   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.15b) [n=1]  <<< FAIL
+         expected config_digest_note present | observed ABSENT
+         the q2 supplement states how its config digest is computed; the others must adopt it. Item 14 (criterion 20.16, the q4 format leg publishing only `rules` where q3 publishes abbreviations + excerpt_chars + rules) is a separate row in §3
+  PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: status forbids promotion/rate [n=1]
+  PASS   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: attributable to its generator bytes (criterion 20.10 as amended by O-8) [n=1]
+         the tool at head is fb72269df803… — DIFFERENT bytes: the tool moved after the run, which is why the pin exists (it names the bytes that produced the artefact)
+
+== 10. split v2 (TASK-019a) ==
+  PASS   corpus file count [n=230]
+  PASS   corpus_files_sha256 (list digest, stated derivation) [n=230]
+  PASS   corpus_files_sha256 == the value the q4 supplement binds [n=1]
+  PASS   forced-to-tuning set (fixtures ∪ spent v1 holdout) [n=43]
+         fixture transcripts 6 ∪ v1 holdout 37; v1_holdout_forced_tuning declares 37
+  PASS   independent re-draw, int(full hexdigest) % mod: holdout set-equal [n=230]
+  INFO   independent re-draw, int(first 8 hex) % mod: holdout set-equal [n=230]
+         expected 33/33 | observed 2/33 (draw 28)
+  PASS   MY DRAW REPRODUCES THE SEAL (33 holdout / 197 tuning, set-equal both buckets) [n=230]
+         if none reproduces, the seal's method statement is not executable as written - the same defect class as item 13
+  PASS   bucket counts [n=230]
+  PASS   holdout ∩ tuning == 0 [n=230]
+  PASS   ZERO fixture contamination in the v2 holdout [n=6]
+  PASS   ZERO spent-v1-holdout transcripts in the v2 holdout [n=37]
+  PASS   every forced transcript is in v2 TUNING [n=43]
+  PASS   forced_not_by_fixture (every forcing has a stated reason) [n=43]
+  PASS   every forced transcript carries a reason [n=43]
+  PASS   criterion v2.5 — seal binds the ACTUAL fixtures/confirmed/confirmed.json [n=1]
+  PASS   criterion v2.5 (as amended by O-5) — fixtures/v2/dropword.json: the seal binds its SEAL-TIME digest and the post-seal move is classified append-only with a dated companion note naming both [n=2]
+  PASS   seal manifest tool_sha256 == the actual generator
+  PASS   seal manifest tool_commit f4ab7bb6b121 contains tools/m4_split_v2.py [n=1]
+         same attributability class as criterion 20.10 / item 8a
+  PASS   seal manifest run_utc exact to the second [n=1]
+  PASS   re-seal rule present (new fixture voids the seal) [n=1]
+  PASS   contamination disclosure present [n=1]
+  PASS   guard is code: tools/m4_split_v2.py present [n=1]
+  PASS   guard is code: tests/test_m4_split_v2.py present [n=10]
+  PASS   criterion v2.1 — the salt is NEW (differs from the spent v1 salt) [n=1]
+  PASS   criterion v2.1 — method / modulus / bucket published [n=1]
+  PASS   criterion v2.1 — method statement present [n=1]
+  PASS   criterion v2.4 — sealed BEFORE any further tuning, on commit-order evidence [n=7]
+         seal added by b'293b29c' at 1790369446; introduction commits (git log -S, not file add time): SEAL-APPENDIX-2026-09-25.md@b'72104a5', SEAL-AUDIT.json@b'72104a5', EVIDENCE-PROVENANCE.json@b'a5dec38', PROVENANCE-SUPPLEMENT.json@b'a5dec38', PROVENANCE-SUPPLEMENT.json@b'a5dec38', PROVENANCE-V2.json@b'1cd5d44'
+  INFO   criterion v2.4 corollary — pre-seal v1-era M4 run artefacts (shaped on the v1 tuning set) [n=28]
+         expected disclosed by the seal, counted for the record | observed 28 file(s) under runs/m4-*: ["m4-q2-adjudication/PROVENANCE.json@b'1fb524e'", "m4-q2-adjudication/SUMMARY.md@b'1fb524e'", "m4-q2-adjudication/adjudication.jsonl@b'1fb524e'", "m4-q2-adjudication/fixtures-adjudication.json@b'1fb524e'"]
+         the seal's own disclosure: 'v1 detectors were shaped with corpus-wide knowledge, and the drop-word and format rules were shaped on the v1 tuning set; a first figure under v2 is an estimate under this split, not a pristine out-of-sample number'
+  PASS   criterion v2.4 — the TASK-018 adjudication set PRE-DATES the seal (labels are v1-era) [n=1]
+  INFO   criterion v2.5 corollary — when did the bound fixture change relative to the seal? [n=1]
+         expected a post-seal edit is what taints the binding (item v2.a) | observed fixtures/v2/dropword.json added b'012914d' BEFORE the seal (later modified)
+  PASS   criterion v2.6 — the tuning path REFUSES holdout reads in code (not only in prose) [n=3]
+  PASS   criterion v2.6 — tools/det_dropword.py asserts split integrity in code [n=3]
+  PASS   criterion v2.6 — tools/det_format.py asserts split integrity in code [n=2]
+  PASS   criterion v2.6 — the post-seal v2 tuning run is keyed inside v2 TUNING, ∩ holdout = 0 [n=197]
+  INFO   criterion v2.6 — the pre-seal q2 run's keys ∩ the v2 HOLDOUT (the disclosed taint) [n=193]
+         expected 0 would be pristine; the seal discloses v1-era shaping | observed 33 of 33 v2-holdout transcripts were read pre-seal (keys 193 == v1 tuning 193)
+         not a v2.6 violation - the run pre-dates the seal and the seal's disclosure covers it - but every quantum-b figure must carry the seal's sentence that this is an estimate under this split, not a pristine out-of-sample number
+  PASS   criterion v2.b — v2-holdout signals deferred by the tuning filter, ENUMERATED from the data [n=7]
+         per-transcript {'Radical_Subjectivity_The_I_of_Self': 4, 'Realization_of_the_Self_as_the_I_N': 1, 'Spiritual_Traps_Oct_2005_Part_2_en': 1, 'Witnessing_and_Observing_Oct_2004_': 1}; verdicts {'CERTAIN-leg-d': 3, 'CANDIDATE': 4}
+  INFO   criterion v2.b — holdout transcripts already carry hand LABELS from TASK-018 [n=7]
+         expected the quantum-b protocol must decide their handling IN ADVANCE (per-file breakdown or exclusion) | observed 3 CERTAIN-leg-d (['D-092', 'D-093', 'D-094']) + 4 CANDIDATE on 4 of 33 holdout transcripts
+         item v2.b leg (iv): the one-shot evaluation must either report a per-file breakdown disclosing that these holdout transcripts are already signal-bearing, or exclude them with the denominator change stated in the pre-registration - not decided afterwards
+  PASS   criterion v2.b (as amended by O-5) — the taint is stated in the seal's note OR in a dated companion artefact (item v2.b landing check) [n=1]
+  PASS   criterion v2.9 — the delivery is labelled DELIVERY, never completion or certification [n=1]
+  INFO   criterion v2.b — the 7 deferred v2-holdout signals documented in a committed artefact [n=4]
+         expected a manifest enumerating them (item v2.b) | observed 4 files mention deferral: ['runs/m4-q2-dropword/EVAL.json', 'runs/m4-q2-dropword/NOTE-2026-09-26.md', 'runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json', 'runs/m4-q2-dropword/README.md']
+         the q2 supplement records deferred_holdout: 7 and the filter arithmetic closes, but item v2.b owes an enumeration (which 4 transcripts, which 3 were promoted to D-092/093/094)
+
+== 11. inherited v1 manifest (TASK-017) ==
+  PASS   file_count (tools/tests/fixtures) [n=33]
+  PASS   file_count (census+runs) [n=233]
+  PASS   file_count_total [n=266]
+  PASS   archive blob == manifest in_archive_sha256 [n=266]
+  PASS   file at head == manifest sha256 [n=266]
+  PASS   manifest's two claims agree per file (unmodified) [n=266]
+         three-way equality across all inherited files
+  PASS   unmodified declared [n=1]
+  PASS   archive lane cited read-only, never re-stamped [n=1]
+
+== 12. quantum b readiness (TASK-019 ANNEX) ==
+  PASS   ANNEX B1/B4 frozen inputs have NOT drifted from the worker head [n=6]
+         a drift on any frozen input voids the pre-registration and forces a new one (ANNEX §F7)
+  PASS   book store frozen digest (corpus/docdocgo/html/merged-book-texts_json_1.js)
+  PASS   the holdout the pre-registration will bind [n=33]
+  PASS   ANNEX §F1 — the four label-tainted holdout transcripts are fixed BY NAME [n=4]
+         they carry prior TASK-018 labels (3 CERTAIN-leg-d + 4 CANDIDATE), NOT fixtures - the holdout has zero fixture transcripts
+  PASS   ANNEX §F2 — both denominators pre-declared from ONE run [n=33]
+  FAIL   BLOCKER — quantum b may not run until its preconditions land (v2.7 needs frozen inputs) [n=3]  <<< FAIL
+         expected no open precondition | observed 3 open: ['item v2.b (taint disclosure) unlanded', "item v2.a clause (iii) 2nd half ('one draw, not two') unstated", "O-5: the freeze does not bind the companion note's digest"]
+         item v2.a's SUBSTANCE is verified at this head — the seal stands, the fixture move is append-only (seal-time c8e96319… → live c40d272f…), 6 of 7 bound digests recompute MATCH — so the blocker no longer rests on the seal's validity; it rests on these conditions
+  INFO   split-v2 file digest at this head (the pre-registration binds the post-note value) [n=1]
+         expected recorded, expected to change exactly once when v2.a lands | observed 73d86f0d
+  INFO   a committed pre-registration artefact exists (criterion v2.12 needs it BEFORE the run commit) [n=0]
+         expected ABSENT is the correct state while v2.a/v2.b are open | observed 0 file(s): []
+  PASS   no receipt already declares the V2 holdout SPENT (the quantum-b run has not happened) [n=0]
+         a receipt only consumes v2 if it binds the v2 split file or the v2 salt; 2 receipt(s) consume the V1 holdout, which is correct and expected: ['runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json (split HELD-OUT-SPLIT.json, salt out-2026-09-25)', 'runs/m4-q4-holdout/v1-holdout.PROVENANCE.json (split HELD-OUT-SPLIT.json, salt out-2026-09-25)']
+
+== 13. cross-artefact coherence (20.13 / L10, items 0e-0g) ==
+  PASS   shape_adjudication classifies every signal [n=122]
+  PASS   recomputed kind tally == the published counts [n=122]
+  PASS   the classification closes over every signal: sum(counts) == len(signals) [n=122]
+  PASS   re-labelled (partial-overlap + gate-boundary) == the 6 the reconciliation used to state [n=6]
+  PASS   the rebuilt EVAL drops no field a published derivation reads — or discloses the drop in `rebuild_history` [n=0]
+         `rebuild_history` carries the pre-rebuild artefact sha256 + its source, the pre-rebuild generator_pins + how to check them, and the original run_args (corpus zip, main_head, policy, tool_commit, run utc) — so the rebuild is orderable and the run inputs are shown unchanged
+  PASS   gate_figure == the countable consistent rows [n=113]
+  PASS   the note's '114 deletion-closing' is NOT the deletion_closes field [n=122]
+         deletion_closes is True for all 122, so the note's 114 is a different test; the arithmetic that lands the published bound is 122 - 8 = 114, then 114 - 1 gate-listed hyphen case = 113
+  PASS   ORCH-2's rule-A failures are SET-IDENTICAL to the worker's 8 shape exclusions [n=8]
+         this is why the q2.6 figure 113/9 IS reproducible: rule A gives 114/8 over the same 8 rows, and the last step to 113 is the single gate-listed hyphen-tokenization exclusion
+  PASS   the gate-boundary hyphen row PASSES rule A under the stated token rule and fails under hyphen-splitting [n=1]
+         row: ('Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt', 40831, 40841, ('one-third', 'of'))
+  PASS   criterion 20.13 / L10 — the reconciliation note names the SAME transcript as the row it describes [n=1]
+  INFO   criterion 20.13 — the two published 114s are DIFFERENT SETS (filter-side vs shape-side) [n=122]
+         expected wherever either is quoted, the other is distinguished | observed filter-side 114 (122 - 1 source-inherited - 7 deferred) vs shape-side 114 (122 - 8); intersection 106, 8 differ each way, the two exclusion sets overlap in 0 rows
+         ITEM 15b: `filtered: 114` (supplement + EVAL) and 'this instrument finds 114 deletion-closing signals' (EVAL's shape note) are equal in size but share only 106 signals; the README explains 113 vs 114 on the shape side, and nothing states that the filter-side 114 is a different set
+  PASS   criterion 20.13 — the distinction between the two 114s is written down [n=1]
+  INFO   item 0e — the deduped site count depends on the DEDUPE KEY, which is not published [n=57]
+         expected 55 published with its key stated | observed by (transcript, span text) 55; by (transcript, char_offset) 57; rows 57
+         the two colliding span-text pairs are distinct sites at different offsets: D-097/D-098 ('percent', Radical_Subjectivity @838 and @1132) and D-120/D-121 ('see', Levels_of_Consciousness @60506 and @61014) - so '55' is a span-text dedupe and must say so (criterion 20.15 class)
+  PASS   item 0f — ORCH-2's reconstruction of the four strata over the 57 rows [n=57]
+         word classes: {'interjections/fillers': ['haha', 'heh', 'huh', 'really', 'right', 'see', 'um', 'well', 'yeah'], 'notation (%↔percent)': ['percent'], 'function words': ['already', "he'd", 'however', 'including', "it's", 'may', 'since', "that's", "there's"]}; content = ['bonaparte', 'earphones', 'evidence', 'go', 'high', 'lincoln', 'man', 'osama', 'otherwise', 'quite', 'realms', 'things', 'undoubtedly']
+  PASS   item 0f — WORKER-2's own per-word class list published (the binding requirement) [n=32]
+         32 distinct omitted words: ['already', 'bonaparte', 'earphones', 'evidence', 'go', 'haha', "he'd", 'heh', 'high', 'however', 'huh', 'including', "it's", 'lincoln', 'man', 'may', 'osama', 'otherwise', 'percent', 'quite', 'really', 'realms', 'right', 'see', 'since', "that's", "there's", 'things', 'um', 'undoubtedly', 'well', 'yeah']
+  PASS   item 0f — the notation-class ruling recorded (ERRATA-25e §2 / BOSS guidance: notation variants are transcriber formatting conventions) [n=6]
+  PASS   item 0f — speaker-side filler presence stated as unknowable without audio [n=1]
+  PASS   item 0g/8b — the record carries a written disposition for each contradiction with a sibling instrument [n=15]
+         item 8b (criterion 20.5) is gated jointly with item 0g by this row: D-002 ('evidence') is CERTAIN-leg-d while EVAL.json shape_adjudication excludes that very site as dropped-token-not-missing; D-039 ('quite') is CERTAIN-leg-d while the source-inheritance filter suppresses that same signal as its own published example
+  PASS   item 0g — the filter's own example IS the D-039 site (the contradiction is real at this head) [n=1]
+  PASS   item 0g — the v2-holdout rows are marked as such IN the adjudication record [n=7]
+         no holdout-tainted row may be quoted as tuning-side evidence
+  PASS   item 0e — the stated post-DEDUPE arithmetic checks out (57 rows / 55 sites) [n=57]
+  PASS   item 0g/11b — the EFFECTIVE post-disposition figures reproduce (49 rows / 48 sites) [n=49]
+         the collapsing pair is D-120/D-121 (`see`, one site); D-097/D-098 collapsed at 57 but both are refused-notation now, so one collapse remains — 49 rows over 48 sites
+  PASS   criterion 20.13 — every adjudication row carries the fields coherence is judged on [n=732]
+         `clause` is required only on CERTAIN-leg-d rows (57/57 carry it, 0/65 CANDIDATE rows do, correctly); 2 rows ['D-027', 'D-117'] have no rebuilt span because their own reason states the omission is not re-alignable from the frozen bytes, and each still carries detector_span + char_offset + span_end
+  PASS   criterion 20.13 — a count quoted in PATTERNS states the exclusions behind it [n=1]
+         the artefact supports 57/122 as adjudicated; after item 0g's dispositions the effective figure is 49 rows / 48 sites (re-derived above) and after the shape exclusions the countable q2 figure is 113 — each quoted with its exclusions beside it
+
+== 14. criterion 20.15 — stated derivations reproduce literally ==
+  PASS   the binding of record publishes a derivations block [n=7]
+  FAIL   criterion 20.15a — every stated derivation reproduces when followed LITERALLY [n=7]  <<< FAIL
+         expected 7/7 | observed 6/7 (failures: ['fixtures_digest_sha256'])
+         ITEM 13: `fixtures_digest_sha256` says 'same construction over the fixtures dir', which gives ee56250d001f…; the published c5d8f6f3db3b… reproduces only with BASENAME keys over the 2 files in fixtures/confirmed/. State the key convention and the input set, and say that fixtures/clean, fixtures/negative and fixtures/v2 are outside this binding
+  FAIL   criterion 20.15b — every derivation states its canonicalization (key convention, join, sort) [n=7]  <<< FAIL
+         expected 7/7 | observed 5/7 (unstated: ['fixtures_digest_sha256', 'overlays_digest'])
+         the warned-against overlays variant 58274f46… is reproducible exactly as sha256("\n".join(sorted(lines_without_trailing_newline))) but the manifest does not state that construction, so the warning is not checkable as written; the good pattern already exists in this lane (the q2 supplement's config_digest_note names sort_keys and separators)
+
+== 15. quantum-b criteria v2.12-v2.16 (HELD until the run exists) ==
+  INFO   criterion v2.12 — the pre-registration commit exists BEFORE the run commit [n=0]
+         expected commit order plus exact timestamps carrying their source (criterion 20.14) | observed HELD — no quantum-b run directory exists yet (none under runs/)
+         when it lands this row checks: add-time of the pre-registration artefact < add-time of every artefact in the eval directory, by `git log -S` where a reference is concerned (defect #22), and that both stamps are exact to the second with a stated source
+  INFO   criterion v2.13 — the receipt exists, declares the v2 holdout SPENT, and `holdout_reads` EQUALS the pre-registered eval set [n=1]
+         expected receipt present, holdout_consumed true, holdout_reads == eval set | observed HELD — no receipt binds the v2 split (§12 verifies the two spent receipts bind v1)
+         the eval set is the 33 v2-holdout transcripts, or the 29 sensitivity set if the pre-registration excludes the four label-tainted files under ANNEX §F2 - whichever it names, `holdout_reads` must equal it exactly: no more, no less
+  INFO   criterion v2.14 — nothing was added to the eval directory after the run except the receipt and an errata [n=1]
+         expected commit history of that path shows only those two additions | observed HELD — the eval directory does not exist
+         verified from the path's own commit history, not from a manifest claim
+  PASS   criterion v2.15 PRECEDENT — on the existing adjudication set the `seeded`/`in_sample` flags are PRESENT on every row and `seeded: true` on none [n=122]
+         an ABSENT flag is as much a defect as a wrong one; this is the row TASK-018 item 0d's false `seeded` sentence contradicts, and it is why the same test is pre-registered for the holdout rows under v2.15
+  PASS   criterion v2.16 PRECEDENT — one-shot discipline read from the TOOL'S SOURCE, not its manifest [n=0]
+         the same source read will be applied to the quantum-b tool: it must not be able to reach the tuning path, and the HoldoutGuard must be instantiated rather than merely importable
+
+== 16. criterion coverage of this instrument (lane-side) ==
+  PROXY  TASK-013 — M5-R criteria C1-C13: criteria mechanized by this instrument [n=13]  <<< PROXY
+         expected 13/13 covered, or the gap listed | observed 3/13 CITED; not cited by id ['C10', 'C11', 'C12', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-014 — M4 scoreboard criteria q1.1-q5.8: criteria mechanized by this instrument [n=37]  <<< PROXY
+         expected 37/37 covered, or the gap listed | observed 3/37 CITED; not cited by id ['q1.2', 'q1.3', 'q1.4', 'q2.1', 'q2.2', 'q2.3', 'q2.4', 'q2.5', 'q2.7', 'q3.1', 'q3.2', 'q3.3', 'q3.4', 'q3.5', 'q3.6', 'q3.7', 'q3.8', 'q3.9', 'q4.1', 'q4.2', 'q4.3', 'q4.4', 'q4.5', 'q4.6', 'q4.7', 'q4.8', 'q4.9', 'q5.1', 'q5.2', 'q5.3', 'q5.4', 'q5.5', 'q5.6', 'q5.7']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-016 — M5-R repair criteria: criteria mechanized by this instrument [n=7]  <<< PROXY
+         expected 7/7 covered, or the gap listed | observed 2/7 CITED; not cited by id ['C5', 'C6', 'C7', 'C8', 'C9']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PASS   TASK-017 — inherited-toolchain items (the six criteria are prose): criteria mechanized by this instrument [n=1]
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-018 — leg-(d) items 0a-0h and criteria L1-L10: criteria mechanized by this instrument [n=17]  <<< PROXY
+         expected 17/17 covered, or the gap listed | observed 7/17 CITED; not cited by id ['0b', '0c', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7', 'L8', 'L9']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-019 — split v2 + quantum-b criteria v2.1-v2.16: criteria mechanized by this instrument [n=16]  <<< PROXY
+         expected 16/16 covered, or the gap listed | observed 12/16 CITED; not cited by id ['v2.11', 'v2.2', 'v2.3', 'v2.8']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PROXY  TASK-020 — consolidated-repair criteria 20.1-20.16: criteria mechanized by this instrument [n=16]  <<< PROXY
+         expected 16/16 covered, or the gap listed | observed 9/16 CITED; not cited by id ['20.11', '20.12', '20.3', '20.6', '20.7', '20.8', '20.9']
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PASS   TASK-021 — C1-drop sensitivity criteria 21.1-21.8: criteria mechanized by this instrument [n=8]
+         PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
+  PASS   this instrument cites no criterion or item that exists in no queue file [n=59]
+         a row that cites a criterion outside the ruleset invents authority (defect #10's class: the needle must be the actual wording). Sub-letters such as 20.14a are ORCH-2's own sub-rows and are traced to their parent criterion, which must exist in the queue files
+  PASS   every OPEN item in the queue has a row in this instrument that flips when it is repaired [n=16]
+         the open-item list is taken from fleet/queue/status.md and TASK-MAP.md's published priority; this row is the coverage claim that matters, because these are the items whose re-gate must be a single run
+
+== 17. TASK-021 sensitivity grid (criteria 21.1-21.8) ==
+  PASS   the shipped operating point, read from the PINNED detector source (a0236325…) [n=8]
+         the anchor row of the sensitivity table must equal these values; reading them from the source rather than the README is what makes 21.2 checkable
+  PASS   criterion 21.2 — grid axis `min_flank` contains its own anchor [n=4]
+  PASS   criterion 21.2 — grid axis `min_ratio` contains its own anchor [n=3]
+  PASS   criterion 21.2 — grid axis `min_matched` contains its own anchor [n=3]
+  PASS   criterion 21.2 — the table's expected size (one parameter at a time from the shipped point) [n=8]
+  INFO   criterion 21.1/21.6 — the artefact directory `runs/m4-t21-sensitivity/` [n=1]
+         expected ABSENT is correct: the task has not been claimed | observed ABSENT
+         when it lands, 21.1 needs the HoldoutGuard refusal in code + `holdout_reads: []` + `holdout_enforced: true`, and 21.6 needs the §8 manifest with a `tool_commit` that CONTAINS the generating tool - the exact failure of item 8a at ffb8811… and 71c37cf…
+  PASS   criterion 21.3 — both denominators, derived here so the table can be checked [n=2]
+  INFO   criterion 21.7 — the dedupe rule must name its KEY (the lesson of item 0e) [n=57]
+         expected a stated key, applied consistently, duplicates counted separately from rows | observed over the 57 CERTAIN-leg-d rows: 57 distinct (transcript, char_offset) sites but 55 distinct (transcript, span text) - so 'site count' is ambiguous until the key is named
+         HELD until the artefact exists; the collisions are D-097/D-098 and D-120/D-121 (§13)
+  INFO   criterion 21.4 — the stability set (present at EVERY setting vs shipped-point-only) sums coherently with the anchor row: stable + shipped-only + setting-specific = the anchor count [n=1]
+         expected HELD until the run exists | observed HELD
+  INFO   criterion 21.5 — no threshold chosen or recommended and no precision / recall / rate / M6 figure anywhere in the artefacts; every output labelled CANDIDATE-class / PROVISIONAL-UNGATED - checked by grepping the artefact directory for those terms [n=1]
+         expected HELD until the run exists | observed HELD
+  INFO   criterion 21.8 — the suite stays green WITH the corpus present and the test count does not drop [n=1]
+         expected HELD until the run exists | observed HELD
+
+== 18. cycle I — the seal audit re-derived (WORKER-2 72104a5) ==
+  PASS   ANNEX A2 (lane-side) — the adjudication-set decision is RECORDED BEFORE any run, as A2 requires [n=4]
+         A2 is the gate's decision to make, not the worker's: it removes one of the quantum-b blockers without waiting on TASK-018 items 0d-0g, and it is only valid because it is recorded before the freeze
+  PASS   the seal file is byte-identical since its own seal commit (the appendix's central claim) [n=1]
+         this is why O-5 amends ANNEX A1 rather than ordering an edit: any edit moves 73d86f0d…, which the appendix itself binds
+  PASS   criterion v2.10 as amended by O-5 — every digest the seal binds, recomputed at head [n=7]
+         book_store_sha256's file is never named in the seal's derivations; it is identified here from tools/census.py's book_store_bytes (14,634,979) and confirmed by digest — an unnamed binding is itself a small defect, recorded rather than left to the reader
+  PASS   the audit's `mutations: []` / APPEND-ONLY-AFTER-SEAL classification, re-derived from both blobs [n=63]
+         the moving commit is a5dec38|2026-09-25T21:21:03+00:00 (post-seal); the added keys are TASK-020 item 7's enacted-leg-d annotation blocks and the generated_utc_exact* keys
+  PASS   the seal-time and head digests of the fixture file are the two the appendix names [n=2]
+  PASS   the confirmation artefact is PRE-seal (the claim that decides the re_seal_rule) [n=1]
+  PASS   membership at head: the forced set does not intersect the holdout [n=76]
+  PASS   the draw still reproduces at head — and the seal's own `derivations.holdout_set` line read LITERALLY does not [n=42]
+         the exclusion is stated in the seal's `forced_transcripts` and `tuning_set` derivations but NOT in the `holdout_set` line, so that line alone yields 42 — criterion 20.15a's discipline (a derivation must reproduce when followed literally) applied to a sealed artefact that may not be edited; the reading of record is §10's, which reproduces 33/197
+  PASS   the audit tool's digest equals the one stamped in its own report [n=1]
+  PASS   the report names the head it audited, and that head is an ancestor of the report's own commit [n=1]
+         the report states the ordering itself ('committed as its own commit after it') — honest sequencing
+  PASS   the audit tool opens no transcript content (the 'holdout not opened' claim, tested on the tool) [n=0]
+         it does read the holdout NAME list from the seal, which membership checks require; names are not content, and no transcript bytes are opened
+  FAIL   item v2.c — the report's own `audit_utc` must not post-date its commit, and every doc citing it must cite the SAME value [n=1]  <<< FAIL
+         expected one exact stamp from `date -u` at run time, cited identically | observed report 2026-09-26T01:22:00Z; the head it audited was committed 2026-09-26T00:39:44+00:00; the report itself 2026-09-26T01:04:46+00:00; the appendix cites ['2026-09-25T21:44:00Z']
+         FORWARD-STAMPED by ~13 min against its own committing head, and the appendix cites a different day and time (2026-09-25T21:44:00Z) for the same artefact; both are :00-rounded, so neither orders anything to the second. This is ORCH-2's own self-item O-4 class, in a worker artefact
+  FAIL   item v2.d — the report names a `tool_commit` that contains its generating tool (item 8a's class) [n=1]  <<< FAIL
+         expected tool_commit present, and the tool blob at that commit == the tool at head | observed keys present: ['tool', 'tool_sha256']
+         the containing commit is derivable (b991f29 added tools/m4_seal_audit.py and is an ancestor of the audited head) but derivable is not stated: criterion 20.10 and TASK-021's 21.6 both require the field, which is why item 8a is still open on the q2/q3/q4 supplements
+  FAIL   item v2.e — the report's citation census must NAME ITS KEY and cover every citation (item 0e's lesson) [n=10]  <<< FAIL
+         expected one row per citation of the confirmation artefact, attributable by path | observed the fixture file mentions it at 10 paths, of which 5 are artifact+sha pairs (the tool's unstated key); the report carries 5 rows, 1 distinct
+         the appendix's sentence 'All five citations in the fixture file' does not reproduce: 10 mentions, 5 pairs. The load-bearing half is that the 5 UNPAIRED mentions — including /adjudication_summary_2026_09_25/artifact — sit OUTSIDE the tool's post-seal void check, so a post-seal confirmation cited without a paired sha would not fire it. ORCH-2 closed the gap by hand: all 10 mentions name the same artefact, whose whole history is pre-seal
+  PASS   item v2.f — the prep record's header stamp (item 12's class) [n=1]
+         '2026-09-25T21:5xZ' was both fuzzy and ~2.6 h before its own commit; the census repaired it to 2026-09-26T00:32:03Z with `src 72104a5` beside it and left the old value readable
+  PASS   item v2.a clause (iii), second half — the SUBSTANCE ('one draw, not two'), re-derived by ORCH-2 from the two seal blobs [n=1]
+         so the claim is TRUE and the owed repair is documentation-only: the sentence, plus why it matters — 79eb401's own commit subject says 're-seal', 68 s after the draw, which reads as a second draw to anyone who has not compared the blobs
+  FAIL   item v2.a clause (iii), second half — the STATEMENT that 293b29c/79eb401 are one draw, not two [n=0]  <<< FAIL
+         expected stated in a companion note beside the seal | observed present in 0 companion artefacts: []
+         without it a reader cannot tell whether the split was re-drawn (a new salt would be owed) or only re-manifested; ORCH-2 has verified the substance in the row above, so this item is documentation-only
+  FAIL   O-5 amended A1 — the seal stays byte-identical, a dated companion note names both digests, and the quantum-b FREEZE binds the companion's digest alongside the seal's [n=3]  <<< FAIL
+         expected all three | observed seal untouched: True; companion artefacts naming both digests: ['fleet/branches/WORKER-2-TASK-019a-DELIVERY.md', 'runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md', 'runs/m4-q2-adjudication/SEAL-AUDIT.json', 'tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md']; freeze binds the companion: False
+         A1 as originally written ('HELD-OUT-SPLIT-V2.json's own header binds c40d272f…, append-only') is unsatisfiable without moving 73d86f0d…, which the appendix and criterion v2.10 both bind — a collision in ORCH-2's own criterion, disclosed as self-correction O-5. The amended requirement puts the disclosure where the run reads it: the freeze record
+  PASS   item v2.b — the v2-holdout taint disclosure, looked for in ALL THREE new artefacts [n=1]
+         item v2.b is therefore UNCHANGED and remains, with A2, one of the two blockers on quantum b
+  PASS   v2.12/v2.13 precedent — the one-shot refusals are IN CODE, not in prose [n=10]
+         HELD for the run itself: §15's v2.12/v2.13 rows still need the actual receipt with holdout_reads equal to the pre-registered 33 (or the §F2 sensitivity 29) and an eval dir whose commit history is pure. What is proven today is that the discipline cannot be forgotten at run time
+  PASS   v2.15 precedent — `score` separates seeded from independent and refuses an unreasoned label [n=1]
+  PASS   v2.16 precedent — the quantum-b tool and its registry carry no tuning-side evaluation path [n=0]
+  PASS   §17 cross-check — the freeze cannot drift from the shipped operating point, because the registry reads the detector's own constants [n=8]
+  PASS   the harness's label keys are detector-qualified (the prep record's claim, verified as a mechanism) [n=1]
+         the literal 'C1-drop/' never appears because the detector name is a variable — a grep for the example string would have reported this claim ABSENT and been wrong
+  PASS   first-attempt enforcement (the prep record's 'first attempt' claim) [n=1]
+  FAIL   item v2.g — how many of the harness's refusal paths are ASSERTED by a test (capability evidence is only as good as its tests) [n=8]  <<< FAIL
+         expected all 12 | observed 8/12 asserted; UNTESTED: ['detector PARAMETERS changed after freeze', 'evaluated set != frozen holdout (PARTIAL READ)', 'pre-registered exclusions are NOT holdout members', 'score refuses a partial read']
+         the refusal surface grew from 9 to 12 with the pre-registered exclusions, and 4 of the 12 are unasserted: the PARAMETERS-changed branch, the evaluated-set refusal (a PARTIAL READ), the exclusions-not-holdout-members refusal, and the score-side partial-read refusal. The middle two protect quantum b's DENOMINATOR: a partial or wrongly-scoped holdout read must be refused, not scored, because the figure is one-shot and cannot be re-run. Code-present is not code-proven; one toy test each closes it (a frozen holdout of 2 with a detector that reads 1; a freeze whose params are edited without touching the module file; an exclusions file naming a tuning transcript; a labels file covering fewer rows than the receipt evaluated)
+  PASS   the partial-read refusal is NON-SPURIOUS: both detectors emit an entry for every transcript they read, so a zero-signal transcript cannot look like a partial read [n=2]
+         this is what makes refusal (g) usable at all: C1-drop may legitimately find nothing in some of the 33 holdout transcripts, and the run must still see 33 reads
+  PASS   v2.12 precedent — the detectors record `holdout_reads` and `holdout_consumed` themselves in holdout mode, so the receipt's read list is not reconstructed after the fact [n=2]
+         HELD for the run: §15's v2.12 row still needs the actual receipt whose holdout_reads is SET-EQUAL to the pre-registered 33 (or the §F2 sensitivity 29)
+  PASS   criterion 21.8 / A5 — the suite floor, measured at both heads [n=257]
+         TASK-021's criterion 21.8 publishes 217, stale since 4fc40c8; the binding floor is the newest measured count, 257 at 1c8a287, and the skip count travels with it. Measured in the scratch worktree with the corpus materialised: `python3 -m unittest discover -s tests -t tests`
+  FAIL   criterion 20.14c — no own-time stamp POST-DATES the commit that contains it (item 12's other half; TASK-018 item 0h, TASK-019 item v2.h) [n=42]  <<< FAIL
+         expected 0 forward stamps | observed 19 forward of 42 own-time stamps in 28 changed files: runs/m4-q2-adjudication/RECOUNT-2026-09-26.json 2026-09-26T01:12:00Z vs its commit 2026-09-26T00:39:44Z (+32.3 min); runs/m4-q2-adjudication/SEAL-AUDIT.json 2026-09-26T01:22:00Z vs its commit 2026-09-26T00:41:22Z (+40.6 min); runs/m4-q2-adjudication/adjudication.jsonl 2026-09-26T01:12:00Z vs its commit 2026-09-26T00:39:44Z (+32.3 min); runs/m4-
+         a file's bytes cannot carry a stamp from a time the committer had not reached; the offsets here are +32 to +41 min and every one is :00- or cadence-shaped, i.e. projected, not read
+  PASS   the forward stamps are NOT a clock artifact (the ruling's control) [n=1]
+         so git's clock and the lane's clock agree to within minutes and the +32/+41 min stamps are not skew. Root cause: a stamp taken from the CONTROL cadence grid — the seal note says it was 'written at the lane clock stamp of CONTROL seq 43' — propagates into every artefact that cites it, and CONTROL seq 43/44 are themselves forward-stamped
+  FAIL   the WORKER lane's CONTROL.log utc column is exact, orderable and never ahead of the commit that carries it — it is the cadence input BOSS-2 reads (ERRATA-25f), so a bad column is a fleet-integrity risk [n=56]  <<< FAIL
+         expected every utc exact to the second, non-decreasing down the file, none after the file's last commit | observed 56 rows: 47 exact / 9 minute-precision ['2026-09-25T18:26Z', '2026-09-25T18:27Z', '2026-09-25T18:34Z', '2026-09-25T18:41Z']; utc going BACKWARDS: [('2026-09-26T01:26:40Z', '2026-09-26T00:57:47Z')]; rows stamped after the file's last commit (2026-09-26T01:04:46+00:00): ['2026-09-26T01:14:30Z', '2026-09-26T01:26:40Z']; seq values used more than once: ['10', '11', '12', '13', '14', '15', '38', '39', 
+         REPORTED to BOSS-2, not ruled here — ORCH-2 gates evidence, the boss owns fleet signals. Two findings travel with it: (1) seqs 10-15/38/39/45 each appear twice, so seq is not a unique key in this lane's log and a cadence reader must not treat it as one (ORCH-2's own log is rendered by fleet2check, which enforces uniqueness); (2) WORKER-2's seq-45 ERRATA corrected the COMMIT column for 42/43/44 while their UTC column is still forward-stamped
+  PASS   ANNEX §H precondition — the denominator was decided BEFORE any result existed [n=1]
+         this is what makes a denominator change legitimate rather than post-hoc: the swap is recorded while the outcome is still unknown
+  PASS   ANNEX §H — the exclusions are machine-readable, holdout members, bound by digest into the freeze, enforced in code and tested [n=4]
+  FAIL   ANNEX §H (A4 amended) — BOTH denominators fixed before the run: 29 PRIMARY and 33 as a pre-registered SENSITIVITY from the same run [n=2]  <<< FAIL
+         expected the note or the exclusions file commits to reporting both, the four named in each | observed counts recorded: 29 evaluated / 33 holdout; a 33-transcript SENSITIVITY figure committed to: False
+         A4 as written fixed 33 primary + 29 sensitivity. WORKER-2's note swaps the primary to 29 on the label-taint ground (§F2's own reason) and forbids the four from re-entering any denominator. ORCH-2 ADOPTS the swap — pre-result, machine-readable, enforced, tested — and amends A4 append-only: primary 29, sensitivity 33 from the SAME run (no second spend; the four were already read), each reported with the four named. Both numbers stay fixed before the run, which is the whole point of the protocol; one sentence is owed
+
+== summary: 322 rows · FAIL 16 · INFO 31 · PASS 267 · PROXY 8
+
+rows not passing (each is an owed item or a known restriction, not necessarily a defect):
+  FAIL   q4 format config digest covers a SUBSET: expected state the subset relation (item 14) | observed q3 8e7e35a2795f… vs q4 805241dd0930…
+         comparability established from the pinned source, not from the digests
+  FAIL   item 0h — a disposition's utc may not post-date the commit that contains it, and its `utc_source` must be true: expected every utc ≤ its committing commit's time | observed committed 2026-09-26T00:39:44+00:00; stamps after it: ['2026
+         `utc_source` says 'the lane clock at write time', which a forward stamp falsifies: the clock had not reached that time when the commit was made. Same class as item v2.c and ORCH-2's own O-4. The tool 
+  FAIL   runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.15b): expected config_digest_note present | observed ABSENT
+         the q2 supplement states how its config digest is computed; the others must adopt it. Item 14 (criterion 20.16, the q4 format leg publishing only `rules` where q3 publishes abbreviations + excerpt_cha
+  FAIL   runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json: config canonicalization stated (criterion 20.15b): expected config_digest_note present | observed ABSENT
+         the q2 supplement states how its config digest is computed; the others must adopt it. Item 14 (criterion 20.16, the q4 format leg publishing only `rules` where q3 publishes abbreviations + excerpt_cha
+  FAIL   BLOCKER — quantum b may not run until its preconditions land (v2.7 needs frozen inputs): expected no open precondition | observed 3 open: ['item v2.b (taint disclosure) unlanded', "item v2.a
+         item v2.a's SUBSTANCE is verified at this head — the seal stands, the fixture move is append-only (seal-time c8e96319… → live c40d272f…), 6 of 7 bound digests recompute MATCH — so the blocker no longe
+  FAIL   criterion 20.15a — every stated derivation reproduces when followed LITERALLY: expected 7/7 | observed 6/7 (failures: ['fixtures_digest_sha256'])
+         ITEM 13: `fixtures_digest_sha256` says 'same construction over the fixtures dir', which gives ee56250d001f…; the published c5d8f6f3db3b… reproduces only with BASENAME keys over the 2 files in fixtures
+  FAIL   criterion 20.15b — every derivation states its canonicalization (key convention, join, sort): expected 7/7 | observed 5/7 (unstated: ['fixtures_digest_sha256', 'overlays_digest']
+         the warned-against overlays variant 58274f46… is reproducible exactly as sha256("\n".join(sorted(lines_without_trailing_newline))) but the manifest does not state that construction, so the warning is 
+  FAIL   item v2.c — the report's own `audit_utc` must not post-date its commit, and every doc citing it must cite the SAME value: expected one exact stamp from `date -u` at run time, cited identicall | observed report 2026-09-26T01:22:00Z; the head it audited was committ
+         FORWARD-STAMPED by ~13 min against its own committing head, and the appendix cites a different day and time (2026-09-25T21:44:00Z) for the same artefact; both are :00-rounded, so neither orders anythi
+  FAIL   item v2.d — the report names a `tool_commit` that contains its generating tool (item 8a's class): expected tool_commit present, and the tool blob at that commit == the | observed keys present: ['tool', 'tool_sha256']
+         the containing commit is derivable (b991f29 added tools/m4_seal_audit.py and is an ancestor of the audited head) but derivable is not stated: criterion 20.10 and TASK-021's 21.6 both require the field
+  FAIL   item v2.e — the report's citation census must NAME ITS KEY and cover every citation (item 0e's lesson): expected one row per citation of the confirmation artefact, attributa | observed the fixture file mentions it at 10 paths, of which 5 are art
+         the appendix's sentence 'All five citations in the fixture file' does not reproduce: 10 mentions, 5 pairs. The load-bearing half is that the 5 UNPAIRED mentions — including /adjudication_summary_2026_
+  FAIL   item v2.a clause (iii), second half — the STATEMENT that 293b29c/79eb401 are one draw, not two: expected stated in a companion note beside the seal | observed present in 0 companion artefacts: []
+         without it a reader cannot tell whether the split was re-drawn (a new salt would be owed) or only re-manifested; ORCH-2 has verified the substance in the row above, so this item is documentation-only
+  FAIL   O-5 amended A1 — the seal stays byte-identical, a dated companion note names both digests, and the quantum-b FREEZE binds the companion's digest alongside the seal's: expected all three | observed seal untouched: True; companion artefacts naming both digest
+         A1 as originally written ('HELD-OUT-SPLIT-V2.json's own header binds c40d272f…, append-only') is unsatisfiable without moving 73d86f0d…, which the appendix and criterion v2.10 both bind — a collision 
+  FAIL   item v2.g — how many of the harness's refusal paths are ASSERTED by a test (capability evidence is only as good as its tests): expected all 12 | observed 8/12 asserted; UNTESTED: ['detector PARAMETERS changed after
+         the refusal surface grew from 9 to 12 with the pre-registered exclusions, and 4 of the 12 are unasserted: the PARAMETERS-changed branch, the evaluated-set refusal (a PARTIAL READ), the exclusions-not-
+  FAIL   criterion 20.14c — no own-time stamp POST-DATES the commit that contains it (item 12's other half; TASK-018 item 0h, TASK-019 item v2.h): expected 0 forward stamps | observed 19 forward of 42 own-time stamps in 28 changed files: runs/m
+         a file's bytes cannot carry a stamp from a time the committer had not reached; the offsets here are +32 to +41 min and every one is :00- or cadence-shaped, i.e. projected, not read
+  FAIL   the WORKER lane's CONTROL.log utc column is exact, orderable and never ahead of the commit that carries it — it is the cadence input BOSS-2 reads (ERRATA-25f), so a bad column is a fleet-integrity risk: expected every utc exact to the second, non-decreasing down the file, | observed 56 rows: 47 exact / 9 minute-precision ['2026-09-25T18:26Z',
+         REPORTED to BOSS-2, not ruled here — ORCH-2 gates evidence, the boss owns fleet signals. Two findings travel with it: (1) seqs 10-15/38/39/45 each appear twice, so seq is not a unique key in this lane
+  FAIL   ANNEX §H (A4 amended) — BOTH denominators fixed before the run: 29 PRIMARY and 33 as a pre-registered SENSITIVITY from the same run: expected the note or the exclusions file commits to reporting both, t | observed counts recorded: 29 evaluated / 33 holdout; a 33-transcript 
+         A4 as written fixed 33 primary + 29 sensitivity. WORKER-2's note swaps the primary to 29 on the label-taint ground (§F2's own reason) and forbids the four from re-entering any denominator. ORCH-2 ADOP

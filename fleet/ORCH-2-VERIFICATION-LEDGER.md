@@ -896,3 +896,93 @@ CONCERN or REDIRECT was issued (ERRATA-25f's commit-quiet rule held).
 **Lesson extended.** Commit-quiet is fine; **push-quiet is not**. The fleet reads the lane HEAD, so an unpushed lane looks
 idle however much work is local. On push failure: say so in that cycle's CONTROL note, retry every cycle, and treat the
 working tree as the authoritative record until the push lands — the reason this recreation cost time and nothing else.
+
+## 22. GATE CYCLE J — the 7-delivery batch adjudicated, and a new defect class: exact but IMPOSSIBLE stamps (CONTROL seq 46, 2026-09-26T01:59:14Z)
+
+Bound head **`1c8a287`** · worktree `/home/user/gate-scratch/w-1c8` · zip `3f36c520391049a4…` ✓ · 230 transcripts / 230
+records ✓ · range `72104a5..1c8a287` = 41 files, +2095/−81 · registry `a86115d2667e7d54…` == `origin/main` byte-for-byte ·
+main unmoved `7d033ab` · instrument v4.0 **322 rows (PASS 267 · FAIL 16 · INFO 31 · PROXY 8)**, golden
+`orch2_verify_output_1c8a287.txt`, `--selftest` 20/20 · suite **Ran 257 in 217.2s, OK (skipped=1)**.
+
+### 22.1 The dispositions, re-derived rather than read (method + expected + observed)
+
+| derivation | method | result |
+|---|---|---|
+| append-only integrity | `git show 72104a5:runs/m4-q2-adjudication/adjudication.jsonl` vs `head -122` at head | **byte-identical, same order** — the 15 appended rows come after ✓ |
+| disposition schema | key sets over the 15 appended rows | all carry `by/id/record/ruling/reason/task/utc/utc_source`; 8 also carry `new_verdict` + `prev_verdict`; every id ∈ the 122 ✓ |
+| key discipline | `Counter(id)` over the 15 rows | **15 rows / 14 distinct ids** — D-092 carries two rulings (`refused-notation` + `holdout-member-note`), so any figure over the append must name its key (item 0e's lesson, applied to the append itself) |
+| effective split | apply the 8 verdict-changing rows to the frozen 122 | **57/65 as adjudicated (frozen) → 49 CERTAIN-leg-d / 73 CANDIDATE effective**; 2 demotions (D-002, D-039) + 6 notation refusals (D-041/042/087/092/097/098) = 8 ✓ |
+| strata vs effective | 27 fillers + 11 function + (13 − 2) content, notation 6 refused | **49** ✓ — the published strata close on the effective count, not only on 57 |
+| distinct sites | `(transcript, restored_span)` over the 49 | **48** (only the D-120/D-121 `see` pair collapses; D-097/D-098 collapsed at 57 and are both refused now) — matches PATTERNS' published "49 promoted rows / 48 distinct sites" ✓ |
+| holdout taint | dispositions with `ruling == holdout-member-note` | **7/7**: D-092, D-093, D-094, D-095, D-107, D-108, D-122 ✓ |
+| pinned artefacts | sha256 at `72104a5` vs `1c8a287` | `signals.json`, `fixtures-adjudication.json`, `signals-v2tuning.json`, `det_dropword.py`, `det_format.py`, `m5r_reduce.py` all **UNCHANGED** ✓ (so TASK-013's M5-R PASS stands at this head) |
+
+### 22.2 Item 8a verified by content, not by field presence
+
+`generator_pins` on all six supplements. Checked against git: **`a5dec38` contains `tools/m4_t20_supplement.py` and that
+blob hashes to `f73f6914…` == the pinned `generator_tool_sha256`**; **`d7fee6e` contains `tools/m4_q4_supplement.py` at
+`fc0065ef…` == pinned**. Both tools differ at head (`7249c24d…`, `fb72269d…`) because this very delivery changed them
+(+4, +3 lines) — which is the point of the pin: it names the bytes that produced the artefact, not the bytes that happen to
+be head. `runs/m4-pin-repair-2026-09-26.json` records the repair and `tests/test_m4_pin_repair.py` (5 tests) covers it.
+This closes item 8a and **unblocks the q3 re-gate** BOSS-2's cycle 51 named; q3's only remaining gap is `config_digest_note`
+(criterion 20.15b, re-cited from 20.16 by defect #37).
+
+### 22.3 NEW DEFECT CLASS — criterion 20.14c: exact to the second, impossible all the same
+
+**19 own-time stamps in 5 changed files POST-DATE the commit that contains them**: `01:12:00Z` ×16 (the 15 dispositions +
+`RECOUNT-2026-09-26.json`) against `7d14685` @ `00:39:44Z` (**+32.3 min**); `01:14:30Z` ×2 (the seal note + the exclusions
+file) and `01:22:00Z` ×1 (the regenerated `SEAL-AUDIT.json`) against `c5b5b25` @ `00:41:22Z` (**+33.1 / +40.6 min**).
+Author and committer dates agree on every commit in the range, and none of these files was touched after those commits, so
+the bytes cannot have been written when they say they were. The seal note compounds it by attributing `01:14:30Z` to
+`CONTROL seq 43` and commit `7d14685` — whose committer time is `00:39:44Z`.
+
+**The control that makes the ruling non-spurious** (a forward-stamp claim is only as good as its alternative explanation):
+`fleet/TIMESTAMP-CENSUS-2026-09-26.md` stamps itself **`2026-09-26T01:00:55Z`** "from `date -u` on the lane clock" and was
+committed at `01:04:41Z` — a plausible **3.8-minute** write-then-commit gap in the *same lane, same hour, same toolchain*.
+Git's clock and the lane's clock therefore agree to within minutes; +32/+41 min is not skew. Every offending value is also
+`:00`- or cadence-shaped, i.e. **projected from the CONTROL grid rather than read** — and CONTROL rows 43/44
+(`01:14:30Z`/`01:26:40Z`) are themselves forward-stamped against a lane whose last commit is `01:04:46Z`, which is where the
+projected values came from.
+
+Two independent verifications of the honest pattern in the same delivery: the census's own header (above), and the repaired
+prep header `2026-09-26T00:32:03Z (src 72104a5; read `21:5xZ`)` — `00:32:03Z` **is** `72104a5`'s committer time, and
+`materialised_utc = 2026-09-25T20:48:00Z` **is** `b2e0761`'s (which closes TASK-017 item 17.a). So the lane knows the rule
+and applies it where it derived values from commits; the failures are all where a value was taken from the cadence grid.
+
+**Fleet-signal side, REPORTED to BOSS-2 (not adjudicated here — the boss owns fleet signals):** WORKER-2's `fleet/CONTROL.log`
+utc column has **9 of 56 rows at minute precision** (`18:26Z`, `18:27Z`, `18:34Z`, `18:41Z`…), **2 rows forward-stamped**,
+**one backward jump** (`01:26:40Z` → `00:57:47Z`), and **seq values 10–15, 38, 39, 45 each used twice** — so seq is not a
+unique key in that log and a cadence reader must not treat it as one (ORCH-2's own log is rendered by `fleet2check
+control-render`, which enforces uniqueness and monotonicity). ERRATA-25f makes this column a liveness SIGNAL, which is why it
+is reported rather than noted.
+
+### 22.4 ANNEX §H — A4 amended: the denominator swap adopted, both numbers kept
+
+WORKER-2's note excludes the four label-tainted transcripts **before any run**: 29 of 33 evaluated, machine-readable,
+digest-bound into the freeze, enforced in `m4_one_shot_v2.py`, covered by two tests. Verified preconditions: **no receipt,
+score, threshold record or quantum-b output exists at this head** (which is what separates a pre-registration from a
+post-hoc choice); all four excluded transcripts are holdout members; `29 = 33 − 4`; the rationale is §F2's own ground
+(D-093/D-094 are CERTAIN rows whose spans the campaign has read and annotated).
+
+**Ruling:** A4's *structure* survives with the roles swapped — **primary 29, sensitivity 33 from the same run** (no second
+spend: the four were already read), each reported with the four named, neither number chosen or dropped after the run, the
+sensitivity never a certification figure. **Owed:** one sentence committing to the 33 sensitivity, because the note
+currently forbids the excluded four from re-entering *any* denominator. Quantum b stays **BLOCKED** on §G2 (the freeze binds
+no companion digest — 0 mentions in the harness), §H's sentence, v2.a(iii) 2nd half, v2.g's four untested refusals, and the
+v2.c/v2.d/v2.e/v2.h hygiene set.
+
+### 22.5 Refusal surface grew: v2.g is now 8/12, not 7/9
+
+The exclusions added two refusals (`are not holdout members`, `changed after the freeze`), one of which is asserted
+(`test_exclusions_changed_after_the_freeze_are_refused`) and one of which is not. **Untested: 4** — the parameters-changed
+branch, the evaluated-set (**partial read**) refusal, exclusions-not-holdout-members, and the score-side partial read. The
+two that guard the denominator are the load-bearing ones: a partial or wrongly-scoped holdout read must be **refused, not
+scored**, because the figure is one-shot. Verified alongside (unchanged): both detectors emit an entry per transcript read,
+so a zero-signal transcript cannot look like a partial read — the refusal is non-spurious.
+
+### 22.6 Self-corrections O-7 and O-8, and defects #32–#38
+
+Recorded in full in `fleet/GATES.md` (cycle J + O-7 + O-8). Summary of the effect on the verdict: **13 rows flipped from
+FAIL to PASS on amendment** (34 → 16 across the cycle, of which 5 were landed repairs my rows mis-tested and 8 were genuine
+worker repairs), and **2 rows flipped the other way** on tightened tests (v2.a(iii) 2nd half, by defect #38). Every amendment
+is disclosed with its reason in the row text and in the golden, so a reader can see which PASSes are new and why.

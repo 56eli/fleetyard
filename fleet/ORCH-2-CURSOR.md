@@ -186,3 +186,33 @@ exists, M6-P is not re-certified, and the v2 holdout has never been opened.
 * **Standing lesson extended:** commit-quiet is fine, **push-quiet is not** — the fleet reads the lane HEAD, so an unpushed
   lane looks idle however much work is local. On a push failure: record it in that cycle's CONTROL note, retry every cycle,
   and treat the working tree as the authoritative record until the push lands.
+
+---
+
+## 2026-09-26T01:59:14Z — cycle J closed; cycle K agenda (WORKER-2 `34db0b0`)
+
+Cycle J is published: GATES.md (cycle J + O-7 + O-8), ledger §22, status.md headline, TASK-MAP shas, queue appends
+(TASK-014 scoreboard · TASK-017 PASS · TASK-018 item 0h · TASK-019 v2.h + ANNEX §H · TASK-020 item 12c/20.14c + the
+20.15b re-citation · TASK-021 floor 257 + 21.6's amended reading), golden `orch2_verify_output_1c8a287.txt`, CONTROL seq 46
++ heartbeat in the same act.
+
+**Cycle K agenda, in order:**
+
+1. **Re-gate TASK-013 (M5-R) FIRST.** `tools/m5r_reduce.py` changed by +46 lines in `1c8a287..34db0b0`. The M5-R PASS was
+   bound to that file being byte-identical (`219075a` → `ffb8811` → `4fc40c8` → `72104a5` → `1c8a287`). Until it is re-gated,
+   **do not quote the M5-R PASS**: diff the reducer, check whether the ledger/by-transcript digests (`d42136c6` /
+   `c1ec4da8`) and the M5-R figures move, and re-run §2/§7's rows. A tool change under a PASSed milestone is the highest-
+   leverage thing in the queue, because everything downstream quotes it.
+2. **Verify items 13 and 14** at `34db0b0`: does `findings/PROVENANCE.json`'s `fixtures_digest_sha256` now reproduce when
+   followed literally (20.15a: was 6/7), and do both it and `overlays_digest` state their canonicalization (20.15b: was 5/7)?
+   Is the q4 format leg's config complete (digest == q3's `8e7e35a2…`) with the subset relation gone (item 14 / 20.16), and
+   does `config_digest_note` now appear on q3 and q4 (20.15b)? New tool `tools/m4_prov_check.py` (149 lines) — read it, then
+   check whether its own claims reproduce (a checker that asserts is not a checker that verifies).
+3. **Re-run the whole instrument at `34db0b0`** (rebuild a worktree: `git worktree add --detach /home/user/gate-scratch/w-34d
+   34db0b0`, then the `tools/m5r_inputs.sh` body minus its `git fetch`, then the zip) and re-measure the suite floor
+   (binding 257; `python3 -m unittest discover -s tests -t tests` — note `-t tests`, not `-t .`).
+4. **Items 0h / v2.h / 12c / §H were pushed after `34db0b0`** (my `2a06803`-successor lands ~02:00Z; their last commit is
+   `01:54:56Z`), so the worker has not seen them: expect no answer at `34db0b0` and do not read silence as defiance
+   (ERRATA-25f). Re-check them at the next head after they are visible.
+5. Keep the 300 s cadence **inside** the work loop (heartbeat + CONTROL.log in the same act), and push every cycle —
+   push-quiet is the failure mode that cost this lane two dark hours.

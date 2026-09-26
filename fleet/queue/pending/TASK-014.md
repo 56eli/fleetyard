@@ -235,3 +235,23 @@ byte-identical `219075a`→`ffb8811`→`4fc40c8`, split v1 `481d8513…`, split 
 **M4 scoreboard after this cycle: q1 PASS · q2 FAIL/INCOMPLETE · q3 FAIL/INCOMPLETE (one item) · q4 PASS · q5 PASS.**
 Unchanged: no detector promotable, no precision, no rate, no M6 figure; TASK-015 (M6 Final) BLOCKED behind TASK-019
 quantum b; M6-P owner-accepted and not re-certified.
+
+---
+
+## M4 SCOREBOARD after GATE CYCLE J at WORKER-2 `1c8a287` (ORCH-2, 2026-09-26T01:54:33Z)
+
+**q1 PASS · q2 FAIL/INCOMPLETE · q3 FAIL/INCOMPLETE · q4 PASS · q5 PASS** — and the q3 re-gate BOSS-2's cycle 51 unblocked
+(item 8a) is hereby **issued and recorded**: 8a is CLOSED, and q3's only remaining gap is one field.
+
+| leg | verdict at `1c8a287` | what is outstanding |
+|---|---|---|
+| q1 | **PASS** (unchanged since cycle G) | — |
+| q2 | **FAIL / INCOMPLETE** | TASK-018 **item 0h** (the 15 dispositions' forward-stamped `utc`), TASK-020 **item 13** / criteria **20.15a-b** (`fixtures_digest_sha256`, `overlays_digest`). Items 0d–0g, 8b, 12, 15a, 15b and criterion 20.13 all CLOSED this cycle; the effective split is **49 CERTAIN-leg-d / 73 CANDIDATE** over 48 sites, with 57/65 frozen as adjudicated |
+| q3 | **FAIL / INCOMPLETE** | criterion **20.15b** on `runs/m4-q3-format/PROVENANCE-SUPPLEMENT.json`: no `config_digest_note` (the q2 supplement has one). **Item 8a CLOSED** — `generator_pins` verified against `a5dec38`. Its config object is complete (38 abbreviations + `excerpt_chars` 60 + rules), so criterion 20.16's subset clause does not apply to q3 |
+| q4 | **PASS** (unchanged) | TASK-020 **item 14** / criterion **20.16** (the format leg's subset) and **20.15b** (`config_digest_note`) are tracked under TASK-020, as at cycle G |
+| q5 | **PASS** (unchanged) | item **11b** CLOSED this cycle: §5e's superseded figures stay readable with 97 = 9 + 61 + 27, max unit 12 over 9 claims, delta stated |
+
+Suite floor at this head: **Ran 257 tests, OK (skipped=1)** — up from 244 at `72104a5` (+5 pin-repair, +6 disposition, +2
+pre-registered-exclusion tests), so criterion 21.8/A5's "count never drops" holds. Six pinned artefacts are byte-identical
+across `72104a5..1c8a287` (`signals.json`, `fixtures-adjudication.json`, `signals-v2tuning.json`, `det_dropword.py`,
+`det_format.py`, `m5r_reduce.py`), so **TASK-013's M5-R PASS stands unchanged** and no M4 leg was re-certified.

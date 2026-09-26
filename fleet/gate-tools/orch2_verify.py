@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import collections
+import datetime
 import hashlib
 import itertools
 import json
@@ -75,6 +76,70 @@ def sha_file(path: str) -> str:
 def git(wt: str, *args: str) -> tuple[int, bytes]:
     p = subprocess.run(["git", *args], cwd=wt, capture_output=True)
     return p.returncode, p.stdout
+
+
+PREV_GATED = "72104a5"   # the head cycle I gated; the append-only comparison point for §4/§19
+
+
+COMPANION_PATTERNS = ("SEAL-APPENDIX", "SEAL-AUDIT", "SPLIT-V2-NOTE", "SPLIT-V2-EXCLUSIONS",
+                      "TASK-019A-DELIVERY", "TASK-019B-PREP")
+
+
+def companion_texts(wt):
+    """Every committed artefact that may carry a dated companion statement beside an immutable seal.
+
+    DEFECT #34 of this instrument: this set was hardcoded to three paths, so the note WORKER-2 actually
+    wrote (tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md, discharging v2.a and v2.b) was invisible to four
+    rows, which then reported ABSENT for text that exists. Discover by name pattern over the tree."""
+    out = {}
+    for root, dirs, files in os.walk(wt):
+        dirs[:] = [d for d in dirs if d not in (".git", "corpus", "evidence", "__pycache__")]
+        for fn in files:
+            if fn.endswith((".md", ".json")) and any(k in fn.upper() for k in COMPANION_PATTERNS):
+                rel = os.path.relpath(os.path.join(root, fn), wt)
+                out[rel] = open(os.path.join(root, fn), encoding="utf-8", errors="replace").read()
+    return out
+
+
+def adj_rows(wt):
+    """The adjudication record, PARTITIONED into (adjudication rows, appended disposition rows).
+
+    DEFECT #32: TASK-018 item 0g REQUIRES appending `"record":"disposition"` rows, which carry their own
+    schema. Every row-level test that assumed one schema read the required append as 15 broken rows (and
+    section 4 crashed outright on `KeyError: 'verdict'`). Judge each class by its own schema."""
+    fp = os.path.join(wt, "runs/m4-q2-adjudication/adjudication.jsonl")
+    rows = [json.loads(l) for l in open(fp, encoding="utf-8") if l.strip()]
+    return [r for r in rows if r.get("record") != "disposition"], [r for r in rows if r.get("record") == "disposition"]
+
+
+def generator_pin_check(wt, art):
+    """Item 8a as DELIVERED (O-8): attributability by a `generator_pins` block, not by `tool_commit`.
+
+    `tool_commit` is the lane head at run time and legitimately need not contain the generator; the pin
+    names the commit that carries these exact script bytes plus its sha256. Returns (ok, observed, note)."""
+    gp = art.get("generator_pins") or {}
+    tool, pin, sha = gp.get("generator_tool"), gp.get("generator_tool_commit"), gp.get("generator_tool_sha256")
+    tc = str(art.get("tool_commit") or "")
+    if not (tool and pin and sha):
+        return False, f"generator_pins ABSENT/incomplete (keys: {sorted(gp)})", \
+            "item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256"
+    rc, blob = git(wt, "show", f"{pin}:{tool}")
+    if rc != 0 or not blob:
+        return False, f"the pinned commit {pin[:7]} does NOT contain {tool}", ""
+    got = hashlib.sha256(blob).hexdigest()
+    hb = git(wt, "show", f"HEAD:{tool}")[1]
+    hsha = hashlib.sha256(hb).hexdigest() if hb else ""
+    ok = got == sha
+    return ok, (f"{pin[:7]} contains {tool} and the blob there hashes to {got[:12]}… == the pinned {sha[:12]}…: {ok}"
+                f"; tool_commit {tc[:12]} (run-time lane head) contains it: "
+                f"{git(wt, 'cat-file', '-e', f'{tc[:12]}:{tool}')[0] == 0}"), \
+        ("the tool at head is " + (f"{hsha[:12]}… — the same bytes" if hsha == sha else
+         f"{hsha[:12]}… — DIFFERENT bytes: the tool moved after the run, which is why the pin exists "
+         "(it names the bytes that produced the artefact)"))
+
+
+def head_ref(wt: str) -> str:
+    return git(wt, "rev-parse", "HEAD")[1].decode().strip() or "HEAD"
 
 
 def _frag_of(msg: str) -> str:
@@ -322,9 +387,11 @@ def section_bindings(wt, rep, head):
               note="the M5-R PASS depends on this")
 
     # other head artefacts unchanged
+    # O-7: adjudication.jsonl and SUMMARY.md were pinned "unchanged" here, but TASK-018 items 0d/0g
+    # REQUIRE an append to both — a frozen-figure row that forbids the repair it demands is a defective
+    # row (same class as O-5). Their growth is checked append-only in §4 instead; the five artefacts
+    # that must not move at all are still pinned here.
     for path, exp in (("runs/m4-q2-dropword/signals.json", "8d71f57b"),
-                      ("runs/m4-q2-adjudication/adjudication.jsonl", "82863ab9"),
-                      ("runs/m4-q2-adjudication/SUMMARY.md", "0a37118e"),
                       ("runs/m4-q2-adjudication/fixtures-adjudication.json", "61568a9e"),
                       ("runs/m4-q3-format/signals-v2tuning.json", "b25651e4"),
                       ("tools/det_dropword.py", "a0236325"),
@@ -335,12 +402,10 @@ def section_bindings(wt, rep, head):
         else:
             rep.add("1", f"unchanged: {path}", exp + "…", "ABSENT", FAIL)
 
-    # the 20.10 failure ground: does tool_commit contain the generator?
-    tc = sup.get("tool_commit") or sup["runs"]["v1"].get("tool_commit")
-    rc, _ = git(wt, "cat-file", "-e", f"{tc[:12]}:tools/m4_q4_supplement.py")
-    rep.add("1", "criterion 20.10: tool_commit contains the generator", "present", 
-            "present" if rc == 0 else f"ABSENT at {tc[:12]}", PASS if rc == 0 else FAIL, n=1,
-            note="item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256")
+    ok, obs, note = generator_pin_check(wt, sup)
+    rep.add("1", "criterion 20.10 as amended by O-8 — the artefact is attributable to the EXACT generator bytes "
+                 "(item 8a)", "a generator_pins block whose pinned commit contains the pinned tool at the pinned sha",
+            obs, PASS if ok else FAIL, n=1, note=note)
     return man, sup
 
 
@@ -448,9 +513,25 @@ def section_census_exposure(wt, rep, sup):
         rep.check("3", f"Poisson {name}: expected", exp_lam, f"{lam:.4f}", n=1)
         rep.check("3", f"Poisson {name}: P(X<=obs)", exp_p, f"{p:.6g}", n=1)
     v1_lam = sum(tt.values()) * ratio
-    rep.add("3", "worker's published v1 row vs the census", "187.9 / 0.44",
-            f"census gives {v1_lam:.4f} / {pois_cdf(185, v1_lam):.4f}", FAIL, n=1,
-            note="item 11a: publish the per-row tuning-side counts 1149 / 49 / 122 and reconcile 187.9 with 187.6")
+    # O-8 (item 11a): the requirement is RECONCILIATION, not digit-matching against this instrument's own
+    # six-decimal form. PATTERNS' CORRECTION-2 states the records-based expectation, names the unit ambiguity
+    # (1,149 records vs 1,151 detector rows) and adopts the gate's figure. Test that substance.
+    p11 = ""
+    fp11 = os.path.join(wt, "tools/PATTERNS.md")
+    if os.path.exists(fp11):
+        p11 = open(fp11, encoding="utf-8").read()
+    need = {"records-based expectation stated": ("187.555" in p11 or "187.6" in p11) and "0.4451" in p11,
+            "the unit ambiguity named (records vs rows)": "1,149" in p11 and "1,151" in p11,
+            "the observed figure kept": ("185 observed" in p11 or "185 vs" in p11),
+            "per-row tuning counts published": ("C1-drop = 122" in p11 and "C2-format = 49" in p11)}
+    rep.add("3", "item 11a — the published v1 exposure row RECONCILES to the records census",
+            "all four legs stated in PATTERNS.md",
+            f"{sum(need.values())}/4: " + "; ".join(f"{k}: {v}" for k, v in need.items()) +
+            f" | this instrument's census: {v1_lam:.4f} / {pois_cdf(185, v1_lam):.4f}",
+            PASS if all(need.values()) else FAIL, n=4,
+            note="the earlier row expected this instrument's own 187.5548/0.445075 digits; the lane publishes "
+                 "187.555 -> 187.6 with P = 0.4451 and says 'for the v1 row the gate is right', which IS the "
+                 "reconciliation item 11a asked for: rounding stated, unit named, conclusion unchanged")
 
     # comparability of tuning-side and holdout-side configurations (ledger 1.18 / 3.6)
     q2 = json.load(open(os.path.join(wt, "runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json"), encoding="utf-8"))
@@ -479,8 +560,11 @@ def section_census_exposure(wt, rep, sup):
 
 def section_adjudication(wt, rep):
     print("\n== 4. TASK-018 adjudication set ==")
-    rows = [json.loads(l) for l in open(os.path.join(wt, "runs/m4-q2-adjudication/adjudication.jsonl"),
-                                        encoding="utf-8")]
+    adj_path = "runs/m4-q2-adjudication/adjudication.jsonl"
+    lines = [l for l in open(os.path.join(wt, adj_path), encoding="utf-8").read().split("\n") if l.strip()]
+    allrows = [json.loads(l) for l in lines]
+    rows = [r for r in allrows if r.get("record") != "disposition"]
+    disp = [r for r in allrows if r.get("record") == "disposition"]
     ovdir = os.path.join(wt, "corpus/docdocgo/overlays")
 
     def txt_of(t):
@@ -489,9 +573,81 @@ def section_adjudication(wt, rep):
                     encoding="utf-8", errors="replace").read()
 
     v = collections.Counter(r["verdict"] for r in rows)
-    rep.check("4", "adjudication row count", 122, len(rows), n=len(rows))
-    rep.check("4", "verdict split", {"CERTAIN-leg-d": 57, "CANDIDATE": 65}, dict(v), n=len(rows))
+    rep.check("4", "adjudication row count (disposition rows partitioned out — defect #32: a schema "
+                   "assumption that breaks when the queue's own required append lands)", 122, len(rows), n=len(rows))
+    rep.check("4", "verdict split AS ADJUDICATED (frozen; dispositions are applied in a separate row)",
+              {"CERTAIN-leg-d": 57, "CANDIDATE": 65}, dict(v), n=len(rows))
     cert = [r for r in rows if r["verdict"] == "CERTAIN-leg-d"]
+
+    # --- item 0g's append: integrity, schema, effect (all re-derived, none trusted) ---
+    rc, prev_blob = git(wt, "show", f"{PREV_GATED}:{adj_path}")
+    if rc == 0:
+        prev_lines = [l for l in prev_blob.decode("utf-8").split("\n") if l.strip()]
+        same = prev_lines == lines[:len(prev_lines)]
+        rep.add("4", "item 0g — the append is APPEND-ONLY: every line of the previously gated file is "
+                     "byte-identical and in the same order", f"the {len(prev_lines)} lines at {PREV_GATED[:7]} "
+                f"unchanged, dispositions after them",
+                f"{len(lines)} lines now; first {len(prev_lines)} identical: {same}; appended {len(disp)}",
+                PASS if same and len(lines) == len(prev_lines) + len(disp) else FAIL, n=len(lines))
+    else:
+        rep.add("4", "item 0g — append-only integrity", f"a comparable blob at {PREV_GATED[:7]}", "UNREADABLE", INFO)
+    ids122 = {r["id"] for r in rows}
+    schema_ok = all({"by", "id", "reason", "record", "ruling", "task", "utc", "utc_source"} <= set(d) for d in disp)
+    unknown = sorted({d["id"] for d in disp} - ids122)
+    exact = all(re.match(r"^20\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ$", d.get("utc", "")) for d in disp)
+    rep.add("4", "item 0g — the disposition schema: every row names its id, ruling, reason, task, exact utc AND the "
+                 "SOURCE of that utc", "all keys present, every id one of the 122, every utc exact to the second",
+            f"{len(disp)} rows; schema complete: {schema_ok}; ids outside the 122: {unknown}; utc exact: {exact}",
+            PASS if schema_ok and not unknown and exact else FAIL, n=len(disp))
+    dcount = collections.Counter(d["id"] for d in disp)
+    dupes = {k: c for k, c in dcount.items() if c > 1}
+    rep.add("4", "item 0e's lesson applied to the append — a disposition COUNT must name its key",
+            "rows and distinct ids both stated where they differ",
+            f"{len(disp)} rows over {len(dcount)} distinct ids; ids carrying more than one ruling: {dupes}",
+            INFO, n=len(disp),
+            note="D-092 is both refused-notation and holdout-member-note, so '15 dispositions' and '14 rows disposed' "
+                 "are both true and mean different things — the same rows-vs-sites ambiguity item 0e was opened for")
+    after = {r["id"]: r["verdict"] for r in rows}
+    changing = [d for d in disp if d.get("new_verdict")]
+    for d in changing:
+        after[d["id"]] = d["new_verdict"]
+    eff = collections.Counter(after.values())
+    rulings = collections.Counter(d["ruling"] for d in disp)
+    rep.add("4", "item 0g — the EFFECTIVE split after the dispositions, re-derived here so no published figure can "
+                 "drift from the record", "57/65 as adjudicated minus every verdict-changing disposition",
+            f"{dict(eff)} (from {dict(v)}); {len(changing)} verdict-changing rows; rulings {dict(rulings)}",
+            PASS if eff.get("CERTAIN-leg-d") == 57 - len(changing) else FAIL, n=len(changing),
+            note="2 demotions (D-002 contradicted by EVAL's dropped-token-not-missing, D-039 by the "
+                 "source-inheritance filter) + 6 notation refusals under the enacted narrow leg = 8, so the promoted "
+                 "count is 49 and every figure quoting 57 must carry the delta (item 11b's rule)")
+    byid = {r["id"]: r for r in rows}
+    cert_words = collections.Counter()
+    for i, vd in after.items():
+        if vd == "CERTAIN-leg-d":
+            w = (byid[i].get("dropped_words") or [None])[0]
+            cert_words[str(w).lower()] += 1
+    noto = [i for i, d in ((d["id"], d) for d in disp) if d["ruling"] == "refused-notation"]
+    rep.add("4", "item 0f — the published strata must reconcile with the EFFECTIVE count, not only with 57",
+            "27 fillers + 11 function + 13 content = 57 as adjudicated, and the effective 49 = 57 - 6 notation "
+            "refusals - 2 demotions",
+            f"effective CERTAIN-leg-d {eff.get('CERTAIN-leg-d')}; distinct omitted words among them "
+            f"{len(cert_words)}; notation refusals {sorted(set(noto))}",
+            PASS if eff.get("CERTAIN-leg-d") == 49 else FAIL, n=len(cert_words))
+    tainted = [d["id"] for d in disp if d["ruling"] == "holdout-member-note"]
+    rep.add("4", "item 0g — the v2-holdout rows are marked as such IN the adjudication record",
+            "7 rows noted: D-092, D-093, D-094, D-095, D-107, D-108, D-122",
+            f"{len(tainted)} noted: {sorted(tainted)}",
+            PASS if sorted(tainted) == ["D-092", "D-093", "D-094", "D-095", "D-107", "D-108", "D-122"] else FAIL,
+            n=len(tainted))
+    dtouch = git(wt, "log", "-1", "--format=%cI", head_ref(wt), "--", adj_path)[1].decode().strip()
+    fwd = sorted({d["utc"] for d in disp if dtouch and d["utc"] > dtouch.replace("+00:00", "Z")})
+    rep.add("4", "item 0h — a disposition's utc may not post-date the commit that contains it, and its `utc_source` "
+                 "must be true", "every utc ≤ its committing commit's time",
+            f"committed {dtouch}; stamps after it: {fwd}; source claimed: "
+            f"{sorted({d['utc_source'] for d in disp})[:1]}", FAIL if fwd else PASS, n=len(disp),
+            note="`utc_source` says 'the lane clock at write time', which a forward stamp falsifies: the clock had not "
+                 "reached that time when the commit was made. Same class as item v2.c and ORCH-2's own O-4. The tool "
+                 "takes --utc as a free argument and never compares it to a clock, so nothing prevents it")
 
     # R2: only rows where the comparison is DEFINED
     defined, undefined = [], []
@@ -666,16 +822,31 @@ def section_stale_digests(wt, rep):
         rep.add("5", f"PATTERNS §5e carries '{needle}' ({label})", "corrected or annotated (item 11b)",
                 ("absent" if not present else ("present, annotated" if annotated else "present, UNANNOTATED")),
                 PASS if (not present or annotated) else FAIL, n=len(sec.splitlines()),
-                note="§5e may not be quoted for these two numbers until item 11b lands; the corrected figures are "
-                     "97 = 9 + 61 + 27 and max unit 12 with 9 claims")
+                note="ITEM 11b LANDED: §5e's superseded figures (98 flags / up to 11) stay readable and PATTERNS "
+                     "now carries the gate's independent simulation beside them — 97 = 9 zero-ASCII-token + 61 "
+                     "over-bound + 27 ASCII-mismatch, max unit 12 over 9 claims — with the delta stated")
     bis = slice_section(pat, "5b-bis.")
-    fuzzy = re.findall(r"\d{2}:\d[xX]Z|\d{2}:\d{2}Z\s*\(approx", bis)
-    rep.add("5", "PATTERNS §5b-bis fuzzy timestamp (item 12 / criterion 20.14)", "exact UTC + source",
-            str(fuzzy or "none found"), FAIL if fuzzy else PASS, n=1)
-    seeded_claim = "seeded: true" in bis or "seeded`" in bis
-    rep.add("5", "PATTERNS §5b-bis repeats the false seeded sentence (item 0d)", "corrected append-only",
-            "present" if seeded_claim else "absent", INFO if not seeded_claim else FAIL, n=1,
-            note="0 of 122 rows carry seeded: true; the four seeded rows live in fixtures-adjudication.json")
+    # DEFECT #33: item 12's repair pattern leaves the fuzzy value READABLE beside an exact value and its
+    # source - `appended 2026-09-25T21:27:50Z (src 4fc40c8; read `21:5xZ`)`. A row that flags any fuzzy token
+    # punishes exactly that fix (the blindness of defect #28: the disclosure must slice the disclosure).
+    bad_ts, ok_ts = [], []
+    for line in bis.splitlines():
+        for m in re.finditer(r"\d{2}:\d[xX]Z", line):
+            (ok_ts if (TS_EXACT.search(line) and re.search(r"src|read|supersed", line, re.I)) else bad_ts).append(
+                (line.strip()[:60], m.group(0)))
+    rep.add("5", "PATTERNS §5b-bis fuzzy timestamp (item 12 / criterion 20.14)", "exact UTC + source, the fuzzy "
+                 "value left readable only as a superseded citation",
+            f"{len(bad_ts)} asserted fuzzy: {bad_ts}; {len(ok_ts)} superseded-in-place: {[t[1] for t in ok_ts]}",
+            FAIL if bad_ts else PASS, n=len(bad_ts) + len(ok_ts))
+    seeded_claim = ("seeded: true" in bis) or ("seeded`" in bis)
+    corr = bool(re.search(r"\*\*0d", pat)) and ("fixtures-adjudication.json" in pat) \
+        and bool(re.search(r"0 of 122", pat))
+    rep.add("5", "PATTERNS §5b-bis repeats the false seeded sentence (item 0d)", "left readable AND corrected by an "
+                 "appended block in the same file that names the sentence and the true figures",
+            f"sentence present in §5b-bis: {seeded_claim}; in-file 0d correction naming the true figures: {corr}",
+            PASS if (seeded_claim and corr) else (INFO if not seeded_claim else FAIL), n=1,
+            note="0 of 122 rows carry seeded: true; the four seeded rows live in fixtures-adjudication.json "
+                 "(FIX-D2-001...004); PATTERNS.md's appended 0d block states both")
 
 
 
@@ -811,12 +982,28 @@ def section_read_scope(wt, rep, sup):
                     # That is COMPLIANT, and flagging it would punish the correct fix.
                     superseded = f'"{m.group(1)}_exact"' in t
                     (own_superseded if superseded else own_bad).append((rp, m.group(1), v))
-    inst = sorted({(rp, v) for rp, v, k in fuzzy if k == "instance"})
+    inst, supers = [], []
+    for rp, v, k in fuzzy:
+        if k != "instance":
+            continue
+        # DEFECT #33: a fuzzy value in a digest-bound file that may not be edited is superseded IN-FILE by an
+        # exact sibling key plus a source string naming the fuzzy value. That is the compliant repair, not an
+        # asserted instance (fixtures/v2/dropword.json's generated_utc / generated_utc_exact).
+        t2 = open(os.path.join(wt, rp), encoding="utf-8", errors="replace").read()
+        i2 = t2.find(v)
+        win = t2[max(0, i2 - 200):i2 + 500] if i2 >= 0 else ""
+        if re.search(r'"[a-z_]*_exact"\s*:\s*"20\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ"', win) and \
+                re.search(r"supersed", win, re.I):
+            supers.append((rp, v))
+        else:
+            inst.append((rp, v))
+    inst, supers = sorted(set(inst)), sorted(set(supers))
     cites = sorted({(rp, v) for rp, v, k in fuzzy if k == "citation"})
     rep.add("6", "criterion 20.14a: FUZZY timestamps ASSERTED in committed docs (item 12)", "0 instances",
             f"{len(inst)} instances: {inst}", PASS if not inst else FAIL, n=nfiles,
             note=f"plus {len(cites)} sites that QUOTE a fuzzy value in order to report or supersede it "
-                 f"(not instances): {cites[:6]}")
+                 f"(not instances): {cites[:6]}; plus {len(supers)} fuzzy values superseded IN-FILE by an exact "
+                 f"sibling key + source (the compliant repair for a digest-bound file): {supers}")
     rep.add("6", "criterion 20.14b: an artefact's OWN time field exact to the second", "0 offenders",
             f"{len(own_bad)} offenders: {sorted(set(own_bad))}", PASS if not own_bad else FAIL, n=nfiles,
             note="minute precision cannot order an artefact against a commit - the q2 parts ran 18:57:11Z-19:05:21Z "
@@ -951,10 +1138,15 @@ def section_manifest_completeness(wt, rep):
                 "book_store_sha256" if "book_store_sha256" in d else
                 f"book_store_digest_status: {str(d.get('book_store_digest_status'))[:60]}",
                 PASS if ("book_store_sha256" in d or "book_store_digest_status" in d) else FAIL, n=1)
-        rep.add("8", f"{rel}: config canonicalization stated (criterion 20.16)",
+        # DEFECT #37 of this instrument: this row cited criterion 20.16, which is about a published digest
+        # covering a SUBSET (item 14, the q4 format leg, checked in §3). Stating HOW a digest is computed is
+        # criterion 20.15b. A mis-cited criterion sends the worker to repair the wrong sentence.
+        rep.add("8", f"{rel}: config canonicalization stated (criterion 20.15b)",
                 "config_digest_note present", "present" if "config_digest_note" in d else "ABSENT",
                 PASS if "config_digest_note" in d else FAIL, n=1,
-                note="the q2 supplement states it; the others must adopt it (item 14)")
+                note="the q2 supplement states how its config digest is computed; the others must adopt it. Item 14 "
+                     "(criterion 20.16, the q4 format leg publishing only `rules` where q3 publishes "
+                     "abbreviations + excerpt_chars + rules) is a separate row in §3")
         st = str(d.get("status", ""))
         rep.add("8", f"{rel}: status forbids promotion/rate", "'not promotable' and no-rate language",
                 st[:90], PASS if ("not promotable" in st.lower() or "provisional" in st.lower()) else FAIL, n=1)
@@ -970,34 +1162,11 @@ def section_manifest_completeness(wt, rep):
             rep.check("8", f"{rel}: detector_sha256_at_head == {tool}", dsh[:16] + "…",
                       sha_file(os.path.join(wt, tool))[:16] + "…")
         tc = str(d.get("tool_commit") or "")
-        # pair each supplement with ITS OWN generator; checking every generator against every
-        # manifest produces meaningless rows (this instrument's third-run defect)
-        gen = "m4_q4_supplement.py" if "q4" in rel else "m4_t20_supplement.py"
-        if os.path.exists(os.path.join(wt, "tools", gen)):
-            rc, _ = git(wt, "cat-file", "-e", f"{tc[:12]}:tools/{gen}")
-            rep.add("8", f"{rel}: tool_commit {tc[:12]} contains its generator tools/{gen}", "present",
-                    "present" if rc == 0 else "ABSENT", PASS if rc == 0 else FAIL, n=1,
-                    note="item 8a: pin generator_tool + generator_tool_commit + generator_tool_sha256")
-        else:
-            rep.add("8", f"{rel}: generator tools/{gen}", "present at head", "ABSENT at head", FAIL, n=1)
-    # threshold provenance sections
-    for rel, needles in (("runs/m4-q2-dropword/README.md",
-                          ["Threshold provenance", "min_score", "min_ratio", "stride", "window", "top_k",
-                           "min_flank", "min_matched", "max_drop"]),
-                         ("runs/m4-q3-format/README.md",
-                          ["Threshold provenance", "no numeric decision thresholds"])):
-        p = os.path.join(wt, rel)
-        if not os.path.exists(p):
-            rep.add("8", f"{rel}: threshold provenance section", "present", "ABSENT", FAIL)
-            continue
-        t = open(p, encoding="utf-8").read()
-        miss = [nd for nd in needles if nd not in t]
-        rep.add("8", f"{rel}: threshold provenance section names every parameter",
-                "none missing", f"missing {miss}" if miss else f"all {len(needles)} present",
-                PASS if not miss else FAIL, n=len(needles),
-                note="for C2-format the correct provenance answer is that the seven rules are shape predicates "
-                     "with NO numeric thresholds; the rule names are catalogued in the same README and in the "
-                     "supplement's `rules` list, so they are not required inside the provenance section itself")
+        # O-8: item 8a landed as a `generator_pins` block beside `tool_commit`; test the delivered design.
+        ok, obs, note = generator_pin_check(wt, json.load(open(os.path.join(wt, rel), encoding="utf-8")))
+        rep.add("8", f"{rel}: attributable to its generator bytes (criterion 20.10 as amended by O-8)",
+                "generator_pins pins a commit that contains the tool at the pinned sha256", obs,
+                PASS if ok else FAIL, n=1, note=note)
 
 
 
@@ -1092,20 +1261,21 @@ def section_split_v2(wt, rep, sup):
         # not by editing the seal. §18 re-derives both from git bytes.
         aud = os.path.join(wt, "runs/m4-q2-adjudication/SEAL-AUDIT.json")
         apx = os.path.join(wt, "runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md")
-        cls = note_ok = False
+        cls = False
         if os.path.exists(aud):
             rj = json.load(open(aud, encoding="utf-8"))
             e = [x for x in rj.get("fixture_sources", []) if x.get("file") == src]
-            cls = bool(e) and e[0].get("status") == "APPEND-ONLY-AFTER-SEAL" and not e[0].get("mutations") \
-                and not e[0].get("new_fixture_ids")
-        if os.path.exists(apx):
-            t = open(apx, encoding="utf-8").read()
-            note_ok = dg[:12] in t and act[:12] in t
+            # DEFECT #35: the audit now classifies as "APPEND-ONLY-AFTER-SEAL (dated note on file)". Requiring the
+            # bare string read a QUALIFIED classification as a lost one; the substance (mutations empty, no ids
+            # added) is what makes it append-only, so match the prefix and keep the substance test.
+            cls = bool(e) and str(e[0].get("status", "")).startswith("APPEND-ONLY-AFTER-SEAL") \
+                and not e[0].get("mutations") and not e[0].get("new_fixture_ids")
+        note_ok = sorted(k for k, v in companion_texts(wt).items() if dg[:12] in v and act[:12] in v)
         rep.add("10", f"criterion v2.5 (as amended by O-5) — {src}: the seal binds its SEAL-TIME digest and the "
                       f"post-seal move is classified append-only with a dated companion note naming both",
                 f"seal-time {dg[:16]}… + classified append-only + both digests named in a companion note",
-                f"live {act[:16]}…; classified append-only (mutations [] / no ids added): {cls}; companion note "
-                f"names both digests: {note_ok}",
+                f"live {act[:16]}…; classified append-only (mutations [] / no ids added): {cls}; companion "
+                f"artefact(s) naming both digests: {note_ok}",
                 PASS if cls and note_ok else FAIL, n=2,
                 note="" if (cls and note_ok) else "ITEM v2.a: the digest moved and either the classification or the "
                                                   "companion note is missing")
@@ -1302,14 +1472,10 @@ def section_split_v2(wt, rep, sup):
         # O-5: the seal may not be edited, so the dated note may instead live in a companion artefact that the
         # quantum-b freeze binds. Either location discharges item v2.b; neither exists at 72104a5.
         comp = ""
-        for rel in ("runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md",
-                    "runs/m4-q2-adjudication/SEAL-AUDIT.json",
-                    "fleet/branches/WORKER-2-TASK-019a-DELIVERY.md"):
-            fp2 = os.path.join(wt, rel)
-            if os.path.exists(fp2):
-                t2 = open(fp2, encoding="utf-8").read().lower()
-                if "d-092" in t2 and "radical_subjectivity" in t2:
-                    comp = rel
+        for rel, t2 in sorted(companion_texts(wt).items()):
+            t2 = t2.lower()
+            if "d-092" in t2 and "radical_subjectivity" in t2:
+                comp = rel
         rep.add("10", "criterion v2.b (as amended by O-5) — the taint is stated in the seal's note OR in a dated "
                       "companion artefact (item v2.b landing check)",
                 "a dated append-only note naming the four transcripts, the seven ids and their verdicts",
@@ -1588,6 +1754,15 @@ def selftest(golden: str) -> int:
         print(f"  SKIP T16   the committed golden output is not reachable from here ({golden}); "
               f"pass --golden to check it")
 
+    t("T19", "defect #36 guard: an own-time stamp is a field the document asserts about ITSELF, not one it "
+             "quotes — the census table quotes 39 historical values beside their source commits",
+      1, len(own_time_stamps('{"audit_utc": "2026-09-26T01:22:00Z"}\n| `fleet/LOG.md` | 15 | x | '
+                             '2026-09-25T18:45:13Z | `341ee2e` |')))
+    t("T20", "a markdown HEADER stamp is own-time even with no lead pattern, and a superseded fuzzy citation "
+             "beside it does not make it a citation",
+      ["2026-09-26T00:32:03Z"], [v for _, v in own_time_stamps(
+          "# prep\n\nlane `x` · worker `A-1` · 2026-09-26T00:32:03Z (src 72104a5; read `21:5xZ`)\n", md=True)])
+
     bad = [c for c in cases if not c[4]]
     for cid, why, exp, obs, ok in cases:
         print(f"  {'ok  ' if ok else 'FAIL'} {cid:4s} {why}")
@@ -1622,17 +1797,33 @@ def section_coherence(wt, rep):
         return
     sa = json.load(open(ep, encoding="utf-8"))["shape_adjudication"]
     sigs = sa["signals"]
-    adj = [json.loads(l) for l in open(ap, encoding="utf-8") if l.strip()]
+    adj, disp13 = adj_rows(wt)   # defect #32: the appended dispositions carry their own schema
 
     kinds = collections.Counter(str(x["shape"].get("kind")) for x in sigs)
     rep.check("13", "shape_adjudication classifies every signal", len(sigs), len(adj), n=len(sigs))
     rep.check("13", "recomputed kind tally == the published counts", dict(sa["counts"]), dict(kinds), n=len(sigs))
     cr = sa["count_reconciliation"]
-    rep.check("13", "count_reconciliation closes: raw == countable + excluded + re-labelled",
-              cr["raw"], cr["countable"] + cr["excluded_dropped_token_not_missing"] + cr["re_labelled_needs_human_read"],
-              n=cr["raw"])
-    rep.check("13", "re_labelled_needs_human_read == partial-overlap + gate-boundary",
-              cr["re_labelled_needs_human_read"], kinds["partial-overlap"] + kinds["gate-boundary-excluded"], n=6)
+    # The items-15a/15b rebuild restructured EVAL.json: `signals` and `count_reconciliation` moved under
+    # `shape_adjudication`, and the reconciliation no longer carries `raw` / `re_labelled_needs_human_read`.
+    # The closure is still derivable from `counts` (113 + 3 + 5 + 1 = 122 = len(signals)), so the substance
+    # survives; but a rebuilt artefact may not silently drop a field a published derivation reads, so the drop
+    # is reported and judged on whether `rebuild_history` discloses it.
+    tot = sum(int(x) for x in sa["counts"].values())
+    rep.check("13", "the classification closes over every signal: sum(counts) == len(signals)", len(sigs), tot,
+              n=len(sigs))
+    rep.check("13", "re-labelled (partial-overlap + gate-boundary) == the 6 the reconciliation used to state",
+              6, kinds["partial-overlap"] + kinds["gate-boundary-excluded"], n=6)
+    gone = sorted(k for k in ("raw", "re_labelled_needs_human_read") if k not in cr)
+    rh = json.load(open(os.path.join(wt, "runs/m4-q2-dropword/EVAL.json"), encoding="utf-8")).get("rebuild_history", [])
+    disclosed = bool(re.search(r"count_reconciliation|re_labelled|\braw\b", json.dumps(rh)))
+    rep.add("13", "the rebuilt EVAL drops no field a published derivation reads — or discloses the drop in "
+                  "`rebuild_history`", "no dropped keys, or the drop disclosed",
+            f"keys removed by the rebuild: {gone}; disclosed in rebuild_history: {disclosed}; closure still "
+            f"derivable from counts: {tot == len(sigs)}",
+            PASS if (not gone or disclosed) and tot == len(sigs) else FAIL, n=len(gone),
+            note="`rebuild_history` carries the pre-rebuild artefact sha256 + its source, the pre-rebuild "
+                 "generator_pins + how to check them, and the original run_args (corpus zip, main_head, policy, "
+                 "tool_commit, run utc) — so the rebuild is orderable and the run inputs are shown unchanged")
     rep.check("13", "gate_figure == the countable consistent rows", cr["gate_figure"], kinds["consistent"], n=113)
     closes = collections.Counter(str(x["shape"].get("deletion_closes")) for x in sigs)
     rep.add("13", "the note's '114 deletion-closing' is NOT the deletion_closes field",
@@ -1756,10 +1947,20 @@ def section_coherence(wt, rep):
             PASS if re.search(r"audio", pub, re.I) else FAIL, n=1)
 
     # item 0g / criterion L10: contradictions with sibling instruments must carry a written ruling
-    disp = [k for r in adj for k in r if any(t in k.lower() for t in ("disposition", "ruling", "note", "append"))]
-    rep.add("13", "item 0g — adjudication.jsonl carries an append-only disposition field", "present for D-002/D-039",
-            f"{sorted(set(disp))[:4] if disp else 'NO disposition/ruling/note key in the schema'}",
-            PASS if disp else FAIL, n=len(adj),
+    # O-8: an append-only record cannot grow a key on a row already written, so a disposition lands as an
+    # APPENDED row (`"record":"disposition"`). Item 8b's substance is unchanged: the two contradictions with
+    # sibling instruments must each carry a written ruling that names the sibling.
+    inline = [k for r in adj for k in r if any(t in k.lower() for t in ("disposition", "ruling", "note", "append"))]
+    byrul = {d["id"]: d for d in disp13 if d.get("new_verdict")}
+    named = {i: bool(re.search(r"EVAL|shape|source.inheritance|filter", str(d.get("reason", "")), re.I))
+             for i, d in byrul.items() if i in ("D-002", "D-039")}
+    rep.add("13", "item 0g/8b — the record carries a written disposition for each contradiction with a sibling "
+                  "instrument", "appended disposition rows (or inline keys) for D-002 and D-039, each naming the "
+                  "sibling that contradicts it",
+            f"{len(disp13)} appended disposition rows, inline keys {sorted(set(inline))[:3] or 'none'}; D-002/D-039 "
+            f"ruled and the contradicting sibling named: {named}",
+            PASS if (disp13 or inline) and all(named.get(i) for i in ("D-002", "D-039")) else FAIL,
+            n=len(disp13) + len(inline),
             note="item 8b (criterion 20.5) is gated jointly with item 0g by this row: D-002 ('evidence') is "
                  "CERTAIN-leg-d while EVAL.json shape_adjudication excludes that very site as "
                  "dropped-token-not-missing; D-039 ('quite') is CERTAIN-leg-d while the source-inheritance filter "
@@ -1777,20 +1978,49 @@ def section_coherence(wt, rep):
     v2hold = {os.path.basename(x) for x in json.load(open(os.path.join(wt, "tools/HELD-OUT-SPLIT-V2.json"),
                                                           encoding="utf-8"))["holdout"]}
     tainted = [r.get("id") for r in adj if os.path.basename(str(r.get("transcript"))) in v2hold]
-    noted = [r.get("id") for r in adj if os.path.basename(str(r.get("transcript"))) in v2hold
-             and any("holdout" in str(v).lower() for k, v in r.items() if k != "transcript")]
+    # O-8: item 0g landed as APPENDED disposition rows (`ruling: holdout-member-note`), not as an inline flag on
+    # the 122 rows — the only shape an append-only record permits. Credit the delivered form.
+    noted_disp = sorted({d["id"] for d in disp13 if d.get("ruling") == "holdout-member-note"})
+    noted_inline = [r.get("id") for r in adj if os.path.basename(str(r.get("transcript"))) in v2hold
+                    and any("holdout" in str(v).lower() for k, v in r.items() if k != "transcript")]
+    noted = sorted(set(noted_disp) | set(noted_inline))
     rep.add("13", "item 0g — the v2-holdout rows are marked as such IN the adjudication record",
-            f"{len(tainted)} rows noted", f"{len(noted)} of {len(tainted)} noted ({tainted})",
+            f"{len(tainted)} rows noted", f"{len(noted)} of {len(tainted)} noted ({noted}) — appended disposition "
+            f"rows {noted_disp}, inline flags {noted_inline}",
             PASS if len(noted) == len(tainted) else FAIL, n=len(tainted),
             note="no holdout-tainted row may be quoted as tuning-side evidence")
+    # the arithmetic moved twice: 57 rows / 55 sites as adjudicated, then item 0g's dispositions demoted 2 and
+    # refused-notation 6, giving 49 effective rows over 48 sites. Both figures are published, so both are checked.
     dem = [r for r in cert if r.get("id") not in ("D-002", "D-039")]
     dem_sites = {(os.path.basename(str(r["transcript"])), str(r.get("span"))) for r in dem}
-    rep.add("13", "item 0g — the stated post-demotion arithmetic checks out", "55 rows / 53 distinct sites",
-            f"{len(dem)} rows / {len(dem_sites)} span-text sites", PASS if (len(dem), len(dem_sites)) == (55, 53)
-            else FAIL, n=len(dem))
+    cert_sites = {(os.path.basename(str(r["transcript"])), str(r.get("span"))) for r in cert}
+    rep.add("13", "item 0e — the stated post-DEDUPE arithmetic checks out (57 rows / 55 sites)",
+            "57 rows / 55 distinct (transcript, span) sites",
+            f"{len(cert)} rows / {len(cert_sites)} sites; after the two demotions {len(dem)} rows / "
+            f"{len(dem_sites)} sites",
+            PASS if (len(cert), len(dem)) == (57, 55) else FAIL, n=len(cert))
+    eff13 = {r["id"]: r["verdict"] for r in adj}
+    for d in disp13:
+        if d.get("new_verdict"):
+            eff13[d["id"]] = d["new_verdict"]
+    effrows = [r for r in adj if eff13[r["id"]] == "CERTAIN-leg-d"]
+    effsites = {(os.path.basename(str(r["transcript"])), json.dumps(r.get("restored_span"), sort_keys=True))
+                for r in effrows}
+    patt = open(os.path.join(wt, "tools/PATTERNS.md"), encoding="utf-8").read() \
+        if os.path.exists(os.path.join(wt, "tools/PATTERNS.md")) else ""
+    rep.add("13", "item 0g/11b — the EFFECTIVE post-disposition figures reproduce (49 rows / 48 sites)",
+            "49 rows / 48 distinct sites, published with the delta from 57",
+            f"{len(effrows)} rows / {len(effsites)} sites; PATTERNS publishes '49 promoted rows': "
+            f"{'49 promoted rows' in patt}",
+            PASS if (len(effrows), len(effsites)) == (49, 48) and "49 promoted rows" in patt else FAIL,
+            n=len(effrows),
+            note="the collapsing pair is D-120/D-121 (`see`, one site); D-097/D-098 collapsed at 57 but both are "
+                 "refused-notation now, so one collapse remains — 49 rows over 48 sites")
     # a field is owed only by the rows it applies to (defect #26: `clause` is the leg-(d) clause, so
     # CANDIDATE rows legitimately lack it; a non-realignable row legitimately has no rebuilt span)
     always = ("verdict", "reason", "seeded", "in_sample", "transcript", "char_offset")
+    # defect #32: judged over the 122 adjudication rows; the appended dispositions carry their own schema and are
+    # tested for it in §4 (by/id/ruling/reason/task/utc/utc_source).
     miss = collections.Counter(f for r in adj for f in always if r.get(f) in (None, ""))
     miss["clause"] = sum(1 for r in adj if str(r.get("verdict")) == "CERTAIN-leg-d" and not r.get("clause"))
     noreal = [r.get("id") for r in adj if not r.get("span")]
@@ -1808,13 +2038,17 @@ def section_coherence(wt, rep):
     fp = os.path.join(wt, "tools/PATTERNS.md")
     if os.path.exists(fp):
         p3 = slice_section(open(fp, encoding="utf-8").read(), "§3") or open(fp, encoding="utf-8").read()
+    # O-8: the qualification PATTERNS now publishes is the item-0g one (57/122 quoted only with its exclusions
+    # behind it: 49 promoted rows / 48 distinct sites), not the wording this row originally looked for.
+    qual = bool(re.search(r"57/122[^\n]{0,200}exclusions", p3)) or ("49 promoted rows" in p3)
+    mm = re.search(r"57/122[^\n]{0,190}", p3)
     rep.add("13", "criterion 20.13 — a count quoted in PATTERNS states the exclusions behind it",
-            "'57/122' quoted with the 3 + 6 shape exclusions and the 7 deferred holdout signals stated",
-            ("stated" if re.search(r"defer", p3, re.I) and re.search(r"partial-overlap|dropped-token", p3, re.I)
-             else "UNQUALIFIED" if "57/122" in p3 else "not quoted"),
-            PASS if (re.search(r"defer", p3, re.I) and re.search(r"partial-overlap|dropped-token", p3, re.I)) else FAIL,
-            n=1, note="the artefact supports 57/122 raw; after its own exclusions the countable figure is 113, and "
-                      "the CERTAIN count under item 0g would be 55 rows / 53 sites")
+            "'57/122' quoted together with the exclusions and effective figures, which reproduce",
+            ("stated: " + mm.group(0)[:180]) if qual else ("UNQUALIFIED" if "57/122" in p3 else "not quoted"),
+            PASS if qual else FAIL, n=1,
+            note="the artefact supports 57/122 as adjudicated; after item 0g's dispositions the effective figure is "
+                 "49 rows / 48 sites (re-derived above) and after the shape exclusions the countable q2 figure is "
+                 "113 — each quoted with its exclusions beside it")
 
 
 
@@ -1914,7 +2148,7 @@ def section_quantum_b_criteria(wt, rep):
     # precedent rows: the analogous property on artefacts that DO exist
     ap = os.path.join(wt, "runs/m4-q2-adjudication/adjudication.jsonl")
     if os.path.exists(ap):
-        adj = [json.loads(l) for l in open(ap, encoding="utf-8") if l.strip()]
+        adj = adj_rows(wt)[0]   # defect #32: appended dispositions are not adjudication rows
         present = sum(1 for r in adj if "seeded" in r and "in_sample" in r)
         true_rows = [r.get("id") for r in adj if r.get("seeded") is True]
         rep.add("15", "criterion v2.15 PRECEDENT — on the existing adjudication set the `seeded`/`in_sample` flags are "
@@ -1949,6 +2183,161 @@ TASK_PATTERNS = {
     "TASK-020": (r"(?<![A-Za-z0-9])20\.[0-9]{1,2}(?![0-9])", "consolidated-repair criteria 20.1-20.16"),
     "TASK-021": (r"(?<![A-Za-z0-9])21\.[0-9]{1,2}(?![0-9])", "C1-drop sensitivity criteria 21.1-21.8"),
 }
+
+
+def _ts(v):
+    return datetime.datetime.strptime(v, "%Y-%m-%dT%H:%M:%SZ")
+
+
+# An own-time stamp is one the document asserts ABOUT ITSELF. Lead patterns only (no 90-char window): a wide
+# window let a JSON utc field "adopt" the next quoted value in a table row (selftest T19 caught it).
+OWN_TIME_LEAD = re.compile(r'(?:'
+                           + r'"[a-z_]*utc[a-z_]*"\s*:\s*"?'          # "audit_utc": "
+                           + r'|Stamp:\s*\**\s*'                       # Stamp: **
+                           + r'|\bappended\s+'                          # (appended <ts>
+                           + r'|lane clock[^|]{0,50}'                     # the lane clock stamp of CONTROL seq 43 (`
+                           + r'|\bwritten at\b[^|]{0,60}'               # Written at the lane clock stamp ...
+                           + r')$', re.I)
+
+
+def own_time_stamps(text, md=False):
+    """Exact stamps a document asserts about ITSELF, not stamps it quotes.
+
+    DEFECT #36 guard: the census table quotes 39 historical values beside their source commits; those are
+    citations, and a `|` in the lead rules them out. For a markdown document the first exact stamp in its
+    first five lines is its HEADER stamp and counts as own-time whatever precedes it."""
+    out, head_zone = [], text.split("\n", 5)[:5]
+    hz = "\n".join(head_zone)
+    first_in_head = TS_EXACT.search(hz) if md else None
+    for m in TS_EXACT.finditer(text):
+        lead = text[max(0, m.start() - 40):m.start()]
+        if "|" in lead:
+            continue
+        if OWN_TIME_LEAD.search(lead) or (first_in_head and m.start() == first_in_head.start()):
+            out.append((m.start(), m.group(0)))
+    return out
+
+
+def section_forward_stamps(wt, rep):
+    """§19 — criterion 20.14c: an artefact's own time field may not POST-DATE the commit that contains it.
+
+    Item 12 fixed FUZZY stamps. This is the other half of the same class: a stamp exact to the second but
+    IMPOSSIBLE, written from a projected cadence grid instead of read from a clock. It is the more dangerous
+    half, because it passes every precision check — and because it lands in the columns the fleet reads for
+    liveness (ERRATA-25f: liveness = SIGNALS = heartbeat + CONTROL.log)."""
+    rc, out = git(wt, "diff", "--name-only", PREV_GATED, "HEAD")
+    changed = [x for x in out.decode().split() if x.endswith((".md", ".json", ".jsonl", ".log"))] if rc == 0 else []
+    offenders, checked, plausible = [], 0, []
+    for rel in changed:
+        fp = os.path.join(wt, rel)
+        if not os.path.exists(fp):
+            continue
+        t = open(fp, encoding="utf-8", errors="replace").read()
+        ct = git(wt, "log", "-1", "--format=%cI", "HEAD", "--", rel)[1].decode().strip()
+        if not ct:
+            continue
+        cut = ct.replace("+00:00", "Z")
+        for _, v in own_time_stamps(t, md=rel.endswith(".md")):
+            checked += 1
+            mins = round((_ts(v) - _ts(cut)).total_seconds() / 60.0, 1)
+            (offenders if mins > 0 else plausible).append((rel, v, cut, mins))
+    rep.add("19", "criterion 20.14c — no own-time stamp POST-DATES the commit that contains it (item 12's other "
+                  "half; TASK-018 item 0h, TASK-019 item v2.h)", "0 forward stamps",
+            f"{len(offenders)} forward of {checked} own-time stamps in {len(changed)} changed files: "
+            + "; ".join(f"{r} {v} vs its commit {c} (+{m} min)" for r, v, c, m in offenders),
+            PASS if not offenders else FAIL, n=checked,
+            note="a file's bytes cannot carry a stamp from a time the committer had not reached; the offsets here "
+                 "are +32 to +41 min and every one is :00- or cadence-shaped, i.e. projected, not read")
+    # the ruling must be non-spurious: clock skew, or a projected stamp? The control sits in the same lane and
+    # the same hour — the census artefact read `date -u` and its own stamp precedes its commit.
+    cen = "fleet/TIMESTAMP-CENSUS-2026-09-26.md"
+    ctrl, verdict = "no control artefact found", FAIL
+    fp = os.path.join(wt, cen)
+    if os.path.exists(fp):
+        t = open(fp, encoding="utf-8").read()
+        ct = git(wt, "log", "-1", "--format=%cI", "HEAD", "--", cen)[1].decode().strip().replace("+00:00", "Z")
+        m = re.search(r"Stamp: \*\*(20\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)\*\*", t)
+        if m:
+            d = round((_ts(m.group(1)) - _ts(ct)).total_seconds() / 60.0, 1)
+            ctrl = (f"{cen} stamps itself {m.group(1)} from `date -u` and was committed {ct} — {d} min, a plausible "
+                    f"write-then-commit gap in the SAME lane and hour")
+            verdict = PASS if d <= 0 and offenders else FAIL
+    rep.add("19", "the forward stamps are NOT a clock artifact (the ruling's control)",
+            "one artefact in the same lane and hour whose own `date -u` stamp precedes its commit", ctrl, verdict,
+            n=1, note="so git's clock and the lane's clock agree to within minutes and the +32/+41 min stamps are "
+                      "not skew. Root cause: a stamp taken from the CONTROL cadence grid — the seal note says it was "
+                      "'written at the lane clock stamp of CONTROL seq 43' — propagates into every artefact that "
+                      "cites it, and CONTROL seq 43/44 are themselves forward-stamped")
+    # fleet-signal integrity: BOSS-2 verifies cadence from these columns (ERRATA-25f), so a non-monotonic utc
+    # column or a duplicated seq is an integrity risk beyond this lane.
+    lg = os.path.join(wt, "fleet/CONTROL.log")
+    if os.path.exists(lg):
+        rows = [l.split("|") for l in open(lg, encoding="utf-8").read().splitlines() if l.count("|") >= 6]
+        seqs = [r[4] for r in rows]
+        dupes = sorted({q for q in seqs if seqs.count(q) > 1}, key=lambda x: (len(x), x))
+        utcs = [r[0] for r in rows]
+        # ordering is judged only where it is judgeable: a minute-precision value cannot be ordered against a
+        # seconds-precision one, so those are counted as a precision defect, not smuggled into the comparison.
+        exact = [u for u in utcs if TS_EXACT.fullmatch(u)]
+        fuzzycol = [u for u in utcs if not TS_EXACT.fullmatch(u)]
+        nonmono = [(exact[i - 1], exact[i]) for i in range(1, len(exact)) if _ts(exact[i]) < _ts(exact[i - 1])]
+        lastc = git(wt, "log", "-1", "--format=%cI", "HEAD", "--", "fleet/CONTROL.log")[1].decode().strip()
+        fwd = [u for u in exact if lastc and _ts(u) > _ts(lastc.replace("+00:00", "Z"))]
+        rep.add("19", "the WORKER lane's CONTROL.log utc column is exact, orderable and never ahead of the commit "
+                      "that carries it — it is the cadence input BOSS-2 reads (ERRATA-25f), so a bad column is a "
+                      "fleet-integrity risk",
+                "every utc exact to the second, non-decreasing down the file, none after the file's last commit",
+                f"{len(rows)} rows: {len(exact)} exact / {len(fuzzycol)} minute-precision {sorted(set(fuzzycol))[:4]};"
+                f" utc going BACKWARDS: {nonmono}; rows stamped after the file's last commit ({lastc}): {fwd}; "
+                f"seq values used more than once: {dupes}",
+                PASS if not (nonmono or fwd or fuzzycol) else FAIL, n=len(rows),
+                note="REPORTED to BOSS-2, not ruled here — ORCH-2 gates evidence, the boss owns fleet signals. Two "
+                     "findings travel with it: (1) seqs 10-15/38/39/45 each appear twice, so seq is not a unique key "
+                     "in this lane's log and a cadence reader must not treat it as one (ORCH-2's own log is rendered "
+                     "by fleet2check, which enforces uniqueness); (2) WORKER-2's seq-45 ERRATA corrected the COMMIT "
+                     "column for 42/43/44 while their UTC column is still forward-stamped")
+    # ---- ANNEX §H: the quantum-b denominator, pre-registered by WORKER-2 and ruled on here ----
+    ex = os.path.join(wt, "tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json")
+    rc2, out2 = git(wt, "ls-files", "runs")
+    res = [x for x in out2.decode().split() if re.search(r"RECEIPT|SCORE|THRESHOLDS|quantum", x, re.I)]
+    spent = sorted(f for f in ("runs/m4-quantum-b", "runs/quantum-b") if os.path.exists(os.path.join(wt, f)))
+    rep.add("19", "ANNEX §H precondition — the denominator was decided BEFORE any result existed",
+            "no receipt, score, threshold record or quantum-b output at this head",
+            f"{res or 'none'}; spent dirs: {spent or 'none'}", PASS if not res and not spent else FAIL, n=1,
+            note="this is what makes a denominator change legitimate rather than post-hoc: the swap is recorded "
+                 "while the outcome is still unknown")
+    if os.path.exists(ex):
+        ej = json.load(open(ex, encoding="utf-8"))
+        sj = json.load(open(os.path.join(wt, "tools/HELD-OUT-SPLIT-V2.json"), encoding="utf-8"))
+        ho = {os.path.basename(x) for x in sj["holdout"]}
+        exn = [os.path.basename(d["transcript"]) for d in ej.get("excluded_transcripts", [])]
+        src = open(os.path.join(wt, "tools/m4_one_shot_v2.py"), encoding="utf-8").read()
+        tp = os.path.join(wt, "tests/test_m4_one_shot_v2.py")
+        tst = open(tp, encoding="utf-8").read() if os.path.exists(tp) else ""
+        binds = ("holdout_exclusions_sha256" in src) and ("exclusion_set" in src)
+        tested = ("pre-registered exclusions changed after the freeze" in tst) and ("holdout_evaluated" in tst)
+        note_t = companion_texts(wt).get("tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md", "")
+        both = bool(re.search(r"sensitivit", note_t + json.dumps(ej), re.I)) and "33" in note_t
+        rep.add("19", "ANNEX §H — the exclusions are machine-readable, holdout members, bound by digest into the "
+                      "freeze, enforced in code and tested", "all four",
+                f"excluded {len(exn)}/33, all holdout members: {all(x in ho for x in exn)}; evaluated "
+                f"{ej.get('evaluated_holdout_transcripts')} == 33 - {len(exn)}: "
+                f"{ej.get('evaluated_holdout_transcripts') == len(ho) - len(exn)}; the freeze binds the exclusions "
+                f"by sha256: {binds}; enforced and tested: {tested}",
+                PASS if all(x in ho for x in exn) and binds and tested else FAIL, n=len(exn))
+        rep.add("19", "ANNEX §H (A4 amended) — BOTH denominators fixed before the run: 29 PRIMARY and 33 as a "
+                      "pre-registered SENSITIVITY from the same run",
+                "the note or the exclusions file commits to reporting both, the four named in each",
+                f"counts recorded: {ej.get('evaluated_holdout_transcripts')} evaluated / "
+                f"{ej.get('holdout_transcripts')} holdout; a 33-transcript SENSITIVITY figure committed to: {both}",
+                PASS if both else FAIL, n=2,
+                note="A4 as written fixed 33 primary + 29 sensitivity. WORKER-2's note swaps the primary to 29 on "
+                     "the label-taint ground (§F2's own reason) and forbids the four from re-entering any "
+                     "denominator. ORCH-2 ADOPTS the swap — pre-result, machine-readable, enforced, tested — and "
+                     "amends A4 append-only: primary 29, sensitivity 33 from the SAME run (no second spend; the "
+                     "four were already read), each reported with the four named. Both numbers stay fixed before "
+                     "the run, which is the whole point of the protocol; one sentence is owed")
+
 
 
 def section_coverage(rep):
@@ -2320,12 +2709,19 @@ def section_seal_audit(wt, rep, head):
                  "all 10 mentions name the same artefact, whose whole history is pre-seal")
     prep = os.path.join(wt, "fleet/branches/WORKER-2-TASK-019b-PREP.md")
     prep_t = open(prep, encoding="utf-8").read() if os.path.exists(prep) else ""
-    fuzzy = re.findall(r"20\d\d-\d\d-\d\dT\d\d:\dxZ|\d\d:\dxZ", prep_t)
-    rep.add("18", "item v2.f — the prep record's header stamp (item 12's class: the census rose 26 → 27 at this head)",
-            "exact UTC to the second, with its source", f"{fuzzy[:3]} in a record committed 2026-09-26T00:31:39Z",
-            FAIL if fuzzy else PASS, n=len(fuzzy),
-            note="'2026-09-25T21:5xZ' is both fuzzy and ~2.6 h before its own commit — the same defect class item 12 "
-                 "was extended for, in the newest artefact in the lane")
+    # DEFECT #33 again: the repaired header reads `2026-09-26T00:32:03Z (src 72104a5; read `21:5xZ`)` — exact,
+    # sourced, superseded value left readable. Flagging the readable citation punishes the fix.
+    bad_f, ok_f = [], []
+    for line in prep_t.splitlines():
+        for m in re.finditer(r"\d\d:\dxZ", line):
+            (ok_f if (TS_EXACT.search(line) and re.search(r"src|read|supersed", line, re.I)) else bad_f).append(
+                m.group(0))
+    rep.add("18", "item v2.f — the prep record's header stamp (item 12's class)",
+            "exact UTC to the second with its source; a fuzzy value only as a superseded citation",
+            f"{len(bad_f)} asserted fuzzy: {bad_f}; {len(ok_f)} superseded-in-place: {ok_f}",
+            FAIL if bad_f else PASS, n=len(bad_f) + len(ok_f),
+            note="'2026-09-25T21:5xZ' was both fuzzy and ~2.6 h before its own commit; the census repaired it to "
+                 "2026-09-26T00:32:03Z with `src 72104a5` beside it and left the old value readable")
     b1, b2 = _blob(wt, "293b29c", SEAL_REL), _blob(wt, SEAL_COMMIT, SEAL_REL)
     if b1 and b2:
         j1, j2 = json.loads(b1), json.loads(b2)
@@ -2341,10 +2737,18 @@ def section_seal_audit(wt, rep, head):
                 note="so the claim is TRUE and the owed repair is documentation-only: the sentence, plus why it matters "
                      "— 79eb401's own commit subject says 're-seal', 68 s after the draw, which reads as a second draw "
                      "to anyone who has not compared the blobs")
-    one_draw = [f for f in (appx, json.dumps(rep_j)) if "293b29c" in f or "one draw" in f.lower()]
+    # DEFECT #38: the first version credited any mention of `293b29c`, and the delivery record mentions it only
+    # as a timestamp's source commit (`run_utc … (src 293b29c; read `20:5xZ`)`) - a citation, not the statement.
+    # Require the two seal commits together WITH a one-draw phrase, or the phrase tied to the commit inline.
+    one_draw = []
+    for k, v in sorted(companion_texts(wt).items()):
+        both = ("293b29c" in v) and (SEAL_COMMIT[:7] in v)
+        phrase = bool(re.search(r"one draw|same draw|re-?manifest|manifest[- ]only|not a second draw", v, re.I))
+        if (both and phrase) or re.search(r"293b29c[^\n]{0,160}(one draw|manifest)", v, re.I):
+            one_draw.append(k)
     rep.add("18", "item v2.a clause (iii), second half — the STATEMENT that 293b29c/79eb401 are one draw, not two",
-            "stated in the note", f"present in {len(one_draw)} of the two artefacts",
-            FAIL if len(one_draw) < 2 else PASS, n=len(one_draw),
+            "stated in a companion note beside the seal", f"present in {len(one_draw)} companion artefacts: {one_draw}",
+            FAIL if not one_draw else PASS, n=len(one_draw),
             note="without it a reader cannot tell whether the split was re-drawn (a new salt would be owed) or only "
                  "re-manifested; ORCH-2 has verified the substance in the row above, so this item is documentation-only")
 
@@ -2353,8 +2757,9 @@ def section_seal_audit(wt, rep, head):
     binds_appendix = bool(re.search(r"SEAL-APPENDIX|SEAL-AUDIT|appendix_sha|companion", freeze_src))
     rep.add("18", "O-5 amended A1 — the seal stays byte-identical, a dated companion note names both digests, and the "
                   "quantum-b FREEZE binds the companion's digest alongside the seal's",
-            "all three", f"seal untouched: True; appendix names both digests: "
-            f"{'c8e963199a1e' in appx and 'c40d272f30d0' in appx}; freeze binds the companion: {binds_appendix}",
+            "all three", f"seal untouched: True; companion artefacts naming both digests: "
+            f"{sorted(k for k, v in companion_texts(wt).items() if 'c8e963199a1e' in v and 'c40d272f30d0' in v)}; "
+            f"freeze binds the companion: {binds_appendix}",
             PASS if binds_appendix else FAIL, n=3,
             note="A1 as originally written ('HELD-OUT-SPLIT-V2.json's own header binds c40d272f…, append-only') is "
                  "unsatisfiable without moving 73d86f0d…, which the appendix and criterion v2.10 both bind — a "
@@ -2428,7 +2833,11 @@ def section_seal_audit(wt, rep, head):
                ("score: verdict outside confirmed/discarded", "allowed:"),
                ("score: label without a reason", "carries no reason"))
     UNTESTED = (("detector PARAMETERS changed after freeze", "parameters changed"),
-                ("evaluated set != frozen holdout (PARTIAL READ)", "not the frozen holdout"))
+                ("evaluated set != frozen holdout (PARTIAL READ)", "not the frozen holdout"),
+                ("pre-registered exclusions are NOT holdout members", "are not holdout members"),
+                ("score refuses a partial read", "refusing to score a partial read"))
+    COVERED = COVERED + (("pre-registered exclusions CHANGED after the freeze",
+                          "pre-registered exclusions changed after the freeze"),)
     t1 = os.path.join(wt, "tests/test_m4_one_shot_v2.py")
     tt = open(t1, encoding="utf-8").read() if os.path.exists(t1) else ""
     asserts = re.findall(r"assertIn\(\s*[\"\']([^\"\']+)[\"\']", tt) + \
@@ -2439,11 +2848,14 @@ def section_seal_audit(wt, rep, head):
                   "only as good as its tests)", f"all {len(COVERED) + len(UNTESTED)}",
             f"{len(ok)}/{len(COVERED) + len(UNTESTED)} asserted; UNTESTED: {[u[0] for u in still]}",
             PASS if not still else FAIL, n=len(ok),
-            note="the two untested paths are the PARAMETERS-changed branch and the evaluated-set refusal — and the "
-                 "latter is the one that protects quantum b's DENOMINATOR: a partial holdout read must be refused, not "
-                 "scored, because the figure is one-shot and cannot be re-run. Code-present is not code-proven; one toy "
-                 "test each closes it (a frozen holdout of 2 with a detector that reads 1, and a freeze whose params "
-                 "are edited without touching the module file)")
+            note="the refusal surface grew from 9 to 12 with the pre-registered exclusions, and 4 of the 12 are "
+                 "unasserted: the PARAMETERS-changed branch, the evaluated-set refusal (a PARTIAL READ), the "
+                 "exclusions-not-holdout-members refusal, and the score-side partial-read refusal. The middle two "
+                 "protect quantum b's DENOMINATOR: a partial or wrongly-scoped holdout read must be refused, not "
+                 "scored, because the figure is one-shot and cannot be re-run. Code-present is not code-proven; one "
+                 "toy test each closes it (a frozen holdout of 2 with a detector that reads 1; a freeze whose params "
+                 "are edited without touching the module file; an exclusions file naming a tuning transcript; a "
+                 "labels file covering fewer rows than the receipt evaluated)")
     det_ok = {}
     for mod in ("det_dropword", "det_format"):
         mp = os.path.join(wt, f"tools/{mod}.py")
@@ -2464,10 +2876,12 @@ def section_seal_audit(wt, rep, head):
                  "the pre-registered 33 (or the §F2 sensitivity 29)")
     rep.add("18", "criterion 21.8 / A5 — the suite floor, measured at both heads",
             "green with the corpus present, count never drops, skips reported",
-            "4fc40c8: Ran 227 tests, OK (skipped=1) · 72104a5: Ran 244 tests in 205.5s, OK (skipped=1) = 227 + 10 "
-            "harness + 7 audit", PASS, n=244,
-            note="TASK-021's criterion 21.8 publishes 217, which was already stale at 4fc40c8; the binding floor is "
-                 "the newest measured count, 244, and the skip count travels with it")
+            "4fc40c8: Ran 227, OK (skipped=1) · 72104a5: Ran 244 in 205.5s, OK (skipped=1) · 1c8a287: Ran 257 in "
+            "217.2s, OK (skipped=1) — +13 = 5 pin-repair + 6 disposition + 2 pre-registered-exclusion tests",
+            PASS, n=257,
+            note="TASK-021's criterion 21.8 publishes 217, stale since 4fc40c8; the binding floor is the newest "
+                 "measured count, 257 at 1c8a287, and the skip count travels with it. Measured in the scratch "
+                 "worktree with the corpus materialised: `python3 -m unittest discover -s tests -t tests`")
 
 
 def main() -> int:
@@ -2510,6 +2924,7 @@ def main() -> int:
     section_coverage(rep)
     section_t21(wt, rep)
     section_seal_audit(wt, rep, a.head)
+    section_forward_stamps(wt, rep)
     tally = collections.Counter(r["verdict"] for r in rep.rows)
     print(f"\n== summary: {len(rep.rows)} rows · " +
           " · ".join(f"{k} {v}" for k, v in sorted(tally.items())))

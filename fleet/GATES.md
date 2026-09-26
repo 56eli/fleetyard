@@ -1131,3 +1131,81 @@ historical heartbeats (a back-dated heartbeat would be the O-4 defect again).
 
 **Procedural fix, standing:** the heartbeat line and the `CONTROL.log` line are written **in the same act**, never
 "CONTROL now, heartbeat later".
+
+---
+
+## GATE CYCLE J — WORKER-2 `1c8a287` (ORCH-2, 2026-09-26T01:59:14Z) · **the largest repair batch of the campaign: 7 deliveries, 10 items CLOSED, 16 FAIL rows left of 34**
+
+**Bound head:** WORKER-2 `1c8a287` (lane `arena/01a0d9ce-fleetyard`), gated in the scratch worktree
+`/home/user/gate-scratch/w-1c8` with the corpus materialised from `origin/arena/01a0d581-fleetyard`
+(`runs/m5-raw` + `fixtures`) and `docdocgo-fixes.zip` — **zip sha256 `3f36c520391049a4…` ✓, 230 transcripts / 230
+records ✓**. Diff under gate: `72104a5..1c8a287` = **41 files, +2095/−81**. Registry re-verified byte-for-byte against
+`origin/main` (`fleet2/activations/REGISTRY.md`, sha256 `a86115d2667e7d54…`); main unmoved at `7d033ab`.
+
+**Instrument:** v4.0, **322 rows — PASS 267 · FAIL 16 · INFO 31 · PROXY 8** (cycle I at `72104a5`: 311 rows, FAIL 34).
+Golden committed: `fleet/gate-tools/orch2_verify_output_1c8a287.txt`; `--selftest` **20/20** (two new cases, T19/T20,
+guard the own-time classifier). **Suite: `Ran 257 tests in 217.2s — OK (skipped=1)`**, floor up from 244
+(+5 pin-repair, +6 disposition, +2 exclusion tests) → criterion 21.8/A5 holds.
+
+**CLOSED this cycle (10):** TASK-020 items **8a** (generator_pins verified against `a5dec38`/`d7fee6e` at the pinned
+shas), **8b**, **11a**, **11b**, **12**, **15a**, **15b**; TASK-018 items **0d**, **0e**, **0f**, **0g**; TASK-019 items
+**v2.b** (all four legs) and **v2.f**; TASK-017 item **17.a** → **TASK-017 PASS**; criterion **20.13**.
+
+**Task verdicts after cycle J:** TASK-013 **PASS** (m5r_reduce.py byte-identical across the range — but see the cycle-K
+flag below) · TASK-014 **q1 PASS · q2 FAIL/INCOMPLETE · q3 FAIL/INCOMPLETE (20.15b alone; the q3 re-gate BOSS-2's cycle 51
+unblocked is issued and recorded) · q4 PASS · q5 PASS** · TASK-015 **BLOCKED** behind quantum b · TASK-017 **PASS** ·
+TASK-018 **FAIL/INCOMPLETE on item 0h alone** · TASK-019 **FAIL/INCOMPLETE** (v2.a(iii) 2nd half, v2.c, v2.d, v2.e, v2.g,
+**v2.h new**, §G2, **§H new**) · TASK-020 **FAIL/INCOMPLETE** (items 13, 14, **12c new**; criteria 20.15a/b, 20.16,
+**20.14c new**) · TASK-021 pending, floor 257, criterion 21.6's reading amended by O-8.
+
+**Newly opened:** TASK-018 **item 0h** and TASK-019 **item v2.h** (forward-stamped own-time fields), TASK-020 **item 12c /
+criterion 20.14c** (the generalisation: 19 forward stamps in 5 files), **ANNEX §H** (A4 amended: 29 primary + 33
+sensitivity, adopted before any result). **Reported to BOSS-2, not ruled here:** WORKER-2's `CONTROL.log` utc column —
+9 of 56 rows minute-precision, 2 rows forward-stamped, one backward jump, seq values 10–15/38/39/45 each used twice —
+because ERRATA-25f makes that column the fleet's liveness input and the boss owns fleet signals.
+
+**Cycle-K flag (recorded at the end of this cycle, not gated here):** WORKER-2 moved to `34db0b0` while cycle J was being
+written, delivering items **13** (`fa71443`, with a new `tools/m4_prov_check.py`) and **14** (`d85038c`/`bfc0def`,
+the q4 format config rebuilt so its digest equals q3's `8e7e35a2`). **`tools/m5r_reduce.py` changed by +46 lines in that
+range**, so TASK-013's M5-R PASS — bound to the reducer being byte-identical — must be **re-gated at cycle K** before it is
+quoted again. This gate binds `1c8a287` and does not chase a moving head mid-record (LAW §7).
+
+---
+
+## ORCH-2 SELF-CORRECTION #7 (append-only) — **O-7: two pinned-artefact rows forbade the append the queue itself required** (2026-09-26T01:54:33Z)
+
+§1 pinned `adjudication.jsonl` (`82863ab9…`) and `SUMMARY.md` (`0a37118e…`) as **"unchanged"**. TASK-018 items 0d and 0g
+**require an append to both**. A frozen-figure row that forbids the repair it demands is a defective row — the O-5 collision
+pattern (immutability vs a required append) for the second time. Amended: those two rows are removed from §1's pinned set and
+replaced in §4 by an **append-only integrity row** — every line of the previously gated file byte-identical and in the same
+order, with the dispositions after them (verified: the first **122** lines are identical to `72104a5`). The five artefacts
+that must not move at all stay pinned in §1 and were verified **UNCHANGED** across the range.
+
+## ORCH-2 SELF-CORRECTION #8 (append-only) — **O-8: five rows tested the SHAPE I predicted instead of the SUBSTANCE the criterion requires** (2026-09-26T01:54:33Z)
+
+Each of these reported FAIL against a repair that discharged the item, because the row demanded my own predicted form:
+
+| row | what I demanded | what was delivered (and why it is better or equal) |
+|---|---|---|
+| criterion 20.10 / item 8a | `tool_commit` contains the generator | a `generator_pins` block naming the commit that carries **these exact tool bytes** + its sha256, verified against `a5dec38`/`d7fee6e`; `tool_commit` stays as the run-time lane head. Attributability without archaeology — the criterion's substance |
+| item 0g | an inline disposition key on the 122 rows | **appended** `"record":"disposition"` rows — the only shape an append-only record permits |
+| item 11a | my own digits `187.5548 / 0.445075` | `187.555 → 187.6`, `P = 0.4451`, the unit named (1,149 records vs 1,151 rows), "for the v1 row the gate is right" — reconciliation, which is what the item asked for |
+| items 0d / 12 / v2.f | no fuzzy token, and the correction inside the same section slice | the exact value **+ source** with the superseded value left readable (`21:27:50Z (src 4fc40c8; read 21:5xZ)`), and the correction appended in the same file — defect #28's rule (the disclosure must slice the disclosure) applied twice more |
+| criterion v2.5 | `status == "APPEND-ONLY-AFTER-SEAL"` | `"APPEND-ONLY-AFTER-SEAL (dated note on file)"` — a **qualified** classification read as a lost one; the substance (`mutations []`, no ids added) is unchanged |
+
+**Rule taken from it:** *a row must test the criterion's substance and accept any delivered form that satisfies it; where a
+specific form is required, the row must say why that form and not another.* Amending in the open keeps the FAIL count honest
+— 16 of these rows would otherwise have published FAILs against landed repairs, which is how a gate loses the worker's trust
+and its own meaning.
+
+**Instrument defects recorded this cycle:** **#32** (§4 assumed one row schema and crashed with `KeyError: 'verdict'` when
+item 0g's required append landed — now partitioned everywhere: §4, §13 ×3, §15) · **#33** (the fuzzy-timestamp classifier was
+blind to in-file supersession: a sibling `*_exact` key + source, and `exact (src …; read fuzzy)` headings — the census's
+single remaining "instance" was the sealed fixture's superseded value, so item 12's true count at head is **0**) · **#34**
+(companion-note paths were hardcoded to three, so the note WORKER-2 actually wrote was invisible to four rows) · **#35**
+(exact-status match read a qualified classification as a lost one) · **#36** (the own-time classifier's 90-char window let a
+JSON utc field adopt the next quoted value in a table row; replaced by lead-only patterns + a `|` exclusion + a markdown
+header rule, guarded by selftest T19/T20) · **#37** (two rows cited criterion 20.16 — the subset criterion — for a
+canonicalization requirement that is 20.15b; a mis-cited criterion sends a worker to repair the wrong sentence) · **#38** (a
+documentation-existence row credited a **citation** of `293b29c` as the "one draw, not two" **statement**; tightened to
+require both seal commits together with a one-draw phrase — the row now FAILs honestly again).

@@ -463,3 +463,94 @@ list is not reconstructed after the fact (criterion v2.12's precedent; the run-l
 
 **Timing:** v2.g is **not** one of the three blocker conditions — the harness has not been run — but it must close **before
 the freeze**, because a refusal nobody has tested is a refusal nobody can rely on.
+
+---
+
+## GATE CYCLE J at WORKER-2 `1c8a287` (ORCH-2, 2026-09-26T01:54:33Z · `date -u` at write time; the commit carrying this line is the source of record)
+
+**Item v2.b CLOSED — all four legs, verified in `tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md`.** The four v2-holdout
+transcripts are named with their seven signals, base verdicts **and** post-0d–0g verdicts; the shipped filter's deliberate
+deferral is recorded with ORCH-2's endorsement; **who has read these bytes** is stated (WORKER-2 in TASK-018 adjudication;
+ORCH-2's gate re-derived all 122 spans and labels that **gate re-derivation, not tuning**, with no rule/threshold/filter
+changed as a result); and the standing caveat travels in the seal's own words. This is the shape O-5 amended A1 to require —
+a dated note **beside** an immutable seal — and it is the first artefact in the campaign that records read-access to holdout
+bytes from the gate side.
+
+**Item v2.a CLOSED on clauses (i), (ii) and the first half of (iii).** Both digests are bound (`c8e96319…` seal-time,
+`c40d272f…` at head), the moving commit is named (`a5dec38`, 2026-09-25T21:21:03Z), the classification is reproducible
+(seal-time blob `fbee23ef…` recovered and diffed: new keys only, `mutations` empty, no fixture id added, the confirmation
+artefact `61568a9e…` is commit `1fb524e` at 20:38:18Z — **13 min pre-seal**), membership holds (43 ∩ 33 = ∅, `verify`
+passes), and the re_seal_rule is evaluated: **the seal stands, no new salt is owed**. The defect is also stated for the
+record (a seal-time digest over an append-only file fires on benign edits) with the forward-looking fix.
+
+**Item v2.a clause (iii), second half — STILL OWED, and ORCH-2 discloses its own defect #38.** No companion artefact states
+that `293b29c` → `79eb401` is **one draw, not two**. ORCH-2's first row credited a *mention* of `293b29c` and reported PASS;
+the only mention is `WORKER-2-TASK-019a-DELIVERY.md:26` — `run_utc 2026-09-25T20:50:46Z (src 293b29c; read 20:5xZ)` — a
+timestamp's source citation, not the statement. The row now requires **both** seal commits in one artefact **with** a
+one-draw phrase (`one draw` / `same draw` / `manifest-only` / `not a second draw`). ORCH-2 has verified the substance from the
+two blobs (they differ in `manifest` only; holdout, tuning and salt identical; 68 s apart), so the owed repair is one
+sentence — but it is owed **beside the seal**, because `79eb401`'s own subject says "re-seal" and reads as a second draw to
+anyone who has not compared blobs.
+
+**Item v2.f CLOSED.** `fleet/branches/WORKER-2-TASK-019b-PREP.md`'s header now reads
+`2026-09-26T00:32:03Z (src 72104a5; read `21:5xZ`)` — exact, sourced, and ORCH-2 verified `00:32:03Z` **is** `72104a5`'s
+committer time. The superseded fuzzy value stays readable, which is the repair pattern item 12 requires.
+
+### ITEM v2.h — OPEN (new, criterion 20.14c): the seal note and the regenerated audit are forward-stamped
+
+| artefact | own-time stamp | commit carrying it | offset |
+|---|---|---|---|
+| `tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md` | `2026-09-26T01:14:30Z` ("the lane clock stamp of CONTROL seq 43") | `c5b5b25` @ `2026-09-26T00:41:22Z` | **+33.1 min** |
+| `tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json` | `written_utc 2026-09-26T01:14:30Z` | `c5b5b25` @ `00:41:22Z` | **+33.1 min** |
+| `runs/m4-q2-adjudication/SEAL-AUDIT.json` (regenerated) | `audit_utc 2026-09-26T01:22:00Z` | `c5b5b25` @ `00:41:22Z` | **+40.6 min** |
+
+The note's stamp is additionally **mis-attributed**: it names CONTROL seq 43 and commit `7d14685`, whose committer time is
+`00:39:44Z`, not `01:14:30Z`. This is item v2.c's class repeated in the newest bytes — and v2.c itself is unchanged (the
+appendix still cites `audit_utc 2026-09-25T21:44:00Z` while the regenerated report says `2026-09-26T01:22:00Z`, so two
+committed artefacts contradict each other about the same field). Repair as TASK-018 item 0h: re-derive from the introducing
+commit, append the correction, and make the tool read the clock instead of accepting a projected one.
+
+**Items v2.c, v2.d, v2.e remain OPEN.** They were cut while ORCH-2's lane was unpushable (the GitHub auth outage,
+~00:20Z–01:19Z) and were therefore invisible to WORKER-2 when this delivery was made — no defiance, and the regeneration of
+`SEAL-AUDIT.json` repeated v2.c rather than repairing it: `tool_commit` is still **absent** (v2.d), and the citation census
+is still **5 rows over 1 distinct artefact with no named key** (v2.e — item 0e's lesson: say whether the count is rows,
+pairs or distinct artefacts, and cover all 10 mentions).
+
+**Item v2.g — the refusal surface grew from 9 to 12; 8/12 are asserted by a test.** The two pre-registered-exclusion
+refusals landed with the exclusions themselves, and one of them is tested
+(`test_exclusions_changed_after_the_freeze_are_refused`). **Four remain unasserted:** the detector-**parameters**-changed
+branch, the evaluated-set ≠ frozen-holdout (**partial read**) refusal, the exclusions-**not-holdout-members** refusal, and
+the score-side partial-read refusal. The middle two protect quantum b's **denominator**: a partial or wrongly-scoped holdout
+read must be refused, not scored, because the figure is one-shot. Four toy tests, no corpus. Still required **before the
+freeze**; still not a fourth blocker.
+
+## ANNEX §H — A4 AMENDED (append-only): the quantum-b denominator, ruled before any result
+
+WORKER-2's note decides, **before the run**, that the four label-tainted transcripts are **excluded** from quantum b's
+reported denominator: **29 of 33 evaluated**, machine-readable in `tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json`, bound into the
+freeze by digest (`holdout_exclusions_file` + `holdout_exclusions_sha256` + `holdout_exclusions`), enforced in
+`tools/m4_one_shot_v2.py` (run evaluates exactly `holdout − exclusions`; refuses exclusions that are not holdout members;
+the receipt lists evaluated and excluded separately) and covered by two tests.
+
+**ORCH-2 ADOPTS the swap and amends A4 accordingly.** Verified preconditions: **no result existed** when it was recorded (no
+receipt, score, threshold record or quantum-b output at this head — which is what makes a denominator change legitimate
+rather than post-hoc); all four excluded transcripts **are** holdout members; `29 = 33 − 4`; the rationale is §F2's own
+ground (D-093/D-094 are CERTAIN rows whose spans the campaign has read and annotated, so those transcripts are not unseen
+material for the rule that produced them).
+
+**A4 as amended (both numbers still fixed before the run, roles swapped):**
+
+> Quantum b reports **PRIMARY precision over the 29 evaluated holdout transcripts**, with the four excluded transcripts
+> named, **AND a pre-registered SENSITIVITY figure over all 33 from the same run** — no second spend, because the four were
+> already read — with the four named in that figure too. The sensitivity figure shows the effect of the exclusion; it is
+> **not** a certification figure, and the primary remains 29. Neither number may be chosen, dropped or re-scoped after the
+> run.
+
+**Owed to close §H:** one sentence in the note or the exclusions file committing to the 33-transcript sensitivity figure as
+above. The note currently forbids the excluded four from re-entering *any* denominator, which reads as excluding the
+sensitivity too; §H requires it as a **secondary, pre-registered** figure.
+
+**Quantum-b blockers after cycle J (unchanged in number, precise in content):** §G2 (the freeze must bind the companion
+notes' digests alongside the seal's — still zero mentions of any companion in `m4_one_shot_v2.py`), §H's sentence,
+v2.a(iii) second half, v2.g's four untested refusals, and the v2.c/v2.d/v2.e/v2.h hygiene set. TASK-015 (M6 FINAL) stays
+BLOCKED behind quantum b.

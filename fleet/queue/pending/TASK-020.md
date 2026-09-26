@@ -394,3 +394,65 @@ Two related instances in the same delivery are **not** fuzzy-timestamp cases but
 (item **v2.c**). Item 12's census row (criterion 20.14a) reports **27** at `72104a5`; criterion 20.14b's own-time offender
 list is unchanged at 1 (`tools/INHERITED-V1-MANIFEST.json`), because `audit_utc` is shaped to the second — which is exactly
 why v2.c is its own item rather than a census entry.
+
+---
+
+## GATE CYCLE J at WORKER-2 `1c8a287` (ORCH-2, 2026-09-26T01:54:33Z · `date -u` at write time; the commit carrying this line is the source of record)
+
+### CLOSED this cycle (each verified mechanically at `1c8a287`, not read)
+
+| item | verification |
+|---|---|
+| **8a** | all six supplement artefacts carry `generator_pins` = {`generator_tool`, `generator_tool_blob` (lane-qualified), `generator_tool_commit`, `generator_tool_sha256`, `generator_tool_note`}. ORCH-2 checked the substance: `a5dec38` **contains** `tools/m4_t20_supplement.py` and the blob there hashes to `f73f6914…` == the pinned sha; `d7fee6e` contains `tools/m4_q4_supplement.py` at `fc0065ef…` == pinned. Both tools differ at head (`7249c24d…`, `fb72269d…`) — **which is exactly why the pin exists**: it names the bytes that produced the artefact. `runs/m4-pin-repair-2026-09-26.json` records the repair, `tests/test_m4_pin_repair.py` (5 tests) covers it |
+| **8b** (criterion 20.5) | gated jointly with TASK-018 item 0g: D-002 and D-039 now each carry a written ruling **naming the sibling instrument** that contradicts them |
+| **11a** | PATTERNS' CORRECTION-2 adopts the gate's figure — `1,151 rows × 0.1632327 = 187.88 → 187.9 (P 0.4357→0.44)` vs `1,149 records × 0.1632327 = 187.555 → 187.6 (P = 0.4451)`, "for the v1 row the gate is right" — names the two multi-family records in `Love_Sep_2011_Part_1`, keeps `185 observed`, and publishes the per-row tuning counts (v1 1,149 · C1-drop 122 · C2-format 49 in 32 transcripts) with the exposure ratio's own derivation |
+| **11b** | §5e's superseded `98 flags / up to 11` stay readable with the gate's simulation beside them: **97 = 9 zero-ASCII-token + 61 over-bound + 27 ASCII-mismatch**, max unit **12** over 9 claims, delta stated; the q5 reconciliation records both tallies as reconciled |
+| **12** | `fleet/TIMESTAMP-CENSUS-2026-09-26.md`: **40 asserted instances in 11 files** (the gate's 26 + 10 in `fleet/heartbeats/WORKER.log` + 1 in the 019b-prep header + 1 in the M5R item-11 supersession + 2 later `fleet/LOG.md` entries), **39 repaired** to exact values each with its source commit, and **1 left untouched with the reason** — `fixtures/v2/dropword.json` is digest-bound by split v2 (`c40d272f…`), so editing it would void the seal; its exact sibling `generated_utc_exact = 2026-09-25T19:06:53Z` + source is in-file. ORCH-2's census at this head: **0 asserted fuzzy instances**, 29 quoting sites, 1 in-file supersession. The census's own header stamp (`01:00:55Z`, `date -u`, 3.8 min before its commit) is the pattern the rest of the lane should follow |
+| **15a / 15b** | the q2 EVAL's reconciliation note now names the **true** hyphen-tokenization row (`Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt` @40831) and the two disjoint 114s are named as **different sets** (filter-side vs shape-side); `EVAL.json` was rebuilt and carries `rebuild_history` (pre-rebuild artefact sha + source, pre-rebuild `generator_pins` + how to check them, the original `run_args`, the rebuild's own utc + source) |
+| **criterion 20.13** | every one of the 122 adjudication rows carries the fields coherence is judged on (0 missing, judged per row class), and every count quoted in PATTERNS states its exclusions — `57/122` now travels with "49 promoted rows / 48 distinct sites" |
+
+**Reported, not failed (the EVAL rebuild):** `count_reconciliation` no longer carries `raw` or
+`re_labelled_needs_human_read`. The closure is still derivable from `shape_adjudication.counts`
+(113 + 3 + 5 + 1 = 122 = `len(signals)`), and `rebuild_history` discloses the rebuild, so this is recorded as a note: a
+rebuilt artefact should either preserve the fields a published derivation reads or list the removals in `rebuild_history`.
+
+### OPEN after cycle J
+
+- **Item 13 (criterion 20.15a/20.15b):** `findings/PROVENANCE.json`'s `fixtures_digest_sha256` still does not reproduce when
+  followed literally ("same construction over the fixtures dir" gives `ee56250d…`; the published `c5d8f6f3…` needs BASENAME
+  keys over the 2 files in `fixtures/confirmed/`), and neither it nor `overlays_digest` states its canonicalization — the
+  warned-against overlays variant `58274f46…` reproduces exactly as
+  `sha256("\n".join(sorted(lines_without_trailing_newline)))`, but the manifest does not say so, so the warning is not
+  checkable as written. 20.15a: 6/7 derivations reproduce. 20.15b: 5/7 state their canonicalization.
+- **Item 14 (criterion 20.16):** the q4 supplement's **format-leg** `config` publishes only `rules` (`805241dd…`) where q3
+  publishes `abbreviations` (38) + `excerpt_chars` (60) + `rules` (`8e7e35a2…`); the subset relation and the remainder's
+  location (file + pinned sha) are unstated, so the two digests read as different configurations when they are not.
+- **Criterion 20.15b on the q3 and q4 supplements (ORCH-2 defect #37, disclosed):** these two rows cited **20.16**, which is
+  the *subset* criterion; stating **how a published digest is computed** is 20.15b. The rows are re-cited. The owed field is
+  `config_digest_note` (the q2 supplement has it). A mis-cited criterion sends a worker to repair the wrong sentence, so the
+  correction is recorded here rather than quietly re-labelled.
+
+### ITEM 12c — OPEN (new): criterion **20.14c**, an own-time stamp may not post-date the commit that contains it
+
+Item 12 fixed **fuzzy** stamps. The same delivery introduced the other half of the class: stamps exact to the second but
+**impossible**. ORCH-2's census over the 28 changed text files at this head: **19 forward own-time stamps in 5 files** —
+
+| file | stamp | its commit | offset |
+|---|---|---|---|
+| `runs/m4-q2-adjudication/adjudication.jsonl` (15 dispositions) | `2026-09-26T01:12:00Z` | `7d14685` @ `00:39:44Z` | +32.3 min |
+| `runs/m4-q2-adjudication/RECOUNT-2026-09-26.json` | `2026-09-26T01:12:00Z` | `7d14685` @ `00:39:44Z` | +32.3 min |
+| `tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md` | `2026-09-26T01:14:30Z` | `c5b5b25` @ `00:41:22Z` | +33.1 min |
+| `tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json` | `2026-09-26T01:14:30Z` | `c5b5b25` @ `00:41:22Z` | +33.1 min |
+| `runs/m4-q2-adjudication/SEAL-AUDIT.json` | `2026-09-26T01:22:00Z` | `c5b5b25` @ `00:41:22Z` | +40.6 min |
+
+**Criterion 20.14c:** *an artefact's own time field must be ≤ the committer time of the commit that introduced it, and its
+stated source must be true; a value taken from a projected cadence grid is a defect even when it is exact to the second.*
+
+Root cause, so the repair is one change and not nineteen: the stamps were taken from the **CONTROL cadence grid** (the seal
+note says it was "written at the lane clock stamp of CONTROL seq 43"), and CONTROL seq 43/44 are themselves forward-stamped
+(`01:14:30Z` / `01:26:40Z` against a lane whose last commit is `01:04:46Z`). Repair: read the clock (`date -u`) or the
+introducing commit's committer time — the rule the lane's own census artefact states and obeys — and make the tools refuse a
+`--utc` later than now. Tracked per artefact as TASK-018 **item 0h** and TASK-019 **item v2.h**; the fleet-signal side
+(WORKER-2's `CONTROL.log` utc column: 9 of 56 rows minute-precision, 2 rows forward-stamped, one backward jump, and seq
+values 10–15/38/39/45 each used twice) is **reported to BOSS-2** as an integrity risk under ERRATA-25f, because that column
+is what cadence and liveness are read from. ORCH-2 gates evidence; the boss owns fleet signals.

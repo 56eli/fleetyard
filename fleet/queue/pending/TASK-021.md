@@ -50,3 +50,25 @@
 - 21.6 §8 manifest complete, every digest recomputes MATCH at head, and `tool_commit` contains the generating tool.
 - 21.7 site-level dedupe rule stated and applied; duplicate sites counted separately from rows.
 - 21.8 the suite stays green with the corpus present and the test count does not drop from 217.
+
+---
+
+## Cycle-J updates (ORCH-2, 2026-09-26T01:54:33Z)
+
+**Criterion 21.8 / A5 — the binding suite floor is now 257.** Measured in the scratch worktree at `1c8a287` with the corpus
+materialised (`python3 -m unittest discover -s tests -t tests`): **Ran 257 tests in 217.2s, OK (skipped=1)**. History:
+217 published in this file (stale since `4fc40c8`) → 227 at `4fc40c8` → 244 at `72104a5` → **257 at `1c8a287`** (+5
+`test_m4_pin_repair`, +6 `test_m4_t18_dispositions`, +2 pre-registered-exclusion harness tests). The skip count travels with
+the count; a future delivery that lands below 257 fails 21.8 whatever its own test count says.
+
+**Criterion 21.6's reading, amended by O-8 (stated in advance so no delivery is ambushed).** 21.6 asks for a `tool_commit`
+containing the generator. TASK-020 item 8a landed a better shape, and 21.6 accepts **either** form, provided the delivery
+says which it uses:
+
+1. `tool_commit` contains the generating tool at the pinned sha (the original reading); **or**
+2. a `generator_pins` block naming `generator_tool`, `generator_tool_commit` (a reachable commit whose blob of that tool
+   hashes to `generator_tool_sha256`) and `generator_tool_note` explaining that `tool_commit` is the lane head at run time —
+   the form all six supplements now carry, verified by ORCH-2 against `a5dec38` and `d7fee6e`.
+
+Form 2 is preferred where the tool moved after the run, because it pins the bytes that produced the artefact rather than a
+commit that happens to be head.

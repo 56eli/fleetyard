@@ -234,3 +234,51 @@ recomputed and confirmed, so that arithmetic may be published as stated rather t
 
 **Related, routed to TASK-020 item 15:** `EVAL.json`'s reconciliation note misnames the hyphen-tokenization row's
 transcript (15a), and the campaign publishes two disjoint sets of 114 signals under one number (15b).
+
+---
+
+## GATE CYCLE J at WORKER-2 `1c8a287` (ORCH-2, 2026-09-26T01:54:33Z · source: `date -u` at write time, the commit carrying this line is the source of record)
+
+**Items 0d, 0e, 0f, 0g are CLOSED.** Verified mechanically at `1c8a287`, not read:
+
+| item | what was verified | result |
+|---|---|---|
+| 0d | `0/122` rows carry `seeded: true`; `0` overlaps with the 16 v1 CF fixture spans; the four seeded rows are `FIX-D2-001…004` in `fixtures-adjudication.json`; the false sentence stays readable in SUMMARY.md **and** in PATTERNS §5b-bis, each corrected by an appended block in the same file | **CLOSED** |
+| 0e | **57 rows = 55 distinct sites** under the key `(transcript, restored_span)`; the collisions are D-097/D-098 and D-120/D-121; `RECOUNT-2026-09-26.json` published | **CLOSED** |
+| 0f | strata 27 interjection/filler + 6 notation + 11 function + 13 content = 57; the **notation class is REFUSED** (no word is absent where the transcript writes `%`), reversible only by an owner ruling; speaker-side filler presence stated **unknowable from text** (no audio) | **CLOSED** |
+| 0g | 122 rows **byte-identical** to `72104a5` and in the same order (append-only ✓); 15 disposition rows appended; D-002 and D-039 each carry a written ruling **naming the sibling instrument** that contradicts them (EVAL's `dropped-token-not-missing`; the source-inheritance filter) — this also closes **TASK-020 item 8b / criterion 20.5**; all 7 v2-holdout rows (D-092…D-122) marked `holdout-member-note` | **CLOSED** |
+
+**The effective split, re-derived independently by ORCH-2 and matching the lane's published figures:** 8 verdict-changing
+dispositions (2 demotions + 6 notation refusals) take **57 CERTAIN-leg-d / 65 CANDIDATE (frozen, as adjudicated)** to
+**49 / 73 effective**, over **48 distinct sites** (only the D-120/D-121 collapse survives, because D-097/D-098 are both
+refused now). The strata close on the effective count: 27 fillers + 11 function + (13 − 2) content = **49**. PATTERNS
+publishes "49 promoted rows / 48 distinct sites" with the delta from 57, so criterion 20.13's count-qualification leg and
+TASK-020 item 11b are discharged too.
+
+**Key discipline, applied to the append (item 0e's lesson, recorded so the next count is not ambiguous):** the append is
+**15 rows over 14 distinct ids** — D-092 carries two rulings (`refused-notation` and `holdout-member-note`). Any figure
+quoted over the dispositions must name its key.
+
+### ITEM 0h — OPEN (new, criterion **20.14c**): the dispositions' `utc` post-dates the commit that contains it
+
+All 15 disposition rows (and `RECOUNT-2026-09-26.json`) carry `"utc": "2026-09-26T01:12:00Z"` with
+`"utc_source": "argument/--utc (the lane clock at write time)"`. They were committed by `7d14685` at
+**2026-09-26T00:39:44Z** — the stamp is **+32.3 min in the future** relative to the only commit that has ever carried
+those bytes (author and committer dates agree; the file has not been touched since). A file's bytes cannot record a clock
+reading the clock had not reached, so `utc_source` is **false as written**, and the `:00` shape is that of a projected
+cadence slot rather than a `date -u` reading.
+
+**This is not clock skew, and the control is inside the same lane and hour:** `fleet/TIMESTAMP-CENSUS-2026-09-26.md`
+stamps itself `2026-09-26T01:00:55Z` "from `date -u` on the lane clock" and was committed at `01:04:41Z` — a plausible
+3.8-minute write-then-commit gap. Git's clock and the lane's clock therefore agree to within minutes; +32.3 min is not skew.
+
+**Repair (append-only, three parts):**
+1. Re-derive each disposition's utc by the census's own rule — the **committer timestamp of the commit that introduced the
+   line** (`git log -1 --format=%cI -- runs/m4-q2-adjudication/adjudication.jsonl` → `2026-09-26T00:39:44Z`) — and publish
+   the correction as **appended** rows or a dated correction block; do not edit the 15 rows.
+2. Make `tools/m4_t18_dispositions.py` **default `--utc` to the system clock and refuse a value later than now** (the tool
+   currently accepts any string, which is how a projected stamp became 15 asserted ones).
+3. State `utc_source` truthfully for the corrected value.
+
+Item 0h is the same class as TASK-019 items **v2.c** (unchanged, and re-offended by the regenerated audit) and **v2.h** (new),
+and is generalised as criterion **20.14c** in TASK-020.md. It is the only item outstanding on TASK-018.
