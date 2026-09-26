@@ -6,9 +6,18 @@
  "derivations": {
   "by_transcript_digest": "same construction as records_digest over findings/by-transcript/",
   "corpus_zip_sha256": "sha256 of docdocgo-fixes.zip bytes as published",
-  "fixtures_digest_sha256": "same construction over the fixtures dir",
+  "derivations_revision": {
+   "corrected_by": "WORKER-2, TASK-020 item 13 (criterion 20.15)",
+   "corrected_utc": "2026-09-26T01:45:17Z",
+   "corrected_utc_source": "lane clock at write time; the commit carrying this text is the source of record (git log -S 'KEY CONVENTION' -- tools/m5r_reduce.py)",
+   "effect_on_run_outputs": "none - the run's own values are untouched: ledger d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32, by-transcript c1ec4da86a6ce4f43bb9f5a4da8677e28c2f9e3d781e6409c4a0d84ab06174af, findings 1334, tool_sha256 6d4bb9ce78f2964efeb74cae0855ab63234f3c34966e57d0cdcae726a749574d (blob at tool_commit dada3e602689cb900971fda0dccce8267f31a2b2); only this manifest's derivations prose changed",
+   "reproducibility_note": "a rebuild with this revision emits these exact derivations and a byte-identical ledger/by-transcript; tool_sha256 necessarily differs, because it hashes the running file",
+   "why": "the run-time text was not literally executable: fixtures_digest_sha256 said 'same construction over the fixtures dir' (which does not reproduce c5d8f6f3\u2026) and overlays_digest named a wrong variant without its construction"
+  },
+  "fixtures_digest_sha256": "sha256 over the joined SORTED lines '<sha256(file bytes)>  <path relative to --fixtures>\\n' for every .json file under --fixtures - i.e. fixtures/confirmed/confirmed.json and fixtures/confirmed/corrections.json (2 files; the directory is flat, so the keys ARE basenames). KEY CONVENTION: the records-dir-relative convention of records_digest_sha256 does NOT apply here. fixtures/clean/, fixtures/negative/ and fixtures/v2/ are OUTSIDE this binding, which is why adding fixtures/v2/dropword.json did not change c5d8f6f3... - the digest cannot prove that; the input set named here is the proof",
+  "json_canonicalization": "this manifest is written with json.dump(indent=1, sort_keys=True) (ensure_ascii default) and the committed file ends with one trailing newline; every M4 supplement config digest is sha256 over json.dumps(obj, sort_keys=True, separators=(',',':')) and states that in its own config_digest_note",
   "outputs.ledger.jsonl": "sha256 of the file bytes",
-  "overlays_digest": "sha256(concat over basenames sorted of '<sha256(text)>  <basename>\\n'), text decoded utf-8/errors=replace; note: sorting the resulting lines instead gives 58274f46\u2026 (do not)",
+  "overlays_digest": "sha256(concat over basenames sorted of '<sha256(text)>  <basename>\\n' for the 230 corpus/docdocgo/overlays/*.txt), text decoded utf-8/errors=replace; the LINES carry their newline and are concatenated in basename order. WRONG VARIANT, constructed exactly (do not use): sort the lines, strip each newline, join with '\\n' and add no trailing newline -> 58274f46\u2026",
   "records_digest_sha256": "sha256 over sorted lines '<sha256(file bytes)>  <path relative to records dir>' for every .json under --records (sort key: the line, i.e. by path)",
   "tool_sha256": "sha256 of tools/m5r_reduce.py bytes; tool_commit is the reachable lane commit carrying that exact file"
  },

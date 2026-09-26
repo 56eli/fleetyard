@@ -164,3 +164,8 @@
   2026-09-26T01:01:21Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-26T01:01:22Z TASK-018 adjudication: 120/122 signals (0s)
   2026-09-26T01:04:37Z TASK-020 11a/11b/12: v1 row 185 vs 187.6 (P 0.4451; rows-vs-records reconciled), q5 97=9+61+27 supersedes 98 with the one-row delta stated, 40 fuzzy timestamps -> exact+src (0 left); suite 257 OK
+  2026-09-26T01:46:47Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-26T01:46:47Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-26T01:46:47Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-26T01:46:47Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-26T01:49:55Z TASK-020 item 13: manifest derivations reproduce literally (prov-check 9/9 PASS incl. warned variant); ledger/by-transcript invariance proved; sandbox recovery done (fetch+reset+inputs); suite 261 OK

@@ -281,3 +281,52 @@ commits. The artefact's `generator_pins` now names `cc9ba46`, and it carries
 prior generator pin, so the 8a → 15 chain is readable in-file. Suite after the change: **257 tests
 OK, skipped=1, WITH corpus** (the count rose from 244 by the 8a/0d–0g/v2 batches' own tests: +5 +6
 +2). No threshold changed, no detector edited, no rate.
+
+### Item 13 — `findings/PROVENANCE.json` `derivations` now reproduce as written (criterion 20.15)
+
+The criterion asks that every derivation method stated in a manifest reproduces the published value
+when followed literally, that a warned-against wrong variant is stated exactly, and that every
+digest publication states its canonicalization. Two notes failed that test, and both are now
+corrected **in the manifest and in the generator that emits it** (`tools/m5r_reduce.py`), so the
+repair travels with future rebuilds:
+
+- `fixtures_digest_sha256` (`c5d8f6f3…`) said *"same construction over the fixtures dir"* — the
+  records convention, which keys lines by **path relative to the records dir** and does not
+  reproduce the published value. The note now states the construction that does: sorted lines
+  `'<sha256(file bytes)>  <path relative to --fixtures>\n'` over the **two** files under
+  `--fixtures` (`fixtures/confirmed/confirmed.json`, `fixtures/confirmed/corrections.json`; the
+  directory is flat, so the keys are basenames), and names `fixtures/clean/`, `fixtures/negative/`
+  and `fixtures/v2/` as **outside** this binding — which is why adding `fixtures/v2/dropword.json`
+  did not change it. The digest cannot prove that; the named input set does.
+- `overlays_digest` (`027f82a0…`) named the wrong variant `58274f46…` without its construction.
+  The note now states both: the **lines carry their newline** and are concatenated in **basename
+  order** (correct), while the warned variant **sorts the lines, strips each newline, joins with
+  `\n` and adds no trailing newline**. Both values are reproduced mechanically below.
+- A `json_canonicalization` line was added (this manifest: `json.dump(indent=1, sort_keys=True)`
+  plus one trailing newline in the committed file; M4 supplement config digests:
+  `json.dumps(obj, sort_keys=True, separators=(',',':'))`, as each supplement's own
+  `config_digest_note` says), and a `derivations_revision` block records the correction, its
+  **exact time** `2026-09-26T01:45:17Z` with its source, and its **invariance claim**: the run's
+  own outputs are untouched.
+
+**Verification — new tool `tools/m4_prov_check.py` (4 tests):** every published value recomputed by
+following the manifest text literally. At head: corpus zip `3f36c520…` PASS · records digest
+`d8c93536…` PASS · fixtures digest `c5d8f6f3…` PASS · overlays `027f82a0…` PASS · warned variant
+`58274f46…` PASS (reproduced **and** different from the published value) · ledger `d42136c6…` PASS ·
+by-transcript `c1ec4da8…` PASS · book store `c0892fcd…` PASS · `tool_sha256` `6d4bb9ce…` = the blob
+at `tool_commit dada3e60` PASS. `python3 tools/m4_prov_check.py` exits 0.
+
+**Invariance proof (the repair is documentation, not a re-run):** a rebuild with the corrected
+generator and the **run's** arguments produces `ledger.jsonl` and all 230 `by-transcript/` files
+**byte-identical** to the committed ones; the recovered `tool_sha256` equals the blob at the
+run-time commit; the manifest differs from the pre-repair file in **`derivations` only**
+(`tool_sha256` is recomputed from the running file by construction, which the revision note
+states). Manifest sha256: `921bbc56…` → **`dce2eb3a0ff89adadc55ff52cefe2e37792a8cd8ec5aea491dda6fc755f80186`**.
+Suite: **261 tests OK, skipped=1, WITH corpus** (257 → 261 by the new prov-check tests).
+
+**Recovery disclosure (sandbox recreation, 2026-09-26T01:44Z):** the workspace was recreated
+with `.git` at the base commit and no `corpus/` or `evidence/`. Recovery: explicit-refspec fetch →
+`git reset --hard FETCH_HEAD` (lane head `1c8a287`), then `sh tools/m5r_inputs.sh` re-materialised
+the working inputs (zip sha `3f36c520…` verified by the script's own check; 230 overlays; 230
+record files). Nothing committed was lost; the item-13 generator edit that was **uncommitted** at
+recreation time was re-applied from the preserved working tree and is carried by this commit.
