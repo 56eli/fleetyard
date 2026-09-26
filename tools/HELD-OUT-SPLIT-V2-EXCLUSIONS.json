@@ -56,6 +56,9 @@
  "seal_file": "tools/HELD-OUT-SPLIT-V2.json",
  "seal_sha256": "73d86f0dafe5e51162723bd92121021a099a5c6b5b89fc5386421c496ced5d8a",
  "task": "TASK-019 item v2.b (iv) — quantum-b pre-registration: holdout exclusions",
- "utc_source": "the lane clock at write time (CONTROL seq 43)",
- "written_utc": "2026-09-26T01:14:30Z"
+ "utc_source": "git committer time of c5b5b25 (the commit that added this file) — the stamp the file carries is derived from git, not from a clock reading projected onto the CONTROL cadence grid",
+ "written_utc": "2026-09-26T00:41:22Z",
+ "written_utc_source": "git committer time of c5b5b25 (the commit that added this file), exact to the second",
+ "written_utc_superseded": "2026-09-26T01:14:30Z",
+ "written_utc_superseded_reason": "projected from the CONTROL cadence grid, not read — the stamp post-dated the commit that carried it (criterion 20.14c, item v2.h)"
 }

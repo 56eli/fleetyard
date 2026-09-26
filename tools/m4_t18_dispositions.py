@@ -30,6 +30,7 @@ provable rather than weakened.
 Stdlib only; the corpus is not read.
 """
 import argparse
+import subprocess
 import hashlib
 import json
 import os
@@ -176,7 +177,50 @@ def stratum_of(word):
     return None
 
 
-def disposition_lines(rows, utc, fixtures):
+def _git(repo, *args):
+    p = subprocess.run(("git", "-C", repo) + args, capture_output=True, text=True)
+    return p.stdout if p.returncode == 0 else None
+
+
+def resolve_stamp(args):
+    """An own-time stamp must be EXACT and SOURCED (item 12's order; criterion 20.14c).
+
+    The defective value this replaces was `:00`-shaped and projected from the CONTROL cadence
+    grid, then labelled "the lane clock at write time" — a stamp that post-dated the very commit
+    carrying it. So: either derive the value from the commit that carries these lines, or state
+    the source explicitly; a bare `--utc` is refused, and the superseded value (when a repair
+    passes one) stays readable beside it.
+    """
+    if args.utc_from_commit:
+        out = _git(args.repo, "show", "-s", "--format=%cI", args.utc_from_commit)
+        if out is None:
+            raise SystemExit("m4_t18_dispositions: --utc-from-commit %s is not a commit in %s"
+                             % (args.utc_from_commit, args.repo))
+        iso = out.strip()
+        return (iso.replace("+00:00", "Z"),
+                "git committer time of %s (the commit that carries these lines), exact to the "
+                "second" % args.utc_from_commit[:7],
+                (args.superseded, args.superseded_reason) if args.superseded else (None, None))
+    if not args.utc:
+        raise SystemExit("m4_t18_dispositions: a stamp is required: --utc-from-commit <sha> "
+                         "(preferred) or --utc <iso> with --utc-source <text>")
+    if not args.utc_source:
+        raise SystemExit("m4_t18_dispositions: --utc requires --utc-source — an own-time stamp "
+                         "with no named source is the 20.14c defect class")
+    return (args.utc, args.utc_source,
+            (args.superseded, args.superseded_reason) if args.superseded else (None, None))
+
+
+def stamp_fields(utc, source, superseded=None, superseded_reason=None):
+    fields = {"utc": utc, "utc_source": source}
+    if superseded:
+        fields["utc_superseded"] = superseded
+        fields["utc_superseded_reason"] = superseded_reason
+    return fields
+
+
+def disposition_lines(rows, utc, fixtures, utc_source=None, superseded=None,
+                      superseded_reason=None):
     cert = [r for r in signal_rows(rows) if r.get("verdict") == "CERTAIN-leg-d"]
     seeded_true = sum(1 for r in signal_rows(rows) if r.get("seeded") is True)
     overlaps = 0
@@ -197,22 +241,25 @@ def disposition_lines(rows, utc, fixtures):
     for rid, (ruling, verdict, reason) in sorted(DEMOTIONS.items()):
         lines.append({"record": "disposition", "id": rid, "ruling": ruling,
                       "new_verdict": verdict, "reason": reason, "by": "WORKER-2",
-                      "task": "TASK-018 item 0g", "utc": utc,
-                      "utc_source": "argument/--utc (the lane clock at write time)"})
+                      "task": "TASK-018 item 0g",
+                      **stamp_fields(utc, utc_source, superseded, superseded_reason)})
     for rid in NOTATION_IDS:
         lines.append({"record": "disposition", "id": rid, "ruling": "refused-notation",
                       "new_verdict": "CANDIDATE", "reason": NOTATION_REASON,
-                      "by": "WORKER-2", "task": "TASK-018 item 0f", "utc": utc,
-                      "utc_source": "argument/--utc (the lane clock at write time)"})
+                      "by": "WORKER-2", "task": "TASK-018 item 0f",
+                      **stamp_fields(utc, utc_source, superseded, superseded_reason)})
     for rid in HOLDOUT_IDS:
         lines.append({"record": "disposition", "id": rid, "ruling": "holdout-member-note",
                       "reason": HOLDOUT_NOTE, "by": "WORKER-2", "task": "TASK-018 item 0g",
-                      "utc": utc, "utc_source": "argument/--utc (the lane clock at write time)"})
+                      **stamp_fields(utc, utc_source, superseded, superseded_reason)})
     return lines, {"seeded_true_rows": seeded_true, "fixture_span_overlaps": overlaps,
                    "certain_rows": len(cert), "omitted_word_counts": dict(sorted(counts.items()))}
 
 
 def build(args):
+    # the stamp is resolved FIRST: an own-time value that cannot be sourced must stop the run
+    # before any file is read or written (criterion 20.14c)
+    utc, utc_source, (superseded, superseded_reason) = resolve_stamp(args)
     adj = os.path.join(args.out, "adjudication.jsonl")
     prov_path = os.path.join(args.out, "PROVENANCE.json")
     rows = load_rows(adj)
@@ -228,7 +275,8 @@ def build(args):
         os.path.abspath(args.out))), "fixtures", "confirmed", "confirmed.json"),
         os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(args.out))),
                      "fixtures", "v2", "dropword.json"))
-    lines, facts = disposition_lines(rows, args.utc, fixtures)
+    lines, facts = disposition_lines(rows, utc, fixtures, utc_source, superseded,
+                                     superseded_reason)
     with open(adj, "a", encoding="utf-8") as fh:
         for line in lines:
             fh.write(json.dumps(line, ensure_ascii=False, sort_keys=True) + "\n")
@@ -241,8 +289,10 @@ def build(args):
     recount = {
         "tool": "tools/m4_t18_dispositions.py",
         "task": "TASK-018 items 0d–0g (recount, dispositions, stratification)",
-        "written_utc": args.utc,
-        "utc_source": "argument/--utc (the lane clock at write time)",
+        "written_utc": utc,
+        "utc_source": utc_source,
+        **({"written_utc_superseded": superseded,
+            "written_utc_superseded_reason": superseded_reason} if superseded else {}),
         "base_file": "adjudication.jsonl",
         "base_signal_rows": len(base),
         "base_122_lines_sha256_before_append": prov["outputs"]["adjudication.jsonl"],
@@ -327,6 +377,11 @@ def verify(args):
     for r in disp:
         if not r.get("reason") or not r.get("utc"):
             problems.append("disposition %s lacks reason/utc" % r.get("id"))
+        if not r.get("utc_source"):
+            problems.append("disposition %s carries an unsourced own-time stamp "
+                            "(criterion 20.14c)" % r.get("id"))
+        if r.get("utc_superseded") and not r.get("utc_superseded_reason"):
+            problems.append("disposition %s keeps a superseded stamp with no reason" % r.get("id"))
     rec_path = os.path.join(args.out, "RECOUNT-2026-09-26.json")
     if not os.path.exists(rec_path):
         problems.append("RECOUNT-2026-09-26.json missing")
@@ -366,7 +421,13 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
     b = sub.add_parser("build")
-    b.add_argument("--utc", required=True)
+    b.add_argument("--utc", default=None)
+    b.add_argument("--utc-source", default=None)
+    b.add_argument("--utc-from-commit", default=None)
+    b.add_argument("--superseded", default=None,
+                   help="the repaired defective stamp, kept readable beside the exact one")
+    b.add_argument("--superseded-reason", default=None)
+    b.add_argument("--repo", default=".")
     b.add_argument("--out", default="runs/m4-q2-adjudication")
     v = sub.add_parser("verify")
     v.add_argument("--out", default="runs/m4-q2-adjudication")

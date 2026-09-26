@@ -1,5 +1,5 @@
 {
- "amended_file_sha256": "531406d25e4a43a9282ea0a4c67d8e45b6bd8843658e12e99e9946f4814e5c07",
+ "amended_file_sha256": "8fc932f8270508d77dda4711becef613db8cf4011c7c31bddbcebfaa5793d6b2",
  "base_122_lines_sha256_before_append": "82863ab9bfb38059e4cab1ddc504c786e7f305bda8e95570b9281c9c071f7bee",
  "base_file": "adjudication.jsonl",
  "base_lines_reconstructed_digest": "82863ab9bfb38059e4cab1ddc504c786e7f305bda8e95570b9281c9c071f7bee",
@@ -215,6 +215,8 @@
  },
  "task": "TASK-018 items 0d–0g (recount, dispositions, stratification)",
  "tool": "tools/m4_t18_dispositions.py",
- "utc_source": "argument/--utc (the lane clock at write time)",
- "written_utc": "2026-09-26T01:12:00Z"
+ "utc_source": "git committer time of 7d14685 (the commit that carries these lines), exact to the second",
+ "written_utc": "2026-09-26T00:39:44Z",
+ "written_utc_superseded": "2026-09-26T01:12:00Z",
+ "written_utc_superseded_reason": "projected from the CONTROL cadence grid, not read - the stamp post-dated the commit that carried it (criterion 20.14c)"
 }

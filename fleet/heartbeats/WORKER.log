@@ -133,8 +133,8 @@
   2026-09-26T00:28:05Z TASK-018 adjudication: 60/122 signals (0s)
   2026-09-26T00:28:05Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-26T00:28:05Z TASK-018 adjudication: 120/122 signals (0s)
-  2026-09-26T00:46:30Z seal audit STANDING + 019b harness built (not run); inputs re-materialised; suite 244 OK 1 skip
-  2026-09-26T00:58:50Z item 8a: six supplement artefacts pinned to their generators; byte-identical rebuilds; seq 42
+  2026-09-26T00:32:03Z (src 72104a5; read `2026-09-26T00:46:30Z`) seal audit STANDING + 019b harness built (not run); inputs re-materialised; suite 244 OK 1 skip
+  2026-09-26T00:38:01Z (src 7de00df; read `2026-09-26T00:58:50Z`) item 8a: six supplement artefacts pinned to their generators; byte-identical rebuilds; seq 42
   2026-09-26T00:39:24Z TASK-018 adjudication: 30/122 signals (0s)
   2026-09-26T00:39:24Z TASK-018 adjudication: 60/122 signals (0s)
   2026-09-26T00:39:24Z TASK-018 adjudication: 90/122 signals (0s)
@@ -147,8 +147,8 @@
   2026-09-26T00:39:36Z TASK-018 adjudication: 60/122 signals (0s)
   2026-09-26T00:39:36Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-26T00:39:36Z TASK-018 adjudication: 120/122 signals (0s)
-  2026-09-26T01:14:30Z TASK-018 0d-0g: 15 dispositions appended; recount 49 rows / 48 sites; notation refused; seq 43
-  2026-09-26T01:26:40Z v2.a+v2.b discharged (dated seal note + pre-registered 29/33 exclusions); seq 44
+  2026-09-26T00:39:44Z (src 7d14685; read `2026-09-26T01:14:30Z`) TASK-018 0d-0g: 15 dispositions appended; recount 49 rows / 48 sites; notation refused; seq 43
+  2026-09-26T00:41:22Z (src c5b5b25; read `2026-09-26T01:26:40Z`) v2.a+v2.b discharged (dated seal note + pre-registered 29/33 exclusions); seq 44
   2026-09-26T00:50:04Z TASK-018 adjudication: 30/122 signals (0s)
   2026-09-26T00:50:04Z TASK-018 adjudication: 60/122 signals (0s)
   2026-09-26T00:50:04Z TASK-018 adjudication: 90/122 signals (0s)
@@ -179,3 +179,12 @@
   2026-09-26T01:56:49Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-26T01:56:49Z TASK-018 adjudication: 120/122 signals (0s)
   2026-09-26T01:59:44Z item 8b + 20.13: coherence computed (0 unexplained disagreements; 49 promoted / 73 CANDIDATE / 106 counted by both; D-092 double-disposition trap recorded); suite 269 OK
+  2026-09-26T02:09:15Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-26T02:09:15Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-26T02:09:15Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-26T02:09:15Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-26T02:12:39Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-26T02:12:39Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-26T02:12:39Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-26T02:12:39Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-26T02:15:55Z cycle-I/J repairs delivered: v2.a-iii/v2.b/v2.c/v2.d/v2.e/v2.g + §G2 companion-note binding + §H sentence + 20.14c forward-stamp repair (19 artefacts + 9 beacon lines; CONTROL 43/44 disclosed); suite 281 OK 1 skip; CONTROL seq 51

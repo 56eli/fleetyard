@@ -54,12 +54,18 @@ def build_toy(root):
     excl = os.path.join(root, "EXCLUSIONS.json")
     with open(excl, "w", encoding="utf-8") as fh:
         json.dump({"excluded_transcripts": []}, fh)
-    return corpus, split_path, excl
+    # §G2/O-5: a toy companion note, bound by the freeze like the seal appendix is
+    companion = os.path.join(root, "SEAL-APPENDIX-toy.md")
+    with open(companion, "w", encoding="utf-8") as fh:
+        fh.write("toy seal appendix: both digests named, append-only, the re-seal rule evaluated\n")
+    return corpus, split_path, excl, companion
 
 
-def freeze(root, corpus, split_path, out, excl=None):
+def freeze(root, corpus, split_path, out, excl=None, companion=None):
     return one.main(["freeze", "--split", split_path, "--out", out,
                      "--exclusions", excl or os.path.join(root, "EXCLUSIONS.json"),
+                     "--companion", companion or os.path.join(root, "SEAL-APPENDIX-toy.md"),
+                     "--repo", root,
                      "--utc", "2026-09-25T22:00:00Z", "--tool-commit", "toyc0mm",
                      "--main-head", "toymain", "--policy-sha", "toypolicy"])
 
@@ -77,7 +83,7 @@ class OneShotHarness(unittest.TestCase):
     def setUp(self):
         self.root = tempfile.mkdtemp(prefix="m4oneshot-")
         self.addCleanup(shutil.rmtree, self.root)
-        self.corpus, self.split_path, self.excl = build_toy(self.root)
+        self.corpus, self.split_path, self.excl, self.companion = build_toy(self.root)
         self.out = os.path.join(self.root, "out")
         self.labels = os.path.join(self.root, "labels.json")
 
@@ -271,6 +277,125 @@ class OneShotHarness(unittest.TestCase):
         with open(th_path, "wb") as fh:
             fh.write(frozen)
         self.assertEqual(one.verify(args), 0)
+
+    # ------------------------------------------------- §G2/O-5 + item v2.g
+    def test_freeze_binds_the_companion_note_and_run_refuses_a_stale_one(self):
+        """§G2/O-5: the seal is immutable, so the freeze must bind the note beside it."""
+        freeze(self.root, self.corpus, self.split_path, self.out)
+        with open(os.path.join(self.out, one.THRESHOLDS), encoding="utf-8") as fh:
+            frozen = json.load(fh)
+        bound = frozen["companion_notes"]
+        self.assertEqual(len(bound), 1, bound)
+        note = bound[0]
+        self.assertEqual(note["path"], self.companion.replace(os.sep, "/"))
+        self.assertEqual(note["sha256"], one.sha(self.companion))
+        self.assertIn("commit_source", note)
+        self.assertIn("commit_utc_source", note)
+        self.assertIn("§G2/O-5", frozen["companion_notes_rule"])
+        # a note that moved after the freeze stops the run
+        with open(self.companion, "a", encoding="utf-8") as fh:
+            fh.write("an edit after the freeze\n")
+        with self.assertRaises(SystemExit) as ctx:
+            run(self.root, self.corpus, self.split_path, self.out)
+        self.assertIn("companion note", str(ctx.exception))
+        self.assertIn("changed after the freeze", str(ctx.exception))
+        # ... and so does a note that was deleted
+        os.remove(self.companion)
+        with self.assertRaises(SystemExit) as ctx:
+            run(self.root, self.corpus, self.split_path, self.out)
+        self.assertIn("bound by the freeze is missing", str(ctx.exception))
+
+    def test_freeze_refuses_an_absent_companion_note(self):
+        with self.assertRaises(SystemExit) as ctx:
+            freeze(self.root, self.corpus, self.split_path, self.out,
+                   companion=os.path.join(self.root, "not-there.md"))
+        self.assertIn("companion note", str(ctx.exception))
+        self.assertIn("is absent", str(ctx.exception))
+        self.assertFalse(os.path.exists(os.path.join(self.out, one.THRESHOLDS)))
+
+    def test_run_refuses_when_the_frozen_parameters_changed(self):
+        """v2.g(i): the parameters branch was ambiguous with the module-digest branch."""
+        freeze(self.root, self.corpus, self.split_path, self.out)
+        path = os.path.join(self.out, one.THRESHOLDS)
+        with open(path, encoding="utf-8") as fh:
+            frozen = json.load(fh)
+        frozen["detectors"]["C1-drop"]["params"]["min_flank"] = 99   # record edited, module untouched
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump(frozen, fh)
+        with self.assertRaises(SystemExit) as ctx:
+            run(self.root, self.corpus, self.split_path, self.out)
+        self.assertIn("parameters changed after the freeze", str(ctx.exception))
+
+    def test_run_refuses_a_partial_holdout_read(self):
+        """v2.g(ii): the refusal that protects the denominator (one-shot => never re-run)."""
+        with open(self.split_path, encoding="utf-8") as fh:
+            split = json.load(fh)
+        split["holdout"] = ["hold.txt", "tune.txt"]      # a frozen holdout of two
+        split["tuning"] = []
+        split["counts"] = {"total": 2, "tuning": 0, "holdout": 2}
+        with open(self.split_path, "w", encoding="utf-8") as fh:
+            json.dump(split, fh)
+        freeze(self.root, self.corpus, self.split_path, self.out)
+        real = one.c2_detectors.evaluate
+
+        def reads_one(name, corpus_dir, split_path):     # a detector that read 1 of the 2
+            per_file, _reads = real(name, corpus_dir, split_path)
+            per_file = {k: v for k, v in per_file.items() if k == "hold.txt"}
+            return per_file, sorted(per_file)
+
+        one.c2_detectors.evaluate = reads_one
+        try:
+            with self.assertRaises(SystemExit) as ctx:
+                run(self.root, self.corpus, self.split_path, self.out)
+        finally:
+            one.c2_detectors.evaluate = real
+        msg = str(ctx.exception)
+        self.assertIn("not the frozen holdout set of 2", msg)
+        self.assertIn("refusing to score a partial read", msg)
+        self.assertFalse(os.path.exists(os.path.join(self.out, one.RECEIPT)))
+
+    def test_run_refuses_exclusions_that_are_not_holdout_members(self):
+        """v2.g(iii): a wrongly-scoped exclusion would silently shrink the denominator."""
+        with open(self.excl, "w", encoding="utf-8") as fh:
+            json.dump({"excluded_transcripts": ["tune.txt"]}, fh)
+        freeze(self.root, self.corpus, self.split_path, self.out)
+        with self.assertRaises(SystemExit) as ctx:
+            run(self.root, self.corpus, self.split_path, self.out)
+        self.assertIn("pre-registered exclusions are not holdout members", str(ctx.exception))
+        self.assertFalse(os.path.exists(os.path.join(self.out, one.RECEIPT)))
+
+    def test_score_refuses_a_partial_or_substituted_read(self):
+        """v2.g(iv): the score-side half of the denominator guard."""
+        self._freeze_and_run()
+        sig_path = os.path.join(self.out, one.SIGNALS)
+        with open(sig_path, encoding="utf-8") as fh:
+            signals = json.load(fh)
+        original = json.dumps(signals, ensure_ascii=False, sort_keys=True, indent=1) + "\n"
+        # (a) a signals file that covers fewer transcripts than the receipt evaluated
+        with open(sig_path, "w", encoding="utf-8") as fh:
+            json.dump({}, fh)
+        self._write_labels({"C1-drop/hold.txt#1": {"verdict": "confirmed", "reason": "x"}})
+        with self.assertRaises(SystemExit) as ctx:
+            one.main(["score", "--out", self.out, "--labels", self.labels])
+        self.assertIn("covers 0 transcript(s), not the 1 the receipt evaluated", str(ctx.exception))
+        self.assertIn("refusing to score a partial read", str(ctx.exception))
+        # (b) the right shape, but not the bytes the receipt bound
+        with open(sig_path, "w", encoding="utf-8") as fh:
+            fh.write(original + " ")
+        with self.assertRaises(SystemExit) as ctx:
+            one.main(["score", "--out", self.out, "--labels", self.labels])
+        self.assertIn("the signals file is not the one the receipt bound", str(ctx.exception))
+        # (c) labels written against another read must not be scored against this one
+        with open(sig_path, "w", encoding="utf-8") as fh:
+            fh.write(original)
+        self._write_labels({"C1-drop/gone.txt#1": {"verdict": "confirmed", "reason": "x"}})
+        with self.assertRaises(SystemExit) as ctx:
+            one.main(["score", "--out", self.out, "--labels", self.labels])
+        self.assertIn("name no signal in this run", str(ctx.exception))
+        # (d) the unmodified pair still scores, so the refusal is not spurious
+        self._write_labels({"C1-drop/hold.txt#1": {"verdict": "confirmed", "reason": "hand read"}})
+        self.assertEqual(one.main(["score", "--out", self.out, "--labels", self.labels]), 0)
+
 
 
 if __name__ == "__main__":

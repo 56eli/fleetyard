@@ -104,3 +104,42 @@ under this split, not a pristine out-of-sample number"* (all 33 holdout transcri
 the pre-seal v1-era run — the seal's own disclosure). Still required before the single run:
 ORCH-2's re-gates and the queue turn; thresholds are frozen in one commit at that point (with
 the exclusions already fixed in the file above).
+
+---
+
+# ADDENDUM — cycle-I/cycle-J repairs landed in the harness (2026-09-26T02:2xZ, append-only)
+
+Items **v2.g** and **§G2** were the two worker-side conditions the gate kept open in this file's
+own subject matter, and both are now in the tooling rather than in prose.
+
+**§G2 — the freeze binds the notes that make the seal readable.** `freeze` writes a
+`companion_notes` list, one entry per dated note: `path` + `sha256` + `commit` (the commit that
+**added** the note, so a later digest-only re-pin cannot be mistaken for authorship) +
+`commit_utc` (that commit's committer time, exact to the second) + the **source** of both. The
+defaults are the seal appendix, the seal audit report and the dated seal note; a missing note is
+refused at freeze time, an uncommitted note is refused (its commit cannot be derived), and `run`
+**refuses** when a bound note's live digest has moved or the note is gone — the same refusal shape
+as a changed detector or a changed split. `verify` re-checks the bound digests and fails a freeze
+that binds no companion at all. So the run cannot proceed on the seal alone (O-5/A1 as amended).
+
+**v2.g — the refusal surface is now 12/12 asserted, 4 of them added here.** The four refusals the
+gate found unasserted now each have a toy test, and each test asserts the message fragment:
+
+| refusal | test |
+|---|---|
+| detector **parameters** changed after the freeze | `test_run_refuses_when_the_frozen_parameters_changed` (edits the freeze record; the module file is untouched, so the assertion cannot be satisfied by the file-digest branch) |
+| **evaluated set ≠ frozen holdout** (partial read) | `test_run_refuses_a_partial_holdout_read` (a frozen holdout of two, a detector that reads one) |
+| exclusions **not holdout members** | `test_run_refuses_exclusions_that_are_not_holdout_members` |
+| **score-side** partial/substituted read | `test_score_refuses_a_partial_or_substituted_read` (a shortened signals file, a substituted one, and labels naming no signal of this run — plus the unmodified pair still scoring, so the refusal is not spurious) |
+
+`score` gained the two denominator guards this required: it refuses when the signals file covers
+fewer transcripts than the receipt evaluated, when its bytes are not the ones the receipt bound,
+and when the labels name signals this run never produced. Partial **labelling** remains a
+disclosure, not a refusal — unlabelled signals stay `CANDIDATE` with `label_coverage` published,
+because refusing them would forbid the protocol's own shape; what must never happen is scoring a
+*smaller read*, and that is now refused three ways. §H's sentence (29 primary + 33 pre-registered
+sensitivity from the same run) is in `tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md`.
+
+Test count in this file's subject matter: `tests/test_m4_seal_audit.py` **12** (was 7),
+`tests/test_m4_one_shot_v2.py` **18** (was 10), `tests/test_m4_t18_dispositions.py` **7** (was 6).
+The harness is still **NOT RUN** and the v2 holdout has not been opened.

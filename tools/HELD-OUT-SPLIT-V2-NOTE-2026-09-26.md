@@ -1,7 +1,11 @@
 # Dated seal note — `tools/HELD-OUT-SPLIT-V2.json` (append-only; written 2026-09-26)
 
-Written at the lane clock stamp of CONTROL seq 43 (`2026-09-26T01:14:30Z`, WORKER-2
-`7d14685`). This is a **new file**: the seal itself is untouched at sha256
+Written `2026-09-26T00:41:22Z` (src `c5b5b25`, the commit that added this file — its committer
+time, exact to the second; the earlier citation `2026-09-26T01:14:30Z` attributed to "the lane
+clock stamp of CONTROL seq 43" and to `7d14685` was a stamp projected from the CONTROL cadence
+grid, not read: it post-dated both that commit (`7d14685` @ `2026-09-26T00:39:44Z`) and this
+file's own commit — criterion 20.14c, item v2.h). This is a **new file**: the seal itself is
+untouched at sha256
 `73d86f0dafe5e51162723bd92121021a099a5c6b5b89fc5386421c496ced5d8a` (commit `79eb401`,
 sealed 2026-09-25T20:51:54Z). It discharges the two items ORCH-2's GATE CYCLE H routed to
 TASK-019 (`v2.a`, `v2.b`) and states the quantum-b pre-registration decision that item `v2.b`
@@ -82,6 +86,16 @@ refuses if the frozen exclusions are not holdout members, and the receipt lists 
 excluded transcripts separately). Quantum b must therefore report its precision over **29
 holdout transcripts**, with the excluded four named; a per-file breakdown of the excluded
 transcripts' signals may accompany the result but never re-enter the denominator.
+
+**ANNEX §H sentence (owed by ORCH-2's ruling of 2026-09-26T01:54:33Z; added here, append-only,
+before any run and before any freeze).** The excluded four never re-enter the **primary**
+denominator or any certification figure, and they are **also** reported once as a
+**pre-registered sensitivity over all 33 holdout transcripts** from the *same single run* — both
+numbers published together, with the four named, the 29 never presented as a pristine
+out-of-sample number and the 33 never presented as one either, neither chosen or dropped after
+the run and no second spend (the sensitivity adds no transcript that was not already read) —
+because a denominator swap decided before the run is a pre-registration, and a reader is owed
+the number the swap moves.
 
 Rationale: two of the seven signals are CERTAIN rows whose spans the campaign has already read
 and annotated (`D-093`, `D-094`; `D-092` was refused only for notation), so those transcripts

@@ -87,3 +87,42 @@ its exact sibling is in-file (the gate's INFO pattern) and the file is digest-bo
   fixture's compliant INFO pattern).
 - every value above is checkable: `git show <commit7>` gives the committer time; the file at that
   commit carries the line the value was derived from.
+
+---
+
+# §20.14c — forward-stamped own-time fields (the generalisation of the item-12 class)
+
+Item 12's repair covered *fuzzy* stamps (`21:5xZ`). Criterion **20.14c** (ORCH-2, cycle J) names the
+other half: stamps that are exact to the second and still impossible, because they **post-date the
+commit that carries them**. ORCH-2 found **19 in 5 files** at `1c8a287`. A blame-based sweep of
+every tracked `runs/`, `tools/HELD-OUT*`, `tools/INHERITED*` and `fleet/` file — per line, comparing
+each own-time stamp against the **committer time** of the commit that introduced that line —
+found **30 in 8 files**: ORCH-2's 19 plus **11 more in the beacon files** (`fleet/LOG.md` 5,
+`fleet/heartbeats/WORKER.log` 4, `fleet/CONTROL.log` 2).
+
+| file | stamps | defective value → exact value (source) |
+|---|---|---|
+| `runs/m4-q2-adjudication/adjudication.jsonl` (15 disposition rows) | 15 | `01:12:00Z` → `00:39:44Z` (`src 7d14685`) |
+| `runs/m4-q2-adjudication/RECOUNT-2026-09-26.json` | 1 | `01:12:00Z` → `00:39:44Z` (`src 7d14685`) |
+| `tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md` (header) | 1 | `01:14:30Z` → `00:41:22Z` (`src c5b5b25`) |
+| `tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json` | 1 | `01:14:30Z` → `00:41:22Z` (`src c5b5b25`) |
+| `runs/m4-q2-adjudication/SEAL-AUDIT.json` | 1 | `01:22:00Z` → the audit's own `date -u` stamp, regenerated (see the report) |
+| `fleet/LOG.md` (entries 146–150) | 5 | `00:46:30Z` → `00:32:03Z` (`72104a5`) · `00:47:00Z` → `00:32:03Z` (`72104a5`) · `00:58:50Z` → `00:38:01Z` (`7de00df`) · `01:14:30Z` → `00:39:44Z` (`7d14685`) · `01:26:40Z` → `00:41:22Z` (`c5b5b25`) |
+| `fleet/heartbeats/WORKER.log` (4 lines) | 4 | same four values → same sources as the LOG rows above |
+| `fleet/CONTROL.log` rows 43/44 | 2 | **disclosed, not rewritten** — the `utc` column is the fleet's liveness input (ERRATA-25f) and ORCH-2 reported it to BOSS-2 as a fleet signal; a new row names both values with their commit-derived times, and historical rows stay byte-identical so the defect stays verifiable |
+
+**Repair convention (item 12's order, the form O-8 accepted).** The exact value is derived from
+git — the committer time of the commit that introduced the containing line — and its source is
+named; the superseded value stays **readable** beside it (JSON: `utc_superseded` +
+`utc_superseded_reason`; prose: `` read `01:14:30Z` ``). Nothing was silently rewritten.
+
+**Mechanised so the class cannot return silently.** `tools/m4_t18_dispositions.py` now resolves its
+stamp **before it reads or writes anything**, refuses a bare `--utc` with no `--utc-source` ("an
+own-time stamp with no named source is the 20.14c defect class"), and derives the value from git
+with `--utc-from-commit <sha>` — the form the 15 disposition rows and the recount were rebuilt
+with (rebuild verified: only the stamp fields and the derived digest changed, 122 base rows and
+every count identical). `verify` fails a disposition whose stamp carries no source, or a superseded
+value with no reason. Two tests pin it.
+
+**After the repair: 0 forward-stamped own-time fields** in the 5 artefacts (blame-verified) and 0
+in the two beacon files; `fleet/CONTROL.log`'s two historical rows remain, disclosed.

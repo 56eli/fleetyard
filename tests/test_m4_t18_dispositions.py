@@ -8,6 +8,7 @@ import hashlib
 import json
 import os
 import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -51,6 +52,63 @@ class Dispositions(unittest.TestCase):
             self.assertTrue(r.get("reason"))
             self.assertRegex(r.get("utc", ""), r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
             self.assertIn("utc_source", r)
+            # item 12's order / criterion 20.14c: the source must be a DERIVATION, and a repaired
+            # stamp must keep the defective value readable with a reason
+            self.assertTrue(r["utc_source"].startswith(("git committer time of", "argument/--utc")),
+                            r["utc_source"])
+            if r.get("utc_superseded"):
+                self.assertRegex(r["utc_superseded"], r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
+                self.assertTrue(r.get("utc_superseded_reason"))
+
+    def test_unsourced_stamps_are_refused_and_git_derived_ones_match_the_commit(self):
+        """Criterion 20.14c / items 0h-v2.h: an own-time stamp must be exact AND sourced."""
+        self.root = tempfile.mkdtemp(prefix="m4t18-")
+        self.addCleanup(shutil.rmtree, self.root)
+        with self.assertRaises(SystemExit) as ctx:
+            disp.main(["build", "--utc", "2026-09-26T01:12:00Z", "--out", self.root,
+                       "--repo", self.root])
+        self.assertIn("requires --utc-source", str(ctx.exception))
+        with self.assertRaises(SystemExit) as ctx:
+            disp.main(["build", "--out", self.root, "--repo", self.root])
+        self.assertIn("a stamp is required", str(ctx.exception))
+        # in a toy git repo, the stamp is derived from the commit that carries the lines
+        repo = os.path.join(self.root, "git")
+        os.makedirs(os.path.join(repo, "runs", "m4-q2-adjudication"))
+        shutil.copytree(os.path.join(ROOT, "fixtures"), os.path.join(repo, "fixtures"))
+        with open(os.path.join(repo, "runs", "m4-q2-adjudication", "adjudication.jsonl"),
+                  "w", encoding="utf-8") as fh:
+            fh.write("".join(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n"
+                             for r in rows()[:122]))
+        shutil.copy(os.path.join(ROOT, "runs", "m4-q2-adjudication", "PROVENANCE.json"),
+                    os.path.join(repo, "runs", "m4-q2-adjudication", "PROVENANCE.json"))
+        with open(os.path.join(repo, "runs", "m4-q2-adjudication", "SUMMARY.md"), "w",
+                  encoding="utf-8") as fh:
+            fh.write("carries the corrections already\n")
+        run = lambda *a: subprocess.run(("git", "-C", repo) + a, capture_output=True, text=True)
+        run("init", "-q")
+        run("config", "user.email", "worker@example.invalid")
+        run("config", "user.name", "WORKER-2 test")
+        env = dict(os.environ, GIT_AUTHOR_DATE="2026-09-26T00:39:44+00:00",
+                   GIT_COMMITTER_DATE="2026-09-26T00:39:44+00:00")
+        run("add", "-A")
+        subprocess.run(("git", "-C", repo, "commit", "-q", "-m", "base"),
+                       capture_output=True, env=env)
+        head = run("rev-parse", "HEAD").stdout.strip()
+        disp.main(["build", "--utc-from-commit", head, "--repo", repo,
+                   "--superseded", "2026-09-26T01:12:00Z",
+                   "--superseded-reason", "projected from the CONTROL cadence grid (20.14c)",
+                   "--out", os.path.join(repo, "runs", "m4-q2-adjudication")])
+        written = [json.loads(x) for x in
+                   open(os.path.join(repo, "runs", "m4-q2-adjudication", "adjudication.jsonl"),
+                        encoding="utf-8") if x.strip()]
+        d = written[122]
+        self.assertEqual(d["utc"], "2026-09-26T00:39:44Z")
+        self.assertIn("committer time", d["utc_source"])
+        self.assertEqual(d["utc_superseded"], "2026-09-26T01:12:00Z")
+        rec = json.load(open(os.path.join(repo, "runs", "m4-q2-adjudication",
+                                          "RECOUNT-2026-09-26.json"), encoding="utf-8"))
+        self.assertEqual(rec["written_utc"], "2026-09-26T00:39:44Z")
+        self.assertIn("committer time", rec["utc_source"])
 
     def test_recount_arithmetic_and_strata(self):
         rec = json.load(open(REC, encoding="utf-8"))
@@ -71,7 +129,8 @@ class Dispositions(unittest.TestCase):
         os.remove(os.path.join(out, "adjudication.jsonl"))
         shutil.copy(ADJ, os.path.join(out, "adjudication.jsonl"))
         with self.assertRaises(SystemExit) as ctx:
-            disp.main(["build", "--out", out, "--utc", "2026-09-26T01:20:00Z"])
+            disp.main(["build", "--out", out, "--utc", "2026-09-26T01:20:00Z",
+                       "--utc-source", "operator statement (test)"])
         self.assertIn("already present", str(ctx.exception))
 
     def test_corrections_prose_carries_the_required_qualifiers(self):

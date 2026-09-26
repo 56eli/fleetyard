@@ -45,6 +45,7 @@ import datetime
 import hashlib
 import json
 import os
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -53,6 +54,13 @@ import m5r_reduce as m5r  # noqa: E402
 
 THRESHOLDS = "THRESHOLDS.json"
 EXCLUSIONS = "tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json"
+# §G2 / O-5: the seal file stays byte-identical, so the notes that make it readable live BESIDE
+# it. The freeze binds them, so a run cannot proceed on the seal alone.
+COMPANION_NOTES = (
+    "runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md",
+    "runs/m4-q2-adjudication/SEAL-AUDIT.json",
+    "tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md",
+)
 RECEIPT = "RECEIPT.json"
 REVIEW = "REVIEW-QUEUE.md"
 SIGNALS = "signals-holdout.json"
@@ -92,6 +100,48 @@ def dump(path, obj):
     return hashlib.sha256(blob.encode("utf-8")).hexdigest()
 
 
+def _git(repo, *args):
+    p = subprocess.run(("git", "-C", repo) + args, capture_output=True, text=True)
+    return p.stdout if p.returncode == 0 else None
+
+
+def companion_note(repo, path):
+    """One bound note: path + sha256 + commit + commit_utc (§G2 / O-5).
+
+    `commit` is the commit that ADDED the note (a later digest-only re-pin cannot be mistaken for
+    authorship), `commit_utc` its committer time exact to the second — and the source of both is
+    stated, because an unattributed timestamp is the defect class the gate keeps catching.
+    """
+    rel = path.replace(os.sep, "/")
+    if not os.path.exists(path):
+        raise SystemExit("REFUSED: companion note %s is absent — the freeze must bind the notes "
+                         "that adjudicate the seal (§G2/O-5)" % rel)
+    commit, commit_utc = None, None
+    source = None
+    if os.path.exists(os.path.join(repo, ".git")):
+        out = _git(repo, "log", "--format=%H", "--reverse", "--", rel)
+        if out is None:
+            source = "git could not read the history of %s" % rel
+        elif not out.strip():
+            raise SystemExit("REFUSED: companion note %s is not committed — the freeze must bind "
+                             "a committed note so its commit and commit_utc can be derived" % rel)
+        else:
+            commit = out.strip().splitlines()[0]
+            utc = _git(repo, "show", "-s", "--format=%cI", commit)
+            commit_utc = (utc or "").strip() or None
+            source = "git log --reverse -- <path> (the commit that added it)"
+    else:
+        source = "not a git work tree (no .git beside --repo); commit fields are null"
+    return {"path": rel, "sha256": sha(path), "commit": commit, "commit_utc": commit_utc,
+            "commit_source": source,
+            "commit_utc_source": ("git committer time of %s, exact to the second" % (commit[:7]
+                                 if commit else "n/a"))}
+
+
+def companion_notes(args):
+    return [companion_note(args.repo, path) for path in args.companion]
+
+
 def detector_state(name):
     """Current file sha + frozen parameters for one detector."""
     module = c2_detectors.MODULES[name]
@@ -116,6 +166,11 @@ def freeze(args):
         "holdout_exclusions_file": args.exclusions.replace(os.sep, "/"),
         "holdout_exclusions_sha256": sha(args.exclusions),
         "holdout_exclusions": exclusion_set(args.exclusions),
+        "companion_notes": companion_notes(args),
+        "companion_notes_rule": ("§G2/O-5: the seal file is immutable, so the dated notes that "
+                                 "adjudicate it are bound here by path + sha256 + commit + "
+                                 "commit_utc; run() refuses if a bound note's live digest has "
+                                 "moved — the run cannot proceed on the seal alone"),
         "detectors": {name: detector_state(name) for name in DETECTORS},
         "adjudication_protocol": ADJUDICATION_PROTOCOL,
         "freeze_precedes_holdout_read": (
@@ -163,6 +218,17 @@ def _guard_run(args):
             % (receipt.get("split_salt"), receipt.get("run_utc"),
                receipt.get("holdout_consumed")))
     frozen = load(th_path)
+    for note in frozen.get("companion_notes", []):
+        path = note["path"]
+        if not os.path.exists(path):
+            raise SystemExit("REFUSED: companion note %s bound by the freeze is missing — the "
+                             "disclosure that makes the seal readable must be the one the freeze "
+                             "bound (§G2/O-5)" % path)
+        live = sha(path)
+        if live != note["sha256"]:
+            raise SystemExit("REFUSED: companion note %s changed after the freeze (%s -> %s) — "
+                             "the disclosure that makes the seal readable must be the one the "
+                             "freeze bound (§G2/O-5)" % (path, note["sha256"][:12], live[:12]))
     if sha(args.exclusions) != frozen.get("holdout_exclusions_sha256"):
         raise SystemExit("REFUSED: the pre-registered exclusions changed after the freeze "
                          "(%s) — an exclusion may not be changed after the freeze, only "
@@ -285,6 +351,27 @@ def score(args):
     labels = load(args.labels)
     signals = load(os.path.join(args.out, SIGNALS))
     receipt = load(os.path.join(args.out, RECEIPT))
+    # the score step is where a one-shot figure is made, so it re-checks that it is scoring the
+    # read the receipt recorded - a shortened or substituted signals file must be refused, and the
+    # coverage check comes FIRST because it is the load-bearing one (a smaller denominator could
+    # never be re-run: quantum b is one-shot)
+    covered = sorted({t for name in signals for t in signals[name]})
+    if len(covered) != receipt.get("holdout_evaluated"):
+        raise SystemExit("REFUSED: the signals file covers %d transcript(s), not the %d the "
+                         "receipt evaluated - refusing to score a partial read"
+                         % (len(covered), receipt.get("holdout_evaluated")))
+    live_signals_sha = sha(os.path.join(args.out, SIGNALS))
+    if live_signals_sha != receipt.get("signals_sha256"):
+        raise SystemExit("REFUSED: the signals file is not the one the receipt bound (%s vs %s) "
+                         "- refusing to score a substituted or partial read"
+                         % (live_signals_sha[:12], str(receipt.get("signals_sha256"))[:12]))
+    known = {"%s/%s#%d" % (name, t, i) for name in signals for t in signals[name]
+             for i, _sig in enumerate(signals[name][t], 1)}
+    stray = sorted(k for k in labels if k not in known)
+    if stray:
+        raise SystemExit("REFUSED: %d label(s) name no signal in this run (%s) - a labels file "
+                         "written against another read must not be scored against this one"
+                         % (len(stray), ", ".join(stray[:3])))
     result = {"task": "TASK-019b — scored hand adjudications", "run_utc": utc_now(),
               "scored_utc": args.utc or utc_now(),
               "receipt_sha256": sha(os.path.join(args.out, RECEIPT)),
@@ -367,6 +454,14 @@ def verify(args):
         problems.append("freeze and receipt disagree on the exclusions digest")
     if len(set(receipt.get("holdout_excluded", [])) & set(receipt.get("holdout_reads", []))):
         problems.append("a pre-registered exclusion was read anyway")
+    if not frozen.get("companion_notes"):
+        problems.append("the freeze binds no companion note (§G2/O-5)")
+    for note in frozen.get("companion_notes", []):
+        path = note["path"]
+        if not os.path.exists(path):
+            problems.append("companion note %s is missing" % path)
+        elif sha(path) != note["sha256"]:
+            problems.append("companion note %s no longer matches the freeze" % path)
     if args.split and os.path.exists(args.split):
         if sha(args.split) != frozen["split_sha256"]:
             problems.append("the live split file no longer matches the freeze")
@@ -398,6 +493,11 @@ def main(argv=None):
     for p in (f, r, v):
         p.add_argument("--split", default="tools/HELD-OUT-SPLIT-V2.json")
         p.add_argument("--exclusions", default=EXCLUSIONS)
+    f.add_argument("--companion", action="append", default=None,
+                   help="a dated note the freeze binds (§G2/O-5); repeatable, "
+                        "defaults to the seal appendix, the seal audit report and the seal note")
+    f.add_argument("--repo", default=".")
+    v.add_argument("--repo", default=".")
     f.add_argument("--utc", required=True)
     f.add_argument("--tool-commit", required=True)
     f.add_argument("--main-head", required=True)
@@ -409,6 +509,8 @@ def main(argv=None):
     s.add_argument("--labels", required=True)
     s.add_argument("--utc", default=None)
     a = ap.parse_args(argv)
+    if a.cmd == "freeze" and not a.companion:
+        a.companion = list(COMPANION_NOTES)
     if a.cmd == "run":
         a.detectors = tuple(x.strip() for x in a.detectors.split(",") if x.strip())
     return {"freeze": freeze, "run": run, "score": score, "verify": verify}[a.cmd](a)
