@@ -34,11 +34,21 @@ def sh(args, check=False):
     return r.stdout.strip()
 
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import control_row as _control_row  # noqa: E402  (locked CONTROL append)
+
+
 def utc():
     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def next_seq():
+    """Kept for callers that only want the number; the APPEND is what must be atomic.
+
+    Cycle J reported reused seqs in `fleet/CONTROL.log`: two writers (this watcher's auto-rows and
+    hand-written rows) each computed `max + 1` from a file the other was changing. The row is now
+    written by `tools/control_row.py` under an exclusive lock, so `seq` is unique by construction.
+    """
     seq = 0
     if os.path.exists(CONTROL):
         for line in open(CONTROL, encoding="utf-8"):
@@ -85,9 +95,7 @@ def main():
         line = "  %s cadence check %d (auto): %s" % (utc(), n, fact)
         with open(LOG, "a", encoding="utf-8") as fh:
             fh.write(line + "\n")
-        with open(CONTROL, "a", encoding="utf-8") as fh:
-            fh.write("%s|%s|A-2026-09-25-001|%s|%d|OK|%s\n"
-                     % (utc(), main, REGISTRY_SHA, next_seq(), fact))
+        _control_row.append(main, "OK", fact)
         signals = []
         pause_state = "REMOVED" if removed else ("present" if paused else "absent")
         now = (orch, tuple(pend), gates_sig, status_sig, main, boss, pause_state)
