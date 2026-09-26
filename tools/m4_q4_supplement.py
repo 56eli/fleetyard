@@ -41,6 +41,7 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import det_format as fmt_det  # noqa: E402  (item 14: publish the format leg's full config)
 import m4_pin_repair  # noqa: E402  (item 8a: generator attribution)
 import m5r_reduce as m5r  # noqa: E402
 
@@ -84,11 +85,38 @@ def build(args):
     drop_prov = load(os.path.join(out, RUNS["drop"]["provenance"]))
     fmt_prov = load(os.path.join(out, RUNS["format"]["provenance"]))
 
+    # item 14 / criterion 20.16: a published config digest must cover the configuration in
+    # force for the run. The format leg previously published only `rules` (805241dd), which a
+    # reader comparing it with the q3 tuning supplement's config (8e7e35a2 = abbreviations +
+    # excerpt_chars) would read as "the configurations differ". They do not: the detector's
+    # module constants are the same. This build publishes the full object, plus the exact
+    # sub-object that reproduces q3's digest, so comparability is checkable by digest.
+    fmt_rules = fmt_prov["rules"]
+    fmt_constants = {"abbreviations": sorted(fmt_det.ABBREV),
+                     "excerpt_chars": fmt_det.EXCERPT}
     configs = {
         "v1": RUNS["v1"]["config"],
         "drop": drop_prov["params"],
-        "format": {"rules": fmt_prov["rules"]},
+        "format": dict(fmt_constants, rules=fmt_rules),
     }
+    config_notes = {
+        "v1": ("complete: the leg's detector set and the split side it was run on "
+               "(the run's own parameters are the detector defaults, pinned by the "
+               "toolchain above)"),
+        "drop": ("complete: all eight C1-drop parameters in force, identical to the q2 "
+                 "supplement's object and digest (40945872) - comparability by digest"),
+        "format": ("complete for this leg AND identical to the q3 tuning supplement's "
+                   "config object, so the two digests are equal (8e7e35a2): the same "
+                   "module constants (abbreviations, excerpt_chars - read here from "
+                   "tools/det_format.py at sha256 %s) and the same seven rules were in "
+                   "force in both runs. The exposure comparison of PATTERNS 5d is therefore "
+                   "checkable by digest, not inferred. The previous object published only "
+                   "the rules (digest 805241dd), which is why the gate saw two different "
+                   "digests for one configuration" % fmt_prov["detector_sha256"]),
+    }
+    config_digest_note = ("sha256 over json.dumps(config, sort_keys=True, "
+                          "separators=(',',':')) - the q2 supplement's convention, adopted "
+                          "here for all three legs")
     pins = v1_prov["v1_tool_shas"]
     toolchain = {
         "cited_as": "%s:tools/<file>" % args.archive_ref,
@@ -113,6 +141,8 @@ def build(args):
             "provenance_sha256": m5r.sha256_file(os.path.join(out, spec["provenance"])),
             "config": configs[part],
             "config_sha256": digest_params(configs[part]),
+            "config_digest_note": config_digest_note,
+            "config_note": config_notes[part],
         }
     runs["v1"]["toolchain"] = toolchain
     runs["v1"]["per_detector_signal_instances_supplement"] = {
