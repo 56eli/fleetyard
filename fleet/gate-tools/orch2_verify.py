@@ -1972,6 +1972,7 @@ def section_quantum_b(wt, rep):
                  "work; n is now the count of filenames compared")
     v2salt = j.get("salt")
     spent, spent_v1, nrecv = [], [], 0
+    spent_receipts: dict = {}   # defect #52: the verdict needs each receipt's BODY, not only its path
     for root, dirs, files in os.walk(os.path.join(wt, "runs")):
         dirs[:] = [d for d in dirs if not d.startswith(".")]
         for fn in sorted(files):
@@ -1992,19 +1993,71 @@ def section_quantum_b(wt, rep):
                 salt = str(d.get("split_salt") or "")
                 if "V2" in ref.upper() or (v2salt and salt == v2salt):
                     spent.append(f"{rel} (split {ref or 'v2 salt'})")
+                    spent_receipts[rel] = d
                 else:
                     spent_v1.append(f"{rel} (split {os.path.basename(ref) or '?'}, salt {salt[-14:]})")
-    rep.add("12", "no receipt already declares the V2 holdout SPENT (the quantum-b run has not happened)", "0",
-            f"{len(spent)} of {nrecv} JSON artefacts under runs/ declare the V2 holdout spent: {sorted(spent)[:3]}",
-            PASS if not spent else FAIL, n=nrecv,
-            note=f"defect #42: n was the count of offending receipts (0), so this PASS looked vacuous; n is now the "
-                 f"count of artefacts examined for a spend declaration. A receipt only consumes v2 if it binds the v2 "
-                 f"split file or the v2 salt; "
-                 f"{len(spent_v1)} receipt(s) consume the V1 holdout, which is correct and expected: "
-                 f"{sorted(spent_v1)[:3]}")
+    # DEFECT #52: this row used to expect "0" unconditionally — correct while quantum b was blocked, and a FALSE CHARGE
+    # against a compliant worker the moment the owner authorizes the run the row was written to wait for. The verdict is
+    # now a function of what the receipts say, mutation-tested at T37-T40.
+    v52, obs52, note52 = quantum_b_spend_verdict([x.split(" (split")[0] for x in spent], spent_receipts)
+    rep.add("12", "the V2 holdout is spent AT MOST ONCE and, if it is spent, the receipt carries the authority, the exact "
+                  "run stamp with its source, and a frozen-threshold digest (criterion v2.7; as amended by defect #52, "
+                  "which removed a standing expectation of zero receipts)",
+            "0 receipts binding v2 while the run is unfired, or exactly 1 fully attributed receipt once it is fired",
+            f"{obs52} — from {nrecv} JSON artefacts read under runs/; {len(spent_v1)} receipt(s) bind the V1 holdout, "
+            f"which is correct and expected: {sorted(spent_v1)[:3]}",
+            v52, n=nrecv,
+            note=f"defect #42: n was the count of offending receipts (0), so this PASS looked vacuous; n is the count of "
+                 f"artefacts examined for a spend declaration. A receipt only consumes v2 if it binds the v2 split file "
+                 f"or the v2 salt. {note52}")
 
 
 
+
+
+def quantum_b_spend_verdict(spent, receipts):
+    """DEFECT #52: §12's spend row expected ZERO receipts, which was true only while quantum b was blocked.
+
+    The moment the owner authorizes the one-shot and the worker fires it, a fixed expectation of zero FAILs a COMPLIANT run —
+    a false charge planted in advance, in the one row the next cycle is most likely to turn on. So the row became a
+    three-way decision: not-yet-run, run once under cited authority with frozen thresholds, or a breach (a re-run, a spend
+    with no authority behind it, thresholds not shown frozen, or a stamp that is not exact). Returns (verdict, observed,
+    note); `spent` is the list of receipt paths binding v2 and `receipts` maps each to its parsed dict."""
+    if not spent:
+        return (PASS, "0 receipts bind the v2 split — the one-shot has NOT been spent",
+                "this is the correct state while quantum b is unfired, not a vacuous PASS: every JSON artefact under "
+                "runs/ was read and tested for a spend declaration (n is that count, defect #42)")
+    if len(spent) > 1:
+        return (FAIL, f"{len(spent)} receipts bind the v2 split: {sorted(spent)[:4]} — the one-shot was evaluated MORE "
+                      f"THAN ONCE",
+                "criterion v2.7 is a single run with a consumed receipt and NO re-run; two receipts cannot both be the "
+                "first, and no argument about which one counts repairs a spent holdout")
+    path = spent[0]
+    d = receipts.get(path) or {}
+    missing = []
+    auth = str(d.get("authorization") or d.get("authority") or d.get("owner_ruling") or d.get("authorized_by") or "")
+    if not auth.strip():
+        missing.append("an AUTHORIZATION for the spend (the owner ruling or errata clause that permits firing a one-shot)")
+    utc = str(d.get("run_utc") or d.get("utc") or d.get("evaluated_utc") or "")
+    if not re.match(r"^20\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ$", utc):
+        missing.append(f"a run utc exact to the second (got {utc or 'none'})")
+    if not str(d.get("utc_source") or d.get("run_utc_source") or "").strip():
+        missing.append("the SOURCE of that utc (criterion 20.14)")
+    if not (d.get("thresholds_digest") or d.get("frozen_thresholds") or d.get("config_digest")
+            or d.get("threshold_config_digest")):
+        missing.append("a frozen-threshold digest (v2.7: thresholds fixed BEFORE the run, provable after it)")
+    if not (d.get("split_file") or d.get("split") or d.get("split_salt") or d.get("split_digest")):
+        missing.append("the sealed split it consumed")
+    if missing:
+        return (FAIL, f"exactly 1 receipt binds the v2 split ({path}) but it does not carry: " + "; ".join(missing),
+                "a one-shot is spent once and its receipt is the only evidence that survives it: an uncited authority, "
+                "an inexact stamp or undemonstrable frozen thresholds each leave the run unauditable, which is why they "
+                "are FAILs rather than notes")
+    return (PASS, f"exactly 1 receipt binds the v2 split ({path}): authority cited ({auth[:70]}), run utc {utc} with its "
+                  f"source, frozen-threshold digest present",
+            "§15's v2.12–v2.14 rows stop being HELD and start being live checks at this point: pre-registration before "
+            "the run commit, holdout_reads equal to the pre-registered eval set, and nothing added to the eval directory "
+            "afterwards except the receipt and an errata")
 
 
 # ---------------------------------------------------------------- self-test (self-item O-2)
@@ -2089,6 +2142,29 @@ def selftest(golden: str) -> int:
       VACUOUS, _r.rows[0]["verdict"])
     t("T36", "#50 any other crash is a FAIL against the INSTRUMENT, and the summary still prints",
       FAIL, _r.rows[1]["verdict"])
+    # defect #52: the spend row must not FAIL the compliant one-shot run it was written to wait for.
+    _good = {"runs/quantum-b/RECEIPT.json": {"authorization": "OWNER ERRATA-25g §5, decision request ruled option B",
+                                             "run_utc": "2026-09-26T11:02:07Z", "utc_source": "date -u at write time",
+                                             "thresholds_digest": "9f2c1a…", "split_file": "tools/HELD-OUT-SPLIT-V2.json"}}
+    _noauth = {"runs/quantum-b/RECEIPT.json": {"run_utc": "2026-09-26T11:02:07Z", "utc_source": "date -u",
+                                               "thresholds_digest": "9f2c1a…",
+                                               "split_file": "tools/HELD-OUT-SPLIT-V2.json"}}
+    _fuzzy = {"runs/quantum-b/RECEIPT.json": {"authorization": "owner ruling", "run_utc": "2026-09-26T11:02Z",
+                                              "utc_source": "projected from the cadence grid",
+                                              "thresholds_digest": "9f2c1a…",
+                                              "split_file": "tools/HELD-OUT-SPLIT-V2.json"}}
+    t("T37", "#52 with no receipt the spend row PASSes as UNFIRED, not vacuously",
+      PASS, quantum_b_spend_verdict([], {})[0])
+    t("T38", "#52 exactly one fully attributed receipt PASSes — the row no longer FAILs the run it waited for",
+      PASS, quantum_b_spend_verdict(["runs/quantum-b/RECEIPT.json"], _good)[0])
+    t("T39", "#52 TWO receipts FAIL: a one-shot evaluated twice is not repairable by argument",
+      FAIL, quantum_b_spend_verdict(["runs/a.json", "runs/b.json"], {})[0])
+    t("T40", "#52 a receipt with no cited authority, or an inexact stamp, FAILs and NAMES what is missing",
+      (FAIL, FAIL, True, True),
+      (quantum_b_spend_verdict(["runs/quantum-b/RECEIPT.json"], _noauth)[0],
+       quantum_b_spend_verdict(["runs/quantum-b/RECEIPT.json"], _fuzzy)[0],
+       "AUTHORIZATION" in quantum_b_spend_verdict(["runs/quantum-b/RECEIPT.json"], _noauth)[1].upper(),
+       "exact to the second" in quantum_b_spend_verdict(["runs/quantum-b/RECEIPT.json"], _fuzzy)[1]))
     t("T1", "defect #5/#19 curly apostrophes are NORMALISED, not merely included",
       ["that's"], tokens("that\u2019s"))
     t("T2", "defect #2 em/en dashes are SEPARATORS (gluing them merges two tokens)",

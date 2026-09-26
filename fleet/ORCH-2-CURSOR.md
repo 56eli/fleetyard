@@ -360,3 +360,17 @@ heartbeat at cadence — signals are the liveness contract, not the push (ERRATA
   spends the one-shot holdout.
 - **Do not re-litigate:** the 20.14a worker figures (re-measured at both heads, pre- and post-#49), the item-0g amendment
   (evidence in ledger §24.4, regression-checked), or the M5-R byte-identity (same tool blob at both heads).
+
+### Addendum at seq 60 (2026-09-26T10:04:50Z) — one rule to carry into every future row
+
+**A row whose expected value encodes "the work has not happened yet" is a false charge waiting for the work to land.** Two
+instances found in one cycle, from opposite sides: item 0g demanded byte-identity from a file criterion 20.14c had ordered
+repaired (defect #51), and §12's spend row expected zero receipts and would have FAILed the first authorized quantum-b run
+(defect #52). Write such rows as decisions over the artefacts — unfired / fired-correctly / fired-improperly — and
+mutation-test the branch that does not exist yet, because that is the branch nobody has ever seen run.
+
+Current instrument state: **40/40 selftest**; `f5e2cf5` 336 rows · FAIL 5; `34db0b0` 335 rows · FAIL 13 (regression-checked
+after every amendment); goldens refreshed for both heads; suite floor **283**. Open items are the worker's (v2.e, v2.f,
+item 12, item 13b) plus one owner decision (quantum b) and one BOSS-2 report (its own silence since 02:26Z, the worker's
+backward utc column). If the next head carries a quantum-b receipt, §12 and §15 are ready: the receipt needs an authorization
+citation, an exact run utc with its source, a frozen-threshold digest and the split it consumed.

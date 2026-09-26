@@ -1584,3 +1584,28 @@ mentions outside the post-seal void check; v2.f — the prep header's old `21:5x
 **Instrument:** 336 rows · PASS 290 · FAIL 5 · INFO 32 · PROXY 8 · VACUOUS 1 · `--selftest` **36/36** · suite floor rises
 **263 → 283 OK (skipped=1)** · goldens refreshed for both heads. §20: **5/5 mapped** at `f5e2cf5`, INFO at `34db0b0` by
 design.
+
+
+---
+
+## GATE CYCLE L ADDENDUM (2026-09-26T10:04:50Z) — defect #52: the gate was armed to FAIL the run it had just asked the owner to authorize
+
+Cycle L's last act put a one-shot decision to the owner in writing (`fleet/ORDERS/DECISION-REQUEST-QUANTUM-B-2026-09-26.md`).
+Publishing that request exposed a row that would have punished the answer: §12 expected **zero** receipts declaring the v2
+holdout spent, and returned FAIL the moment one existed. Correct while quantum b was blocked; a **false charge** against the
+first compliant run afterwards — and a dangerous one, because "a receipt declares the holdout spent" is also how a real breach
+reads, so the FAIL would have needed arguing rather than reading.
+
+The row is now `quantum_b_spend_verdict`: **no receipt → PASS (unfired, `n` = artefacts read, so not vacuous)**; **one fully
+attributed receipt → PASS** (authority cited, run utc exact to the second with its source, frozen-threshold digest present,
+sealed split named); **one receipt missing any of those → FAIL naming the missing field**; **two or more → FAIL, the one-shot
+was evaluated more than once**. Mutation-tested at **T37–T40**, including the branch that has never existed in any artefact —
+the compliant receipt — because that is precisely the branch a fixed expectation gets wrong. `--selftest` **40/40**.
+
+Both heads re-run after the amendment: `f5e2cf5` **336 rows · FAIL 5** unchanged, `34db0b0` **335 rows · FAIL 13** unchanged
+(the same thirteen cycle K published). Goldens refreshed for both.
+
+**Rule adopted, and it is the part worth keeping:** a row whose expected value encodes *"the work has not happened yet"* is a
+false charge waiting for the work to land. Item 0g was the same shape from the other side (§24.4 — it demanded byte-identity
+from a file another criterion had ordered repaired). Such rows must be decisions over artefacts, not constants, and must be
+mutation-tested on the branch nobody has seen run.

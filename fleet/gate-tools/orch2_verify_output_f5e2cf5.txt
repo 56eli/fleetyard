@@ -390,8 +390,8 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-f5e · head f5e2cf5
          expected ABSENT is the correct state while v2.a/v2.b are open
                   | observed 0 of 277 file(s) under runs/ match a pre-registration name: []
          defect #42: n was the count of MATCHES (0), which made this indistinguishable from a row that did no work; n is now the count of filenames compared
-  PASS   no receipt already declares the V2 holdout SPENT (the quantum-b run has not happened) [n=268]
-         defect #42: n was the count of offending receipts (0), so this PASS looked vacuous; n is now the count of artefacts examined for a spend declaration. A receipt only consumes v2 if it binds the v2 split file or the v2 salt; 2 receipt(s) consume the V1 holdout, which is correct and expected: ['runs/m4-q4-holdout/PROVENANCE-SUPPLEMENT.json (split HELD-OUT-SPLIT.json, salt out-2026-09-25)', 'runs/m4-q4-holdout/v1-holdout.PROVENANCE.json (split HELD-OUT-SPLIT.json, salt out-2026-09-25)']
+  PASS   the V2 holdout is spent AT MOST ONCE and, if it is spent, the receipt carries the authority, the exact run stamp with its source, and a frozen-threshold digest (criterion v2.7; as amended by defect #52, which removed a standing expectation of zero receipts) [n=268]
+         defect #42: n was the count of offending receipts (0), so this PASS looked vacuous; n is the count of artefacts examined for a spend declaration. A receipt only consumes v2 if it binds the v2 split file or the v2 salt. this is the correct state while quantum b is unfired, not a vacuous PASS: every JSON artefact under runs/ was read and tested for a spend declaration (n is that count, defect #42)
 
 == 13. cross-artefact coherence (20.13 / L10, items 0e-0g) ==
   PASS   shape_adjudication classifies every signal [n=122]
@@ -502,7 +502,7 @@ ORCH-2 gate instrument · worktree /home/user/gate-scratch/w-f5e · head f5e2cf5
          PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
   PASS   TASK-021 — C1-drop sensitivity criteria 21.1-21.8: criteria mechanized by this instrument [n=8]
          PROXY, not a coverage verdict: this counts ids CITED in the instrument's source, and several sections mechanize a criterion without printing its id (§7 is q2.6's substance, §1 carries 20.2-20.4, §13 carries 20.13/L10 and items 0e-0g). The authoritative criterion-to-section map is published in ledger §16; a criterion gated by hand and recorded in GATES.md is legitimate, but the gap must be visible because an uncited criterion is one whose re-gate is not a single instrument run
-  PASS   this instrument cites no criterion or item that exists in no queue file [n=64]
+  PASS   this instrument cites no criterion or item that exists in no queue file [n=65]
          a row that cites a criterion outside the ruleset invents authority (defect #10's class: the needle must be the actual wording). Sub-letters such as 20.14a are ORCH-2's own sub-rows and are traced to their parent criterion, which must exist in the queue files
   PASS   every OPEN item in the queue has a row in this instrument that flips when it is repaired [n=12]
          the open-item list is taken from fleet/queue/status.md and TASK-MAP.md's published priority; this row is the coverage claim that matters, because these are the items whose re-gate must be a single run

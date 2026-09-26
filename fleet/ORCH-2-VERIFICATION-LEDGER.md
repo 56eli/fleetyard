@@ -1565,3 +1565,35 @@ What is worth recording is not the slip but the sequence: a self-audit row added
 PASSes is not evidence of discipline; this one has now failed its author three times (addendum 7, §24.7, §24.8) and each
 failure produced a repaired document rather than an argument. §24.7's "amendable 0" was true of the act that wrote it and is
 left unedited — the correction is this section, appended, because the ledger is a record.
+
+### 24.9 Defect #52 — the gate had pre-planted a false charge against the run this lane just asked the owner to authorize (2026-09-26T10:04:50Z)
+
+The decision request in §24's cycle-L act asks the owner to let quantum b fire. Publishing that request while §12 still carried
+a row expecting **zero** v2 receipts meant the gate was armed to FAIL the first compliant run: the row read *"no receipt already
+declares the V2 holdout SPENT (the quantum-b run has not happened)"*, expected `0`, and returned `PASS if not spent else FAIL`.
+That expectation was correct only for as long as the run was blocked. The instant the owner rules and the worker fires a
+properly attributed one-shot, the row would have reported a FAIL against exactly the artefact the fleet was waiting for — and
+theFAIL would have looked like a discipline breach, because "a receipt declares the holdout spent" *is* how a breach reads.
+
+So the row became a **decision procedure over the receipts** (`quantum_b_spend_verdict`), not a fixed expectation:
+
+| state of the receipts | verdict | why |
+|---|---|---|
+| none bind v2 | **PASS** — "the one-shot has NOT been spent" | the correct state while unfired; `n` is the count of artefacts read, so it is not vacuous (defect #42) |
+| exactly one, fully attributed | **PASS** — authority cited, run utc exact to the second with its source, frozen-threshold digest present, split named | a one-shot spent once, auditable from its receipt |
+| exactly one, missing any of those | **FAIL**, naming what is missing | an uncited authority, an inexact stamp or undemonstrable frozen thresholds each leave the only evidence of a spent holdout unauditable |
+| two or more | **FAIL** — "evaluated MORE THAN ONCE" | v2.7 forbids a re-run; two receipts cannot both be first, and no argument about which counts repairs a spent holdout |
+
+Mutation-tested: **T37** unfired PASSes (not vacuously) · **T38** one fully attributed receipt PASSes — the case the old row
+got wrong · **T39** two receipts FAIL · **T40** a receipt with no cited authority, or a minute-precision stamp, FAILs **and
+names the missing field**. `--selftest` is now **40/40**.
+
+Re-run at both heads after the amendment: `f5e2cf5` **336 rows · FAIL 5** (unchanged, the spend row still PASSes as unfired but
+now for a reason that survives the run) and `34db0b0` **335 rows · FAIL 13** (unchanged, the same thirteen cycle K published).
+Both goldens refreshed; `--selftest` 40/40 against the new golden.
+
+**The general rule, which is worth more than the row:** a row whose expected value encodes *"the work has not happened yet"* is
+a false charge waiting for the work to land. Item 0g was the same shape in the other direction (§24.4: it expected a file to
+stay byte-identical that another criterion had ordered repaired). Every such row must be written as a decision over the
+artefacts — unfired / fired-correctly / fired-improperly — and mutation-tested on the branch that does not exist yet, because
+that branch is the one nobody has ever seen run.
