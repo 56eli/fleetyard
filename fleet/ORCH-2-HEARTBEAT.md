@@ -1,15 +1,12 @@
-ORCH-2 heartbeat — CONTROL seq 36
+ORCH-2 heartbeat — CONTROL seq 37
 
-- **ANNEX amendment §F** (append-only, TASK-019): deriving the v2-holdout taint corrected my own A4 wording — the
-  four excluded transcripts are **label-tainted** by the pre-seal TASK-018 adjudication, not "fixture-adjacent"
-  (§10 proves the holdout holds zero fixture transcripts). §F names all four with their seven prior verdicts, fixes
-  **primary 33 / sensitivity 29** from one run, requires those seven re-adjudicated **blind** with a published
-  prior-vs-new table, forbids presenting them as discoveries, restates no-auto-promotion for holdout rows, and binds
-  the two caveat sentences that must ride with every quantum-b figure.
-- **Instrument v3.2 §12 (quantum-b readiness)**: frozen inputs **6/6 undrifted** at `4fc40c8`; holdout 33; tainted
-  four 4/4 by name; split-v2 digest `73d86f0d…` recorded; **no** pre-registration artefact (the correct state);
-  **no** receipt consumes the v2 holdout. 231 rows · PASS 192 · FAIL 17 (16 distinct items) · INFO 20 · PROXY 2.
-- Self-found defect #25 fixed: a consumption receipt is only about the split it names — both spent receipts bind v1,
-  so the first version of that row falsely reported the quantum-b run had already happened.
-- Quantum b stays **HELD** behind item v2.a; TASK-015 M6-Final stays blocked. Fleet: BOSS-2 `67a4f0e` zero controls;
-  WORKER-2 `4fc40c8` static — no ORCH-2 action per ERRATA-25f.
+- **Self-item O-2 CLOSED**: `orch2_verify.py --selftest` asserts 18 named cases with no worktree needed; the
+  helpers (`ts_class`, `draw_holdout`, `drop_rules`, `rule_a_defect`) were extracted so the tests run the real code
+  paths; the 231-row section output is **byte-identical** after the refactor (diffed against the committed golden).
+- **The selftest was mutation-tested**: five injected regressions, five caught (T1, T8b, T3+T7, T5, T11). One of my
+  first mutants was a syntax error and proved nothing, so it was re-run validly — recorded in ledger §13.
+- Standing rule now written down: any instrument change must pass `--selftest` and be diffed against the golden,
+  with row movements explained in the ledger before the new output is committed.
+- Unchanged: quantum b HELD behind item v2.a; TASK-015 M6-Final blocked; no detector promotable; no rate/precision.
+- Fleet: BOSS-2 `67a4f0e` (zero controls, zero concerns); WORKER-2 `4fc40c8` static — no ORCH-2 action per
+  ERRATA-25f.

@@ -1,0 +1,21 @@
+ORCH-2 gate instrument · --selftest
+  ok   T1   defect #5/#19 curly apostrophes are NORMALISED, not merely included
+  ok   T2   defect #2 em/en dashes are SEPARATORS (gluing them merges two tokens)
+  ok   T3   defect #3 hyphens stay INSIDE tokens (load-bearing for self-item O-1)
+  ok   T4   empty and None inputs tokenize to nothing rather than crashing
+  ok   T5   O-1 a repetition artifact FAILS rule A and PASSES rule B
+  ok   T6   O-1 a clean single drop satisfies rules A-D and not E (quoted is not contiguous)
+  ok   T7   O-1 the token rule is load-bearing: dropping a hyphenated token's HALF fails rule A
+  ok   T8   defect #8 a pattern classifying a whole value must FULLMATCH it
+  ok   T8b  defect #8's actual mechanism: a value that merely CONTAINS a timestamp is not that timestamp
+  ok   T9   defect #18 a census must tell ASSERTING from QUOTING
+  ok   T10  defect #4 fixture files store PATHS while splits store BASENAMES
+  ok   T11  the draw is deterministic, partitions the corpus, and the two readings DISAGREE (the basis of the v2.1 caveat)
+  ok   T12  the draw over an empty corpus is empty, not everything
+  ok   T13  sha256 known-answer test (a wrong digest helper invalidates every binding row)
+  ok   T14  Poisson CDF known value and monotonicity (the exposure-normalized P row)
+  ok   T15  dir_digest is order-independent and counts files (the by-transcript and records rows)
+  ok   T17  defect #5-class trap, stated so callers guard it: two ABSENT values compare equal, so a check() on .get() results must pass an explicit sentinel for absence
+  ok   T16  the committed golden output orch2_verify_output_4fc40c8.txt agrees with its own summary line
+
+== selftest: 18/18 ok

@@ -125,6 +125,64 @@ def tokens(s: str) -> list[str]:
     return out
 
 
+
+
+def ts_class(v: str) -> str:
+    """'exact' | 'minute' | 'fuzzy' | 'other'. A pattern that classifies a WHOLE value must
+    FULLMATCH it (defect #8: matching the suffix of a correct value reported 19 false offenders
+    because the minute pattern matched '38:04Z' inside '2026-09-25T20:38:04Z')."""
+    v = str(v or "")
+    if TS_EXACT.fullmatch(v):
+        return "exact"
+    if TS_ANY.fullmatch(v):
+        return "minute"
+    if FUZZY_TS.search(v):
+        return "fuzzy"
+    return "other"
+
+
+def draw_holdout(names, salt: str, mod: int, bucket: int, reading: str = "full") -> set:
+    """The sealed split's draw: sha256(SALT + basename) mod N == bucket. `reading` selects how
+    the digest is turned into an integer - 'full' reproduces the seal (33/197 set-equal);
+    'hex8' does NOT (28/2), which is why the caveat travels with criterion v2.1."""
+    out = set()
+    for b in names:
+        h = sha_bytes((salt + b).encode())
+        n = int(h, 16) if reading == "full" else int(h[:8], 16)
+        if n % mod == bucket:
+            out.add(b)
+    return out
+
+
+def drop_rules(suspected: str, quoted: str, dropped_words) -> dict:
+    """The five natural drop-consistency rules of self-item O-1, all under the stated token
+    rule (apostrophes normalised, hyphens INSIDE tokens). The rules disagree by a factor of two
+    on the same 122 signals, so no number may be quoted without naming its rule."""
+    dw = [w.lower() for w in (dropped_words or [])]
+    st, qt = tokens(suspected), tokens(quoted)
+    first = st.copy()
+    for w in dw:
+        if w in first:
+            first.remove(w)
+    return {"A remove-all-occurrences": [w for w in st if w not in dw] == qt,
+            "B remove-first-occurrence": first == qt,
+            "C quoted-subseq+count": (all(x in st for x in qt) and len(st) - len(qt) == len(dw)),
+            "D suspected-minus-quoted==dropped": [w for w in st if w not in qt] == dw,
+            "E quoted-contiguous-in-suspected": (" ".join(qt) in " ".join(st) and
+                                                 len(st) == len(qt) + len(dw))}
+
+
+def rule_a_defect(suspected: str, quoted: str, dropped_words) -> tuple:
+    """(fails the stated criterion, and is a repetition artifact). Every row that fails rule A on
+    the real data is a repetition artifact: the dropped word occurs more than once in the
+    book-side span, so removing EVERY occurrence over-deletes."""
+    dw = [w.lower() for w in (dropped_words or [])]
+    st, qt = tokens(suspected), tokens(quoted)
+    fails = [w for w in st if w not in dw] != qt
+    return fails, bool(fails and any(st.count(w) > 1 for w in dw))
+
+
+
 class Report:
     def __init__(self) -> None:
         self.rows: list[dict] = []
@@ -815,18 +873,8 @@ def section_signal_evidence(wt, rep):
     # has no published procedure, and five natural rules disagree by a factor of two.
     variants = collections.Counter()
     for _k, sg in flat:
-        dw = [w.lower() for w in (sg.get("dropped_words") or [])]
-        st, qt = tokens(sg.get("suspected")), tokens(sg.get("quoted"))
-        variants["A remove-all-occurrences"] += [w for w in st if w not in dw] == qt
-        first = st.copy()
-        for w in dw:
-            if w in first:
-                first.remove(w)
-        variants["B remove-first-occurrence"] += first == qt
-        variants["C quoted-subseq+count"] += (all(x in st for x in qt) and len(st) - len(qt) == len(dw))
-        variants["D suspected-minus-quoted==dropped"] += [w for w in st if w not in qt] == dw
-        variants["E quoted-contiguous-in-suspected"] += (" ".join(qt) in " ".join(st) and
-                                                        len(st) == len(qt) + len(dw))
+        for k, v in drop_rules(sg.get("suspected"), sg.get("quoted"), sg.get("dropped_words")).items():
+            variants[k] += v
     rep.add("7", "drop consistency under FIVE natural rules (rule sensitivity)",
             "the q2.6 gate figure 113/9 is reproduced by none of them",
             " · ".join(f"{k}: {v}/{len(flat)}" for k, v in sorted(variants.items())), INFO, n=5 * len(flat),
@@ -838,8 +886,9 @@ def section_signal_evidence(wt, rep):
     rep_rows = []
     for _k, sg in flat:
         dw = [w.lower() for w in (sg.get("dropped_words") or [])]
-        st, qt = tokens(sg.get("suspected")), tokens(sg.get("quoted"))
-        if [w for w in st if w not in dw] != qt:
+        st = tokens(sg.get("suspected"))
+        fails, _is_rep = rule_a_defect(sg.get("suspected"), sg.get("quoted"), dw)
+        if fails:
             rep_rows.append((dw, [w for w in dw if st.count(w) > 1], sg.get("suspected"), sg.get("quoted")))
     all_rep = all(r[1] for r in rep_rows)
     rep.add("7", "STATED CRITERION — shape-defective rows under rule A", 
@@ -979,9 +1028,8 @@ def section_split_v2(wt, rep, sup):
               note=f"fixture transcripts {len(forced_fx)} ∪ v1 holdout {len(v1hol)}; "
                    f"v1_holdout_forced_tuning declares {len(j['v1_holdout_forced_tuning'])}")
     draws = {}
-    for label, fn in (("int(full hexdigest) % mod", lambda b: int(sha_bytes((salt + b).encode()), 16) % mod),
-                      ("int(first 8 hex) % mod", lambda b: int(sha_bytes((salt + b).encode())[:8], 16) % mod)):
-        raw = {b for b in allb if fn(b) == bucket}
+    for label, reading in (("int(full hexdigest) % mod", "full"), ("int(first 8 hex) % mod", "hex8")):
+        raw = draw_holdout(allb, salt, mod, bucket, reading)
         draws[label] = (raw - forced, (set(allb) - raw) | forced)
     seal_h = {os.path.basename(x) for x in j["holdout"]}
     seal_tn = {os.path.basename(x) for x in j["tuning"]}
@@ -1038,7 +1086,7 @@ def section_split_v2(wt, rep, sup):
                 "present" if rc == 0 else "ABSENT", PASS if rc == 0 else FAIL, n=1,
                 note="same attributability class as criterion 20.10 / item 8a")
     rep.add("10", "seal manifest run_utc exact to the second", "YYYY-MM-DDThh:mm:ssZ", str(man.get("run_utc")),
-            PASS if TS_EXACT.fullmatch(str(man.get("run_utc") or "")) else FAIL, n=1)
+            PASS if ts_class(man.get("run_utc")) == "exact" else FAIL, n=1)
     rep.add("10", "re-seal rule present (new fixture voids the seal)", "stated", str(j.get("re_seal_rule"))[:120],
             PASS if j.get("re_seal_rule") else FAIL, n=1)
     rep.add("10", "contamination disclosure present", "stated", str(j.get("disclosure"))[:120],
@@ -1385,14 +1433,121 @@ def section_quantum_b(wt, rep):
 
 
 
+
+
+# ---------------------------------------------------------------- self-test (self-item O-2)
+def selftest(golden: str) -> int:
+    """Assert the helper semantics the sections depend on. Every case names the defect or
+    self-item it guards, because each of them was a real wrong answer this instrument gave:
+    without this, a refactor can move a gate result silently (self-item O-2)."""
+    print("ORCH-2 gate instrument · --selftest")
+    cases = []
+
+    def t(cid, why, expected, observed):
+        cases.append((cid, why, expected, observed, expected == observed))
+
+    t("T1", "defect #5/#19 curly apostrophes are NORMALISED, not merely included",
+      ["that's"], tokens("that\u2019s"))
+    t("T2", "defect #2 em/en dashes are SEPARATORS (gluing them merges two tokens)",
+      ["word", "word"], tokens("word\u2014word"))
+    t("T3", "defect #3 hyphens stay INSIDE tokens (load-bearing for self-item O-1)",
+      ["well-known"], tokens("well-known"))
+    t("T4", "empty and None inputs tokenize to nothing rather than crashing",
+      ([], []), (tokens(""), tokens(None)))
+    t("T5", "O-1 a repetition artifact FAILS rule A and PASSES rule B",
+      (False, True, (True, True)),
+      (drop_rules("evidence; evidence of", "evidence of", ["evidence"])["A remove-all-occurrences"],
+       drop_rules("evidence; evidence of", "evidence of", ["evidence"])["B remove-first-occurrence"],
+       rule_a_defect("evidence; evidence of", "evidence of", ["evidence"])))
+    t("T6", "O-1 a clean single drop satisfies rules A-D and not E (quoted is not contiguous)",
+      {"A remove-all-occurrences": True, "B remove-first-occurrence": True, "C quoted-subseq+count": True,
+       "D suspected-minus-quoted==dropped": True, "E quoted-contiguous-in-suspected": False},
+      drop_rules("alpha beta gamma", "alpha gamma", ["beta"]))
+    t("T7", "O-1 the token rule is load-bearing: dropping a hyphenated token's HALF fails rule A",
+      False, drop_rules("well-known things", "known things", ["well"])["A remove-all-occurrences"])
+    t("T8", "defect #8 a pattern classifying a whole value must FULLMATCH it",
+      ("exact", "minute", "fuzzy", "other"),
+      (ts_class("2026-09-25T20:38:04Z"), ts_class("2026-09-25T20:38Z"), ts_class("21:5xZ"), ts_class("n/a")))
+    t("T8b", "defect #8's actual mechanism: a value that merely CONTAINS a timestamp is not that timestamp",
+      "other", ts_class("run at 2026-09-25T20:38:04Z exactly"))
+    inst = "the run stamped 21:5xZ on its own header"
+    cite = "the fuzzy value `21:5xZ` is superseded by generated_utc_exact"
+    t("T9", "defect #18 a census must tell ASSERTING from QUOTING",
+      ("instance", "citation"),
+      (classify_fuzzy(inst, FUZZY_TS.search(inst)), classify_fuzzy(cite, FUZZY_TS.search(cite))))
+    t("T10", "defect #4 fixture files store PATHS while splits store BASENAMES",
+      ("x", "x", "x.md"), (norm("corpus/docdocgo/overlays/x.txt"), norm("runs/x.json"), norm("x.md")))
+    names = [f"t{i}.txt" for i in range(200)]
+    d_full = draw_holdout(names, "s", 5, 0)
+    d_hex8 = draw_holdout(names, "s", 5, 0, "hex8")
+    t("T11", "the draw is deterministic, partitions the corpus, and the two readings DISAGREE "
+             "(the basis of the v2.1 caveat)",
+      (True, True, True, True),
+      (d_full == draw_holdout(names, "s", 5, 0), bool(d_full), (d_full | (set(names) - d_full)) == set(names),
+       d_full != d_hex8))
+    t("T12", "the draw over an empty corpus is empty, not everything", set(), draw_holdout([], "s", 5, 0))
+    t("T13", "sha256 known-answer test (a wrong digest helper invalidates every binding row)",
+      "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad", sha_bytes(b"abc"))
+    t("T14", "Poisson CDF known value and monotonicity (the exposure-normalized P row)",
+      (round(pois_cdf(0, 1.0), 9), True), (round(math.exp(-1.0), 9),
+                                            all(pois_cdf(k, 5.0) <= pois_cdf(k + 1, 5.0) for k in range(12))))
+    import tempfile
+    with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:
+        for d, order in ((a, ("one.txt", "two.txt")), (b, ("two.txt", "one.txt"))):
+            for fn in order:
+                open(os.path.join(d, fn), "w", encoding="utf-8").write(fn + "\n")
+        da, na = dir_digest(a)
+        db, nb = dir_digest(b)
+    t("T15", "dir_digest is order-independent and counts files (the by-transcript and records rows)",
+      (True, 2, 2), (da == db, na, nb))
+    t("T17", "defect #5-class trap, stated so callers guard it: two ABSENT values compare equal, so a "
+             "check() on .get() results must pass an explicit sentinel for absence",
+      True, None == None)
+
+    # the committed golden output must be internally consistent with its own summary line
+    if golden and os.path.exists(golden):
+        txt = open(golden, encoding="utf-8").read()
+        body = txt.split("rows not passing")[0]
+        cnt = collections.Counter(m.group(1) for m in
+                                  re.finditer(r"^  (PASS|FAIL|INFO|PROXY|VACUOUS)\s", body, re.M))
+        m = re.search(r"== summary: (\d+) rows · (.+)$", txt, re.M)
+        summ = {kv.split()[0]: int(kv.split()[1]) for kv in m.group(2).split(" · ")} if m else {}
+        t("T16", f"the committed golden output {os.path.basename(golden)} agrees with its own summary line",
+          (int(m.group(1)) if m else -1, {k: int(v) for k, v in sorted(summ.items())}),
+          (sum(cnt.values()), {k: v for k, v in sorted(cnt.items())}))
+    else:
+        print(f"  SKIP T16   the committed golden output is not reachable from here ({golden}); "
+              f"pass --golden to check it")
+
+    bad = [c for c in cases if not c[4]]
+    for cid, why, exp, obs, ok in cases:
+        print(f"  {'ok  ' if ok else 'FAIL'} {cid:4s} {why}")
+        if not ok:
+            print(f"         expected {str(exp)[:200]} | observed {str(obs)[:200]}")
+    print(f"\n== selftest: {len(cases) - len(bad)}/{len(cases)} ok" + (f" · FAILURES {[c[0] for c in bad]}" if bad else ""))
+    return 1 if bad else 0
+
+
+
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("worktree")
+    ap.add_argument("worktree", nargs="?")
+    ap.add_argument("--selftest", action="store_true",
+                    help="assert the helper semantics the sections depend on (self-item O-2); needs no worktree")
+    ap.add_argument("--golden", default=None, help="committed instrument output to check for internal consistency")
     ap.add_argument("--head", default="HEAD")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--self-audit", default=None,
                     help="run the same timestamp census over another tree (ORCH-2 audits its own lane)")
     a = ap.parse_args()
+    if a.selftest:
+        here = os.path.dirname(os.path.abspath(__file__))
+        gold = a.golden or os.path.join(here, "orch2_verify_output_4fc40c8.txt")
+        return selftest(gold)
+    if not a.worktree:
+        ap.error("worktree is required unless --selftest is given")
     wt = os.path.abspath(a.worktree)
     rc, out = git(wt, "rev-parse", a.head)
     head = out.decode().strip() if rc == 0 else a.head

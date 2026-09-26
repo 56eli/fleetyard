@@ -452,3 +452,50 @@ blocked a legitimate run.
 is open (so v2.7's frozen inputs are not yet frozen), and item v2.b's note is unpublished. Nothing in §12 indicates
 drift or a premature run. TASK-015 M6-FINAL stays blocked behind quantum b; no detector is promotable; no rate, no
 precision, no M6 figure; M6-P owner-accepted and not re-certified.
+
+---
+
+## 13. SELF-ITEM O-2 CLOSED — the instrument now has a smoke test, and the smoke test was mutation-tested
+
+`fleet/gate-tools/orch2_verify.py --selftest` needs no worktree and asserts **18 cases**, each named after the defect
+or self-item it guards. Output committed at `fleet/gate-tools/orch2_verify_selftest.txt`. The section output is
+**byte-identical** before and after the refactor that made this possible, verified by diff against the committed
+golden file — that diff is the discipline O-2 asks for, and it is now automated in case T16, which re-counts the
+golden file's verdict rows and compares them with the golden's own `== summary:` line.
+
+**Helpers extracted so the tests exercise the real code paths, not copies** (two copies of a rule is how defect #8
+happened): `ts_class`, `draw_holdout(names, salt, mod, bucket, reading)`, `drop_rules`, `rule_a_defect`. §7, §10 and
+the run-utc row now call them.
+
+| case | what it pins |
+|---|---|
+| T1 | curly apostrophes are **normalised**, not merely added to the in-token class (defects #5/#19) |
+| T2 | em/en dashes are **separators**; gluing them merges two tokens (defect #2) |
+| T3, T7 | hyphens stay **inside** tokens — the load-bearing rule of self-item O-1, and dropping a hyphenated token's *half* fails rule A |
+| T4 | empty/None inputs tokenize to nothing instead of crashing |
+| T5, T6 | a repetition artifact fails rule A and passes rule B; a clean single drop satisfies A–D but not E |
+| T8, T8b | a pattern classifying a whole value must **fullmatch** it, and a value that merely *contains* a timestamp is not that timestamp (defect #8's actual mechanism) |
+| T9 | a census must tell **asserting** from **quoting** (defect #18) |
+| T10 | fixtures store paths, splits store basenames (defect #4) |
+| T11, T12 | the draw is deterministic, partitions the corpus, and the two integer readings **disagree** — the mechanical basis of the v2.1 caveat |
+| T13–T15 | sha256 known-answer, Poisson CDF known value + monotonicity, `dir_digest` order-independence |
+| T16 | the committed golden output agrees with its own summary line |
+| T17 | two ABSENT values compare equal, so a `check()` over `.get()` results needs an explicit sentinel (defect #5-class trap, stated so callers guard it) |
+
+**The selftest was itself tested, by mutation.** Five regressions were injected into the helper code and every one
+was caught:
+
+| mutation | result |
+|---|---|
+| revert the curly-apostrophe normalisation | exit 1, **T1** fails |
+| `ts_class` uses `search` instead of `fullmatch` | exit 1, **T8b** fails (T8 alone would NOT have caught it — which is why T8b exists) |
+| hyphen becomes a separator | exit 1, **T3 + T7** fail |
+| `rule_a_defect` stops reporting repetition artifacts | exit 1, **T5** fails |
+| the draw defaults to the `hex8` reading | exit 1, **T11** fails |
+
+Honest note on method: my first hyphen mutation produced a **syntax error**, so the mutant exited non-zero for the
+wrong reason and proved nothing. It was re-run with a syntactically valid mutation before the row above was written.
+A mutation test that crashes is not a mutation test.
+
+**Standing rule from this cycle:** any change to the instrument must (i) pass `--selftest`, and (ii) be diffed against
+the committed golden output, with any row movement explained in the ledger before the new output is committed.
