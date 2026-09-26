@@ -52,6 +52,7 @@ import c2_detectors  # noqa: E402  (registry mirroring the detector modules)
 import m5r_reduce as m5r  # noqa: E402
 
 THRESHOLDS = "THRESHOLDS.json"
+EXCLUSIONS = "tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json"
 RECEIPT = "RECEIPT.json"
 REVIEW = "REVIEW-QUEUE.md"
 SIGNALS = "signals-holdout.json"
@@ -112,6 +113,9 @@ def freeze(args):
         "split_salt": split.get("salt"),
         "split_counts": split.get("counts"),
         "split_corpus_files_sha256": split.get("corpus_files_sha256"),
+        "holdout_exclusions_file": args.exclusions.replace(os.sep, "/"),
+        "holdout_exclusions_sha256": sha(args.exclusions),
+        "holdout_exclusions": exclusion_set(args.exclusions),
         "detectors": {name: detector_state(name) for name in DETECTORS},
         "adjudication_protocol": ADJUDICATION_PROTOCOL,
         "freeze_precedes_holdout_read": (
@@ -131,6 +135,17 @@ def freeze(args):
     return 0
 
 
+def exclusion_set(path=EXCLUSIONS):
+    """The pre-registered exclusions (item v2.b iv): transcripts excluded from the denominator."""
+    if not os.path.exists(path):
+        return []
+    doc = load(path)
+    out = []
+    for e in doc.get("excluded_transcripts", []):
+        out.append(e["transcript"] if isinstance(e, dict) else str(e))
+    return sorted(out)
+
+
 def _guard_run(args):
     """Every refusal that protects the one-shot discipline, in one place."""
     th_path = os.path.join(args.out, THRESHOLDS)
@@ -148,6 +163,10 @@ def _guard_run(args):
             % (receipt.get("split_salt"), receipt.get("run_utc"),
                receipt.get("holdout_consumed")))
     frozen = load(th_path)
+    if sha(args.exclusions) != frozen.get("holdout_exclusions_sha256"):
+        raise SystemExit("REFUSED: the pre-registered exclusions changed after the freeze "
+                         "(%s) — an exclusion may not be changed after the freeze, only "
+                         "before the run" % args.exclusions)
     if frozen["split_sha256"] != sha(args.split):
         raise SystemExit("REFUSED: the split file's sha256 does not match the frozen "
                          "record (%s vs %s) — the freeze binds a different split"
@@ -168,16 +187,26 @@ def _guard_run(args):
 def run(args):
     frozen = _guard_run(args)
     split = load(args.split)
-    holdout = sorted(set(split["holdout"]))
-    reads, per_detector = [], {}
+    excluded = exclusion_set(args.exclusions)
+    unknown = [t for t in excluded if t not in set(split["holdout"])]
+    if unknown:
+        raise SystemExit("REFUSED: pre-registered exclusions are not holdout members: %r"
+                         % unknown[:3])
+    holdout = sorted(set(split["holdout"]) - set(excluded))
+    reads, per_detector, dropped_total = [], {}, []
     for name in args.detectors:
         signals, read = c2_detectors.evaluate(name, args.corpus, args.split)
+        # the pre-registered exclusions are dropped here, unexamined: their signals never
+        # enter the artefact, a denominator or a review queue
+        dropped = sorted(set(signals) & set(excluded))
+        signals = {t: v for t, v in signals.items() if t not in set(excluded)}
         if sorted(signals) != holdout:
             raise SystemExit("REFUSED: %s evaluated %d transcripts, not the frozen holdout "
                              "set of %d — refusing to score a partial read"
                              % (name, len(signals), len(holdout)))
         per_detector[name] = signals
-        reads.extend(read)
+        reads.extend(t for t in read if t not in set(excluded))
+        dropped_total.extend(dropped)
     signals_path = os.path.join(args.out, SIGNALS)
     signals_sha = dump(signals_path, per_detector)
     receipt = {
@@ -196,6 +225,13 @@ def run(args):
                      "rule": "a second run needs a new split (new salt) + dated record"},
         "holdout_reads": sorted(set(reads)),
         "holdout_transcripts": len(holdout),
+        "holdout_excluded": excluded,
+        "holdout_evaluated": len(holdout),
+        "excluded_signals_dropped_unexamined": sorted(set(dropped_total)),
+        "exclusion_rule": ("excluded transcripts contribute no signals, no denominator and "
+                           "no review queue entries; the exclusion was fixed before the run"),
+        "holdout_exclusions_file": args.exclusions.replace(os.sep, "/"),
+        "holdout_exclusions_sha256": sha(args.exclusions),
         "detectors": {name: {
             "signals_total": sum(len(v) for v in per_detector[name].values()),
             "transcripts_with_signals": sum(1 for v in per_detector[name].values() if v),
@@ -327,6 +363,10 @@ def verify(args):
         problems.append("receipt is not a first attempt")
     if frozen["split_sha256"] != receipt["split_sha256"]:
         problems.append("freeze and receipt disagree on the split digest")
+    if receipt.get("holdout_exclusions_sha256") != frozen.get("holdout_exclusions_sha256"):
+        problems.append("freeze and receipt disagree on the exclusions digest")
+    if len(set(receipt.get("holdout_excluded", [])) & set(receipt.get("holdout_reads", []))):
+        problems.append("a pre-registered exclusion was read anyway")
     if args.split and os.path.exists(args.split):
         if sha(args.split) != frozen["split_sha256"]:
             problems.append("the live split file no longer matches the freeze")
@@ -357,6 +397,7 @@ def main(argv=None):
         p.add_argument("--out", default="runs/m4-q2-q3-v2-holdout")
     for p in (f, r, v):
         p.add_argument("--split", default="tools/HELD-OUT-SPLIT-V2.json")
+        p.add_argument("--exclusions", default=EXCLUSIONS)
     f.add_argument("--utc", required=True)
     f.add_argument("--tool-commit", required=True)
     f.add_argument("--main-head", required=True)

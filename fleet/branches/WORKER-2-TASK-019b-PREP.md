@@ -79,3 +79,28 @@ no test was dropped.
 
 No threshold was changed, no detector edited, no rate or precision stated, no M6 figure, and
 the holdout stays sealed.
+
+## Addendum (2026-09-26) — pre-registration recorded: 29 of 33 holdout transcripts
+
+ORCH-2's GATE CYCLE H routed item **v2.b (criterion v2.11)** to TASK-019 and required the
+quantum-b consequence to be decided **in the pre-registration, not afterwards**. It is decided
+and recorded here, before any run:
+
+**The four label-tainted holdout transcripts are excluded from the reported denominator; the
+evaluated holdout is 29 of 33 transcripts.** The four (with their seven signals) are named in
+`tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md` and machine-readably in
+`tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json`. The harness now:
+
+* binds the exclusions into `THRESHOLDS.json` (`holdout_exclusions` + digest) at freeze time;
+* refuses at run time if the exclusion file changed after the freeze, or if an exclusion is not
+  a holdout member;
+* evaluates exactly `holdout − exclusions`, drops the excluded transcripts' signals
+  **unexamined** (they never enter the signals artefact, a denominator or the review queue);
+* records `holdout_evaluated`, `holdout_excluded` and `excluded_signals_dropped_unexamined` in
+  the receipt.
+
+The standing caveat travels with any resulting figure: *"a first figure under v2 is an estimate
+under this split, not a pristine out-of-sample number"* (all 33 holdout transcripts were read by
+the pre-seal v1-era run — the seal's own disclosure). Still required before the single run:
+ORCH-2's re-gates and the queue turn; thresholds are frozen in one commit at that point (with
+the exclusions already fixed in the file above).

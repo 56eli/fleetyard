@@ -1,5 +1,5 @@
 {
- "audit_utc": "2026-09-26T00:45:00Z",
+ "audit_utc": "2026-09-26T01:22:00Z",
  "confirmation_artifacts": [
   {
    "artifact": "runs/m4-q2-adjudication/fixtures-adjudication.json",
@@ -61,30 +61,32 @@
    "status": "OK"
   },
   {
-   "appendix_needed": true,
+   "appendix_needed": false,
    "file": "fixtures/v2/dropword.json",
    "last_commit": "a5dec38865babe312b38046a4c5500f234ce94bd",
    "last_commit_utc": "2026-09-25T21:21:03+00:00",
    "live_sha256": "c40d272f30d0bbd5955a9e6da20e7a4ede691a11f99b70005227a6ac75629b95",
    "mutations": [],
    "new_fixture_ids": [],
+   "note_file": "tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md",
    "sealed_sha256": "c8e963199a1ec5ee1b658c16bdc0dcab634a751199f6b3e00081efce4d97fd52",
    "sealed_shape": {
     "fixtures_at_head": 4,
     "fixtures_at_seal": 4
    },
-   "status": "APPEND-ONLY-AFTER-SEAL"
+   "status": "APPEND-ONLY-AFTER-SEAL (dated note on file)"
   }
  ],
- "head_commit_at_audit": "14255bd0a5f8e7a6dbad9f32fc45b7ce3e39e643",
+ "head_commit_at_audit": "7d1468579d16dcc78ff23e12ead2d5dc2b249855",
  "head_commit_note": "the lane head the audit ran against; this report is committed as its own commit after it",
  "membership": {
   "forced_intersect_holdout": [],
   "holdout_size": 33
  },
- "outstanding": [
-  "fixtures/v2/dropword.json: digest moved after the seal c8e963199a1e\u2026 -> c40d272f30d0\u2026 by an append-only edit (commit a5dec38, 2026-09-25T21:21:03+00:00); content at seal time is unmodified and no fixture was added \u2014 the seal STANDS, an appendix must name both digests"
+ "notes_on_file": [
+  "fixtures/v2/dropword.json: digest moved c8e963199a1e\u2026 -> c40d272f30d0\u2026 by an append-only edit; the dated note tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md names both digests \u2014 the seal STANDS, nothing further is owed"
  ],
+ "outstanding": [],
  "seal_commit": "79eb401b4328d254a5cee9be0a07f17a5a5e610b",
  "seal_commit_utc": "2026-09-25T20:51:54+00:00",
  "seal_file": "tools/HELD-OUT-SPLIT-V2.json",
@@ -97,12 +99,10 @@
   "tuning": 197
  },
  "tool": "tools/m4_seal_audit.py",
- "tool_sha256": "eb4e4ec75afb8ddc08902f1413f9d9205168edd5ac512e3d0cf00b333690a5bf",
+ "tool_sha256": "ffe34622034f5f43e0ac47be8ace1cfa768d0c46945eeed33a9081b52a6f07e1",
  "verdict": {
-  "one_line": "STANDING (appendix owed)",
-  "outstanding": [
-   "fixtures/v2/dropword.json: digest moved after the seal c8e963199a1e\u2026 -> c40d272f30d0\u2026 by an append-only edit (commit a5dec38, 2026-09-25T21:21:03+00:00); content at seal time is unmodified and no fixture was added \u2014 the seal STANDS, an appendix must name both digests"
-  ],
+  "one_line": "STANDING (dated note on file)",
+  "outstanding": [],
   "reasons": [],
   "seal_void": false
  },

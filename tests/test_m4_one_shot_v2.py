@@ -51,17 +51,22 @@ def build_toy(root):
     split_path = os.path.join(root, "SPLIT.json")
     with open(split_path, "w", encoding="utf-8") as fh:
         json.dump(split, fh)
-    return corpus, split_path
+    excl = os.path.join(root, "EXCLUSIONS.json")
+    with open(excl, "w", encoding="utf-8") as fh:
+        json.dump({"excluded_transcripts": []}, fh)
+    return corpus, split_path, excl
 
 
-def freeze(root, corpus, split_path, out):
+def freeze(root, corpus, split_path, out, excl=None):
     return one.main(["freeze", "--split", split_path, "--out", out,
+                     "--exclusions", excl or os.path.join(root, "EXCLUSIONS.json"),
                      "--utc", "2026-09-25T22:00:00Z", "--tool-commit", "toyc0mm",
                      "--main-head", "toymain", "--policy-sha", "toypolicy"])
 
 
-def run(root, corpus, split_path, out, **kw):
+def run(root, corpus, split_path, out, excl=None, **kw):
     argv = ["run", "--split", split_path, "--out", out, "--corpus", corpus,
+            "--exclusions", excl or os.path.join(root, "EXCLUSIONS.json"),
             "--tool-commit", "toyc0mm", "--utc", "2026-09-25T22:00:05Z"]
     for k, v in kw.items():
         argv += ["--" + k.replace("_", "-"), v]
@@ -72,7 +77,7 @@ class OneShotHarness(unittest.TestCase):
     def setUp(self):
         self.root = tempfile.mkdtemp(prefix="m4oneshot-")
         self.addCleanup(shutil.rmtree, self.root)
-        self.corpus, self.split_path = build_toy(self.root)
+        self.corpus, self.split_path, self.excl = build_toy(self.root)
         self.out = os.path.join(self.root, "out")
         self.labels = os.path.join(self.root, "labels.json")
 
@@ -156,7 +161,8 @@ class OneShotHarness(unittest.TestCase):
         self.assertNotIn("tune.txt", receipt["holdout_reads"])
         self.assertTrue(os.path.exists(os.path.join(self.out, one.REVIEW)))
         self.assertEqual(one.verify(type("A", (), {"out": self.out,
-                                                   "split": self.split_path})()), 0)
+                                                   "split": self.split_path,
+                                                   "exclusions": self.excl})()), 0)
 
     def test_run_writes_nothing_outside_the_out_dir(self):
         before = {}
@@ -175,6 +181,26 @@ class OneShotHarness(unittest.TestCase):
         self.assertEqual(split_before, open(self.split_path, "rb").read())
         self.assertEqual(sorted(os.listdir(self.out)),
                          sorted([one.THRESHOLDS, one.RECEIPT, one.SIGNALS, one.REVIEW]))
+
+    def test_pre_registered_exclusion_shrinks_the_evaluated_holdout(self):
+        with open(self.excl, "w", encoding="utf-8") as fh:
+            json.dump({"excluded_transcripts": ["hold.txt"]}, fh)
+        freeze(self.root, self.corpus, self.split_path, self.out)
+        # hold.txt IS a holdout member, so the run proceeds with an empty evaluated set
+        run(self.root, self.corpus, self.split_path, self.out)
+        with open(os.path.join(self.out, one.RECEIPT), encoding="utf-8") as fh:
+            receipt = json.load(fh)
+        self.assertEqual(receipt["holdout_excluded"], ["hold.txt"])
+        self.assertEqual(receipt["holdout_evaluated"], 0)
+        self.assertEqual(receipt["holdout_reads"], [])
+
+    def test_exclusions_changed_after_the_freeze_are_refused(self):
+        freeze(self.root, self.corpus, self.split_path, self.out)
+        with open(self.excl, "w", encoding="utf-8") as fh:
+            json.dump({"excluded_transcripts": ["hold.txt"]}, fh)
+        with self.assertRaises(SystemExit) as ctx:
+            run(self.root, self.corpus, self.split_path, self.out)
+        self.assertIn("pre-registered exclusions changed after the freeze", str(ctx.exception))
 
     # ------------------------------------------------------------- scoring
     def _write_labels(self, mapping):
@@ -223,7 +249,8 @@ class OneShotHarness(unittest.TestCase):
     # -------------------------------------------------------------- verify
     def test_verify_fails_on_tampering(self):
         self._freeze_and_run()
-        args = type("A", (), {"out": self.out, "split": self.split_path})()
+        args = type("A", (), {"out": self.out, "split": self.split_path,
+                              "exclusions": self.excl})()
         sig_path = os.path.join(self.out, one.SIGNALS)
         with open(sig_path, "rb") as fh:
             original = fh.read()

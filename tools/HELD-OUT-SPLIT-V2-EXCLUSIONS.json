@@ -1,0 +1,61 @@
+{
+ "decision": "the four label-tainted transcripts are EXCLUDED from quantum b's reported denominator; the evaluated holdout is 29 of 33 transcripts",
+ "evaluated_holdout_transcripts": 29,
+ "excluded_transcripts": [
+  {
+   "signals": [
+    "D-092",
+    "D-093",
+    "D-094",
+    "D-095"
+   ],
+   "transcript": "Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2_enxautogen_html.txt",
+   "verdicts": {
+    "D-092": "CERTAIN-leg-d (refused under TASK-018 item 0f: notation)",
+    "D-093": "CERTAIN-leg-d",
+    "D-094": "CERTAIN-leg-d",
+    "D-095": "CANDIDATE"
+   }
+  },
+  {
+   "signals": [
+    "D-107"
+   ],
+   "transcript": "Realization_of_the_Self_as_the_I_Nov_2003_Part_1_enxautogen_html.txt",
+   "verdicts": {
+    "D-107": "CANDIDATE"
+   }
+  },
+  {
+   "signals": [
+    "D-108"
+   ],
+   "transcript": "Spiritual_Traps_Oct_2005_Part_2_enxautogen_html.txt",
+   "verdicts": {
+    "D-108": "CANDIDATE"
+   }
+  },
+  {
+   "signals": [
+    "D-122"
+   ],
+   "transcript": "Witnessing_and_Observing_Oct_2004_Part_1_enxautogen_html.txt",
+   "verdicts": {
+    "D-122": "CANDIDATE"
+   }
+  }
+ ],
+ "holdout_transcripts": 33,
+ "note_file": "tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md",
+ "reasons": {
+  "endorsed_deferral": "the shipped filter deliberately deferred these seven rather than open the holdout mid-repair (ORCH-2 endorsed)",
+  "label_taint": "the four transcripts carry seven adjudicated C1-drop signals whose spans the campaign has read (TASK-018 hand adjudication; ORCH-2 gate re-derivation), so they are not unseen material for the rule that produced them",
+  "standing_caveat": "all 33 holdout transcripts were read by the pre-seal v1-era run (its keys are the v1 tuning 193); a first figure under v2 is an estimate under this split, not a pristine out-of-sample number"
+ },
+ "rule": "exclusion is decided and recorded BEFORE the run; it is bound into the freeze and enforced by tools/m4_one_shot_v2.py; the receipt lists evaluated and excluded transcripts separately; the excluded signals may be shown as a breakdown but never re-enter the denominator",
+ "seal_file": "tools/HELD-OUT-SPLIT-V2.json",
+ "seal_sha256": "73d86f0dafe5e51162723bd92121021a099a5c6b5b89fc5386421c496ced5d8a",
+ "task": "TASK-019 item v2.b (iv) — quantum-b pre-registration: holdout exclusions",
+ "utc_source": "the lane clock at write time (CONTROL seq 43)",
+ "written_utc": "2026-09-26T01:14:30Z"
+}

@@ -107,3 +107,37 @@ seal-time digest of a file that later appends will invalidate, producing a benig
 rather than a confirmation signal — is stated in the appendix, with the recommendation that a
 future seal bind either an append-only-free fixture source or the seal-time blob's own sha
 (the audit already compares those two numbers).
+
+## Addendum 2 (2026-09-26) — GATE CYCLE H items v2.a and v2.b discharged
+
+ORCH-2's GATE CYCLE H failed quantum a on **v2.5 (item v2.a)** and the **v2.b note** only
+(v2.1–v2.4, v2.6, v2.9 PASS; seal valid, reproducible, NOT void). Both are now discharged by a
+**new dated file**, `tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md`, written next to the seal so
+that a reader who verifies the seal and finds the digest mismatch is led straight to it:
+
+* **v2.a** — the note binds the actual digest (`c40d272f…` vs the sealed `c8e96319…`), leaves
+  the superseded `fixture_sources` line readable (the seal file is untouched at `73d86f0d…`),
+  states the append-only adjudication (no fixture added, no sealed value mutated, the one
+  confirmation artefact `61568a9e…` is commit `1fb524e` — 13 minutes *before* the seal) and
+  names the defect class (a seal-time digest over a file later amended by design is a benign
+  tripwire, not a confirmation signal) with a build-time recommendation for future seals.
+* **v2.b** — the note states the taint (four holdout transcripts, seven signals: `D-092`
+  percent, `D-093` it's, `D-094` huh promoted; `D-095`, `D-107`, `D-108`, `D-122` CANDIDATE),
+  records that the shipped filter deliberately deferred them rather than open the holdout
+  (ORCH-2 endorsed), records ORCH-2's gate re-derivation of all 122 span bytes including those
+  four transcripts as re-derivation and not tuning (no rule or threshold changed), and carries
+  the seal's standing caveat verbatim — *"a first figure under v2 is an estimate under this
+  split, not a pristine out-of-sample number"*.
+
+**Quantum-b consequence, pre-registered before the run (item v2.b iv):** the four label-tainted
+transcripts are **excluded from the reported denominator** — evaluated holdout **29 of 33**.
+Machine-readable: `tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json`; bound into the freeze and enforced
+by `tools/m4_one_shot_v2.py` (`run` evaluates exactly `holdout − exclusions`, refuses exclusions
+that are not holdout members, refuses a post-freeze change to the exclusion set, drops the
+excluded signals unexamined — they enter no artefact, denominator or review queue — and the
+receipt lists evaluated and excluded transcripts separately). The choice is recorded **now** so
+it cannot be made after the numbers appear.
+
+`tools/m4_seal_audit.py` now looks for a dated note naming both digests and reports the
+discharged state (`SEAL-AUDIT.json`: **STANDING — dated note on file**). No threshold, detector,
+split, salt or membership changed; no rate or M6 figure.

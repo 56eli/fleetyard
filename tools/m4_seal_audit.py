@@ -53,6 +53,23 @@ def sha256_bytes(blob):
     return hashlib.sha256(blob).hexdigest()
 
 
+NOTE_GLOBS = ("tools/HELD-OUT-SPLIT-V2-NOTE-*.md", "tools/*SEAL-NOTE*.md")
+
+
+def find_note(repo, sealed_sha, live_sha):
+    """A dated note that names both digests: the thing a verifying reader needs to find."""
+    import glob
+    for pattern in NOTE_GLOBS:
+        for path in sorted(glob.glob(os.path.join(repo, pattern))):
+            try:
+                text = open(path, encoding="utf-8").read()
+            except OSError:
+                continue
+            if sealed_sha[:16] in text and live_sha[:16] in text:
+                return os.path.relpath(path, repo).replace(os.sep, "/")
+    return None
+
+
 def blob_at(repo, ref, path):
     p = subprocess.run(("git", "-C", repo, "show", "%s:%s" % (ref, path)),
                        capture_output=True)
@@ -145,6 +162,7 @@ def audit(repo, seal_path, utc=None):
         "membership": {},
         "void_reasons": [],
         "outstanding": [],
+        "notes_on_file": [],
         "verdict": {},
     }
     hold = set(seal.get("holdout", []))
@@ -200,15 +218,24 @@ def audit(repo, seal_path, utc=None):
                         % (path, len(entry["new_fixture_ids"]),
                            ", ".join(entry["new_fixture_ids"][:4])))
                 else:
-                    entry["status"] = "APPEND-ONLY-AFTER-SEAL"
-                    entry["appendix_needed"] = True
-                    report["outstanding"].append(
-                        "%s: digest moved after the seal %s… -> %s… by an append-only "
-                        "edit (commit %s, %s); content at seal time is unmodified and no "
-                        "fixture was added — the seal STANDS, an appendix must name both "
-                        "digests" % (path, sealed_sha[:12], entry["live_sha256"][:12],
-                                     str(entry["last_commit"])[:7],
-                                     entry["last_commit_utc"]))
+                    note = find_note(repo, sealed_sha, entry["live_sha256"])
+                    entry["note_file"] = note
+                    if note:
+                        entry["status"] = "APPEND-ONLY-AFTER-SEAL (dated note on file)"
+                        report["notes_on_file"].append(
+                            "%s: digest moved %s… -> %s… by an append-only edit; the dated "
+                            "note %s names both digests — the seal STANDS, nothing further "
+                            "is owed" % (path, sealed_sha[:12], entry["live_sha256"][:12], note))
+                    else:
+                        entry["status"] = "APPEND-ONLY-AFTER-SEAL"
+                        entry["appendix_needed"] = True
+                        report["outstanding"].append(
+                            "%s: digest moved after the seal %s… -> %s… by an append-only "
+                            "edit (commit %s, %s); content at seal time is unmodified and no "
+                            "fixture was added — the seal STANDS, an appendix must name both "
+                            "digests" % (path, sealed_sha[:12], entry["live_sha256"][:12],
+                                         str(entry["last_commit"])[:7],
+                                         entry["last_commit_utc"]))
         for path2, sha2 in cited_artifacts(live_doc):
             blob = head_blob(repo, path2)
             artefact_commit, artefact_utc = last_commit(repo, path2)
@@ -246,7 +273,8 @@ def audit(repo, seal_path, utc=None):
         "outstanding": report["outstanding"],
         "one_line": ("VOID — " + report["void_reasons"][0] if report["void_reasons"]
                      else ("STANDING" + (" (appendix owed)" if report["outstanding"]
-                                         else " (nothing stale)"))),
+                                         else (" (dated note on file)" if report["notes_on_file"]
+                                               else " (nothing stale)")))),
     }
     return report
 

@@ -114,6 +114,19 @@ class SealAudit(ToyRepo):
         self.assertTrue(rep["fixture_sources"][0]["appendix_needed"])
         self.assertIn("seal STANDS", rep["outstanding"][0])
         self.assertIn("append-only", rep["outstanding"][0])
+        # a dated note naming both digests discharges the appendix
+        live = sha(os.path.join(self.repo, "fixtures/toy.json"))
+        sealed = rep["fixture_sources"][0]["sealed_sha256"]
+        self.write("tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md",
+                   "sealed %s\nlive %s\n" % (sealed, live))
+        self.commit("2026-09-25T20:35:00+00:00", "dated note")
+        rep2 = self.report()
+        self.assertFalse(rep2["seal_void"])
+        self.assertIn("dated note on file", rep2["fixture_sources"][0]["status"])
+        self.assertFalse(rep2["fixture_sources"][0]["appendix_needed"])
+        self.assertEqual(rep2["outstanding"], [])
+        self.assertIn("nothing further", rep2["notes_on_file"][0])
+        self.assertIn("dated note on file", rep2["verdict"]["one_line"])
 
     # ----------------------------------------------------------------- void
     def test_patched_sealed_content_voids_the_seal(self):
