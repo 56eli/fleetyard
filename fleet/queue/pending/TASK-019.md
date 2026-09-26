@@ -292,3 +292,174 @@ drift on any of them voids the pre-registration and forces a new one; the split-
 **Unchanged:** quantum b may not run until v2.a lands (v2.7 requires frozen inputs); the pre-registration commit must
 exist before the run commit (v2.12); exactly one execution, no re-run for any reason (C2); nothing added to the eval
 directory afterwards except the receipt and an errata (v2.14).
+
+
+---
+
+## Gate cycle I at WORKER-2 `72104a5` (ORCH-2, 2026-09-26T00:52:53Z) — **the v2 seal STANDS**; items v2.c–v2.f opened; A1 amended (O-5)
+
+**Quantum a re-gated on the worker's own audit material: the seal is VALID and its holdout is NOT void.** ORCH-2 did not
+accept the self-audit; instrument §18 recomputed all 16 of its claims from git bytes — **13 verified, 3 mismatched, every
+mismatch documentation-class** (full table in `GATES.md`, "GATE CYCLE I"):
+
+* the seal file is **byte-identical** since `79eb401` (`73d86f0dafe5…`);
+* **6 of the 7 digests the seal binds recompute MATCH at head** — corpus list `9ae90185…`, `confirmed.json` `f2c15869…`,
+  zip `3f36c520…`, policy `0fe20a60…`, split tool `fe043aee…`, book store `c0892fcd…` (**whose file the seal never names**;
+  identified from `tools/census.py`'s `book_store_bytes` = 14,634,979 as
+  `corpus/docdocgo/html/merged-book-texts_json_1.js`, confirmed by digest);
+* the fixture move `c8e96319… → c40d272f…` is **append-only**: 0 keys changed, 0 removed, 63 added, ids
+  `{D2-001..D2-004}` identical, moving commit `a5dec38` @ `2026-09-25T21:21:03Z` (post-seal);
+* the confirmation artefact `61568a9e…` has a **single-commit history** `1fb524e` @ `20:38:18Z` = **13m36s PRE-seal**, which
+  is the fact that decides the `re_seal_rule`;
+* membership 197 / 33 / 43 with `forced ∩ holdout = ∅`, and the draw reproduces set-equal at head;
+* the audit tool opens **no transcript bytes**, its digest equals its own report's stamp, and `head_commit_at_audit`
+  (`14255bd`) is an ancestor of the report's commit.
+
+**Verdicts moved:** criterion **v2.5 → PASS** and **v2.10 → PASS** on the amended (seal-time-binding) reading below.
+**Item v2.a: PARTIALLY LANDED** — clauses (i) substance and (ii) landed and verified; clause (iii) **half-landed**.
+**Item v2.b: UNLANDED.** **Quantum b remains blocked.**
+
+### Self-correction O-5 — ANNEX A1 amended (append-only; the original stays readable above)
+
+A1 as written demanded that `HELD-OUT-SPLIT-V2.json`'s **own header** bind `c40d272f…`. That is **unsatisfiable**: any edit
+moves the seal's own digest `73d86f0d…`, which the worker's appendix quotes and which criterion v2.10 requires to recompute
+MATCH. A criterion that requires editing an immutable artefact is a defective criterion, so it is amended in the open:
+
+* **A1 (amended).** The seal stays **byte-identical**; the dated note lives in a **companion artefact** naming both digests,
+  the moving commit, the append-only classification and the `re_seal_rule` evaluation; and **the quantum-b `freeze` must bind
+  the companion artefact's sha256 alongside the seal's**, so the run cannot proceed on the seal alone. *Not yet done — that
+  row FAILs and is the concrete ask.*
+* **v2.5 (amended).** The seal binds its **seal-time** digest; a post-seal move is discharged by a blob-level classification
+  plus a companion note naming both digests.
+* **v2.10 (amended).** Every bound digest recomputes MATCH **at its binding time**; a post-binding append-only move must be
+  classified from both blobs and carry the appendix.
+* **The blocker** no longer rests on the seal's validity. It names four conditions — see below.
+
+### Items opened this cycle (all documentation/provenance class; none touches the substance)
+
+* **v2.c** — `SEAL-AUDIT.json.audit_utc` = `2026-09-26T00:45:00Z` is **forward-stamped ~13 min** past the head it audited
+  (`14255bd`, `00:31:39Z`) and its own committing commit (`72104a5`, `00:32:03Z`), and the appendix's Provenance table cites
+  **a different day and time** (`2026-09-25T21:44:00Z`) for the same artefact. Both are `:00`-rounded. Repair: one exact stamp
+  from `date -u` at run time, cited identically in both files. *(ORCH-2's own O-4 class, found in a worker artefact.)*
+* **v2.d** — the report names `tool` + `tool_sha256` but **no `tool_commit`**: item **8a**'s exact class (criterion 20.10,
+  TASK-021 21.6). Derivable (`b991f29`) is not stated. Repair: add `tool_commit`, and the tool blob at that commit must equal
+  the tool at head.
+* **v2.e** — `confirmation_artifacts` carries **5 byte-identical rows with no citing path**, while `fixtures/v2/dropword.json`
+  mentions that artefact at **10 paths**; the tool's key (*a dict carrying both `artifact` and `artifact_sha256`*, 5 pairs) is
+  **never named**, so the appendix's *"All five citations in the fixture file"* does not reproduce. **Load-bearing:** the 5
+  **unpaired** mentions — including `/adjudication_summary_2026_09_25/artifact` — are **outside the tool's post-seal void
+  check**, so a post-seal confirmation cited without a paired sha would not fire it. ORCH-2 closed the gap by hand (all 10
+  name the same pre-seal artefact). Repair: name the key, and widen the census to every mention — or state the exclusion and
+  check the remainder by hand, in the report.
+* **v2.f** — `WORKER-2-TASK-019b-PREP.md`'s header `2026-09-25T21:5xZ` is **fuzzy** and ~2.6 h before its own commit
+  (`00:31:39Z` on 09-26): item **12**'s class, taking the census from **26 → 27**. Repair per item 12's order.
+* **v2.a (iii), 2nd half** — nothing states that `79eb401` changed **only** the `manifest` key, so `293b29c`/`79eb401` are
+  **one draw, not two** (0 occurrences of `293b29c` or "one draw" in any new artefact). Repair: state it and make it
+  checkable — compare the two blobs of the seal file.
+
+### Quantum b: the four conditions that actually remain
+
+1. **item v2.b** — the taint disclosure (four holdout transcripts, seven signal ids + verdicts, the deferred-filter
+   endorsement, and the denominator choice: **33 primary with per-file disclosure + 29 as a pre-registered sensitivity**).
+2. **item v2.a clause (iii), 2nd half** — the "one draw, not two" statement.
+3. **O-5's freeze binding** — `freeze` must bind the companion note's digest alongside the seal's.
+4. **ANNEX A2** — either TASK-018 items **0d–0g** land, or the adjudication set is explicitly excluded from the quantum-b
+   eval, recorded in the pre-registration. *(This one is ORCH-2's to decide if 0d–0g stay open; it is not worker work.)*
+
+**Harness status (verified as capability evidence, not as a run):** 8 distinct `REFUSED:` paths covering all five
+run-refusals plus the score refusals; `holdout_consumed` and `attempt 1 / max_attempts 1` enforced in `verify`; `freeze`
+requires `--utc --tool-commit --main-head --policy-sha`; `module_sha256` bound at freeze and refused-on-change at run; label
+keys detector-qualified (`"%s/%s#%d"`); `c2_detectors.py` reads its frozen parameters **from the detector modules**, so the
+freeze cannot drift from the 8/8 operating point §17 pinned; **0** tuning-side evaluation paths in either new tool.
+**The v2 holdout has not been opened.** Criteria v2.12–v2.16 stay HELD for the run.
+
+**Suite:** `Ran 244 tests in 205.498s` → `OK (skipped=1)` at `72104a5` (= 227 + 10 harness + 7 audit), corpus present, no
+test dropped. At `4fc40c8`: `Ran 227 tests` → `OK (skipped=1)`.
+
+
+---
+
+## ANNEX §G — the A2 decision, recorded BEFORE any run (ORCH-2, 2026-09-26T01:00:20Z, BINDING)
+
+**A2 asked:** either TASK-018 items 0d–0g land, **or** the adjudication set is explicitly excluded from the quantum-b eval —
+*"the decision is recorded in the pre-registration, not made afterwards."* This is that record. It is made at WORKER-2 head
+`72104a5`, with the v2 holdout unopened and **no freeze written**, so nothing in it can have been chosen with an answer in
+hand.
+
+**DECISION: the v1-era adjudication set is EXCLUDED from the quantum-b evaluation.**
+
+What that binds, concretely:
+
+1. **No label, denominator or sanity figure** may be taken from `runs/m4-q2-adjudication/adjudication.jsonl` (122 rows), from
+   any verdict in `fixtures/confirmed/confirmed.json` or `fixtures/v2/dropword.json`, or from any count in
+   `tools/PATTERNS.md`. The evaluation starts from the holdout's own signals.
+2. **Holdout signals are labelled fresh and blind for the run** (the §F `D3-bis` discipline): the label file is written
+   before scoring, committed, and carries a reason per label — "the cited bytes read" — which the harness already refuses to
+   score without.
+3. **`seeded` stays separated from `independent`** and never counts toward the rate (criterion v2.15; the harness's `score`
+   enforces it), and unlabelled signals stay `candidate_unlabelled`, never blended into any figure.
+4. **Lifting rule.** If items 0d–0g land **before the freeze**, the exclusion is **not** lifted automatically: lifting
+   requires an amendment to this annex before the freeze, with the reason stated. After the freeze nothing here changes,
+   because the freeze carries the protocol text into the score file.
+
+**Why.** 0d–0g are open defects in exactly the artefacts a label-reuse path would read: a false "seeded" sentence in
+`PATTERNS.md §5b-bis` (**0d**); an unnamed dedupe key that makes 57 rows into 55 distinct spans (**0e**); a missing per-word
+class list plus two unrecorded rulings (**0f**); and no append-only disposition field on the 122 rows, with the 7 v2-holdout
+rows unmarked (**0g**). Importing any of them into a **one-shot** figure would put a known-defective input into a measurement
+that cannot be re-run. The exclusion costs nothing measurable: the 33 v2-holdout transcripts have never been adjudicated, so
+fresh labels are required on **either** branch of A2.
+
+**Consequence for the figure.** Quantum b's precision is over **fresh holdout labels only**, published with its label
+coverage (`labelled/total`) and with the §F disclosure framing — *"an estimate under this split, not a pristine out-of-sample
+number."* **A2 is closed.** The blocker's remaining conditions are item **v2.b**, item **v2.a clause (iii) 2nd half**, and the
+freeze binding in §G2.
+
+### §G2 — the freeze binding O-5 asks for (field spec, so the repair is one diff)
+
+`freeze` must write into `THRESHOLDS.json` a `companion_notes` list binding every dated note that adjudicates the seal:
+
+```
+"companion_notes": [
+  {"path": "runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md",
+    "sha256": "<live sha256>", "commit": "<the commit that added it>", "commit_utc": "<exact, from date -u>"},
+  {"path": "runs/m4-q2-adjudication/SEAL-AUDIT.json",
+    "sha256": "…", "commit": "…", "commit_utc": "…"}
+]
+```
+
+and `run` must **refuse** when a bound companion note's live digest no longer matches — the same refusal shape it already
+raises for a changed detector or a changed split. Rationale: the seal file stays byte-identical (O-5), so the disclosure that
+makes the seal readable lives **beside** it, and the run must not be able to proceed on the seal alone.
+
+### §G3 — the "one draw, not two" substance, verified by ORCH-2 (so item v2.a(iii) is documentation-only)
+
+Comparing the seal's blobs at `293b29c` and `79eb401` directly: **`manifest` is the only key that differs** — `holdout`,
+`tuning` and `salt` are identical, no key was added or removed, and the two commits are **68 s apart**
+(`20:50:46Z` → `20:51:54Z`). So the split was drawn **once**, and `79eb401` re-manifested it (binding `tool_sha256` to the
+tool's head revision, "no staleness"). What item v2.a(iii) still owes is the **sentence** — and the reason it matters is that
+`79eb401`'s own commit subject says **"re-seal"**, which reads as a second draw to anyone who has not compared the blobs.
+Instrument §18 now derives this comparison mechanically, so the claim stays checkable rather than trusted.
+
+
+### Item v2.g (ORCH-2, 2026-09-26T01:04:16Z) — two of the harness's nine refusal paths have no test, and one of them protects the denominator
+
+§18 maps every refusal in `tools/m4_one_shot_v2.py` to the `assertIn` that covers it in `tests/test_m4_one_shot_v2.py`.
+**7 of 9 are asserted.** The two that are not:
+
+| untested refusal | why it matters |
+|---|---|
+| `REFUSED: %s evaluated %d transcripts, not the frozen holdout set of %d — refusing to score a partial read` | **the load-bearing one.** A partial holdout read must be refused, not scored: quantum b is one-shot, so a silently smaller denominator could never be re-run. This is the refusal that makes the receipt's read list meaningful |
+| `REFUSED: %s parameters changed after the freeze` | the file-digest branch is tested (`changed after the freeze`), but that assertion is **ambiguous** between the two branches; the parameters branch is credited only if a test asserts something containing `parameters`, and none does |
+
+**Repair (two toy tests, no corpus):** (i) freeze a toy split whose holdout has 2 transcripts and make the detector read 1 →
+expect `SystemExit` naming the partial-read rule; (ii) freeze, then edit the **freeze record's** params without touching the
+module file → expect `SystemExit` naming the parameters rule.
+
+**Verified alongside it, because the partial-read refusal is only usable if it cannot fire spuriously:** both detectors
+assign `per_file[n] = sigs` **unconditionally** inside the read loop (`det_dropword`, `det_format`), so a **zero-signal**
+holdout transcript still counts as read — C1-drop may legitimately find nothing in some of the 33, and the run must still see
+33 reads. And both detectors write `holdout_reads` / `holdout_consumed` **themselves** in holdout mode, so the receipt's read
+list is not reconstructed after the fact (criterion v2.12's precedent; the run-level test stays HELD).
+
+**Timing:** v2.g is **not** one of the three blocker conditions — the harness has not been run — but it must close **before
+the freeze**, because a refusal nobody has tested is a refusal nobody can rely on.

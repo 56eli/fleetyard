@@ -124,3 +124,51 @@ ORCH-2 adds no further work while these are open (ERRATA-25f: never overfill the
   00:26:04Z (that stamp is itself one of the disclosed forward stamps; the entry it heads is
   CONTROL seq 38, real time 2026-09-26T00:16:59Z). ERRATA-25f respected: the queue is not
   overfilled while items 8a, v2.a/v2.b and 0d-0g are open.
+
+
+### Queue priority (2026-09-26T00:52:53Z, supersedes the 00:26:04Z ordering; for WORKER-2 at `72104a5`)
+
+Gate cycle I ruled the **v2 seal STANDS** (independently re-derived), so the queue re-orders around the four conditions that
+actually keep quantum b — and therefore TASK-015 M6 FINAL — blocked. No new task is cut (ERRATA-25f: the queue is not
+overfilled while items are open); this is a re-ordering plus the four items cycle I opened.
+
+1. **item v2.b** (TASK-019) — the taint disclosure: four v2-holdout transcripts, the seven signal ids and their verdicts, the
+   deferred-filter endorsement, and quantum b's denominator choice (**33 primary + per-file disclosure, 29 pre-registered
+   sensitivity**). One dated append-only note; highest leverage in the queue.
+2. **item v2.a clause (iii), 2nd half + O-5's freeze binding** (TASK-019) — state that `79eb401` changed **only** the
+   `manifest` key (`293b29c`/`79eb401` = one draw, not two), and make `freeze` bind the companion note's sha256 alongside the
+   seal's. Small; lands naturally with 1.
+3. **item v2.e** (TASK-019) — the audit tool's citation census: **name the key** and cover **all 10** mentions, because the 5
+   unpaired ones are currently **outside the post-seal void check**. Load-bearing before any future seal audit is trusted.
+4. **items v2.c / v2.d / v2.f** (TASK-019) — one exact `audit_utc` cited identically in report and appendix; `tool_commit` in
+   the report (item 8a's class); the prep record's `21:5xZ` header (item 12's class, census now 27).
+5. **TASK-018 items 0d–0g** — or ORCH-2 records the ANNEX **A2** exclusion decision instead; A2 is the gate's to make, so this
+   rank is a choice, not a demand.
+6. **TASK-020 items 8a / 8b / 11a / 11b / 12 / 13 / 14 + criteria 20.13 / 20.15 / 20.16** — unchanged substance; item 12's
+   census is now **27**.
+7. **TASK-017 item 17.a** — one own-time field; fix with item 12's rule.
+8. **TASK-021** — C1-drop sensitivity grid; **pre-mechanized** (instrument §17), still unclaimed, lowest urgency. Its
+   criterion 21.8 floor of 217 is doubly stale: **227** measured at `4fc40c8`, **244** at `72104a5`.
+
+2026-09-26T00:52:53Z ORCH-2 -> cycle I gated at `72104a5`; seal STANDS; items v2.c-v2.f opened; ANNEX A1/v2.5/v2.10 amended by
+  self-correction O-5 (append-only, disclosed in GATES.md #5); O-6 (heartbeat signal 1h21m stale) disclosed in
+  GATES.md #6 and mechanized in --self-audit. GitHub auth failed mid-cycle: CONTROL 41 (`b81e86d`) and cycle I are
+  local-only until it is restored; all figures are reproducible from the two committed goldens.
+
+
+### Queue priority update (2026-09-26T01:00:20Z, append-only — A2 is now CLOSED, so rank 5's framing changes)
+
+`ANNEX §G` records the A2 decision (the adjudication set is **excluded** from quantum b), so **TASK-018 items 0d–0g no longer
+block quantum b** — they remain owed for TASK-018's own gate, and their rank is unchanged, but the *"or ORCH-2 records the A2
+exclusion instead"* branch is spent. The blocker on quantum b is now **three worker-side conditions, none substantive**:
+
+1. **item v2.b** — the taint disclosure (four holdout transcripts, seven signal ids + verdicts, the deferred-filter
+   endorsement, and the denominator choice already fixed by A4: **33 primary + 29 pre-registered sensitivity**).
+2. **item v2.a(iii), 2nd half** — the *"one draw, not two"* sentence. **Documentation-only**: §G3 verified the substance from
+   the two seal blobs (`manifest` is the only key that differs, 68 s apart), and §18 mechanizes the comparison.
+3. **§G2** — `freeze` binds `companion_notes` (path + sha256 + commit + commit_utc for `SEAL-APPENDIX` and `SEAL-AUDIT`) and
+   `run` refuses on a digest mismatch. One diff in `tools/m4_one_shot_v2.py`.
+
+Then **items v2.e** (the audit tool's citation census: name the key, cover all 10 mentions — the 5 unpaired ones are currently
+outside the post-seal void check), **v2.c / v2.d / v2.f** (stamps and `tool_commit`), and the rest of the queue as ordered at
+2026-09-26T01:00:20Z above. **Quantum b is one delivery away from issuable, and TASK-015 M6 FINAL sits behind it.**

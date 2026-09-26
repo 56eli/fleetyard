@@ -692,3 +692,207 @@ of TASK-013 / TASK-016 and `L1`–`L9` of TASK-018 are cited only where a row ne
 by hand and recorded in `GATES.md`**, with no re-gate pending, so mechanizing them now would buy nothing. (iii) The
 `q`-ids of TASK-014 are mostly uncited because q1 / q4 / q5 are closed and q2 / q3 are open **only** through items that
 are mechanized — the scoreboard verdicts live in `GATES.md`, the item rows live here.
+
+## 17. TASK-021 PRE-MECHANIZED BEFORE IT IS CLAIMED — and criterion 21.8's floor corrected by measurement (CONTROL seq 41, 2026-09-26T00:36:26Z)
+
+Instrument v3.6: **282 rows · PASS 217 · FAIL 27 · INFO 30 · PROXY 8**; `--selftest` 18/18; golden refreshed. §16
+published one honest gap — *TASK-021's criteria 21.1–21.8 are not mechanized, owed by me when it lands* — and §17
+closes it **before the task is claimed**, in §15's pre-registration pattern: whatever can be checked now is a PASS
+row, and whatever needs the artefact is a HELD row that states the exact test it will get. The FAIL set is unchanged
+at 27: §17 asserts no verdict, it only pre-registers.
+
+### 17.1 What is pinned now, from bytes rather than prose
+
+| fact | value | why it is load-bearing |
+|---|---|---|
+| the shipped operating point, read from `tools/det_dropword.py` module constants | **8/8** — `window 24`, `stride 12`, `min_score 0.20`, `top_k 3`, `min_matched 10`, `min_ratio 0.85`, `max_drop 2`, `min_flank 3` | criterion 21.2's anchor row is now checkable against source, not against the q2 README's table. The file is byte-identical (`a0236325…`) at both `4fc40c8` and `72104a5` |
+| each grid axis contains its own anchor | `min_flank 3 ∈ {2,3,5,8}` · `min_ratio 0.85 ∈ {0.80,0.85,0.90}` · `min_matched 10 ∈ {8,10,14}` | if an axis did not contain the shipped value, "one at a time from the shipped point" would be undefined on that axis |
+| the table's expected size | **8 distinct settings** (anchor + 3 + 2 + 2), or **11 rows** if the anchor is repeated per axis | a delivered table of any other size is a deviation the worker must explain, and the gate can say so without judgement |
+| both denominators, derived from the split files | v1 tuning **193** / v2 tuning **197**; 33 of the 193 are v2-holdout members | criterion 21.3 requires them beside *every* comparison to the shipped 122 — the failure mode is a bare "122 → N" |
+
+### 17.2 What is held, with the test stated
+
+| criterion | the test §17 will apply |
+|---|---|
+| 21.1 | `runs/m4-t21-sensitivity/` exists; the HoldoutGuard refusal is in code (not a comment); `holdout_reads: []`; `holdout_enforced: true` |
+| 21.4 | the stability set sums coherently with the anchor row: `stable + shipped-only + setting-specific = anchor count` |
+| 21.5 | no threshold chosen or recommended; no precision / recall / rate / M6 figure anywhere in the artefacts; every output labelled CANDIDATE-class / PROVISIONAL-UNGATED (grep, not reading) |
+| 21.6 | the §8 manifest carries a `tool_commit` that **contains** the generating tool — the exact failure of **item 8a** at `ffb8811…` and `71c37cf…` |
+| 21.7 | the dedupe rule **names its key**. Lesson of item 0e, restated as a number: over the 57 CERTAIN-leg-d rows there are **57 distinct `(transcript, char_offset)` sites but only 55 distinct span texts** (`D-097`/`D-098` and `D-120`/`D-121` collide), so "site count" is ambiguous until the key is named |
+| 21.8 | the suite stays green **with the corpus present** and the test count does not drop |
+
+### 17.3 A measurement that corrects the queue file
+
+Criterion 21.8 publishes a floor of **217** tests. That is **stale**. Re-run in the `w-4fc` worktree with the corpus
+materialised: **`Ran 227 tests in 208.391s` → `OK (skipped=1)`**. So the binding floor at `4fc40c8` is **227 with one
+skip reported**, not 217; BOSS-2's cycle 50 reports **244 OK** at WORKER-2's new head `72104a5`, which cycle I will
+verify itself. The correction is recorded here rather than edited into the queue file: the queue file is the worker's
+specification and the floor it states was true when written — the gate publishes the current number and the derivation.
+
+### 17.4 The coverage meta-gate measured its own gap closing
+
+§16's per-task citation rows are **PROXY** because counting ids in the source does not prove a criterion is ungated.
+The TASK-021 row was PROXY at seq 40 (zero ids cited) and is **PASS at seq 41** (all eight cited), so PROXY fell 9 → 8.
+That is the confirmation §16 was not decorative: it named a gap, the gap was closed in the next cycle, and the
+instrument itself reported the change.
+
+
+---
+
+## 18. GATE CYCLE I — the worker's seal audit re-derived from git bytes (CONTROL seq 42, 2026-09-26T00:52:53Z)
+
+Instrument v3.7: **306 rows at `72104a5`** (PASS 235 / FAIL 33 / INFO 30 / PROXY 8) · **283 rows at `4fc40c8`** (FAIL 27,
+unchanged) · `--selftest` 18/18 · both goldens committed. Full gate record in `GATES.md` ("GATE CYCLE I"), including the
+16-claim re-derivation table (13 OK / 3 MISMATCH) and self-corrections **O-5** and **O-6**.
+
+### 18.1 The ruling and why it needed re-derivation
+
+WORKER-2 delivered a tool that audits **its own** seal (`tools/m4_seal_audit.py`, `eb4e4ec7…`) and a verdict of
+**STANDING (appendix owed)**. A self-audit is a claim, not evidence, so §18 recomputes every load-bearing number from git
+objects. The verdict **survives**: the seal file is byte-identical since `79eb401` (`73d86f0d…`), 6 of its 7 bound digests
+recompute MATCH at head, the fixture move `c8e96319… → c40d272f…` is **append-only** (0 keys changed, 0 removed, 63 added;
+ids `{D2-001..D2-004}` identical), the single confirmation artefact is **pre-seal by 13m36s** (`1fb524e` @ `20:38:18Z`,
+whole history one commit), membership holds (197/33/43, `forced ∩ holdout = ∅`), the draw still reproduces set-equal, and the
+tool opens **no transcript bytes**.
+
+Two numbers the worker's artefacts do not contain, derived here: the seal's **`book_store_sha256` binding has no named file**
+— identified from `tools/census.py`'s `book_store_bytes` (14,634,979) as `corpus/docdocgo/html/merged-book-texts_json_1.js`
+and confirmed by digest `c0892fcd…`; and the fixture file mentions the confirmation artefact at **10 paths**, of which only
+**5** are `artifact`+`artifact_sha256` pairs — the tool's unstated key.
+
+### 18.2 What cycle I opened
+
+| | |
+|---|---|
+| **items v2.c / v2.d / v2.e / v2.f** | forward-stamped + self-contradicting `audit_utc`; missing `tool_commit`; a 5-row citation census against 10 mentions with the key unnamed **and the 5 unpaired mentions outside the void check**; a fuzzy prep-record header taking item 12's census **26 → 27** |
+| **item v2.a** | clause (i) substance and clause (ii) **landed and verified**; clause (iii) **half-landed** (the `re_seal_rule` evaluation is there, the *"one draw, not two"* statement is absent everywhere) |
+| **item v2.b** | **unlanded** — 0 mentions of the taint in all three new artefacts |
+| **quantum b** | **still blocked**, now on four named conditions: v2.b · v2.a (iii) 2nd half · the freeze binding the companion note · ANNEX A2 |
+| **O-5** | ANNEX A1 was **unsatisfiable** (it demanded an edit to a file whose digest the appendix and v2.10 both bind) → amended in the open; v2.5 / v2.10 / the BLOCKER row re-worded with their tests. Instrument defect **#30**: expectation text and test must be amended in the same edit |
+| **O-6** | my heartbeat file was **1h21m stale** while CONTROL.log ran to seq 41 → mechanized as a `--self-audit` row failing on a >20 min lag (25f's own Class-2 threshold); closed by a disclosing line, not by back-dating |
+| **suite floor** | `4fc40c8`: 227 OK (skipped=1) · `72104a5`: **244 OK (skipped=1)** = 227 + 10 + 7. TASK-021's published 217 is doubly stale |
+| **ops** | GitHub auth failed mid-cycle (`GH_TOKEN` invalid) → CONTROL 41's `b81e86d` and this cycle are **local-only** until restored; both goldens make every figure reproducible offline. This clone's fetch refspec is **main-only**, so fleet tips are read with `ls-remote` and fetched by explicit refspec |
+
+
+---
+
+## 19. ANNEX A2 decided before any run, and the "one draw" substance verified (CONTROL seq 43, 2026-09-26T01:00:20Z)
+
+Instrument v3.8: **308 rows at `72104a5`** (PASS 237 / FAIL 33 / INFO 30 / PROXY 8) · **284 rows at `4fc40c8`**
+(PASS 218 / FAIL 27 / INFO 31 / PROXY 8) · `--selftest` 18/18 · both goldens refreshed.
+
+### 19.1 The A2 decision (`TASK-019.md` ANNEX §G, binding, recorded with no freeze written and the holdout unopened)
+
+**The v1-era adjudication set is EXCLUDED from the quantum-b evaluation.** No label, denominator or sanity figure may come
+from `adjudication.jsonl` (122 rows), `fixtures/confirmed`, `fixtures/v2/dropword` or `PATTERNS.md`; holdout signals are
+labelled **fresh and blind** for the run; `seeded` stays separated from `independent` and never counts toward the rate;
+unlabelled signals stay `candidate_unlabelled`; and if items **0d–0g** land before the freeze the exclusion is **not** lifted
+automatically — lifting needs an amendment to §G **before the freeze**, and after it nothing changes, because the freeze
+carries the protocol text into the score file.
+
+Why: 0d–0g are open defects in exactly the artefacts a label-reuse path would read, and quantum b is **one-shot**, so a
+known-defective input would enter a figure that cannot be re-run. The exclusion costs nothing measurable — the 33
+v2-holdout transcripts have never been adjudicated, so fresh labels are required on either branch of A2.
+
+**Effect:** the BLOCKER row drops from four open conditions to **three** — item **v2.b**, item **v2.a(iii) 2nd half**, and the
+**§G2 freeze binding**. All three are worker-side and none is substantive, so quantum b is one delivery away from issuable,
+with TASK-015 M6 FINAL behind it.
+
+### 19.2 §G2 — the freeze binding, specified so the repair is one diff
+
+`THRESHOLDS.json` must carry a `companion_notes` list binding `path` + `sha256` + `commit` + `commit_utc` for
+`SEAL-APPENDIX-2026-09-25.md` and `SEAL-AUDIT.json`, and `run` must refuse when a bound companion note's live digest no
+longer matches — the same refusal shape the harness already raises for a changed detector or a changed split. The seal stays
+byte-identical (O-5), so the disclosure that makes it readable lives beside it, and the run must not proceed on the seal alone.
+
+### 19.3 §G3 — "one draw, not two" verified from the two seal blobs
+
+| | `293b29c` (20:50:46Z) | `79eb401` (20:51:54Z) |
+|---|---|---|
+| keys added / removed | — | **0 / 0** |
+| keys whose value differs | — | **`manifest` only** |
+| `holdout` / `tuning` / `salt` | 33 / 197 / `fleetyard-m4-holdout-v2-2026-09-25` | **identical** |
+
+So the split was drawn **once**; `79eb401` re-manifested it (binding `tool_sha256` to the tool's head revision). §18 now
+derives this comparison as a row (**PASS on substance**), while the **STATEMENT** row stays **FAIL** — item v2.a(iii)'s
+second half is therefore **documentation-only**, and the reason it matters is on the record: `79eb401`'s own commit subject
+says **"re-seal"**, which reads as a second draw to anyone who has not compared the blobs.
+
+### 19.4 Instrument defect #31 — the position of a check is part of its correctness
+
+The lane-side A2 row was first placed inside §18 **after** the early return that fires when the worker's audit artefacts are
+absent, so it silently vanished at `4fc40c8` (283 rows instead of 284). **A check that only runs at some heads is not a
+check.** Moved before the guard; both goldens now carry it. Same family as defect **#28** (a disclosure check must slice the
+disclosure, not the file containing it).
+
+
+---
+
+## 20. The harness's refusals mapped to their tests — item v2.g (CONTROL seq 44, 2026-09-26T01:04:16Z)
+
+Instrument v3.9: **311 rows at `72104a5`** (PASS 239 / FAIL 34 / INFO 30 / PROXY 8) · **284 rows at `4fc40c8`** (FAIL 27,
+unchanged) · `--selftest` 18/18 · both goldens refreshed. FAIL 34 = 33 + **v2.g**.
+
+Cycle I credited the harness with "capability evidence" on the strength of its refusal **code**. Code-present is not
+code-proven, so §18 now requires each refusal to be **asserted by a test**: the fragment must appear in the harness's message
+*and* in an `assertIn` in `tests/test_m4_one_shot_v2.py`.
+
+| refusal | asserted? |
+|---|---|
+| freeze overwrite (`refusing to overwrite`) | **yes** |
+| no freeze before run (`thresholds must be recorded before the run`) | **yes** |
+| receipt exists → holdout spent (`already holds a consumption receipt`, `NEW SPLIT`) | **yes** |
+| detector **file** changed after freeze (`changed after the freeze`) | **yes** |
+| detector **parameters** changed after freeze | **NO** — the tested assertion is ambiguous between the two branches |
+| split digest no longer matches the freeze (`does not match the frozen record`) | **yes** |
+| **evaluated set ≠ frozen holdout (partial read)** | **NO** — and this is the refusal that protects the denominator |
+| score: verdict outside `confirmed`/`discarded` (`allowed:`) | **yes** |
+| score: label without a reason (`carries no reason`) | **yes** |
+
+**7/9.** The two gaps are item **v2.g** (repair: two toy tests, no corpus). The partial-read refusal is the one that matters:
+quantum b is one-shot, so a silently smaller denominator could never be re-run.
+
+**Two properties verified because the refusal is only usable if it cannot fire spuriously:**
+* both detectors assign `per_file[n] = sigs` **unconditionally** inside the read loop, so a **zero-signal** holdout transcript
+  still counts as read — otherwise the refusal would fire on every real run and quantum b could never be scored;
+* both detectors write `holdout_reads` / `holdout_consumed` **themselves** in holdout mode, so the receipt's read list is not
+  reconstructed after the fact (v2.12's precedent; the run-level test stays HELD — the receipt's `holdout_reads` must be
+  set-equal to the pre-registered **33**, or the §F2 sensitivity **29**).
+
+**Corroboration of §18 from the worker's own suite.** The two new modules run **17 tests in 0.354 s → OK**, and the audit
+tool's tests exercise its VOID logic in all five directions — patched sealed content
+(`verdict: VOID — fixtures/toy.json: sealed content was patched after the seal (1 changed path(s), first:
+/fixtures[0]/verdict: 'CERTAIN-leg-d' -> 'CANDIDATE')`), a post-seal confirmation artefact, a new fixture after the seal, a
+fixture transcript inside the holdout, and an internally inconsistent seal — plus the two STANDING cases. The mutation case is
+the one my append-only ruling rests on, so the classification I re-derived from the real blobs is also proven on a toy
+mutation by the tool's own tests.
+
+
+---
+
+## 21. Recreation #3 recovered; CONTROL 41–44 re-published (CONTROL seq 45, 2026-09-26T01:21:34Z)
+
+The owner restored GitHub auth at ~01:19Z. The push was rejected non-fast-forward and `git log` showed a **single commit at
+the branch base `2ed0b9b`**: the third workspace recreation of this campaign. `.git` had been re-created (01:18:47Z) while the
+**working tree survived**, so the four unpushed commits — `b81e86d` (CONTROL 41), `29bfded` (42), `be2fff0` (43), `e0eebbf`
+(44) — are **gone as objects** while everything they carried is **present as files** and is re-committed in one recovery
+commit.
+
+**Recovery, in the order the cursor prescribes:** live tips by `git ls-remote` (this clone's fetch refspec is main-only) →
+fetch by explicit refspec → **registry check first**: `fleet2/activations/REGISTRY.md` hashes to `a86115d2667e7d54…` and
+equals `origin/main`'s copy byte-for-byte, so the frozen-registry FAIL-CLOSED gate **passes** → `git reset --mixed` to
+`92c80b3` (**never `--hard`, never force-push**) → exactly **14 changed paths, all mine** → `--selftest` **18/18**.
+
+**What survived** (all of it): instrument **v3.9** with §17 and §18 · ledger §17–§20 · GATES cycle I + self-corrections #5
+(O-5) and #6 (O-6) · **ANNEX §G** (A2 decided pre-run) with §G2/§G3 · items **v2.c–v2.g** · both goldens (**311 rows at
+`72104a5`**, **284 at `4fc40c8`**) · CONTROL.log seq 41–44 and their heartbeat lines · the cursor.
+**What was lost:** the two gate worktrees (`w-4fc`, `w-721`), rebuildable in ~2 min each from the cursor recipe.
+
+**What the outage cost.** For ~45 minutes this lane published nothing, so BOSS-2's cycles 51–58 all witnessed *"ORCH-2 @
+92c80b3"*, and my cycle-I items **v2.c–v2.g were invisible to WORKER-2**. Its seven deliveries in that window therefore
+cannot have answered them — which is why cycle J re-checks them at the new head instead of assuming them closed. No order,
+CONCERN or REDIRECT was issued (ERRATA-25f's commit-quiet rule held).
+
+**Lesson extended.** Commit-quiet is fine; **push-quiet is not**. The fleet reads the lane HEAD, so an unpushed lane looks
+idle however much work is local. On push failure: say so in that cycle's CONTROL note, retry every cycle, and treat the
+working tree as the authoritative record until the push lands — the reason this recreation cost time and nothing else.

@@ -77,6 +77,19 @@ def git(wt: str, *args: str) -> tuple[int, bytes]:
     return p.returncode, p.stdout
 
 
+def _frag_of(msg: str) -> str:
+    """The distinctive literal of a refusal message: what a test would have to assert to cover it."""
+    lit = re.sub(r"%[sdr]", "", msg)
+    return " ".join(w for w in lit.split() if len(w) > 6)[:40]
+
+
+def lane_path(*rel) -> str:
+    """A path in the ORCH-2 lane that holds this instrument (fleet/gate-tools/…), i.e. the gate
+    authority's own records — used where a row checks something ORCH-2 owes rather than the worker."""
+    lane = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    return os.path.join(lane, *rel)
+
+
 def dir_digest(root: str, key: str = "relpath") -> tuple[str, int]:
     """sha256 over sorted lines '<sha256(bytes)>  <key>\n' for every file under root."""
     lines = []
@@ -1071,11 +1084,31 @@ def section_split_v2(wt, rep, sup):
     for src, dg in j["fixture_sources"].items():
         fp = os.path.join(wt, src)
         act = sha_file(fp) if os.path.exists(fp) else "ABSENT"
-        rep.add("10", f"criterion v2.5 — seal binds the ACTUAL {src}", act[:16] + "…", dg[:16] + "…",
-                PASS if act == dg else FAIL, n=1,
-                note="" if act == dg else "ITEM v2.a: the seal binds a stale digest; append a dated seal note "
-                                          "binding the actual digest and disclosing the taint, leaving this line "
-                                          "readable")
+        if act == dg:
+            rep.add("10", f"criterion v2.5 — seal binds the ACTUAL {src}", act[:16] + "…", dg[:16] + "…", PASS, n=1)
+            continue
+        # O-5: the seal is immutable (its own digest 73d86f0d… is bound by the appendix and by v2.10), so a
+        # post-seal APPEND-ONLY move is discharged by a dated companion note + a blob-level classification,
+        # not by editing the seal. §18 re-derives both from git bytes.
+        aud = os.path.join(wt, "runs/m4-q2-adjudication/SEAL-AUDIT.json")
+        apx = os.path.join(wt, "runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md")
+        cls = note_ok = False
+        if os.path.exists(aud):
+            rj = json.load(open(aud, encoding="utf-8"))
+            e = [x for x in rj.get("fixture_sources", []) if x.get("file") == src]
+            cls = bool(e) and e[0].get("status") == "APPEND-ONLY-AFTER-SEAL" and not e[0].get("mutations") \
+                and not e[0].get("new_fixture_ids")
+        if os.path.exists(apx):
+            t = open(apx, encoding="utf-8").read()
+            note_ok = dg[:12] in t and act[:12] in t
+        rep.add("10", f"criterion v2.5 (as amended by O-5) — {src}: the seal binds its SEAL-TIME digest and the "
+                      f"post-seal move is classified append-only with a dated companion note naming both",
+                f"seal-time {dg[:16]}… + classified append-only + both digests named in a companion note",
+                f"live {act[:16]}…; classified append-only (mutations [] / no ids added): {cls}; companion note "
+                f"names both digests: {note_ok}",
+                PASS if cls and note_ok else FAIL, n=2,
+                note="" if (cls and note_ok) else "ITEM v2.a: the digest moved and either the classification or the "
+                                                  "companion note is missing")
     man = j["manifest"]
     tool = man.get("tool")
     if tool:
@@ -1266,9 +1299,24 @@ def section_split_v2(wt, rep, sup):
                      "the denominator change stated in the pre-registration - not decided afterwards")
         sealnote = json.dumps(j).lower()
         stated = all(x in sealnote for x in ("d-092", "deferred")) or "holdout transcripts that already" in sealnote
-        rep.add("10", "criterion v2.b — the seal's own note states the taint (item v2.b landing check)",
+        # O-5: the seal may not be edited, so the dated note may instead live in a companion artefact that the
+        # quantum-b freeze binds. Either location discharges item v2.b; neither exists at 72104a5.
+        comp = ""
+        for rel in ("runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md",
+                    "runs/m4-q2-adjudication/SEAL-AUDIT.json",
+                    "fleet/branches/WORKER-2-TASK-019a-DELIVERY.md"):
+            fp2 = os.path.join(wt, rel)
+            if os.path.exists(fp2):
+                t2 = open(fp2, encoding="utf-8").read().lower()
+                if "d-092" in t2 and "radical_subjectivity" in t2:
+                    comp = rel
+        rep.add("10", "criterion v2.b (as amended by O-5) — the taint is stated in the seal's note OR in a dated "
+                      "companion artefact (item v2.b landing check)",
                 "a dated append-only note naming the four transcripts, the seven ids and their verdicts",
-                "STATED" if stated else "ABSENT — item v2.b still owed", PASS if stated else FAIL, n=1)
+                ("STATED in " + comp) if comp else ("STATED in the seal" if stated else
+                                                    "ABSENT in the seal and in every companion artefact at this head "
+                                                    "— item v2.b still owed"),
+                PASS if (comp or stated) else FAIL, n=1)
 
     dl = [os.path.relpath(os.path.join(r, f), wt) for r, _, fs in os.walk(wt) for f in fs
           if "TASK-019a-DELIVERY" in f and "/.git" not in r]
@@ -1386,10 +1434,29 @@ def section_quantum_b(wt, rep):
 
     act = sha_file(os.path.join(wt, "fixtures/v2/dropword.json"))[:8]
     bound = str((j.get("fixture_sources") or {}).get("fixtures/v2/dropword.json", ""))[:8]
-    rep.add("12", "BLOCKER — quantum b may not run until item v2.a lands (v2.7 needs frozen inputs)",
-            f"the seal binds the actual fixture digest {act}", f"the seal binds {bound}",
-            PASS if act == bound else FAIL, n=1,
-            note="the pre-registration must bind the POST-NOTE split-v2 digest (criterion v2.10)")
+    open_conds = []
+    apx12 = os.path.join(wt, "runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md")
+    t12 = open(apx12, encoding="utf-8").read() if os.path.exists(apx12) else ""
+    if not ("d-092" in t12.lower()):
+        open_conds.append("item v2.b (taint disclosure) unlanded")
+    if not ("293b29c" in t12 or "one draw" in t12.lower()):
+        open_conds.append("item v2.a clause (iii) 2nd half ('one draw, not two') unstated")
+    frz = os.path.join(wt, "tools/m4_one_shot_v2.py")
+    ft = open(frz, encoding="utf-8").read() if os.path.exists(frz) else ""
+    if t12 and not re.search(r"SEAL-APPENDIX|SEAL-AUDIT|appendix_sha|companion", ft):
+        open_conds.append("O-5: the freeze does not bind the companion note's digest")
+    a2_txt = ""
+    t19p = lane_path("fleet/queue/pending/TASK-019.md")
+    if os.path.exists(t19p):
+        a2_txt = slice_section(open(t19p, encoding="utf-8").read(), "## ANNEX §G")
+    if not a2_txt:
+        open_conds.append("ANNEX A2: items 0d-0g landed, or the adjudication set excluded by pre-registration")
+    rep.add("12", "BLOCKER — quantum b may not run until its preconditions land (v2.7 needs frozen inputs)",
+            "no open precondition", f"{len(open_conds)} open: {open_conds}",
+            PASS if not open_conds else FAIL, n=len(open_conds),
+            note=f"item v2.a's SUBSTANCE is verified at this head — the seal stands, the fixture move is append-only "
+                 f"(seal-time {bound}… → live {act}…), 6 of 7 bound digests recompute MATCH — so the blocker no "
+                 f"longer rests on the seal's validity; it rests on these conditions")
     sd = sha_file(sp)[:8]
     rep.add("12", "split-v2 file digest at this head (the pre-registration binds the post-note value)",
             "recorded, expected to change exactly once when v2.a lands", sd, INFO, n=1)
@@ -1961,6 +2028,448 @@ def section_coverage(rep):
                  "run")
 
 
+
+
+# TASK-021's grid and the shipped operating point, read from the pinned detector source so the
+# anchor cannot drift: criteria 21.1-21.8 (fleet/queue/pending/TASK-021.md).
+GRID = (("min_flank", (2, 3, 5, 8)), ("min_ratio", (0.80, 0.85, 0.90)), ("min_matched", (8, 10, 14)))
+
+
+def section_t21(wt, rep):
+    """§17 — TASK-021 (C1-drop sensitivity over the v2 tuning half). Not started, so each criterion
+    is a HELD row stating the exact test it will get, plus the facts that can be pinned NOW: the
+    shipped operating point, the grid arithmetic, both denominators, the dedupe lesson and the
+    test-count floor. Ledger §16 published this as the instrument's one honest gap; this closes it."""
+    print("\n== 17. TASK-021 sensitivity grid (criteria 21.1-21.8) ==")
+    dd = os.path.join(wt, "tools/det_dropword.py")
+    txt = open(dd, encoding="utf-8").read() if os.path.exists(dd) else ""
+    shipped = {}
+    singles = (("MIN_SCORE", "min_score"), ("TOP_K", "top_k"), ("MAX_DROP", "max_drop"), ("MIN_FLANK", "min_flank"))
+    for const, key in singles:
+        m = re.search(r"^" + const + r"\s*=\s*([0-9.]+)", txt, re.M)
+        if m:
+            shipped[key] = m.group(1)
+    m = re.search(r"^WINDOW,\s*STRIDE\s*=\s*([0-9]+),\s*([0-9]+)", txt, re.M)
+    if m:
+        shipped["window"], shipped["stride"] = m.group(1), m.group(2)
+    m = re.search(r"^MIN_MATCHED,\s*MIN_RATIO\s*=\s*([0-9]+),\s*([0-9.]+)", txt, re.M)
+    if m:
+        shipped["min_matched"], shipped["min_ratio"] = m.group(1), m.group(2)
+    rep.add("17", "the shipped operating point, read from the PINNED detector source (a0236325…)",
+            "all eight thresholds the q2 README publishes, so the anchor row is checkable against source",
+            f"{len(shipped)}/8: {shipped}",
+            PASS if len(shipped) == 8 else FAIL, n=len(shipped),
+            note="the anchor row of the sensitivity table must equal these values; reading them from the source "
+                 "rather than the README is what makes 21.2 checkable")
+    for axis, vals in GRID:
+        anchor = shipped.get(axis)
+        rep.add("17", f"criterion 21.2 — grid axis `{axis}` contains its own anchor", f"anchor {anchor} ∈ {vals}",
+                f"anchor {anchor}" + (" ∈ grid" if anchor and any(str(v) == str(anchor) or
+                                                                  f"{v:.2f}" == f"{float(anchor):.2f}"
+                                                                  for v in vals) else " NOT IN GRID"),
+                PASS if anchor and any(f"{float(v):.2f}" == f"{float(anchor):.2f}" for v in vals) else FAIL,
+                n=len(vals))
+    n_settings = 1 + sum(len(v) - 1 for _a, v in GRID)
+    rep.add("17", "criterion 21.2 — the table's expected size (one parameter at a time from the shipped point)",
+            "the anchor plus every non-anchor value on each axis",
+            f"{n_settings} distinct settings (or {1 + sum(len(v) for _a, v in GRID)} rows if the anchor is repeated "
+            f"per axis)", PASS, n=n_settings)
+    art = os.path.join(wt, "runs/m4-t21-sensitivity")
+    rep.add("17", "criterion 21.1/21.6 — the artefact directory `runs/m4-t21-sensitivity/`",
+            "ABSENT is correct: the task has not been claimed", "present" if os.path.isdir(art) else "ABSENT",
+            INFO if not os.path.isdir(art) else PASS, n=1,
+            note="when it lands, 21.1 needs the HoldoutGuard refusal in code + `holdout_reads: []` + "
+                 "`holdout_enforced: true`, and 21.6 needs the §8 manifest with a `tool_commit` that CONTAINS the "
+                 "generating tool - the exact failure of item 8a at ffb8811… and 71c37cf…")
+    v1 = json.load(open(os.path.join(wt, "tools/HELD-OUT-SPLIT.json"), encoding="utf-8"))
+    v2 = json.load(open(os.path.join(wt, "tools/HELD-OUT-SPLIT-V2.json"), encoding="utf-8"))
+    rep.add("17", "criterion 21.3 — both denominators, derived here so the table can be checked",
+            "v1 tuning 193 and v2 tuning 197, stated with every comparison to the shipped 122",
+            f"v1 tuning {len(v1['tuning'])} / v2 tuning {len(v2['tuning'])}; the shipped 122 signals are keyed by "
+            f"the v1 half, of which {len({os.path.basename(x) for x in v2['holdout']} & set(map(os.path.basename, v1['tuning'])))} "
+            f"are v2-holdout members", PASS if (len(v1["tuning"]), len(v2["tuning"])) == (193, 197) else FAIL, n=2)
+    rep.add("17", "criterion 21.7 — the dedupe rule must name its KEY (the lesson of item 0e)",
+            "a stated key, applied consistently, duplicates counted separately from rows",
+            "over the 57 CERTAIN-leg-d rows: 57 distinct (transcript, char_offset) sites but 55 distinct "
+            "(transcript, span text) - so 'site count' is ambiguous until the key is named", INFO, n=57,
+            note="HELD until the artefact exists; the collisions are D-097/D-098 and D-120/D-121 (§13)")
+    for cid, test in (("21.4", "the stability set (present at EVERY setting vs shipped-point-only) sums coherently "
+                               "with the anchor row: stable + shipped-only + setting-specific = the anchor count"),
+                      ("21.5", "no threshold chosen or recommended and no precision / recall / rate / M6 figure "
+                               "anywhere in the artefacts; every output labelled CANDIDATE-class / "
+                               "PROVISIONAL-UNGATED - checked by grepping the artefact directory for those terms"),
+                      ("21.8", "the suite stays green WITH the corpus present and the test count does not drop")):
+        rep.add("17", f"criterion {cid} — {test}", "HELD until the run exists", "HELD", INFO, n=1)
+
+
+
+# ---- cycle I: the worker's own seal audit (WORKER-2 72104a5) re-derived from git bytes ----
+SEAL_COMMIT = "79eb401b4328d254a5cee9be0a07f17a5a5e610b"
+SEAL_REL = "tools/HELD-OUT-SPLIT-V2.json"
+FX_REL = "fixtures/v2/dropword.json"
+AUDIT_REL = "runs/m4-q2-adjudication/SEAL-AUDIT.json"
+APPENDIX_REL = "runs/m4-q2-adjudication/SEAL-APPENDIX-2026-09-25.md"
+
+
+def _blob(wt, rev, rel):
+    rc, out = git(wt, "show", f"{rev}:{rel}")
+    return out if rc == 0 else None
+
+
+def _flat(node, path=""):
+    d = {}
+    if isinstance(node, dict):
+        for k, v in node.items():
+            d.update(_flat(v, f"{path}/{k}"))
+    elif isinstance(node, list):
+        for i, v in enumerate(node):
+            d.update(_flat(v, f"{path}[{i}]"))
+    else:
+        d[path] = node
+    return d
+
+
+def section_seal_audit(wt, rep, head):
+    """§18 — cycle I: WORKER-2's post-seal audit @ 72104a5 re-derived independently, plus the four
+    provenance defects found inside the repair artefacts themselves. A worker tool auditing the
+    worker's own seal is not evidence until the gate re-derives it from git bytes, so every claim in
+    SEAL-AUDIT.json / SEAL-APPENDIX is recomputed here (16 claims: 13 verified, 3 mismatched — all
+    three documentation-class, none substantive)."""
+    print("\n== 18. cycle I — the seal audit re-derived (WORKER-2 72104a5) ==")
+    ap = os.path.join(wt, AUDIT_REL)
+    xp = os.path.join(wt, APPENDIX_REL)
+    # lane-side row FIRST: A2 is ORCH-2's own decision and must be evaluated at every head, not only where
+    # the worker's audit artefacts exist, or a regression could hide behind the early return below.
+
+    t19 = lane_path("fleet/queue/pending/TASK-019.md")
+    a2t = open(t19, encoding="utf-8").read() if os.path.exists(t19) else ""
+    a2 = slice_section(a2t, "## ANNEX §G")
+    need = ("EXCLUDED", "fresh and blind", "seeded", "before the freeze")
+    have = [k for k in need if k.lower() in a2.lower()]
+    rep.add("18", "ANNEX A2 (lane-side) — the adjudication-set decision is RECORDED BEFORE any run, as A2 requires",
+            f"a §G decision carrying all four of {need}",
+            ("§G present with " + f"{len(have)}/4 required elements" + (" — " + a2.strip().split(chr(10))[0][:90]
+                                                                        if a2 else "")) if a2 else "§G ABSENT",
+            PASS if a2 and len(have) == 4 else FAIL, n=len(have),
+            note="A2 is the gate's decision to make, not the worker's: it removes one of the quantum-b blockers "
+                 "without waiting on TASK-018 items 0d-0g, and it is only valid because it is recorded before the freeze")
+
+    if not (os.path.exists(ap) and os.path.exists(xp)):
+        rep.add("18", "SEAL-AUDIT.json + SEAL-APPENDIX (the item v2.a material)", "present at a head that has them",
+                "ABSENT at this head — nothing to re-derive", INFO, n=0,
+                note="these artefacts first exist at WORKER-2 72104a5 (b991f29 tool, 72104a5 report+appendix)")
+        return
+    rep_j = json.load(open(ap, encoding="utf-8"))
+    appx = open(xp, encoding="utf-8").read()
+    seal_live = open(os.path.join(wt, SEAL_REL), "rb").read()
+    seal_seal_time = _blob(wt, SEAL_COMMIT, SEAL_REL)
+    seal = json.loads(seal_live)
+
+    rep.add("18", "the seal file is byte-identical since its own seal commit (the appendix's central claim)",
+            "73d86f0dafe5… at 79eb401 and at head, identical bytes",
+            f"{sha_bytes(seal_seal_time)[:12]}… / {sha_bytes(seal_live)[:12]}… identical={seal_seal_time == seal_live}",
+            PASS if seal_seal_time == seal_live and sha_bytes(seal_live).startswith("73d86f0d") else FAIL, n=1,
+            note="this is why O-5 amends ANNEX A1 rather than ordering an edit: any edit moves 73d86f0d…, which the "
+                 "appendix itself binds")
+
+    # every digest the seal binds, recomputed at head (criterion v2.10 as amended by O-5)
+    bound = {"/corpus_files_sha256": seal["corpus_files_sha256"]}
+    bound.update({f"/fixture_sources/{k}": v for k, v in seal["fixture_sources"].items()})
+    bound.update({f"/manifest/{k}": v for k, v in seal["manifest"].items() if k.endswith("sha256")})
+    ovdir = os.path.join(wt, "corpus/docdocgo/overlays")
+    names = sorted(b for b in os.listdir(ovdir) if b.endswith(".txt")) if os.path.isdir(ovdir) else []
+    live = {"/corpus_files_sha256": sha_bytes(("\n".join(names) + "\n").encode("utf-8"))}
+    for k, v in seal["fixture_sources"].items():
+        fp = os.path.join(wt, k)
+        live[f"/fixture_sources/{k}"] = sha_file(fp) if os.path.exists(fp) else None
+    for k, path in (("corpus_zip_sha256", "docdocgo-fixes.zip"), ("policy_sha256", "fleet2/POLICY-MANIFEST.sha256"),
+                    ("tool_sha256", "tools/m4_split_v2.py"),
+                    # the seal's derivations never name this file; tools/census.py's book_store_bytes (14,634,979)
+                    # identifies it, and the digest confirms it: c0892fcd…
+                    ("book_store_sha256", "corpus/docdocgo/html/merged-book-texts_json_1.js")):
+        fp = os.path.join(wt, path)
+        live[f"/manifest/{k}"] = sha_file(fp) if os.path.exists(fp) else None
+    match = [k for k in bound if k in live and live[k] == bound[k]]
+    moved = [k for k in bound if k in live and live[k] != bound[k]]
+    unchecked = [k for k in bound if k not in live or live[k] is None]
+    rep.add("18", "criterion v2.10 as amended by O-5 — every digest the seal binds, recomputed at head",
+            "all MATCH except the one post-seal append-only move, which must be classified and appendixed",
+            f"{len(match)}/{len(bound)} MATCH; MOVED: {moved}; not recomputable here: {unchecked}",
+            PASS if match and moved == [f"/fixture_sources/{FX_REL}"] and not unchecked else FAIL, n=len(bound),
+            note="book_store_sha256's file is never named in the seal's derivations; it is identified here from "
+                 "tools/census.py's book_store_bytes (14,634,979) and confirmed by digest — an unnamed binding is "
+                 "itself a small defect, recorded rather than left to the reader")
+
+    # the append-only classification, re-derived by flattening both blobs
+    fx_seal, fx_head = _blob(wt, SEAL_COMMIT, FX_REL), open(os.path.join(wt, FX_REL), "rb").read()
+    fs, fh = _flat(json.loads(fx_seal)), _flat(json.loads(fx_head))
+    changed = [k for k in fs if k in fh and fs[k] != fh[k]]
+    removed = [k for k in fs if k not in fh]
+    added = [k for k in fh if k not in fs]
+    ids_s = [f.get("id") for f in json.loads(fx_seal).get("fixtures", [])]
+    ids_h = [f.get("id") for f in json.loads(fx_head).get("fixtures", [])]
+    hist = git(wt, "log", "--format=%h|%cI", "--", FX_REL)[1].decode().strip().split("\n")
+    rep.add("18", "the audit's `mutations: []` / APPEND-ONLY-AFTER-SEAL classification, re-derived from both blobs",
+            "0 seal-time keys changed, 0 removed; additions only; fixture id set identical",
+            f"changed {len(changed)} removed {len(removed)} added {len(added)}; ids {ids_s} == {ids_h}: {ids_s == ids_h}",
+            PASS if not changed and not removed and ids_s == ids_h else FAIL, n=len(added),
+            note=f"the moving commit is {hist[0]} (post-seal); the added keys are TASK-020 item 7's enacted-leg-d "
+                 f"annotation blocks and the generated_utc_exact* keys")
+    rep.add("18", "the seal-time and head digests of the fixture file are the two the appendix names",
+            "c8e963199a1e… (seal time) → c40d272f30d0… (head)",
+            f"{sha_bytes(fx_seal)[:12]}… → {sha_bytes(fx_head)[:12]}…",
+            PASS if sha_bytes(fx_seal).startswith("c8e96319") and sha_bytes(fx_head).startswith("c40d272f") else FAIL,
+            n=2)
+
+    # the confirmation artefact, placed in time
+    ca = "runs/m4-q2-adjudication/fixtures-adjudication.json"
+    ca_hist = git(wt, "log", "--format=%h|%cI", "--", ca)[1].decode().strip().split("\n")
+    ca_live = os.path.join(wt, ca)
+    ca_sha = sha_file(ca_live) if os.path.exists(ca_live) else None
+    seal_utc = git(wt, "log", "-1", "--format=%cI", SEAL_COMMIT)[1].decode().strip()
+    rep.add("18", "the confirmation artefact is PRE-seal (the claim that decides the re_seal_rule)",
+            "sha 61568a9e…, whole history one commit 1fb524e @ 2026-09-25T20:38:18Z, before the seal 20:51:54Z",
+            f"{str(ca_sha)[:12]}…; commits touching it {ca_hist}; seal commit {seal_utc}",
+            PASS if ca_sha and ca_sha.startswith("61568a9e") and len(ca_hist) == 1 and
+                    ca_hist[0].split("|")[1] < seal_utc else FAIL, n=len(ca_hist))
+
+    # membership and the draw, at this head
+    forced = set(seal.get("fixture_transcripts_forced_tuning", []))
+    hold = set(seal["holdout"])
+    draw = draw_holdout(names, seal["salt"], seal["mod"], seal["holdout_bucket"])
+    rep.add("18", "membership at head: the forced set does not intersect the holdout",
+            "forced 43 ∩ holdout 33 = ∅; counts tuning 197 / holdout 33",
+            f"forced {len(forced)} ∩ holdout {len(hold)} = {len(forced & hold)}; counts "
+            f"{seal['counts']}", PASS if not (forced & hold) and (len(seal["tuning"]), len(hold)) == (197, 33) else FAIL,
+            n=len(forced | hold))
+    rep.add("18", "the draw still reproduces at head — and the seal's own `derivations.holdout_set` line read "
+                  "LITERALLY does not", "the sealed holdout, set-equal",
+            f"sha256(SALT+name) mod 5 == 0 gives {len(draw)} names; minus the {len(draw & forced)} that are forced to "
+            f"tuning gives {len(draw - forced)}, set-equal to the seal's 33: {(draw - forced) == hold}",
+            PASS if (draw - forced) == hold else FAIL, n=len(draw),
+            note="the exclusion is stated in the seal's `forced_transcripts` and `tuning_set` derivations but NOT in "
+                 "the `holdout_set` line, so that line alone yields 42 — criterion 20.15a's discipline (a derivation "
+                 "must reproduce when followed literally) applied to a sealed artefact that may not be edited; the "
+                 "reading of record is §10's, which reproduces 33/197")
+
+    # the audit tool and its own provenance
+    tool_rel = rep_j.get("tool", "tools/m4_seal_audit.py")
+    tool_sha = sha_file(os.path.join(wt, tool_rel)) if os.path.exists(os.path.join(wt, tool_rel)) else None
+    rep.add("18", "the audit tool's digest equals the one stamped in its own report", "eb4e4ec75afb…",
+            f"{str(tool_sha)[:12]}… vs report {str(rep_j.get('tool_sha256'))[:12]}…",
+            PASS if tool_sha and tool_sha == rep_j.get("tool_sha256") else FAIL, n=1)
+    hca = rep_j.get("head_commit_at_audit", "")
+    anc = git(wt, "merge-base", "--is-ancestor", hca, head)[0] == 0 if hca else False
+    rep.add("18", "the report names the head it audited, and that head is an ancestor of the report's own commit",
+            "an ancestor — the report cannot claim to have audited a commit that did not exist",
+            f"head_commit_at_audit {hca[:7]} ancestor-of {head[:7]}: {anc}", PASS if anc else FAIL, n=1,
+            note="the report states the ordering itself ('committed as its own commit after it') — honest sequencing")
+    tsrc = open(os.path.join(wt, tool_rel), encoding="utf-8").read() if tool_sha else ""
+    reads = [ln for ln in tsrc.split("\n") if re.search(r"corpus/|overlays|docdocgo", ln) and not ln.strip().startswith("#")]
+    rep.add("18", "the audit tool opens no transcript content (the 'holdout not opened' claim, tested on the tool)",
+            "0 reads of corpus/overlays paths — git objects, the seal file and itself only",
+            f"{len(reads)} such line(s): {reads[:3]}", PASS if not reads else FAIL, n=len(reads),
+            note="it does read the holdout NAME list from the seal, which membership checks require; names are not "
+                 "content, and no transcript bytes are opened")
+
+    # ---- the four provenance defects inside the repair artefacts (new items v2.c-v2.f) ----
+    audit_utc = rep_j.get("audit_utc", "")
+    head_utc = git(wt, "log", "-1", "--format=%cI", hca)[1].decode().strip() if hca else ""
+    rep_utc = git(wt, "log", "-1", "--format=%cI", head)[1].decode().strip()
+    cited = re.findall(r"audit utc `([^`]+)`", appx)
+    forward = bool(audit_utc and rep_utc and audit_utc.replace("Z", "+00:00") > rep_utc)
+    rep.add("18", "item v2.c — the report's own `audit_utc` must not post-date its commit, and every doc citing it "
+                  "must cite the SAME value", "one exact stamp from `date -u` at run time, cited identically",
+            f"report {audit_utc}; the head it audited was committed {head_utc}; the report itself {rep_utc}; the "
+            f"appendix cites {cited}", FAIL if forward or (cited and cited[0] != audit_utc) else PASS, n=1,
+            note="FORWARD-STAMPED by ~13 min against its own committing head, and the appendix cites a different day "
+                 "and time (2026-09-25T21:44:00Z) for the same artefact; both are :00-rounded, so neither orders "
+                 "anything to the second. This is ORCH-2's own self-item O-4 class, in a worker artefact")
+    rep.add("18", "item v2.d — the report names a `tool_commit` that contains its generating tool (item 8a's class)",
+            "tool_commit present, and the tool blob at that commit == the tool at head",
+            f"keys present: {sorted(k for k in rep_j if 'tool' in k)}", FAIL if "tool_commit" not in rep_j else PASS,
+            n=1, note="the containing commit is derivable (b991f29 added tools/m4_seal_audit.py and is an ancestor of "
+                      "the audited head) but derivable is not stated: criterion 20.10 and TASK-021's 21.6 both "
+                      "require the field, which is why item 8a is still open on the q2/q3/q4 supplements")
+    pairs, mentions = [], []
+    fxj = json.loads(fx_head)
+
+    def _walk(node, path=""):
+        if isinstance(node, dict):
+            if isinstance(node.get("artifact"), str) and isinstance(node.get("artifact_sha256"), str):
+                pairs.append(path)
+            for k, v in node.items():
+                _walk(v, f"{path}/{k}")
+        elif isinstance(node, list):
+            for i, v in enumerate(node):
+                _walk(v, f"{path}[{i}]")
+        elif isinstance(node, str) and "fixtures-adjudication.json" in node:
+            mentions.append(path)
+    _walk(fxj)
+    ca_rows = rep_j.get("confirmation_artifacts", [])
+    distinct = len({json.dumps(x, sort_keys=True) for x in ca_rows})
+    rep.add("18", "item v2.e — the report's citation census must NAME ITS KEY and cover every citation (item 0e's "
+                  "lesson)", f"one row per citation of the confirmation artefact, attributable by path",
+            f"the fixture file mentions it at {len(mentions)} paths, of which {len(pairs)} are artifact+sha pairs "
+            f"(the tool's unstated key); the report carries {len(ca_rows)} rows, {distinct} distinct",
+            FAIL if distinct < len(ca_rows) or len(pairs) != len(mentions) else PASS, n=len(mentions),
+            note="the appendix's sentence 'All five citations in the fixture file' does not reproduce: 10 mentions, "
+                 "5 pairs. The load-bearing half is that the 5 UNPAIRED mentions — including "
+                 "/adjudication_summary_2026_09_25/artifact — sit OUTSIDE the tool's post-seal void check, so a "
+                 "post-seal confirmation cited without a paired sha would not fire it. ORCH-2 closed the gap by hand: "
+                 "all 10 mentions name the same artefact, whose whole history is pre-seal")
+    prep = os.path.join(wt, "fleet/branches/WORKER-2-TASK-019b-PREP.md")
+    prep_t = open(prep, encoding="utf-8").read() if os.path.exists(prep) else ""
+    fuzzy = re.findall(r"20\d\d-\d\d-\d\dT\d\d:\dxZ|\d\d:\dxZ", prep_t)
+    rep.add("18", "item v2.f — the prep record's header stamp (item 12's class: the census rose 26 → 27 at this head)",
+            "exact UTC to the second, with its source", f"{fuzzy[:3]} in a record committed 2026-09-26T00:31:39Z",
+            FAIL if fuzzy else PASS, n=len(fuzzy),
+            note="'2026-09-25T21:5xZ' is both fuzzy and ~2.6 h before its own commit — the same defect class item 12 "
+                 "was extended for, in the newest artefact in the lane")
+    b1, b2 = _blob(wt, "293b29c", SEAL_REL), _blob(wt, SEAL_COMMIT, SEAL_REL)
+    if b1 and b2:
+        j1, j2 = json.loads(b1), json.loads(b2)
+        kd = sorted(k for k in set(j1) & set(j2) if j1[k] != j2[k])
+        same = (j1.get("holdout") == j2.get("holdout") and j1.get("tuning") == j2.get("tuning")
+                and j1.get("salt") == j2.get("salt"))
+        gap = git(wt, "log", "-1", "--format=%cI", "293b29c")[1].decode().strip()
+        rep.add("18", "item v2.a clause (iii), second half — the SUBSTANCE ('one draw, not two'), re-derived by ORCH-2 "
+                      "from the two seal blobs",
+                "293b29c → 79eb401 differs in the `manifest` key ONLY; holdout / tuning / salt identical",
+                f"keys differing: {kd}; holdout+tuning+salt identical: {same}; 293b29c @ {gap}",
+                PASS if kd == ["manifest"] and same else FAIL, n=len(kd),
+                note="so the claim is TRUE and the owed repair is documentation-only: the sentence, plus why it matters "
+                     "— 79eb401's own commit subject says 're-seal', 68 s after the draw, which reads as a second draw "
+                     "to anyone who has not compared the blobs")
+    one_draw = [f for f in (appx, json.dumps(rep_j)) if "293b29c" in f or "one draw" in f.lower()]
+    rep.add("18", "item v2.a clause (iii), second half — the STATEMENT that 293b29c/79eb401 are one draw, not two",
+            "stated in the note", f"present in {len(one_draw)} of the two artefacts",
+            FAIL if len(one_draw) < 2 else PASS, n=len(one_draw),
+            note="without it a reader cannot tell whether the split was re-drawn (a new salt would be owed) or only "
+                 "re-manifested; ORCH-2 has verified the substance in the row above, so this item is documentation-only")
+
+    # ---- O-5: ANNEX A1 as written collides with the seal's immutability ----
+    freeze_src = open(os.path.join(wt, "tools/m4_one_shot_v2.py"), encoding="utf-8").read()
+    binds_appendix = bool(re.search(r"SEAL-APPENDIX|SEAL-AUDIT|appendix_sha|companion", freeze_src))
+    rep.add("18", "O-5 amended A1 — the seal stays byte-identical, a dated companion note names both digests, and the "
+                  "quantum-b FREEZE binds the companion's digest alongside the seal's",
+            "all three", f"seal untouched: True; appendix names both digests: "
+            f"{'c8e963199a1e' in appx and 'c40d272f30d0' in appx}; freeze binds the companion: {binds_appendix}",
+            PASS if binds_appendix else FAIL, n=3,
+            note="A1 as originally written ('HELD-OUT-SPLIT-V2.json's own header binds c40d272f…, append-only') is "
+                 "unsatisfiable without moving 73d86f0d…, which the appendix and criterion v2.10 both bind — a "
+                 "collision in ORCH-2's own criterion, disclosed as self-correction O-5. The amended requirement puts "
+                 "the disclosure where the run reads it: the freeze record")
+
+
+    taint = ["Radical_Subjectivity", "D-092", "D-093", "D-094", "D-095", "D-107", "D-108", "D-122", "taint"]
+    hits = {t: sum(t in x for x in (appx, json.dumps(rep_j), prep_t)) for t in taint}
+    rep.add("18", "item v2.b — the v2-holdout taint disclosure, looked for in ALL THREE new artefacts",
+            "the four holdout transcripts, the seven signal ids and their verdicts, the deferred-filter endorsement, "
+            "and quantum b's denominator choice",
+            f"{sum(hits.values())} mentions across appendix/report/prep: {hits}",
+            FAIL if sum(hits.values()) == 0 else PASS, n=sum(hits.values()),
+            note="item v2.b is therefore UNCHANGED and remains, with A2, one of the two blockers on quantum b")
+
+    # ---- the harness: §15's pre-registered criteria get code-level precedent ----
+    refused = re.findall(r'"REFUSED: ([^"]{0,60})', freeze_src)
+    rep.add("18", "v2.12/v2.13 precedent — the one-shot refusals are IN CODE, not in prose",
+            "a refusal for: no freeze, existing receipt, detector/param change after freeze, split-digest mismatch, "
+            "evaluated set ≠ frozen holdout",
+            f"{len(refused)} distinct REFUSED messages: {refused[:6]}", PASS if len(refused) >= 5 else FAIL,
+            n=len(refused),
+            note="HELD for the run itself: §15's v2.12/v2.13 rows still need the actual receipt with holdout_reads "
+                 "equal to the pre-registered 33 (or the §F2 sensitivity 29) and an eval dir whose commit history is "
+                 "pure. What is proven today is that the discipline cannot be forgotten at run time")
+    rep.add("18", "v2.15 precedent — `score` separates seeded from independent and refuses an unreasoned label",
+            "both in code", f"seeded refs {freeze_src.count('seeded')}, 'REFUSED: label %r carries no reason' "
+            f"present: {'carries no reason' in freeze_src}, candidate_unlabelled kept apart: "
+            f"{'candidate_unlabelled' in freeze_src}",
+            PASS if freeze_src.count("seeded") and "carries no reason" in freeze_src else FAIL, n=1)
+    tuning_side = [ln for ln in freeze_src.split("\n")
+                   if re.search(r'which\s*=\s*"tuning"|--tuning\b', ln)]
+    rep.add("18", "v2.16 precedent — the quantum-b tool and its registry carry no tuning-side evaluation path",
+            "0 references", f"{len(tuning_side)} in m4_one_shot_v2.py; the registry enters the detectors through "
+            f"run_tuning(..., which=\"holdout\") only", PASS if not tuning_side else FAIL, n=len(tuning_side))
+    c2p = os.path.join(wt, "tools/c2_detectors.py")
+    c2 = open(c2p, encoding="utf-8").read() if os.path.exists(c2p) else ""
+    reads_modules = all(k in c2 for k in ("m.WINDOW", "m.MIN_FLANK", "m.MIN_RATIO", "m.MIN_MATCHED"))
+    dd = open(os.path.join(wt, "tools/det_dropword.py"), encoding="utf-8").read()
+    shipped_now = dict(re.findall(r"^(MIN_SCORE|TOP_K|MAX_DROP|MIN_FLANK)\s*=\s*([0-9.]+)", dd, re.M))
+    ws = re.search(r"^WINDOW,\s*STRIDE\s*=\s*([0-9]+),\s*([0-9]+)", dd, re.M)
+    if ws:
+        shipped_now["WINDOW"], shipped_now["STRIDE"] = ws.groups()
+    mm = dict(re.findall(r"^MIN_MATCHED,\s*MIN_RATIO\s*=\s*([0-9]+),\s*([0-9.]+)", dd, re.M))
+    rep.add("18", "§17 cross-check — the freeze cannot drift from the shipped operating point, because the registry "
+                  "reads the detector's own constants", "params taken from the module, no literals",
+            f"registry reads module constants: {reads_modules}; the constants it will bind are the same 8 §17 pinned "
+            f"({shipped_now}, min_matched/min_ratio {mm})", PASS if reads_modules and len(shipped_now) == 6 else FAIL,
+            n=len(shipped_now) + 2)
+    rep.add("18", "the harness's label keys are detector-qualified (the prep record's claim, verified as a mechanism)",
+            'a key of the form "<detector>/<transcript>#<n>"',
+            f"line: {[l.strip() for l in freeze_src.split(chr(10)) if '%s/%s#%d' in l][:1]}",
+            PASS if "%s/%s#%d" in freeze_src else FAIL, n=1,
+            note="the literal 'C1-drop/' never appears because the detector name is a variable — a grep for the "
+                 "example string would have reported this claim ABSENT and been wrong")
+    rep.add("18", "first-attempt enforcement (the prep record's 'first attempt' claim)",
+            "the receipt records attempt 1 / max 1 and verify refuses otherwise",
+            f"attempt fields: {freeze_src.count(chr(34) + 'attempt' + chr(34))}, verify check present: "
+            f"{'is not a first attempt' in freeze_src}",
+            PASS if "is not a first attempt" in freeze_src else FAIL, n=1)
+    # --- how much of the harness's safety is TESTED, and is the partial-read refusal non-spurious? ---
+    # Hand-verified mapping (auditable: each fragment must appear in the harness's message AND in an assertIn in the
+    # test file). "changed after the freeze" is ambiguous between the file-digest and the parameters branch, so the
+    # parameters branch is only credited if a test asserts something containing "parameters" - none does.
+    COVERED = (("freeze overwrite", "refusing to overwrite"),
+               ("no freeze before run", "thresholds must be recorded before the run"),
+               ("receipt already exists (holdout spent)", "already holds a consumption receipt"),
+               ("detector FILE changed after freeze", "changed after the freeze"),
+               ("split digest no longer matches the freeze", "does not match the frozen record"),
+               ("score: verdict outside confirmed/discarded", "allowed:"),
+               ("score: label without a reason", "carries no reason"))
+    UNTESTED = (("detector PARAMETERS changed after freeze", "parameters changed"),
+                ("evaluated set != frozen holdout (PARTIAL READ)", "not the frozen holdout"))
+    t1 = os.path.join(wt, "tests/test_m4_one_shot_v2.py")
+    tt = open(t1, encoding="utf-8").read() if os.path.exists(t1) else ""
+    asserts = re.findall(r"assertIn\(\s*[\"\']([^\"\']+)[\"\']", tt) + \
+        re.findall(r"assertIn\([\"\']([^\"\']+)[\"\']", tt)
+    ok = [(nm, f) for nm, f in COVERED if f in freeze_src and any(f in a for a in asserts)]
+    still = [(nm, f) for nm, f in UNTESTED if f in freeze_src and not any(f in a for a in asserts)]
+    rep.add("18", "item v2.g — how many of the harness's refusal paths are ASSERTED by a test (capability evidence is "
+                  "only as good as its tests)", f"all {len(COVERED) + len(UNTESTED)}",
+            f"{len(ok)}/{len(COVERED) + len(UNTESTED)} asserted; UNTESTED: {[u[0] for u in still]}",
+            PASS if not still else FAIL, n=len(ok),
+            note="the two untested paths are the PARAMETERS-changed branch and the evaluated-set refusal — and the "
+                 "latter is the one that protects quantum b's DENOMINATOR: a partial holdout read must be refused, not "
+                 "scored, because the figure is one-shot and cannot be re-run. Code-present is not code-proven; one toy "
+                 "test each closes it (a frozen holdout of 2 with a detector that reads 1, and a freeze whose params "
+                 "are edited without touching the module file)")
+    det_ok = {}
+    for mod in ("det_dropword", "det_format"):
+        mp = os.path.join(wt, f"tools/{mod}.py")
+        msrc = open(mp, encoding="utf-8").read() if os.path.exists(mp) else ""
+        det_ok[mod] = bool(re.search(r"for n in [^\n]+:\n\s+sigs = [^\n]+\n\s+per_file\[n\] = sigs", msrc))
+    rep.add("18", "the partial-read refusal is NON-SPURIOUS: both detectors emit an entry for every transcript they read, "
+                  "so a zero-signal transcript cannot look like a partial read",
+            "per_file[n] assigned unconditionally inside the read loop, in both detectors",
+            f"{det_ok}", PASS if all(det_ok.values()) else FAIL, n=len(det_ok),
+            note="this is what makes refusal (g) usable at all: C1-drop may legitimately find nothing in some of the 33 "
+                 "holdout transcripts, and the run must still see 33 reads")
+    hr = [mod for mod in ("det_dropword", "det_format")
+          if re.search(r"\"holdout_reads\":", open(os.path.join(wt, f"tools/{mod}.py"), encoding="utf-8").read())]
+    rep.add("18", "v2.12 precedent — the detectors record `holdout_reads` and `holdout_consumed` themselves in holdout "
+                  "mode, so the receipt's read list is not reconstructed after the fact",
+            "both detectors", f"{hr}", PASS if len(hr) == 2 else INFO, n=len(hr),
+            note="HELD for the run: §15's v2.12 row still needs the actual receipt whose holdout_reads is SET-EQUAL to "
+                 "the pre-registered 33 (or the §F2 sensitivity 29)")
+    rep.add("18", "criterion 21.8 / A5 — the suite floor, measured at both heads",
+            "green with the corpus present, count never drops, skips reported",
+            "4fc40c8: Ran 227 tests, OK (skipped=1) · 72104a5: Ran 244 tests in 205.5s, OK (skipped=1) = 227 + 10 "
+            "harness + 7 audit", PASS, n=244,
+            note="TASK-021's criterion 21.8 publishes 217, which was already stale at 4fc40c8; the binding floor is "
+                 "the newest measured count, 244, and the skip count travels with it")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("worktree", nargs="?")
@@ -1999,6 +2508,8 @@ def main() -> int:
     section_derivations(wt, rep)
     section_quantum_b_criteria(wt, rep)
     section_coverage(rep)
+    section_t21(wt, rep)
+    section_seal_audit(wt, rep, a.head)
     tally = collections.Counter(r["verdict"] for r in rep.rows)
     print(f"\n== summary: {len(rep.rows)} rows · " +
           " · ".join(f"{k} {v}" for k, v in sorted(tally.items())))
@@ -2075,6 +2586,29 @@ def main() -> int:
                 note="standing rule adopted: write the CONTROL.log line FIRST (it calls `date -u`) and copy that "
                      "stamp into every header of the cycle; a timestamp with no source is the defect criterion "
                      "20.14 names, and ORCH-2 is not exempt from its own criterion")
+        # SELF-ITEM O-6: ERRATA-25f makes liveness a SIGNAL — heartbeat AND CONTROL.log at cadence. A lane whose
+        # CONTROL.log is current but whose heartbeat file is stale is publishing half a signal, and the boss reads
+        # the heartbeat. Class-2 fires at >20 min, so that is the threshold this row uses against itself.
+        hb = os.path.join(a.self_audit, "fleet/heartbeats/ORCHESTRATOR.log")
+        hb_max = ""
+        if os.path.exists(hb):
+            ht = [m.group(0) for m in TS_EXACT.finditer(open(hb, encoding="utf-8").read())]
+            hb_max = max(ht) if ht else ""
+        lag_txt = "unknown"
+        lag_bad = False
+        if hb_max and ctl_max:
+            import datetime as _dt
+            fmt = "%Y-%m-%dT%H:%M:%SZ"
+            lag = (_dt.datetime.strptime(ctl_max, fmt) - _dt.datetime.strptime(hb_max, fmt)).total_seconds()
+            lag_txt = f"heartbeat {hb_max} lags CONTROL {ctl_max} by {lag / 60:.1f} min"
+            lag_bad = lag > 20 * 60
+        rep.add("9", "self-item O-6 — the heartbeat signal is not stale against this lane's own CONTROL.log "
+                     "(ERRATA-25f: liveness = SIGNALS, Class-2 fires >20 min)",
+                "lag ≤ 20 min, or the lapse disclosed in an append-only self-correction",
+                lag_txt, PASS if not lag_bad else FAIL, n=1,
+                note="found because the boss reads heartbeats and ORCH-2's had not been appended since 23:39:33Z "
+                     "while CONTROL.log ran to seq 41 — half a signal is not a signal; the fix is to write the "
+                     "heartbeat line in the SAME act as the CONTROL line, never afterwards")
         if set(fwd):
             print(f"  forward-stamped headers: {sorted(set(fwd))[:8]}")
     if a.json:

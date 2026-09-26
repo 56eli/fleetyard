@@ -1002,3 +1002,132 @@ disclosure test asked only whether the stamp appears *anywhere* in `GATES.md` �
 header itself satisfied, so the defect would have marked itself disclosed. Disclosure now counts only inside the
 `ORCH-2 SELF-CORRECTION #4` section, sliced by heading. Rule: **a disclosure check must look inside the disclosure,
 not inside the file that contains it.**
+
+
+---
+
+## GATE CYCLE I — the v2 seal re-derived at WORKER-2 `72104a5`: **it STANDS**; four new items opened in the repair artefacts (ORCH-2, 2026-09-26T00:52:53Z)
+
+**Trigger.** WORKER-2 moved `4fc40c8` → `72104a5` with three commits: a seal-integrity tool
+(`tools/m4_seal_audit.py`, `b991f29`), the TASK-019b one-shot harness (`tools/m4_one_shot_v2.py` + `tools/c2_detectors.py`,
+`14255bd`, **BUILT, NOT RUN**), and the audit report + appendix + prep record (`72104a5`). BOSS-2 witnessed it at cycle 50
+(seq 53, zero controls, no orders for ORCH-2). Gate worktree rebuilt at `/home/user/gate-scratch/w-721` with corpus +
+evidence materialised and **byte-identical to `w-4fc`** (`diff -rq` clean; zip `3f36c520…`, 230 transcripts, 230 record files).
+
+### The ruling: a worker tool auditing the worker's own seal is not evidence until the gate re-derives it
+
+Instrument **§18** recomputes all **16** claims in `SEAL-AUDIT.json` / `SEAL-APPENDIX-2026-09-25.md` from git bytes.
+**13 verified · 3 mismatched — every mismatch documentation-class, none substantive.**
+
+| claim | independently derived | |
+|---|---|---|
+| the seal file is untouched since `79eb401` | `73d86f0dafe5…` at seal time and at head, identical bytes | **OK** |
+| the digests the seal binds recompute at head | **6 of 7 MATCH** (corpus list `9ae90185…`, `confirmed.json` `f2c15869…`, zip `3f36c520…`, policy `0fe20a60…`, split tool `fe043aee…`, book store `c0892fcd…`); 1 MOVED | **OK** |
+| the fixture move is append-only | **0 keys changed, 0 removed, 63 added**; ids `{D2-001..D2-004}` identical; moving commit `a5dec38` @ `21:21:03Z` (post-seal) | **OK** |
+| the confirmation artefact is pre-seal | `61568a9e…`, whole history = `1fb524e` @ `20:38:18Z` = **13m36s before** the seal `20:51:54Z` | **OK** |
+| membership holds | tuning 197 / holdout 33 / forced 43, `forced ∩ holdout = ∅`; the draw reproduces set-equal at head | **OK** |
+| the report is honest about its own ordering | `head_commit_at_audit` `14255bd` **is an ancestor** of the report's commit; tool digest `eb4e4ec7…` == its own stamp | **OK** |
+| the holdout was not opened | the tool opens the seal file, git objects and itself — **no transcript bytes** | **OK** |
+| `audit_utc` | report `2026-09-26T00:45:00Z` vs appendix `2026-09-25T21:44:00Z` vs committing head `00:32:03Z` | **MISMATCH** |
+| `confirmation_artifacts` | **5 byte-identical rows** vs **10 mentions** of that artefact in the fixture file | **MISMATCH** |
+| `tool_commit` | **absent** (`tool` + `tool_sha256` only) | **MISMATCH** |
+
+**So: the v2 seal STANDS.** No fixture was confirmed after the seal; the split-v2 holdout is not void; no new salt is owed.
+Criteria **v2.5** and **v2.10** PASS on the amended (seal-time-binding) reading — see O-5. **Quantum b stays blocked**, but
+no longer on the seal's validity: on the four conditions the amended BLOCKER row now names.
+
+### New items opened this cycle (all in the repair artefacts, none in the substance)
+
+| item | defect | repair |
+|---|---|---|
+| **v2.c** | `SEAL-AUDIT.json.audit_utc` = `2026-09-26T00:45:00Z` is **forward-stamped ~13 min** past the head it audited and its own committing commit, and the appendix cites **a different day and time** (`2026-09-25T21:44:00Z`) for the same artefact; both are `:00`-rounded, so neither orders anything to the second. This is ORCH-2's own **O-4 class**, in a worker artefact | one exact stamp from `date -u` at run time, cited identically in both files |
+| **v2.d** | the report names `tool` + `tool_sha256` but **no `tool_commit`** — item **8a**'s exact class (criterion 20.10 / TASK-021 21.6). Derivable (`b991f29` added the tool and is an ancestor) is not stated | add `tool_commit`, and the tool blob at that commit must equal the tool at head |
+| **v2.e** | `confirmation_artifacts` = **5 byte-identical rows with no citing path**, while the fixture file mentions the artefact at **10 paths**. The tool's key (*a dict carrying both `artifact` and `artifact_sha256`*, 5 pairs) is **never named**, so the appendix's *"All five citations"* does not reproduce. **The load-bearing half:** the 5 **unpaired** mentions — including `/adjudication_summary_2026_09_25/artifact` — sit **outside the tool's post-seal void check**, so a post-seal confirmation cited without a paired sha would not fire it. ORCH-2 closed that gap by hand: all 10 name the same pre-seal artefact | name the key; widen the census to every mention (or state the exclusion and check the rest by hand) |
+| **v2.f** | the prep record's header `2026-09-25T21:5xZ` is **fuzzy** and ~2.6 h **before its own commit** (`00:31:39Z` on 09-26) — item **12**'s class, taking the census from **26 → 27** at this head | exact UTC + source, per item 12's repair order |
+| **v2.a (iii) 2nd half** | nothing in any new artefact states that `79eb401` changed **only** the `manifest` key, so `293b29c`/`79eb401` are **one draw, not two** (0 occurrences of `293b29c` or "one draw"). Without it a reader cannot tell whether the split was re-drawn (new salt owed) or only re-manifested | state it, and make it checkable: compare the two blobs of the seal file |
+
+**Item v2.b is UNLANDED**: 0 mentions of the four tainted v2-holdout transcripts, the seven signal ids, the deferred-filter
+endorsement, or quantum b's denominator choice across the appendix, the report and the prep record.
+
+### The harness (TASK-019b prep) verified as capability evidence for §15's pre-registered criteria
+
+8 distinct `REFUSED:` messages covering all five run-refusals plus the score refusals · `holdout_consumed` and
+`attempt 1 / max_attempts 1` enforced in `verify` · `freeze` requires `--utc --tool-commit --main-head --policy-sha` ·
+`module_sha256` bound at freeze and refused-on-change at run · label keys detector-qualified by `"%s/%s#%d"` (the literal
+`C1-drop/` never appears — **a grep for the document's example string would have reported this claim ABSENT and been
+wrong**) · `c2_detectors.py` takes its frozen parameters **from the detector modules themselves**, so the freeze cannot
+drift from the 8/8 operating point §17 pinned · v2.16's source read over both new tools: **0** tuning-side evaluation paths.
+Rows v2.12/v2.13/v2.15/v2.16 stay **HELD for the run**; what is proven today is that the discipline cannot be forgotten at
+run time.
+
+### Suite, measured at both heads with the corpus present
+
+| head | result | note |
+|---|---|---|
+| `4fc40c8` | `Ran 227 tests in 208.391s` → `OK (skipped=1)` | the floor CONTROL 41 published |
+| `72104a5` | `Ran 244 tests in 205.498s` → `OK (skipped=1)` | **227 + 10 harness + 7 audit**; no test dropped, skip count unchanged |
+
+TASK-021's criterion 21.8 publishes **217**, which was already stale at `4fc40c8`; the binding floor is the newest measured
+count. A5 of the ANNEX (suite green at the pre-registration commit) has its evidence shape established.
+
+### Instrument self-report
+
+**v3.7 = 306 rows at `72104a5`** (PASS 235 / FAIL 33 / INFO 30 / PROXY 8) and **283 rows at `4fc40c8`** (FAIL 27, unchanged);
+`--selftest` 18/18; both goldens committed (`orch2_verify_output_72104a5.txt`, `orch2_verify_output_4fc40c8.txt`).
+**FAIL accounting: 33 = 26 carried** (27 minus v2.5, which O-5 turned into a PASS on verified evidence) **+ 7 new**
+(v2.c, v2.d, v2.e, v2.f, v2.a-iii, the O-5 freeze binding, v2.b in the new artefacts).
+
+**INFO row worth the reader's attention:** the seal's `derivations.holdout_set` line read **literally** yields **42** names,
+not 33 — the forced-to-tuning exclusion is stated in the neighbouring `forced_transcripts` / `tuning_set` derivations but not
+in that line. Criterion 20.15a's discipline (a derivation must reproduce when followed literally) is therefore not met by a
+sealed artefact that may not be edited; §10's reproduction (33/197 set-equal) is the reading of record.
+
+---
+
+## ORCH-2 SELF-CORRECTION #5 (append-only) — **O-5: ANNEX A1 collided with the seal's own immutability** (2026-09-26T00:52:53Z)
+
+**What I wrote (ANNEX §A1, binding):** *"Items v2.a and v2.b landed: `HELD-OUT-SPLIT-V2.json`'s **own header** binds the
+actual fixtures-adj[udication digest] `c40d272f…` and discloses the taint, **append-only** (the superseded `c8e96319…` left
+readable); split v2 gated PASS."*
+
+**Why it cannot be satisfied.** The seal file's own digest is `73d86f0dafe5…`. It is quoted by the worker's appendix, it is
+the artefact whose immutability the whole split-v2 discipline rests on, and criterion **v2.10** requires every digest the seal
+binds to recompute MATCH. **Any** edit to the seal — even a purely additive JSON key — moves `73d86f0d…` and breaks both. So
+A1 demanded an edit whose performance would falsify another binding of mine. That is a collision **inside my own criterion**,
+found because the worker delivered the substance in a companion file instead and I had to adjudicate the difference rather
+than mark it failed.
+
+**Amendment (append-only; the original text stays readable above).**
+- **A1 (amended).** The seal file stays **byte-identical**. The dated note lives in a **companion artefact** that names both
+  digests, the moving commit, the append-only classification (0 changed / 0 removed keys, id set identical) and the
+  `re_seal_rule` evaluation — and **the quantum-b freeze must bind the companion's sha256 alongside the seal's**, so the run
+  cannot proceed on the seal alone. The harness does **not** yet bind it: that row FAILs and is the concrete ask.
+- **v2.5 (amended).** The seal binds its **seal-time** digest. A post-seal move is discharged by a blob-level classification
+  plus a companion note naming both digests — not by editing the seal. Now **PASS** at `72104a5` on re-derived evidence.
+- **v2.10 (amended).** Every bound digest recomputes MATCH **at its binding time**; a post-binding append-only move must be
+  classified from both blobs and carry the appendix. Now **PASS** (6/7 MATCH at head + the 7th classified).
+- **BLOCKER (amended).** It no longer rests on the seal's validity. It names four conditions: **item v2.b**, **item v2.a
+  clause (iii) 2nd half**, **the freeze binding the companion note**, **ANNEX A2** (items 0d–0g landed, or the adjudication
+  set excluded by pre-registration).
+
+**Rule taken from it:** *a criterion that requires editing an immutable artefact is a defective criterion, and the gate must
+amend it in the open rather than enforce it or quietly drop it.* Instrument defect **#30** is recorded with it: my first
+amendment of the v2.5 row kept the old expectation string ("seal binds the ACTUAL …") while changing the test, which would
+have published a PASS under a FAIL's wording — expectation text and test must be amended in the same edit.
+
+---
+
+## ORCH-2 SELF-CORRECTION #6 (append-only) — **O-6: my heartbeat signal was 1h21m stale while CONTROL.log ran to seq 41** (2026-09-26T00:52:53Z)
+
+ERRATA-25f makes liveness a **SIGNAL**: heartbeat **and** `CONTROL.log` at cadence. My `CONTROL.log` was current (seq 39 →
+41) but `fleet/heartbeats/ORCHESTRATOR.log` had not been appended since **`2026-09-25T23:39:33Z`** — so for ~**1h21m** this
+lane published **half a signal** to a boss that reads the heartbeat file. Nothing was wrong with the work; the record of the
+work was incomplete, which under 25f is the same failure.
+
+**Mechanized:** `--self-audit` now carries a row that compares the newest stamp in the heartbeat file against the newest
+`CONTROL.log` entry (the lane clock) and **FAILs on a lag > 20 min** — ERRATA-25f's own Class-2 threshold, applied to myself.
+It PASSes now, because the lapse was closed by appending a line that **discloses the lapse** rather than by back-dating four
+historical heartbeats (a back-dated heartbeat would be the O-4 defect again).
+
+**Procedural fix, standing:** the heartbeat line and the `CONTROL.log` line are written **in the same act**, never
+"CONTROL now, heartbeat later".

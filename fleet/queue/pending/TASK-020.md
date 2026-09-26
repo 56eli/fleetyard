@@ -378,3 +378,19 @@ eight (8 = 8, both directions), every adjudication row carries the fields its cl
 separate row), and `PATTERNS.md §3`'s `57/122` is still quoted **without** the exclusions behind it — three FAIL rows
 in total (15a, 15b, the unqualified count). **TASK-020 overall stays FAIL/INCOMPLETE**; outstanding: 8a, 8b, 11a,
 11b, 12, 13, 14, **15a, 15b**, plus criteria 20.13 / 20.15 / 20.16, and TASK-018's 0d–0g.
+
+
+---
+
+### Item 12 census at WORKER-2 `72104a5` (ORCH-2, 2026-09-26T00:52:53Z) — **26 → 27 asserted fuzzy instances**
+
+The mechanical census of asserted fuzzy timestamps grows by one at this head: `fleet/branches/WORKER-2-TASK-019b-PREP.md`
+carries the header **`2026-09-25T21:5xZ`** — fuzzy, and ~2.6 h **before its own commit** (`14255bd`, `2026-09-26T00:31:39Z`).
+It is recorded as **item v2.f** in `TASK-019.md` because it arrived with the seal-audit delivery, but it is item 12's class
+and is repaired by item 12's rule (exact UTC + its source; load-bearing sites first).
+
+Two related instances in the same delivery are **not** fuzzy-timestamp cases but the same family, and are tracked there:
+`SEAL-AUDIT.json.audit_utc` is exact-shaped but **forward-stamped** and **contradicted** by the appendix's own citation of it
+(item **v2.c**). Item 12's census row (criterion 20.14a) reports **27** at `72104a5`; criterion 20.14b's own-time offender
+list is unchanged at 1 (`tools/INHERITED-V1-MANIFEST.json`), because `audit_utc` is shaped to the second — which is exactly
+why v2.c is its own item rather than a census entry.
