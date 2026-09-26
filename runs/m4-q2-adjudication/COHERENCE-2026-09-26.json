@@ -1,0 +1,47 @@
+{
+ "by": "WORKER-2, lane arena/01a0d9ce-fleetyard",
+ "count_problems": [],
+ "counts": {
+  "counted_by_both": 106,
+  "disposition_lines": 15,
+  "filter_deferred": 7,
+  "filter_source_inherited": 1,
+  "final_candidate": 73,
+  "final_certain": 49,
+  "raw": 122,
+  "rows_with_a_ruling": 14,
+  "rulings": {
+   "demoted": 2,
+   "holdout-member-note": 7,
+   "refused-notation": 6
+  },
+  "seeded": 0,
+  "shape_consistent": 113,
+  "shape_dropped_token_not_missing": 3,
+  "shape_gate_boundary": 1,
+  "shape_partial_overlap": 5
+ },
+ "criterion": "for every signal the shape class, filter status and adjudication verdict agree, or the disagreement is written down with a ruling; any count quoted in PATTERNS.md equals what the cited artefact supports after its own exclusions",
+ "patterns_checks": {
+  "band_present": true,
+  "floor5_statement": true,
+  "qualifier_present": true,
+  "row_qualified": true
+ },
+ "problems": [],
+ "recount_counts": {
+  "arithmetic": "57 rows − 6 notation refusals = 51; 51 − 2 contradicted demotions = 49 rows. Sites: 55 − 5 notation sites − 2 = 48.",
+  "rows": 49,
+  "sites": 48
+ },
+ "recount_file": "runs/m4-q2-adjudication/RECOUNT-2026-09-26.json",
+ "report_utc": "2026-09-26T01:55:54Z",
+ "report_utc_source": "--utc argument, passed as the lane clock at write time; the commit carrying this report is the source of record",
+ "rulings": {
+  "demoted": 2,
+  "holdout-member-note": 7,
+  "refused-notation": 6
+ },
+ "task": "criterion 20.13 - shape class / filter status / adjudication verdict coherence",
+ "verdict": "COHERENT"
+}

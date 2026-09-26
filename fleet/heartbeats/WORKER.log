@@ -174,3 +174,8 @@
   2026-09-26T01:51:39Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-26T01:51:39Z TASK-018 adjudication: 120/122 signals (0s)
   2026-09-26T01:54:50Z TASK-020 item 14: q4 format-leg config complete and digest-equal to q3's (8e7e35a2); digest notes on all legs; pin re-attributed (d85038c8); suite 263 OK
+  2026-09-26T01:56:49Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-26T01:56:49Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-26T01:56:49Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-26T01:56:49Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-26T01:59:44Z item 8b + 20.13: coherence computed (0 unexplained disagreements; 49 promoted / 73 CANDIDATE / 106 counted by both; D-092 double-disposition trap recorded); suite 269 OK

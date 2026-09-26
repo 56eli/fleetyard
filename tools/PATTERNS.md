@@ -52,6 +52,16 @@ words, numbers, citations. That gap is the honest headline of this page.
 > travels with every quotation. Strata: 27 interjections/fillers · 0 notation · 11 function
 > words · 11 content. The 122-signal base and the 65 CANDIDATE rows are unchanged. Details and
 > the ruling reasons: `runs/m4-q2-adjudication/RECOUNT-2026-09-26.json` and §5b-ter below.
+>
+> **Coherence check (criterion 20.13, appended 2026-09-26).** The triple — shape class, filter
+> status, adjudication verdict — is now **computed for all 122 signals** rather than asserted:
+> `tools/m4_coherence_check.py` (report `runs/m4-q2-adjudication/COHERENCE-2026-09-26.json`).
+> Result: **49 promoted / 73 CANDIDATE**, **106** signals counted by both instruments (8 excluded by
+> each, sets disjoint), **15 rulings over 14 rows** (`D-092` carries two: a notation refusal *and* a
+> holdout note), **0 unexplained disagreements**, and this row's own quotations (49/48, the band,
+> the floor-5 sentence) check out against the artefacts. Note for readers of the tally: a
+> disposition **adds to** an id's record, it does not replace it — treating `D-092`'s second line as
+> an override silently restored its promotion (49 → 50), which is why the checker accumulates.
 
 Fixtures are **in-sample** by construction (LAW §9: seeded hits are never
 precision/recall evidence). Clean-set figures from v1 (0/59) were tuned on those

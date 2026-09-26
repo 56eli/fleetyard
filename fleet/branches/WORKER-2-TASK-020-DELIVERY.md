@@ -363,3 +363,44 @@ ARTEFACTS now pins the q4 supplement to `d85038c8`; `verify` reports **6/6** pin
 cited commits; `runs/m4-pin-repair-2026-09-26.json` refreshed. 2 new tests (12 in the module);
 suite **263 OK, skipped=1, WITH corpus**. No threshold changed, no detector edited, no rate, the
 spent holdout was not re-run (the tool cannot read the corpus — it reads committed artefacts).
+
+### Item 8b — the two contradicted promotions, and criterion 20.13 computed (2026-09-26)
+
+**Item 8b (20.5, jointly with TASK-018 item 0g) is discharged**, and the reconciliation the gate
+asked for is in all three places it named:
+
+| what the gate asked | where it now is |
+|---|---|
+| disposition `D-002` append-only, with the contradiction named | `adjudication.jsonl` line 123: ruling `demoted`, `new_verdict: CANDIDATE`, reason = *"sibling instrument contradicts the promotion: `EVAL.json` shape_adjudication marks this exact site `dropped-token-not-missing` with `book_side_repeated_tokens ['evidence']` and 'EXCLUDED from any count'"* |
+| disposition `D-039` append-only, with the contradiction named | line 124: ruling `demoted`, reason = *"the source-inheritance filter suppresses exactly that signal as a cross-book self-parallel"* |
+| carried into `runs/m4-q2-adjudication/SUMMARY.md` | the appended corrections block (lines 87–97): both demotions with their instruments' reasons, and the arithmetic `57 − 6 notation = 51; 51 − 2 contradicted demotions = 49` |
+| carried into `tools/PATTERNS.md §3` | the row qualifier beside the drop-word row (lines 47–54): the row's `57/122` is quoted only with `49 promoted rows / 48 distinct sites` behind it and the band 3/5/8/10 → 71/57/**33**/22 beside it |
+
+**Criterion 20.13 (new tool `tools/m4_coherence_check.py`, 6 tests).** For every one of the 122
+signals the checker joins the three instruments — adjudication verdict (with rulings applied), shape
+class, filter status — and computes the counts instead of restating them. At head:
+
+- **0 unexplained disagreements.** A `CERTAIN-leg-d` verdict may not stand where the shape
+  adjudication excludes the site, where the source-inheritance filter suppresses it, or where the
+  filter defers its transcript without a ruling; all three rules pass (the deferrals carry their
+  seven holdout-member rulings).
+- **Counts:** 122 raw · shape 113 consistent + 3 dropped-token-not-missing + 5 partial-overlap + 1
+  gate-boundary · filter 1 source-inherited + 7 deferred · **106 counted by both** · **49 promoted
+  (CERTAIN-leg-d) / 73 CANDIDATE** · seeded **0** · **15 rulings over 14 rows** (2 demoted, 6
+  notation refused, 7 holdout notes; `D-092` carries two rulings).
+- **Cross-checked against the item-15b block:** `two_distinct_114s.intersection` = 106,
+  `differ_each_direction` = 8, `exclusion_sets_disjoint` = 0 — the same numbers the checker derives,
+  and the same ones `runs/m4-q2-dropword/NOTE-2026-09-26.md` publishes with its site lists.
+- **Quotation check:** the PATTERNS row qualifier's four required statements (the 49/48 pair, the
+  band, the floor-5 sentence, the row qualifier itself) must be present — they are; the checker
+  fails if a future edit drops any of them.
+- Report: `runs/m4-q2-adjudication/COHERENCE-2026-09-26.json` (`report_utc 2026-09-26T01:55:54Z`,
+  exact-to-the-second with its source, per item 12). `python3 tools/m4_coherence_check.py` exits 0;
+  a negative test proves it fails when a ruling is deleted.
+
+**One finding worth recording:** `D-092` carries **two** dispositions (a notation refusal that
+demotes it, and a holdout-member note that does not change its verdict). Reading the file as
+"last line wins" silently restored the promotion and produced **50** promoted rows instead of 49 —
+the same class of error as a stale digest, in a tally rather than a hash. The checker now
+**accumulates** dispositions per id, and the reason is written into PATTERNS §3 beside the row, so
+the next reader of the file cannot repeat it.
