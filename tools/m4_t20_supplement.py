@@ -147,11 +147,16 @@ def q2_filter_counts(args, books, guard, split):
             "examples": examples}
 
 
+Q2_GENERATOR_COMMIT = "a5dec38865babe312b38046a4c5500f234ce94bd"
+
+
 def supplement_common(args, split, books):
     return {
         "run_utc": args.utc,
         "tool_commit": args.tool_commit,
-        "generator_pins": m4_pin_repair.generator_pins("tools/m4_t20_supplement.py", "a5dec38865babe312b38046a4c5500f234ce94bd"),
+        "generator_pins": m4_pin_repair.generator_pins(
+            "tools/m4_t20_supplement.py",
+            getattr(args, "q2_generator_commit", None) or Q2_GENERATOR_COMMIT),
         "main_head": args.main_head,
         "policy_sha256": args.policy_sha,
         "corpus_zip_sha256": CORPUS_ZIP_SHA,
@@ -215,6 +220,8 @@ def build(args):
 
     # ---- q3 supplement
     q3 = supplement_common(args, split, books)
+    q3["generator_pins"] = m4_pin_repair.generator_pins(
+        "tools/m4_t20_supplement.py", args.q3_generator_commit)
     q3.update({
         "task": "TASK-020 item 1+5b (q3 part) — LAW §8 supplement for runs/m4-q3-format",
         "detector": df.DETECTOR_ID,
@@ -238,6 +245,13 @@ def build(args):
                    "abbreviations": sorted(df.ABBREV)},
         "config_sha256": digest_config({"rules": Q3_RULES, "excerpt_chars": df.EXCERPT,
                                         "abbreviations": sorted(df.ABBREV)}),
+        "config_digest_note": ("sha256 over json.dumps(config, sort_keys=True, "
+                               "separators=(',',':')) over the complete in-force object as "
+                               "published here: `config.rules` (the seven), "
+                               "`config.excerpt_chars`, `config.abbreviations` (sorted) — the "
+                               "q2 supplement's canonicalization, which is why the q4 holdout "
+                               "supplement's format leg publishes the same number (criterion "
+                               "20.15b: a reader recomputes it from what is written here)"),
         "outputs": {"signals_v1tuning.json": sha(os.path.join(args.q3, "signals.json")),
                     "signals_v2tuning.json": sha(os.path.join(
                         args.q3, "signals-v2tuning.json")),
@@ -329,6 +343,13 @@ def main(argv=None):
         p.add_argument("--q3", default="runs/m4-q3-format")
     b.add_argument("--utc", required=True)
     b.add_argument("--tool-commit", required=True)
+    b.add_argument("--q2-generator-commit", default=Q2_GENERATOR_COMMIT,
+                   help="the commit carrying the generator bytes that produced the q2 "
+                        "supplement (default: the commit its committed pins already name)")
+    b.add_argument("--q3-generator-commit", default=Q2_GENERATOR_COMMIT,
+                   help="the commit carrying the generator bytes that produced the q3 "
+                        "supplement THIS run writes — an attribution, not a copy of the "
+                        "other artefact's pin")
     b.add_argument("--main-head", required=True)
     b.add_argument("--policy-sha", required=True)
     a = ap.parse_args(argv)
