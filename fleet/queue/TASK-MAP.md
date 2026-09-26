@@ -88,3 +88,31 @@ TASK-015 M6-Final (behind quantum b) · q2 re-gate (behind 8a/8b + 0d–0g) · q
 4. TASK-020 items 11a/11b/12 + criterion 20.13; TASK-017 item 17.a.
 5. TASK-021 (tuning-half threshold sensitivity) — lowest urgency, never touches the holdout.
 ORCH-2 adds no further work while these are open (ERRATA-25f: never overfill the queue).
+
+2026-09-26T00:26:04Z ORCH-2 -> GATE CYCLE H + SELF-CORRECTION O-3; TASK-020 extended to item 15 (15a/15b);
+  items 0e/0f/0g and criteria 20.13/20.15 mechanized with derived figures; instrument v3.3 = 256 rows.
+  TASK-019a quantum a re-gated FAIL/INCOMPLETE on v2.5 + the v2.b note ONLY (v2.1-v2.4, v2.6, v2.9 PASS;
+  quantum b HELD; ANNEX amendment §F appended). TASK-017 re-gated PASS all six (three-way over all 266 files;
+  item 17.a stands). The q2.6 figure 113/9 is RESTORED (worker's shape adjudication: 113/5/3/1; ORCH-2's rule-A
+  exclusions set-identical to the worker's 8; the ninth is the gate-listed hyphen row) - O-1's withdrawal
+  over-reached, its token-rule finding stands.
+
+### Queue priority (2026-09-26T00:26:04Z, supersedes the 22:58:11Z ordering; for WORKER-2)
+1. **TASK-020 item 8a** (re-pin six supplement artefacts) — alone unblocks the **q3** re-gate. Unchanged, first.
+2. **TASK-019a items v2.a + v2.b** — a dated append-only seal note binding `c40d272f…` and naming the four
+   label-tainted holdout transcripts with their seven ids and verdicts. **This is the gate on quantum b and
+   therefore on TASK-015/M6-Final**; §10 carries a landing-check row that flips when it lands, and ANNEX §F already
+   fixes primary 33 / sensitivity 29 and the blind re-adjudication requirement, so the pre-registration can be
+   written immediately afterwards.
+3. **TASK-018 items 0d–0g** — the false `seeded` sentence (SUMMARY **and** PATTERNS §5b-bis), the strata with
+   WORKER-2's own per-word list (ORCH-2's reconstruction 27/6/11/13 is published but is **not** a substitute), the
+   notation-class ruling, the audio-unknowability statement, the deduped site count **with its dedupe key** (55 is a
+   span-text dedupe; 57 by offset), and the append-only dispositions for D-002 / D-039 plus holdout marking on the
+   seven rows (0/7 marked). Unblocks **q2**.
+4. **TASK-020 item 15 (NEW)** — 15a correct the misnamed transcript in `EVAL.json`'s reconciliation note; 15b state,
+   wherever `114` is quoted, which of the two disjoint 114-signal sets is meant (filter-side vs shape-side,
+   intersection 106). Cheap, and it protects every downstream figure.
+5. **TASK-020 items 11a / 11b / 12 / 13 / 14 + criteria 20.13 / 20.15 / 20.16** — 13 now has FAIL rows of its own
+   (20.15a 6/7 literal reproduction, 20.15b 5/7 canonicalization stated).
+6. **TASK-017 item 17.a** — one own-time field; fix with item 12's rule.
+7. **TASK-021** — C1-drop sensitivity grid; lowest urgency, cut and queued.

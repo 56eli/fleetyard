@@ -499,3 +499,110 @@ A mutation test that crashes is not a mutation test.
 
 **Standing rule from this cycle:** any change to the instrument must (i) pass `--selftest`, and (ii) be diffed against
 the committed golden output, with any row movement explained in the ledger before the new output is committed.
+
+---
+
+## 14. SELF-CORRECTION O-3 (the q2.6 figure `113/9` restored), item 13 / criterion 20.15 mechanized, and two new coherence defects
+
+Instrument v3.3: **256 rows · PASS 205 · FAIL 27 · INFO 22 · PROXY 2**, `--selftest` 18/18 before and after. Full
+narrative in `fleet/GATES.md` self-correction #3; this section carries the derivation.
+
+### 14.1 O-3 — why O-1's withdrawal was wrong, and what replaces it
+
+O-1 withdrew `113/9` because none of five token-set rules reproduced it. The figure is not a token-set result: it is
+the tally of WORKER-2's published per-signal **shape adjudication** (`runs/m4-q2-dropword/EVAL.json` →
+`shape_adjudication.signals[*].shape`), whose categories include *"RE-LABELLED — excluded from any count until a
+human read"* — a judgement class no token arithmetic can produce. Recomputed from the 122 rows:
+
+```
+kind tally      consistent 113 · partial-overlap 5 · dropped-token-not-missing 3 · gate-boundary-excluded 1   (== published counts)
+reconciliation  raw 122 = countable 113 + excluded_dropped_token_not_missing 3 + re_labelled_needs_human_read 6
+                gate_figure 113 ; 6 = 5 partial-overlap + 1 gate-boundary
+deletion_closes True for ALL 122 — so the note's "114 deletion-closing" is a different test: 122 − 8 = 114, then −1 = 113
+```
+
+The decisive cross-check: **ORCH-2's rule-A failure set and the worker's 8 shape exclusions are SET-IDENTICAL in both
+directions (8 = 8, A−W = ∅, W−A = ∅)**. The ninth row is
+`('Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2', 40831, 40841, ('one-third', 'of'))`, which
+passes rule A under the stated token rule and fails under hyphen-splitting — the exact sensitivity O-1 documented, and
+the reason the worker excludes it pending a human read instead of calling it consistent.
+
+So `113/9` **is reproducible**, its decomposition is **3 + 5 + 1** (= the worker's `excluded 3` + `re_labelled 6`), and
+O-1's claim that the "3 + 6" arithmetic was my own artifact is withdrawn. What O-1 keeps: the token rule is
+load-bearing, and the number must never be quoted without its rule. What O-1 additionally got wrong: the caveat's
+labels — the six rows needing a human read are five of WORKER-2's partial-overlap rows plus one hyphen row of mine,
+not "6 partial overlaps of which 2 are my own hyphen tokenization".
+
+**Method lesson, recorded because it generalizes:** a self-audit must search the *artefact* space, not only the
+*rule* space. I looked for a procedure inside my own five rules and concluded the published figure was
+unreproducible, when the procedure was published beside the data all along — and my own cycle-F gate record already
+quoted it. Corollary now in force: before withdrawing a figure, grep the lane's own prior gate records for it.
+
+### 14.2 Item 13 / criterion 20.15 now has FAIL rows of its own (§14 of the instrument)
+
+Until this cycle item 13 appeared only in the *notes* of two PASS rows in §1, so the standing claim "the FAIL set
+equals the open items" was **incomplete** — corrected here and in `GATES.md`. §14 tests each of the seven
+`derivations` entries in `findings/PROVENANCE.json` (the binding of record) two ways:
+
+- **20.15a — does the stated method reproduce the published value when followed literally? 6/7.** The failure is
+  `fixtures_digest_sha256`: "same construction over the fixtures dir" (relpath keys) gives `ee56250d001f…`, while the
+  published `c5d8f6f3db3b…` reproduces only with **basename** keys over the **2** files in `fixtures/confirmed/`.
+  Reproduced literally: `by_transcript_digest`, `records_digest_sha256`, `overlays_digest`, `corpus_zip_sha256`,
+  `outputs.ledger.jsonl`, `tool_sha256`.
+- **20.15b — does each derivation state its canonicalization (key convention, join, sort)? 5/7.** Unstated:
+  `fixtures_digest_sha256` (no key convention, no input set) and `overlays_digest`'s warned-against variant — the
+  `58274f46…` warning is reproducible exactly as `sha256("\n".join(sorted(lines_without_trailing_newline)))`, but the
+  manifest does not say so, which makes the warning uncheckable as written. Eight other plausible variants give eight
+  other values, so "sorting the lines instead (do not)" is not a specification.
+
+### 14.3 Two new coherence defects — TASK-020 item 15 (criterion 20.13 / L10)
+
+- **15a.** `EVAL.json`'s `count_reconciliation.note` attributes the hyphen-tokenization case to
+  `A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt` @40831. That transcript carries **zero** q2 signals; the
+  row is in `Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2` @40831–40841 (book side
+  `the_evolution_of_consciousness` @307559, `"States. One-third of the"`). A note that misnames the row it explains is
+  the same defect class as a digest that binds the wrong file (item v2.a).
+- **15b.** Two different sets of 114 signals are published under the same number: filter-side `filtered: 114`
+  (122 − 1 source-inherited `quite` @457 − 7 deferred v2-holdout) and shape-side *"114 deletion-closing"*
+  (122 − 3 − 5). **Intersection 106; 8 differ in each direction; the two exclusion sets are disjoint (0 overlap).**
+  No committed document says so. Any future quotation of `114` must name which set it means.
+
+### 14.4 Items 0e / 0f / 0g derived (§13), so the repairs are checkable
+
+- **0e — the dedupe key is the missing datum.** Over the 57 CERTAIN-leg-d rows: distinct `(transcript, char_offset)`
+  = **57**; distinct `(transcript, span text)` = **55**. The published 55 is therefore a **span-text** dedupe, and the
+  two collisions are distinct sites at different offsets: **D-097/D-098** (`percent`,
+  `Radical_Subjectivity…Feb_2002_Part_2` @838 span-end 852 and @1132 span-end 1141) and **D-120/D-121** (`see`,
+  `The_Levels_of_Consciousness…Mar_2002_Part_2` @60506 and @61014). Publishing "55" without its key is a
+  criterion-20.15 defect, not a counting error.
+- **0f — the strata reproduce exactly under an explicit word list.** ORCH-2's reconstruction over the 32 distinct
+  omitted words gives **27 / 6 / 11 / 13 = 57**: interjections/fillers {huh 7, yeah 6, see 6, right 3, really, heh,
+  haha, um, well} = 27; notation {percent 6} = 6; function words {it's 3, that's, there's, he'd, may, since, however,
+  including, already} = 11; content {bonaparte, earphones, evidence, go, high, lincoln, man, osama, otherwise, quite,
+  realms, things, undoubtedly} = 13. This is a **reconstruction, not their classification** — the binding requirement
+  is that WORKER-2 publishes its own per-word list, plus the notation-class ruling (ERRATA-25e §2 treats notation
+  variants as transcriber formatting conventions) and the statement that speaker-side filler presence is unknowable
+  without audio. All three are still ABSENT (three FAIL rows).
+- **0g — verified as still open, and its arithmetic verified as right.** `adjudication.jsonl` has **no** disposition,
+  ruling or note key in its schema (25 keys, none of them append-only), so neither D-002 (CERTAIN-leg-d while
+  `shape_adjudication` excludes that very site as `dropped-token-not-missing`) nor D-039 (CERTAIN-leg-d while the
+  source-inheritance filter suppresses exactly that signal as its own published example — confirmed: the filter's
+  example IS the D-039 site, `quite` @457) carries a written ruling, and the **7** rows on v2-holdout transcripts
+  (D-092, D-093, D-094, D-095, D-107, D-108, D-122) are **0/7** marked as holdout members in the record. If D-002 and
+  D-039 are demoted the count becomes **55 rows / 53 span-text sites** — recomputed and confirmed, so the arithmetic
+  in the item may be published as stated.
+- **20.13 field completeness, adjudicated per row class.** All 122 rows carry verdict, reason, `seeded`, `in_sample`,
+  transcript and char_offset; `clause` appears on 57/57 CERTAIN-leg-d rows and on 0/65 CANDIDATE rows, correctly,
+  because it is the leg-(d) clause; and D-027 and D-117 have no rebuilt `span` because their own reason states the
+  omission is not re-alignable from the frozen bytes, each still carrying `detector_span` + `char_offset` +
+  `span_end`. **Instrument defect #26 (cumulative 26):** my first version of that row demanded `clause` on every row
+  and `span` on every row, producing 67 false "missing" fields — the same class as defect #6/#12 (a field demanded of
+  rows to which it does not apply). Rule: state the row class a field is owed by.
+
+### 14.5 Where this leaves the FAIL set
+
+27 FAIL rows over the open items: item 8a ×4 · 11a · 11b ×2 · item 12/20.14 ×2 · 20.16 config notes ×2 · item 14 ·
+TASK-018 item 0d · item 17.a · v2.a ×2 (criterion row + §12 blocker) · v2.b · item 0f ×3 · item 0g ×2 ·
+criterion 20.13 ×3 (items 15a, 15b, the unqualified `57/122` in PATTERNS §3) · criterion 20.15 ×2 (item 13).
+No verdict moves: q1 PASS · q2 FAIL · q3 FAIL on item 8a alone · q4 PASS · q5 PASS; TASK-017 PASS with 17.a;
+TASK-018 FAIL/INCOMPLETE; TASK-019a FAIL on v2.5 + the v2.b note with quantum b HELD; TASK-020 FAIL/INCOMPLETE.

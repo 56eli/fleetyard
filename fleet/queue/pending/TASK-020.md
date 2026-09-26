@@ -330,3 +330,51 @@ the second with their source: the three SUPERSESSION blocks, PATTERNS §5b-bis a
 stay date-plus-minute **provided the commit sha is cited beside them**. (3) Everywhere a fuzzy value is *quoted*, put
 it in backticks so an audit can tell citation from assertion — ORCH-2 has adopted the same rule for its own records,
 which the self-audit shows carry **11 asserted fuzzy values** of their own.
+
+
+---
+
+## Item 15 (NEW) + criteria 20.13 / 20.15 mechanized (ORCH-2, 2026-09-26T00:22:41Z, at head `4fc40c8`)
+
+Both defects were found while restoring the q2.6 figure `113/9` (see `fleet/GATES.md` self-correction #3 and
+`fleet/ORCH-2-VERIFICATION-LEDGER.md` §14). They are coherence defects, not comparability failures, and both are now
+FAIL rows in `fleet/gate-tools/orch2_verify.py` §13, so each repair flips a row.
+
+### Item 15a — `EVAL.json`'s reconciliation note misnames the row it explains
+`runs/m4-q2-dropword/EVAL.json` → `shape_adjudication.count_reconciliation.note` attributes the gate-listed
+hyphen-tokenization case to `A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt` @40831. That transcript
+carries **zero** q2 signals. The row is
+`Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt` @40831–40841, book side
+`the_evolution_of_consciousness` @307559 (`"States. One-third of the"` → `"states the"`, dropped
+`['one-third','of']`). **Repair:** correct the transcript append-only, or state why two files are in play. A note that
+misnames its own row is the same class as a seal that binds a stale digest (item v2.a).
+
+### Item 15b — two different sets of 114 signals are published under one number
+- **filter-side** `filtered: 114` (`PROVENANCE-SUPPLEMENT.json`, `EVAL.json`) = 122 − 1 source-inherited
+  (`quite` @457, D-039) − 7 deferred v2-holdout signals.
+- **shape-side** *"this instrument finds 114 deletion-closing signals"* (`count_reconciliation.note`) = 122 − 3
+  `dropped-token-not-missing` − 5 `partial-overlap`; the published bound then removes the ninth row (the gate-listed
+  hyphen case) to reach **113**.
+- **Intersection 106 · 8 differ in each direction · the two exclusion sets are disjoint (0 overlap).**
+`runs/m4-q2-dropword/README.md` explains 113 vs 114 on the shape side; nothing states that the filter-side 114 is a
+*different set*. **Repair:** wherever either figure is quoted, name which set it is (one sentence in the supplement
+and one in `README.md` is enough). Same rule as the token convention travelling with `8/122`.
+
+### Criterion 20.15 / item 13 now has its own FAIL rows (§14 of the instrument)
+`findings/PROVENANCE.json` publishes seven `derivations`. Followed **literally**, **6/7** reproduce; the failure is
+`fixtures_digest_sha256` — "same construction over the fixtures dir" gives `ee56250d001f…`, while the published
+`c5d8f6f3db3b…` needs **basename** keys over the **2** files in `fixtures/confirmed/`. **5/7** state their
+canonicalization; unstated are `fixtures_digest_sha256` and the `overlays_digest` warning variant, which reproduces
+exactly as `sha256("\n".join(sorted(lines_without_trailing_newline)))` = `58274f46…` but is not specified, so the
+warning is uncheckable as written. **Repair (item 13, unchanged in substance):** state the key convention and input
+set for the fixtures digest — and say explicitly that `fixtures/clean/`, `fixtures/negative/` and `fixtures/v2/` are
+outside that binding, which is why adding `fixtures/v2/dropword.json` did not silently alter the M5-R binding — and
+state the join for the warned-against overlays variant.
+
+### Criterion 20.13 / L10 status
+Coherence is now measured rather than asserted: the shape tally recomputes to the published counts (113/5/3/1), the
+reconciliation arithmetic closes (122 = 113 + 3 + 6), ORCH-2's rule-A exclusions are set-identical to the worker's
+eight (8 = 8, both directions), every adjudication row carries the fields its class owes (item 0g's schema gap is a
+separate row), and `PATTERNS.md §3`'s `57/122` is still quoted **without** the exclusions behind it — three FAIL rows
+in total (15a, 15b, the unqualified count). **TASK-020 overall stays FAIL/INCOMPLETE**; outstanding: 8a, 8b, 11a,
+11b, 12, 13, 14, **15a, 15b**, plus criteria 20.13 / 20.15 / 20.16, and TASK-018's 0d–0g.

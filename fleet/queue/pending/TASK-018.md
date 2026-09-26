@@ -193,3 +193,44 @@ claims four seeded promotions; the data has none* — not as: *the field is miss
 not the number."* Still owed under item 0f: the **strata** (27 of 57 interjections/fillers · 6 `%`↔`percent` notation
 · 11 function words · ~13 content), the **deduped site count 55** (item 0e), the **notation-class ruling**, and the
 statement that speaker-side filler presence is **unknowable without audio**.
+
+
+---
+
+## Items 0e / 0f / 0g derived mechanically (ORCH-2, 2026-09-26T00:22:41Z, at head `4fc40c8`) — the figures are on the record, so the repairs are checkable
+
+Rows in `fleet/gate-tools/orch2_verify.py` §13; derivation in `fleet/ORCH-2-VERIFICATION-LEDGER.md` §14.4. Nothing
+here changes the verdict (**FAIL / INCOMPLETE**, no pause) — it removes the guesswork from the repair.
+
+**Item 0e — the dedupe key is the missing datum, not the count.** Over the 57 CERTAIN-leg-d rows: distinct
+`(transcript, char_offset)` = **57**; distinct `(transcript, span text)` = **55**. So "55" is a **span-text** dedupe
+and must be published with its key (criterion 20.15 class). The two collisions are distinct sites at different
+offsets: **D-097 / D-098** (`percent`, `Radical_Subjectivity_The_I_of_Self_Feb_2002_Part_2` @838 span-end 852 and
+@1132 span-end 1141) and **D-120 / D-121** (`see`, `The_Levels_of_Consciousness_Subjective_&_Social_Consequences_Mar_2002_Part_2`
+@60506 span-end 60521 and @61014 span-end 61020).
+
+**Item 0f — the strata reproduce exactly under an explicit per-word list.** ORCH-2's reconstruction over the **32**
+distinct omitted words gives **27 / 6 / 11 / 13 = 57**:
+
+| stratum | words (count) | total |
+|---|---|---|
+| interjections / fillers | huh 7 · yeah 6 · see 6 · right 3 · really · heh · haha · um · well | **27** |
+| notation (`%`↔`percent`) | percent 6 | **6** |
+| function words | it's 3 · that's · there's · he'd · may · since · however · including · already | **11** |
+| content | bonaparte · earphones · evidence · go · high · lincoln · man · osama · otherwise · quite · realms · things · undoubtedly | **13** |
+
+This is a **reconstruction, not WORKER-2's classification** — the binding requirement is unchanged: publish your own
+per-word list (three FAIL rows cover the list, the notation-class ruling under ERRATA-25e §2 / BOSS guidance, and the
+statement that speaker-side filler presence is unknowable without audio; all three are ABSENT at this head).
+
+**Item 0g — verified still open, and its arithmetic verified correct.** `adjudication.jsonl` has **no** disposition,
+ruling or note key in its schema, so D-002 (CERTAIN-leg-d while `EVAL.json`'s `shape_adjudication` excludes that very
+site as `dropped-token-not-missing`, `evidence` @2574) and D-039 (CERTAIN-leg-d while the source-inheritance filter
+suppresses exactly that signal — confirmed mechanically: the filter's single published example **is** the D-039 site,
+`quite` @457 in `Most_Valuable_Qualities_for_a_Spiritual_Seeker_May_2011_Part_2`) both lack a written ruling, and the
+**7** rows on v2-holdout transcripts (D-092, D-093, D-094, D-095, D-107, D-108, D-122) are **0/7** marked as holdout
+members inside the record. If D-002 and D-039 are demoted the CERTAIN count becomes **55 rows / 53 span-text sites** —
+recomputed and confirmed, so that arithmetic may be published as stated rather than restated silently.
+
+**Related, routed to TASK-020 item 15:** `EVAL.json`'s reconciliation note misnames the hyphen-tokenization row's
+transcript (15a), and the campaign publishes two disjoint sets of 114 signals under one number (15b).

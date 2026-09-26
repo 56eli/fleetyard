@@ -1531,6 +1531,290 @@ def selftest(golden: str) -> int:
 
 
 
+
+
+# item 0f strata: ORCH-2's reconstruction of the four word classes over the 57 CERTAIN-leg-d rows.
+# It reproduces the published 27 / 6 / 11 / 13 exactly, which is evidence the classification is
+# not arbitrary - but the binding requirement is that WORKER-2 publishes its OWN per-word list.
+STRATA = (("interjections/fillers", {"huh", "yeah", "see", "right", "really", "heh", "haha", "um", "well"}),
+          ("notation (%↔percent)", {"percent"}),
+          ("function words", {"it's", "that's", "there's", "he'd", "may", "since", "however", "including",
+                              "already"}))
+
+
+def section_coherence(wt, rep):
+    """§13 — cross-artefact coherence: the shape adjudication, criterion 20.13 / L10, and
+    TASK-018 items 0e / 0f / 0g."""
+    print("\n== 13. cross-artefact coherence (20.13 / L10, items 0e-0g) ==")
+    ep = os.path.join(wt, "runs/m4-q2-dropword/EVAL.json")
+    ap = os.path.join(wt, "runs/m4-q2-adjudication/adjudication.jsonl")
+    if not (os.path.exists(ep) and os.path.exists(ap)):
+        rep.add("13", "EVAL.json + adjudication.jsonl", "present", "ABSENT", FAIL)
+        return
+    sa = json.load(open(ep, encoding="utf-8"))["shape_adjudication"]
+    sigs = sa["signals"]
+    adj = [json.loads(l) for l in open(ap, encoding="utf-8") if l.strip()]
+
+    kinds = collections.Counter(str(x["shape"].get("kind")) for x in sigs)
+    rep.check("13", "shape_adjudication classifies every signal", len(sigs), len(adj), n=len(sigs))
+    rep.check("13", "recomputed kind tally == the published counts", dict(sa["counts"]), dict(kinds), n=len(sigs))
+    cr = sa["count_reconciliation"]
+    rep.check("13", "count_reconciliation closes: raw == countable + excluded + re-labelled",
+              cr["raw"], cr["countable"] + cr["excluded_dropped_token_not_missing"] + cr["re_labelled_needs_human_read"],
+              n=cr["raw"])
+    rep.check("13", "re_labelled_needs_human_read == partial-overlap + gate-boundary",
+              cr["re_labelled_needs_human_read"], kinds["partial-overlap"] + kinds["gate-boundary-excluded"], n=6)
+    rep.check("13", "gate_figure == the countable consistent rows", cr["gate_figure"], kinds["consistent"], n=113)
+    closes = collections.Counter(str(x["shape"].get("deletion_closes")) for x in sigs)
+    rep.add("13", "the note's '114 deletion-closing' is NOT the deletion_closes field",
+            "114 == raw minus the 8 rows excluded by shape (3 + 5)",
+            f"deletion_closes tally {dict(closes)}; 122 - (3 + 5) = {len(sigs) - kinds['dropped-token-not-missing'] - kinds['partial-overlap']}",
+            PASS if len(sigs) - kinds["dropped-token-not-missing"] - kinds["partial-overlap"] == 114 else FAIL,
+            n=len(sigs),
+            note="deletion_closes is True for all 122, so the note's 114 is a different test; the arithmetic that "
+                 "lands the published bound is 122 - 8 = 114, then 114 - 1 gate-listed hyphen case = 113")
+
+    # ORCH-2's rule A against the worker's shape classes: the two partitions must be the SAME 8 rows
+    q2 = json.load(open(os.path.join(wt, "runs/m4-q2-dropword/signals.json"), encoding="utf-8"))
+    flat = [(k, sg) for k in sorted(q2) for sg in q2[k]]
+    def key(t, st, en, dw):
+        return (os.path.basename(str(t)), st, en, tuple(w.lower() for w in (dw or [])))
+    a8 = {key(k, sg.get("start"), sg.get("end"), sg.get("dropped_words")) for k, sg in flat
+          if rule_a_defect(sg.get("suspected"), sg.get("quoted"), sg.get("dropped_words"))[0]}
+    w8 = {key(x.get("transcript"), x.get("start"), x.get("end"), x.get("dropped_words")) for x in sigs
+          if str(x["shape"].get("kind")) in ("dropped-token-not-missing", "partial-overlap")}
+    g1 = {key(x.get("transcript"), x.get("start"), x.get("end"), x.get("dropped_words")) for x in sigs
+          if str(x["shape"].get("kind")) == "gate-boundary-excluded"}
+    rep.add("13", "ORCH-2's rule-A failures are SET-IDENTICAL to the worker's 8 shape exclusions",
+            f"{len(w8)}/{len(w8)} both ways", f"{len(a8 & w8)}/{len(w8)} (A-W {sorted(a8 - w8)[:2]}, "
+            f"W-A {sorted(w8 - a8)[:2]})", PASS if a8 == w8 else FAIL, n=len(w8),
+            note="this is why the q2.6 figure 113/9 IS reproducible: rule A gives 114/8 over the same 8 rows, and "
+                 "the last step to 113 is the single gate-listed hyphen-tokenization exclusion")
+    hy = [sg for k, sg in flat if key(k, sg.get("start"), sg.get("end"), sg.get("dropped_words")) in g1]
+    if hy:
+        h = hy[0]
+        split = lambda t: [p.lower() for w in (t or "").replace("\u2019", "'").split()
+                           for p in re.split(r"[^A-Za-z0-9']+", w) if p]
+        dwl = [w.lower() for w in h["dropped_words"]]
+        rep.add("13", "the gate-boundary hyphen row PASSES rule A under the stated token rule and fails under "
+                      "hyphen-splitting", "True / False",
+                f"{[w for w in tokens(h['suspected']) if w not in dwl] == tokens(h['quoted'])} / "
+                f"{[w for w in split(h['suspected']) if w not in dwl] == split(h['quoted'])}",
+                PASS if ([w for w in tokens(h['suspected']) if w not in dwl] == tokens(h['quoted']) and
+                         not [w for w in split(h['suspected']) if w not in dwl] == split(h['quoted'])) else FAIL,
+                n=1, note=f"row: {sorted(g1)[0] if g1 else '?'}")
+    # the note must name the row it describes
+    note = str(cr.get("note") or "")
+    mname = re.search(r"transcript '([^']+)'", note)
+    rowname = os.path.basename(str([x for x in sigs if str(x["shape"].get("kind")) == "gate-boundary-excluded"][0]
+                                   ["transcript"])) if g1 else "?"
+    rep.add("13", "criterion 20.13 / L10 — the reconciliation note names the SAME transcript as the row it "
+                  "describes", rowname, mname.group(1) if mname else "no transcript named",
+            PASS if mname and mname.group(1) == rowname else FAIL, n=1,
+            note="" if (mname and mname.group(1) == rowname) else
+                 "NEW ITEM 15 (criterion 20.13): the note cites a transcript that carries ZERO q2 signals while the "
+                 "gate-boundary row sits in another file at the same offset; correct the note append-only, or state "
+                 "why two files are in play")
+
+    # the campaign publishes TWO different sets of 114 signals; nothing says so
+    si = {key(x.get("transcript"), x.get("start"), x.get("end"), x.get("dropped_words")) for x in sigs
+          if (x.get("source_inheritance") or {}).get("source_inherited") is True}
+    hold_names = {os.path.basename(y) for y in json.load(
+        open(os.path.join(wt, "tools/HELD-OUT-SPLIT-V2.json"), encoding="utf-8"))["holdout"]}
+    de = {key(k, sg.get("start"), sg.get("end"), sg.get("dropped_words")) for k, sg in flat
+          if os.path.basename(k) in hold_names}
+    allk = {key(k, sg.get("start"), sg.get("end"), sg.get("dropped_words")) for k, sg in flat}
+    a114 = allk - si - de
+    b114 = {key(x.get("transcript"), x.get("start"), x.get("end"), x.get("dropped_words")) for x in sigs
+            if str(x["shape"].get("kind")) in ("consistent", "gate-boundary-excluded")}
+    rep.add("13", "criterion 20.13 — the two published 114s are DIFFERENT SETS (filter-side vs shape-side)",
+            "wherever either is quoted, the other is distinguished",
+            f"filter-side {len(a114)} (122 - {len(si)} source-inherited - {len(de)} deferred) vs shape-side "
+            f"{len(b114)} (122 - {len(w8)}); intersection {len(a114 & b114)}, {len(a114 - b114)} differ each way, "
+            f"the two exclusion sets overlap in {len(w8 & (si | de))} rows",
+            INFO if len(a114) == len(b114) else PASS, n=len(allk),
+            note="ITEM 15b: `filtered: 114` (supplement + EVAL) and 'this instrument finds 114 deletion-closing "
+                 "signals' (EVAL's shape note) are equal in size but share only 106 signals; the README explains "
+                 "113 vs 114 on the shape side, and nothing states that the filter-side 114 is a different set")
+    docs = ""
+    for rel in ("runs/m4-q2-dropword/README.md", "runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json",
+                "runs/m4-q2-adjudication/SUMMARY.md", "tools/PATTERNS.md"):
+        fp = os.path.join(wt, rel)
+        if os.path.exists(fp):
+            docs += open(fp, encoding="utf-8").read()
+    distinguishes = bool(re.search(r"different set|not the same 114|two 114|106 (signals|in common)|disjoint",
+                                   docs, re.I))
+    rep.add("13", "criterion 20.13 — the distinction between the two 114s is written down",
+            "stated in a committed doc", "STATED" if distinguishes else "ABSENT — item 15b owed",
+            PASS if distinguishes else FAIL, n=1)
+
+    # items 0e / 0f over the 57 CERTAIN-leg-d rows
+    cert = [r for r in adj if str(r.get("verdict")) == "CERTAIN-leg-d"]
+    sites_span = {(os.path.basename(str(r["transcript"])), str(r.get("span"))) for r in cert}
+    sites_off = {(os.path.basename(str(r["transcript"])), r.get("char_offset")) for r in cert}
+    rep.add("13", "item 0e — the deduped site count depends on the DEDUPE KEY, which is not published",
+            "55 published with its key stated", f"by (transcript, span text) {len(sites_span)}; by "
+            f"(transcript, char_offset) {len(sites_off)}; rows {len(cert)}", INFO, n=len(cert),
+            note="the two colliding span-text pairs are distinct sites at different offsets: D-097/D-098 "
+                 "('percent', Radical_Subjectivity @838 and @1132) and D-120/D-121 ('see', Levels_of_Consciousness "
+                 "@60506 and @61014) - so '55' is a span-text dedupe and must say so (criterion 20.15 class)")
+    tally = collections.Counter(str(r.get("omitted_word")) for r in cert)
+    mine = {}
+    for label, words in STRATA:
+        mine[label] = sum(v for k, v in tally.items() if k.lower() in words)
+    mine["content (everything else)"] = len(cert) - sum(mine.values())
+    rep.add("13", "item 0f — ORCH-2's reconstruction of the four strata over the 57 rows",
+            "27 / 6 / 11 / 13 summing to 57", " / ".join(str(v) for v in mine.values()) + f" summing to {sum(mine.values())}",
+            PASS if list(mine.values()) == [27, 6, 11, 13] else INFO, n=len(cert),
+            note=f"word classes: {dict((l, sorted(w)) for l, w in STRATA)}; content = "
+                 f"{sorted(k for k in tally if not any(k.lower() in w for _l, w in STRATA))}")
+    pub = ""
+    for rel in ("tools/PATTERNS.md", "runs/m4-q2-adjudication/SUMMARY.md"):
+        fp = os.path.join(wt, rel)
+        if os.path.exists(fp):
+            pub += open(fp, encoding="utf-8").read()
+    rep.add("13", "item 0f — WORKER-2's own per-word class list published (the binding requirement)",
+            "a list assigning each of the 32 distinct omitted words to a stratum",
+            "published" if re.search(r"(interjection|filler).{0,400}(huh|yeah)", pub, re.S) else "ABSENT",
+            PASS if re.search(r"(interjection|filler).{0,400}(huh|yeah)", pub, re.S) else FAIL, n=len(tally),
+            note=f"{len(tally)} distinct omitted words: {sorted(tally)}")
+    rep.add("13", "item 0f — the notation-class ruling recorded (ERRATA-25e §2 / BOSS guidance: notation variants "
+                  "are transcriber formatting conventions)", "a ruling on the 6 'percent' rows",
+            "ruling present" if re.search(r"notation", pub, re.I) else "ABSENT",
+            PASS if re.search(r"notation", pub, re.I) else FAIL, n=tally.get("percent", 0))
+    rep.add("13", "item 0f — speaker-side filler presence stated as unknowable without audio", "stated",
+            "stated" if re.search(r"audio", pub, re.I) else "ABSENT",
+            PASS if re.search(r"audio", pub, re.I) else FAIL, n=1)
+
+    # item 0g / criterion L10: contradictions with sibling instruments must carry a written ruling
+    disp = [k for r in adj for k in r if any(t in k.lower() for t in ("disposition", "ruling", "note", "append"))]
+    rep.add("13", "item 0g — adjudication.jsonl carries an append-only disposition field", "present for D-002/D-039",
+            f"{sorted(set(disp))[:4] if disp else 'NO disposition/ruling/note key in the schema'}",
+            PASS if disp else FAIL, n=len(adj),
+            note="D-002 ('evidence') is CERTAIN-leg-d while EVAL.json shape_adjudication excludes that very site as "
+                 "dropped-token-not-missing; D-039 ('quite') is CERTAIN-leg-d while the source-inheritance filter "
+                 "suppresses that same signal as its own published example")
+    supf = json.load(open(os.path.join(wt, "runs/m4-q2-dropword/PROVENANCE-SUPPLEMENT.json"),
+                          encoding="utf-8"))["source_inheritance_filter"]
+    ex = supf.get("examples") or []
+    d39 = [r for r in adj if r.get("id") == "D-039"]
+    hit = any(str(e.get("start")) == str(d39[0].get("char_offset")) or e.get("dropped_words") == ["quite"]
+              for e in ex) if d39 else False
+    rep.add("13", "item 0g — the filter's own example IS the D-039 site (the contradiction is real at this head)",
+            "the suppressed example and the promoted row are the same signal",
+            f"examples {json.dumps(ex)[:150]}; D-039 offset {d39[0].get('char_offset') if d39 else '?'} "
+            f"verdict {d39[0].get('verdict') if d39 else '?'}", PASS if hit else FAIL, n=len(ex))
+    v2hold = {os.path.basename(x) for x in json.load(open(os.path.join(wt, "tools/HELD-OUT-SPLIT-V2.json"),
+                                                          encoding="utf-8"))["holdout"]}
+    tainted = [r.get("id") for r in adj if os.path.basename(str(r.get("transcript"))) in v2hold]
+    noted = [r.get("id") for r in adj if os.path.basename(str(r.get("transcript"))) in v2hold
+             and any("holdout" in str(v).lower() for k, v in r.items() if k != "transcript")]
+    rep.add("13", "item 0g — the v2-holdout rows are marked as such IN the adjudication record",
+            f"{len(tainted)} rows noted", f"{len(noted)} of {len(tainted)} noted ({tainted})",
+            PASS if len(noted) == len(tainted) else FAIL, n=len(tainted),
+            note="no holdout-tainted row may be quoted as tuning-side evidence")
+    dem = [r for r in cert if r.get("id") not in ("D-002", "D-039")]
+    dem_sites = {(os.path.basename(str(r["transcript"])), str(r.get("span"))) for r in dem}
+    rep.add("13", "item 0g — the stated post-demotion arithmetic checks out", "55 rows / 53 distinct sites",
+            f"{len(dem)} rows / {len(dem_sites)} span-text sites", PASS if (len(dem), len(dem_sites)) == (55, 53)
+            else FAIL, n=len(dem))
+    # a field is owed only by the rows it applies to (defect #26: `clause` is the leg-(d) clause, so
+    # CANDIDATE rows legitimately lack it; a non-realignable row legitimately has no rebuilt span)
+    always = ("verdict", "reason", "seeded", "in_sample", "transcript", "char_offset")
+    miss = collections.Counter(f for r in adj for f in always if r.get(f) in (None, ""))
+    miss["clause"] = sum(1 for r in adj if str(r.get("verdict")) == "CERTAIN-leg-d" and not r.get("clause"))
+    noreal = [r.get("id") for r in adj if not r.get("span")]
+    miss["span"] = sum(1 for r in adj if not r.get("span") and not
+                       ("re-align" in str(r.get("reason")) or "realign" in str(r.get("reason"))) or
+                       (not r.get("span") and not (r.get("detector_span") and r.get("span_end"))))
+    rep.add("13", "criterion 20.13 — every adjudication row carries the fields coherence is judged on",
+            "0 missing, judged per row class", f"{sum(miss.values())} missing {dict((k, v) for k, v in miss.items() if v)}",
+            PASS if not sum(miss.values()) else FAIL, n=len(adj) * len(always),
+            note=f"`clause` is required only on CERTAIN-leg-d rows (57/57 carry it, 0/65 CANDIDATE rows do, "
+                 f"correctly); {len(noreal)} rows {noreal} have no rebuilt span because their own reason states the "
+                 f"omission is not re-alignable from the frozen bytes, and each still carries detector_span + "
+                 f"char_offset + span_end")
+    p3 = ""
+    fp = os.path.join(wt, "tools/PATTERNS.md")
+    if os.path.exists(fp):
+        p3 = slice_section(open(fp, encoding="utf-8").read(), "§3") or open(fp, encoding="utf-8").read()
+    rep.add("13", "criterion 20.13 — a count quoted in PATTERNS states the exclusions behind it",
+            "'57/122' quoted with the 3 + 6 shape exclusions and the 7 deferred holdout signals stated",
+            ("stated" if re.search(r"defer", p3, re.I) and re.search(r"partial-overlap|dropped-token", p3, re.I)
+             else "UNQUALIFIED" if "57/122" in p3 else "not quoted"),
+            PASS if (re.search(r"defer", p3, re.I) and re.search(r"partial-overlap|dropped-token", p3, re.I)) else FAIL,
+            n=1, note="the artefact supports 57/122 raw; after its own exclusions the countable figure is 113, and "
+                      "the CERTAIN count under item 0g would be 55 rows / 53 sites")
+
+
+
+
+
+def section_derivations(wt, rep):
+    """§14 — criterion 20.15: does every derivation stated in the binding-of-record manifest
+    reproduce when followed LITERALLY, and does it state its canonicalization? Until this
+    section existed item 13 had no FAIL row of its own, so the claim 'the FAIL set equals the
+    open items' was incomplete - recorded as such in ledger §14."""
+    print("\n== 14. criterion 20.15 — stated derivations reproduce literally ==")
+    mp = os.path.join(wt, "findings/PROVENANCE.json")
+    if not os.path.exists(mp):
+        rep.add("14", "findings/PROVENANCE.json (the binding of record)", "present", "ABSENT", FAIL)
+        return
+    man = json.load(open(mp, encoding="utf-8"))
+    dv = man.get("derivations") or {}
+    rep.check("14", "the binding of record publishes a derivations block", True, bool(dv), n=len(dv))
+
+    literal, stated = {}, {}
+    # by_transcript: "same construction as records_digest over findings/by-transcript/"
+    d, n = dir_digest(os.path.join(wt, "findings/by-transcript"))
+    literal["by_transcript_digest"] = d == man["outputs"]["by_transcript_digest"]
+    stated["by_transcript_digest"] = "records_digest" in str(dv.get("by_transcript_digest"))
+    # records_digest: fully stated (sorted lines, relpath key, sort key = the line)
+    d, n = dir_digest(os.path.join(wt, "evidence/runs/m5-raw/records"))
+    literal["records_digest_sha256"] = d == man["inputs"]["records_digest_sha256"]
+    stated["records_digest_sha256"] = "path relative to records dir" in str(dv.get("records_digest_sha256"))
+    # overlays_digest: stated construction reproduces; the warned-against variant's construction is NOT stated
+    ov = os.path.join(wt, "corpus/docdocgo/overlays")
+    lines = []
+    for b in sorted(x for x in os.listdir(ov) if x.endswith(".txt")):
+        t = open(os.path.join(ov, b), encoding="utf-8", errors="replace").read()
+        lines.append(f"{sha_bytes(t.encode('utf-8'))}  {b}\n")
+    literal["overlays_digest"] = sha_bytes("".join(lines).encode()) == man["inputs"]["overlays_digest"]
+    txt = str(dv.get("overlays_digest"))
+    stated["overlays_digest"] = ("sorted" in txt and "basename" in txt and
+                                 "join" in txt.lower() and "58274f46" in txt and "\\n" in txt)
+    # corpus zip + ledger + tool: byte digests, self-describing
+    literal["corpus_zip_sha256"] = sha_file(os.path.join(wt, "docdocgo-fixes.zip")) == man["inputs"]["corpus_zip_sha256"]
+    stated["corpus_zip_sha256"] = "bytes" in str(dv.get("corpus_zip_sha256"))
+    literal["outputs.ledger.jsonl"] = sha_file(os.path.join(wt, "findings/ledger.jsonl")) == man["outputs"]["ledger.jsonl"]
+    stated["outputs.ledger.jsonl"] = "bytes" in str(dv.get("outputs.ledger.jsonl"))
+    literal["tool_sha256"] = sha_file(os.path.join(wt, "tools/m5r_reduce.py")) == man["tool_sha256"]
+    stated["tool_sha256"] = "bytes" in str(dv.get("tool_sha256"))
+    # fixtures_digest: the stated construction (relpath over fixtures/) does NOT reproduce
+    d_rel, _ = dir_digest(os.path.join(wt, "fixtures"), key="relpath")
+    d_base, nb = dir_digest(os.path.join(wt, "fixtures/confirmed"), key="basename")
+    literal["fixtures_digest_sha256"] = d_rel == man["inputs"]["fixtures_digest_sha256"]
+    stated["fixtures_digest_sha256"] = ("basename" in str(dv.get("fixtures_digest_sha256")) or
+                                        "confirmed" in str(dv.get("fixtures_digest_sha256")))
+    rep.add("14", "criterion 20.15a — every stated derivation reproduces when followed LITERALLY",
+            f"{len(literal)}/{len(literal)}", f"{sum(literal.values())}/{len(literal)}"
+            f" (failures: {sorted(k for k, v in literal.items() if not v)})",
+            PASS if all(literal.values()) else FAIL, n=len(literal),
+            note="ITEM 13: `fixtures_digest_sha256` says 'same construction over the fixtures dir', which gives "
+                 f"{d_rel[:12]}…; the published {man['inputs']['fixtures_digest_sha256'][:12]}… reproduces only with "
+                 f"BASENAME keys over the {nb} files in fixtures/confirmed/. State the key convention and the input "
+                 "set, and say that fixtures/clean, fixtures/negative and fixtures/v2 are outside this binding")
+    rep.add("14", "criterion 20.15b — every derivation states its canonicalization (key convention, join, sort)",
+            f"{len(stated)}/{len(stated)}", f"{sum(stated.values())}/{len(stated)}"
+            f" (unstated: {sorted(k for k, v in stated.items() if not v)})",
+            PASS if all(stated.values()) else FAIL, n=len(stated),
+            note="the warned-against overlays variant 58274f46… is reproducible exactly as "
+                 'sha256("\\n".join(sorted(lines_without_trailing_newline))) but the manifest does not state that '
+                 "construction, so the warning is not checkable as written; the good pattern already exists in this "
+                 "lane (the q2 supplement's config_digest_note names sort_keys and separators)")
+
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("worktree", nargs="?")
@@ -1565,6 +1849,8 @@ def main() -> int:
     section_split_v2(wt, rep, sup)
     section_inherited(wt, rep)
     section_quantum_b(wt, rep)
+    section_coherence(wt, rep)
+    section_derivations(wt, rep)
     tally = collections.Counter(r["verdict"] for r in rep.rows)
     print(f"\n== summary: {len(rep.rows)} rows · " +
           " · ".join(f"{k} {v}" for k, v in sorted(tally.items())))

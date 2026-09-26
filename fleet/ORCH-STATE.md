@@ -413,3 +413,40 @@ the reconnect runbook is at the end of that summary.
   `bd69210` + `cea19ed` lost as objects, content recovered from the surviving tree via `--mixed` reset to `0ae2e9a`
   (registry verified identical three ways first). GitHub restored by the owner. Gate worktree gone, rebuildable on
   demand. CONTROL seq 33.
+
+## Cycle H/I (2026-09-25T23:46:38Z – 2026-09-26T00:26:04Z) — the remaining re-gates became one run, and one of my own findings was reversed
+
+- **Recovery first (CONTROL 33).** A second workspace recreation left the local branch at the branch base while
+  `origin` correctly held `0ae2e9a`; two commits were lost as objects but their content survived in the tree.
+  Registry verified identical three ways (`a86115d2…`), `git reset --mixed origin/<lane>` (never `--hard`), residual
+  diff re-committed with the disclosure → `af1718e`, pushed. Gate worktree rebuilt; the instrument re-ran
+  byte-identical and the suite passed 227 OK / skipped=1.
+- **Gate cycle H (CONTROL 34–35).** Instrument v3 → v3.1 added §10 (split v2) and §11 (inherited toolchain), so
+  TASK-019a quantum a and TASK-017 are now re-gated by one command: **TASK-019a FAIL/INCOMPLETE on v2.5 + the v2.b
+  note only** (v2.1–v2.4, v2.6, v2.9 PASS; my independent re-draw set-equal 33/197 under exactly one of two plausible
+  readings), **TASK-017 PASS all six** (three-way over all 266 files). Quantum b **HELD**.
+- **ANNEX amendment §F (CONTROL 36).** Deriving the taint instead of restating it corrected my own A4 wording: the
+  four excluded holdout transcripts are **label-tainted** (7 prior signals, 3 CERTAIN-leg-d + 4 CANDIDATE), not
+  fixture-adjacent — the holdout has zero fixture transcripts. §F fixes primary 33 / sensitivity 29 from one run,
+  requires those seven re-adjudicated blind with a published prior-vs-new table, and binds the two caveat sentences
+  that must ride with every quantum-b figure. Instrument §12: frozen inputs 6/6 undrifted, no pre-registration
+  artefact (correct), no receipt consumes the v2 holdout.
+- **Self-item O-2 CLOSED (CONTROL 37).** `--selftest`: 18 named cases over extracted helpers, byte-identical section
+  output through the refactor, five injected mutations all caught, output committed beside the tool.
+- **SELF-CORRECTION O-3 (CONTROL 38) — I reversed my own withdrawal.** The q2.6 figure `113/9` **is** reproducible:
+  it is the tally of WORKER-2's published shape adjudication (113 consistent · 5 partial-overlap · 3
+  dropped-token-not-missing · 1 gate-boundary-excluded; 122 = 113 + 3 + 6), and my rule-A exclusion set is
+  **set-identical to the worker's eight, both directions**. O-1 searched only inside my own five token-set rules and
+  so contradicted my own cycle-F record. The token-rule finding stands; the caveat's labels are corrected.
+- **New work cut from that derivation:** TASK-020 **item 15** (15a a reconciliation note misnames its own row's
+  transcript; 15b two disjoint sets of 114 published under one number, intersection 106); items 0e/0f/0g and
+  criterion 20.15 mechanized with derived figures (55 = span-text dedupe, 57 by offset; strata 27/6/11/13 under an
+  explicit 32-word list; post-demotion 55 rows / 53 sites; 0/7 holdout rows marked in the adjudication record).
+- **Instrument defects #21–#27 published** (cumulative 27), three of them false FAILs against sound criteria and one
+  a **process** defect: `str.replace`-based document edits silently no-op, so `status.md` and `ORCH-STATE.md` missed
+  this cycle's entries until they were appended and every edit asserted.
+- **State:** lane head `0ded97c` → `44dab36` → `6b0cc33` → `8d847bc` → this commit, all pushed. M4 scoreboard
+  unchanged (q1 PASS · q2 FAIL · q3 FAIL on item 8a alone · q4 PASS · q5 PASS). No detector promotable, no rate, no
+  precision, no M6 figure; M6-P owner-accepted and not re-certified; TASK-015 blocked behind quantum b. Fleet:
+  BOSS-2 `67a4f0e` (cycle 45, zero controls, zero concerns, no orders), WORKER-2 `4fc40c8` static since 21:27:50Z —
+  no ORCH-2 action per ERRATA-25f, main `7d033ab`.

@@ -904,3 +904,61 @@ reference (fixed with `git log -S`), and a pattern-count that mistook `det_forma
 missing ones. A shadowed variable crashed the run outright. **Self-item O-2** is opened on my own lane: the
 instrument owes a `--selftest` over a fixture tree with expected verdicts, so a refactor cannot silently move a gate
 result; until it exists, every change is diffed against the committed output.
+
+## ORCH-2 SELF-CORRECTION #3 (append-only) — the q2.6 figure `113/9` is **RESTORED**; self-item O-1's withdrawal over-reached
+
+**2026-09-26T00:22:41Z · verified at WORKER-2 head `4fc40c8` · mechanized in `fleet/gate-tools/orch2_verify.py` §13 ·
+derivation in `fleet/ORCH-2-VERIFICATION-LEDGER.md` §14.**
+
+Self-item O-1 withdrew the q2.6 caveat figure *"113/122 fully consistent drops, 9/122 shape-defective"* on the
+ground that **no natural rule reproduces it**. That was wrong, and the wrongness is instructive: I searched for a
+*token-set* rule over the 122 signals, and the figure was never a token-set result. It is the count of a **documented
+per-signal shape classification** that WORKER-2 published in `runs/m4-q2-dropword/EVAL.json` →
+`shape_adjudication`, with a "needs human read" category that no token-set rule can express. **My own cycle-F gate
+record already carried that decomposition** (`GATES.md`: "113 consistent / 3 dropped-token-not-missing /
+5 partial-overlap / 1 gate-boundary-excluded"), so O-1 also contradicted my own earlier record without noticing it.
+The failure mode: a self-audit that re-derives from a **narrower hypothesis space** than the gate it is auditing.
+
+**What §13 now verifies mechanically (all rows PASS unless stated):**
+
+| check | result |
+|---|---|
+| `shape_adjudication` classifies every signal | 122/122, one per row, with `kind`, `counting`, `deletion_closes`, `book_side_repeated_tokens`, `dropped_run_in_book_span`, `rebuilt_from_book_span`, `transcript_tokens` |
+| recomputed `kind` tally == the published `counts` | **113 consistent · 5 partial-overlap · 3 dropped-token-not-missing · 1 gate-boundary-excluded** |
+| `count_reconciliation` closes | raw 122 = countable 113 + excluded 3 + re-labelled 6; `gate_figure` 113; 6 = 5 partial-overlap + 1 gate-boundary |
+| ORCH-2's rule-A failures vs the worker's shape exclusions | **SET-IDENTICAL, both directions: 8 = 8** (the 3 dropped-token-not-missing + the 5 partial-overlap) |
+| the ninth row | `one-third of` dropped from `"States. One-third of the"`, `Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2` @40831–40841 — it **passes** rule A under my token rule and **fails** under hyphen-splitting, which is precisely why the worker's instrument excludes it as "gate-listed hyphen-tokenization … pending a human read" |
+
+**The restored, binding statement of the q2.6 caveat.** Of 122 C1-drop signals, **113 are shape-consistent and 9 are
+not**: **3** are `dropped-token-not-missing` — the gate's own three named cases (`evidence` @2574, `staggering`
+@54983, `sovereign` @55220), where the "dropped" token already occurs in the transcript span, so what is missing is a
+duplicate, not a word; **5** are `partial-overlap` rows the worker re-labelled as needing a human read
+(`['very','strong']`, `['you','know']`, `['the','nitty-gritty']`, `['forebrain','the']`, `['sudden','jumps']`); and
+**1** is the gate-listed hyphen-tokenization case above. ORCH-2's rule A independently reproduces the same eight-row
+exclusion set, giving 114; the worker's instrument then removes the ninth to land on the published **113**.
+
+**What O-1 got right and keeps:** the token rule is load-bearing (hyphen-splitting collapses rule A to 67/55 and
+flips the ninth row), and no drop-consistency number may be quoted without naming its rule. **What O-1 got wrong
+beyond the withdrawal:** the labels in the original q2.6 caveat. The six rows needing a human read are **five of
+WORKER-2's partial-overlap rows plus one hyphen-tokenization row of mine** — not "6 partial overlaps of which 2 are
+my own hyphen tokenization".
+
+**Two coherence defects found while restoring the figure (new item 15, criterion 20.13 / L10):**
+
+1. **15a — a note misnames the row it describes.** `EVAL.json`'s `count_reconciliation.note` attributes the
+   hyphen-tokenization case to `A_Review_of_the_Work_Sep_2007_Part_1_enxautogen_html.txt` @40831. That transcript
+   carries **zero** q2 signals; the row is in
+   `Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2_enxautogen_html.txt` @40831–40841. Repair
+   append-only: correct the transcript, or state why two files are in play.
+2. **15b — the campaign publishes two different sets of 114 signals and nothing says so.** The filter-side
+   `filtered: 114` (122 − 1 source-inherited − 7 deferred v2-holdout) and the shape-side *"this instrument finds 114
+   deletion-closing signals"* (122 − 8 shape exclusions) are **equal in size and share only 106 signals**; the two
+   exclusion sets are **disjoint** (0 rows in common). `README.md` explains 113 vs 114 on the shape side, but no
+   committed document states that the filter-side 114 is a different set. Wherever either is quoted, the other must
+   be distinguished — the same rule as the token rule travelling with `8/122`.
+
+**No verdict moves.** q2 stays **FAIL/INCOMPLETE** (items 8a, 0d–0g, 11a, 11b, 12, 13, 14, 15, criteria
+20.13/20.15/20.16); the substance of q2 is now *stronger*, because the caveat that O-1 opened is closed with a
+mechanically verified decomposition. The instrument is at **256 rows · PASS 205 · FAIL 27 · INFO 22 · PROXY 2**, and
+the 27 FAIL rows now cover every open item — including item 13, which until §14 existed had **no FAIL row of its
+own**, so the earlier claim "the FAIL set equals the open items" was incomplete. That claim is corrected here.
