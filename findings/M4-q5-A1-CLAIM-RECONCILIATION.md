@@ -64,7 +64,7 @@ recorded in `findings/PROVENANCE.json`.
   record; recovery credit does not erase the breaches.
 
 
-## Correction (append-only; TASK-018 item 0 — ORCH-2 re-derivation, 2026-09-25T20:1xZ)
+## Correction (append-only; TASK-018 item 0 — ORCH-2 re-derivation, 2026-09-25T20:34:58Z (src 33b6f36; read `20:1xZ`))
 
 **Row 3 of the table above (M5R-0036) is WRONG and is corrected here, not edited away.**
 
@@ -79,7 +79,7 @@ exactly; there is no nuance and no residual ambiguity.** The 98→0 correction i
 stands (the two reducer defects were real); only this row's explanation was wrong.
 Verified by ORCH-2's independent tokenisation (`['mm-hmm'] * 8`) and re-verified here.
 
-> **SUPERSESSION + CORRECTED NUMBERS (appended 2026-09-25T21:4xZ, TASK-020 item 11 —
+> **SUPERSESSION + CORRECTED NUMBERS (appended 2026-09-25T21:27:18Z (src d7fee6e; read `21:4xZ`), TASK-020 item 11 —
 > q5.7/q5.8; nothing above is rewritten).**
 >
 > 1. **Ledger digest.** The "New ledger sha256 `64977c2f…`" line above is superseded:
@@ -111,3 +111,32 @@ Verified by ORCH-2's independent tokenisation (`['mm-hmm'] * 8`) and re-verified
 >    the tokenizer caveat, not absorbed into a conclusion.
 > 6. **Unchanged:** the rule-quality conclusion — no v1 A1 claim-shape change is required —
 >    is accepted and untouched by the four corrections above.
+
+> **ITEM 11b APPEND (2026-09-26, WORKER-2; nothing above is rewritten).** The document's own
+> simulation tally ("98 flags; 67 over-bound") and ORCH-2's ("97 = 9 + 61 + 27") are now
+> reconciled mechanically, and both are reproducible from the ledger:
+>
+> 1. **Rule matters, so it is stated.** Recount rule: span = the record's `span_text`; tokens =
+>    `re.findall(r"[A-Za-z']+", span.lower())`; re-derivation = the smallest period k ≤ 8 with
+>    n % k == 0 and full periodicity; flag = claim (N-token unit repeated M times) not
+>    re-derived with (period, repeats) == (N, M).
+> 2. **WORKER-2 recount = 98 = 9 + 61 + 28.** 9 spans tokenize to **zero** ASCII tokens (the
+>    ASCII-only defect); 61 claims name units **> 8 tokens** (the bound defect; the gate's 61 is
+>    exactly right); the residual 28 are 18 hyphen-bearing spans (`Mm-hmm`, `Uh-huh`, `Bye-bye`,
+>    `overdone-ness`, …) + 10 digit-bearing spans (`300`, `250`, `10 percent`, `12 o'clock`, …).
+>    The gate's residual is **27** — a one-row difference inside a class whose size depends on
+>    whether the variant tokenizer splits hyphens and drops digits; no conclusion moves, because
+>    either way the flagged set is ~10% of 938 and the post-fix set is **0**.
+> 3. **Post-fix state re-verified at head:** all **938** A1 records carry `claim_ok: true`
+>    (1,334-record ledger, `d42136c6…`).
+> 4. **Unit-size bound, published with the tally** (unchanged from the block above, re-derived
+>    here): k=1 248 · 2 179 · 3 92 · 4 124 · 5 84 · 6 63 · 7 57 · 8 30 · 9 21 · 10 20 · 11 11 ·
+>    **12 9**; sum 938; max **12** with exactly **9** claims → `kmax=16` = max + **4 tokens**
+>    headroom.
+> 5. **Hyphen sensitivity:** WORKER-2's recount gives **256 of 938 (27.3%)** rows whose derived
+>    shape changes between a hyphen-joining and a hyphen-splitting tokenizer; the gate's figure is
+>    **255 (27%)** — the same one-row-order difference as (2), same cause. The gate's number is
+>    the one to quote; both are recorded with their rules.
+> 6. **Item 11b criterion (20.12) is therefore met as a *documented* reconciliation**, not as a
+>    silent replacement: §5e now carries the same supersession, so the restriction on quoting
+>    those two numbers is lifted.

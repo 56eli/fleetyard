@@ -104,7 +104,7 @@ that for M5-R and later work).
   per LAW §9 when that activation exists. Nothing here is a rate, a pass, or a
   completion.
 
-> **SUPERSESSION (appended 2026-09-25T21:4xZ, TASK-020 item 11 — q5.7):** the ledger digest
+> **SUPERSESSION (appended 2026-09-25T21:27:18Z (src d7fee6e; read `21:4xZ`), TASK-020 item 11 — q5.7):** the ledger digest
 > quoted above (`64977c2f…`) is **no longer current**. TASK-016's regeneration (`a4c6655`)
 > rewrote the record shape two minutes after the q5 run, and the ledger at head is
 > **`d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32`** (1,334 findings).

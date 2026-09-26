@@ -7,16 +7,16 @@
   2026-09-25T18:46Z owner ruling 25d re-grounded (errata @ main 25bdab9; normalized verification 6/6 fields equal; main churn disclosed; registry frozen). Resuming: M5-R delivered (8011439), starting M4 (held-out split fixed before any tuning).
   2026-09-25T18:52Z M4 quantum 1 delivered: held-out split fixed before tuning (193/37; sha-pinned method), PATTERNS.md (P1–P7 rules, promotion protocol), M5-R errata (CF-015 recovered: CERTAIN-inherited 3, CANDIDATE 1331, seeded 3). Suites green (7 m5r + 30 fleet2check). Next: M4-q2 drop-word detector.
   2026-09-25T18:57Z owner rulings logged (1: nonce literal inert/retired; 2: ERRATA-25c 7384a608 is the instrument of record, manifest pin is a source-file pairing artifact). Approved M5-R errata + split + P1–P7 + M4 queue; M5-R/M4 output stays PROVISIONAL-UNGATED (no ORCH-2). Continuing into M4-q2 (drop-word, tuning set only).
-  2026-09-25T19:1xZ M4-q2 delivered: C1-drop (122 raw signals on 193 tuning transcripts; 4 hand-verified provisional fixtures; class blocked on proposed leg d); 15 tests green (7 m5r + 8 dropword); PROVISIONAL-UNGATED. Next: M4-q3 speaker/format.
-  2026-09-25T19:2xZ M4-q3 delivered: C2-format (49 signals on 193 tuning transcripts; speaker attribution out of mechanical scope by census; 21 tests green). PROVISIONAL-UNGATED. Next: M4-q4 holdout runs.
-  2026-09-25T19:3xZ M4-q4 delivered: holdout runs (v1 185 / C1-drop 5 / C2-format 12 raw signals; 0-mismatch reproduction of the inherited census); counts only, precision unmeasured; holdout spent. Next: M4-q5 A1 claim-shape reconciliation.
-  2026-09-25T19:4xZ M4-q5 closed: the 98 A1 flags were M5-R reducer defects (tokenizer bound to ASCII; search bound 8 vs claims up to 11), fixed + regression-tested; corroboration now 1,336/1,336. All five approved quanta (q2–q5) delivered; 23 tests green; PROVISIONAL-UNGATED pending ORCH-2.
-  2026-09-25T19:2xZ ORCH-2 booted (TASK-013 FAIL/INCOMPLETE; PAUSE in force). TASK-016 repair delivered on the lane: record shape + coverage truth + LAW §8 manifest; 26 tests green; awaiting ORCH-2 re-gate (remove of PAUSE). M4 paused pending the gate.
-  2026-09-25T19:4xZ ruling 25e logged (OPTION A repair-first; leg (d) recorded, M4 parked). TASK-016 delivered with per-criterion C6/C7/C8 evidence; awaits ORCH-2 re-gate.
+  2026-09-25T19:06:53Z (src 012914d) M4-q2 delivered: C1-drop (122 raw signals on 193 tuning transcripts; 4 hand-verified provisional fixtures; class blocked on proposed leg d); 15 tests green (7 m5r + 8 dropword); PROVISIONAL-UNGATED. Next: M4-q3 speaker/format.
+  2026-09-25T19:08:35Z (src 4425763) M4-q3 delivered: C2-format (49 signals on 193 tuning transcripts; speaker attribution out of mechanical scope by census; 21 tests green). PROVISIONAL-UNGATED. Next: M4-q4 holdout runs.
+  2026-09-25T19:14:56Z (src 4e114f1) M4-q4 delivered: holdout runs (v1 185 / C1-drop 5 / C2-format 12 raw signals; 0-mismatch reproduction of the inherited census); counts only, precision unmeasured; holdout spent. Next: M4-q5 A1 claim-shape reconciliation.
+  2026-09-25T19:16:05Z (src 2f55b0c) M4-q5 closed: the 98 A1 flags were M5-R reducer defects (tokenizer bound to ASCII; search bound 8 vs claims up to 11), fixed + regression-tested; corroboration now 1,336/1,336. All five approved quanta (q2–q5) delivered; 23 tests green; PROVISIONAL-UNGATED pending ORCH-2.
+  2026-09-25T19:17:57Z (src dada3e6) ORCH-2 booted (TASK-013 FAIL/INCOMPLETE; PAUSE in force). TASK-016 repair delivered on the lane: record shape + coverage truth + LAW §8 manifest; 26 tests green; awaiting ORCH-2 re-gate (remove of PAUSE). M4 paused pending the gate.
+  2026-09-25T19:40:07Z (src 1beadd9) ruling 25e logged (OPTION A repair-first; leg (d) recorded, M4 parked). TASK-016 delivered with per-criterion C6/C7/C8 evidence; awaits ORCH-2 re-gate.
   2026-09-25T19:55:56Z cadence check 1 (auto): cadence: main 77f1d6d, orch2 8ed8d12, boss2 31ad262, pause REMOVED, pending 5 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
   2026-09-25T19:56:02Z cadence check 1 (auto): cadence: main 77f1d6d, orch2 8ed8d12, boss2 31ad262, pause present, pending 5 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
   2026-09-25T19:56:09Z cadence check 1 (auto): cadence: main 77f1d6d, orch2 8ed8d12, boss2 31ad262, pause present, pending 5 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
-  2026-09-25T20:3xZ TASK-018 claimed (work order per ERRATA-25g §5); items 0 + 0b appended (M5R-0036 correction; PATTERNS.md provenance binding + pause-REMOVED note); adjudicator tools/m4_q2_adjudicate.py written; inputs re-materialised after dev-env reset #2.
+  2026-09-25T20:34:58Z (src 33b6f36) TASK-018 claimed (work order per ERRATA-25g §5); items 0 + 0b appended (M5R-0036 correction; PATTERNS.md provenance binding + pause-REMOVED note); adjudicator tools/m4_q2_adjudicate.py written; inputs re-materialised after dev-env reset #2.
   2026-09-25T20:35:05Z TASK-018 adjudication: 25/122 signals adjudicated (0s)
   2026-09-25T20:35:05Z TASK-018 adjudication: 50/122 signals adjudicated (0s)
   2026-09-25T20:35:05Z TASK-018 adjudication: 75/122 signals adjudicated (0s)
@@ -69,7 +69,7 @@
   2026-09-25T20:37:55Z TASK-018 adjudication: 60/122 signals (0s)
   2026-09-25T20:37:55Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-25T20:37:55Z TASK-018 adjudication: 120/122 signals (0s)
-  2026-09-25T20:4xZ TASK-018 adjudication complete pending delivery: 57 CERTAIN-leg-d / 65 CANDIDATE of 122; fixtures 2 confirmed / 2 discarded-from-CERTAIN; 39 tests green.
+  2026-09-25T20:38:02Z (src 9cd905d) TASK-018 adjudication complete pending delivery: 57 CERTAIN-leg-d / 65 CANDIDATE of 122; fixtures 2 confirmed / 2 discarded-from-CERTAIN; 39 tests green.
   2026-09-25T20:38:04Z TASK-018 adjudication: 30/122 signals (0s)
   2026-09-25T20:38:04Z TASK-018 adjudication: 60/122 signals (0s)
   2026-09-25T20:38:04Z TASK-018 adjudication: 90/122 signals (0s)
@@ -94,7 +94,7 @@
   2026-09-25T20:45:22Z TASK-018 adjudication: 60/122 signals (0s)
   2026-09-25T20:45:22Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-25T20:45:22Z TASK-018 adjudication: 120/122 signals (0s)
-  2026-09-25T21:0xZ TASK-017 delivered: v1 toolchain inherited (266 files byte-exact, manifest), suite 154 OK/1 skip with corpus, fixtures verify OK, fresh sweep 10/10 identical to the inherited census. Awaiting ORCH-2 gate; cadence continues.
+  2026-09-25T20:48:00Z (src b2e0761) TASK-017 delivered: v1 toolchain inherited (266 files byte-exact, manifest), suite 154 OK/1 skip with corpus, fixtures verify OK, fresh sweep 10/10 identical to the inherited census. Awaiting ORCH-2 gate; cadence continues.
   2026-09-25T20:47:01Z TASK-018 adjudication: 30/122 signals (0s)
   2026-09-25T20:47:01Z TASK-018 adjudication: 60/122 signals (0s)
   2026-09-25T20:47:01Z TASK-018 adjudication: 90/122 signals (0s)
@@ -103,7 +103,7 @@
   2026-09-25T20:49:45Z TASK-018 adjudication: 60/122 signals (0s)
   2026-09-25T20:49:45Z TASK-018 adjudication: 90/122 signals (0s)
   2026-09-25T20:49:45Z TASK-018 adjudication: 120/122 signals (0s)
-  2026-09-25T21:1xZ TASK-019a delivered: holdout split v2 sealed (197/33, unseen holdout), 164 tests green; next gated on ORCH-2 q2/q3 + frozen thresholds (019b). Cadence continues.
+  2026-09-25T20:50:46Z (src 293b29c) TASK-019a delivered: holdout split v2 sealed (197/33, unseen holdout), 164 tests green; next gated on ORCH-2 q2/q3 + frozen thresholds (019b). Cadence continues.
   2026-09-25T20:51:00Z cadence check 1 (auto): cadence: main 7d033ab, orch2 6495a8b, boss2 7a0911d, pause REMOVED, pending 7 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
   2026-09-25T20:51:07Z cadence check 1 (auto): cadence: main 7d033ab, orch2 6495a8b, boss2 7a0911d, pause REMOVED, pending 7 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
   2026-09-25T20:51:20Z cadence check 1 (auto): cadence: main 7d033ab, orch2 6495a8b, boss2 7a0911d, pause REMOVED, pending 7 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
@@ -159,3 +159,8 @@
   2026-09-26T00:53:41Z TASK-018 adjudication: 120/122 signals (0s)
   2026-09-26T00:57:47Z cadence check 1 (auto): cadence: main 7d033ab, orch2 92c80b3, boss2 260456c, pause REMOVED, pending 9 [TASK-013.md,TASK-014.md,TASK-015.md,TASK-016.md]
   2026-09-26T00:58:09Z TASK-020 15a/15b: q2 EVAL rebuilt (note names D-058's own row; two 114s named, 106 common, sets disjoint); pin cc9ba46; suite 257 OK; seq 46
+  2026-09-26T01:01:21Z TASK-018 adjudication: 30/122 signals (0s)
+  2026-09-26T01:01:21Z TASK-018 adjudication: 60/122 signals (0s)
+  2026-09-26T01:01:21Z TASK-018 adjudication: 90/122 signals (0s)
+  2026-09-26T01:01:22Z TASK-018 adjudication: 120/122 signals (0s)
+  2026-09-26T01:04:37Z TASK-020 11a/11b/12: v1 row 185 vs 187.6 (P 0.4451; rows-vs-records reconciled), q5 97=9+61+27 supersedes 98 with the one-row delta stated, 40 fuzzy timestamps -> exact+src (0 left); suite 257 OK

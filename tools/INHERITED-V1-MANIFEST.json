@@ -1077,7 +1077,8 @@
   "note": "the committed v1 raw census (runs/m5-raw) materialised so the inherited tests run against it (TASK-017 criterion 2) and the fresh-run comparison has its baseline; same archive commit as above"
  },
  "materialised_by": "WORKER-2 A-2026-09-25-001, lane arena/01a0d9ce-fleetyard",
- "materialised_utc": "2026-09-25T20:5xZ",
+ "materialised_utc": "2026-09-25T20:48:00Z",
+ "materialised_utc_source": "committer time of commit b2e076124f9b1d5452cc739a7065773674d7bcd5 (the TASK-017 delivery commit carrying this manifest); the field previously read `20:5xZ` — a forward stamp, since the commit predates it",
  "method": "git archive <ref> tools tests fixtures | tar -x -C . ; every file then re-hashed and compared to git show <ref>:<path>",
  "note": "byte-identical to the archive (0 mismatches re-verified at materialisation); no inherited detector logic changed",
  "task": "TASK-017 (inherit the v1 detector toolchain onto the WORKER-2 lane)",

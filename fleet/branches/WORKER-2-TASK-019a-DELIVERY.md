@@ -23,7 +23,7 @@
 | generator/verifier | `tools/m4_split_v2.py` (`build` / `verify`), stdlib only — the seal's `manifest.tool_sha256` binds the head revision of that file |
 
 `python3 tools/m4_split_v2.py verify --split tools/HELD-OUT-SPLIT-V2.json --corpus corpus`
-→ **OK** (run_utc `2026-09-25T20:5xZ`). Independent re-derivation from the published rule is
+→ **OK** (run_utc `2026-09-25T20:50:46Z (src 293b29c; read `20:5xZ`)`). Independent re-derivation from the published rule is
 the gate: anyone with the salt, the modulus and bucket number, and the corpus file list can
 reproduce both sets exactly (set equality, not counts).
 

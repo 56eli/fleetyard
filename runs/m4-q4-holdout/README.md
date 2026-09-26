@@ -33,7 +33,7 @@ census under a fresh process, fresh index build, and a different code path.
   5.95 vs holdout 5.00; C1-drop tuning 0.63 vs holdout 0.14; C2-format tuning 0.25 vs
   holdout 0.32. The dimension is called *density*, not a rate: a signal count is not an
   error count.
-- **CORRECTION (appended 2026-09-25T21:3xZ, TASK-020 item 10):** the earlier statement
+- **CORRECTION (appended 2026-09-25T21:27:18Z (src d7fee6e; read `21:3xZ`), TASK-020 item 10):** the earlier statement
   here that these differences are "dominated by sampling noise" is **wrong for C1-drop**.
   Normalized by character exposure (holdout transcripts are 14.9% shorter; the holdout is
   1,996,122 of 14,224,783 corpus chars), v1 is 185 observed vs **187.9 expected**
@@ -56,3 +56,17 @@ census under a fresh process, fresh index build, and a different code path.
 - `part-holdout-format.json` / `.PROVENANCE.json` — C2-format holdout signals (12)
 
 Runner: `tools/m4_q4_holdout.py` (`v1` | `drop` | `format`), committed on this lane.
+
+## Correction-2 (appended 2026-09-26, TASK-020 item 11a)
+
+The item-10 correction above gives the v1 expectation as **187.9 / P = 0.44**; the gate's q4
+result gives **187.6 / 0.4451**, and the gate is right for this row. Both numbers come from the
+same census at two counting units: the 193 tuning transcripts hold **1,149 v1 records** but
+**1,151 detector rows** — two records in `Love_Sep_2011_Part_1_enxautogen_html` carry two v1
+families each (`A1+B1`, `A2+B1`). The exposure expectation must use **records**:
+1,149 × 0.1632327 = 187.555 → **187.6** (P = **0.4451**); 1,151 × 0.1632327 = 187.88 → 187.9
+(P = 0.4357) — the value this file previously carried, from rows. Conclusion unchanged: v1 is
+consistent with tuning exposure. Tuning-side counts per row, re-derived at head: **1,149** v1
+records (A1 776 · A2 143 · B2 220 · B1 12 rows) · C1-drop **122** · C2-format **49**. The C1/C2
+rows are unaffected (single-family runs; 8.0 / P 0.94 and 19.9 / P 7.7e-05 as published).
+See `tools/PATTERNS.md` §5d.

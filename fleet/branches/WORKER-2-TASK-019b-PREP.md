@@ -1,6 +1,6 @@
 # WORKER-2 — TASK-019b preparation: the one-shot harness (built, NOT run)
 
-lane `arena/01a0d9ce-fleetyard` · worker `A-2026-09-25-001` · 2026-09-25T21:5xZ
+lane `arena/01a0d9ce-fleetyard` · worker `A-2026-09-25-001` · 2026-09-26T00:32:03Z (src 72104a5; read `21:5xZ`)
 task: TASK-019 quantum b (holdout evaluation), preparation only — **no holdout has been read**
 
 ## Why this exists

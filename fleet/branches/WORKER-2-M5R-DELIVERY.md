@@ -1,7 +1,7 @@
 # DELIVERY — WORKER-2 · M5-R reviewed findings ledger
 
 - activation: A-2026-09-25-001 (WORKER-2) · lane: `arena/01a0d9ce-fleetyard`
-- delivered_utc: 2026-09-25T18:4xZ · main observed: `5fdd00e` · policy `0fe20a6057ec9fa2…`
+- delivered_utc: 2026-09-25T18:39:57Z (src 8011439; read `18:4xZ`) · main observed: `5fdd00e` · policy `0fe20a6057ec9fa2…`
 - mission: fleet/PLAN-v2.md **M5-R** (first mission per boot prompt; ORCH-2 queue
   absent at boot — self-served, disclosed in heartbeat and here)
 
@@ -47,7 +47,7 @@ held-out/provenance evidence) — **ORCH-2 lane does not exist yet** as of this
 delivery. Next in PLAN-v2 order after M5-R: **M4** (self-improvement loop), then the
 FINAL **M6** report which this ledger feeds.
 
-## Errata (append-only) — 2026-09-25T18:5xZ · fixture-overlap criterion corrected
+## Errata (append-only) — 2026-09-25T18:46:05Z (src 593cad3; read `18:5xZ`) · fixture-overlap criterion corrected
 
 M5-R v1 (commit `8011439`) matched fixture overlap by *containment of the fixture's
 start offset inside the finding span*. That missed the CF-015 case, where the
@@ -65,7 +65,7 @@ Corrected numbers (supersede the block above):
   byte-exact, determinism) is unchanged. New ledger digest is in
   `findings/PROVENANCE.json`.
 
-## Errata #2 (append-only) — 2026-09-25T19:4xZ · A1 claim re-derivation fixed
+## Errata #2 (append-only) — 2026-09-25T19:16:05Z (src 2f55b0c; read `19:4xZ`) · A1 claim re-derivation fixed
 
 M5-R's claim-corroboration table was wrong for A1: 98 "not re-derived" flags came
 from **two defects in `tools/m5r_reduce.py`**, not from the v1 detector — (a) an
@@ -80,7 +80,7 @@ CERTAIN-inherited 3 / HIGH 0 / CANDIDATE 1,331; seeded 3/1,331; 242/242 book quo
 byte-exact; 0 citation failures). New ledger sha256 `64977c2f…` in
 `findings/PROVENANCE.json`.
 
-## Errata #3 (append-only) — 2026-09-25T19:2xZ · TASK-016 repair (ORCH-2 gate FAIL→repair)
+## Errata #3 (append-only) — 2026-09-25T19:18:25Z (src a4c6655; read `19:2xZ`) · TASK-016 repair (ORCH-2 gate FAIL→repair)
 
 ORCH-2 gated TASK-013 at head `aed9df6` and returned **FAIL / INCOMPLETE** on three
 criteria (C6 finding-record shape, C7 coverage truth, C8 LAW §8 manifest); the other
@@ -151,7 +151,7 @@ replay against committed `findings/` also byte-identical); `python3 -m unittest
 discover -s tests` → **26 tests, OK, 0 skipped, 0 errors** (7 at M5-R delivery → 15 at
 M4-q2 → 26 now; never dropped).
 
-> **SUPERSESSION (appended 2026-09-25T21:4xZ, TASK-020 item 11 — q5.7):** the ledger digest
+> **SUPERSESSION (appended 2026-09-25T21:27:18Z (src d7fee6e; read `21:4xZ`), TASK-020 item 11 — q5.7):** the ledger digest
 > quoted above (`64977c2f…`) is **no longer current**. TASK-016's regeneration (`a4c6655`)
 > rewrote the record shape two minutes after the q5 run, and the ledger at head is
 > **`d42136c673188f9e091526083b95941cabc5822a8b5cffeb8913b942cb658a32`** (1,334 findings).

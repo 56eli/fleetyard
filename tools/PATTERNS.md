@@ -140,7 +140,7 @@ with the book citation that supplies them (inverse of B2's replace/insert cases)
 > here: M4 is parked under `PAUSE-WORKER-A-2026-09-25-001` (ERRATA-25e §1) until M5-R
 > re-gates PASS. Recorded, not acted on.
 
-### 5b-bis. TASK-018 delivered — leg (d) adjudication outcome (appended 2026-09-25T21:5xZ)
+### 5b-bis. TASK-018 delivered — leg (d) adjudication outcome (appended 2026-09-25T21:27:50Z (src 4fc40c8; read `21:5xZ`))
 
 The 122 C1-drop signals were adjudicated **individually** under the enacted leg (d)
 (`runs/m4-q2-adjudication/`, tool `tools/m4_q2_adjudicate.py` at `9cd905d`, 13 tests):
@@ -217,7 +217,7 @@ One-shot runs of the frozen detectors over the 37 holdout transcripts
   by sampling noise, but it may also indicate parameters fitted to the tuning half —
   flagged for M4 follow-up.
 
-> **CORRECTION (appended 2026-09-25T21:3xZ, TASK-020 item 10 — q4.8; the sentence above
+> **CORRECTION (appended 2026-09-25T21:27:18Z (src d7fee6e; read `21:3xZ`), TASK-020 item 10 — q4.8; the sentence above
 > is superseded on the statistics, left readable, never rewritten in place).** The claim
 > that the gaps are "dominated by sampling noise" is **wrong for C1-drop**, and the fault
 > was comparing per-file densities without normalizing by exposure. Holdout transcripts are
@@ -247,6 +247,29 @@ One-shot runs of the frozen detectors over the 37 holdout transcripts
 > "signals/tx — density, not a rate" (same append): a density is not an error rate, and v1's
 > B1 headline hold (TASK-005 FAIL / REDIRECT-005) is untouched by any of this.
 
+> **CORRECTION-2 (appended 2026-09-26, TASK-020 item 11a; nothing above rewritten).** The
+> correction block above puts the v1 row at **187.9 expected / P = 0.44**; the gate's q4 result
+> says **187.6 / 0.4451**, and for the v1 row **the gate is right**. The two figures come from the
+> same census counted at two different units, and the exposure expectation must use **records**:
+> the 193 tuning transcripts hold **1,149 v1 records** but **1,151 detector rows**, because two
+> records in `Love_Sep_2011_Part_1_enxautogen_html` carry two v1 families each
+> (`A1-repetition + B1-contradiction`; `A2-nonsense + B1-contradiction`). 1,151 rows × 0.1632327
+> = 187.88 → 187.9 (P = 0.4357 → 0.44 — this lane's earlier figure, rows); 1,149 records ×
+> 0.1632327 = 187.555 → **187.6** (P = **0.4451**) — the gate's figure, records. The v1 comparison
+> is therefore **185 observed vs 187.6 expected, P = 0.4451**, and the conclusion is unchanged
+> (consistent).
+>
+> **Tuning-side counts published per row (the item-11a ask), re-derived at head** from
+> `runs/m5-raw/records/*.json` restricted to the 193 tuning transcripts (holdout members from
+> `v1-holdout.PROVENANCE.json` removed): **v1 A1,A2,B1,B2 = 1,149 records** (1,151 detector rows:
+> A1 776 · A2 143 · B2 220 · B1 12) · **C1-drop = 122** (`runs/m4-q2-dropword`, 193/193
+> transcripts) · **C2-format = 49 in 32 transcripts** (`runs/m4-q3-format`). Exposure ratio
+> **0.163233** = 1,996,122 holdout chars / 12,228,661 tuning chars (14,224,783 corpus chars;
+> holdout 14.03%). C1 and C2 are single-family runs, so their rows carry no unit ambiguity:
+> C2-format 12 vs **8.0** (P = 0.9363 → 0.94), C1-drop 5 vs **19.9** (P = 7.677e-05), both as
+> published. One one-row-order difference survives between this lane's recount and the gate on
+> the q5 hyphen-sensitivity figure (§5e) and is disclosed there; no conclusion depends on it.
+
 ## 5e. M4-q5 — A1 claim-shape reconciliation: the flags were my instrument
 
 All 98 "claim not re-derived" A1 flags in M5-R traced to **two defects in the M5-R
@@ -258,6 +281,25 @@ B1 12/12 · B2 228/228, 0 flagged** (findings/M4-q5-A1-CLAIM-RECONCILIATION.md).
 Rule-quality conclusion: **no A1 claim-shape change is required**; the lesson is an
 instrument one (a re-derivation must declare its tokenizer and bounds). Hyphenated
 units ("Mm-hmm") remain a labelling nuance — documented, not hidden.
+
+> **SUPERSESSION (appended 2026-09-26, TASK-020 item 11b; the two paragraphs above are
+> superseded on the numbers and left readable).** "All **98**" and "units **up to 11**" are this
+> lane's pre-repair counts; the gate's independent simulation gives **97 = 9 zero-ASCII-token + 61
+> over-bound + 27 ASCII-mismatch** (q5 gate `33964d6`, q5.8), and the ledger's own claim notes
+> put the **largest claimed unit at k = 12 tokens, with exactly 9 claims at k = 12** (tally over
+> the 938 A1 `claim_checks`: k=1 248 · 2 179 · 3 92 · 4 124 · 5 84 · 6 63 · 7 57 · 8 30 · 9 21 ·
+> 10 20 · 11 11 · **12 9**; sum 938). `kmax = 16` is therefore **max-observed unit + 4 tokens**,
+> not "≈11 + margin". WORKER-2's recount with the old rule stated exactly
+> (`[A-Za-z']+`, `kmax=8`, flag = claim not re-derived with (period, repeats) equal to the claim)
+> gives **98 = 9 + 61 + 28**: the same 9 zero-token spans and the same 61 out-of-bound claims, and
+> a residual class of 28 (18 hyphen-bearing spans + 10 digit-bearing spans) against the gate's
+> 27 — a one-row difference inside a class whose size depends on the exact tokenizer variant
+> (digits and hyphens split or joined); both readings agree that ~10% of claims were flagged and
+> that **0 of 938 are flagged after the fix** (`claim_ok: true` for all 938, re-verified at head).
+> The hyphen sensitivity re-derives as this lane's **256 of 938 (27.3%)** against the gate's
+> **255/938 (27%)**, again one row apart under the same variant; **the gate's figures are
+> authoritative for quoting** and both are recorded here with their rules. Full reconciliation:
+> `findings/M4-q5-A1-CLAIM-RECONCILIATION.md` (item-11b append).
 
 ## 6. Next quanta (M4 work queue, in order)
 
@@ -303,14 +345,14 @@ ledger digest `d42136c6…` and the by-transcript digest `c1ec4da8…` above are
 this append; that is the whole attribution chain (ledger → companion manifest → tool commit
 `dada3e6` → policy sha), so no figure on this page needs commit archaeology to check.
 
-**Re-verification (appended 2026-09-25T21:2xZ, TASK-020 item 3):** both digests in this
+**Re-verification (appended 2026-09-25T21:21:28Z (src 08498e4; read `21:2xZ`), TASK-020 item 3):** both digests in this
 block were recomputed at head and match — `findings/ledger.jsonl` sha256 is still
 `d42136c6…` (1334 findings), and `sha256` over the sorted `<sha256>  <relpath>` lines of
 `findings/by-transcript/` reproduces `c1ec4da8…` (230 files, `m5r_reduce.dir_digest`). The
 page's figures are therefore bound to the same ledger generation they were read from, and
 the check is one command, not archaeology.
 
-**TASK-020 supplement bindings (appended 2026-09-25T21:2xZ):** the q2 and q3 run
+**TASK-020 supplement bindings (appended 2026-09-25T21:21:03Z (src a5dec38; read `21:2xZ`)):** the q2 and q3 run
 directories now carry `PROVENANCE-SUPPLEMENT.json` files (LAW §8 completion: tool_commit,
 main_head, policy_sha256, book-store digest, corpus/split digests, config digest, per-part
 output digest, detector re-pins with the original pins' defects stated). Digests are

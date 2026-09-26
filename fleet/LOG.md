@@ -12,7 +12,7 @@ self-served, disclosed).
 inherited census; CERTAIN-inherited 2 / HIGH 0 / CANDIDATE 1332; seeded 2,
 independent 1332; 242/242 cited book quotes byte-exact; determinism verified).
 DELIVERY, not certification — awaits ORCH-2 gate (no ORCH-2 lane yet).
-2026-09-25T18:4xZ WORKER-2: owner ruling 25d re-grounded, resuming — ERRATA-2026-09-25d
+2026-09-25T18:45:13Z (src 341ee2e) WORKER-2: owner ruling 25d re-grounded, resuming — ERRATA-2026-09-25d
 read at main 25bdab9 (main churn = disclosed owner acts §1; registry rewrite = disclosed
 exception §2 and frozen §6; A-2026-09-25-001 confirmed in force §5). Re-verified under
 the NORMALIZED standard (§3): record 001 fields 6/6 equal (registry unchanged since
@@ -23,35 +23,35 @@ seeded 3/1331 independent; reconciles with the v1 audit's 3-of-16 detector overl
 M4 quantum 1: held-out split fixed before tuning (tools/HELD-OUT-SPLIT.json,
 193/37 of 230), tools/m4_split.py + 7 m5r tests green, PATTERNS.md rule catalog
 published (13 of 16 CERTAIN patterns still invisible to all detectors).
-2026-09-25T18:5xZ WORKER-2: owner ruling 1 — the nonce-shaped literal on main is INERT
+2026-09-25T18:52:41Z (src e07be0e) WORKER-2: owner ruling 1 — the nonce-shaped literal on main is INERT
 AND RETIRED (v0 posture UNHASHED-OWNER-CHAT-ONLY; boot nonces single-use, consumed at
 boot verification; re-verification binds to ACTIVATION ID + normalized registry record).
 Retired from attention; not quoted further.
-2026-09-25T18:5xZ WORKER-2: owner ruling 2 — manifest pin 4b65145d is the policy-bundle
+2026-09-25T18:52:41Z (src e07be0e) WORKER-2: owner ruling 2 — manifest pin 4b65145d is the policy-bundle
 SOURCE file; deployed fleet/ERRATA-2026-09-25c.md (sha256 7384a608…) is the instrument
 OF RECORD and the authoritative hash. Manifest reconciliation deferred to 2.0.1; no file
 edits (freeze extends to the manifest; changes ride errata).
-2026-09-25T19:1xZ WORKER-2: M4-q2 — C1-drop detector built (tools/det_dropword.py,
+2026-09-25T19:06:53Z (src 012914d) WORKER-2: M4-q2 — C1-drop detector built (tools/det_dropword.py,
 self-test + 8 tests green; holdout-refusal enforced). Tuning run: 193 transcripts in
 6 bounded shards (LAW §4A) -> 122 CANDIDATE-class raw signals; merge provenance
 recorded. Hand-read sample: 4 confirmed omissions kept as provisional fixtures
 fixtures/v2/dropword.json (D2-001..004, byte-bound), 5 parked/discarded. Classification
 BLOCKED on proposed STANDARDS leg (d) (needs errata + BOSS CONCERN). No rates.
-2026-09-25T19:2xZ WORKER-2: M4-q3 — C2-format detector built (7 mechanical rules,
+2026-09-25T19:08:35Z (src 4425763) WORKER-2: M4-q3 — C2-format detector built (7 mechanical rules,
 self-test + 6 tests green). Tuning run: 193 transcripts -> 49 CANDIDATE-class format
 signals (R1 22/R2 3/R3 5/R4 1/R5 15/R6 2/R7 1); holdout untouched. Scope census over
 all 230 transcripts: 0 speaker labels / 0 stage directions / 0 parser residue, so
 speaker attribution is NOT mechanically detectable here — recorded as an M6 limitation
 (instrument finding). Two candidate rules measured and rejected as noise (camel-glue,
 double-word). Next: q4 holdout runs (rates only; precision needs review), q5 A1 claims.
-2026-09-25T19:3xZ WORKER-2: M4-q4 — one-shot holdout runs (thresholds frozen before
+2026-09-25T19:14:56Z (src 4e114f1) WORKER-2: M4-q4 — one-shot holdout runs (thresholds frozen before
 the run; holdout_consumed stamped): v1 A1,A2,B1,B2 185 raw signals (5.00/tx) and an
 exact per-transcript reproduction of the inherited census (0 mismatches of 37 files);
 C1-drop 5 signals (0.14/tx vs 0.63 tuning — flagged open question, sampling noise);
 C2-format 12 (0.32 vs 0.25 tuning). Counts only: precision/recall still require human
 review of holdout labels; no rate claimed anywhere. Holdout now spent for these
 detector versions (new salt owed before any further tuning-informed evaluation).
-2026-09-25T19:4xZ WORKER-2: M4-q5 — A1 claim-shape reconciliation CLOSED: all 98
+2026-09-25T19:16:05Z (src 2f55b0c) WORKER-2: M4-q5 — A1 claim-shape reconciliation CLOSED: all 98
 "not re-derived" flags were defects in MY reducer (ASCII-only tokenizer; 8-token
 search bound vs units up to 11), not in the v1 detector. Fixed with Unicode token
 rule + kmax=16 and 2 regression tests; ledger regenerated: corroboration now
@@ -59,7 +59,7 @@ A1 938/938, A2 158/158, B1 12/12, B2 228/228, 0 flagged (1,336/1,336 signal clai
 classes unchanged (CERTAIN-inherited 3 / HIGH 0 / CANDIDATE 1331; seeded 3). Errata #2
 appended to the M5-R delivery record; analysis in
 findings/M4-q5-A1-CLAIM-RECONCILIATION.md. No detector change required.
-2026-09-25T19:2xZ WORKER-2: ORCH-2 queue observed (ORCH-2 booted; TASK-013 gated FAIL/
+2026-09-25T19:17:57Z (src dada3e6) WORKER-2: ORCH-2 queue observed (ORCH-2 booted; TASK-013 gated FAIL/
 INCOMPLETE on C6/C7/C8 at aed9df6; PAUSE-WORKER-A-2026-09-25-001 in force — only
 TASK-016 actionable; M4 paused by control). TASK-016 repair implemented: R1 STANDARDS
 record shape (suspected_intended + status/status_by on every finding), R2 coverage row
@@ -67,14 +67,14 @@ record shape (suspected_intended + status/status_by on every finding), R2 covera
 (tool_commit, policy sha, main head, book-store sha, inherited detector commit,
 derivations for all digests); +3 tests (26 green); no classes/ledger substance changed.
 M4 q3/q4/q5 deliveries (already pushed) stay PROVISIONAL-UNGATED and are not gated.
-2026-09-25T19:4xZ WORKER-2: owner ERRATA-2026-09-25e read and logged — OPTION A
+2026-09-25T19:40:07Z (src 1beadd9) WORKER-2: owner ERRATA-2026-09-25e read and logged — OPTION A
 repair-first: M4-q2 + q3-q5 parked (DELIVERED-PROVISIONAL-UNGATED); TASK-016 is my only
 task; STANDARDS gains narrow CERTAIN leg (d) (omission within a matched span) with the
 122 drop-word signals and 4 provisional fixtures remaining CANDIDATE pending individual
 adjudication (no adjudication performed while M4 is parked). TASK-016 taken: per-criterion
 evidence (C6/C7/C8) added to the delivery record; fresh manifests bind main 25bdab9 then
 8e9e179 with an identical ledger sha; 26 tests green.
-2026-09-25T20:0xZ WORKER-2: ERRATA-2026-09-25f read and logged (liveness = signals not output,
+2026-09-25T19:55:50Z (src 10afc0d) WORKER-2: ERRATA-2026-09-25f read and logged (liveness = signals not output,
 not output quiet; worker steady state = cycle indefinitely for work orders; under a scoped
 pause stay paused and keep cadence only). Re-ground: registry a86115d2 unchanged/frozen,
 policy 0fe20a60 unchanged, main 77f1d6d (owner rewrite of the 25e commit — disclosed churn per
@@ -86,19 +86,19 @@ untracked corpus/ + evidence/ trees missing. Recovered: branch reset to the remo
 1beadd9, inputs re-materialised via tools/m5r_inputs.sh (zip 3f36c520… verified; archive ref
 bf97d85), all digests re-verified. Cadence watcher started (tools/cadence_watch.py, 300 s
 control checks: heartbeat + CONTROL lines; watches pause/queue/main for work orders).
-2026-09-25T20:4xZ WORKER-2: TASK-018 in progress (claimed; items 0/0b pushed at 33b6f36). Adjudicator
+2026-09-25T20:38:02Z (src 9cd905d) WORKER-2: TASK-018 in progress (claimed; items 0/0b pushed at 33b6f36). Adjudicator
 tools/m4_q2_adjudicate.py built: per-signal leg-(d) test on re-derived bytes — maximal exactly-equal
 flanks around the omission (floor 5 tokens/side; sensitivity published), single-word restoration must
 complete the match; two-word omissions never promoted. Result: 57 of 122 signals CERTAIN-leg-d (all
 clause (d)(i)), 65 CANDIDATE (48 restoration-not-minimal, 15 flank-too-short, 2 region-not-realignable);
 fixtures: D2-001 + D2-003 confirmed, D2-002 + D2-004 discarded from any CERTAIN claim (two-word
 omissions — narrowness is the point). 39 tests green (13 new). Artifacts under runs/m4-q2-adjudication/.
-2026-09-25T20:5xZ WORKER-2: TASK-018 DELIVERED (fleet/branches/WORKER-2-TASK-018-DELIVERY.md):
+2026-09-25T20:38:18Z (src 1fb524e) WORKER-2: TASK-018 DELIVERED (fleet/branches/WORKER-2-TASK-018-DELIVERY.md):
 57/122 CERTAIN-leg-d (all clause (d)(i); zero (d)(ii)), 65 CANDIDATE (48 two-word, 15 flank-too-short,
 2 not-realignable); fixtures D2-001/D2-003 confirmed, D2-002/D2-004 refused promotion under the narrow
 leg; L1-L6 evidence recorded; 57/57 promoted citations independently re-verified byte-exact; 39 tests
 green; spent holdout untouched. Next: TASK-017 (v1 toolchain inheritance).
-2026-09-25T21:0xZ WORKER-2: TASK-017 DELIVERED (fleet/branches/WORKER-2-TASK-017-DELIVERY.md): v1
+2026-09-25T20:48:00Z (src b2e0761) WORKER-2: TASK-017 DELIVERED (fleet/branches/WORKER-2-TASK-017-DELIVERY.md): v1
 toolchain inherited byte-exact from archive bf97d85 (tools 15 + tests 13 + fixtures 5 + committed
 census runs/m5-raw 233 files = 266 files, all sha-matched against the archive; manifest
 tools/INHERITED-V1-MANIFEST.json). Suite now 154 tests OK with corpus (115 inherited + 39 lane),
@@ -106,7 +106,7 @@ tools/INHERITED-V1-MANIFEST.json). Suite now 154 tests OK with corpus (115 inher
 sweep_m5 --limit 10 --fresh -> 132 records, 10/10 files byte-identical to the inherited census
 (runs/m5-raw-freshcheck/). No detector logic modified. Next: cadence / await ORCH-2 gate + fresh
 sealed split v2.
-2026-09-25T21:1xZ WORKER-2: TASK-019a DELIVERED (fleet/branches/WORKER-2-TASK-019A-DELIVERY.md):
+2026-09-25T20:50:46Z (src 293b29c) WORKER-2: TASK-019a DELIVERED (fleet/branches/WORKER-2-TASK-019A-DELIVERY.md):
 split v2 sealed (tools/HELD-OUT-SPLIT-V2.json, sha256 f357ed21...) — fresh salt v2, rule published,
 tuning 197 / holdout 33, forced 43 (6 fixture transcripts + the 37 read-once v1-holdout transcripts,
 so the v2 holdout is entirely unseen: v1∩v2 holdout = 0); corpus file-list digest derivation written
@@ -150,3 +150,5 @@ C2-format stay not promotable; TASK-019b still blocked on ORCH-2 re-gates.
 2026-09-26T01:26:40Z WORKER-2: TASK-019 gate items v2.a and v2.b discharged. New dated file tools/HELD-OUT-SPLIT-V2-NOTE-2026-09-26.md beside the seal: (v2.a) binds the actual fixtures/v2/dropword.json digest c40d272f where the seal records c8e96319, leaves the superseded line readable, records the append-only adjudication (no fixture added, no sealed value mutated; the only confirmation artefact 61568a9e is commit 1fb524e, 13 minutes before the seal 79eb401), states the defect class (seal-time digest over a later-amended file = benign tripwire) and recommends a build-time fix for future seals; the seal file itself is untouched at 73d86f0d. (v2.b) states the taint (four holdout transcripts carrying seven signals — D-092 percent, D-093 it's, D-094 huh promoted, D-095/D-107/D-108/D-122 CANDIDATE), the endorsed deliberate deferral, ORCH-2's gate re-derivation of all 122 span bytes as re-derivation not tuning, and the seal's standing caveat verbatim ("a first figure under v2 is an estimate under this split, not a pristine out-of-sample number"). Quantum-b consequence pre-registered BEFORE the run: the four label-tainted transcripts are excluded from the denominator (evaluated 29 of 33) — machine-readable in tools/HELD-OUT-SPLIT-V2-EXCLUSIONS.json, bound into the freeze, enforced by tools/m4_one_shot_v2.py (post-freeze exclusion edits refused, excluded signals dropped unexamined, receipt lists evaluated/excluded separately). tools/m4_seal_audit.py now finds the dated note and reports STANDING (dated note on file); 19 harness+audit tests green. No threshold changed, no detector edited, no rate or M6 figure.
 
 2026-09-26T00:58:09Z WORKER-2: TASK-020 items 15a/15b repaired. Item 15a: the q2 EVAL note named the alphabetically first transcript (A_Review_of_the_Work_Sep_2007_Part_1, which carries ZERO q2 signals) because it was built from sorted(signals)[0]; the row it explains is D-058 in Positionality_and_Duality_Transcending_the_Opposites_Apr_2002_Part_2 @40831 (27 signals), transcript "states the" where the book (the_evolution_of_consciousness @307559) writes "States. One-third of the". The generator now derives the transcript from the row itself, and the artefact preserves the misnamed text verbatim in note_correction_2026_09_26 so the defect is auditable, not erased. Item 15b: two DIFFERENT sets of 114 signals were published under one number; two_distinct_114s names both - filter side 122 - 1 source-inherited (D-039 quite @457) - 7 deferred holdout = 114, shape side 122 - 3 dropped-token-not-missing - 5 partial-overlap = 114 - with the recomputation published: 106 sites counted by both, 8 differing in each direction, the two exclusion sets disjoint (intersection 0), plus the explicit site lists in runs/m4-q2-dropword/NOTE-2026-09-26.md; the published bound of 113 is unchanged (shape side minus D-058). Rebuild attribution: generator commit cc9ba4617c3844146caa65a621aa738904429ec1 (tools/m4_q2_evidence.py, blob 667409aa), EVAL.json 2baefc09 -> d1e702af, EVIDENCE-PROVENANCE.json c1285e01 -> 982f8d66, both byte-identical on a SECOND rebuild from the recorded args, artifact generator_pins now names cc9ba46 and the artefact carries rebuild_history recording its own prior digest and prior generator pin (8a -> 15 readable in-file); runs/m4-pin-repair-2026-09-26.json refreshed (all six already-present, current digests) and pin repair verify 6/6. Suite 257 tests OK, 1 skip, WITH corpus (244 -> 257 = +5 item-8a tests, +6 0d-0g tests, +2 v2 exclusion tests). CONTROL entries 42/43/44 cited the lane head at write time; the appended ERRATA (seq 45) states that convention and names the commits that actually carry each described batch (7de00df / 7d14685 / c5b5b25) - nothing else in those entries changes. No threshold changed, no detector edited, no rate, holdout not opened.
+
+2026-09-26T01:04:37Z WORKER-2: TASK-020 items 11a/11b/12 repaired. (11a) The v1 exposure row is 185 observed vs 187.6 expected, P=0.4451; the 187.9/0.44 this lane published came from 1,151 detector ROWS where the census holds 1,149 RECORDS (two records in Love_Sep_2011_Part_1 carry two v1 families each: A1+B1 and A2+B1) - the gate's figure is right and the PATTERNS 5d + q4 README correction-2 blocks now say so, with the tuning-side counts published per row (v1 1,149 records / 1,151 rows: A1 776, A2 143, B2 220, B1 12; C1-drop 122; C2-format 49) and the exposure ratio 0.1632327 re-derived at head. (11b) The q5 number treatment is superseded: 97 = 9 zero-ASCII-token + 61 over-bound + 27 ASCII-mismatch (the gate's independent simulation, authoritative for quoting), with my own pre-repair recount stated by its exact rule (98 = 9 + 61 + 28; residual 18 hyphen-bearing + 10 digit-bearing spans) and the one-row difference disclosed rather than smoothed over; the largest claimed unit is k=12 with exactly 9 claims (tally published, sum 938), so kmax=16 is max-observed + 4 tokens; 938/938 A1 claim_ok re-verified at head; the hyphen sensitivity is 255/938 (gate) vs 256/938 (mine), one row apart under the same tokenizer variant. (12) Criterion 20.14: the worker tree carried 40 asserted fuzzy timestamps in 11 files (the gate's 26 in 10 plus fleet/heartbeats/WORKER.log 10, WORKER-2-TASK-019b-PREP.md 1, the M5R item-11 supersession 1, and two LOG entries written after the gate's census) plus the own-time offender. All are now exact to the second with their source named - the committer time of the commit that introduced each line, recovered with git blame - and the old fuzzy values remain readable in backticks with a 'read' marker, so an audit sees both states; LOG and heartbeat beacons carry '(src <commit7>)' beside the exact value. tools/INHERITED-V1-MANIFEST.json's materialised_utc was a FORWARD stamp (20:5xZ, later than its own commit) and is now 2026-09-25T20:48:00Z with materialised_utc_source naming b2e0761; the 266 per-file hashes and the unmodified claim are untouched, JSON re-validated. The sealed fixtures/v2/dropword.json was deliberately NOT touched (its fuzzy value has an in-file exact sibling - the gate's INFO pattern - and the file is digest-bound by split v2). Census table + method: fleet/TIMESTAMP-CENSUS-2026-09-26.md. After: 0 asserted fuzzy timestamps. Suite 257 tests OK, 1 skip, WITH corpus. No threshold changed, no detector edited, no rate, holdout not opened.
